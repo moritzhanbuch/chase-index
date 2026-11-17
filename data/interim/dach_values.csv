@@ -1,0 +1,153 @@
+name,year_rank,field,value,currency,page,quote,period_end,how,reasoning
+ABB Group,1,cost_of_sales,19580000000.0,USD,55.0,"Total cost of sales (19,580) (18,582)",2025-12-31,dual_extractor_agreement,
+ABB Group,1,revenue,33220000000.0,USD,55.0,"Total revenues 33,220 30,583",2025-12-31,dual_extractor_agreement,
+ABB Group,1,trade_payables,5210000000.0,USD,57.0,"Accounts payable, trade 5,210 4,681",2025-12-31,dual_extractor_agreement,
+ABB Group,2,cost_of_sales,18582000000.0,USD,55.0,"Total cost of sales (19,580) (18,582)",2024-12-31,dual_extractor_agreement,
+ABB Group,2,revenue,30583000000.0,USD,55.0,"Total revenues 33,220 30,583",2024-12-31,dual_extractor_agreement,
+ABB Group,2,trade_payables,4681000000.0,USD,57.0,"Accounts payable, trade 5,210 4,681",2024-12-31,dual_extractor_agreement,
+Adidas,1,cost_of_sales,12006000000.0,EUR,311.0,"Cost of sales 12,006 11,658 3.0%",2025-12-31,qa_adjudication,B read the consolidated income statement (IFRS) on p311; A found nothing. Correct.
+Adidas,1,revenue,24811000000.0,EUR,311.0,"Net sales 36 24,811 23,683 4.8%",2025-12-31,dual_extractor_agreement,
+Adidas,1,trade_payables,2910000000.0,EUR,310.0,"Accounts payable 2,910 3,096 (6.0%)",2025-12-31,dual_extractor_agreement,
+Adidas,2,cost_of_sales,11658000000.0,EUR,311.0,"Cost of sales 12,006 11,658 3.0%",2024-12-31,qa_adjudication,B read the consolidated income statement (IFRS) on p311; A found nothing. Correct.
+Adidas,2,revenue,23683000000.0,EUR,311.0,"Net sales 36 24,811 23,683 4.8%",2024-12-31,dual_extractor_agreement,
+Adidas,2,trade_payables,3096000000.0,EUR,310.0,"Accounts payable 2,910 3,096 (6.0%)",2024-12-31,dual_extractor_agreement,
+BMW,1,cost_of_sales,112858000000.0,EUR,2.0,"Cost of sales 8 – 112,858 – 119,485 – 103,206 – 107,729 ...",2025-12-31,dual_extractor_agreement,
+BMW,1,revenue,133453000000.0,EUR,2.0,"Revenues 7 133,453 142,380 117,557 124,917 ...",2025-12-31,dual_extractor_agreement,
+BMW,1,trade_payables,12488000000.0,EUR,5.0,"Trade payables 38 12,488 14,126 11,001 12,556 495 561 984 997 8 12 – –",2025-12-31,dual_extractor_agreement,
+BMW,2,cost_of_sales,119485000000.0,EUR,2.0,"Cost of sales 8 – 112,858 – 119,485 – 103,206 – 107,729 ...",2024-12-31,dual_extractor_agreement,
+BMW,2,revenue,142380000000.0,EUR,2.0,"Revenues 7 133,453 142,380 117,557 124,917 ...",2024-12-31,dual_extractor_agreement,
+BMW,2,trade_payables,14126000000.0,EUR,5.0,"Trade payables 38 12,488 14,126 11,001 12,556 495 561 984 997 8 12 – –",2024-12-31,dual_extractor_agreement,
+CTS Eventim AG & Co. KGaA,1,cost_of_sales,2249163000.0,EUR,189.0,"Cost of sales (2) -2,249,163 -2,068,013",2025-12-31,qa_adjudication,B read the consolidated statements (EUR thousand); A found nothing. Correct as printed.
+CTS Eventim AG & Co. KGaA,1,revenue,3079295000.0,EUR,189.0,"Revenue (1) 3,079,295 2,808,579",2025-12-31,qa_adjudication,B read the consolidated statements (EUR thousand); A found nothing. Correct as printed.
+CTS Eventim AG & Co. KGaA,1,trade_payables,381261000.0,EUR,188.0,"Trade payables (19) 381,261 355,053",2025-12-31,qa_adjudication,"B took the current balance-sheet line (non-current 1,400k excluded); note 19 (p229) gives no non-supplier items; advances and related-party liabilities are separate lines. Correct."
+CTS Eventim AG & Co. KGaA,2,cost_of_sales,2068013000.0,EUR,189.0,"Cost of sales (2) -2,249,163 -2,068,013",2024-12-31,qa_adjudication,B read the consolidated statements (EUR thousand); A found nothing. Correct as printed.
+CTS Eventim AG & Co. KGaA,2,revenue,2808579000.0,EUR,189.0,"Revenue (1) 3,079,295 2,808,579",2024-12-31,qa_adjudication,B read the consolidated statements (EUR thousand); A found nothing. Correct as printed.
+CTS Eventim AG & Co. KGaA,2,trade_payables,355053000.0,EUR,188.0,"Trade payables (19) 381,261 355,053",2024-12-31,qa_adjudication,"B took the current balance-sheet line (non-current 1,400k excluded); note 19 (p229) gives no non-supplier items; advances and related-party liabilities are separate lines. Correct."
+DSM-Firmenich AG,1,cost_of_sales,5504000000.0,EUR,228.0,"Cost of sales 5 (5,504) (5,501)",2025-12-31,qa_adjudication,"A's figures have no page and match no continuing-operations line in this report (look like prior-year or pre-restatement totals). B read the consolidated income statement, continuing operations, p228."
+DSM-Firmenich AG,1,revenue,9034000000.0,EUR,228.0,"Net sales 5 9,034 9,054",2025-12-31,qa_adjudication,"A's figures have no page and match no continuing-operations line in this report (look like prior-year or pre-restatement totals). B read the consolidated income statement, continuing operations, p228."
+DSM-Firmenich AG,1,trade_payables,1475000000.0,EUR,272.0,"Trade accounts payable 1,475 2,267",2025-12-31,qa_adjudication,"A 2,276 is the 2024 column. B took the BS total 1,481, but note 21 splits out received-in-advance 6 and notes 0; rule takes trade accounts payable 1,475. 2025 excludes ANH held for sale."
+DSM-Firmenich AG,2,cost_of_sales,5501000000.0,EUR,228.0,"Cost of sales 5 (5,504) (5,501)",2024-12-31,qa_adjudication,"A's figures have no page and match no continuing-operations line in this report (look like prior-year or pre-restatement totals). B read the consolidated income statement, continuing operations, p228."
+DSM-Firmenich AG,2,revenue,9054000000.0,EUR,228.0,"Net sales 5 9,034 9,054",2024-12-31,qa_adjudication,"A's figures have no page and match no continuing-operations line in this report (look like prior-year or pre-restatement totals). B read the consolidated income statement, continuing operations, p228."
+DSM-Firmenich AG,2,trade_payables,2267000000.0,EUR,272.0,"Trade accounts payable 1,475 2,267",2024-12-31,qa_adjudication,"A 2,174 is not in this report (likely 2023). B took BS total 2,276 incl. advances 5 and notes 4; note 21 gives 2,267. Caution: 2024 BS still includes ANH while 2024 IS is restated to continuing ops."
+Hensoldt AG,1,cost_of_sales,1930000000.0,EUR,144.0,"Cost of sales 10 -1,930 -1,732",2025-12-31,dual_extractor_agreement,
+Hensoldt AG,1,revenue,2455000000.0,EUR,144.0,"Revenue 10 2,455 2,240",2025-12-31,dual_extractor_agreement,
+Hensoldt AG,1,trade_payables,591000000.0,EUR,147.0,Trade payables 23 591 546,2025-12-31,dual_extractor_agreement,
+Hensoldt AG,2,cost_of_sales,1732000000.0,EUR,144.0,"Cost of sales 10 -1,930 -1,732",2024-12-31,dual_extractor_agreement,
+Hensoldt AG,2,revenue,2240000000.0,EUR,144.0,"Revenue 10 2,455 2,240",2024-12-31,dual_extractor_agreement,
+Hensoldt AG,2,trade_payables,546000000.0,EUR,147.0,Trade payables 23 591 546,2024-12-31,dual_extractor_agreement,
+Holcim,1,cost_of_sales,9066000000.0,CHF,3.0,Production cost of goods sold 4.3 (9 066) (9 135),2025-12-31,qa_adjudication,B read the consolidated statement of income (p3); A found nothing. Correct; 2024 restated for Amrize spin-off.
+Holcim,1,revenue,15724000000.0,CHF,3.0,Net sales 3.3 15 724 16 201,2025-12-31,qa_adjudication,"A read a segment table (value 0.0 is the eliminations column). B read the consolidated statement of income, continuing operations, 2024 restated (p3). Correct."
+Holcim,1,trade_payables,3190000000.0,CHF,42.0,Trade accounts payable – associates and joint ventures 149 141 / – third parties 3 041 4 236,2025-12-31,qa_adjudication,"B gave the BS line 3,426 which includes customer advances 236 (note 10.5, p42). Sum of printed trade lines 149+3,041=3,190. A found nothing."
+Holcim,2,cost_of_sales,9135000000.0,CHF,3.0,Production cost of goods sold 4.3 (9 066) (9 135),2024-12-31,qa_adjudication,B read the consolidated statement of income (p3); A found nothing. Correct; 2024 restated for Amrize spin-off.
+Holcim,2,revenue,16201000000.0,CHF,3.0,Net sales 3.3 15 724 16 201,2024-12-31,qa_adjudication,"A read a segment table (value 0.0 is the eliminations column). B read the consolidated statement of income, continuing operations, 2024 restated (p3). Correct."
+Holcim,2,trade_payables,4377000000.0,CHF,42.0,Trade accounts payable – associates and joint ventures 149 141 / – third parties 3 041 4 236,2024-12-31,qa_adjudication,"B gave BS line 4,745 incl. customer advances 368; sum of printed trade lines 141+4,236=4,377. Caution: 2024 BS includes the North American business spun off in 2025, IS is restated."
+Infineon,1,cost_of_sales,8909000000.0,EUR,93.0,"Cost of goods sold 1 (8,909) (8,710) (199) 2",2025-09-30,qa_adjudication,B read the consolidated statement of profit or loss p93; A found nothing. Correct.
+Infineon,1,revenue,14662000000.0,EUR,93.0,"Revenue 4, 29 14,662 14,955 (293) (2)",2025-09-30,qa_adjudication,"A read a maturity-table header on p114 ('Revenue 10 Total Less than 1 year'), not a figure. B read the consolidated statement of profit or loss p93. Correct."
+Infineon,1,trade_payables,2011000000.0,EUR,95.0,"Trade payables 2,011 1,990 21 1",2025-09-30,dual_extractor_agreement,
+Infineon,2,cost_of_sales,8710000000.0,EUR,93.0,"Cost of goods sold 1 (8,909) (8,710) (199) 2",2024-09-30,qa_adjudication,B read the consolidated statement of profit or loss p93; A found nothing. Correct.
+Infineon,2,revenue,14955000000.0,EUR,93.0,"Revenue 4, 29 14,662 14,955 (293) (2)",2024-09-30,qa_adjudication,"A read a maturity-table header on p114 ('Revenue 10 Total Less than 1 year'), not a figure. B read the consolidated statement of profit or loss p93. Correct."
+Infineon,2,trade_payables,1990000000.0,EUR,95.0,"Trade payables 2,011 1,990 21 1",2024-09-30,dual_extractor_agreement,
+Knorr-Bremse AG,1,cost_of_materials,3579000000.0,EUR,166.0,"Cost of materials E.4. (3,579) (3,803)",2025-12-31,qa_adjudication,A read the Rail Vehicle Systems segment column of the management-report divisional table (p136-138). B read the consolidated statement of income p166 (nature of expense). Correct.
+Knorr-Bremse AG,1,revenue,7817000000.0,EUR,166.0,"Revenues E.1. 7,817 7,883",2025-12-31,qa_adjudication,A read the Rail Vehicle Systems segment column of the management-report divisional table (p136-138). B read the consolidated statement of income p166 (nature of expense). Correct.
+Knorr-Bremse AG,1,trade_payables,1092000000.0,EUR,169.0,"Trade accounts payable F.13. 1,092 1,128",2025-12-31,dual_extractor_agreement,
+Knorr-Bremse AG,2,cost_of_materials,3803000000.0,EUR,166.0,"Cost of materials E.4. (3,579) (3,803)",2024-12-31,qa_adjudication,A read the Rail Vehicle Systems segment column of the management-report divisional table (p136-138). B read the consolidated statement of income p166 (nature of expense). Correct.
+Knorr-Bremse AG,2,revenue,7883000000.0,EUR,166.0,"Revenues E.1. 7,817 7,883",2024-12-31,qa_adjudication,A read the Rail Vehicle Systems segment column of the management-report divisional table (p136-138). B read the consolidated statement of income p166 (nature of expense). Correct.
+Knorr-Bremse AG,2,trade_payables,1128000000.0,EUR,169.0,"Trade accounts payable F.13. 1,092 1,128",2024-12-31,dual_extractor_agreement,
+Krones AG,1,cost_of_materials,2713353000.0,EUR,233.0,"Goods and services purchased 22 –2,713,353 –2,602,765",2025-12-31,qa_adjudication,Krones reports by nature of expense; the printed total 'Goods and services purchased' is the materials-and-services-used line (p233). B correct; A found nothing.
+Krones AG,1,revenue,5663769000.0,EUR,233.0,"Revenue 19 5,663,769 5,293,557",2025-12-31,dual_extractor_agreement,
+Krones AG,1,trade_payables,868256000.0,EUR,236.0,"Trade payables 16 868,256 802,194",2025-12-31,dual_extractor_agreement,
+Krones AG,2,cost_of_materials,2602765000.0,EUR,233.0,"Goods and services purchased 22 –2,713,353 –2,602,765",2024-12-31,qa_adjudication,Krones reports by nature of expense; the printed total 'Goods and services purchased' is the materials-and-services-used line (p233). B correct; A found nothing.
+Krones AG,2,revenue,5293557000.0,EUR,233.0,"Revenue 19 5,663,769 5,293,557",2024-12-31,dual_extractor_agreement,
+Krones AG,2,trade_payables,802194000.0,EUR,236.0,"Trade payables 16 868,256 802,194",2024-12-31,dual_extractor_agreement,
+MTU Aero Engines,1,cost_of_sales,7075000000.0,EUR,243.0,"Cost of goods sold (2.) –7,075 –6,178",2025-12-31,dual_extractor_agreement,
+MTU Aero Engines,1,revenue,8763000000.0,EUR,243.0,"Revenue (1.) 8,763 7,411",2025-12-31,dual_extractor_agreement,
+MTU Aero Engines,1,trade_payables,588000000.0,EUR,246.0,Trade payables (29.) 588 504,2025-12-31,dual_extractor_agreement,
+MTU Aero Engines,2,cost_of_sales,6178000000.0,EUR,243.0,"Cost of goods sold (2.) –7,075 –6,178",2024-12-31,qa_adjudication,A read the adjustment column of an adjusted/reported reconciliation table on p60. B read the consolidated income statement p243. Correct.
+MTU Aero Engines,2,revenue,7411000000.0,EUR,243.0,"Revenue (1.) 8,763 7,411",2024-12-31,qa_adjudication,A read the adjustment column of an adjusted/reported reconciliation table on p60. B read the consolidated income statement p243. Correct.
+MTU Aero Engines,2,trade_payables,504000000.0,EUR,246.0,Trade payables (29.) 588 504,2024-12-31,dual_extractor_agreement,
+Nemetschek SE,1,cost_of_materials,45025000.0,EUR,181.0,"Cost of goods and services – 45,025 – 40,489 [3]",2025-12-31,qa_adjudication,Nemetschek reports by nature of expense; 'Cost of goods and services' is its materials-and-services line (p181). B correct; A found nothing.
+Nemetschek SE,1,revenue,1191232000.0,EUR,181.0,"Revenues 1,191,232 995,565 [1]",2025-12-31,dual_extractor_agreement,
+Nemetschek SE,1,trade_payables,27002000.0,EUR,183.0,"Trade payables 27,002 20,820 [19], [23]",2025-12-31,dual_extractor_agreement,
+Nemetschek SE,2,cost_of_materials,40489000.0,EUR,181.0,"Cost of goods and services – 45,025 – 40,489 [3]",2024-12-31,qa_adjudication,Nemetschek reports by nature of expense; 'Cost of goods and services' is its materials-and-services line (p181). B correct; A found nothing.
+Nemetschek SE,2,revenue,995565000.0,EUR,181.0,"Revenues 1,191,232 995,565 [1]",2024-12-31,dual_extractor_agreement,
+Nemetschek SE,2,trade_payables,20820000.0,EUR,183.0,"Trade payables 27,002 20,820 [19], [23]",2024-12-31,dual_extractor_agreement,
+Puma SE,1,cost_of_sales,4016500000.0,EUR,233.0,"Cost of sales 25 -4,016.5 -4,400.2",2025-12-31,dual_extractor_agreement,
+Puma SE,1,revenue,7296200000.0,EUR,233.0,"Sales 19, 25 7,296.2 8,398.0",2025-12-31,dual_extractor_agreement,
+Puma SE,1,trade_payables,1271400000.0,EUR,232.0,"Trade payables 13 1,271.4 1,893.5",2025-12-31,dual_extractor_agreement,
+Puma SE,2,cost_of_sales,4400200000.0,EUR,233.0,"Cost of sales 25 -4,016.5 -4,400.2",2024-12-31,dual_extractor_agreement,
+Puma SE,2,revenue,8398000000.0,EUR,233.0,"Sales 19, 25 7,296.2 8,398.0",2024-12-31,dual_extractor_agreement,
+Puma SE,2,trade_payables,1893500000.0,EUR,232.0,"Trade payables 13 1,271.4 1,893.5",2024-12-31,dual_extractor_agreement,
+Rational AG,1,cost_of_sales,516116000.0,EUR,102.0,"Cost of sales 2 -516,116 -486,901",2025-12-31,dual_extractor_agreement,
+Rational AG,1,revenue,1259558000.0,EUR,102.0,"Sales revenues 1 1,259,558 1,193,529",2025-12-31,dual_extractor_agreement,
+Rational AG,1,trade_payables,32360000.0,EUR,103.0,"Trade accounts payable 18 32,360 33,230",2025-12-31,dual_extractor_agreement,
+Rational AG,2,cost_of_sales,486901000.0,EUR,102.0,"Cost of sales 2 -516,116 -486,901",2024-12-31,dual_extractor_agreement,
+Rational AG,2,revenue,1193529000.0,EUR,102.0,"Sales revenues 1 1,259,558 1,193,529",2024-12-31,dual_extractor_agreement,
+Rational AG,2,trade_payables,33230000.0,EUR,103.0,"Trade accounts payable 18 32,360 33,230",2024-12-31,dual_extractor_agreement,
+Schindler Elevator,1,cost_of_materials,2746000000.0,CHF,6.0,Cost of materials 2 746 25.1 2 951 26.3,2025-12-31,qa_adjudication,A read the percentage column (25.1 / 100.0 / 11.6) as the value. B read the CHF million column of the consolidated statements. Correct.
+Schindler Elevator,1,revenue,10947000000.0,CHF,6.0,Revenue 4 10 947 100.0 11 236 100.0,2025-12-31,qa_adjudication,A read the percentage column (25.1 / 100.0 / 11.6) as the value. B read the CHF million column of the consolidated statements. Correct.
+Schindler Elevator,1,trade_payables,1020000000.0,CHF,33.0,Trade accounts payable – third parties 1 018 1 066 / – associates 2 3,2025-12-31,qa_adjudication,"A read the percentage column of the BS line. BS 'Accounts payable' 1,373 (1,392) includes social security, tax and other payables; note 12 (p33) gives trade third parties + associates. B correct. 1,018+2=1,020."
+Schindler Elevator,2,cost_of_materials,2951000000.0,CHF,6.0,Cost of materials 2 746 25.1 2 951 26.3,2024-12-31,qa_adjudication,A read the percentage column (25.1 / 100.0 / 11.6) as the value. B read the CHF million column of the consolidated statements. Correct.
+Schindler Elevator,2,revenue,11236000000.0,CHF,6.0,Revenue 4 10 947 100.0 11 236 100.0,2024-12-31,qa_adjudication,A read the percentage column (25.1 / 100.0 / 11.6) as the value. B read the CHF million column of the consolidated statements. Correct.
+Schindler Elevator,2,trade_payables,1069000000.0,CHF,33.0,Trade accounts payable – third parties 1 018 1 066 / – associates 2 3,2024-12-31,qa_adjudication,"A read the percentage column of the BS line. BS 'Accounts payable' 1,373 (1,392) includes social security, tax and other payables; note 12 (p33) gives trade third parties + associates. B correct. 1,066+3=1,069."
+Scout24,1,revenue,649561000.0,EUR,117.0,"Revenue 3.1. 649,561 566,340",2025-12-31,dual_extractor_agreement,
+Scout24,1,trade_payables,19000000.0,EUR,118.0,"Trade payables 4.8. 18,988 18,211",2025-12-31,dual_extractor_agreement,
+Scout24,2,revenue,566340000.0,EUR,117.0,"Revenue 3.1. 649,561 566,340",2024-12-31,dual_extractor_agreement,
+Scout24,2,trade_payables,18200000.0,EUR,118.0,"Trade payables 4.8. 18,988 18,211",2024-12-31,dual_extractor_agreement,
+Siemens,1,cost_of_sales,48515000000.0,EUR,43.0,"Cost of sales (48,515) (46,107)",2025-09-30,qa_adjudication,A read the parent-only Siemens AG annual financial statements (p112). B read the consolidated statements of income p43. Correct.
+Siemens,1,revenue,78914000000.0,EUR,43.0,"Revenue 2, 30 78,914 75,930",2025-09-30,qa_adjudication,A read the parent-only Siemens AG annual financial statements (p112). B read the consolidated statements of income p43. Correct.
+Siemens,1,trade_payables,9183000000.0,EUR,44.0,"Trade payables 9,183 8,843",2025-09-30,dual_extractor_agreement,
+Siemens,2,cost_of_sales,46107000000.0,EUR,43.0,"Cost of sales (48,515) (46,107)",2024-09-30,qa_adjudication,A read the parent-only Siemens AG annual financial statements (p112). B read the consolidated statements of income p43. Correct.
+Siemens,2,revenue,75930000000.0,EUR,43.0,"Revenue 2, 30 78,914 75,930",2024-09-30,qa_adjudication,A read the parent-only Siemens AG annual financial statements (p112). B read the consolidated statements of income p43. Correct.
+Siemens,2,trade_payables,8843000000.0,EUR,44.0,"Trade payables 9,183 8,843",2024-09-30,dual_extractor_agreement,
+Siemens Energy,1,cost_of_sales,32498000000.0,EUR,148.0,"Cost of sales (32,498) (29,962)",2025-09-30,qa_adjudication,"A read the condensed HGB statements of the parent Siemens Energy AG (EUR thousand, p44). B read the consolidated statements of income p148. Correct."
+Siemens Energy,1,revenue,39077000000.0,EUR,148.0,"Revenue 7, 26 39,077 34,465",2025-09-30,qa_adjudication,"A read the condensed HGB statements of the parent Siemens Energy AG (EUR thousand, p44). B read the consolidated statements of income p148. Correct."
+Siemens Energy,2,cost_of_sales,29962000000.0,EUR,148.0,"Cost of sales (32,498) (29,962)",2024-09-30,qa_adjudication,"A read the condensed HGB statements of the parent Siemens Energy AG (EUR thousand, p44). B read the consolidated statements of income p148. Correct."
+Siemens Energy,2,revenue,34465000000.0,EUR,148.0,"Revenue 7, 26 39,077 34,465",2024-09-30,qa_adjudication,"A read the condensed HGB statements of the parent Siemens Energy AG (EUR thousand, p44). B read the consolidated statements of income p148. Correct."
+Siemens Healthineers,1,cost_of_sales,14345000000.0,EUR,138.0,"Cost of sales 9 −14,345 −13,895",2025-09-30,qa_adjudication,A read the parent-only HGB statements of Siemens Healthineers AG (management report p128-129). B read the consolidated statements. Correct.
+Siemens Healthineers,1,revenue,23375000000.0,EUR,138.0,"Revenue 29, 30 23,375 22,363",2025-09-30,qa_adjudication,A read the parent-only HGB statements of Siemens Healthineers AG (management report p128-129). B read the consolidated statements. Correct.
+Siemens Healthineers,1,trade_payables,2296000000.0,EUR,140.0,"Trade payables 25 2,296 2,126",2025-09-30,qa_adjudication,A read the parent-only HGB statements of Siemens Healthineers AG (management report p128-129). B read the consolidated statements. Correct.
+Siemens Healthineers,2,cost_of_sales,13895000000.0,EUR,138.0,"Cost of sales 9 −14,345 −13,895",2024-09-30,qa_adjudication,A read the parent-only HGB statements of Siemens Healthineers AG (management report p128-129). B read the consolidated statements. Correct.
+Siemens Healthineers,2,revenue,22363000000.0,EUR,138.0,"Revenue 29, 30 23,375 22,363",2024-09-30,qa_adjudication,A read the parent-only HGB statements of Siemens Healthineers AG (management report p128-129). B read the consolidated statements. Correct.
+Siemens Healthineers,2,trade_payables,2126000000.0,EUR,140.0,"Trade payables 25 2,296 2,126",2024-09-30,qa_adjudication,A read the parent-only HGB statements of Siemens Healthineers AG (management report p128-129). B read the consolidated statements. Correct.
+Sika AG,1,cost_of_materials,5047700000.0,CHF,218.0,"Material expenses 3 –45.5 –5,347.1 –45.1 –5,047.7",2025-12-31,qa_adjudication,Sika prints 2024 then 2025 columns; B mapped years correctly from the consolidated statements; A found nothing. Nature-of-expense reporter.
+Sika AG,1,revenue,11201300000.0,CHF,218.0,"Net sales 1, 2 100.0 11,763.1 100.0 11,201.3 –4.8",2025-12-31,qa_adjudication,Sika prints 2024 then 2025 columns; B mapped years correctly from the consolidated statements; A found nothing.
+Sika AG,1,trade_payables,1176400000.0,CHF,220.0,"Accounts payable 17, 25 1,212.3 1,176.4",2025-12-31,qa_adjudication,"Sika prints 2024 then 2025 columns; B mapped years correctly from the consolidated statements; A found nothing. 'Accounts payable' has no trade/other split, but note 17/25 show it is a single financial liability due in 30-60 days, with accrued expenses and other liabilities in separate lines; accepted as trade payables."
+Sika AG,2,cost_of_materials,5347100000.0,CHF,218.0,"Material expenses 3 –45.5 –5,347.1 –45.1 –5,047.7",2024-12-31,qa_adjudication,Sika prints 2024 then 2025 columns; B mapped years correctly from the consolidated statements; A found nothing. Nature-of-expense reporter.
+Sika AG,2,revenue,11763100000.0,CHF,218.0,"Net sales 1, 2 100.0 11,763.1 100.0 11,201.3 –4.8",2024-12-31,qa_adjudication,Sika prints 2024 then 2025 columns; B mapped years correctly from the consolidated statements; A found nothing.
+Sika AG,2,trade_payables,1212300000.0,CHF,220.0,"Accounts payable 17, 25 1,212.3 1,176.4",2024-12-31,qa_adjudication,"Sika prints 2024 then 2025 columns; B mapped years correctly from the consolidated statements; A found nothing. 'Accounts payable' has no trade/other split, but note 17/25 show it is a single financial liability due in 30-60 days, with accrued expenses and other liabilities in separate lines; accepted as trade payables."
+Siltronic AG,1,cost_of_sales,1235500000.0,EUR,109.0,"Cost of sales 01 –1,235.5 –1,137.4",2025-12-31,dual_extractor_agreement,
+Siltronic AG,1,revenue,1346700000.0,EUR,109.0,"Sales 01 1,346.7 1,412.8",2025-12-31,dual_extractor_agreement,
+Siltronic AG,1,trade_payables,242700000.0,EUR,111.0,Trade liabilities 13 242.7 280.5,2025-12-31,qa_adjudication,"A read the parent-only HGB balance sheet of Siltronic AG (management report p36). B read the consolidated BS 'Trade liabilities' (p111), confirmed in note 13 (p138), with supplier-finance payables shown in other financial liabilities. Correct."
+Siltronic AG,2,cost_of_sales,1137400000.0,EUR,109.0,"Cost of sales 01 –1,235.5 –1,137.4",2024-12-31,dual_extractor_agreement,
+Siltronic AG,2,revenue,1412800000.0,EUR,109.0,"Sales 01 1,346.7 1,412.8",2024-12-31,dual_extractor_agreement,
+Siltronic AG,2,trade_payables,280500000.0,EUR,111.0,Trade liabilities 13 242.7 280.5,2024-12-31,qa_adjudication,"A read the parent-only HGB balance sheet of Siltronic AG (management report p36). B read the consolidated BS 'Trade liabilities' (p111), confirmed in note 13 (p138), with supplier-finance payables shown in other financial liabilities. Correct."
+Stadler Rail,1,cost_of_sales,3259058000.0,CHF,182.0,"Cost of goods sold and services provided (3,259,058) 88.6% (2,884,684) 88.6%",2025-12-31,dual_extractor_agreement,
+Stadler Rail,1,revenue,3679250000.0,CHF,182.0,"Net revenue 1.1 3,679,250 100.0% 3,255,595 100.0%",2025-12-31,dual_extractor_agreement,
+Stadler Rail,1,trade_payables,304288000.0,CHF,183.0,"Trade payables 2.1 304,288 230,215",2025-12-31,dual_extractor_agreement,
+Stadler Rail,2,cost_of_sales,2884684000.0,CHF,182.0,"Cost of goods sold and services provided (3,259,058) 88.6% (2,884,684) 88.6%",2024-12-31,dual_extractor_agreement,
+Stadler Rail,2,revenue,3255595000.0,CHF,182.0,"Net revenue 1.1 3,679,250 100.0% 3,255,595 100.0%",2024-12-31,dual_extractor_agreement,
+Stadler Rail,2,trade_payables,230215000.0,CHF,183.0,"Trade payables 2.1 304,288 230,215",2024-12-31,dual_extractor_agreement,
+Strabag,1,cost_of_materials,11168653000.0,EUR,199.0,"Construction materials, consumables and services used (3) -11,168,653 -10,463,013",2025-12-31,dual_extractor_agreement,
+Strabag,1,revenue,18714281000.0,EUR,199.0,"Revenue (1) 18,714,281 17,422,219",2025-12-31,dual_extractor_agreement,
+Strabag,1,trade_payables,2979205000.0,EUR,201.0,"Trade payables (30) 2,979,205 2,790,820",2025-12-31,dual_extractor_agreement,
+Strabag,2,cost_of_materials,10463013000.0,EUR,199.0,"Construction materials, consumables and services used (3) -11,168,653 -10,463,013",2024-12-31,dual_extractor_agreement,
+Strabag,2,revenue,17422219000.0,EUR,199.0,"Revenue (1) 18,714,281 17,422,219",2024-12-31,dual_extractor_agreement,
+Strabag,2,trade_payables,2790820000.0,EUR,201.0,"Trade payables (30) 2,979,205 2,790,820",2024-12-31,dual_extractor_agreement,
+Suss Microtec SE,1,cost_of_sales,323810000.0,EUR,183.0,"Cost of sales −323,810 −269,825",2025-12-31,dual_extractor_agreement,
+Suss Microtec SE,1,revenue,503180000.0,EUR,183.0,"Sales (4) 503,180 446,654",2025-12-31,dual_extractor_agreement,
+Suss Microtec SE,1,trade_payables,25204000.0,EUR,186.0,"Trade payables 25,204 34,740 29,232",2025-12-31,dual_extractor_agreement,
+Suss Microtec SE,2,cost_of_sales,269825000.0,EUR,183.0,"Cost of sales −323,810 −269,825",2024-12-31,dual_extractor_agreement,
+Suss Microtec SE,2,revenue,446654000.0,EUR,183.0,"Sales (4) 503,180 446,654",2024-12-31,dual_extractor_agreement,
+Suss Microtec SE,2,trade_payables,34740000.0,EUR,186.0,"Trade payables 25,204 34,740 29,232",2024-12-31,dual_extractor_agreement,
+Traton SE,1,cost_of_sales,35630000000.0,EUR,139.0,"Cost of sales [2] –35,630 –37,373",2025-12-31,dual_extractor_agreement,
+Traton SE,1,revenue,44052000000.0,EUR,139.0,"Sales revenue [1] 44,052 47,473",2025-12-31,dual_extractor_agreement,
+Traton SE,1,trade_payables,5474000000.0,EUR,143.0,"Trade payables 5,474 5,349",2025-12-31,dual_extractor_agreement,
+Traton SE,2,cost_of_sales,37373000000.0,EUR,139.0,"Cost of sales [2] –35,630 –37,373",2024-12-31,dual_extractor_agreement,
+Traton SE,2,revenue,47473000000.0,EUR,139.0,"Sales revenue [1] 44,052 47,473",2024-12-31,dual_extractor_agreement,
+Traton SE,2,trade_payables,5349000000.0,EUR,143.0,"Trade payables 5,474 5,349",2024-12-31,dual_extractor_agreement,
+Wacker Chemie AG,1,cost_of_sales,4828000000.0,EUR,225.0,"Cost of goods sold 02 –4,828.0 –4,735.1",2025-12-31,dual_extractor_agreement,
+Wacker Chemie AG,1,revenue,5485300000.0,EUR,225.0,"Sales 01 5,485.3 5,721.8",2025-12-31,dual_extractor_agreement,
+Wacker Chemie AG,1,trade_payables,692300000.0,EUR,228.0,Trade payables 16 692.3 851.5,2025-12-31,dual_extractor_agreement,
+Wacker Chemie AG,2,cost_of_sales,4735100000.0,EUR,225.0,"Cost of goods sold 02 –4,828.0 –4,735.1",2024-12-31,dual_extractor_agreement,
+Wacker Chemie AG,2,revenue,5721800000.0,EUR,225.0,"Sales 01 5,485.3 5,721.8",2024-12-31,dual_extractor_agreement,
+Wacker Chemie AG,2,trade_payables,851500000.0,EUR,228.0,Trade payables 16 692.3 851.5,2024-12-31,dual_extractor_agreement,

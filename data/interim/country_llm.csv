@@ -1,0 +1,227 @@
+company_id,name,hq_country,confidence,changed
+cargill-aqua-nutrition-q133797382,Cargill Aqua Nutrition,NO,0.5,true
+ahold-delhaize-q20539261,Ahold Delhaize,NL,0.9,false
+airbus-q2311,Airbus,NL,0.7,false
+amer-international-group-limited-q16926201,Amer International Group Limited,CN,0.7,true
+kronospan-aps-lei6v0282,Kronospan ApS,DK,0.5,false
+dansk-landbrugs-grovvareselskab-a-m-b-a-leigcsv45,Dansk Landbrugs Grovvareselskab A.m.b.a.,DK,0.9,false
+compass-group-plc-lei6u2t68,Compass Group plc,GB,0.9,false
+aktiebolaget-volvo-leic8jd22,Aktiebolaget Volvo,SE,0.9,false
+simple-agency-group-a-s-lei5e0517,Simple Agency Group A/S,DK,0.5,false
+j-sainsbury-plc-leij9y484,J Sainsbury plc,GB,0.9,false
+standard-life-plc-leiu33t68,Standard Life plc,GB,0.9,false
+imperial-brands-plc-leijl3a42,Imperial Brands plc,GB,0.9,false
+ingka-group-q47508300,INGKA Group,NL,0.9,true
+la-poste-leiap0l59,La Poste,FR,0.9,false
+heineken-holding-n-v-leitybs04,Heineken Holding N.V.,NL,0.9,false
+heineken-n-v-lei86uq23,Heineken N.V.,NL,0.9,false
+jardine-matheson-holdings-limited-leiolpk41,Jardine Matheson Holdings Limited,HK,0.7,true
+nestle-holdings-inc-leimqxp30,"Nestle Holdings, INC.",US,0.7,true
+forvia-leiiulv85,Forvia,FR,0.9,false
+british-telecommunications-limited-leiyv4h90,British Telecommunications Limited,GB,0.9,false
+bt-group-plc-leiyqmn21,BT Group plc,GB,0.9,false
+randstad-n-v-q267840,Randstad N.V.,NL,0.9,false
+ing-bank-n-v-leiu0qe75,ING Bank N.V.,NL,0.9,false
+associated-british-foods-plc-leiq8oq72,Associated British Foods plc,GB,0.9,false
+inter-ikea-holding-q47508289,Inter IKEA Holding,NL,0.9,true
+lloyds-bank-plc-leixq1z70,Lloyds Bank plc,GB,0.9,false
+telefonaktiebolaget-lm-ericsson-leixifm52,Telefonaktiebolaget LM Ericsson,SE,0.9,false
+tui-ag-lei93b552,Tui AG,DE,0.9,true
+vattenfall-ab-leihz3109,Vattenfall AB,SE,0.9,false
+marks-and-spencer-group-plc-leizg1x44,Marks and Spencer Group plc,GB,0.9,false
+acciona-sa-leillno21,Acciona SA,ES,0.9,false
+naturgy-energy-group-sa-lei5sv098,Naturgy Energy Group SA,ES,0.9,false
+standard-chartered-plc-lei5f2g91,Standard Chartered plc,GB,0.9,false
+neste-oyj-lei66am14,Neste Oyj,FI,0.9,false
+dcc-public-limited-company-leitd3t45,Dcc Public Limited Company,IE,0.9,true
+anglo-american-plc-leix8me43,Anglo American plc,GB,0.9,false
+reckitt-benckiser-group-plc-lei48v108,Reckitt Benckiser Group plc,GB,0.9,false
+cooperatieve-rabobank-u-a-leif9wn62,Coöperatieve Rabobank U.A.,NL,0.9,false
+skanska-ab-leihgmg07,Skanska AB,SE,0.9,false
+edison-s-p-a-lei5j4l49,Edison S.p.a.,IT,0.9,false
+kingfisher-plc-lei2fy281,Kingfisher plc,GB,0.9,false
+international-distributions-services-plc-lei8z2m70,International Distributions Services plc,GB,0.9,false
+jd-sports-fashion-plc-leiuu8375,JD Sports Fashion plc,GB,0.9,false
+atlas-copco-aktiebolag-leiyjzr07,Atlas Copco Aktiebolag,SE,0.9,false
+johnson-matthey-plc-leisc6z10,Johnson Matthey plc,GB,0.9,false
+a2a-energia-s-p-a-lei8c1896,A2a Energia S.p.a.,IT,0.9,false
+bunzl-public-limited-company-lei78um09,Bunzl Public Limited Company,GB,0.9,false
+securitas-ab-leiwds617,Securitas AB,SE,0.9,false
+logista-integral-sa-leiuj7x28,Logista Integral SA,ES,0.9,false
+australia-and-new-zealand-banking-group-limited-leiyttu19,Australia and New Zealand Banking Group Limited,AU,0.9,true
+iveco-group-n-v-lei9eor96,Iveco Group N.V.,IT,0.9,true
+assa-abloy-ab-leiimmb67,Assa Abloy AB,SE,0.9,false
+co-operative-group-limited-leiz69v16,Co-Operative Group Limited,GB,0.9,false
+mind-energy-a-s-leijmm315,Mind Energy A/S,DK,0.5,false
+hera-s-p-a-lei443b48,Hera S.p.a.,IT,0.9,false
+dsm-firmenich-ag-leim4bi12,DSM-Firmenich AG,CH,0.7,true
+hal-trust-leioy3r07,HAL Trust,NL,0.9,false
+kesko-oyj-leiahpb95,Kesko Oyj,FI,0.9,false
+hsbc-uk-bank-plc-lei86cb82,HSBC UK Bank plc,GB,0.9,false
+essity-aktiebolag-publ-lei1da153,Essity Aktiebolag (publ),SE,0.9,false
+bunker-holding-a-s-lei2b7a63,Bunker Holding A/s,DK,0.9,false
+standard-chartered-bank-lei6pct96,Standard Chartered Bank,GB,0.9,false
+sse-plc-leimsk856,SSE plc,GB,0.9,false
+carlsberg-breweries-a-s-leidmwn61,Carlsberg Breweries A/s,DK,0.9,false
+easyjet-plc-leib7th90,Easyjet plc,GB,0.9,false
+kirkbi-a-s-lei2e5305,Kirkbi A/s,DK,0.9,false
+saras-s-p-a-o-in-forma-estesa-saras-s-p-a-raffin-leiujuh84,Saras S.p.a. O In Forma Estesa Saras S.p.a. - Raffinerie Sarde,IT,0.9,false
+nxp-semiconductors-q1155668,NXP Semiconductors,NL,0.9,true
+gestamp-automocion-sa-lei484363,Gestamp Automocion SA,ES,0.9,false
+smurfit-kappa-group-public-limited-company-leitdvt56,Smurfit Kappa Group Public Limited Company,IE,0.9,true
+kone-oyj-lei5xzk38,Kone Oyj,FI,0.9,false
+zest-societa-per-azioni-leicb0760,Zest Societa' Per Azioni,IT,0.5,false
+salling-group-a-s-leism0112,Salling Group A/S,DK,0.9,false
+balfour-beatty-plc-leimenq17,Balfour Beatty plc,GB,0.9,false
+scottish-power-uk-plc-leimekq11,Scottish Power UK plc,GB,0.9,false
+klm-q181912,KLM,NL,0.9,true
+quilter-plc-leirzgm95,Quilter plc,GB,0.9,false
+currys-plc-leidqqf16,Currys plc,GB,0.9,false
+computacenter-plc-lei9db105,Computacenter plc,GB,0.9,false
+inchcape-plc-leinm2t57,Inchcape plc,GB,0.9,false
+london-stock-exchange-group-plc-lei445n30,London Stock Exchange Group plc,GB,0.9,false
+sandvik-aktiebolag-leilvzf54,Sandvik Aktiebolag,SE,0.9,false
+spie-sa-leiwj8x85,Spie SA,FR,0.9,false
+fnac-darty-leilpho35,Fnac Darty,FR,0.9,false
+akzonobel-q50912,AkzoNobel,NL,0.9,false
+tennet-holding-b-v-leig63903,TenneT Holding B.V.,NL,0.9,false
+ashtead-group-public-limited-company-leik1a235,Ashtead Group Public Limited Company,GB,0.9,false
+jde-peet-s-n-v-lei5zrt89,JDE Peet's N.V.,NL,0.9,false
+fomento-de-construcciones-y-contratas-s-a-lei178328,Fomento de Construcciones y Contratas S.A.,ES,0.9,false
+upm-kymmene-oyj-lei4j9u64,Upm-Kymmene Oyj,FI,0.9,false
+bitten-og-mads-clausens-fond-leixekp28,Bitten Og Mads Clausens Fond,DK,0.9,false
+harbour-energy-plc-leikvpf97,Harbour Energy plc,GB,0.9,false
+stora-enso-oyj-leiutz738,Stora Enso Oyj,FI,0.9,false
+arkema-leikp2785,Arkema,FR,0.9,false
+lagardere-sa-leiq65g45,Lagardere SA,FR,0.9,false
+groupe-spie-batignolles-leigsyg40,Groupe Spie Batignolles,FR,0.9,false
+abn-amro-q287471,Abn Amro,NL,0.9,false
+casino-guichard-perrachon-leibl6l29,"Casino, Guichard-Perrachon",FR,0.9,false
+ssab-ab-leiiml164,Ssab AB,SE,0.9,false
+cvs-group-plc-leix48o05,CVS Group plc,GB,0.9,false
+boliden-ab-leiondj56,Boliden AB,SE,0.9,false
+dfi-retail-group-holdings-limited-leivnnx48,Dfi Retail Group Holdings Limited,GB,0.9,false
+nebius-group-q47120756,Nebius Group,NL,0.9,true
+next-plc-leip9ph98,Next plc,GB,0.9,false
+hsbc-bank-plc-leipyfy54,HSBC Bank plc,GB,0.9,false
+skf-group-leiovbi12,SKF Group,SE,0.9,false
+ds-smith-plc-leiblwh36,DS Smith plc,GB,0.9,false
+antofagasta-plc-leivld628,Antofagasta plc,GB,0.9,false
+fincantieri-s-p-a-lei8b6239,Fincantieri S.p.a.,IT,0.9,false
+axfood-ab-leihe8l05,Axfood AB,SE,0.9,false
+experian-plc-leijtsz26,Experian plc,IE,0.7,true
+nexans-lei4uiv14,Nexans,FR,0.9,false
+xinyu-iron-and-steel-group-q11081084,Xinyu Iron and Steel Group,CN,0.9,true
+wendel-leijd5o34,Wendel,FR,0.9,false
+hays-plc-leio8th08,Hays plc,GB,0.9,false
+technip-energies-n-v-leiscip70,Technip Energies N.V.,FR,0.9,true
+maire-s-p-a-lei0a1b83,Maire S.p.a.,IT,0.9,false
+stark-sourcing-a-s-leif1md69,Stark Sourcing A/s,DK,0.7,false
+saab-aktiebolag-leii13m69,SAAB Aktiebolag,SE,0.9,false
+mansour-group-q431077,Mansour Group,EG,0.7,true
+china-bohai-bank-q4208326,China Bohai Bank,CN,0.9,true
+b-m-european-value-retail-plc-leik1x530,B&m European Value Retail plc,GB,0.9,false
+skandinaviska-enskilda-banken-ab-leibptn86,Skandinaviska Enskilda Banken AB,SE,0.9,false
+bank-of-scotland-plc-leijevi93,Bank of Scotland plc,GB,0.9,false
+rubis-leitc9742,Rubis,FR,0.9,false
+hbos-plc-leih5qu25,Hbos plc,GB,0.9,false
+mitie-group-plc-leiwzmj03,Mitie Group plc,GB,0.9,false
+iren-s-p-a-lei474e60,Iren S.p.a.,IT,0.9,false
+barratt-redrow-plc-lei5ynk29,Barratt Redrow plc,GB,0.9,false
+bureau-veritas-lei5d1f11,Bureau Veritas,FR,0.9,false
+tecnicas-reunidas-sa-leiwjgf49,Tecnicas Reunidas SA,ES,0.9,false
+3i-group-plc-leiatnm84,3i Group plc,GB,0.9,false
+koninklijke-bam-groep-n-v-leiy5bs93,Koninklijke BAM Groep N.V.,NL,0.9,false
+wartsila-oyj-abp-leim3x223,Wärtsilä Oyj Abp,FI,0.9,false
+canal-lei3bxn18,Canal+,FR,0.9,true
+rentokil-initial-plc-leit14k68,Rentokil Initial plc,GB,0.9,false
+drax-group-plc-leizhsr98,Drax Group plc,GB,0.9,false
+aena-s-m-e-sa-leinfmt29,Aena S.m.e. SA,ES,0.9,false
+entain-plc-leiqr8l28,Entain plc,GB,0.7,false
+elior-group-lei00sq95,Elior Group,FR,0.9,false
+alfa-laval-ab-lei8ag251,Alfa Laval AB,SE,0.9,false
+wolters-kluwer-q249798,Wolters Kluwer,NL,0.9,false
+babcock-international-group-plc-leiu6l377,Babcock International Group plc,GB,0.9,false
+company-leio79q77,华泰证券股份有限公司,CN,0.9,true
+swedbank-ab-leic71685,Swedbank AB,SE,0.9,false
+airtel-africa-plc-leiwqh623,Airtel Africa plc,GB,0.9,false
+morgan-sindall-group-plc-leizrb345,Morgan Sindall Group plc,GB,0.9,false
+emeis-leipk1v89,Emeis,FR,0.9,false
+lundbeckfonden-lei6mc463,Lundbeckfonden,DK,0.9,false
+koninklijke-kpn-n-v-lei7fvp81,Koninklijke KPN N.V.,NL,0.9,false
+acerinox-sa-lei582721,Acerinox SA,ES,0.9,false
+signify-n-v-lei8nzo35,Signify N.V.,NL,0.9,false
+distribuidora-internacional-de-alimentacion-sa-leifl6h10,Distribuidora Internacional de Alimentacion SA,ES,0.9,false
+serco-group-plc-lei5gwj21,Serco Group plc,GB,0.9,false
+investor-aktiebolag-leibkux38,Investor Aktiebolag,SE,0.9,false
+wizz-air-holdings-plc-leiljza85,Wizz Air Holdings plc,HU,0.7,true
+firstgroup-plc-lei4hkm93,Firstgroup plc,GB,0.9,false
+eroski-scoop-leip6s661,Eroski Scoop,ES,0.9,false
+outokumpu-oyj-leiff0r80,Outokumpu Oyj,FI,0.9,false
+sbm-offshore-n-v-leiqe6513,Sbm Offshore N.V.,NL,0.9,false
+epiroc-aktiebolag-lei1spe91,Epiroc Aktiebolag,SE,0.9,false
+hexagon-aktiebolag-leii4ta80,Hexagon Aktiebolag,SE,0.9,false
+general-logistics-systems-q366182,General Logistics Systems,NL,0.9,true
+south32-limited-leikvhr17,South32 Limited,AU,0.9,true
+ramsay-generale-de-sante-lei223f44,Ramsay Generale de Sante,FR,0.9,false
+travis-perkins-plc-leif22k83,Travis Perkins plc,GB,0.9,false
+clariane-leitjm037,Clariane,FR,0.9,false
+metso-oyj-lei1w0e07,Metso Oyj,FI,0.9,false
+ayvens-leinp7427,Ayvens,FR,0.9,false
+valmet-oyj-leih83v62,Valmet Oyj,FI,0.9,false
+peab-ab-lei53i854,Peab AB,SE,0.9,false
+kier-group-plc-lei4y7o48,Kier Group plc,GB,0.9,false
+dowlais-group-plc-lei6vpc92,Dowlais Group plc,GB,0.9,false
+prosus-q67389109,Prosus,NL,0.9,false
+svenska-handelsbanken-ab-lei5uyz31,Svenska Handelsbanken AB,SE,0.9,false
+fortum-oyj-leisamf76,Fortum Oyj,FI,0.9,false
+hilton-food-group-plc-leioox355,Hilton Food Group plc,GB,0.9,false
+prosegur-compania-de-seguridad-s-a-leidbfg97,"Prosegur Compañia de Seguridad, S.A.",ES,0.9,false
+allied-irish-banks-public-limited-company-lei7z1q21,Allied Irish Banks Public Limited Company,IE,0.9,true
+vistry-group-plc-lei9slk53,Vistry Group plc,GB,0.9,false
+banijay-group-n-v-lei3rf180,Banijay Group N.V.,FR,0.9,true
+arcadis-n-v-lei047n03,Arcadis N.V.,NL,0.9,false
+intercontinental-hotels-group-plc-leilu3j98,Intercontinental Hotels Group plc,GB,0.9,false
+elis-leimay492,ELIS,FR,0.9,false
+john-wood-group-plc-leib6s323,John Wood Group plc,GB,0.9,false
+informa-plc-leisedu20,Informa plc,GB,0.9,false
+imcd-nv-q63184341,Imcd NV,NL,0.9,false
+grundfos-holding-a-s-lei54x103,Grundfos Holding A/s,DK,0.9,false
+sacyr-sa-leivn9425,Sacyr SA,ES,0.9,false
+pepco-group-n-v-lei9ob449,Pepco Group N.V.,PL,0.7,true
+taylor-wimpey-plc-lei8s3r66,Taylor Wimpey plc,GB,0.9,false
+aib-group-public-limited-company-leiwnql34,Aib Group Public Limited Company,IE,0.9,true
+construcciones-y-auxiliar-de-ferrocarriles-s-a-lei275134,"Construcciones y Auxiliar de Ferrocarriles, S.A.",ES,0.9,false
+persimmon-public-limited-company-leiwn6f31,Persimmon Public Limited Company,GB,0.9,false
+elecnor-sa-lei491250,Elecnor SA,ES,0.9,false
+the-governor-and-company-of-the-bank-of-ireland-lei42g291,The Governor and Company of the Bank of Ireland,IE,0.9,true
+pandora-a-s-leie46843,Pandora A/S,DK,0.9,false
+buzzi-spa-leivj6k59,Buzzi Spa,IT,0.9,false
+esprinet-s-p-a-lei6add08,Esprinet S.p.a.,IT,0.9,false
+ssp-group-plc-leimenj24,Ssp Group plc,GB,0.9,false
+fresnillo-plc-leij0xv81,Fresnillo plc,GB,0.7,false
+melrose-industries-plc-leim7tr85,Melrose Industries plc,GB,0.9,false
+konecranes-oyj-leibma096,Konecranes Oyj,FI,0.9,false
+bank-of-ireland-group-plc-lei12lj39,Bank of Ireland Group plc,IE,0.9,true
+transnet-soc-ltd-lei1ea796,Transnet SOC Ltd,ZA,0.9,true
+itv-plc-leiycxz59,ITV plc,GB,0.9,false
+cellnex-telecom-sa-leiui7p67,Cellnex Telecom SA,ES,0.9,false
+husqvarna-ab-leixb7655,Husqvarna AB,SE,0.9,false
+alten-lei24gn07,Alten,FR,0.9,false
+biomerieux-sa-leiq4t071,Biomerieux SA,FR,0.9,false
+aak-ab-publ-leiwjwl07,Aak AB (publ),SE,0.9,false
+william-demant-invest-a-s-leitcoe28,William Demant Invest A/s,DK,0.9,false
+intertek-group-plc-lei1rn369,Intertek Group plc,GB,0.9,false
+vallourec-lei4mcj34,Vallourec,FR,0.9,false
+mfe-mediaforeurope-n-v-leib97a50,Mfe-Mediaforeurope N.V.,IT,0.9,true
+huhtamaki-oyj-leixn6l29,Huhtamäki Oyj,FI,0.9,false
+cie-automotive-sa-lei381252,Cie Automotive SA,ES,0.9,false
+vicat-leiovdp79,Vicat,FR,0.9,false
+schroders-plc-leisz2h24,Schroders plc,GB,0.9,false
+knds-q19966744,KNDS,NL,0.7,true
+lundin-mining-corporation-leihtn269,Lundin Mining Corporation,CA,0.9,true
+verisure-plc-leixta943,Verisure plc,CH,0.7,true
+de-longhi-s-p-a-lei4f8a38,De' Longhi S.p.a.,IT,0.9,false
+unibel-leioxfh76,Unibel,FR,0.9,false
+id-logistics-group-leimj9p45,Id Logistics Group,FR,0.9,false
+bellway-p-l-c-lei4fgz98,Bellway P L C,GB,0.9,false

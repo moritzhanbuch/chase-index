@@ -1,0 +1,32 @@
+{
+  "url": "https://check-payment-practices.service.gov.uk/export/csv/",
+  "landing_page": "https://check-payment-practices.service.gov.uk/export/",
+  "licence": "Open Government Licence v3.0",
+  "path": "data/raw/uk/payment_practices_export.csv",
+  "sha256": "5a4aa885b642b27a705aa41948538a34e1aa9813f28dd1bd5b6c6724679f1658",
+  "bytes": 104508155,
+  "retrieved_at": "2026-11-16T10:03:07Z",
+  "content_type": "text/csv",
+  "related_files": [
+    {
+      "source_url": "https://assets.publishing.service.gov.uk/media/6a54be41c3d64d94cacab833/large-business-payment-practices-and-performance-statistics-2025-reference-tables.ods",
+      "path": "data/raw/uk/dbt_payment_practices_statistics_2025_reference_tables.ods",
+      "sha256": "def147386076d588c4a4d437b87c089023110ceaec0d5c389fae6b59611e1c37",
+      "bytes": 14070,
+      "retrieved_at": "2026-11-16T10:04:06Z",
+      "content_type": "application/vnd.oasis.opendocument.spreadsheet"
+    },
+    {
+      "source_url": "https://assets.publishing.service.gov.uk/media/6a50c8a69e9c95844ae64ca1/large-business-payment-practices-statistics-methodology-and-background-quality-report.pdf",
+      "path": "data/raw/uk/dbt_payment_practices_statistics_methodology.pdf",
+      "sha256": "e12843caaae24abc7ad977121873ea5c42650e8d8220161c7f6544aaa2570202",
+      "bytes": 361898,
+      "retrieved_at": "2026-11-16T10:04:07Z",
+      "content_type": "application/pdf"
+    }
+  ],
+  "rows_reports": 116806,
+  "distinct_entities": 10309,
+  "rows_entity_latest": 10309,
+  "processed_at": "2026-11-16T20:48:03Z"
+}

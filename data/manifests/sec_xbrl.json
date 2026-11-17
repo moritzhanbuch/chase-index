@@ -1,0 +1,187 @@
+{
+  "source": "SEC EDGAR XBRL (frames, companyfacts, submissions, full-index form.idx)",
+  "licence": "US government work, public domain",
+  "run_started_at": "2026-11-16T20:48:04Z",
+  "run_finished_at": "2026-11-16T20:48:26Z",
+  "revenue_threshold_usd": 4000000000.0,
+  "fx_rates_file": "config/fx_rates_treasury.yaml",
+  "discovery_fetches": [
+    {
+      "url": "https://data.sec.gov/api/xbrl/frames/us-gaap/Revenues/USD/CY2025.json",
+      "status": 200,
+      "rows": 2261,
+      "rows_ge_threshold": 401,
+      "retrieved_at": "2026-11-16T10:00:42Z",
+      "sha256": "3ba7bef8cd09dd22550e40d85540e58b203b7cfdd52a9de5751852136616aa84"
+    },
+    {
+      "url": "https://data.sec.gov/api/xbrl/frames/us-gaap/Revenues/USD/CY2024.json",
+      "status": 200,
+      "rows": 2512,
+      "rows_ge_threshold": 408,
+      "retrieved_at": "2026-11-16T10:00:43Z",
+      "sha256": "a28d0028199f21d77d0d8f0d75281ecc4f7f4f8749dff96ca7ce5cd225be8282"
+    },
+    {
+      "url": "https://data.sec.gov/api/xbrl/frames/us-gaap/RevenueFromContractWithCustomerExcludingAssessedTax/USD/CY2025.json",
+      "status": 200,
+      "rows": 2715,
+      "rows_ge_threshold": 530,
+      "retrieved_at": "2026-11-16T10:00:44Z",
+      "sha256": "ed00307fcb6397a09466728b349fc134c3b58f79a57b001cef193c922d87f343"
+    },
+    {
+      "url": "https://data.sec.gov/api/xbrl/frames/us-gaap/RevenueFromContractWithCustomerExcludingAssessedTax/USD/CY2024.json",
+      "status": 200,
+      "rows": 2974,
+      "rows_ge_threshold": 534,
+      "retrieved_at": "2026-11-16T10:00:45Z",
+      "sha256": "56cb0480fcf8bce739c7cb2a8e3ddffbfed840f6030bf8b373e63d2ccc60a732"
+    },
+    {
+      "url": "https://data.sec.gov/api/xbrl/frames/us-gaap/RevenueFromContractWithCustomerIncludingAssessedTax/USD/CY2025.json",
+      "status": 200,
+      "rows": 665,
+      "rows_ge_threshold": 70,
+      "retrieved_at": "2026-11-16T10:00:45Z",
+      "sha256": "77712411ba84f03526c0f25652edc9f9a561f198cfa8bbeecbd40778a2960c59"
+    },
+    {
+      "url": "https://data.sec.gov/api/xbrl/frames/us-gaap/RevenueFromContractWithCustomerIncludingAssessedTax/USD/CY2024.json",
+      "status": 200,
+      "rows": 759,
+      "rows_ge_threshold": 70,
+      "retrieved_at": "2026-11-16T10:00:46Z",
+      "sha256": "b45905b806ff1e1384d75d40470fe635f973a109cb6ed3be62622a0c801d8a7f"
+    },
+    {
+      "url": "https://data.sec.gov/api/xbrl/frames/us-gaap/SalesRevenueNet/USD/CY2025.json",
+      "status": 404,
+      "note": "frame not served"
+    },
+    {
+      "url": "https://data.sec.gov/api/xbrl/frames/us-gaap/SalesRevenueNet/USD/CY2024.json",
+      "status": 404,
+      "note": "frame not served"
+    },
+    {
+      "url": "https://data.sec.gov/api/xbrl/frames/us-gaap/RevenuesNetOfInterestExpense/USD/CY2025.json",
+      "status": 200,
+      "rows": 43,
+      "rows_ge_threshold": 16,
+      "retrieved_at": "2026-11-16T10:05:08Z",
+      "sha256": "60ec86d47f6f2bbd675dea795f1b0757fcf0cd9b1366a73a63b1e5a02f0e2728"
+    },
+    {
+      "url": "https://data.sec.gov/api/xbrl/frames/us-gaap/RevenuesNetOfInterestExpense/USD/CY2024.json",
+      "status": 200,
+      "rows": 53,
+      "rows_ge_threshold": 16,
+      "retrieved_at": "2026-11-16T10:05:09Z",
+      "sha256": "a91680df53ff2fecfa501d036b8e241a17e8285d36f7f647d66c18293f1b7ae5"
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/full-index/2025/QTR4/form.idx",
+      "status": 200,
+      "fpi_annual_filings": 119,
+      "retrieved_at": "2026-11-16T10:03:09Z",
+      "sha256": "a41b3da98042a81d0716fa871f03d0739e1aa8d8763d0c48d03787adcffec6e9"
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/full-index/2026/QTR1/form.idx",
+      "status": 200,
+      "fpi_annual_filings": 519,
+      "retrieved_at": "2026-11-16T10:02:34Z",
+      "sha256": "af7990a433af41c281053a327416e5b8bb08dd3485c6b3c2ac0fda47bea3ec86"
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/full-index/2026/QTR2/form.idx",
+      "status": 200,
+      "fpi_annual_filings": 607,
+      "retrieved_at": "2026-11-16T10:02:43Z",
+      "sha256": "4079211b54e97d6c61997c8c317f24f624392f27f18b7ab090747cd34577cf92"
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/full-index/2026/QTR3/form.idx",
+      "status": 200,
+      "fpi_annual_filings": 140,
+      "retrieved_at": "2026-11-16T10:02:52Z",
+      "sha256": "71c79550fbb4e0bd2f218aacdfc9fb102fef2d3537230ebf2ffcbe8e471f2950"
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/full-index/2026/QTR4/form.idx",
+      "status": 200,
+      "fpi_annual_filings": 72,
+      "retrieved_at": "2026-11-16T10:03:01Z",
+      "sha256": "b89e399540aaca181fdb585c3a78be7910b323e6d851219f7e767584a95c7618"
+    }
+  ],
+  "counts": {
+    "candidates": 2124,
+    "companyfacts_404": 12,
+    "no_annual_revenue": 143,
+    "below_threshold": 866,
+    "stale": 43,
+    "excluded_probable_scale_error": 2,
+    "unknown_currency": 0,
+    "companies_ge_threshold": 1058,
+    "companies_by_discovery_route": {
+      "usgaap_frame": 866,
+      "fpi_form_index": 161,
+      "fpi_form_index+usgaap_frame": 31
+    },
+    "dpo_rows": 2116,
+    "dpo_flag_all_rows": {
+      "ok": 1535,
+      "not_applicable": 352,
+      "missing_inputs": 171,
+      "suspicious_low": 41,
+      "suspicious_high": 17
+    },
+    "dpo_flag_latest_fy": {
+      "ok": 767,
+      "not_applicable": 176,
+      "missing_inputs": 86,
+      "suspicious_low": 21,
+      "suspicious_high": 8
+    },
+    "cost_basis_latest_fy": {
+      "cost_of_sales": 700,
+      "operating_expenses_fallback": 231,
+      "missing": 127
+    },
+    "payables_basis_latest_fy": {
+      "trade": 830,
+      "missing": 136,
+      "trade_and_other_broad": 92
+    }
+  },
+  "unknown_currency_candidates": [],
+  "excluded_probable_scale_error": [
+    {
+      "cik": "0001855447",
+      "name": "Tigo Energy, Inc.",
+      "revenue_as_tagged": 103536000000,
+      "currency": "USD",
+      "period_end": "2025-12-31",
+      "total_assets": 78037000,
+      "accession_number": "0001193125-26-115952"
+    },
+    {
+      "cik": "0001872195",
+      "name": "Bullish",
+      "revenue_as_tagged": 244811387000,
+      "currency": "USD",
+      "period_end": "2025-12-31",
+      "total_assets": 3956504000,
+      "accession_number": "0001437749-26-007417"
+    }
+  ],
+  "outputs": [
+    "data/interim/sec_companies.parquet",
+    "data/interim/sec_companies.csv",
+    "data/interim/sec_dpo.parquet",
+    "data/interim/sec_dpo.csv"
+  ],
+  "per_request_log": "data/manifests/http_log.jsonl"
+}

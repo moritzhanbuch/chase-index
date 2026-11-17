@@ -1,0 +1,201 @@
+company_id,name_a,case
+alstom-q309084,Alstom,b_only_yes
+siemens-energy-ag-q89189545,Siemens Energy AG,no_source
+lkq-corporation-cik1065696,LKQ Corporation,both_yes
+fresenius-medical-care-q650259,Fresenius Medical Care,neither
+nestle-q160746,Nestlé,no_source
+heineken-holding-n-v-leitybs04,Heineken Holding N.V.,b_only_yes
+ge-vernova-inc-cik1996810,GE Vernova Inc.,both_yes
+reckitt-benckiser-group-plc-lei48v108,Reckitt Benckiser Group plc,b_only_yes
+grifols-q901262,Grifols,neither
+johnson-matthey-plc-leisc6z10,Johnson Matthey plc,neither
+publicis-q1537378,Publicis,neither
+haleon-plc-cik1900304,Haleon plc,b_only_yes
+lyondellbasell-q899255,LyondellBasell,both_yes
+eaton-corporation-q48872,Eaton Corporation,both_yes
+terex-corp-cik97216,Terex Corp,both_yes
+prysmian-group-q1964784,Prysmian Group,b_no_or_unclear
+unilever-q157062,Unilever,b_only_yes
+puig-q3410623,Puig,b_only_yes
+mondelez-international-q12857502,Mondelez International,both_yes
+airbus-q2311,Airbus,b_only_yes
+saint-gobain-q678565,Saint-Gobain,both_yes
+ge-aerospace-q1485061,GE Aerospace,a_tagged_b_not_yes
+abbvie-q14662364,AbbVie,neither
+pilgrims-pride-corp-cik802481,Pilgrims Pride Corp,both_yes
+cummins-inc-cik26172,Cummins Inc,both_yes
+pernod-ricard-q837049,Pernod Ricard,b_no_or_unclear
+roche-holding-q25463170,Roche Holding,no_source
+anheuser-busch-inbev-q128738,Anheuser-Busch InBev,b_only_yes
+bunzl-public-limited-company-lei78um09,Bunzl Public Limited Company,neither
+danone-q329426,Danone,b_only_yes
+ds-smith-plc-leiblwh36,DS Smith plc,b_only_yes
+sherwin-williams-q48881,Sherwin-Williams,both_yes
+itochu-q717093,Itochu,no_source
+kronospan-aps-lei6v0282,Kronospan ApS,neither
+ppg-industries-q48754,PPG Industries,both_yes
+vistry-group-plc-lei9slk53,Vistry Group plc,neither
+genuine-parts-co-cik40987,Genuine Parts Co,both_yes
+the-coca-cola-company-q3295867,The Coca-Cola Company,both_yes
+procter-gamble-q212405,Procter & Gamble,both_yes
+puma-q157064,Puma,no_source
+pepsico-q334800,PepsiCo,both_yes
+bayer-q152051,Bayer,no_source
+zimmer-biomet-holdings-inc-cik1136869,"Zimmer Biomet Holdings, INC.",neither
+amazon-q3884,Amazon,neither
+british-american-tobacco-q856411,British American Tobacco,b_only_yes
+baxter-international-q761965,Baxter International,neither
+cargill-q1036056,Cargill,no_source
+technipfmc-q30324333,TechnipFMC,b_only_yes
+caterpillar-inc-q459965,Caterpillar Inc.,both_yes
+coca-cola-europacific-partners-q20811256,Coca-Cola Europacific Partners,b_only_yes
+syngenta-group-q114634360,Syngenta Group,no_source
+rolls-royce-q243278,Rolls-Royce,b_only_yes
+holcim-q267818,Holcim,no_source
+kimberly-clark-q1741634,Kimberly-Clark,both_yes
+church-dwight-co-inc-cik313927,Church & Dwight Co Inc,b_only_yes
+kraft-heinz-q19681433,Kraft Heinz,b_only_yes
+acerinox-sa-lei582721,Acerinox SA,b_only_yes
+cooper-companies-inc-cik711404,"Cooper Companies, INC.",neither
+rheinmetall-ag-q161544,Rheinmetall AG,no_source
+safran-q1886126,Safran,neither
+pirelli-q207770,Pirelli,neither
+diageo-q161140,Diageo,b_only_yes
+stellantis-q97439162,Stellantis,b_only_yes
+crown-holdings-inc-cik1219601,"Crown Holdings, INC.",both_yes
+starbucks-q37158,Starbucks,neither
+akzonobel-q50912,AkzoNobel,b_only_yes
+brenntag-q828445,Brenntag,no_source
+adient-plc-cik1670541,Adient plc,both_yes
+nov-inc-cik1021860,NOV Inc.,neither
+arrow-electronics-inc-cik7536,"Arrow Electronics, INC.",both_yes
+heidelberg-materials-q632233,Heidelberg Materials,no_source
+carlsberg-group-q113215,Carlsberg Group,neither
+garmin-q658789,Garmin,neither
+abbott-laboratories-q306764,Abbott Laboratories,neither
+graphic-packaging-holding-co-cik1408075,Graphic Packaging Holding Co,both_yes
+ametek-q470317,Ametek,neither
+tjx-companies-q1285819,TJX Companies,neither
+ford-motor-company-q44294,Ford Motor Company,both_yes
+gilead-sciences-q663596,Gilead Sciences,neither
+continental-ag-q163241,Continental AG,no_source
+assa-abloy-ab-leiimmb67,Assa Abloy AB,neither
+kone-oyj-lei5xzk38,Kone Oyj,neither
+xerox-q152433,Xerox,both_yes
+asahi-group-holdings-q11283168,Asahi Group Holdings,no_source
+forvia-leiiulv85,Forvia,b_only_yes
+kenvue-inc-cik1944048,Kenvue Inc.,both_yes
+fujifilm-corporation-q164740,Fujifilm Corporation,no_source
+zebra-technologies-corp-cik877212,Zebra Technologies Corp,neither
+sanofi-q158205,Sanofi,neither
+organon-co-q903372,Organon & Co.,neither
+universal-music-group-q38903,Universal Music Group,neither
+travis-perkins-plc-leif22k83,Travis Perkins plc,b_only_yes
+imperial-brands-plc-leijl3a42,Imperial Brands plc,b_only_yes
+plexus-corp-cik785786,Plexus Corp,neither
+lanxess-q682992,Lanxess,no_source
+brown-forman-corp-cik14693,Brown Forman Corp,neither
+xylem-inc-q3146975,Xylem Inc.,both_yes
+bristol-myers-squibb-q266423,Bristol-Myers Squibb,neither
+cf-industries-holdings-inc-cik1324404,"CF Industries Holdings, Inc.",neither
+eni-q565594,Eni,b_only_yes
+axalta-coating-systems-ltd-cik1616862,Axalta Coating Systems Ltd.,b_only_yes
+telefonaktiebolaget-lm-ericsson-leixifm52,Telefonaktiebolaget LM Ericsson,b_only_yes
+post-holdings-inc-cik1530950,"Post Holdings, Inc.",neither
+ge-healthcare-technologies-inc-cik1932393,GE HealthCare Technologies Inc.,both_yes
+currys-plc-leidqqf16,Currys plc,neither
+teledyne-technologies-inc-cik1094285,Teledyne Technologies Inc,neither
+iqvia-holdings-inc-cik1478242,Iqvia Holdings INC.,neither
+niq-global-intelligence-plc-cik2054696,NIQ Global Intelligence plc,neither
+gsk-plc-cik1131399,GSK plc,b_only_yes
+anglo-american-plc-leix8me43,Anglo American plc,neither
+viatris-inc-cik1792044,Viatris Inc,both_yes
+kerry-group-leifhwc59,Kerry Group,both_yes
+ardagh-metal-packaging-s-a-cik1845097,Ardagh Metal Packaging S.A.,neither
+arla-foods-q674575,Arla Foods,neither
+amphenol-q474621,Amphenol,neither
+cellnex-telecom-sa-leiui7p67,Cellnex Telecom SA,b_only_yes
+accor-q212599,Accor,neither
+harley-davidson-inc-cik793952,"Harley-Davidson, INC.",neither
+stryker-corporation-q2357515,Stryker Corporation,both_yes
+smith-nephew-plc-cik845982,Smith & Nephew plc,neither
+steris-plc-cik1757898,STERIS plc,neither
+rpm-international-inc-cik110621,Rpm International Inc,both_yes
+robert-half-inc-cik315213,Robert Half INC.,neither
+hilton-worldwide-q1057464,Hilton Worldwide,neither
+elior-group-lei00sq95,Elior Group,neither
+avis-budget-group-q2874395,Avis Budget Group,neither
+indra-sistemas-q1661823,Indra Sistemas,b_only_yes
+visa-inc-q328840,Visa Inc.,neither
+intertek-group-plc-lei1rn369,Intertek Group plc,neither
+ciena-corp-cik936395,Ciena Corp,neither
+azelis-group-q115167314,Azelis Group,no_source
+trip-com-group-ltd-cik1269238,Trip.com Group Ltd,neither
+broadridge-financial-solutions-inc-cik1383312,"Broadridge Financial Solutions, INC.",neither
+corteva-q63197674,Corteva,both_yes
+berkshire-hathaway-energy-q16840677,Berkshire Hathaway Energy,neither
+american-electric-power-co-inc-cik4904,American Electric Power Co Inc,neither
+conocophillips-q214763,ConocoPhillips,neither
+flex-ltd-q1140680,Flex Ltd.,both_yes
+coherent-corp-cik820318,Coherent Corp.,both_yes
+jabil-inc-cik898293,Jabil Inc,neither
+coupang-inc-cik1834584,"Coupang, Inc.",both_yes
+vale-s-a-cik917851,Vale S.A.,b_only_yes
+tapestry-inc-cik1116132,"Tapestry, INC.",both_yes
+public-service-enterprise-group-q930919,Public Service Enterprise Group,neither
+pinnacle-west-capital-corp-cik764622,Pinnacle West Capital Corp,neither
+pdd-holdings-q124461238,PDD Holdings,neither
+novo-q818846,Novo,neither
+kinder-morgan-q931032,Kinder Morgan,neither
+stark-group-q10465506,Stark Group,neither
+esprinet-s-p-a-lei6add08,Esprinet S.p.a.,b_no_or_unclear
+floor-decor-holdings-inc-cik1507079,"Floor & Decor Holdings, Inc.",both_yes
+shift4-payments-inc-cik1794669,"Shift4 Payments, Inc.",neither
+resideo-technologies-inc-cik1740332,"Resideo Technologies, INC.",neither
+keurig-dr-pepper-q1254149,Keurig Dr Pepper,both_yes
+iveco-group-n-v-lei9eor96,Iveco Group N.V.,neither
+western-digital-corp-cik106040,Western Digital Corp,both_yes
+wec-energy-group-inc-cik783325,"Wec Energy Group, INC.",neither
+teck-resources-ltd-cik886986,Teck Resources Ltd,neither
+ambev-s-a-cik1565025,Ambev S.A.,neither
+community-health-systems-inc-cik1108109,Community Health Systems Inc,both_yes
+optimum-communications-inc-cik1702780,"Optimum Communications, Inc.",b_only_yes
+liberty-latin-america-ltd-cik1712184,Liberty Latin America Ltd.,neither
+nutrien-ltd-cik1725964,Nutrien Ltd.,b_only_yes
+targa-resources-corp-cik1389170,Targa Resources Corp.,neither
+casino-guichard-perrachon-leibl6l29,"Casino, Guichard-Perrachon",b_only_yes
+pool-corp-cik945841,Pool Corp,neither
+marvell-technology-inc-cik1835632,"Marvell Technology, Inc.",neither
+qnity-electronics-inc-cik2058873,"Qnity Electronics, Inc.",neither
+teva-pharmaceutical-industries-ltd-cik818686,Teva Pharmaceutical Industries Ltd,both_yes
+travel-leisure-co-cik1361658,Travel & Leisure Co.,neither
+ecopetrol-q1282130,Ecopetrol,neither
+telus-corp-cik868675,Telus Corp,b_only_yes
+option-care-health-inc-cik1014739,"Option Care Health, Inc.",neither
+vertiv-q5370909,Vertiv,neither
+seagate-technology-q705392,Seagate Technology,both_yes
+fortive-corp-cik1659166,Fortive Corp,neither
+v2x-inc-cik1601548,"V2X, Inc.",neither
+atlassian-corp-cik1650372,Atlassian Corp,neither
+cemex-sab-de-cv-cik1076378,Cemex Sab de Cv,b_only_yes
+netapp-inc-cik1002047,"NetApp, Inc.",neither
+robert-bosch-q234021,Robert Bosch,no_source
+red-bull-gmbh-q698639,Red Bull GmbH,no_source
+cencora-q470156,Cencora,neither
+fresenius-se-co-kgaa-q705361,Fresenius SE & Co. KGaA,no_source
+general-dynamics-q502940,General Dynamics,neither
+amcor-plc-cik1748790,Amcor plc,both_yes
+td-synnex-corp-cik1177394,TD Synnex Corp,both_yes
+schneider-electric-q49053,Schneider Electric,b_only_yes
+ferrero-spa-q269792,Ferrero SpA,no_source
+danaher-corporation-q1159256,Danaher Corporation,neither
+pfizer-q206921,Pfizer,both_yes
+morrisons-q922344,Morrisons,both_yes
+telefonica-q160229,Telefónica,neither
+johnson-johnson-q333718,Johnson & Johnson,both_yes
+astrazeneca-q731938,AstraZeneca,b_only_yes
+te-connectivity-q663452,TE Connectivity,both_yes
+goodyear-tire-and-rubber-company-q620875,Goodyear Tire and Rubber Company,both_yes
+corning-inc-q5842736,Corning Inc.,neither
+cma-cgm-q1023867,Cma Cgm,no_source
+kingfisher-plc-lei2fy281,Kingfisher plc,b_only_yes

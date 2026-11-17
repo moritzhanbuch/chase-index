@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block head %}<script type="application/ld+json">{{ faq_jsonld|safe }}</script>{% endblock %}
+{% block main %}
+<div class="wrap narrow faq doc">
+  <p class="kicker">Questions finance teams ask</p>
+  <h1>FAQ: supplier payment times, days to pay and the tools around them</h1>
+  <p class="disclosure">Disclosure: the author built this index as part of a job application to an agent-to-agent B2B payments startup.</p>
+  {% for f in faqs %}
+  <h2 id="{{ f.id }}">{{ f.q }}</h2>
+  {{ f.html|safe }}
+  {% endfor %}
+  <p class="small muted">Vendor names are examples of each category in alphabetical order. They are not rankings, recommendations or quality claims. Figures on this page are computed from the dataset when the site is built.</p>
+</div>
+{% endblock %}

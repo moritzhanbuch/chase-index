@@ -1,0 +1,63 @@
+[
+ {
+  "company_id": "kimberly-clark-q1741634",
+  "name": "Kimberly-Clark",
+  "issue": "amount_differs",
+  "value_a": 1100000000.0,
+  "value_b": 1057000000.0,
+  "period_a": "2025-12-31",
+  "period_b": "2025-12-31",
+  "url_a": "https://www.sec.gov/Archives/edgar/data/55785/000162828026070754/0001628280-26-070754-index.htm",
+  "url_b": "https://www.sec.gov/Archives/edgar/data/55785/000162828026007567/kmb-20251231.htm",
+  "snippet_b": "y and other ( 2 ) \u2014 Confirmed obligations outstanding at the end of the year $ 1,057 $ 1,004 84 KIMBERLY-CLARK CORPORATION - 2025 Annual Report Note 18. Quarterly Financial Data (Unaudited) As discussed in Note 1, as a result of the IFP Transaction, "
+ },
+ {
+  "company_id": "arrow-electronics-inc-cik7536",
+  "name": "Arrow Electronics, INC.",
+  "issue": "amount_differs",
+  "value_a": 1300000000.0,
+  "value_b": 1263089000.0,
+  "period_a": "2025-12-31",
+  "period_b": "2025-12-31",
+  "url_a": "https://www.sec.gov/Archives/edgar/data/7536/000110465926123063/0001104659-26-123063-index.htm",
+  "url_b": "https://www.sec.gov/Archives/edgar/data/7536/000110465926012765/arw-20251231x10k.htm",
+  "snippet_b": "end of the year \u200b $ 1,263,089 \u200b $ 1,269,672 \u200b $ 1,113,479 \u200b \u200b 62 Index 6. Debt Short-term borrowings, including the current portion of long-term debt, consist of the following at December 31: \u200b \u200b \u200b \u200b \u200b \u200b \u200b \u200b (thousands) \u200b \u200b \u200b 2025 \u200b \u200b \u200b 2024 4.00 % n"
+ },
+ {
+  "company_id": "ge-aerospace-q1485061",
+  "name": "GE Aerospace",
+  "issue": "tagged_but_reader_did_not_confirm",
+  "value_a": 1247000000.0,
+  "value_b": "unclear",
+  "url_a": "https://www.sec.gov/Archives/edgar/data/40545/000004054526000064/0000040545-26-000064-index.htm",
+  "url_b": "https://www.sec.gov/Archives/edgar/data/40545/000004054526000008/ge-20251231.htm",
+  "snippet_b": "urther information. SUPPLY CHAIN FINANCE PROGRAMS. We evaluate supply chain finance programs to ensure where we use a third-party intermediary to settle our trade payables, their involvement does not change the nature, existence, amount or timing of "
+ },
+ {
+  "company_id": "prysmian-group-q1964784",
+  "name": "Prysmian Group",
+  "issue": "reader_says_no",
+  "value_a": null,
+  "value_b": "no",
+  "url_b": "https://filings.xbrl.org/529900X0H1IO3RS1A464/2024-12-31/ESEF/IT/1/529900X0H1IO3RS1A464-2024-12-31-it.json",
+  "snippet_b": "lle analisi svolte, Prysmian non ha evidenziato alcuna casistica significativa relativa a questa fattispecie, la modifica, pertanto, non ha comportato alcuna necessit\u00e0 di informativa da rappresentare nel presente Bilancio ; - Modifiche allo IAS 1 Pre"
+ },
+ {
+  "company_id": "pernod-ricard-q837049",
+  "name": "Pernod Ricard",
+  "issue": "reader_says_unclear",
+  "value_a": null,
+  "value_b": "unclear",
+  "url_b": "https://filings.xbrl.org/52990097YFPX9J0H5D87/2025-06-30/ESEF/FR/0/pernod-2025-06-30-1-fr.json",
+  "snippet_b": "nt IAS 7 et IFRS 7, accord de financement de fournisseur. L\u2019application de ces amendements est sans effet significatif sur les \u00e9tats financiers du Groupe au 30 juin 2025. Les r\u00e8gles du Pilier 2 de l\u2019OCDE sur la comptabilisation d\u2019un imp\u00f4t minimum sur"
+ },
+ {
+  "company_id": "esprinet-s-p-a-lei6add08",
+  "name": "Esprinet S.p.a.",
+  "issue": "reader_says_unclear",
+  "value_a": null,
+  "value_b": "unclear",
+  "url_b": "https://filings.xbrl.org/8156007E3375956ADD08/2025-12-31/ESEF/IT/1/8156007E3375956ADD08-2025-12-31-1-it.json",
+  "snippet_b": "g 167.000 167.000 - Factoring / Confirming / Securitization (1) 886.880 528.580 358.300 Conti correnti passivi 987 987 - Carte di credito 919 728 191 Derivati/compravendita valuta a termine 2.600 1.600 1.000 Crediti di firma 55.545 43.030 12.515 Tota"
+ }
+]

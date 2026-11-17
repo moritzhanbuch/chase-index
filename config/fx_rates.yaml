@@ -1,0 +1,76 @@
+# Rough FX rates: USD per 1 unit of currency (ISO 4217 code).
+# ASSUMPTION, not sourced data: approximate round-number levels (roughly 2024-2025 averages), typed by hand.
+# Used only for coarse size screening (e.g. "revenue >= ~USD 3B") of Wikidata revenue figures,
+# which themselves refer to different years. Never use these to publish a converted figure as fact:
+# always keep and show the original amount + currency + year.
+# One current rate is applied to all years (no historical FX), so old figures in currencies that
+# devalued strongly (TRY, ARS, RUB, NGN, EGP) are understated in USD terms.
+# Legacy pre-euro currencies use their fixed euro conversion rate x the EUR rate below.
+usd_per_unit:
+  USD: 1.0
+  EUR: 1.08
+  GBP: 1.27
+  CHF: 1.13
+  JPY: 0.0067
+  CNY: 0.139
+  HKD: 0.128
+  TWD: 0.031
+  KRW: 0.00073
+  INR: 0.0119
+  CAD: 0.73
+  AUD: 0.66
+  NZD: 0.60
+  SEK: 0.095
+  NOK: 0.093
+  DKK: 0.145
+  ISK: 0.0072
+  PLN: 0.25
+  CZK: 0.043
+  HUF: 0.0027
+  RON: 0.22
+  BGN: 0.55
+  HRK: 0.143
+  RUB: 0.011
+  UAH: 0.025
+  TRY: 0.029
+  ILS: 0.27
+  SAR: 0.267
+  AED: 0.272
+  QAR: 0.275
+  KWD: 3.25
+  BHD: 2.65
+  OMR: 2.60
+  JOD: 1.41
+  EGP: 0.021
+  ZAR: 0.054
+  NGN: 0.00065
+  KES: 0.0077
+  MAD: 0.10
+  BRL: 0.19
+  MXN: 0.055
+  ARS: 0.001
+  CLP: 0.00105
+  COP: 0.00024
+  PEN: 0.27
+  SGD: 0.74
+  MYR: 0.22
+  THB: 0.028
+  IDR: 0.000062
+  PHP: 0.0175
+  VND: 0.00004
+  PKR: 0.0036
+  BDT: 0.0085
+  LKR: 0.0033
+  KZT: 0.0021
+  # legacy currencies (fixed euro conversion rates x 1.08)
+  DEM: 0.552
+  FRF: 0.165
+  ITL: 0.00056
+  ESP: 0.0065
+  NLG: 0.490
+  BEF: 0.0268
+  ATS: 0.0785
+  FIM: 0.182
+  IEP: 1.371
+  PTE: 0.0054
+  GRD: 0.0032

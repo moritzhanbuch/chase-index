@@ -1,0 +1,4 @@
+# Upload only the prebuilt dist/ folder (it is gitignored, so this file replaces .gitignore for the Vercel CLI)
+build.py
+static/
+README.md

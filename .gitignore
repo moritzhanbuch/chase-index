@@ -1,0 +1,25 @@
+.env
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+tmp/
+data/raw/
+data/cache/
+node_modules/
+site/dist/
+.DS_Store
+*.egg-info/
+data/processed/uk_payment_practices.csv
+data/private/
+config/byod/*.csv
+config/status/accounts_status.csv
+workspace/dist/
+
+# generated on demand (weekly queue, dinner lists, openers, CRM exports): never tracked
+outputs/queue/
+outputs/invites/
+outputs/outreach/
+outputs/exports/
+# real dinner dates stay local
+config/dinners.local.yaml

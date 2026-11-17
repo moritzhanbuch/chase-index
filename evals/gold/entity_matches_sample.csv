@@ -1,0 +1,61 @@
+company_number,entity_name,auto_company_id,auto_group_name,match_method,match_confidence,match_evidence,ch_chain_names
+05179829,BOOKING.COM TRANSPORT LIMITED,booking-holdings-inc-cik1075531,Booking Holdings Inc.,ch_psc_chain,0.9,chain member 'Booking Holdings Inc.',PRICELINE. COM INTERNATIONAL LIMITED -> PRICELINE.COM HOLDCO U.K. LIMITED -> Booking Holdings Inc.
+02078820,OMD GROUP LIMITED,omnicom-group-q1519267,Omnicom Group,ch_psc_chain,0.9,chain member 'OMNICOM EMEA HOLDINGS LIMITED' (name core 'omnicom'),OMNICOM MEDIA GROUP UK LIMITED -> OMNICOM MEDIA GROUP EUROPE LIMITED -> OMNICOM EMEA HOLDINGS LIMITED -> OMNICOM EUROPE LIMITED -> Omnicom Group Inc
+01342230,EATON ELECTRICAL PRODUCTS LIMITED,eaton-corporation-q48872,Eaton Corporation,ch_psc_chain,0.95,chain member 'Eaton Corporation Plc',Eaton Corporation Plc
+02544202,GE CAPITAL EUROPE LIMITED,ge-aerospace-q1485061,GE Aerospace,ch_psc_chain,0.9,chain member 'General Electric Company',General Electric Company
+03232514,LIVERPOOL VICTORIA INSURANCE COMPANY LIMITED,allianz-se-q487292,Allianz SE,ch_psc_chain,0.9,chain member 'ALLIANZ HOLDINGS PLC' (name core 'allianz'),LIVERPOOL VICTORIA GENERAL INSURANCE GROUP LIMITED -> ALLIANZ HOLDINGS PLC -> ALLIANZ (UK) LIMITED -> Allianz Se
+04221944,PUNCH TAVERNS (SERVICES) LIMITED,kohlberg-kravis-roberts-q1570773,Kohlberg Kravis Roberts,ch_psc_chain,0.9,chain member 'Kkr & Co. Inc',PUNCH PUBS HOLDINGS LIMITED -> PUNCH PUBS GROUP LIMITED -> PUNCH TAVERNS LIMITED -> PUNCH PUBS & CO GROUP LIMITED -> ARGENTA HOLDCO LIMITED -> ARGENTA MIDCO 2 LIMITED -> Kkr & Co. Inc
+01189290,ENGIE FABRICOM UK LIMITED,bouygues-q895325,Bouygues,ch_psc_chain,0.9,chain member 'Bouygues S.A.',EQUANS GROUP UK LIMITED -> Bouygues S.A.
+02387141,XTRALIS (UK) LIMITED,honeywell-q898208,Honeywell,ch_psc_chain,0.9,chain member 'HONEYWELL GROUP LTD' (name core 'honeywell'),XTRALIS HOLDINGS UK LIMITED -> GARRETT THERMAL SYSTEMS LIMITED -> HONEYWELL GROUP HOLDING UK II -> GARRETT THERMAL SYSTEMS UK LIMITED -> HONEYWELL GROUP LTD -> HONEYWELL GROUP HOLDING UK -> Honeywell International Inc.
+14275008,KSO SOLUTIONS LIMITED,omnicom-group-q1519267,Omnicom Group,ch_psc_chain,0.9,chain member 'OMNICOM EUROPE LIMITED' (name core 'omnicom'),IPG HOLDINGS (UK) LIMITED -> IPG EUROPE LTD -> OMNICOM EUROPE LIMITED -> Omnicom Group Inc
+02214224,MITSUBISHI CORPORATION INTERNATIONAL (EUROPE) PLC,mitsubishi-q183275,Mitsubishi,ch_psc_chain,0.95,chain member 'Mitsubishi Corporation',Mitsubishi Corporation
+05379716,TOWERS WATSON LIMITED,willis-towers-watson-q21189883,Willis Towers Watson,ch_psc_chain,0.9,chain member 'Willis Towers Watson Public Limited Company',WILLIS INVESTMENT UK HOLDINGS LIMITED -> Willis Towers Watson Public Limited Company
+05256361,MULTISOL EUROPE LIMITED,brenntag-q828445,Brenntag,ch_psc_chain,0.9,chain member 'BRENNTAG UK HOLDING LIMITED' (name core 'brenntag'),BRENNTAG SPECIALTIES LUBRICANTS GROUP LTD. -> BRENNTAG SPECIALTIES LUBRICANTS UK LTD. -> BRENNTAG UK HOLDING LIMITED -> Brenntag Se
+01611136,KIER LIMITED,kier-group-plc-lei4y7o48,Kier Group plc,ch_psc_chain,0.9,chain member 'KIER GROUP PLC',KIER GROUP PLC
+03230332,TAYLOR HOBSON LIMITED,ametek-q470317,Ametek,ch_psc_chain,0.95,chain member 'AMETEK EUROPEAN HOLDINGS LIMITED' (name core 'ametek'),AMETEK INSTRUMENTS GROUP UK LIMITED -> AMETEK EUROPEAN HOLDINGS LIMITED -> Ametek Inc
+04045527,ORCHID CELLMARK LTD,eurofins-scientific-q324846,Eurofins Scientific,ch_psc_chain,0.9,chain member 'Eurofins Scientific S.E.',Eurofins Scientific S.E.
+04930065,INVIRON HOLDINGS LIMITED,electricite-de-france-q274591,Électricité de France,ch_psc_chain,0.9,chain member 02366852 on Wikidata,ESSCI TECHNICAL FACILITIES MANAGEMENT LIMITED -> DALKIA GROUP LIMITED -> EDF ENERGY SERVICES LIMITED -> EDF ENERGY CUSTOMERS LIMITED -> EDF ENERGY LIMITED -> EDF ENERGY HOLDINGS LIMITED -> EDF ENERGY (UK) LIMITED
+01388658,BAKER HUGHES LIMITED,baker-hughes-co-cik1701605,Baker Hughes Co,ch_psc_chain,0.95,chain member 'Baker Hughes Company',Baker Hughes Company
+03507379,INVESCO PENSIONS LIMITED,invesco-ltd-cik914208,Invesco Ltd.,ch_psc_chain,0.95,chain member 'INVESCO UK LIMITED' (name core 'invesco'),INVESCO UK LIMITED -> Invesco Ltd
+SC366755,A1 CAKE MIXES LIMITED,brenntag-q828445,Brenntag,ch_psc_chain,0.9,chain member 'BRENNTAG UK HOLDING LIMITED' (name core 'brenntag'),BRENNTAG UK HOLDING LIMITED -> Brenntag Se
+02714607,CONVERGYS INTELLIGENT CONTACT LIMITED,concentrix-corp-cik1803599,Concentrix Corp,ch_psc_chain,0.9,chain member 'Concentrix Corporation',CONVERGYS HOLDINGS (UK) LIMITED -> CONVERGYS HOLDINGS (GB) LIMITED -> Concentrix Corporation
+03415971,HALCROW GROUP LIMITED,jacobs-solutions-inc-cik52988,Jacobs Solutions INC.,ch_psc_chain,0.9,chain member 'Jacobs Solutions Inc',CH2M HILL EUROPE LIMITED -> CH2M HILL HOLDINGS LIMITED -> Jacobs Solutions Inc
+SC213460,SCOTTISH HYDRO ELECTRIC POWER DISTRIBUTION PLC,sse-plc-leimsk856,SSE plc,ch_psc_chain,0.9,chain member 'SSE PLC',SSEN DISTRIBUTION LIMITED -> SCOTTISH AND SOUTHERN ENERGY POWER DISTRIBUTION LIMITED -> SSE PLC
+11116433,HORNSEA 1 PSC LIMITED,rsted-q1241260,Ørsted,ch_psc_chain,0.9,chain member 'Ørsted A/S',ORSTED UK HOW01 HOLDINGS LIMITED -> ORSTED POWER (UK) LIMITED -> Ørsted A/S
+02550622,RWE RENEWABLES UK SWINDON LIMITED,rwe-q138133,RWE,ch_psc_chain,0.9,chain member 'Rwe Ag',RWE RENEWABLES UK HOLDINGS LIMITED -> Rwe Ag
+05640420,FEATURESPACE LIMITED,visa-inc-q328840,Visa Inc.,ch_psc_chain,0.9,chain member 'Visa Inc.',Visa Inc.
+02352348,TOYOTA MOTOR MANUFACTURING (UK) LIMITED,toyota-q53268,Toyota,ch_psc_chain,0.95,chain member 'Toyota Motor Corporation',Toyota Motor Corporation
+06217892,KAPLAN LIVERPOOL LIMITED,graham-holdings-co-cik104889,Graham Holdings Co,ch_psc_chain,0.9,chain member 'Graham Holdings Company',KAPLAN INTERNATIONAL COLLEGES U.K. LIMITED -> KAPLAN INTERNATIONAL HOLDINGS LIMITED -> KAPLAN U.K. LIMITED -> Graham Holdings Company
+03223028,AMAZON UK SERVICES LTD.,amazon-q3884,Amazon,ch_psc_chain,0.95,"chain member 'Amazon.Com, Inc.'","Amazon.Com, Inc."
+00293529,MISSION SYSTEMS WIMBORNE LIMITED,eaton-corporation-q48872,Eaton Corporation,ch_psc_chain,0.9,chain member 'Eaton Corporation Plc',Eaton Corporation Plc
+03205960,WELLSET REPRO LIMITED,omnicom-group-q1519267,Omnicom Group,ch_psc_chain,0.9,chain member 'OMNICOM EUROPE LIMITED' (name core 'omnicom'),IPG DXTRA (UK) LIMITED -> IPG DXTRA GROUP HOLDINGS LIMITED -> IPG HOLDINGS (UK) LIMITED -> IPG EUROPE LTD -> OMNICOM EUROPE LIMITED -> Omnicom Group Inc
+09209355,SANTANDER FINTECH LIMITED,santander-group-q806215,Santander Group,brand_prefix,0.75,brand key 'santander',"Banco Santander, S.A."
+01878835,AUTOMOBILE ASSOCIATION DEVELOPMENTS LIMITED,usaa-q7865722,USAA,brand_prefix,0.75,brand key 'automobile association',AA CORPORATION LIMITED -> AA SENIOR CO LIMITED -> AA ACQUISITION CO LIMITED -> AA INTERMEDIATE CO LIMITED -> AA MID CO LIMITED -> AA LIMITED
+01630491,MITSUBISHI HC CAPITAL UK PLC,mitsubishi-q183275,Mitsubishi,brand_prefix,0.75,brand key 'mitsubishi',Mitsubishi Hc Capital Inc
+02244967,BUREAU VERITAS CERTIFICATION UK LIMITED,bureau-veritas-lei5d1f11,Bureau Veritas,brand_prefix,0.75,brand key 'bureau veritas',Bureau Veritas Certification Holding Sas
+02282265,"MITSUBISHI HEAVY INDUSTRIES EMEA, LTD.",mitsubishi-q183275,Mitsubishi,brand_prefix,0.75,brand key 'mitsubishi',"Mitsubishi Heavy Industries, Ltd."
+03369488,MICROSOFT RESEARCH LIMITED,microsoft-q2283,Microsoft,brand_prefix,0.75,brand key 'microsoft',
+03148093,OPEN TEXT UK LIMITED,open-text-corp-cik1002638,Open Text Corp,brand_prefix,0.75,brand key 'open text',"Open Text Corporation, Which Is Listed On The Nasdaq And Toronto Stock Exchange"
+14131067,RED BULL POWERTRAINS 2026 LIMITED,red-bull-gmbh-q698639,Red Bull GmbH,brand_prefix,0.75,brand key 'red bull',
+05671209,CO-OPERATIVE LEGAL SERVICES LIMITED,co-operative-group-limited-leiz69v16,Co-Operative Group Limited,brand_prefix,0.75,brand key 'operative',
+01541168,FEDEX UK LIMITED,fedex-q459477,FedEx,brand_prefix,0.75,brand key 'fedex',Anc Holdings (1995) Limited
+SC010975,DOBBIES GARDEN CENTRES LIMITED,tesco-q487494,Tesco,wikidata_company_number,0.9,P2622=SC010975,DANATAUGUSTA BIDCO LIMITED -> DOBBIES GARDEN CENTRES GROUP LIMITED
+03750288,E D F TRADING LIMITED,electricite-de-france-q274591,Électricité de France,wikidata_company_number,0.9,P2622=03750288,Edf Sa
+03406347,FRASERS GROUP TRADING LIMITED,frasers-group-q2913554,Frasers Group,wikidata_company_number,0.95,P2622=03406347,FRASERS GROUP PLC
+00526209,PFIZER LIMITED,pfizer-q206921,Pfizer,wikidata_company_number,0.95,P2622=00526209,Pfizer Inc
+SC013418,ROBERT BOSCH LIMITED,robert-bosch-q234021,Robert Bosch,wikidata_company_number,0.95,P2622=SC013418,ROBERT BOSCH UK HOLDINGS LIMITED -> Robert Bosch Internationale Beteiligungen Ag
+00787446,MERCEDES-BENZ GRAND PRIX LTD,ineos-q673231,Ineos,wikidata_company_number,0.9,P2622=00787446,INEOS INDUSTRIES HOLDINGS LIMITED -> INEOS INDUSTRIES LIMITED
+07195160,COGNIZANT WORLDWIDE LIMITED,cognizant-technology-solutions-q1107035,Cognizant Technology Solutions,wikidata_company_number,0.95,P2622=07195160,COGNIZANT HOLDINGS UK LIMITED -> Cognizant Technology Solutions Corporation
+04255974,EDF TRADING MARKETS LIMITED,electricite-de-france-q274591,Électricité de France,wikidata_subsidiary_name,0.85,'EDF TRADING MARKETS LIMITED',Edf Trading Limited
+07934306,GOVIA THAMESLINK RAILWAY LIMITED,societe-nationale-des-chemins-de-fer-francais-q13646,Société nationale des chemins de fer français,wikidata_subsidiary_name,0.85,'GOVIA THAMESLINK RAILWAY LIMITED',"GOVIA LIMITED -> GO-AHEAD HOLDING LIMITED -> THE GO-AHEAD GROUP LIMITED -> GO-AHEAD INVESTMENT BIDCO LIMITED -> GO-AHEAD INVESTMENT PARENT LIMITED -> GO-AHEAD INVESTMENT MIDCO LIMITED -> GO-AHEAD INVESTMENT TOPCO LIMITED -> KINETIC UK BIDCO, LIMITED -> KINETIC UK MIDCO 2, LIMITED -> KINETIC UK MIDCO 1, LIMITED"
+03007940,WEST COAST TRAINS LIMITED,virgin-group-q494917,Virgin Group,wikidata_subsidiary_name,0.85,'WEST COAST TRAINS LIMITED',WCT GROUP LIMITED -> WCT GROUP HOLDINGS LIMITED -> VIRGIN HOLDINGS LIMITED
+02182098,MERLIN ENTERTAINMENTS (SEA LIFE) LIMITED,blackstone-inc-q880942,Blackstone Inc.,wikidata_subsidiary_name,0.85,'MERLIN ENTERTAINMENTS (SEA LIFE) LIMITED',MERLIN ENTERTAINMENTS GROUP OPERATIONS LIMITED -> MERLIN ENTERTAINMENTS GROUP LIMITED -> MERLIN ENTERTAINMENTS GROUP HOLDINGS LIMITED -> CHARCOAL NEWCO 1 LIMITED -> MERLIN ENTERTAINMENTS LIMITED -> MOTION ACQUISITION LIMITED -> MOTION MIDCO LIMITED -> MOTION TOPCO LIMITED -> MOTION JVCO LIMITED
+03904624,SEFE ENERGY LIMITED,gazprom-q102673,Gazprom,wikidata_subsidiary_name,0.85,'SEFE ENERGY LIMITED',SEFE MARKETING & TRADING LIMITED -> Federal Ministry For Economic Affairs And Energy
+02299961,TOYOTA FINANCIAL SERVICES (UK) PLC,toyota-q53268,Toyota,wikidata_subsidiary_name,0.85,'TOYOTA FINANCIAL SERVICES (UK) PLC',Toyota Financial Services Corporation
+06705101,BMG RIGHTS MANAGEMENT (UK) LIMITED,bertelsmann-q156913,Bertelsmann,wikidata_subsidiary_name,0.85,'BMG RIGHTS MANAGEMENT (UK) LIMITED',
+06312831,CVS GROUP PLC,cvs-group-plc-leix48o05,CVS Group plc,exact_name,0.9,'CVS GROUP PLC',
+OC303525,PRICEWATERHOUSECOOPERS LLP,pricewaterhousecoopers-q488048,PricewaterhouseCoopers,exact_name,0.95,'PRICEWATERHOUSECOOPERS LLP',
+02605811,DANFOSS LIMITED,danfoss-q1159510,Danfoss,exact_name,0.95,'DANFOSS LIMITED',
+00972252,ROCKWOOL LIMITED,rockwool-q255661,Rockwool,exact_name,0.95,'ROCKWOOL LIMITED',Rockwool A/S
+05728497,CHINA TELECOM (EUROPE) LIMITED,china-telecommunications-corporation-q1073540,China Telecommunications Corporation,exact_name,0.95,'CHINA TELECOM (EUROPE) LIMITED',
+01142830,3I GROUP PLC,3i-group-plc-leiatnm84,3i Group plc,exact_name,0.9,'3I GROUP PLC',

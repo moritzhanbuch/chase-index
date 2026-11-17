@@ -1,0 +1,5 @@
+# SYNTHETIC DEMO DATA. Invented for demonstration. Not real network, pipeline or dinner data.
+city,date,account_name,status
+madrid,,LKQ Corporation,attended
+munich,,Siemens Energy AG,invited
+munich,,AbbVie,declined

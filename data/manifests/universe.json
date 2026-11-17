@@ -1,0 +1,50 @@
+{
+  "sec_dropped_no_ticker": 58,
+  "wikidata_dropped": 220,
+  "wikidata_kept_on_identifier_despite_flags": 72,
+  "flagged_same_name_vehicles": 5,
+  "dach_slice_added": 11,
+  "min_revenue_usd": 4000000000.0,
+  "companies": 1920,
+  "by_source": {
+    "sec": 999,
+    "esef": 369,
+    "wikidata": 1108
+  },
+  "multi_source": 534,
+  "by_country_top": {
+    "US": 846,
+    "CN": 135,
+    "GB": 121,
+    "DE": 109,
+    "FR": 94,
+    "RU": 50,
+    "DK": 48,
+    "CA": 45,
+    "ES": 36,
+    "NL": 35,
+    "SE": 34,
+    "CH": 33,
+    "IT": 32,
+    "JP": 31,
+    "IE": 27
+  },
+  "by_sector": {
+    "manufacturing": 304,
+    "financials": 273,
+    "services": 185,
+    "energy": 157,
+    "retail": 156,
+    "technology": 152,
+    "consumer_goods": 139,
+    "logistics": 133,
+    "utilities": 99,
+    "automotive": 91,
+    "construction": 77,
+    "pharma": 76,
+    "telecom": 59,
+    "other": 19
+  },
+  "revenue_stale": 334,
+  "subsidiaries_of_universe_members": 79
+}

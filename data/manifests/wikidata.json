@@ -1,0 +1,407 @@
+{
+  "source": "wikidata",
+  "endpoint": "https://query.wikidata.org/sparql",
+  "licence": "CC0 1.0",
+  "started_at": "2026-11-16T20:48:39Z",
+  "revenue_min_usd": 3000000000.0,
+  "raw_amount_floor": 900000000.0,
+  "tables": {
+    "wikidata_companies": {
+      "rows": 1483,
+      "revenue_statements": 20254,
+      "items_with_statement_above_floor": 4971,
+      "candidates_ge_3b_usd": 1547,
+      "excluded_non_company": 64,
+      "unconvertible_latest": 50,
+      "unconvertible_units": [
+        {
+          "unit_qid": "Q21531507",
+          "currency_label": "Belarusian ruble",
+          "n": 9
+        },
+        {
+          "unit_qid": "Q199",
+          "currency_label": "1",
+          "n": 8
+        },
+        {
+          "unit_qid": "Q172524",
+          "currency_label": "Serbian dinar",
+          "n": 6
+        },
+        {
+          "unit_qid": "Q847739",
+          "currency_label": "Central African CFA franc",
+          "n": 3
+        },
+        {
+          "unit_qid": "Q193094",
+          "currency_label": "Iraqi dinar",
+          "n": 2
+        },
+        {
+          "unit_qid": "Q487888",
+          "currency_label": "Uzbek som",
+          "n": 2
+        },
+        {
+          "unit_qid": "Q240468",
+          "currency_label": "Syrian pound",
+          "n": 2
+        },
+        {
+          "unit_qid": "Q130498",
+          "currency_label": "Armenian dram",
+          "n": 2
+        },
+        {
+          "unit_qid": "Q191511",
+          "currency_label": "CFA franc",
+          "n": 2
+        },
+        {
+          "unit_qid": "Q177875",
+          "currency_label": "Macedonian denar",
+          "n": 2
+        },
+        {
+          "unit_qid": "Q199674",
+          "currency_label": "Algerian dinar",
+          "n": 1
+        },
+        {
+          "unit_qid": "Q213311",
+          "currency_label": "Guinean franc",
+          "n": 1
+        },
+        {
+          "unit_qid": "Q16021",
+          "currency_label": "1,000,000,000",
+          "n": 1
+        },
+        {
+          "unit_qid": "Q186794",
+          "currency_label": "Botswana pula",
+          "n": 1
+        },
+        {
+          "unit_qid": "Q363958",
+          "currency_label": "special drawing rights",
+          "n": 1
+        },
+        {
+          "unit_qid": "Q4370958",
+          "currency_label": NaN,
+          "n": 1
+        },
+        {
+          "unit_qid": "Q4584",
+          "currency_label": "ariary",
+          "n": 1
+        },
+        {
+          "unit_qid": "Q4598",
+          "currency_label": "Ugandan shilling",
+          "n": 1
+        },
+        {
+          "unit_qid": "Q49622",
+          "currency_label": "2023",
+          "n": 1
+        },
+        {
+          "unit_qid": "Q560355",
+          "currency_label": "German mark",
+          "n": 1
+        },
+        {
+          "unit_qid": "Q160680",
+          "currency_label": "Belarusian ruble",
+          "n": 1
+        },
+        {
+          "unit_qid": "Q861690",
+          "currency_label": "West African CFA franc",
+          "n": 1
+        }
+      ]
+    },
+    "wikidata_uk_entities": {
+      "rows": 8582,
+      "up_edges": 2492,
+      "with_any_parent": 861,
+      "with_universe_ancestor": 223
+    },
+    "wikidata_subsidiaries": {
+      "rows": 34332,
+      "edges": 33471,
+      "distinct_children": 19574,
+      "depth_reached": 3,
+      "max_depth_target": 3,
+      "max_frontier": 30000
+    }
+  },
+  "finished_at": "2026-11-16T20:48:41Z",
+  "queries_n": 449,
+  "queries_from_cache_n": 449,
+  "queries_failed_n": 0,
+  "queries": {
+    "revenue_band_9e+08_1.5e+09": {
+      "requests": 1,
+      "rows": 3761,
+      "errors": 0,
+      "first_retrieved_at": "2026-11-16T10:08:38Z",
+      "example_query": "SELECT ?item ?amt ?unit ?date ?rank WHERE {\n  ?item p:P2139 ?st. ?st ps:P2139 ?a0. FILTER(?a0 >= 900000000 && ?a0 < 1500000000)\n  ?st psv:P2139 ?v. ?v wikibase:quantityAmount ?amt; wikibase:quantityUnit ?unit.\n  ?st wikibase:rank ?rank.\n  OPTIONAL { ?st pq:P585 ?date }\n}",
+      "last_retrieved_at": "2026-11-16T10:08:38Z"
+    },
+    "revenue_band_1.5e+09_2.5e+09": {
+      "requests": 1,
+      "rows": 2663,
+      "errors": 0,
+      "first_retrieved_at": "2026-11-16T10:09:08Z",
+      "example_query": "SELECT ?item ?amt ?unit ?date ?rank WHERE {\n  ?item p:P2139 ?st. ?st ps:P2139 ?a0. FILTER(?a0 >= 1500000000 && ?a0 < 2500000000)\n  ?st psv:P2139 ?v. ?v wikibase:quantityAmount ?amt; wikibase:quantityUnit ?unit.\n  ?st wikibase:rank ?rank.\n  OPTIONAL { ?st pq:P585 ?date }\n}",
+      "last_retrieved_at": "2026-11-16T10:09:08Z"
+    },
+    "revenue_band_2.5e+09_4e+09": {
+      "requests": 1,
+      "rows": 2144,
+      "errors": 0,
+      "first_retrieved_at": "2026-11-16T10:10:16Z",
+      "example_query": "SELECT ?item ?amt ?unit ?date ?rank WHERE {\n  ?item p:P2139 ?st. ?st ps:P2139 ?a0. FILTER(?a0 >= 2500000000 && ?a0 < 4000000000)\n  ?st psv:P2139 ?v. ?v wikibase:quantityAmount ?amt; wikibase:quantityUnit ?unit.\n  ?st wikibase:rank ?rank.\n  OPTIONAL { ?st pq:P585 ?date }\n}",
+      "last_retrieved_at": "2026-11-16T10:10:16Z"
+    },
+    "revenue_band_4e+09_7e+09": {
+      "requests": 1,
+      "rows": 2279,
+      "errors": 0,
+      "first_retrieved_at": "2026-11-16T10:10:23Z",
+      "example_query": "SELECT ?item ?amt ?unit ?date ?rank WHERE {\n  ?item p:P2139 ?st. ?st ps:P2139 ?a0. FILTER(?a0 >= 4000000000 && ?a0 < 7000000000)\n  ?st psv:P2139 ?v. ?v wikibase:quantityAmount ?amt; wikibase:quantityUnit ?unit.\n  ?st wikibase:rank ?rank.\n  OPTIONAL { ?st pq:P585 ?date }\n}",
+      "last_retrieved_at": "2026-11-16T10:10:23Z"
+    },
+    "revenue_band_7e+09_1.2e+10": {
+      "requests": 1,
+      "rows": 2100,
+      "errors": 0,
+      "first_retrieved_at": "2026-11-16T10:34:42Z",
+      "example_query": "SELECT ?item ?amt ?unit ?date ?rank WHERE {\n  ?item p:P2139 ?st. ?st ps:P2139 ?a0. FILTER(?a0 >= 7000000000 && ?a0 < 12000000000)\n  ?st psv:P2139 ?v. ?v wikibase:quantityAmount ?amt; wikibase:quantityUnit ?unit.\n  ?st wikibase:rank ?rank.\n  OPTIONAL { ?st pq:P585 ?date }\n}",
+      "last_retrieved_at": "2026-11-16T10:34:42Z"
+    },
+    "revenue_band_1.2e+10_2.5e+10": {
+      "requests": 1,
+      "rows": 2530,
+      "errors": 0,
+      "first_retrieved_at": "2026-11-16T10:13:19Z",
+      "example_query": "SELECT ?item ?amt ?unit ?date ?rank WHERE {\n  ?item p:P2139 ?st. ?st ps:P2139 ?a0. FILTER(?a0 >= 12000000000 && ?a0 < 25000000000)\n  ?st psv:P2139 ?v. ?v wikibase:quantityAmount ?amt; wikibase:quantityUnit ?unit.\n  ?st wikibase:rank ?rank.\n  OPTIONAL { ?st pq:P585 ?date }\n}",
+      "last_retrieved_at": "2026-11-16T10:13:19Z"
+    },
+    "revenue_band_2.5e+10_6e+10": {
+      "requests": 1,
+      "rows": 2228,
+      "errors": 0,
+      "first_retrieved_at": "2026-11-16T10:13:44Z",
+      "example_query": "SELECT ?item ?amt ?unit ?date ?rank WHERE {\n  ?item p:P2139 ?st. ?st ps:P2139 ?a0. FILTER(?a0 >= 25000000000 && ?a0 < 60000000000)\n  ?st psv:P2139 ?v. ?v wikibase:quantityAmount ?amt; wikibase:quantityUnit ?unit.\n  ?st wikibase:rank ?rank.\n  OPTIONAL { ?st pq:P585 ?date }\n}",
+      "last_retrieved_at": "2026-11-16T10:13:44Z"
+    },
+    "revenue_band_6e+10_2e+11": {
+      "requests": 1,
+      "rows": 1630,
+      "errors": 0,
+      "first_retrieved_at": "2026-11-16T10:14:22Z",
+      "example_query": "SELECT ?item ?amt ?unit ?date ?rank WHERE {\n  ?item p:P2139 ?st. ?st ps:P2139 ?a0. FILTER(?a0 >= 60000000000 && ?a0 < 200000000000)\n  ?st psv:P2139 ?v. ?v wikibase:quantityAmount ?amt; wikibase:quantityUnit ?unit.\n  ?st wikibase:rank ?rank.\n  OPTIONAL { ?st pq:P585 ?date }\n}",
+      "last_retrieved_at": "2026-11-16T10:14:22Z"
+    },
+    "revenue_band_2e+11_1e+12": {
+      "requests": 1,
+      "rows": 682,
+      "errors": 0,
+      "first_retrieved_at": "2026-11-16T10:14:56Z",
+      "example_query": "SELECT ?item ?amt ?unit ?date ?rank WHERE {\n  ?item p:P2139 ?st. ?st ps:P2139 ?a0. FILTER(?a0 >= 200000000000 && ?a0 < 1000000000000)\n  ?st psv:P2139 ?v. ?v wikibase:quantityAmount ?amt; wikibase:quantityUnit ?unit.\n  ?st wikibase:rank ?rank.\n  OPTIONAL { ?st pq:P585 ?date }\n}",
+      "last_retrieved_at": "2026-11-16T10:14:56Z"
+    },
+    "revenue_band_1e+12_1e+13": {
+      "requests": 1,
+      "rows": 249,
+      "errors": 0,
+      "first_retrieved_at": "2026-11-16T10:15:18Z",
+      "example_query": "SELECT ?item ?amt ?unit ?date ?rank WHERE {\n  ?item p:P2139 ?st. ?st ps:P2139 ?a0. FILTER(?a0 >= 1000000000000 && ?a0 < 10000000000000)\n  ?st psv:P2139 ?v. ?v wikibase:quantityAmount ?amt; wikibase:quantityUnit ?unit.\n  ?st wikibase:rank ?rank.\n  OPTIONAL { ?st pq:P585 ?date }\n}",
+      "last_retrieved_at": "2026-11-16T10:15:18Z"
+    },
+    "revenue_band_1e+13_None": {
+      "requests": 1,
+      "rows": 42,
+      "errors": 0,
+      "first_retrieved_at": "2026-11-16T10:15:37Z",
+      "example_query": "SELECT ?item ?amt ?unit ?date ?rank WHERE {\n  ?item p:P2139 ?st. ?st ps:P2139 ?a0. FILTER(?a0 >= 10000000000000)\n  ?st psv:P2139 ?v. ?v wikibase:quantityAmount ?amt; wikibase:quantityUnit ?unit.\n  ?st wikibase:rank ?rank.\n  OPTIONAL { ?st pq:P585 ?date }\n}",
+      "last_retrieved_at": "2026-11-16T10:15:37Z"
+    },
+    "currency_units": {
+      "requests": 1,
+      "rows": 72,
+      "errors": 0,
+      "first_retrieved_at": "2026-11-16T10:21:56Z",
+      "example_query": "SELECT ?item ?iso ?label WHERE { VALUES ?item { wd:Q199 wd:Q4584 wd:Q4598 wd:Q4730 wd:Q4916 wd:Q4917 wd:Q8146 wd:Q16021 wd:Q16068 wd:Q17193 wd:Q25224 wd:Q25344 wd:Q25417 wd:Q26360 wd:Q31015 wd:Q39099 wd:Q41044 wd:Q41588 wd:Q47190 wd:Q49622 wd:Q80524 wd:Q81893 wd:Q122922 wd:Q123213 wd:Q130498 wd:Q131016 wd:Q131309 wd:Q131473 wd:Q131645 wd:Q132643 wd:Q160680 wd:Q172524 wd:Q172540 wd:Q172872 wd:Q173117 wd:Q173751 wd:Q177875 wd:Q177882 wd:Q181907 wd:Q184172 wd:Q186794 wd:Q188289 wd:Q190951 wd:Q191511 wd:Q193094 wd:Q194453 wd:Q199462 wd:Q199578 wd:Q199674 wd:Q199857 wd:Q200050 wd:Q200192 wd:Q200294 ...",
+      "last_retrieved_at": "2026-11-16T10:21:56Z"
+    },
+    "company_labels": {
+      "requests": 8,
+      "rows": 9439,
+      "errors": 0,
+      "first_retrieved_at": "2026-11-16T10:27:34Z",
+      "example_query": "SELECT ?item ?kind ?label WHERE { VALUES ?item { wd:Q66 wd:Q67 wd:Q246 wd:Q248 wd:Q312 wd:Q380 wd:Q866 wd:Q1418 wd:Q2283 wd:Q2311 wd:Q3884 wd:Q3895 wd:Q4614 wd:Q4995 wd:Q6686 wd:Q7240 wd:Q7414 wd:Q8766 wd:Q8774 wd:Q8793 wd:Q9322 wd:Q9325 wd:Q9396 wd:Q9401 wd:Q9531 wd:Q9584 wd:Q11407 wd:Q11463 wd:Q13646 wd:Q13977 wd:Q14772 wd:Q14799 wd:Q18224 wd:Q19900 wd:Q20165 wd:Q20716 wd:Q20718 wd:Q21077 wd:Q23076 wd:Q23239 wd:Q23317 wd:Q26298 wd:Q26299 wd:Q26311 wd:Q26463 wd:Q26678 wd:Q26694 wd:Q27423 wd:Q27460 wd:Q27511 wd:Q27530 wd:Q27893 wd:Q29637 wd:Q29803 wd:Q30873 wd:Q32491 wd:Q34534 wd:Q35476 wd:Q35 ...",
+      "last_retrieved_at": "2026-11-16T10:28:04Z"
+    },
+    "company_props": {
+      "requests": 8,
+      "rows": 19111,
+      "errors": 0,
+      "first_retrieved_at": "2026-11-16T10:28:14Z",
+      "example_query": "SELECT ?item ?p ?o ?ol WHERE { VALUES ?item { wd:Q66 wd:Q67 wd:Q246 wd:Q248 wd:Q312 wd:Q380 wd:Q866 wd:Q1418 wd:Q2283 wd:Q2311 wd:Q3884 wd:Q3895 wd:Q4614 wd:Q4995 wd:Q6686 wd:Q7240 wd:Q7414 wd:Q8766 wd:Q8774 wd:Q8793 wd:Q9322 wd:Q9325 wd:Q9396 wd:Q9401 wd:Q9531 wd:Q9584 wd:Q11407 wd:Q11463 wd:Q13646 wd:Q13977 wd:Q14772 wd:Q14799 wd:Q18224 wd:Q19900 wd:Q20165 wd:Q20716 wd:Q20718 wd:Q21077 wd:Q23076 wd:Q23239 wd:Q23317 wd:Q26298 wd:Q26299 wd:Q26311 wd:Q26463 wd:Q26678 wd:Q26694 wd:Q27423 wd:Q27460 wd:Q27511 wd:Q27530 wd:Q27893 wd:Q29637 wd:Q29803 wd:Q30873 wd:Q32491 wd:Q34534 wd:Q35476 wd:Q35996 ...",
+      "last_retrieved_at": "2026-11-16T10:29:17Z"
+    },
+    "employees": {
+      "requests": 8,
+      "rows": 2875,
+      "errors": 0,
+      "first_retrieved_at": "2026-11-16T10:17:22Z",
+      "example_query": "SELECT ?item ?n ?date ?rank WHERE { VALUES ?item { wd:Q66 wd:Q67 wd:Q246 wd:Q248 wd:Q312 wd:Q380 wd:Q866 wd:Q1418 wd:Q2283 wd:Q2311 wd:Q3884 wd:Q3895 wd:Q4614 wd:Q4995 wd:Q6686 wd:Q7240 wd:Q7414 wd:Q8766 wd:Q8774 wd:Q8793 wd:Q9322 wd:Q9325 wd:Q9396 wd:Q9401 wd:Q9531 wd:Q9584 wd:Q11407 wd:Q11463 wd:Q13646 wd:Q13977 wd:Q14772 wd:Q14799 wd:Q18224 wd:Q19900 wd:Q20165 wd:Q20716 wd:Q20718 wd:Q21077 wd:Q23076 wd:Q23239 wd:Q23317 wd:Q26298 wd:Q26299 wd:Q26311 wd:Q26463 wd:Q26678 wd:Q26694 wd:Q27423 wd:Q27460 wd:Q27511 wd:Q27530 wd:Q27893 wd:Q29637 wd:Q29803 wd:Q30873 wd:Q32491 wd:Q34534 wd:Q35476 wd:Q ...",
+      "last_retrieved_at": "2026-11-16T10:17:35Z"
+    },
+    "listings": {
+      "requests": 8,
+      "rows": 1298,
+      "errors": 0,
+      "first_retrieved_at": "2026-11-16T10:29:18Z",
+      "example_query": "SELECT ?item ?ex ?exl ?ticker ?end WHERE { VALUES ?item { wd:Q66 wd:Q67 wd:Q246 wd:Q248 wd:Q312 wd:Q380 wd:Q866 wd:Q1418 wd:Q2283 wd:Q2311 wd:Q3884 wd:Q3895 wd:Q4614 wd:Q4995 wd:Q6686 wd:Q7240 wd:Q7414 wd:Q8766 wd:Q8774 wd:Q8793 wd:Q9322 wd:Q9325 wd:Q9396 wd:Q9401 wd:Q9531 wd:Q9584 wd:Q11407 wd:Q11463 wd:Q13646 wd:Q13977 wd:Q14772 wd:Q14799 wd:Q18224 wd:Q19900 wd:Q20165 wd:Q20716 wd:Q20718 wd:Q21077 wd:Q23076 wd:Q23239 wd:Q23317 wd:Q26298 wd:Q26299 wd:Q26311 wd:Q26463 wd:Q26678 wd:Q26694 wd:Q27423 wd:Q27460 wd:Q27511 wd:Q27530 wd:Q27893 wd:Q29637 wd:Q29803 wd:Q30873 wd:Q32491 wd:Q34534 wd:Q354 ...",
+      "last_retrieved_at": "2026-11-16T10:30:04Z"
+    },
+    "stock_index_items": {
+      "requests": 1,
+      "rows": 437,
+      "errors": 0,
+      "first_retrieved_at": "2026-11-16T10:25:54Z",
+      "example_query": "SELECT DISTINCT ?idx ?l WHERE { ?idx wdt:P31 wd:Q223371. OPTIONAL { ?idx rdfs:label ?l_en. FILTER(LANG(?l_en)=\"en\") } OPTIONAL { ?idx rdfs:label ?l_mul. FILTER(LANG(?l_mul)=\"mul\") } BIND(COALESCE(?l_en, ?l_mul) AS ?l) }",
+      "last_retrieved_at": "2026-11-16T10:25:54Z"
+    },
+    "index_members_p527": {
+      "requests": 8,
+      "rows": 300,
+      "errors": 0,
+      "first_retrieved_at": "2026-11-16T10:30:05Z",
+      "example_query": "SELECT ?item ?idx ?l WHERE { VALUES ?item { wd:Q66 wd:Q67 wd:Q246 wd:Q248 wd:Q312 wd:Q380 wd:Q866 wd:Q1418 wd:Q2283 wd:Q2311 wd:Q3884 wd:Q3895 wd:Q4614 wd:Q4995 wd:Q6686 wd:Q7240 wd:Q7414 wd:Q8766 wd:Q8774 wd:Q8793 wd:Q9322 wd:Q9325 wd:Q9396 wd:Q9401 wd:Q9531 wd:Q9584 wd:Q11407 wd:Q11463 wd:Q13646 wd:Q13977 wd:Q14772 wd:Q14799 wd:Q18224 wd:Q19900 wd:Q20165 wd:Q20716 wd:Q20718 wd:Q21077 wd:Q23076 wd:Q23239 wd:Q23317 wd:Q26298 wd:Q26299 wd:Q26311 wd:Q26463 wd:Q26678 wd:Q26694 wd:Q27423 wd:Q27460 wd:Q27511 wd:Q27530 wd:Q27893 wd:Q29637 wd:Q29803 wd:Q30873 wd:Q32491 wd:Q34534 wd:Q35476 wd:Q35996 w ...",
+      "last_retrieved_at": "2026-11-16T10:30:20Z"
+    },
+    "hq_country": {
+      "requests": 4,
+      "rows": 787,
+      "errors": 0,
+      "first_retrieved_at": "2026-11-16T10:30:22Z",
+      "example_query": "SELECT ?item ?p ?o ?ol WHERE { VALUES ?item { wd:Q27 wd:Q28 wd:Q30 wd:Q60 wd:Q61 wd:Q62 wd:Q64 wd:Q65 wd:Q70 wd:Q71 wd:Q72 wd:Q78 wd:Q84 wd:Q85 wd:Q88 wd:Q90 wd:Q99 wd:Q100 wd:Q145 wd:Q159 wd:Q172 wd:Q174 wd:Q183 wd:Q216 wd:Q220 wd:Q232 wd:Q239 wd:Q240 wd:Q268 wd:Q270 wd:Q334 wd:Q340 wd:Q350 wd:Q365 wd:Q406 wd:Q437 wd:Q472 wd:Q490 wd:Q495 wd:Q546 wd:Q585 wd:Q586 wd:Q588 wd:Q598 wd:Q612 wd:Q648 wd:Q649 wd:Q656 wd:Q690 wd:Q727 wd:Q771 wd:Q779 wd:Q801 wd:Q803 wd:Q807 wd:Q883 wd:Q906 wd:Q911 wd:Q919 wd:Q956 wd:Q959 wd:Q975 wd:Q976 wd:Q1022 wd:Q1040 wd:Q1055 wd:Q1085 wd:Q1156 wd:Q1204 wd:Q1295 wd:Q ...",
+      "last_retrieved_at": "2026-11-16T10:30:40Z"
+    },
+    "country_iso2": {
+      "requests": 2,
+      "rows": 223,
+      "errors": 0,
+      "first_retrieved_at": "2026-11-16T10:30:40Z",
+      "example_query": "SELECT ?item ?p ?o ?ol WHERE { VALUES ?item { wd:Q16 wd:Q17 wd:Q20 wd:Q27 wd:Q28 wd:Q29 wd:Q30 wd:Q31 wd:Q32 wd:Q33 wd:Q34 wd:Q35 wd:Q36 wd:Q37 wd:Q38 wd:Q39 wd:Q40 wd:Q41 wd:Q43 wd:Q45 wd:Q55 wd:Q79 wd:Q96 wd:Q142 wd:Q145 wd:Q148 wd:Q155 wd:Q159 wd:Q183 wd:Q212 wd:Q213 wd:Q214 wd:Q215 wd:Q218 wd:Q219 wd:Q224 wd:Q230 wd:Q232 wd:Q252 wd:Q258 wd:Q298 wd:Q334 wd:Q347 wd:Q403 wd:Q408 wd:Q414 wd:Q668 wd:Q739 wd:Q785 wd:Q786 wd:Q792 wd:Q794 wd:Q801 wd:Q846 wd:Q851 wd:Q865 wd:Q869 wd:Q878 wd:Q884 wd:Q928 wd:Q1033 wd:Q5785 wd:Q8646 wd:Q16410 wd:Q23635 wd:Q29999 wd:Q841364 wd:Q1206012 wd:Q63158027 } VA ...",
+      "last_retrieved_at": "2026-11-16T11:10:19Z"
+    },
+    "uk_entities_p2622": {
+      "requests": 1,
+      "rows": 8582,
+      "errors": 0,
+      "first_retrieved_at": "2026-11-16T10:34:45Z",
+      "example_query": "SELECT ?item ?num ?label WHERE { ?item wdt:P2622 ?num. OPTIONAL { ?item rdfs:label ?label_en. FILTER(LANG(?label_en)=\"en\") } OPTIONAL { ?item rdfs:label ?label_mul. FILTER(LANG(?label_mul)=\"mul\") } BIND(COALESCE(?label_en, ?label_mul) AS ?label) }",
+      "last_retrieved_at": "2026-11-16T10:34:45Z"
+    },
+    "edges_up_l1": {
+      "requests": 42,
+      "rows": 1550,
+      "errors": 0,
+      "first_retrieved_at": "2026-11-16T10:34:45Z",
+      "example_query": "SELECT ?child ?parent ?rel WHERE { VALUES ?child { wd:Q8766 wd:Q9401 wd:Q9531 wd:Q18508 wd:Q18512 wd:Q18656 wd:Q18711 wd:Q18739 wd:Q19444 wd:Q19593 wd:Q20075 wd:Q23308 wd:Q32141 wd:Q32825 wd:Q39064 wd:Q42970 wd:Q45433 wd:Q60188 wd:Q61228 wd:Q62364 wd:Q72781 wd:Q76473 wd:Q81230 wd:Q94893 wd:Q114306 wd:Q117059 wd:Q117202 wd:Q122141 wd:Q123885 wd:Q128260 wd:Q130879 wd:Q136738 wd:Q144175 wd:Q151137 wd:Q152057 wd:Q152096 wd:Q156391 wd:Q157062 wd:Q161140 wd:Q172721 wd:Q172771 wd:Q173358 wd:Q189022 wd:Q190464 wd:Q193196 wd:Q195668 wd:Q200009 wd:Q210108 wd:Q211464 wd:Q211480 wd:Q211951 wd:Q212322 wd:Q ...",
+      "last_retrieved_at": "2026-11-16T10:38:19Z"
+    },
+    "edges_up_l2": {
+      "requests": 4,
+      "rows": 541,
+      "errors": 0,
+      "first_retrieved_at": "2026-11-16T10:36:33Z",
+      "example_query": "SELECT ?child ?parent ?rel WHERE { VALUES ?child { wd:Q1299 wd:Q2283 wd:Q2311 wd:Q6063 wd:Q6686 wd:Q7414 wd:Q8774 wd:Q9322 wd:Q9396 wd:Q9500 wd:Q15164 wd:Q18594 wd:Q18853 wd:Q19473 wd:Q19900 wd:Q20718 wd:Q23076 wd:Q27530 wd:Q38903 wd:Q41187 wd:Q43449 wd:Q44294 wd:Q47447 wd:Q49053 wd:Q49330 wd:Q52618 wd:Q53247 wd:Q53268 wd:Q54173 wd:Q62766 wd:Q66048 wd:Q73801 wd:Q74877 wd:Q90005 wd:Q93924 wd:Q94912 wd:Q94933 wd:Q95149 wd:Q98887 wd:Q117892 wd:Q122741 wd:Q127005 wd:Q130586 wd:Q132383 wd:Q138125 wd:Q147208 wd:Q154950 wd:Q156077 wd:Q156152 wd:Q156913 wd:Q160054 wd:Q160120 wd:Q163560 wd:Q170027 wd:Q ...",
+      "last_retrieved_at": "2026-11-16T10:36:41Z"
+    },
+    "edges_up_l3": {
+      "requests": 2,
+      "rows": 288,
+      "errors": 0,
+      "first_retrieved_at": "2026-11-16T10:36:42Z",
+      "example_query": "SELECT ?child ?parent ?rel WHERE { VALUES ?child { wd:Q67 wd:Q95 wd:Q176 wd:Q183 wd:Q846 wd:Q3884 wd:Q13646 wd:Q20165 wd:Q21077 wd:Q29999 wd:Q35572 wd:Q38928 wd:Q92759 wd:Q155026 wd:Q160746 wd:Q166637 wd:Q168961 wd:Q194419 wd:Q195515 wd:Q217583 wd:Q219508 wd:Q275482 wd:Q283747 wd:Q289362 wd:Q291090 wd:Q317555 wd:Q319347 wd:Q323671 wd:Q334204 wd:Q422404 wd:Q460487 wd:Q462398 wd:Q471958 wd:Q492581 wd:Q494412 wd:Q499194 wd:Q518624 wd:Q519611 wd:Q524255 wd:Q539627 wd:Q555549 wd:Q556607 wd:Q601819 wd:Q609766 wd:Q619121 wd:Q621592 wd:Q624080 wd:Q626814 wd:Q637440 wd:Q658270 wd:Q668737 wd:Q674911 wd: ...",
+      "last_retrieved_at": "2026-11-16T10:36:44Z"
+    },
+    "edges_up_l4": {
+      "requests": 1,
+      "rows": 96,
+      "errors": 0,
+      "first_retrieved_at": "2026-11-16T10:36:45Z",
+      "example_query": "SELECT ?child ?parent ?rel WHERE { VALUES ?child { wd:Q64 wd:Q334 wd:Q807 wd:Q980 wd:Q985 wd:Q1055 wd:Q1194 wd:Q1196 wd:Q1197 wd:Q1198 wd:Q1199 wd:Q1200 wd:Q1201 wd:Q1202 wd:Q1205 wd:Q1206 wd:Q1208 wd:Q1209 wd:Q4934 wd:Q5284 wd:Q20151 wd:Q20716 wd:Q47213 wd:Q53944 wd:Q59261 wd:Q92747 wd:Q92764 wd:Q109075 wd:Q122286 wd:Q126399 wd:Q131524 wd:Q164997 wd:Q191715 wd:Q247032 wd:Q253414 wd:Q256075 wd:Q270363 wd:Q287753 wd:Q289571 wd:Q293679 wd:Q312556 wd:Q338920 wd:Q444172 wd:Q482921 wd:Q484669 wd:Q486002 wd:Q490371 wd:Q516720 wd:Q590952 wd:Q624109 wd:Q650639 wd:Q683200 wd:Q703534 wd:Q715055 wd:Q7364 ...",
+      "last_retrieved_at": "2026-11-16T10:36:45Z"
+    },
+    "edges_up_l5": {
+      "requests": 1,
+      "rows": 23,
+      "errors": 0,
+      "first_retrieved_at": "2026-11-16T10:36:47Z",
+      "example_query": "SELECT ?child ?parent ?rel WHERE { VALUES ?child { wd:Q11917 wd:Q12771 wd:Q19211 wd:Q35476 wd:Q36033 wd:Q490787 wd:Q691440 wd:Q1450662 wd:Q1516562 wd:Q2824639 wd:Q3006190 wd:Q3438372 wd:Q3459204 wd:Q4724029 wd:Q5589404 wd:Q17143635 wd:Q18396143 wd:Q20120426 wd:Q20724520 wd:Q26997657 wd:Q27963467 wd:Q28151468 wd:Q28151537 wd:Q43926186 wd:Q43926795 wd:Q43927533 wd:Q57664109 wd:Q59116640 wd:Q59162880 wd:Q59163033 wd:Q59163514 wd:Q59163527 wd:Q61866945 wd:Q70453806 wd:Q81696261 wd:Q84085965 wd:Q89345695 wd:Q95393162 wd:Q95989703 wd:Q110616798 wd:Q110619910 wd:Q112397697 wd:Q116895150 wd:Q139464533 ...",
+      "last_retrieved_at": "2026-11-16T10:36:47Z"
+    },
+    "ancestor_labels": {
+      "requests": 6,
+      "rows": 1457,
+      "errors": 0,
+      "first_retrieved_at": "2026-11-16T10:37:02Z",
+      "example_query": "SELECT ?item ?kind ?label WHERE { VALUES ?item { wd:Q64 wd:Q67 wd:Q95 wd:Q176 wd:Q183 wd:Q334 wd:Q807 wd:Q846 wd:Q980 wd:Q985 wd:Q1055 wd:Q1194 wd:Q1196 wd:Q1197 wd:Q1198 wd:Q1199 wd:Q1200 wd:Q1201 wd:Q1202 wd:Q1205 wd:Q1206 wd:Q1208 wd:Q1209 wd:Q1299 wd:Q2283 wd:Q2311 wd:Q3884 wd:Q4934 wd:Q5284 wd:Q6063 wd:Q6686 wd:Q7414 wd:Q8774 wd:Q9322 wd:Q9396 wd:Q9500 wd:Q11917 wd:Q12771 wd:Q13646 wd:Q15164 wd:Q18594 wd:Q18853 wd:Q19211 wd:Q19473 wd:Q19900 wd:Q20151 wd:Q20165 wd:Q20716 wd:Q20718 wd:Q21077 wd:Q23076 wd:Q27530 wd:Q29999 wd:Q35476 wd:Q35572 wd:Q36033 wd:Q38903 wd:Q38928 wd:Q41187 wd:Q43449  ...",
+      "last_retrieved_at": "2026-11-16T10:37:10Z"
+    },
+    "edges_down_d1": {
+      "requests": 10,
+      "rows": 19635,
+      "errors": 0,
+      "first_retrieved_at": "2026-11-16T10:37:23Z",
+      "example_query": "SELECT ?parent ?child ?rel WHERE { VALUES ?parent { wd:Q66 wd:Q67 wd:Q246 wd:Q248 wd:Q312 wd:Q380 wd:Q866 wd:Q1418 wd:Q2283 wd:Q2311 wd:Q3884 wd:Q3895 wd:Q4995 wd:Q6686 wd:Q7240 wd:Q7414 wd:Q8766 wd:Q8774 wd:Q8793 wd:Q9322 wd:Q9325 wd:Q9396 wd:Q9401 wd:Q9531 wd:Q9584 wd:Q11407 wd:Q11463 wd:Q13646 wd:Q13977 wd:Q14772 wd:Q14799 wd:Q18224 wd:Q19900 wd:Q20165 wd:Q20716 wd:Q20718 wd:Q21077 wd:Q23076 wd:Q23239 wd:Q23317 wd:Q26298 wd:Q26299 wd:Q26311 wd:Q26463 wd:Q26678 wd:Q26694 wd:Q27423 wd:Q27460 wd:Q27511 wd:Q27530 wd:Q27893 wd:Q29637 wd:Q29803 wd:Q30873 wd:Q32491 wd:Q34534 wd:Q35476 wd:Q35996 wd ...",
+      "last_retrieved_at": "2026-11-16T10:37:42Z"
+    },
+    "edges_down_d2": {
+      "requests": 80,
+      "rows": 11073,
+      "errors": 0,
+      "first_retrieved_at": "2026-11-16T10:38:24Z",
+      "example_query": "SELECT ?parent ?child ?rel WHERE { VALUES ?parent { wd:Q95 wd:Q274 wd:Q280 wd:Q355 wd:Q364 wd:Q1902 wd:Q2309 wd:Q4990 wd:Q6742 wd:Q6746 wd:Q6750 wd:Q8061 wd:Q8701 wd:Q8779 wd:Q8782 wd:Q13677 wd:Q13683 wd:Q13973 wd:Q13974 wd:Q13975 wd:Q14647 wd:Q15330 wd:Q15628 wd:Q16932 wd:Q18548 wd:Q18594 wd:Q18628 wd:Q18656 wd:Q18853 wd:Q18878 wd:Q19500 wd:Q21578 wd:Q23212 wd:Q23633 wd:Q23901 wd:Q25007 wd:Q26049 wd:Q26823 wd:Q26921 wd:Q26944 wd:Q26966 wd:Q27143 wd:Q27184 wd:Q27197 wd:Q27224 wd:Q27401 wd:Q27415 wd:Q27436 wd:Q27489 wd:Q27543 wd:Q27585 wd:Q27586 wd:Q27597 wd:Q28299 wd:Q28905 wd:Q28993 wd:Q29108 ...",
+      "last_retrieved_at": "2026-11-16T10:42:27Z"
+    },
+    "edges_down_d3": {
+      "requests": 39,
+      "rows": 2776,
+      "errors": 0,
+      "first_retrieved_at": "2026-11-16T10:42:28Z",
+      "example_query": "SELECT ?parent ?child ?rel WHERE { VALUES ?parent { wd:Q462 wd:Q918 wd:Q1346 wd:Q8611 wd:Q9334 wd:Q9366 wd:Q12013 wd:Q13717 wd:Q17957 wd:Q18629 wd:Q23589 wd:Q24228 wd:Q24376 wd:Q27074 wd:Q27110 wd:Q27539 wd:Q27558 wd:Q27564 wd:Q28225 wd:Q28459 wd:Q29755 wd:Q30113 wd:Q31165 wd:Q35349 wd:Q35676 wd:Q35935 wd:Q40963 wd:Q42232 wd:Q43320 wd:Q43359 wd:Q44224 wd:Q45836 wd:Q50008 wd:Q51712 wd:Q53098 wd:Q54860 wd:Q56173 wd:Q58332 wd:Q58508 wd:Q63118 wd:Q74603 wd:Q74866 wd:Q77625 wd:Q82754 wd:Q83728 wd:Q94559 wd:Q105584 wd:Q116933 wd:Q122575 wd:Q125272 wd:Q126718 wd:Q129612 wd:Q130744 wd:Q132408 wd:Q1363 ...",
+      "last_retrieved_at": "2026-11-16T10:44:00Z"
+    },
+    "child_labels": {
+      "requests": 102,
+      "rows": 73280,
+      "errors": 0,
+      "first_retrieved_at": "2026-11-16T10:44:03Z",
+      "example_query": "SELECT ?item ?kind ?label WHERE { VALUES ?item { wd:Q66 wd:Q67 wd:Q95 wd:Q246 wd:Q248 wd:Q274 wd:Q280 wd:Q312 wd:Q355 wd:Q364 wd:Q380 wd:Q408 wd:Q462 wd:Q866 wd:Q918 wd:Q1346 wd:Q1418 wd:Q1902 wd:Q2283 wd:Q2309 wd:Q2311 wd:Q3884 wd:Q3895 wd:Q4990 wd:Q4995 wd:Q6686 wd:Q6742 wd:Q6746 wd:Q6750 wd:Q7240 wd:Q7414 wd:Q8061 wd:Q8478 wd:Q8611 wd:Q8701 wd:Q8766 wd:Q8774 wd:Q8779 wd:Q8782 wd:Q8793 wd:Q9322 wd:Q9325 wd:Q9334 wd:Q9366 wd:Q9396 wd:Q9401 wd:Q9531 wd:Q9584 wd:Q11407 wd:Q11463 wd:Q12013 wd:Q13646 wd:Q13677 wd:Q13683 wd:Q13717 wd:Q13973 wd:Q13974 wd:Q13975 wd:Q13977 wd:Q14647 wd:Q14772 wd:Q147 ...",
+      "last_retrieved_at": "2026-11-16T10:54:40Z"
+    },
+    "child_props": {
+      "requests": 102,
+      "rows": 49772,
+      "errors": 0,
+      "first_retrieved_at": "2026-11-16T10:55:02Z",
+      "example_query": "SELECT ?item ?p ?o ?ol WHERE { VALUES ?item { wd:Q66 wd:Q67 wd:Q95 wd:Q246 wd:Q248 wd:Q274 wd:Q280 wd:Q312 wd:Q355 wd:Q364 wd:Q380 wd:Q408 wd:Q462 wd:Q866 wd:Q918 wd:Q1346 wd:Q1418 wd:Q1902 wd:Q2283 wd:Q2309 wd:Q2311 wd:Q3884 wd:Q3895 wd:Q4990 wd:Q4995 wd:Q6686 wd:Q6742 wd:Q6746 wd:Q6750 wd:Q7240 wd:Q7414 wd:Q8061 wd:Q8478 wd:Q8611 wd:Q8701 wd:Q8766 wd:Q8774 wd:Q8779 wd:Q8782 wd:Q8793 wd:Q9322 wd:Q9325 wd:Q9334 wd:Q9366 wd:Q9396 wd:Q9401 wd:Q9531 wd:Q9584 wd:Q11407 wd:Q11463 wd:Q12013 wd:Q13646 wd:Q13677 wd:Q13683 wd:Q13717 wd:Q13973 wd:Q13974 wd:Q13975 wd:Q13977 wd:Q14647 wd:Q14772 wd:Q14799  ...",
+      "last_retrieved_at": "2026-11-16T11:10:17Z"
+    }
+  },
+  "skipped_qids": []
+}

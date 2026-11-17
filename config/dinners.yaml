@@ -1,0 +1,9 @@
+# Dinner calendar used by the trigger model, the weekly queue and the dinner builder.
+# No dates are committed. `next: true` marks the city of the next planned dinner: outputs then say "next dinner".
+# To use real dates locally, copy this file to config/dinners.local.yaml (gitignored) and set `date: YYYY-MM-DD`;
+# entries there override these by city. A dated dinner counts as upcoming until its date has passed.
+dinners:
+  - {city: munich, country: DE, next: true, date: null}
+  - {city: paris, country: FR, next: false, date: null}
+  - {city: london, country: GB, next: false, date: null}
+  - {city: madrid, country: ES, next: false, date: null}

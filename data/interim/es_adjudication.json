@@ -1,0 +1,211 @@
+[
+  {
+    "ticker": "ACX",
+    "field": "pmp_days",
+    "final_value": 63,
+    "value_a": 60,
+    "value_b": 63,
+    "winner": "b",
+    "confidence": 0.95,
+    "reasoning": "The note presents the 'Incluyendo sólo proveedores fuera del Grupo' table (all suppliers, national and foreign, of the group's Spanish companies) as the Ley 18/2022 disclosure; the 'Solo nacionales' table is an extra voluntary cut. A took the national-only table. value_a is A's first-pass value as reconciled (es_reconcile.csv, 11:57); A was patched and rerun at 11:58 and its current output shows the main-table value.",
+    "evidence_quote": "Incluyendo sólo proveedores fuera del Grupo 2025 2024 Días Días Periodo medio de pago a proveedores 63 días 67 días"
+  },
+  {
+    "ticker": "ACX",
+    "field": "ratio_paid_days",
+    "final_value": 65,
+    "value_a": 61,
+    "value_b": 65,
+    "winner": "b",
+    "confidence": 0.95,
+    "reasoning": "Same main table (all suppliers of Spanish group companies): paid ratio 65. A's 61 is from the national-only table. value_a is A's first-pass value as reconciled (es_reconcile.csv, 11:57); A was patched and rerun at 11:58 and its current output shows the main-table value.",
+    "evidence_quote": "Ratio de operaciones pagadas 65 días 66 días Ratio de operaciones pendientes de pago 44 días 72 días"
+  },
+  {
+    "ticker": "ACX",
+    "field": "ratio_pending_days",
+    "final_value": 44,
+    "value_a": 49,
+    "value_b": 44,
+    "winner": "b",
+    "confidence": 0.95,
+    "reasoning": "Same main table: pending ratio 44. A's 49 is from the national-only table. value_a is A's first-pass value as reconciled (es_reconcile.csv, 11:57); A was patched and rerun at 11:58 and its current output shows the main-table value.",
+    "evidence_quote": "Ratio de operaciones pendientes de pago 44 días 72 días Importe Importe Total pagos realizados 1.257.041 1.108.598"
+  },
+  {
+    "ticker": "ACX",
+    "field": "prior_year_pmp_days",
+    "final_value": 67,
+    "value_a": 64,
+    "value_b": 67,
+    "winner": "b",
+    "confidence": 0.95,
+    "reasoning": "Main table, 2024 column: 67. A's 64 is the 2024 value of the national-only table. value_a is A's first-pass value as reconciled (es_reconcile.csv, 11:57); A was patched and rerun at 11:58 and its current output shows the main-table value.",
+    "evidence_quote": "Periodo medio de pago a proveedores 63 días 67 días"
+  },
+  {
+    "ticker": "ACX",
+    "field": "pct_invoices_paid_within_legal_max_by_value",
+    "final_value": 41,
+    "value_a": 49,
+    "value_b": 41,
+    "winner": "b",
+    "confidence": 0.9,
+    "reasoning": "The source prints 41% under the label 'sobre el número total de facturas', directly below the monetary volume 512.492. Arithmetic settles it: 512.492 / 1.257.041 = 40.8% (2024: 467.243 / 1.108.598 = 42.1%, printed 42%), so 41% is the share by value and the two row labels are swapped in the source. The source says this table covers all suppliers, like the main table.",
+    "evidence_quote": "morosidad 512.492 467.243 Porcentaje que suponen sobre el número total de facturas de los pagos a sus proveedores 41 %"
+  },
+  {
+    "ticker": "ACX",
+    "field": "pct_invoices_paid_within_legal_max_by_number",
+    "final_value": 49,
+    "value_a": 41,
+    "value_b": 49,
+    "winner": "b",
+    "confidence": 0.8,
+    "reasoning": "49% is printed below the invoice count 19.064 under the label 'sobre el total monetario'. Since 41% is proven to be the value share, 49% is the share by number (labels swapped in source). Total invoice count is not printed, so this one cannot be recomputed: lower confidence.",
+    "evidence_quote": "morosidad 19.064 21.395 Porcentaje que suponen sobre el total monetario de los pagos a sus proveedores 49 %"
+  },
+  {
+    "ticker": "AENA",
+    "field": "pct_invoices_paid_within_legal_max_by_value",
+    "final_value": 99.5,
+    "value_a": null,
+    "value_b": 99.5,
+    "winner": "b",
+    "confidence": 0.97,
+    "reasoning": "A separate table after the PMP table has columns 'Miles de euros | % | Número de facturas | %'; the 2025 row gives 1.464.335 and 99,5% (1.464.335 / 1.471.901 = 99.5%). A did not parse this column layout.",
+    "evidence_quote": "Miles de euros % Número de facturas % 31 de diciembre de 2025 1.464.335 99,5 % 38.949 98,8 %"
+  },
+  {
+    "ticker": "AENA",
+    "field": "pct_invoices_paid_within_legal_max_by_number",
+    "final_value": 98.8,
+    "value_a": null,
+    "value_b": 98.8,
+    "winner": "b",
+    "confidence": 0.97,
+    "reasoning": "Same row: 38.949 invoices, 98,8%. A did not parse this column layout.",
+    "evidence_quote": "31 de diciembre de 2025 1.464.335 99,5 % 38.949 98,8 %"
+  },
+  {
+    "ticker": "AMS",
+    "field": "pct_invoices_paid_within_legal_max_by_value",
+    "final_value": 86,
+    "value_a": null,
+    "value_b": 86,
+    "winner": "b",
+    "confidence": 0.93,
+    "reasoning": "Value table, 2025 row 'Menor o igual de 45 días': 1.308,3 million, 86% (1.308,3 / 1.529,0 = 85.6%). Note the company splits at 45 days, not 60, so the figure is not strictly comparable with other companies.",
+    "evidence_quote": "Menor o igual de 45 días 1.308,3 86 % 991,4 74 %"
+  },
+  {
+    "ticker": "AMS",
+    "field": "pct_invoices_paid_within_legal_max_by_number",
+    "final_value": 77,
+    "value_a": null,
+    "value_b": 77,
+    "winner": "b",
+    "confidence": 0.93,
+    "reasoning": "Invoice-count table, 2025 row 'Menor o igual de 45 días': 20.404 invoices, 77% (20.404 / 26.380 = 77.3%). Same 45-day threshold caveat.",
+    "evidence_quote": "Menor o igual de 45 días 20.404 77 % 18.289 75 %"
+  },
+  {
+    "ticker": "REP",
+    "field": "pct_invoices_paid_within_legal_max_by_number",
+    "final_value": 95,
+    "value_a": null,
+    "value_b": 95,
+    "winner": "b",
+    "confidence": 0.97,
+    "reasoning": "Footnote (5) to the row 'Número de facturas dentro del plazo legal' states 95% of supplier invoices (97% in 2024). A read footnote (4) for value but missed footnote (5).",
+    "evidence_quote": "(5) Representa un 95% (97% en 2024 ) sobre el total de las facturas de proveedores."
+  },
+  {
+    "ticker": "COL",
+    "field": "note",
+    "final_value": null,
+    "value_a": null,
+    "value_b": null,
+    "winner": "neither",
+    "confidence": 0.95,
+    "reasoning": "Sanity flag confirmed as a source inconsistency, not an extraction error: the raw table prints PMP 38, paid ratio 24, pending ratio 37 for 2025 (2024: 38 / 38 / 30). Recomputing from printed totals gives (24 x 118.316 + 37 x 9.180) / 127.496 = 24.9 days, so one printed figure is probably a typo (paid ratio 24 looks like the outlier). Keep values as printed, flag the row, do not correct.",
+    "evidence_quote": "Periodo medio de pago a proveedores 38 38 Ratio de operaciones pagadas 24 38 Ratio de operaciones pendientes de pago 37 30"
+  },
+  {
+    "ticker": "SLR",
+    "field": "note",
+    "final_value": null,
+    "value_a": null,
+    "value_b": null,
+    "winner": "neither",
+    "confidence": 0.85,
+    "reasoning": "Sanity flag confirmed as printed: PMP 35 (2024: 28), paid ratio 29 (29), pending ratio 26 (26). Recomputing from printed totals gives (29 x 6.814 + 26 x 2.933) / 9.747 = 28.1 days, so the 2025 PMP of 35 is inconsistent with the printed ratios. The text is a flat rendering with letter-spacing damage and a broken year header ('02 5 202 4'); first column read as 2025. Keep as printed, flag the row.",
+    "evidence_quote": "Periodo medi o de pago a pr oveedores 35 28 Ratio de operaciones pagadas 29 29 Ratio de operaciones pend ientes de pago 26 26"
+  },
+  {
+    "ticker": "ELE",
+    "field": "scope",
+    "final_value": "unknown",
+    "value_a": "unknown",
+    "value_b": "unknown",
+    "winner": "neither",
+    "confidence": 0.8,
+    "reasoning": "No disagreement (A and B both unknown). The note sits in the consolidated accounts and says 'por parte de Endesa'; no wording restricts it to Spanish entities, and no other PMP text exists in the document.",
+    "evidence_quote": "cumplimient o por parte de Endesa de los pla zos es - tablecidos p ara el pago a pr oveedor es"
+  },
+  {
+    "ticker": "ENG",
+    "field": "scope",
+    "final_value": "unknown",
+    "value_a": "consolidated_spanish_entities",
+    "value_b": "unknown",
+    "winner": "b",
+    "confidence": 0.8,
+    "reasoning": "The note says 'sociedades del Grupo' with no restriction to Spanish entities anywhere near the table or elsewhere in the document. A's 'consolidated_spanish_entities' was inferred from the group keyword alone.",
+    "evidence_quote": "El plazo máximo legal de pago aplicable a las sociedades del Grupo en el ejercicio 2025"
+  },
+  {
+    "ticker": "MRL",
+    "field": "scope",
+    "final_value": "unknown",
+    "value_a": "unknown",
+    "value_b": "unknown",
+    "winner": "neither",
+    "confidence": 0.8,
+    "reasoning": "No disagreement (both unknown). Wording is 'aplicable al Grupo' and 'balance de situación adjunto'; nothing says Spanish entities only.",
+    "evidence_quote": "El plazo máximo legal de pago aplicable al Grupo según Ley 11/2013 de 26 de julio es de 30 días"
+  },
+  {
+    "ticker": "RED",
+    "field": "scope",
+    "final_value": "unknown",
+    "value_a": "unknown",
+    "value_b": "unknown",
+    "winner": "neither",
+    "confidence": 0.8,
+    "reasoning": "No disagreement (both unknown). The dedicated PMP note in the consolidated accounts gives no entity scope at all.",
+    "evidence_quote": "La información sobre el periodo medio de pago a proveedores relativa a los ejercicios 2025 y 2024 es la siguiente:"
+  },
+  {
+    "ticker": "ROVI",
+    "field": "scope",
+    "final_value": "unknown",
+    "value_a": "consolidated_spanish_entities",
+    "value_b": "unknown",
+    "winner": "b",
+    "confidence": 0.8,
+    "reasoning": "The note introduces the table without any entity scope; 'el Grupo' appears only in unrelated neighbouring paragraphs. A's 'consolidated_spanish_entities' was inferred from the group keyword alone.",
+    "evidence_quote": "El detalle de los pagos por operaciones comerciales realizados durante el ejercicio y pendientes de pago al cierre del balance"
+  },
+  {
+    "ticker": "SLR",
+    "field": "scope",
+    "final_value": "unknown",
+    "value_a": "unknown",
+    "value_b": "unknown",
+    "winner": "neither",
+    "confidence": 0.8,
+    "reasoning": "No disagreement (both unknown). The note only says the figures are 'sobre facturas conformes'; no entity scope stated.",
+    "evidence_quote": "La información relativa al periodo medio de pag o a proveedores so bre factur as conformes es la"
+  }
+]

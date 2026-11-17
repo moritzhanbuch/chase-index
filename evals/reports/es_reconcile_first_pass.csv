@@ -1,0 +1,211 @@
+ticker,company_name,field,value_a,value_b,status,scope_a,scope_b
+ACS,"ACS, Actividades de Construcción y Servicios, S.A.",pmp_days,46.6,46.6,agree,unknown,consolidated_spanish_entities
+ACS,"ACS, Actividades de Construcción y Servicios, S.A.",ratio_paid_days,47.2,47.2,agree,unknown,consolidated_spanish_entities
+ACS,"ACS, Actividades de Construcción y Servicios, S.A.",ratio_pending_days,45.4,45.4,agree,unknown,consolidated_spanish_entities
+ACS,"ACS, Actividades de Construcción y Servicios, S.A.",prior_year_pmp_days,50.3,50.3,agree,unknown,consolidated_spanish_entities
+ACS,"ACS, Actividades de Construcción y Servicios, S.A.",pct_invoices_paid_within_legal_max_by_value,96.4,96.4,agree,unknown,consolidated_spanish_entities
+ACS,"ACS, Actividades de Construcción y Servicios, S.A.",pct_invoices_paid_within_legal_max_by_number,91.0,91.0,agree,unknown,consolidated_spanish_entities
+ACX,"Acerinox, S.A.",pmp_days,60.0,63.0,disagree,consolidated_spanish_entities,consolidated_spanish_entities
+ACX,"Acerinox, S.A.",ratio_paid_days,61.0,65.0,disagree,consolidated_spanish_entities,consolidated_spanish_entities
+ACX,"Acerinox, S.A.",ratio_pending_days,49.0,44.0,disagree,consolidated_spanish_entities,consolidated_spanish_entities
+ACX,"Acerinox, S.A.",prior_year_pmp_days,64.0,67.0,disagree,consolidated_spanish_entities,consolidated_spanish_entities
+ACX,"Acerinox, S.A.",pct_invoices_paid_within_legal_max_by_value,49.0,41.0,disagree,consolidated_spanish_entities,consolidated_spanish_entities
+ACX,"Acerinox, S.A.",pct_invoices_paid_within_legal_max_by_number,41.0,49.0,disagree,consolidated_spanish_entities,consolidated_spanish_entities
+AENA,"Aena S.M.E., S.A.",pmp_days,25.0,25.0,agree,unknown,consolidated_spanish_entities
+AENA,"Aena S.M.E., S.A.",ratio_paid_days,26.0,26.0,agree,unknown,consolidated_spanish_entities
+AENA,"Aena S.M.E., S.A.",ratio_pending_days,6.0,6.0,agree,unknown,consolidated_spanish_entities
+AENA,"Aena S.M.E., S.A.",prior_year_pmp_days,27.0,27.0,agree,unknown,consolidated_spanish_entities
+AENA,"Aena S.M.E., S.A.",pct_invoices_paid_within_legal_max_by_value,,99.5,only_b,unknown,consolidated_spanish_entities
+AENA,"Aena S.M.E., S.A.",pct_invoices_paid_within_legal_max_by_number,,98.8,only_b,unknown,consolidated_spanish_entities
+AMS,"Amadeus IT Group, S.A.",pmp_days,34.0,34.0,agree,unknown,consolidated_spanish_entities
+AMS,"Amadeus IT Group, S.A.",ratio_paid_days,35.0,35.0,agree,unknown,consolidated_spanish_entities
+AMS,"Amadeus IT Group, S.A.",ratio_pending_days,22.0,22.0,agree,unknown,consolidated_spanish_entities
+AMS,"Amadeus IT Group, S.A.",prior_year_pmp_days,33.0,33.0,agree,unknown,consolidated_spanish_entities
+AMS,"Amadeus IT Group, S.A.",pct_invoices_paid_within_legal_max_by_value,,86.0,only_b,unknown,consolidated_spanish_entities
+AMS,"Amadeus IT Group, S.A.",pct_invoices_paid_within_legal_max_by_number,,77.0,only_b,unknown,consolidated_spanish_entities
+ANA,"Acciona, S.A.",pmp_days,27.0,27.0,agree,consolidated_spanish_entities,consolidated_spanish_entities
+ANA,"Acciona, S.A.",ratio_paid_days,24.0,24.0,agree,consolidated_spanish_entities,consolidated_spanish_entities
+ANA,"Acciona, S.A.",ratio_pending_days,41.0,41.0,agree,consolidated_spanish_entities,consolidated_spanish_entities
+ANA,"Acciona, S.A.",prior_year_pmp_days,25.0,25.0,agree,consolidated_spanish_entities,consolidated_spanish_entities
+ANA,"Acciona, S.A.",pct_invoices_paid_within_legal_max_by_value,95.48,95.48,agree,consolidated_spanish_entities,consolidated_spanish_entities
+ANA,"Acciona, S.A.",pct_invoices_paid_within_legal_max_by_number,95.9,95.9,agree,consolidated_spanish_entities,consolidated_spanish_entities
+ANE,"Corporación Acciona Energías Renovables, S.A.",pmp_days,12.68,12.68,agree,consolidated_spanish_entities,consolidated_spanish_entities
+ANE,"Corporación Acciona Energías Renovables, S.A.",ratio_paid_days,12.85,12.85,agree,consolidated_spanish_entities,consolidated_spanish_entities
+ANE,"Corporación Acciona Energías Renovables, S.A.",ratio_pending_days,8.93,8.93,agree,consolidated_spanish_entities,consolidated_spanish_entities
+ANE,"Corporación Acciona Energías Renovables, S.A.",prior_year_pmp_days,15.36,15.36,agree,consolidated_spanish_entities,consolidated_spanish_entities
+ANE,"Corporación Acciona Energías Renovables, S.A.",pct_invoices_paid_within_legal_max_by_value,98.0,98.0,agree,consolidated_spanish_entities,consolidated_spanish_entities
+ANE,"Corporación Acciona Energías Renovables, S.A.",pct_invoices_paid_within_legal_max_by_number,98.0,98.0,agree,consolidated_spanish_entities,consolidated_spanish_entities
+BBVA,"Banco Bilbao Vizcaya Argentaria, S.A.",pmp_days,26.0,26.0,agree,parent_only,parent_only
+BBVA,"Banco Bilbao Vizcaya Argentaria, S.A.",ratio_paid_days,,,both_null,parent_only,parent_only
+BBVA,"Banco Bilbao Vizcaya Argentaria, S.A.",ratio_pending_days,,,both_null,parent_only,parent_only
+BBVA,"Banco Bilbao Vizcaya Argentaria, S.A.",prior_year_pmp_days,,,both_null,parent_only,parent_only
+BBVA,"Banco Bilbao Vizcaya Argentaria, S.A.",pct_invoices_paid_within_legal_max_by_value,,,both_null,parent_only,parent_only
+BBVA,"Banco Bilbao Vizcaya Argentaria, S.A.",pct_invoices_paid_within_legal_max_by_number,,,both_null,parent_only,parent_only
+BKT,"Bankinter, S.A.",pmp_days,17.75,17.75,agree,unknown,consolidated_spanish_entities
+BKT,"Bankinter, S.A.",ratio_paid_days,17.81,17.81,agree,unknown,consolidated_spanish_entities
+BKT,"Bankinter, S.A.",ratio_pending_days,10.51,10.51,agree,unknown,consolidated_spanish_entities
+BKT,"Bankinter, S.A.",prior_year_pmp_days,15.42,15.42,agree,unknown,consolidated_spanish_entities
+BKT,"Bankinter, S.A.",pct_invoices_paid_within_legal_max_by_value,84.0,84.0,agree,unknown,consolidated_spanish_entities
+BKT,"Bankinter, S.A.",pct_invoices_paid_within_legal_max_by_number,88.0,88.0,agree,unknown,consolidated_spanish_entities
+CABK,"CaixaBank, S.A.",pmp_days,12.7,12.7,agree,unknown,consolidated_spanish_entities
+CABK,"CaixaBank, S.A.",ratio_paid_days,12.5,12.5,agree,unknown,consolidated_spanish_entities
+CABK,"CaixaBank, S.A.",ratio_pending_days,23.5,23.5,agree,unknown,consolidated_spanish_entities
+CABK,"CaixaBank, S.A.",prior_year_pmp_days,12.6,12.6,agree,unknown,consolidated_spanish_entities
+CABK,"CaixaBank, S.A.",pct_invoices_paid_within_legal_max_by_value,93.5,93.5,agree,unknown,consolidated_spanish_entities
+CABK,"CaixaBank, S.A.",pct_invoices_paid_within_legal_max_by_number,96.0,96.0,agree,unknown,consolidated_spanish_entities
+CLNX,"Cellnex Telecom, S.A.",pmp_days,44.0,44.0,agree,unknown,consolidated_spanish_entities
+CLNX,"Cellnex Telecom, S.A.",ratio_paid_days,45.0,45.0,agree,unknown,consolidated_spanish_entities
+CLNX,"Cellnex Telecom, S.A.",ratio_pending_days,38.0,38.0,agree,unknown,consolidated_spanish_entities
+CLNX,"Cellnex Telecom, S.A.",prior_year_pmp_days,43.0,43.0,agree,unknown,consolidated_spanish_entities
+CLNX,"Cellnex Telecom, S.A.",pct_invoices_paid_within_legal_max_by_value,62.0,62.0,agree,unknown,consolidated_spanish_entities
+CLNX,"Cellnex Telecom, S.A.",pct_invoices_paid_within_legal_max_by_number,67.0,67.0,agree,unknown,consolidated_spanish_entities
+COL,"Colonial SFL, SOCIMI, S.A. (formerly Inmobiliaria Colonial)",pmp_days,38.0,38.0,agree,unknown,consolidated_spanish_entities
+COL,"Colonial SFL, SOCIMI, S.A. (formerly Inmobiliaria Colonial)",ratio_paid_days,24.0,24.0,agree,unknown,consolidated_spanish_entities
+COL,"Colonial SFL, SOCIMI, S.A. (formerly Inmobiliaria Colonial)",ratio_pending_days,37.0,37.0,agree,unknown,consolidated_spanish_entities
+COL,"Colonial SFL, SOCIMI, S.A. (formerly Inmobiliaria Colonial)",prior_year_pmp_days,38.0,38.0,agree,unknown,consolidated_spanish_entities
+COL,"Colonial SFL, SOCIMI, S.A. (formerly Inmobiliaria Colonial)",pct_invoices_paid_within_legal_max_by_value,88.4,88.4,agree,unknown,consolidated_spanish_entities
+COL,"Colonial SFL, SOCIMI, S.A. (formerly Inmobiliaria Colonial)",pct_invoices_paid_within_legal_max_by_number,97.0,97.0,agree,unknown,consolidated_spanish_entities
+ELE,"Endesa, S.A.",pmp_days,16.0,16.0,agree,unknown,unknown
+ELE,"Endesa, S.A.",ratio_paid_days,16.0,16.0,agree,unknown,unknown
+ELE,"Endesa, S.A.",ratio_pending_days,28.0,28.0,agree,unknown,unknown
+ELE,"Endesa, S.A.",prior_year_pmp_days,18.0,18.0,agree,unknown,unknown
+ELE,"Endesa, S.A.",pct_invoices_paid_within_legal_max_by_value,98.09,98.09,agree,unknown,unknown
+ELE,"Endesa, S.A.",pct_invoices_paid_within_legal_max_by_number,92.5,92.5,agree,unknown,unknown
+ENG,"Enagás, S.A.",pmp_days,23.0,23.0,agree,consolidated_spanish_entities,unknown
+ENG,"Enagás, S.A.",ratio_paid_days,,,both_null,consolidated_spanish_entities,unknown
+ENG,"Enagás, S.A.",ratio_pending_days,,,both_null,consolidated_spanish_entities,unknown
+ENG,"Enagás, S.A.",prior_year_pmp_days,20.0,20.0,agree,consolidated_spanish_entities,unknown
+ENG,"Enagás, S.A.",pct_invoices_paid_within_legal_max_by_value,91.0,91.0,agree,consolidated_spanish_entities,unknown
+ENG,"Enagás, S.A.",pct_invoices_paid_within_legal_max_by_number,89.0,89.0,agree,consolidated_spanish_entities,unknown
+FDR,"Fluidra, S.A.",pmp_days,50.29,50.29,agree,consolidated_spanish_entities,consolidated_spanish_entities
+FDR,"Fluidra, S.A.",ratio_paid_days,52.72,52.72,agree,consolidated_spanish_entities,consolidated_spanish_entities
+FDR,"Fluidra, S.A.",ratio_pending_days,29.4,29.4,agree,consolidated_spanish_entities,consolidated_spanish_entities
+FDR,"Fluidra, S.A.",prior_year_pmp_days,50.52,50.52,agree,consolidated_spanish_entities,consolidated_spanish_entities
+FDR,"Fluidra, S.A.",pct_invoices_paid_within_legal_max_by_value,53.86,53.86,agree,consolidated_spanish_entities,consolidated_spanish_entities
+FDR,"Fluidra, S.A.",pct_invoices_paid_within_legal_max_by_number,53.16,53.16,agree,consolidated_spanish_entities,consolidated_spanish_entities
+FER,Ferrovial SE,pmp_days,,,both_null,unknown,
+FER,Ferrovial SE,ratio_paid_days,,,both_null,unknown,
+FER,Ferrovial SE,ratio_pending_days,,,both_null,unknown,
+FER,Ferrovial SE,prior_year_pmp_days,,,both_null,unknown,
+FER,Ferrovial SE,pct_invoices_paid_within_legal_max_by_value,,,both_null,unknown,
+FER,Ferrovial SE,pct_invoices_paid_within_legal_max_by_number,,,both_null,unknown,
+GRF,"Grifols, S.A.",pmp_days,78.0,78.0,agree,unknown,consolidated_spanish_entities
+GRF,"Grifols, S.A.",ratio_paid_days,81.0,81.0,agree,unknown,consolidated_spanish_entities
+GRF,"Grifols, S.A.",ratio_pending_days,56.0,56.0,agree,unknown,consolidated_spanish_entities
+GRF,"Grifols, S.A.",prior_year_pmp_days,71.0,71.0,agree,unknown,consolidated_spanish_entities
+GRF,"Grifols, S.A.",pct_invoices_paid_within_legal_max_by_value,29.4,29.4,agree,unknown,consolidated_spanish_entities
+GRF,"Grifols, S.A.",pct_invoices_paid_within_legal_max_by_number,24.88,24.88,agree,unknown,consolidated_spanish_entities
+IAG,"International Consolidated Airlines Group, S.A.",pmp_days,23.0,23.0,agree,unknown,consolidated_spanish_entities
+IAG,"International Consolidated Airlines Group, S.A.",ratio_paid_days,22.0,22.0,agree,unknown,consolidated_spanish_entities
+IAG,"International Consolidated Airlines Group, S.A.",ratio_pending_days,23.0,23.0,agree,unknown,consolidated_spanish_entities
+IAG,"International Consolidated Airlines Group, S.A.",prior_year_pmp_days,25.0,25.0,agree,unknown,consolidated_spanish_entities
+IAG,"International Consolidated Airlines Group, S.A.",pct_invoices_paid_within_legal_max_by_value,93.0,93.0,agree,unknown,consolidated_spanish_entities
+IAG,"International Consolidated Airlines Group, S.A.",pct_invoices_paid_within_legal_max_by_number,81.0,81.0,agree,unknown,consolidated_spanish_entities
+IBE,"Iberdrola, S.A.",pmp_days,14.0,14.0,agree,unknown,consolidated_spanish_entities
+IBE,"Iberdrola, S.A.",ratio_paid_days,14.0,14.0,agree,unknown,consolidated_spanish_entities
+IBE,"Iberdrola, S.A.",ratio_pending_days,27.0,27.0,agree,unknown,consolidated_spanish_entities
+IBE,"Iberdrola, S.A.",prior_year_pmp_days,14.0,14.0,agree,unknown,consolidated_spanish_entities
+IBE,"Iberdrola, S.A.",pct_invoices_paid_within_legal_max_by_value,98.89,98.89,agree,unknown,consolidated_spanish_entities
+IBE,"Iberdrola, S.A.",pct_invoices_paid_within_legal_max_by_number,99.96,99.96,agree,unknown,consolidated_spanish_entities
+IDR,"Indra Sistemas, S.A.",pmp_days,48.0,48.0,agree,consolidated_spanish_entities,consolidated_spanish_entities
+IDR,"Indra Sistemas, S.A.",ratio_paid_days,49.0,49.0,agree,consolidated_spanish_entities,consolidated_spanish_entities
+IDR,"Indra Sistemas, S.A.",ratio_pending_days,38.0,38.0,agree,consolidated_spanish_entities,consolidated_spanish_entities
+IDR,"Indra Sistemas, S.A.",prior_year_pmp_days,51.0,51.0,agree,consolidated_spanish_entities,consolidated_spanish_entities
+IDR,"Indra Sistemas, S.A.",pct_invoices_paid_within_legal_max_by_value,63.6,63.6,agree,consolidated_spanish_entities,consolidated_spanish_entities
+IDR,"Indra Sistemas, S.A.",pct_invoices_paid_within_legal_max_by_number,74.17,74.17,agree,consolidated_spanish_entities,consolidated_spanish_entities
+ITX,"Industria de Diseño Textil, S.A. (Inditex)",pmp_days,37.07,37.07,agree,unknown,consolidated_spanish_entities
+ITX,"Industria de Diseño Textil, S.A. (Inditex)",ratio_paid_days,37.83,37.83,agree,unknown,consolidated_spanish_entities
+ITX,"Industria de Diseño Textil, S.A. (Inditex)",ratio_pending_days,29.71,29.71,agree,unknown,consolidated_spanish_entities
+ITX,"Industria de Diseño Textil, S.A. (Inditex)",prior_year_pmp_days,37.51,37.51,agree,unknown,consolidated_spanish_entities
+ITX,"Industria de Diseño Textil, S.A. (Inditex)",pct_invoices_paid_within_legal_max_by_value,98.0,98.0,agree,unknown,consolidated_spanish_entities
+ITX,"Industria de Diseño Textil, S.A. (Inditex)",pct_invoices_paid_within_legal_max_by_number,98.0,98.0,agree,unknown,consolidated_spanish_entities
+LOG,"Logista Integral, S.A.",pmp_days,37.0,37.0,agree,unknown,consolidated_spanish_entities
+LOG,"Logista Integral, S.A.",ratio_paid_days,38.0,38.0,agree,unknown,consolidated_spanish_entities
+LOG,"Logista Integral, S.A.",ratio_pending_days,29.0,29.0,agree,unknown,consolidated_spanish_entities
+LOG,"Logista Integral, S.A.",prior_year_pmp_days,38.0,38.0,agree,unknown,consolidated_spanish_entities
+LOG,"Logista Integral, S.A.",pct_invoices_paid_within_legal_max_by_value,81.0,81.0,agree,unknown,consolidated_spanish_entities
+LOG,"Logista Integral, S.A.",pct_invoices_paid_within_legal_max_by_number,73.0,73.0,agree,unknown,consolidated_spanish_entities
+MAP,"Mapfre, S.A.",pmp_days,6.6,6.6,agree,consolidated_spanish_entities,consolidated_spanish_entities
+MAP,"Mapfre, S.A.",ratio_paid_days,6.1,6.1,agree,consolidated_spanish_entities,consolidated_spanish_entities
+MAP,"Mapfre, S.A.",ratio_pending_days,22.9,22.9,agree,consolidated_spanish_entities,consolidated_spanish_entities
+MAP,"Mapfre, S.A.",prior_year_pmp_days,5.8,5.8,agree,consolidated_spanish_entities,consolidated_spanish_entities
+MAP,"Mapfre, S.A.",pct_invoices_paid_within_legal_max_by_value,97.4,97.4,agree,consolidated_spanish_entities,consolidated_spanish_entities
+MAP,"Mapfre, S.A.",pct_invoices_paid_within_legal_max_by_number,98.7,98.7,agree,consolidated_spanish_entities,consolidated_spanish_entities
+MRL,"Merlin Properties SOCIMI, S.A.",pmp_days,45.0,45.0,agree,unknown,unknown
+MRL,"Merlin Properties SOCIMI, S.A.",ratio_paid_days,46.0,46.0,agree,unknown,unknown
+MRL,"Merlin Properties SOCIMI, S.A.",ratio_pending_days,40.0,40.0,agree,unknown,unknown
+MRL,"Merlin Properties SOCIMI, S.A.",prior_year_pmp_days,43.0,43.0,agree,unknown,unknown
+MRL,"Merlin Properties SOCIMI, S.A.",pct_invoices_paid_within_legal_max_by_value,78.7,78.7,agree,unknown,unknown
+MRL,"Merlin Properties SOCIMI, S.A.",pct_invoices_paid_within_legal_max_by_number,84.3,84.3,agree,unknown,unknown
+MTS,ArcelorMittal S.A.,pmp_days,,,both_null,unknown,
+MTS,ArcelorMittal S.A.,ratio_paid_days,,,both_null,unknown,
+MTS,ArcelorMittal S.A.,ratio_pending_days,,,both_null,unknown,
+MTS,ArcelorMittal S.A.,prior_year_pmp_days,,,both_null,unknown,
+MTS,ArcelorMittal S.A.,pct_invoices_paid_within_legal_max_by_value,,,both_null,unknown,
+MTS,ArcelorMittal S.A.,pct_invoices_paid_within_legal_max_by_number,,,both_null,unknown,
+NTGY,"Naturgy Energy Group, S.A.",pmp_days,18.0,18.0,agree,unknown,consolidated_spanish_entities
+NTGY,"Naturgy Energy Group, S.A.",ratio_paid_days,18.0,18.0,agree,unknown,consolidated_spanish_entities
+NTGY,"Naturgy Energy Group, S.A.",ratio_pending_days,18.0,18.0,agree,unknown,consolidated_spanish_entities
+NTGY,"Naturgy Energy Group, S.A.",prior_year_pmp_days,22.0,22.0,agree,unknown,consolidated_spanish_entities
+NTGY,"Naturgy Energy Group, S.A.",pct_invoices_paid_within_legal_max_by_value,99.59,99.59,agree,unknown,consolidated_spanish_entities
+NTGY,"Naturgy Energy Group, S.A.",pct_invoices_paid_within_legal_max_by_number,99.24,99.24,agree,unknown,consolidated_spanish_entities
+PUIG,"Puig Brands, S.A.",pmp_days,59.0,59.0,agree,unknown,consolidated_spanish_entities
+PUIG,"Puig Brands, S.A.",ratio_paid_days,63.0,63.0,agree,unknown,consolidated_spanish_entities
+PUIG,"Puig Brands, S.A.",ratio_pending_days,36.0,36.0,agree,unknown,consolidated_spanish_entities
+PUIG,"Puig Brands, S.A.",prior_year_pmp_days,52.0,52.0,agree,unknown,consolidated_spanish_entities
+PUIG,"Puig Brands, S.A.",pct_invoices_paid_within_legal_max_by_value,78.5,78.5,agree,unknown,consolidated_spanish_entities
+PUIG,"Puig Brands, S.A.",pct_invoices_paid_within_legal_max_by_number,82.7,82.7,agree,unknown,consolidated_spanish_entities
+RED,"Redeia Corporación, S.A.",pmp_days,41.0,41.0,agree,unknown,unknown
+RED,"Redeia Corporación, S.A.",ratio_paid_days,44.0,44.0,agree,unknown,unknown
+RED,"Redeia Corporación, S.A.",ratio_pending_days,27.0,27.0,agree,unknown,unknown
+RED,"Redeia Corporación, S.A.",prior_year_pmp_days,44.0,44.0,agree,unknown,unknown
+RED,"Redeia Corporación, S.A.",pct_invoices_paid_within_legal_max_by_value,97.0,97.0,agree,unknown,unknown
+RED,"Redeia Corporación, S.A.",pct_invoices_paid_within_legal_max_by_number,97.0,97.0,agree,unknown,unknown
+REP,"Repsol, S.A.",pmp_days,27.0,27.0,agree,unknown,consolidated_spanish_entities
+REP,"Repsol, S.A.",ratio_paid_days,27.0,27.0,agree,unknown,consolidated_spanish_entities
+REP,"Repsol, S.A.",ratio_pending_days,28.0,28.0,agree,unknown,consolidated_spanish_entities
+REP,"Repsol, S.A.",prior_year_pmp_days,31.0,31.0,agree,unknown,consolidated_spanish_entities
+REP,"Repsol, S.A.",pct_invoices_paid_within_legal_max_by_value,97.0,97.0,agree,unknown,consolidated_spanish_entities
+REP,"Repsol, S.A.",pct_invoices_paid_within_legal_max_by_number,,95.0,only_b,unknown,consolidated_spanish_entities
+ROVI,"Laboratorios Farmacéuticos Rovi, S.A.",pmp_days,46.0,46.0,agree,consolidated_spanish_entities,unknown
+ROVI,"Laboratorios Farmacéuticos Rovi, S.A.",ratio_paid_days,48.0,48.0,agree,consolidated_spanish_entities,unknown
+ROVI,"Laboratorios Farmacéuticos Rovi, S.A.",ratio_pending_days,28.0,28.0,agree,consolidated_spanish_entities,unknown
+ROVI,"Laboratorios Farmacéuticos Rovi, S.A.",prior_year_pmp_days,47.0,47.0,agree,consolidated_spanish_entities,unknown
+ROVI,"Laboratorios Farmacéuticos Rovi, S.A.",pct_invoices_paid_within_legal_max_by_value,94.0,94.0,agree,consolidated_spanish_entities,unknown
+ROVI,"Laboratorios Farmacéuticos Rovi, S.A.",pct_invoices_paid_within_legal_max_by_number,91.0,91.0,agree,consolidated_spanish_entities,unknown
+SAB,"Banco de Sabadell, S.A.",pmp_days,,,both_null,unknown,
+SAB,"Banco de Sabadell, S.A.",ratio_paid_days,,,both_null,unknown,
+SAB,"Banco de Sabadell, S.A.",ratio_pending_days,,,both_null,unknown,
+SAB,"Banco de Sabadell, S.A.",prior_year_pmp_days,,,both_null,unknown,
+SAB,"Banco de Sabadell, S.A.",pct_invoices_paid_within_legal_max_by_value,,,both_null,unknown,
+SAB,"Banco de Sabadell, S.A.",pct_invoices_paid_within_legal_max_by_number,,,both_null,unknown,
+SAN,"Banco Santander, S.A.",pmp_days,10.0,10.0,agree,parent_only,parent_only
+SAN,"Banco Santander, S.A.",ratio_paid_days,,,both_null,parent_only,parent_only
+SAN,"Banco Santander, S.A.",ratio_pending_days,,,both_null,parent_only,parent_only
+SAN,"Banco Santander, S.A.",prior_year_pmp_days,,,both_null,parent_only,parent_only
+SAN,"Banco Santander, S.A.",pct_invoices_paid_within_legal_max_by_value,99.92,99.92,agree,parent_only,parent_only
+SAN,"Banco Santander, S.A.",pct_invoices_paid_within_legal_max_by_number,99.94,99.94,agree,parent_only,parent_only
+SCYR,"Sacyr, S.A.",pmp_days,25.0,25.0,agree,consolidated_spanish_entities,consolidated_spanish_entities
+SCYR,"Sacyr, S.A.",ratio_paid_days,23.0,23.0,agree,consolidated_spanish_entities,consolidated_spanish_entities
+SCYR,"Sacyr, S.A.",ratio_pending_days,40.0,40.0,agree,consolidated_spanish_entities,consolidated_spanish_entities
+SCYR,"Sacyr, S.A.",prior_year_pmp_days,30.0,30.0,agree,consolidated_spanish_entities,consolidated_spanish_entities
+SCYR,"Sacyr, S.A.",pct_invoices_paid_within_legal_max_by_value,90.31,90.31,agree,consolidated_spanish_entities,consolidated_spanish_entities
+SCYR,"Sacyr, S.A.",pct_invoices_paid_within_legal_max_by_number,84.84,84.84,agree,consolidated_spanish_entities,consolidated_spanish_entities
+SLR,"Solaria Energía y Medio Ambiente, S.A.",pmp_days,35.0,35.0,agree,unknown,unknown
+SLR,"Solaria Energía y Medio Ambiente, S.A.",ratio_paid_days,29.0,29.0,agree,unknown,unknown
+SLR,"Solaria Energía y Medio Ambiente, S.A.",ratio_pending_days,26.0,26.0,agree,unknown,unknown
+SLR,"Solaria Energía y Medio Ambiente, S.A.",prior_year_pmp_days,28.0,28.0,agree,unknown,unknown
+SLR,"Solaria Energía y Medio Ambiente, S.A.",pct_invoices_paid_within_legal_max_by_value,95.0,95.0,agree,unknown,unknown
+SLR,"Solaria Energía y Medio Ambiente, S.A.",pct_invoices_paid_within_legal_max_by_number,,,both_null,unknown,unknown
+TEF,"Telefónica, S.A.",pmp_days,48.0,48.0,agree,unknown,consolidated_spanish_entities
+TEF,"Telefónica, S.A.",ratio_paid_days,49.0,49.0,agree,unknown,consolidated_spanish_entities
+TEF,"Telefónica, S.A.",ratio_pending_days,34.0,34.0,agree,unknown,consolidated_spanish_entities
+TEF,"Telefónica, S.A.",prior_year_pmp_days,51.0,51.0,agree,unknown,consolidated_spanish_entities
+TEF,"Telefónica, S.A.",pct_invoices_paid_within_legal_max_by_value,80.0,80.0,agree,unknown,consolidated_spanish_entities
+TEF,"Telefónica, S.A.",pct_invoices_paid_within_legal_max_by_number,73.0,73.0,agree,unknown,consolidated_spanish_entities
+UNI,"Unicaja Banco, S.A.",pmp_days,8.85,8.85,agree,consolidated_spanish_entities,consolidated_spanish_entities
+UNI,"Unicaja Banco, S.A.",ratio_paid_days,8.85,8.85,agree,consolidated_spanish_entities,consolidated_spanish_entities
+UNI,"Unicaja Banco, S.A.",ratio_pending_days,7.59,7.59,agree,consolidated_spanish_entities,consolidated_spanish_entities
+UNI,"Unicaja Banco, S.A.",prior_year_pmp_days,9.7,9.7,agree,consolidated_spanish_entities,consolidated_spanish_entities
+UNI,"Unicaja Banco, S.A.",pct_invoices_paid_within_legal_max_by_value,98.69,98.69,agree,consolidated_spanish_entities,consolidated_spanish_entities
+UNI,"Unicaja Banco, S.A.",pct_invoices_paid_within_legal_max_by_number,98.16,98.16,agree,consolidated_spanish_entities,consolidated_spanish_entities

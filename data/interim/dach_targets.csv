@@ -1,0 +1,496 @@
+slice,index,name,qid,isin,lei,country,hq_city,membership_source_url,note,company_id
+bavaria_dax_mdax,DAX,Adidas,Q3895,"<bound method Series.isin of index                                                                   DAX
+wiki_title                                                           Adidas
+name                                                                 Adidas
+sector_label                                                   Sportartikel
+hq_city_table                                                Herzogenaurach
+state_table                                                          Bayern
+source_url                https://de.wikipedia.org/w/index.php?title=DAX...
+retrieved_at                                           2026-11-17T10:57:16Z
+qid                                                                   Q3895
+hq_wikidata                                                  Herzogenaurach
+hq_in_bavaria_wikidata                                                 True
+isin                                                           DE000A1EWWW0
+lei                                                    549300JSX0Z4CW0V5023
+wikidata_retrieved_at                                  2026-11-17T11:04:23Z
+hq_in_bavaria                                                          True
+bavaria_method                                 wikidata_p159_p131+dax_table
+is_financial                                                          False
+slice                                                      bavaria_dax_mdax
+Name: 0, dtype: object>",549300JSX0Z4CW0V5023,DE,Herzogenaurach,https://de.wikipedia.org/w/index.php?title=DAX&oldid=272105030,,
+bavaria_dax_mdax,DAX,BMW,Q26678,"<bound method Series.isin of index                                                                   DAX
+wiki_title                                                              BMW
+name                                                                    BMW
+sector_label                                         Automobil (Produktion)
+hq_city_table                                                       München
+state_table                                                          Bayern
+source_url                https://de.wikipedia.org/w/index.php?title=DAX...
+retrieved_at                                           2026-11-17T10:57:16Z
+qid                                                                  Q26678
+hq_wikidata                                                         München
+hq_in_bavaria_wikidata                                                 True
+isin                                              DE0005190037|DE0005190003
+lei                                                    YEH5ZCD6E441RHVHD759
+wikidata_retrieved_at                                  2026-11-17T11:04:23Z
+hq_in_bavaria                                                          True
+bavaria_method                                 wikidata_p159_p131+dax_table
+is_financial                                                          False
+slice                                                      bavaria_dax_mdax
+Name: 6, dtype: object>",YEH5ZCD6E441RHVHD759,DE,München,https://de.wikipedia.org/w/index.php?title=DAX&oldid=272105030,,
+bavaria_dax_mdax,DAX,Fresenius Medical Care,Q650259,"<bound method Series.isin of index                                                                   DAX
+wiki_title                                           Fresenius Medical Care
+name                                                 Fresenius Medical Care
+sector_label                                                 Medizintechnik
+hq_city_table                                                           Hof
+state_table                                                          Bayern
+source_url                https://de.wikipedia.org/w/index.php?title=DAX...
+retrieved_at                                           2026-11-17T10:57:16Z
+qid                                                                 Q650259
+hq_wikidata                                    Bad Homburg vor der Höhe|Hof
+hq_in_bavaria_wikidata                                                 True
+isin                                                           DE0005785802
+lei                                                    549300CP8NY40UP89Q40
+wikidata_retrieved_at                                  2026-11-17T11:04:23Z
+hq_in_bavaria                                                          True
+bavaria_method                                 wikidata_p159_p131+dax_table
+is_financial                                                          False
+slice                                                      bavaria_dax_mdax
+Name: 17, dtype: object>",549300CP8NY40UP89Q40,DE,Bad Homburg vor der Höhe|Hof,https://de.wikipedia.org/w/index.php?title=DAX&oldid=272105030,"registered seat in Bavaria, operations run from elsewhere",
+bavaria_dax_mdax,DAX,Infineon,Q311394,"<bound method Series.isin of index                                                                   DAX
+wiki_title                                                         Infineon
+name                                                               Infineon
+sector_label                                                     Halbleiter
+hq_city_table                                                     Neubiberg
+state_table                                                          Bayern
+source_url                https://de.wikipedia.org/w/index.php?title=DAX...
+retrieved_at                                           2026-11-17T10:57:16Z
+qid                                                                 Q311394
+hq_wikidata                                                       Neubiberg
+hq_in_bavaria_wikidata                                                 True
+isin                                                           DE0006231004
+lei                                                    TSI2PJM6EPETEQ4X1U25
+wikidata_retrieved_at                                  2026-11-17T11:04:23Z
+hq_in_bavaria                                                          True
+bavaria_method                                 wikidata_p159_p131+dax_table
+is_financial                                                          False
+slice                                                      bavaria_dax_mdax
+Name: 23, dtype: object>",TSI2PJM6EPETEQ4X1U25,DE,Neubiberg,https://de.wikipedia.org/w/index.php?title=DAX&oldid=272105030,,
+bavaria_dax_mdax,DAX,MTU Aero Engines,Q128929,"<bound method Series.isin of index                                                                   DAX
+wiki_title                                                 MTU Aero Engines
+name                                                       MTU Aero Engines
+sector_label                                                      Luftfahrt
+hq_city_table                                                       München
+state_table                                                           DE-BY
+source_url                https://de.wikipedia.org/w/index.php?title=DAX...
+retrieved_at                                           2026-11-17T10:57:16Z
+qid                                                                 Q128929
+hq_wikidata                                                         München
+hq_in_bavaria_wikidata                                                 True
+isin                                                           DE000A0D9PT0
+lei                                                    529900807L67JY81RD65
+wikidata_retrieved_at                                  2026-11-17T11:04:23Z
+hq_in_bavaria                                                          True
+bavaria_method                                           wikidata_p159_p131
+is_financial                                                          False
+slice                                                      bavaria_dax_mdax
+Name: 26, dtype: object>",529900807L67JY81RD65,DE,München,https://de.wikipedia.org/w/index.php?title=DAX&oldid=272105030,,
+bavaria_dax_mdax,DAX,Scout24,Q2261455,"<bound method Series.isin of index                                                                   DAX
+wiki_title                                                       Scout24 SE
+name                                                                Scout24
+sector_label                                             Online-Marktplätze
+hq_city_table                                                       München
+state_table                                                          Bayern
+source_url                https://de.wikipedia.org/w/index.php?title=DAX...
+retrieved_at                                           2026-11-17T10:57:16Z
+qid                                                                Q2261455
+hq_wikidata                                                         München
+hq_in_bavaria_wikidata                                                 True
+isin                                                           DE000A12DM80
+lei                                                    5493007EIKM2ENQS7U66
+wikidata_retrieved_at                                  2026-11-17T11:04:23Z
+hq_in_bavaria                                                          True
+bavaria_method                                 wikidata_p159_p131+dax_table
+is_financial                                                          False
+slice                                                      bavaria_dax_mdax
+Name: 32, dtype: object>",5493007EIKM2ENQS7U66,DE,München,https://de.wikipedia.org/w/index.php?title=DAX&oldid=272105030,,
+bavaria_dax_mdax,DAX,Siemens,Q81230,"<bound method Series.isin of index                                                                   DAX
+wiki_title                                                          Siemens
+name                                                                Siemens
+sector_label                                                 Elektrotechnik
+hq_city_table                                                        Berlin
+state_table                                               Berlin und Bayern
+source_url                https://de.wikipedia.org/w/index.php?title=DAX...
+retrieved_at                                           2026-11-17T10:57:16Z
+qid                                                                  Q81230
+hq_wikidata                                                         München
+hq_in_bavaria_wikidata                                                 True
+isin                                                           DE0007236101
+lei                               W38RGI023J3WT1HWRP32|529900ZZVLZ93I1AW009
+wikidata_retrieved_at                                  2026-11-17T11:04:23Z
+hq_in_bavaria                                                          True
+bavaria_method                                 wikidata_p159_p131+dax_table
+is_financial                                                          False
+slice                                                      bavaria_dax_mdax
+Name: 33, dtype: object>",W38RGI023J3WT1HWRP32|529900ZZVLZ93I1AW009,DE,München,https://de.wikipedia.org/w/index.php?title=DAX&oldid=272105030,,
+bavaria_dax_mdax,DAX,Siemens Energy,Q89189545,"<bound method Series.isin of index                                                                   DAX
+wiki_title                                                   Siemens Energy
+name                                                         Siemens Energy
+sector_label                                 Elektrotechnik, Energietechnik
+hq_city_table                                                       München
+state_table                                                          Bayern
+source_url                https://de.wikipedia.org/w/index.php?title=DAX...
+retrieved_at                                           2026-11-17T10:57:16Z
+qid                                                               Q89189545
+hq_wikidata                                                         München
+hq_in_bavaria_wikidata                                                 True
+isin                                                           DE000ENER6Y0
+lei                                                    5299005CHJZ14D4FDJ62
+wikidata_retrieved_at                                  2026-11-17T11:04:23Z
+hq_in_bavaria                                                          True
+bavaria_method                                 wikidata_p159_p131+dax_table
+is_financial                                                          False
+slice                                                      bavaria_dax_mdax
+Name: 34, dtype: object>",5299005CHJZ14D4FDJ62,DE,München,https://de.wikipedia.org/w/index.php?title=DAX&oldid=272105030,,
+bavaria_dax_mdax,DAX,Siemens Healthineers,Q472451,"<bound method Series.isin of index                                                                   DAX
+wiki_title                                             Siemens Healthineers
+name                                                   Siemens Healthineers
+sector_label                                                 Medizintechnik
+hq_city_table                                                      Erlangen
+state_table                                                          Bayern
+source_url                https://de.wikipedia.org/w/index.php?title=DAX...
+retrieved_at                                           2026-11-17T10:57:16Z
+qid                                                                 Q472451
+hq_wikidata                                                        Erlangen
+hq_in_bavaria_wikidata                                                 True
+isin                                                           DE000SHL1006
+lei                                                    529900QBVWXMWANH7H45
+wikidata_retrieved_at                                  2026-11-17T11:04:23Z
+hq_in_bavaria                                                          True
+bavaria_method                                 wikidata_p159_p131+dax_table
+is_financial                                                          False
+slice                                                      bavaria_dax_mdax
+Name: 35, dtype: object>",529900QBVWXMWANH7H45,DE,Erlangen,https://de.wikipedia.org/w/index.php?title=DAX&oldid=272105030,,
+bavaria_dax_mdax,MDAX,CTS Eventim AG & Co. KGaA,Q1024514,"<bound method Series.isin of index                                                                  MDAX
+wiki_title                                        CTS Eventim AG & Co. KGaA
+name                                              CTS Eventim AG & Co. KGaA
+sector_label                                                 Ticketvertrieb
+hq_city_table                                                       München
+state_table                                                             NaN
+source_url                https://de.wikipedia.org/w/index.php?title=MDA...
+retrieved_at                                           2026-11-17T10:57:17Z
+qid                                                                Q1024514
+hq_wikidata                                                  Bremen|München
+hq_in_bavaria_wikidata                                                 True
+isin                                                           DE0005470306
+lei                                                    529900FDHSN08UBJII80
+wikidata_retrieved_at                                  2026-11-17T11:04:23Z
+hq_in_bavaria                                                          True
+bavaria_method                                           wikidata_p159_p131
+is_financial                                                          False
+slice                                                      bavaria_dax_mdax
+Name: 47, dtype: object>",529900FDHSN08UBJII80,DE,Bremen|München,https://de.wikipedia.org/w/index.php?title=MDAX&oldid=271947083,"registered seat in Bavaria, operations run from elsewhere",
+bavaria_dax_mdax,MDAX,Hensoldt AG,Q21236526,"<bound method Series.isin of index                                                                  MDAX
+wiki_title                                    Hensoldt (Unternehmensgruppe)
+name                                                            Hensoldt AG
+sector_label                  Luft- und Raumfahrttechnik, Rüstungsindustrie
+hq_city_table                                     Taufkirchen (bei München)
+state_table                                                             NaN
+source_url                https://de.wikipedia.org/w/index.php?title=MDA...
+retrieved_at                                           2026-11-17T10:57:17Z
+qid                                                               Q21236526
+hq_wikidata                                                     Taufkirchen
+hq_in_bavaria_wikidata                                                 True
+isin                                                           DE000HAG0005
+lei                                                    894500686FYLLZD3M624
+wikidata_retrieved_at                                  2026-11-17T11:04:23Z
+hq_in_bavaria                                                          True
+bavaria_method                                           wikidata_p159_p131
+is_financial                                                          False
+slice                                                      bavaria_dax_mdax
+Name: 59, dtype: object>",894500686FYLLZD3M624,DE,Taufkirchen,https://de.wikipedia.org/w/index.php?title=MDAX&oldid=271947083,,
+bavaria_dax_mdax,MDAX,Knorr-Bremse AG,Q256290,"<bound method Series.isin of index                                                                  MDAX
+wiki_title                                                     Knorr-Bremse
+name                                                        Knorr-Bremse AG
+sector_label                     Bremssysteme, Schienenfahrzeug-Komponenten
+hq_city_table                                                       München
+state_table                                                             NaN
+source_url                https://de.wikipedia.org/w/index.php?title=MDA...
+retrieved_at                                           2026-11-17T10:57:17Z
+qid                                                                 Q256290
+hq_wikidata                                                  Berlin|München
+hq_in_bavaria_wikidata                                                 True
+isin                                                           DE000KBX1006
+lei                                                    5299001GRRO0Z25YZT52
+wikidata_retrieved_at                                  2026-11-17T11:04:23Z
+hq_in_bavaria                                                          True
+bavaria_method                                           wikidata_p159_p131
+is_financial                                                          False
+slice                                                      bavaria_dax_mdax
+Name: 64, dtype: object>",5299001GRRO0Z25YZT52,DE,Berlin|München,https://de.wikipedia.org/w/index.php?title=MDAX&oldid=271947083,"registered seat in Bavaria, operations run from elsewhere",
+bavaria_dax_mdax,MDAX,Krones AG,Q705337,"<bound method Series.isin of index                                                                  MDAX
+wiki_title                                                        Krones AG
+name                                                              Krones AG
+sector_label                                                   Maschinenbau
+hq_city_table                                                  Neutraubling
+state_table                                                             NaN
+source_url                https://de.wikipedia.org/w/index.php?title=MDA...
+retrieved_at                                           2026-11-17T10:57:17Z
+qid                                                                 Q705337
+hq_wikidata                                                    Neutraubling
+hq_in_bavaria_wikidata                                                 True
+isin                                                           DE0006335003
+lei                                                    529900NY2GSZWWUBW049
+wikidata_retrieved_at                                  2026-11-17T11:04:23Z
+hq_in_bavaria                                                          True
+bavaria_method                                           wikidata_p159_p131
+is_financial                                                          False
+slice                                                      bavaria_dax_mdax
+Name: 65, dtype: object>",529900NY2GSZWWUBW049,DE,Neutraubling,https://de.wikipedia.org/w/index.php?title=MDAX&oldid=271947083,,
+bavaria_dax_mdax,MDAX,Nemetschek SE,Q666476,"<bound method Series.isin of index                                                                  MDAX
+wiki_title                                                    Nemetschek SE
+name                                                          Nemetschek SE
+sector_label                                        Software (Bauindustrie)
+hq_city_table                                                       München
+state_table                                                             NaN
+source_url                https://de.wikipedia.org/w/index.php?title=MDA...
+retrieved_at                                           2026-11-17T10:57:17Z
+qid                                                                 Q666476
+hq_wikidata                                                         München
+hq_in_bavaria_wikidata                                                 True
+isin                                                           DE0006452907
+lei                                                    529900R0S2IX1S358J38
+wikidata_retrieved_at                                  2026-11-17T11:04:23Z
+hq_in_bavaria                                                          True
+bavaria_method                                           wikidata_p159_p131
+is_financial                                                          False
+slice                                                      bavaria_dax_mdax
+Name: 68, dtype: object>",529900R0S2IX1S358J38,DE,München,https://de.wikipedia.org/w/index.php?title=MDAX&oldid=271947083,,
+bavaria_dax_mdax,MDAX,Puma SE,Q157064,"<bound method Series.isin of index                                                                  MDAX
+wiki_title                                    Puma (Sportartikelhersteller)
+name                                                                Puma SE
+sector_label                                                   Sportartikel
+hq_city_table                                                Herzogenaurach
+state_table                                                             NaN
+source_url                https://de.wikipedia.org/w/index.php?title=MDA...
+retrieved_at                                           2026-11-17T10:57:17Z
+qid                                                                 Q157064
+hq_wikidata                                                  Herzogenaurach
+hq_in_bavaria_wikidata                                                 True
+isin                                                           DE0006969603
+lei                                                    529900GRZ2BQY5ZM9N49
+wikidata_retrieved_at                                  2026-11-17T11:04:23Z
+hq_in_bavaria                                                          True
+bavaria_method                                           wikidata_p159_p131
+is_financial                                                          False
+slice                                                      bavaria_dax_mdax
+Name: 72, dtype: object>",529900GRZ2BQY5ZM9N49,DE,Herzogenaurach,https://de.wikipedia.org/w/index.php?title=MDAX&oldid=271947083,,
+bavaria_dax_mdax,MDAX,Rational AG,Q1638448,"<bound method Series.isin of index                                                                  MDAX
+wiki_title                                                      Rational AG
+name                                                            Rational AG
+sector_label                                                      Industrie
+hq_city_table                                             Landsberg am Lech
+state_table                                                             NaN
+source_url                https://de.wikipedia.org/w/index.php?title=MDA...
+retrieved_at                                           2026-11-17T10:57:17Z
+qid                                                                Q1638448
+hq_wikidata                                               Landsberg am Lech
+hq_in_bavaria_wikidata                                                 True
+isin                                                           DE0007010803
+lei                                                    529900K139N6UFJ1A758
+wikidata_retrieved_at                                  2026-11-17T11:04:23Z
+hq_in_bavaria                                                          True
+bavaria_method                                           wikidata_p159_p131
+is_financial                                                          False
+slice                                                      bavaria_dax_mdax
+Name: 73, dtype: object>",529900K139N6UFJ1A758,DE,Landsberg am Lech,https://de.wikipedia.org/w/index.php?title=MDAX&oldid=271947083,,
+bavaria_dax_mdax,MDAX,Renk Group,Q2144015,"<bound method Series.isin of index                                                                  MDAX
+wiki_title                                                       Renk Group
+name                                                             Renk Group
+sector_label                                Maschinenbau, Rüstungsindustrie
+hq_city_table                                                      Augsburg
+state_table                                                             NaN
+source_url                https://de.wikipedia.org/w/index.php?title=MDA...
+retrieved_at                                           2026-11-17T10:57:17Z
+qid                                                                Q2144015
+hq_wikidata                                                        Augsburg
+hq_in_bavaria_wikidata                                                 True
+isin                                                           DE0007850000
+lei                                                                     NaN
+wikidata_retrieved_at                                  2026-11-17T11:04:23Z
+hq_in_bavaria                                                          True
+bavaria_method                                           wikidata_p159_p131
+is_financial                                                          False
+slice                                                      bavaria_dax_mdax
+Name: 74, dtype: object>",,DE,Augsburg,https://de.wikipedia.org/w/index.php?title=MDAX&oldid=271947083,,
+bavaria_dax_mdax,MDAX,Schaeffler AG,Q459367,"<bound method Series.isin of index                                                                  MDAX
+wiki_title                                                Schaeffler-Gruppe
+name                                                          Schaeffler AG
+sector_label                          Automobil- und Maschinenbauzulieferer
+hq_city_table                                                Herzogenaurach
+state_table                                                             NaN
+source_url                https://de.wikipedia.org/w/index.php?title=MDA...
+retrieved_at                                           2026-11-17T10:57:17Z
+qid                                                                 Q459367
+hq_wikidata                                                  Herzogenaurach
+hq_in_bavaria_wikidata                                                 True
+isin                                                           DE000SHA0019
+lei                                                    549300Q7E782X7GC1P43
+wikidata_retrieved_at                                  2026-11-17T11:04:23Z
+hq_in_bavaria                                                          True
+bavaria_method                                           wikidata_p159_p131
+is_financial                                                          False
+slice                                                      bavaria_dax_mdax
+Name: 78, dtype: object>",549300Q7E782X7GC1P43,DE,Herzogenaurach,https://de.wikipedia.org/w/index.php?title=MDAX&oldid=271947083,,
+bavaria_dax_mdax,MDAX,Siltronic AG,Q2286374,"<bound method Series.isin of index                                                                  MDAX
+wiki_title                                                        Siltronic
+name                                                           Siltronic AG
+sector_label                                            Halbleiterindustrie
+hq_city_table                                                       München
+state_table                                                             NaN
+source_url                https://de.wikipedia.org/w/index.php?title=MDA...
+retrieved_at                                           2026-11-17T10:57:17Z
+qid                                                                Q2286374
+hq_wikidata                                                         München
+hq_in_bavaria_wikidata                                                 True
+isin                                                           DE000WAF3001
+lei                                                    5299003NKV26NNGHHR90
+wikidata_retrieved_at                                  2026-11-17T11:04:23Z
+hq_in_bavaria                                                          True
+bavaria_method                                           wikidata_p159_p131
+is_financial                                                          False
+slice                                                      bavaria_dax_mdax
+Name: 79, dtype: object>",5299003NKV26NNGHHR90,DE,München,https://de.wikipedia.org/w/index.php?title=MDAX&oldid=271947083,,
+bavaria_dax_mdax,MDAX,Suss Microtec SE,Q2382257,"<bound method Series.isin of index                                                                  MDAX
+wiki_title                                                    Suss Microtec
+name                                                       Suss Microtec SE
+sector_label                                                     Halbleiter
+hq_city_table                                          Garching bei München
+state_table                                                             NaN
+source_url                https://de.wikipedia.org/w/index.php?title=MDA...
+retrieved_at                                           2026-11-17T10:57:17Z
+qid                                                                Q2382257
+hq_wikidata                                            Garching bei München
+hq_in_bavaria_wikidata                                                 True
+isin                                                           DE000A1K0235
+lei                                                    529900C3KRUTSYDK7N87
+wikidata_retrieved_at                                  2026-11-17T11:04:23Z
+hq_in_bavaria                                                          True
+bavaria_method                                           wikidata_p159_p131
+is_financial                                                          False
+slice                                                      bavaria_dax_mdax
+Name: 81, dtype: object>",529900C3KRUTSYDK7N87,DE,Garching bei München,https://de.wikipedia.org/w/index.php?title=MDAX&oldid=271947083,,
+bavaria_dax_mdax,MDAX,Traton SE,Q28228137,"<bound method Series.isin of index                                                                  MDAX
+wiki_title                                                           Traton
+name                                                              Traton SE
+sector_label                                                  Nutzfahrzeuge
+hq_city_table                                                       München
+state_table                                                             NaN
+source_url                https://de.wikipedia.org/w/index.php?title=MDA...
+retrieved_at                                           2026-11-17T10:57:17Z
+qid                                                               Q28228137
+hq_wikidata                                                         München
+hq_in_bavaria_wikidata                                                 True
+isin                                                           DE000TRAT0N7
+lei                                                    529900UIMQRKPFN6SV80
+wikidata_retrieved_at                                  2026-11-17T11:04:23Z
+hq_in_bavaria                                                          True
+bavaria_method                                           wikidata_p159_p131
+is_financial                                                          False
+slice                                                      bavaria_dax_mdax
+Name: 86, dtype: object>",529900UIMQRKPFN6SV80,DE,München,https://de.wikipedia.org/w/index.php?title=MDAX&oldid=271947083,,
+bavaria_dax_mdax,MDAX,Wacker Chemie AG,Q535517,"<bound method Series.isin of index                                                                  MDAX
+wiki_title                                                    Wacker Chemie
+name                                                       Wacker Chemie AG
+sector_label                                                         Chemie
+hq_city_table                                                       München
+state_table                                                             NaN
+source_url                https://de.wikipedia.org/w/index.php?title=MDA...
+retrieved_at                                           2026-11-17T10:57:17Z
+qid                                                                 Q535517
+hq_wikidata                                                         München
+hq_in_bavaria_wikidata                                                 True
+isin                                                           DE000WCH8881
+lei                                                    0NURKC5Q3CJYZPPK5046
+wikidata_retrieved_at                                  2026-11-17T11:04:23Z
+hq_in_bavaria                                                          True
+bavaria_method                                           wikidata_p159_p131
+is_financial                                                          False
+slice                                                      bavaria_dax_mdax
+Name: 89, dtype: object>",0NURKC5Q3CJYZPPK5046,DE,München,https://de.wikipedia.org/w/index.php?title=MDAX&oldid=271947083,,
+ch_at_industrials,,Holcim,Q267818,"<bound method Series.isin of company_id            holcim-q267818
+name                          Holcim
+country                           CH
+hq_city                          Zug
+sector                  construction
+revenue_usd       32983569999.999996
+isin                             NaN
+lei             529900EHPFPYHV6IQO98
+cik                              NaN
+wikidata_qid                 Q267818
+Name: 387, dtype: object>",529900EHPFPYHV6IQO98,CH,Zug,data/processed/universe.parquet,,holcim-q267818
+ch_at_industrials,,ABB Group,Q52825,"<bound method Series.isin of company_id          abb-group-q52825
+name                       ABB Group
+country                           CH
+hq_city                       Zurich
+sector                 manufacturing
+revenue_usd            28945000000.0
+isin                    CH0012221716
+lei             5493000LKVGOO9PELI61
+cik                              NaN
+wikidata_qid                  Q52825
+Name: 432, dtype: object>",5493000LKVGOO9PELI61,CH,Zurich,data/processed/universe.parquet,,abb-group-q52825
+ch_at_industrials,,DSM-Firmenich AG,,"<bound method Series.isin of company_id      dsm-firmenich-ag-leim4bi12
+name                      DSM-Firmenich AG
+country                                 CH
+hq_city                                NaN
+sector                       manufacturing
+revenue_usd                  13822920000.0
+isin                                   NaN
+lei                   506700G44V67MPM4BI12
+cik                                    NaN
+wikidata_qid                           NaN
+Name: 827, dtype: object>",506700G44V67MPM4BI12,CH,,data/processed/universe.parquet,,dsm-firmenich-ag-leim4bi12
+ch_at_industrials,,Sika AG,Q691382,"<bound method Series.isin of company_id           sika-ag-q691382
+name                         Sika AG
+country                           CH
+hq_city                         Baar
+sector                  construction
+revenue_usd       13292302999.999998
+isin                    CH0418792922
+lei             549300R3N69ECGYPU434
+cik                              NaN
+wikidata_qid                 Q691382
+Name: 849, dtype: object>",549300R3N69ECGYPU434,CH,Baar,data/processed/universe.parquet,,sika-ag-q691382
+ch_at_industrials,,Schindler Elevator,Q651212,"<bound method Series.isin of company_id      schindler-elevator-q651212
+name                    Schindler Elevator
+country                                 CH
+hq_city                             Ebikon
+sector                       manufacturing
+revenue_usd             11412999999.999998
+isin                                   NaN
+lei                                    NaN
+cik                                    NaN
+wikidata_qid                       Q651212
+Name: 985, dtype: object>",,CH,Ebikon,data/processed/universe.parquet,,schindler-elevator-q651212
+ch_at_industrials,,Stadler Rail,Q666703,"<bound method Series.isin of company_id      stadler-rail-q666703
+name                    Stadler Rail
+country                           CH
+hq_city                     Bussnang
+sector                 manufacturing
+revenue_usd             4079300000.0
+isin                    CH0002178181
+lei             506700781XDET0A89669
+cik                              NaN
+wikidata_qid                 Q666703
+Name: 1882, dtype: object>",506700781XDET0A89669,CH,Bussnang,data/processed/universe.parquet,,stadler-rail-q666703
+ch_at_industrials,,Strabag,Q681316,"<bound method Series.isin of company_id           strabag-q681316
+name                         Strabag
+country                           AT
+hq_city                       Vienna
+sector                  construction
+revenue_usd            20211423480.0
+isin                    AT000000STR1
+lei             529900TYYSRJH2VJSP60
+cik                              NaN
+wikidata_qid                 Q681316
+Name: 607, dtype: object>",529900TYYSRJH2VJSP60,AT,Vienna,data/processed/universe.parquet,,strabag-q681316

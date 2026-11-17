@@ -1,0 +1,4394 @@
+[
+ {
+  "company_id": "siemens-energy-ag-q89189545",
+  "name": "Siemens Energy AG",
+  "country": "DE",
+  "hq_city": "Munich",
+  "sector": "manufacturing",
+  "revenue": {
+   "amount": 31119000000.0,
+   "currency": "EUR",
+   "period_end": "2023-12-31",
+   "source_url": "https://www.wikidata.org/wiki/Q89189545",
+   "source_type": "wikidata",
+   "stale": false
+  },
+  "scores": {
+   "fit": 90.5,
+   "pain": 84.9,
+   "signal": 70.0,
+   "priority": 85.2,
+   "fit_parts": {
+    "revenue": 25.5,
+    "geography": 25.0,
+    "sector": 30.0,
+    "erp": 5.0,
+    "supplier_breadth": 5.0
+   },
+   "pain_parts": {
+    "days": 45.0,
+    "pct_late": 9.9,
+    "pct_over_60": 15.0,
+    "trend": 15.0,
+    "uk_materiality_factor": 1.0
+   },
+   "pain_evidence_tier": 1.0,
+   "pain_basis": "uk_reported",
+   "method": "deterministic formula, weights in config/assumptions.yaml"
+  },
+  "why_now_signals": [
+   {
+    "type": "trend_worsening",
+    "text": "UK entities' average days to pay rose by about 17 days year on year (3 of 3 entities with a prior report got slower; median change +18 days)",
+    "url": "https://check-payment-practices.service.gov.uk/report/118651"
+   },
+   {
+    "type": "new_evidence",
+    "text": "Latest statutory UK payment report filed 2026-11-03 (Siemens Gamesa Renewable Energy Limited)",
+    "url": "https://check-payment-practices.service.gov.uk/report/118651"
+   },
+   {
+    "type": "code_status",
+    "text": "No UK reporting entity states membership of a payment code",
+    "url": "https://check-payment-practices.service.gov.uk/report/118651"
+   },
+   {
+    "type": "long_terms",
+    "text": "Maximum contractual payment period of 180 days reported by a UK entity",
+    "url": "https://check-payment-practices.service.gov.uk/report/118651"
+   },
+   {
+    "type": "scf_offered",
+    "text": "A UK entity reports offering supply chain finance to suppliers: ask which suppliers it reaches, at whose cost, and whether it lengthened terms",
+    "url": "https://check-payment-practices.service.gov.uk/report/118651"
+   },
+   {
+    "type": "einvoicing_started",
+    "text": "SIEMENS GAMESA RENEWABLE ENERGY LIMITED reports offering e-invoicing in its latest filing and did not in the report one year earlier (1 Siemens Energy AG entity).",
+    "url": "https://check-payment-practices.service.gov.uk/report/118651"
+   }
+  ],
+  "estimates": {
+   "estimate": true,
+   "assumptions": {
+    "early_pay_day": 10,
+    "max_days_accelerated": 60,
+    "scenarios": {
+     "low": {
+      "share_eligible": 0.05,
+      "annualised_rate": 0.12
+     },
+     "base": {
+      "share_eligible": 0.1,
+      "annualised_rate": 0.14
+     },
+     "high": {
+      "share_eligible": 0.15,
+      "annualised_rate": 0.18
+     }
+    },
+    "config_file": "config/assumptions.yaml",
+    "formula": "spend x share_eligible x annualised_rate x days_accelerated / 365"
+   },
+   "uk_scope": {
+    "basis": "Invoice value paid by the matched UK entities in their latest half-year reports, annualised x2 (reported base, estimated result)",
+    "currency": "GBP",
+    "annual_payments": 1607917370.0,
+    "days_used": 76.2,
+    "supplier_cash_beyond_30_days": 203522691.76438355,
+    "early_payment_discount_opportunity": {
+     "low": 1585891.104657534,
+     "base": 3700412.577534247,
+     "high": 7136509.970958904
+    }
+   },
+   "whose_money": "The range is the gross annual discount a buyer could capture by paying eligible invoices early, before the buyer's own cost of funding that early payment and without netting any existing supply chain finance programme."
+  },
+  "payment_profile": {
+   "reported": {
+    "uk": {
+     "what": "Statutory UK payment practices reports filed by this group's UK legal entities. UK entities only, not global group behaviour.",
+     "estimate": false,
+     "entities_n": 4,
+     "avg_days_to_pay_mean_of_entities": 76.2,
+     "aggregation": "invoice_value_weighted_mean",
+     "avg_days_to_pay_simple_mean": 74.0,
+     "pct_invoices_paid_late_mean": 19.8,
+     "pct_invoices_paid_over_60_days_mean": 51.0,
+     "trend_days_year_on_year_mean": 16.8,
+     "trend_days_year_on_year_median": 18.0,
+     "trend_entities_slower": 3.0,
+     "trend_entities_compared": 3.0,
+     "slowest_entity": {
+      "name": "SIEMENS GAMESA RENEWABLE ENERGY LIMITED",
+      "avg_days_to_pay": 84.0,
+      "source_url": "https://check-payment-practices.service.gov.uk/report/118651"
+     },
+     "period": {
+      "start": "2026-04-01",
+      "end": "2026-09-30"
+     },
+     "entities_left_out_of_group_figures_as_extreme": null,
+     "entity_match_confidence_min": 0.9,
+     "entity_match_methods": "ch_psc_chain|exact_name",
+     "entities": [
+      {
+       "name": "SIEMENS GAMESA RENEWABLE ENERGY LIMITED",
+       "company_number": "10253129",
+       "avg_days_to_pay": 84.0,
+       "pct_paid_late": 19.0,
+       "pct_paid_late_note": null,
+       "trend_days_yoy": 76.0,
+       "invoice_value_gbp_half_year": 348368028.0,
+       "pct_paid_over_60": 55.0,
+       "standard_terms_days": [
+        30.0,
+        180.0
+       ],
+       "max_contractual_days": 180.0,
+       "period_start": "2026-04-01",
+       "period_end": "2026-09-30",
+       "source_url": "https://check-payment-practices.service.gov.uk/report/118651"
+      },
+      {
+       "name": "INDUSTRIAL TURBINE COMPANY (UK) LIMITED",
+       "company_number": "09003402",
+       "avg_days_to_pay": 72.0,
+       "pct_paid_late": 20.0,
+       "pct_paid_late_note": null,
+       "trend_days_yoy": 23.0,
+       "invoice_value_gbp_half_year": 59218464.0,
+       "pct_paid_over_60": 59.0,
+       "standard_terms_days": [
+        0.0,
+        120.0
+       ],
+       "max_contractual_days": 120.0,
+       "period_start": "2026-04-01",
+       "period_end": "2026-09-30",
+       "source_url": "https://check-payment-practices.service.gov.uk/report/117781"
+      },
+      {
+       "name": "SIEMENS ENERGY LIMITED",
+       "company_number": "00631825",
+       "avg_days_to_pay": 70.0,
+       "pct_paid_late": 23.0,
+       "pct_paid_late_note": null,
+       "trend_days_yoy": 15.0,
+       "invoice_value_gbp_half_year": 275862255.0,
+       "pct_paid_over_60": 46.0,
+       "standard_terms_days": [
+        14.0,
+        180.0
+       ],
+       "max_contractual_days": 180.0,
+       "period_start": "2026-04-01",
+       "period_end": "2026-09-30",
+       "source_url": "https://check-payment-practices.service.gov.uk/report/117930"
+      },
+      {
+       "name": "SIEMENS ENERGY INDUSTRIAL TURBOMACHINERY LIMITED",
+       "company_number": "04729734",
+       "avg_days_to_pay": 70.0,
+       "pct_paid_late": 15.0,
+       "pct_paid_late_note": null,
+       "trend_days_yoy": 18.0,
+       "invoice_value_gbp_half_year": 120509938.0,
+       "pct_paid_over_60": 47.0,
+       "standard_terms_days": [
+        26.0,
+        180.0
+       ],
+       "max_contractual_days": 180.0,
+       "period_start": "2026-04-01",
+       "period_end": "2026-09-30",
+       "source_url": "https://check-payment-practices.service.gov.uk/report/117935"
+      }
+     ],
+     "source_type": "uk_ppr_statutory_report"
+    }
+   },
+   "computed_proxy": {
+    "what": "Computed DPO (proxy) = trade payables / cost of sales x 365 from XBRL financial statements. A balance-sheet proxy, not reported days to pay.",
+    "estimate": false,
+    "is_proxy": true,
+    "dpo_days": null,
+    "prior_year_dpo_days": null,
+    "flag": "missing_inputs",
+    "fiscal_year": 2025.0,
+    "period_end": "2025-09-30",
+    "sector_median_dpo_days": 63.0,
+    "payables_basis": null,
+    "cost_basis": "cost_of_sales",
+    "confidence": null,
+    "source_url": "https://assets.siemens-energy.com/dam/32b27e9a-af91-4915-8b51-b3af012d0d98/A-Siemens_Energy_Annual_Report_2025-pdf_Original%20file.pdf",
+    "source_type": "dach_annual_report_xbrl"
+   }
+  },
+  "hook": "Siemens Energy's UK entities took 17 days longer to pay suppliers than a year earlier: a weighted UK average of 76 days across 4 entities (by invoice value), against a UK median of 32."
+ },
+ {
+  "company_id": "alstom-q309084",
+  "name": "Alstom",
+  "country": "FR",
+  "hq_city": "Saint-Ouen-sur-Seine",
+  "sector": "manufacturing",
+  "revenue": {
+   "amount": 19171000000.0,
+   "currency": "EUR",
+   "period_end": "2026-03-31",
+   "source_url": "https://filings.xbrl.org/96950032TUYMW11FB530/2026-03-31/ESEF/FR/0/Alstom-2026-03-31-1-fr/reports/ixbrlviewer.html",
+   "source_type": "esef_xbrl_json",
+   "stale": false
+  },
+  "scores": {
+   "fit": 90.5,
+   "pain": 90.5,
+   "signal": 55.0,
+   "priority": 85.2,
+   "fit_parts": {
+    "revenue": 25.5,
+    "geography": 25.0,
+    "sector": 30.0,
+    "erp": 5.0,
+    "supplier_breadth": 5.0
+   },
+   "pain_parts": {
+    "days": 45.0,
+    "pct_late": 15.6,
+    "pct_over_60": 15.0,
+    "trend": 15.0,
+    "uk_materiality_factor": 1.0
+   },
+   "pain_evidence_tier": 1.0,
+   "pain_basis": "uk_reported",
+   "method": "deterministic formula, weights in config/assumptions.yaml"
+  },
+  "why_now_signals": [
+   {
+    "type": "trend_worsening",
+    "text": "UK entities' average days to pay rose by about 13 days year on year (3 of 3 entities with a prior report got slower; median change +13 days)",
+    "url": "https://check-payment-practices.service.gov.uk/report/118196"
+   },
+   {
+    "type": "new_evidence",
+    "text": "Latest statutory UK payment report filed 2026-10-29 (Alstom Engineering And Services Limited)",
+    "url": "https://check-payment-practices.service.gov.uk/report/118240"
+   },
+   {
+    "type": "long_terms",
+    "text": "Maximum contractual payment period of 240 days reported by a UK entity",
+    "url": "https://check-payment-practices.service.gov.uk/report/118196"
+   },
+   {
+    "type": "scf_offered",
+    "text": "A UK entity reports offering supply chain finance to suppliers: ask which suppliers it reaches, at whose cost, and whether it lengthened terms",
+    "url": "https://check-payment-practices.service.gov.uk/report/118196"
+   }
+  ],
+  "estimates": {
+   "estimate": true,
+   "assumptions": {
+    "early_pay_day": 10,
+    "max_days_accelerated": 60,
+    "scenarios": {
+     "low": {
+      "share_eligible": 0.05,
+      "annualised_rate": 0.12
+     },
+     "base": {
+      "share_eligible": 0.1,
+      "annualised_rate": 0.14
+     },
+     "high": {
+      "share_eligible": 0.15,
+      "annualised_rate": 0.18
+     }
+    },
+    "config_file": "config/assumptions.yaml",
+    "formula": "spend x share_eligible x annualised_rate x days_accelerated / 365"
+   },
+   "uk_scope": {
+    "basis": "Invoice value paid by the matched UK entities in their latest half-year reports, annualised x2 (reported base, estimated result)",
+    "currency": "GBP",
+    "annual_payments": 1183015908.0,
+    "days_used": 66.5,
+    "supplier_cash_beyond_30_days": 118301590.8,
+    "early_payment_discount_opportunity": {
+     "low": 1098746.2816767124,
+     "base": 2563741.323912329,
+     "high": 4944358.267545205
+    }
+   },
+   "group_proxy": {
+    "basis": "Group cost of sales (cost_of_sales_fy2026) with group-level days from computed DPO (proxy), FY2026.0. A balance-sheet proxy, not reported days to pay.",
+    "currency": "EUR",
+    "spend_proxy": 16819000000.0,
+    "days_used": 92.9,
+    "supplier_cash_beyond_30_days": 2898397534.246576,
+    "early_payment_discount_opportunity": {
+     "low": 16588602.739726027,
+     "base": 38706739.7260274,
+     "high": 74648712.32876712
+    }
+   },
+   "whose_money": "The range is the gross annual discount a buyer could capture by paying eligible invoices early, before the buyer's own cost of funding that early payment and without netting any existing supply chain finance programme."
+  },
+  "payment_profile": {
+   "reported": {
+    "uk": {
+     "what": "Statutory UK payment practices reports filed by this group's UK legal entities. UK entities only, not global group behaviour.",
+     "estimate": false,
+     "entities_n": 3,
+     "avg_days_to_pay_mean_of_entities": 66.5,
+     "aggregation": "invoice_value_weighted_mean",
+     "avg_days_to_pay_simple_mean": 64.0,
+     "pct_invoices_paid_late_mean": 31.1,
+     "pct_invoices_paid_over_60_days_mean": 62.4,
+     "trend_days_year_on_year_mean": 13.0,
+     "trend_days_year_on_year_median": 13.0,
+     "trend_entities_slower": 3.0,
+     "trend_entities_compared": 3.0,
+     "slowest_entity": {
+      "name": "ALSTOM TRANSPORT UK LIMITED",
+      "avg_days_to_pay": 71.0,
+      "source_url": "https://check-payment-practices.service.gov.uk/report/118196"
+     },
+     "period": {
+      "start": "2026-04-01",
+      "end": "2026-09-30"
+     },
+     "entities_left_out_of_group_figures_as_extreme": null,
+     "entity_match_confidence_min": 0.95,
+     "entity_match_methods": "ch_psc_chain",
+     "entities": [
+      {
+       "name": "ALSTOM TRANSPORT UK LIMITED",
+       "company_number": "08462831",
+       "avg_days_to_pay": 71.0,
+       "pct_paid_late": 34.0,
+       "pct_paid_late_note": null,
+       "trend_days_yoy": 14.0,
+       "invoice_value_gbp_half_year": 154347539.0,
+       "pct_paid_over_60": 67.0,
+       "standard_terms_days": [
+        28.0,
+        60.0
+       ],
+       "max_contractual_days": 90.0,
+       "period_start": "2026-04-01",
+       "period_end": "2026-09-30",
+       "source_url": "https://check-payment-practices.service.gov.uk/report/118196"
+      },
+      {
+       "name": "ALSTOM ENGINEERING AND SERVICES LIMITED",
+       "company_number": "02235994",
+       "avg_days_to_pay": 65.0,
+       "pct_paid_late": 30.0,
+       "pct_paid_late_note": null,
+       "trend_days_yoy": 13.0,
+       "invoice_value_gbp_half_year": 432255193.0,
+       "pct_paid_over_60": 61.0,
+       "standard_terms_days": [
+        30.0,
+        60.0
+       ],
+       "max_contractual_days": 240.0,
+       "period_start": "2026-04-01",
+       "period_end": "2026-09-30",
+       "source_url": "https://check-payment-practices.service.gov.uk/report/118240"
+      },
+      {
+       "name": "ALSTOM PRODUCT AND SERVICES LIMITED",
+       "company_number": "05894128",
+       "avg_days_to_pay": 56.0,
+       "pct_paid_late": 40.0,
+       "pct_paid_late_note": null,
+       "trend_days_yoy": 7.0,
+       "invoice_value_gbp_half_year": 4905222.0,
+       "pct_paid_over_60": 44.0,
+       "standard_terms_days": [
+        30.0,
+        60.0
+       ],
+       "max_contractual_days": 90.0,
+       "period_start": "2026-04-01",
+       "period_end": "2026-09-30",
+       "source_url": "https://check-payment-practices.service.gov.uk/report/118131"
+      }
+     ],
+     "source_type": "uk_ppr_statutory_report"
+    }
+   },
+   "computed_proxy": {
+    "what": "Computed DPO (proxy) = trade payables / cost of sales x 365 from XBRL financial statements. A balance-sheet proxy, not reported days to pay.",
+    "estimate": false,
+    "is_proxy": true,
+    "dpo_days": 92.9,
+    "prior_year_dpo_days": 84.6,
+    "flag": "ok",
+    "fiscal_year": 2026.0,
+    "period_end": "2026-03-31",
+    "sector_median_dpo_days": 63.0,
+    "payables_basis": "trade",
+    "cost_basis": "cost_of_sales",
+    "confidence": 1.0,
+    "source_url": "https://filings.xbrl.org/96950032TUYMW11FB530/2026-03-31/ESEF/FR/0/Alstom-2026-03-31-1-fr/reports/ixbrlviewer.html",
+    "source_type": "esef_xbrl"
+   }
+  },
+  "hook": "Alstom's UK entities took 13 days longer to pay suppliers than a year earlier: a weighted UK average of 66 days across 3 entities (by invoice value), against a UK median of 32."
+ },
+ {
+  "company_id": "lkq-corporation-cik1065696",
+  "name": "LKQ Corporation",
+  "country": "US",
+  "hq_city": null,
+  "sector": "logistics",
+  "revenue": {
+   "amount": 13651000000.0,
+   "currency": "USD",
+   "period_end": "2025-12-31",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1065696/000106569626000012/",
+   "source_type": "sec_xbrl_companyfacts",
+   "stale": false
+  },
+  "scores": {
+   "fit": 76.8,
+   "pain": 94.5,
+   "signal": 65.0,
+   "priority": 82.1,
+   "fit_parts": {
+    "revenue": 21.0,
+    "geography": 21.2,
+    "sector": 27.0,
+    "erp": 5.0,
+    "supplier_breadth": 2.5
+   },
+   "pain_parts": {
+    "days": 45.0,
+    "pct_late": 19.5,
+    "pct_over_60": 15.0,
+    "trend": 15.0,
+    "uk_materiality_factor": 1.0
+   },
+   "pain_evidence_tier": 1.0,
+   "pain_basis": "uk_reported",
+   "method": "deterministic formula, weights in config/assumptions.yaml"
+  },
+  "why_now_signals": [
+   {
+    "type": "trend_worsening",
+    "text": "The UK entity's average days to pay rose by 23.0 days year on year",
+    "url": "https://check-payment-practices.service.gov.uk/report/114769"
+   },
+   {
+    "type": "new_evidence",
+    "text": "Latest statutory UK payment report filed 2026-07-29 (Lkq Group (Uk) Limited)",
+    "url": "https://check-payment-practices.service.gov.uk/report/114769"
+   },
+   {
+    "type": "code_status",
+    "text": "No UK reporting entity states membership of a payment code",
+    "url": "https://check-payment-practices.service.gov.uk/report/114769"
+   },
+   {
+    "type": "long_terms",
+    "text": "Maximum contractual payment period of 270 days reported by a UK entity",
+    "url": "https://check-payment-practices.service.gov.uk/report/114769"
+   },
+   {
+    "type": "scf_offered",
+    "text": "A UK entity reports offering supply chain finance to suppliers: ask which suppliers it reaches, at whose cost, and whether it lengthened terms",
+    "url": "https://check-payment-practices.service.gov.uk/report/114769"
+   },
+   {
+    "type": "sf_disclosed",
+    "text": "Annual report for the year to 2025-12-31 discloses a supplier finance programme with USD 481m outstanding",
+    "url": "https://www.sec.gov/Archives/edgar/data/1065696/000106569626000012/lkq-20251231.htm"
+   }
+  ],
+  "estimates": {
+   "estimate": true,
+   "assumptions": {
+    "early_pay_day": 10,
+    "max_days_accelerated": 60,
+    "scenarios": {
+     "low": {
+      "share_eligible": 0.05,
+      "annualised_rate": 0.12
+     },
+     "base": {
+      "share_eligible": 0.1,
+      "annualised_rate": 0.14
+     },
+     "high": {
+      "share_eligible": 0.15,
+      "annualised_rate": 0.18
+     }
+    },
+    "config_file": "config/assumptions.yaml",
+    "formula": "spend x share_eligible x annualised_rate x days_accelerated / 365"
+   },
+   "uk_scope": {
+    "basis": "Invoice value paid by the matched UK entities in their latest half-year reports, annualised x2 (reported base, estimated result)",
+    "currency": "GBP",
+    "annual_payments": 996446168.0,
+    "days_used": 86.0,
+    "supplier_cash_beyond_30_days": 152879412.07671234,
+    "early_payment_discount_opportunity": {
+     "low": 982796.2204931508,
+     "base": 2293191.1811506855,
+     "high": 4422582.992219178
+    }
+   },
+   "group_proxy": {
+    "basis": "Group cost of sales (cost_of_sales_fy2025) with group-level days from computed DPO (proxy), FY2025.0. A balance-sheet proxy, not reported days to pay.",
+    "currency": "USD",
+    "spend_proxy": 8386000000.0,
+    "days_used": 91.8,
+    "supplier_cash_beyond_30_days": 1419876164.3835616,
+    "early_payment_discount_opportunity": {
+     "low": 8271123.287671233,
+     "base": 19299287.67123288,
+     "high": 37220054.79452055
+    }
+   },
+   "whose_money": "The range is the gross annual discount a buyer could capture by paying eligible invoices early, before the buyer's own cost of funding that early payment and without netting any existing supply chain finance programme."
+  },
+  "payment_profile": {
+   "reported": {
+    "uk": {
+     "what": "Statutory UK payment practices reports filed by this group's UK legal entities. UK entities only, not global group behaviour.",
+     "estimate": false,
+     "entities_n": 1,
+     "avg_days_to_pay_mean_of_entities": 86.0,
+     "aggregation": "invoice_value_weighted_mean",
+     "avg_days_to_pay_simple_mean": 86.0,
+     "pct_invoices_paid_late_mean": 39.0,
+     "pct_invoices_paid_over_60_days_mean": 53.0,
+     "trend_days_year_on_year_mean": 23.0,
+     "trend_days_year_on_year_median": 23.0,
+     "trend_entities_slower": 1.0,
+     "trend_entities_compared": 1.0,
+     "slowest_entity": {
+      "name": "LKQ GROUP (UK) LIMITED",
+      "avg_days_to_pay": 86.0,
+      "source_url": "https://check-payment-practices.service.gov.uk/report/114769"
+     },
+     "period": {
+      "start": "2026-01-01",
+      "end": "2026-06-30"
+     },
+     "entities_left_out_of_group_figures_as_extreme": null,
+     "entity_match_confidence_min": 0.9,
+     "entity_match_methods": "ch_psc_chain",
+     "entities": [
+      {
+       "name": "LKQ GROUP (UK) LIMITED",
+       "company_number": "02680212",
+       "avg_days_to_pay": 86.0,
+       "pct_paid_late": 39.0,
+       "pct_paid_late_note": null,
+       "trend_days_yoy": 23.0,
+       "invoice_value_gbp_half_year": 498223084.0,
+       "pct_paid_over_60": 53.0,
+       "standard_terms_days": [
+        0.0,
+        180.0
+       ],
+       "max_contractual_days": 270.0,
+       "period_start": "2026-01-01",
+       "period_end": "2026-06-30",
+       "source_url": "https://check-payment-practices.service.gov.uk/report/114769"
+      }
+     ],
+     "source_type": "uk_ppr_statutory_report"
+    }
+   },
+   "computed_proxy": {
+    "what": "Computed DPO (proxy) = trade payables / cost of sales x 365 from XBRL financial statements. A balance-sheet proxy, not reported days to pay.",
+    "estimate": false,
+    "is_proxy": true,
+    "dpo_days": 91.8,
+    "prior_year_dpo_days": 77.7,
+    "flag": "ok",
+    "fiscal_year": 2025.0,
+    "period_end": "2025-12-31",
+    "sector_median_dpo_days": 38.3,
+    "payables_basis": "trade",
+    "cost_basis": "cost_of_sales",
+    "confidence": 1.0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1065696/000106569626000012/",
+    "source_type": "sec_xbrl"
+   }
+  },
+  "hook": "LKQ's UK entity paid 53% of supplier invoices after more than 60 days (86 days on average; UK median 32)."
+ },
+ {
+  "company_id": "nestle-q160746",
+  "name": "Nestl\u00e9",
+  "country": "CH",
+  "hq_city": "Vevey",
+  "sector": "consumer_goods",
+  "revenue": {
+   "amount": 89490000000.0,
+   "currency": "CHF",
+   "period_end": "2025-12-31",
+   "source_url": "https://www.wikidata.org/wiki/Q160746",
+   "source_type": "wikidata",
+   "stale": false
+  },
+  "scores": {
+   "fit": 89.8,
+   "pain": 78.2,
+   "signal": 65.0,
+   "priority": 81.4,
+   "fit_parts": {
+    "revenue": 30.0,
+    "geography": 21.2,
+    "sector": 28.5,
+    "erp": 5.0,
+    "supplier_breadth": 5.0
+   },
+   "pain_parts": {
+    "days": 45.0,
+    "pct_late": 3.1,
+    "pct_over_60": 15.0,
+    "trend": 15.0,
+    "uk_materiality_factor": 1.0
+   },
+   "pain_evidence_tier": 1.0,
+   "pain_basis": "uk_reported",
+   "method": "deterministic formula, weights in config/assumptions.yaml"
+  },
+  "why_now_signals": [
+   {
+    "type": "trend_worsening",
+    "text": "UK entities' average days to pay rose by about 14 days year on year (4 of 7 entities with a prior report got slower; median change +14 days)",
+    "url": "https://check-payment-practices.service.gov.uk/report/115188"
+   },
+   {
+    "type": "new_evidence",
+    "text": "Latest statutory UK payment report filed 2026-07-30 (Nestle Purina Uk Commercial Operations Limited)",
+    "url": "https://check-payment-practices.service.gov.uk/report/115204"
+   },
+   {
+    "type": "code_status",
+    "text": "No UK reporting entity states membership of a payment code",
+    "url": "https://check-payment-practices.service.gov.uk/report/115188"
+   },
+   {
+    "type": "long_terms",
+    "text": "Maximum contractual payment period of 180 days reported by a UK entity",
+    "url": "https://check-payment-practices.service.gov.uk/report/115188"
+   },
+   {
+    "type": "scf_offered",
+    "text": "A UK entity reports offering supply chain finance to suppliers: ask which suppliers it reaches, at whose cost, and whether it lengthened terms",
+    "url": "https://check-payment-practices.service.gov.uk/report/115188"
+   }
+  ],
+  "estimates": {
+   "estimate": true,
+   "assumptions": {
+    "early_pay_day": 10,
+    "max_days_accelerated": 60,
+    "scenarios": {
+     "low": {
+      "share_eligible": 0.05,
+      "annualised_rate": 0.12
+     },
+     "base": {
+      "share_eligible": 0.1,
+      "annualised_rate": 0.14
+     },
+     "high": {
+      "share_eligible": 0.15,
+      "annualised_rate": 0.18
+     }
+    },
+    "config_file": "config/assumptions.yaml",
+    "formula": "spend x share_eligible x annualised_rate x days_accelerated / 365"
+   },
+   "uk_scope": {
+    "basis": "Invoice value paid by the matched UK entities in their latest half-year reports, annualised x2 (reported base, estimated result)",
+    "currency": "GBP",
+    "annual_payments": 1809200414.0,
+    "days_used": 69.9,
+    "supplier_cash_beyond_30_days": 197772867.17424658,
+    "early_payment_discount_opportunity": {
+     "low": 1781442.8186071233,
+     "base": 4156699.910083289,
+     "high": 8016492.683732053
+    }
+   },
+   "whose_money": "The range is the gross annual discount a buyer could capture by paying eligible invoices early, before the buyer's own cost of funding that early payment and without netting any existing supply chain finance programme."
+  },
+  "payment_profile": {
+   "reported": {
+    "uk": {
+     "what": "Statutory UK payment practices reports filed by this group's UK legal entities. UK entities only, not global group behaviour.",
+     "estimate": false,
+     "entities_n": 7,
+     "avg_days_to_pay_mean_of_entities": 69.9,
+     "aggregation": "invoice_value_weighted_mean",
+     "avg_days_to_pay_simple_mean": 55.6,
+     "pct_invoices_paid_late_mean": 6.3,
+     "pct_invoices_paid_over_60_days_mean": 63.1,
+     "trend_days_year_on_year_mean": 14.0,
+     "trend_days_year_on_year_median": 14.0,
+     "trend_entities_slower": 4.0,
+     "trend_entities_compared": 7.0,
+     "slowest_entity": {
+      "name": "NESTLE PURINA UK MANUFACTURING OPERATIONS LIMITED",
+      "avg_days_to_pay": 78.0,
+      "source_url": "https://check-payment-practices.service.gov.uk/report/115188"
+     },
+     "period": {
+      "start": "2026-01-01",
+      "end": "2026-06-30"
+     },
+     "entities_left_out_of_group_figures_as_extreme": null,
+     "entity_match_confidence_min": 0.9,
+     "entity_match_methods": "ch_psc_chain",
+     "entities": [
+      {
+       "name": "NESTLE PURINA UK MANUFACTURING OPERATIONS LIMITED",
+       "company_number": "00121700",
+       "avg_days_to_pay": 78.0,
+       "pct_paid_late": 5.0,
+       "pct_paid_late_note": null,
+       "trend_days_yoy": 19.0,
+       "invoice_value_gbp_half_year": 149682055.0,
+       "pct_paid_over_60": 67.0,
+       "standard_terms_days": [
+        30.0,
+        180.0
+       ],
+       "max_contractual_days": 180.0,
+       "period_start": "2026-01-01",
+       "period_end": "2026-06-30",
+       "source_url": "https://check-payment-practices.service.gov.uk/report/115188"
+      },
+      {
+       "name": "NESTLE UK LTD.",
+       "company_number": "00051491",
+       "avg_days_to_pay": 76.0,
+       "pct_paid_late": 6.0,
+       "pct_paid_late_note": null,
+       "trend_days_yoy": 20.0,
+       "invoice_value_gbp_half_year": 539748009.0,
+       "pct_paid_over_60": 72.0,
+       "standard_terms_days": [
+        30.0,
+        180.0
+       ],
+       "max_contractual_days": 180.0,
+       "period_start": "2026-01-01",
+       "period_end": "2026-06-30",
+       "source_url": "https://check-payment-practices.service.gov.uk/report/115234"
+      },
+      {
+       "name": "NESTLE PURINA UK COMMERCIAL OPERATIONS LIMITED",
+       "company_number": "11963923",
+       "avg_days_to_pay": 69.0,
+       "pct_paid_late": 4.0,
+       "pct_paid_late_note": null,
+       "trend_days_yoy": 14.0,
+       "invoice_value_gbp_half_year": 42350868.0,
+       "pct_paid_over_60": 74.0,
+       "standard_terms_days": [
+        30.0,
+        180.0
+       ],
+       "max_contractual_days": 180.0,
+       "period_start": "2026-01-01",
+       "period_end": "2026-06-30",
+       "source_url": "https://check-payment-practices.service.gov.uk/report/115204"
+      },
+      {
+       "name": "NESTL\u00c9 WATERS UK LIMITED",
+       "company_number": "02334804",
+       "avg_days_to_pay": 68.0,
+       "pct_paid_late": 6.0,
+       "pct_paid_late_note": null,
+       "trend_days_yoy": 16.0,
+       "invoice_value_gbp_half_year": 32539635.0,
+       "pct_paid_over_60": 67.0,
+       "standard_terms_days": [
+        30.0,
+        180.0
+       ],
+       "max_contractual_days": 180.0,
+       "period_start": "2026-01-01",
+       "period_end": "2026-06-30",
+       "source_url": "https://check-payment-practices.service.gov.uk/report/115220"
+      },
+      {
+       "name": "NESPRESSO UK LTD",
+       "company_number": "00156925",
+       "avg_days_to_pay": 53.0,
+       "pct_paid_late": 9.0,
+       "pct_paid_late_note": null,
+       "trend_days_yoy": -11.0,
+       "invoice_value_gbp_half_year": 75349546.0,
+       "pct_paid_over_60": 36.0,
+       "standard_terms_days": [
+        60.0,
+        null
+       ],
+       "max_contractual_days": 150.0,
+       "period_start": "2026-01-01",
+       "period_end": "2026-06-30",
+       "source_url": "https://check-payment-practices.service.gov.uk/report/115261"
+      },
+      {
+       "name": "MINDFUL CHEF LTD",
+       "company_number": "09270945",
+       "avg_days_to_pay": 27.0,
+       "pct_paid_late": 6.0,
+       "pct_paid_late_note": null,
+       "trend_days_yoy": 0.0,
+       "invoice_value_gbp_half_year": 25296630.0,
+       "pct_paid_over_60": 1.0,
+       "standard_terms_days": [
+        30.0,
+        60.0
+       ],
+       "max_contractual_days": 60.0,
+       "period_start": "2026-01-01",
+       "period_end": "2026-06-30",
+       "source_url": "https://check-payment-practices.service.gov.uk/report/114594"
+      },
+      {
+       "name": "TAILSCO LIMITED",
+       "company_number": "08750390",
+       "avg_days_to_pay": 18.0,
+       "pct_paid_late": 12.0,
+       "pct_paid_late_note": null,
+       "trend_days_yoy": 0.0,
+       "invoice_value_gbp_half_year": 39633464.0,
+       "pct_paid_over_60": 4.0,
+       "standard_terms_days": [
+        30.0,
+        60.0
+       ],
+       "max_contractual_days": 60.0,
+       "period_start": "2026-01-01",
+       "period_end": "2026-06-30",
+       "source_url": "https://check-payment-practices.service.gov.uk/report/114347"
+      }
+     ],
+     "source_type": "uk_ppr_statutory_report"
+    }
+   },
+   "computed_proxy": null
+  },
+  "hook": "Nestl\u00e9's UK entities took 14 days longer to pay suppliers than a year earlier: a weighted UK average of 70 days across 7 entities (by invoice value), against a UK median of 32."
+ },
+ {
+  "company_id": "ge-vernova-inc-cik1996810",
+  "name": "GE Vernova Inc.",
+  "country": "US",
+  "hq_city": null,
+  "sector": "manufacturing",
+  "revenue": {
+   "amount": 38068000000.0,
+   "currency": "USD",
+   "period_end": "2025-12-31",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1996810/000199681026000015/",
+   "source_type": "sec_xbrl_companyfacts",
+   "stale": false
+  },
+  "scores": {
+   "fit": 84.2,
+   "pain": 80.1,
+   "signal": 65.6,
+   "priority": 79.8,
+   "fit_parts": {
+    "revenue": 25.5,
+    "geography": 21.2,
+    "sector": 30.0,
+    "erp": 5.0,
+    "supplier_breadth": 2.5
+   },
+   "pain_parts": {
+    "days": 40.6,
+    "pct_late": 11.4,
+    "pct_over_60": 15.0,
+    "trend": 13.1,
+    "uk_materiality_factor": 1.0
+   },
+   "pain_evidence_tier": 1.0,
+   "pain_basis": "uk_reported",
+   "method": "deterministic formula, weights in config/assumptions.yaml"
+  },
+  "why_now_signals": [
+   {
+    "type": "trend_worsening",
+    "text": "UK entities' average days to pay rose by about 7 days year on year (4 of 5 entities with a prior report got slower; median change +9 days)",
+    "url": "https://check-payment-practices.service.gov.uk/report/114590"
+   },
+   {
+    "type": "new_evidence",
+    "text": "Latest statutory UK payment report filed 2026-07-30 (Ge Vernova Energy Services (Uk) Limited)",
+    "url": "https://check-payment-practices.service.gov.uk/report/115516"
+   },
+   {
+    "type": "code_status",
+    "text": "No UK reporting entity states membership of a payment code",
+    "url": "https://check-payment-practices.service.gov.uk/report/114590"
+   },
+   {
+    "type": "long_terms",
+    "text": "Maximum contractual payment period of 180 days reported by a UK entity",
+    "url": "https://check-payment-practices.service.gov.uk/report/114590"
+   },
+   {
+    "type": "scf_offered",
+    "text": "A UK entity reports offering supply chain finance to suppliers: ask which suppliers it reaches, at whose cost, and whether it lengthened terms",
+    "url": "https://check-payment-practices.service.gov.uk/report/114590"
+   },
+   {
+    "type": "einvoicing_started",
+    "text": "GE ENERGY (UK) LIMITED reports offering e-invoicing in its latest filing and did not in the report one year earlier (2 GE Vernova Inc. entities).",
+    "url": "https://check-payment-practices.service.gov.uk/report/114583"
+   },
+   {
+    "type": "sf_disclosed",
+    "text": "Annual report for the year to 2025-12-31 discloses a supplier finance programme with USD 1,542m outstanding",
+    "url": "https://www.sec.gov/Archives/edgar/data/1996810/000199681026000015/gev-20251231.htm"
+   }
+  ],
+  "estimates": {
+   "estimate": true,
+   "assumptions": {
+    "early_pay_day": 10,
+    "max_days_accelerated": 60,
+    "scenarios": {
+     "low": {
+      "share_eligible": 0.05,
+      "annualised_rate": 0.12
+     },
+     "base": {
+      "share_eligible": 0.1,
+      "annualised_rate": 0.14
+     },
+     "high": {
+      "share_eligible": 0.15,
+      "annualised_rate": 0.18
+     }
+    },
+    "config_file": "config/assumptions.yaml",
+    "formula": "spend x share_eligible x annualised_rate x days_accelerated / 365"
+   },
+   "uk_scope": {
+    "basis": "Invoice value paid by the matched UK entities in their latest half-year reports, annualised x2 (reported base, estimated result)",
+    "currency": "GBP",
+    "annual_payments": 810058772.0,
+    "days_used": 61.1,
+    "supplier_cash_beyond_30_days": 69021446.05260274,
+    "early_payment_discount_opportunity": {
+     "low": 680449.3684800001,
+     "base": 1587715.1931200004,
+     "high": 3062022.15816
+    }
+   },
+   "group_proxy": {
+    "basis": "Group cost of sales (cost_of_sales_fy2025) with group-level days from computed DPO (proxy), FY2025.0. A balance-sheet proxy, not reported days to pay.",
+    "currency": "USD",
+    "spend_proxy": 30533000000.0,
+    "days_used": 68.4,
+    "supplier_cash_beyond_30_days": 3212238904.1095896,
+    "early_payment_discount_opportunity": {
+     "low": 29311680.000000004,
+     "base": 68393920.00000001,
+     "high": 131902560.00000001
+    }
+   },
+   "whose_money": "The range is the gross annual discount a buyer could capture by paying eligible invoices early, before the buyer's own cost of funding that early payment and without netting any existing supply chain finance programme."
+  },
+  "payment_profile": {
+   "reported": {
+    "uk": {
+     "what": "Statutory UK payment practices reports filed by this group's UK legal entities. UK entities only, not global group behaviour.",
+     "estimate": false,
+     "entities_n": 5,
+     "avg_days_to_pay_mean_of_entities": 61.1,
+     "aggregation": "invoice_value_weighted_mean",
+     "avg_days_to_pay_simple_mean": 56.4,
+     "pct_invoices_paid_late_mean": 22.8,
+     "pct_invoices_paid_over_60_days_mean": 43.1,
+     "trend_days_year_on_year_mean": 7.0,
+     "trend_days_year_on_year_median": 9.0,
+     "trend_entities_slower": 4.0,
+     "trend_entities_compared": 5.0,
+     "slowest_entity": {
+      "name": "GE ENERGY POWER CONVERSION UK LIMITED",
+      "avg_days_to_pay": 84.0,
+      "source_url": "https://check-payment-practices.service.gov.uk/report/114590"
+     },
+     "period": {
+      "start": "2026-01-01",
+      "end": "2026-06-30"
+     },
+     "entities_left_out_of_group_figures_as_extreme": null,
+     "entity_match_confidence_min": 0.9,
+     "entity_match_methods": "ch_psc_chain",
+     "entities": [
+      {
+       "name": "GE ENERGY POWER CONVERSION UK LIMITED",
+       "company_number": "05571739",
+       "avg_days_to_pay": 84.0,
+       "pct_paid_late": 0.0,
+       "pct_paid_late_note": null,
+       "trend_days_yoy": 16.0,
+       "invoice_value_gbp_half_year": 88625289.0,
+       "pct_paid_over_60": 51.0,
+       "standard_terms_days": [
+        30.0,
+        120.0
+       ],
+       "max_contractual_days": 120.0,
+       "period_start": "2026-01-01",
+       "period_end": "2026-06-30",
+       "source_url": "https://check-payment-practices.service.gov.uk/report/114590"
+      },
+      {
+       "name": "GE GRID SOLUTIONS (UK) LIMITED",
+       "company_number": "NI027892",
+       "avg_days_to_pay": 59.0,
+       "pct_paid_late": 47.0,
+       "pct_paid_late_note": null,
+       "trend_days_yoy": 11.0,
+       "invoice_value_gbp_half_year": 16674468.0,
+       "pct_paid_over_60": 44.0,
+       "standard_terms_days": [
+        90.0,
+        120.0
+       ],
+       "max_contractual_days": 180.0,
+       "period_start": "2026-01-01",
+       "period_end": "2026-06-30",
+       "source_url": "https://check-payment-practices.service.gov.uk/report/113930"
+      },
+      {
+       "name": "GE ENERGY (UK) LIMITED",
+       "company_number": "00123550",
+       "avg_days_to_pay": 57.0,
+       "pct_paid_late": 43.0,
+       "pct_paid_late_note": null,
+       "trend_days_yoy": -5.0,
+       "invoice_value_gbp_half_year": 99831764.0,
+       "pct_paid_over_60": 44.0,
+       "standard_terms_days": [
+        30.0,
+        120.0
+       ],
+       "max_contractual_days": 120.0,
+       "period_start": "2026-01-01",
+       "period_end": "2026-06-30",
+       "source_url": "https://check-payment-practices.service.gov.uk/report/114583"
+      },
+      {
+       "name": "UK GRID SOLUTIONS LIMITED",
+       "company_number": "04955841",
+       "avg_days_to_pay": 57.0,
+       "pct_paid_late": null,
+       "pct_paid_late_note": "reported late share contradicts the entity's own payment bands; not shown",
+       "trend_days_yoy": 9.0,
+       "invoice_value_gbp_half_year": 175447906.0,
+       "pct_paid_over_60": 44.0,
+       "standard_terms_days": [
+        90.0,
+        120.0
+       ],
+       "max_contractual_days": 180.0,
+       "period_start": "2026-01-01",
+       "period_end": "2026-06-30",
+       "source_url": "https://check-payment-practices.service.gov.uk/report/113926"
+      },
+      {
+       "name": "GE VERNOVA ENERGY SERVICES (UK) LIMITED",
+       "company_number": "03499114",
+       "avg_days_to_pay": 25.0,
+       "pct_paid_late": 6.0,
+       "pct_paid_late_note": null,
+       "trend_days_yoy": 7.0,
+       "invoice_value_gbp_half_year": 24449959.0,
+       "pct_paid_over_60": 4.0,
+       "standard_terms_days": [
+        90.0,
+        120.0
+       ],
+       "max_contractual_days": 120.0,
+       "period_start": "2026-01-01",
+       "period_end": "2026-06-30",
+       "source_url": "https://check-payment-practices.service.gov.uk/report/115516"
+      }
+     ],
+     "source_type": "uk_ppr_statutory_report"
+    }
+   },
+   "computed_proxy": {
+    "what": "Computed DPO (proxy) = trade payables / cost of sales x 365 from XBRL financial statements. A balance-sheet proxy, not reported days to pay.",
+    "estimate": false,
+    "is_proxy": true,
+    "dpo_days": 68.4,
+    "prior_year_dpo_days": 62.8,
+    "flag": "ok",
+    "fiscal_year": 2025.0,
+    "period_end": "2025-12-31",
+    "sector_median_dpo_days": 63.0,
+    "payables_basis": "trade",
+    "cost_basis": "cost_of_sales",
+    "confidence": 1.0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1996810/000199681026000015/",
+    "source_type": "sec_xbrl"
+   }
+  },
+  "hook": "GE Vernova's UK entities paid 43% of supplier invoices after more than 60 days (weighted UK average 61 days across 5 entities; UK median 32)."
+ },
+ {
+  "company_id": "heineken-n-v-lei86uq23",
+  "name": "Heineken N.V.",
+  "country": "NL",
+  "hq_city": null,
+  "sector": "consumer_goods",
+  "revenue": {
+   "amount": 34257000000.0,
+   "currency": "EUR",
+   "period_end": "2025-12-31",
+   "source_url": "https://filings.xbrl.org/724500K5PTPSST86UQ23/2025-12-31/ESEF/NL/0/heia-2025-12-31-en/reports/ixbrlviewer.html",
+   "source_type": "esef_xbrl_json",
+   "stale": false
+  },
+  "scores": {
+   "fit": 82.8,
+   "pain": 80.5,
+   "signal": 65.0,
+   "priority": 79.2,
+   "fit_parts": {
+    "revenue": 25.5,
+    "geography": 21.2,
+    "sector": 28.5,
+    "erp": 5.0,
+    "supplier_breadth": 2.5
+   },
+   "pain_parts": {
+    "days": 45.0,
+    "pct_late": 5.5,
+    "pct_over_60": 15.0,
+    "trend": 15.0,
+    "uk_materiality_factor": 1.0
+   },
+   "pain_evidence_tier": 1.0,
+   "pain_basis": "uk_reported",
+   "method": "deterministic formula, weights in config/assumptions.yaml"
+  },
+  "why_now_signals": [
+   {
+    "type": "trend_worsening",
+    "text": "The UK entity's average days to pay rose by 17.0 days year on year",
+    "url": "https://check-payment-practices.service.gov.uk/report/116547"
+   },
+   {
+    "type": "new_evidence",
+    "text": "Latest statutory UK payment report filed 2026-08-21 (Heineken Uk Limited)",
+    "url": "https://check-payment-practices.service.gov.uk/report/116547"
+   },
+   {
+    "type": "code_status",
+    "text": "No UK reporting entity states membership of a payment code",
+    "url": "https://check-payment-practices.service.gov.uk/report/116547"
+   },
+   {
+    "type": "long_terms",
+    "text": "Maximum contractual payment period of 180 days reported by a UK entity",
+    "url": "https://check-payment-practices.service.gov.uk/report/116547"
+   },
+   {
+    "type": "scf_offered",
+    "text": "A UK entity reports offering supply chain finance to suppliers: ask which suppliers it reaches, at whose cost, and whether it lengthened terms",
+    "url": "https://check-payment-practices.service.gov.uk/report/116547"
+   }
+  ],
+  "estimates": {
+   "estimate": true,
+   "assumptions": {
+    "early_pay_day": 10,
+    "max_days_accelerated": 60,
+    "scenarios": {
+     "low": {
+      "share_eligible": 0.05,
+      "annualised_rate": 0.12
+     },
+     "base": {
+      "share_eligible": 0.1,
+      "annualised_rate": 0.14
+     },
+     "high": {
+      "share_eligible": 0.15,
+      "annualised_rate": 0.18
+     }
+    },
+    "config_file": "config/assumptions.yaml",
+    "formula": "spend x share_eligible x annualised_rate x days_accelerated / 365"
+   },
+   "uk_scope": {
+    "basis": "Invoice value paid by the matched UK entities in their latest half-year reports, annualised x2 (reported base, estimated result)",
+    "currency": "GBP",
+    "annual_payments": 1130000000.0,
+    "days_used": 93.0,
+    "supplier_cash_beyond_30_days": 195041095.89041096,
+    "early_payment_discount_opportunity": {
+     "low": 1114520.5479452056,
+     "base": 2600547.94520548,
+     "high": 5015342.465753425
+    }
+   },
+   "whose_money": "The range is the gross annual discount a buyer could capture by paying eligible invoices early, before the buyer's own cost of funding that early payment and without netting any existing supply chain finance programme."
+  },
+  "payment_profile": {
+   "reported": {
+    "uk": {
+     "what": "Statutory UK payment practices reports filed by this group's UK legal entities. UK entities only, not global group behaviour.",
+     "estimate": false,
+     "entities_n": 1,
+     "avg_days_to_pay_mean_of_entities": 93.0,
+     "aggregation": "invoice_value_weighted_mean",
+     "avg_days_to_pay_simple_mean": 93.0,
+     "pct_invoices_paid_late_mean": 11.0,
+     "pct_invoices_paid_over_60_days_mean": 60.0,
+     "trend_days_year_on_year_mean": 17.0,
+     "trend_days_year_on_year_median": 17.0,
+     "trend_entities_slower": 1.0,
+     "trend_entities_compared": 1.0,
+     "slowest_entity": {
+      "name": "HEINEKEN UK LIMITED",
+      "avg_days_to_pay": 93.0,
+      "source_url": "https://check-payment-practices.service.gov.uk/report/116547"
+     },
+     "period": {
+      "start": "2026-01-01",
+      "end": "2026-06-30"
+     },
+     "entities_left_out_of_group_figures_as_extreme": null,
+     "entity_match_confidence_min": 0.95,
+     "entity_match_methods": "ch_psc_chain",
+     "entities": [
+      {
+       "name": "HEINEKEN UK LIMITED",
+       "company_number": "SC065527",
+       "avg_days_to_pay": 93.0,
+       "pct_paid_late": 11.0,
+       "pct_paid_late_note": null,
+       "trend_days_yoy": 17.0,
+       "invoice_value_gbp_half_year": 565000000.0,
+       "pct_paid_over_60": 60.0,
+       "standard_terms_days": [
+        60.0,
+        120.0
+       ],
+       "max_contractual_days": 180.0,
+       "period_start": "2026-01-01",
+       "period_end": "2026-06-30",
+       "source_url": "https://check-payment-practices.service.gov.uk/report/116547"
+      }
+     ],
+     "source_type": "uk_ppr_statutory_report"
+    }
+   },
+   "computed_proxy": {
+    "what": "Computed DPO (proxy) = trade payables / cost of sales x 365 from XBRL financial statements. A balance-sheet proxy, not reported days to pay.",
+    "estimate": false,
+    "is_proxy": true,
+    "dpo_days": null,
+    "prior_year_dpo_days": null,
+    "flag": "missing_inputs",
+    "fiscal_year": 2025.0,
+    "period_end": "2025-12-31",
+    "sector_median_dpo_days": 78.6,
+    "payables_basis": "trade_and_other_broad",
+    "cost_basis": "missing",
+    "confidence": 0.7,
+    "source_url": "https://filings.xbrl.org/724500K5PTPSST86UQ23/2025-12-31/ESEF/NL/0/heia-2025-12-31-en/reports/ixbrlviewer.html",
+    "source_type": "esef_xbrl"
+   }
+  },
+  "hook": "Heineken's UK entity paid 60% of supplier invoices after more than 60 days (93 days on average; UK median 32)."
+ },
+ {
+  "company_id": "reckitt-benckiser-group-plc-lei48v108",
+  "name": "Reckitt Benckiser Group plc",
+  "country": "GB",
+  "hq_city": null,
+  "sector": "consumer_goods",
+  "revenue": {
+   "amount": 14205000000.0,
+   "currency": "GBP",
+   "period_end": "2025-12-31",
+   "source_url": "https://filings.xbrl.org/5493003JFSMOJG48V108/2025-12-31/ESEF/GB/0/5493003JFSMOJG48V108-2025-12-31/reports/ixbrlviewer.html",
+   "source_type": "esef_xbrl_json",
+   "stale": false
+  },
+  "scores": {
+   "fit": 82.0,
+   "pain": 80.2,
+   "signal": 60.6,
+   "priority": 78.1,
+   "fit_parts": {
+    "revenue": 21.0,
+    "geography": 25.0,
+    "sector": 28.5,
+    "erp": 5.0,
+    "supplier_breadth": 2.5
+   },
+   "pain_parts": {
+    "days": 45.0,
+    "pct_late": 7.1,
+    "pct_over_60": 15.0,
+    "trend": 13.1,
+    "uk_materiality_factor": 1.0
+   },
+   "pain_evidence_tier": 1.0,
+   "pain_basis": "uk_reported",
+   "method": "deterministic formula, weights in config/assumptions.yaml"
+  },
+  "why_now_signals": [
+   {
+    "type": "trend_worsening",
+    "text": "UK entities' average days to pay rose by about 7 days year on year (5 of 6 entities with a prior report got slower; median change +7 days)",
+    "url": "https://check-payment-practices.service.gov.uk/report/113069"
+   },
+   {
+    "type": "new_evidence",
+    "text": "Latest statutory UK payment report filed 2026-07-23 (Reckitt Benckiser (Brands) Limited)",
+    "url": "https://check-payment-practices.service.gov.uk/report/113486"
+   },
+   {
+    "type": "code_status",
+    "text": "No UK reporting entity states membership of a payment code",
+    "url": "https://check-payment-practices.service.gov.uk/report/113069"
+   },
+   {
+    "type": "long_terms",
+    "text": "Maximum contractual payment period of 180 days reported by a UK entity",
+    "url": "https://check-payment-practices.service.gov.uk/report/113069"
+   },
+   {
+    "type": "scf_offered",
+    "text": "A UK entity reports offering supply chain finance to suppliers: ask which suppliers it reaches, at whose cost, and whether it lengthened terms",
+    "url": "https://check-payment-practices.service.gov.uk/report/113069"
+   },
+   {
+    "type": "sf_disclosed",
+    "text": "Annual report for the year to 2025-12-31 discloses a supplier finance programme with GBP 277m outstanding",
+    "url": "https://filings.xbrl.org/5493003JFSMOJG48V108/2025-12-31/ESEF/GB/0/5493003JFSMOJG48V108-2025-12-31-T01.json"
+   }
+  ],
+  "estimates": {
+   "estimate": true,
+   "assumptions": {
+    "early_pay_day": 10,
+    "max_days_accelerated": 60,
+    "scenarios": {
+     "low": {
+      "share_eligible": 0.05,
+      "annualised_rate": 0.12
+     },
+     "base": {
+      "share_eligible": 0.1,
+      "annualised_rate": 0.14
+     },
+     "high": {
+      "share_eligible": 0.15,
+      "annualised_rate": 0.18
+     }
+    },
+    "config_file": "config/assumptions.yaml",
+    "formula": "spend x share_eligible x annualised_rate x days_accelerated / 365"
+   },
+   "uk_scope": {
+    "basis": "Invoice value paid by the matched UK entities in their latest half-year reports, annualised x2 (reported base, estimated result)",
+    "currency": "GBP",
+    "annual_payments": 4394059464.0,
+    "days_used": 79.2,
+    "supplier_cash_beyond_30_days": 592295138.7090411,
+    "early_payment_discount_opportunity": {
+     "low": 4333866.868602741,
+     "base": 10112356.026739728,
+     "high": 19502400.90871233
+    }
+   },
+   "whose_money": "The range is the gross annual discount a buyer could capture by paying eligible invoices early, before the buyer's own cost of funding that early payment and without netting any existing supply chain finance programme."
+  },
+  "payment_profile": {
+   "reported": {
+    "uk": {
+     "what": "Statutory UK payment practices reports filed by this group's UK legal entities. UK entities only, not global group behaviour.",
+     "estimate": false,
+     "entities_n": 6,
+     "avg_days_to_pay_mean_of_entities": 79.2,
+     "aggregation": "invoice_value_weighted_mean",
+     "avg_days_to_pay_simple_mean": 93.7,
+     "pct_invoices_paid_late_mean": 14.2,
+     "pct_invoices_paid_over_60_days_mean": 49.6,
+     "trend_days_year_on_year_mean": 7.0,
+     "trend_days_year_on_year_median": 7.0,
+     "trend_entities_slower": 5.0,
+     "trend_entities_compared": 6.0,
+     "slowest_entity": {
+      "name": "RECKITT BENCKISER HEALTHCARE INTERNATIONAL LIMITED",
+      "avg_days_to_pay": 132.0,
+      "source_url": "https://check-payment-practices.service.gov.uk/report/113069"
+     },
+     "period": {
+      "start": "2026-01-01",
+      "end": "2026-06-30"
+     },
+     "entities_left_out_of_group_figures_as_extreme": null,
+     "entity_match_confidence_min": 0.9,
+     "entity_match_methods": "ch_psc_chain",
+     "entities": [
+      {
+       "name": "RECKITT BENCKISER HEALTHCARE INTERNATIONAL LIMITED",
+       "company_number": "02741587",
+       "avg_days_to_pay": 132.0,
+       "pct_paid_late": 4.0,
+       "pct_paid_late_note": null,
+       "trend_days_yoy": 8.0,
+       "invoice_value_gbp_half_year": 90792149.0,
+       "pct_paid_over_60": 85.0,
+       "standard_terms_days": [
+        30.0,
+        180.0
+       ],
+       "max_contractual_days": 180.0,
+       "period_start": "2026-01-01",
+       "period_end": "2026-06-30",
+       "source_url": "https://check-payment-practices.service.gov.uk/report/113069"
+      },
+      {
+       "name": "RECKITT BENCKISER HEALTHCARE (UK) LIMITED",
+       "company_number": "00261312",
+       "avg_days_to_pay": 127.0,
+       "pct_paid_late": 5.0,
+       "pct_paid_late_note": null,
+       "trend_days_yoy": 2.0,
+       "invoice_value_gbp_half_year": 121195735.0,
+       "pct_paid_over_60": 83.0,
+       "standard_terms_days": [
+        30.0,
+        180.0
+       ],
+       "max_contractual_days": 180.0,
+       "period_start": "2026-01-01",
+       "period_end": "2026-06-30",
+       "source_url": "https://check-payment-practices.service.gov.uk/report/113079"
+      },
+      {
+       "name": "RECKITT BENCKISER (BRANDS) LIMITED",
+       "company_number": "08192386",
+       "avg_days_to_pay": 86.0,
+       "pct_paid_late": 13.0,
+       "pct_paid_late_note": null,
+       "trend_days_yoy": 16.0,
+       "invoice_value_gbp_half_year": 57366272.0,
+       "pct_paid_over_60": 56.0,
+       "standard_terms_days": [
+        30.0,
+        180.0
+       ],
+       "max_contractual_days": 180.0,
+       "period_start": "2026-01-01",
+       "period_end": "2026-06-30",
+       "source_url": "https://check-payment-practices.service.gov.uk/report/113486"
+      },
+      {
+       "name": "RECKITT BENCKISER HEALTH LIMITED",
+       "company_number": "11069293",
+       "avg_days_to_pay": 77.0,
+       "pct_paid_late": 11.0,
+       "pct_paid_late_note": null,
+       "trend_days_yoy": 18.0,
+       "invoice_value_gbp_half_year": 877796346.0,
+       "pct_paid_over_60": 46.0,
+       "standard_terms_days": [
+        30.0,
+        180.0
+       ],
+       "max_contractual_days": 180.0,
+       "period_start": "2026-01-01",
+       "period_end": "2026-06-30",
+       "source_url": "https://check-payment-practices.service.gov.uk/report/113505"
+      },
+      {
+       "name": "RECKITT BENCKISER CORPORATE SERVICES LIMITED",
+       "company_number": "04027682",
+       "avg_days_to_pay": 72.0,
+       "pct_paid_late": 13.0,
+       "pct_paid_late_note": null,
+       "trend_days_yoy": 6.0,
+       "invoice_value_gbp_half_year": 664555589.0,
+       "pct_paid_over_60": 53.0,
+       "standard_terms_days": [
+        30.0,
+        180.0
+       ],
+       "max_contractual_days": 180.0,
+       "period_start": "2026-01-01",
+       "period_end": "2026-06-30",
+       "source_url": "https://check-payment-practices.service.gov.uk/report/113475"
+      },
+      {
+       "name": "RB UK COMMERCIAL LIMITED",
+       "company_number": "08784077",
+       "avg_days_to_pay": 68.0,
+       "pct_paid_late": 29.0,
+       "pct_paid_late_note": null,
+       "trend_days_yoy": -3.0,
+       "invoice_value_gbp_half_year": 385323641.0,
+       "pct_paid_over_60": 32.0,
+       "standard_terms_days": [
+        30.0,
+        180.0
+       ],
+       "max_contractual_days": 180.0,
+       "period_start": "2026-01-01",
+       "period_end": "2026-06-30",
+       "source_url": "https://check-payment-practices.service.gov.uk/report/113063"
+      }
+     ],
+     "source_type": "uk_ppr_statutory_report"
+    }
+   },
+   "computed_proxy": {
+    "what": "Computed DPO (proxy) = trade payables / cost of sales x 365 from XBRL financial statements. A balance-sheet proxy, not reported days to pay.",
+    "estimate": false,
+    "is_proxy": true,
+    "dpo_days": 332.3,
+    "prior_year_dpo_days": 346.5,
+    "flag": "ok",
+    "fiscal_year": 2025.0,
+    "period_end": "2025-12-31",
+    "sector_median_dpo_days": 78.6,
+    "payables_basis": "trade_and_other_broad",
+    "cost_basis": "cost_of_sales",
+    "confidence": 0.7,
+    "source_url": "https://filings.xbrl.org/5493003JFSMOJG48V108/2025-12-31/ESEF/GB/0/5493003JFSMOJG48V108-2025-12-31/reports/ixbrlviewer.html",
+    "source_type": "esef_xbrl"
+   }
+  },
+  "hook": "Reckitt's UK entities paid 50% of supplier invoices after more than 60 days (weighted UK average 79 days across 6 entities; UK median 32)."
+ },
+ {
+  "company_id": "grifols-q901262",
+  "name": "Grifols",
+  "country": "ES",
+  "hq_city": "Sant Cugat del Vall\u00e8s",
+  "sector": "pharma",
+  "revenue": {
+   "amount": 7212382000.0,
+   "currency": "EUR",
+   "period_end": "2024-12-31",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1438569/000110465925034245/",
+   "source_type": "sec_xbrl_companyfacts",
+   "stale": true
+  },
+  "scores": {
+   "fit": 75.5,
+   "pain": 98.1,
+   "signal": 30.6,
+   "priority": 77.8,
+   "fit_parts": {
+    "revenue": 15.0,
+    "geography": 25.0,
+    "sector": 27.0,
+    "erp": 5.0,
+    "supplier_breadth": 3.5
+   },
+   "pain_parts": {
+    "days": 45.0,
+    "pct_late": 25.0,
+    "pct_over_60": 15.0,
+    "trend": 13.1
+   },
+   "pain_evidence_tier": 1.0,
+   "pain_basis": "es_reported",
+   "method": "deterministic formula, weights in config/assumptions.yaml"
+  },
+  "why_now_signals": [
+   {
+    "type": "trend_worsening",
+    "text": "Average supplier payment period in Spain rose from 71 to 78 days",
+    "url": "https://filings.xbrl.org/959800HSSNXWRKBK4N60/2025-12-31/ESEF/ES/0/959800HSSNXWRKBK4N60-2025-12-31-1-es.json"
+   }
+  ],
+  "estimates": {
+   "estimate": true,
+   "assumptions": {
+    "early_pay_day": 10,
+    "max_days_accelerated": 60,
+    "scenarios": {
+     "low": {
+      "share_eligible": 0.05,
+      "annualised_rate": 0.12
+     },
+     "base": {
+      "share_eligible": 0.1,
+      "annualised_rate": 0.14
+     },
+     "high": {
+      "share_eligible": 0.15,
+      "annualised_rate": 0.18
+     }
+    },
+    "config_file": "config/assumptions.yaml",
+    "formula": "spend x share_eligible x annualised_rate x days_accelerated / 365"
+   },
+   "group_proxy": {
+    "basis": "Group cost of sales (cost_of_sales_fy2025) with group-level days from computed DPO (proxy), FY2025.0. A balance-sheet proxy, not reported days to pay.",
+    "currency": "EUR",
+    "spend_proxy": 4665000000.0,
+    "days_used": 65.8,
+    "supplier_cash_beyond_30_days": 457553424.65753424,
+    "early_payment_discount_opportunity": {
+     "low": 4279019.178082191,
+     "base": 9984378.08219178,
+     "high": 19255586.301369864
+    }
+   },
+   "whose_money": "The range is the gross annual discount a buyer could capture by paying eligible invoices early, before the buyer's own cost of funding that early payment and without netting any existing supply chain finance programme."
+  },
+  "payment_profile": {
+   "reported": {
+    "spain": {
+     "what": "Statutory average supplier payment period (PMP, Ley 15/2010) from the notes to the annual accounts.",
+     "estimate": false,
+     "pmp_days": 78.0,
+     "prior_year_pmp_days": 71.0,
+     "ratio_paid_days": 81.0,
+     "ratio_pending_days": 56.0,
+     "pct_paid_within_legal_max_by_value": 29.4,
+     "fiscal_year": 2025.0,
+     "scope": "consolidated_spanish_entities",
+     "legal_maximum_days": 60,
+     "source_url": "https://filings.xbrl.org/959800HSSNXWRKBK4N60/2025-12-31/ESEF/ES/0/959800HSSNXWRKBK4N60-2025-12-31-1-es/reports/959800HSSNXWRKBK4N60-2025-12-31-1-es.xhtml",
+     "extraction_confidence": 0.98,
+     "source_type": "es_annual_accounts_pmp_note"
+    }
+   },
+   "computed_proxy": {
+    "what": "Computed DPO (proxy) = trade payables / cost of sales x 365 from XBRL financial statements. A balance-sheet proxy, not reported days to pay.",
+    "estimate": false,
+    "is_proxy": true,
+    "dpo_days": 65.8,
+    "prior_year_dpo_days": 70.4,
+    "flag": "ok",
+    "fiscal_year": 2025.0,
+    "period_end": "2025-12-31",
+    "sector_median_dpo_days": 66.2,
+    "payables_basis": "trade",
+    "cost_basis": "cost_of_sales",
+    "confidence": 1.0,
+    "source_url": "https://filings.xbrl.org/959800HSSNXWRKBK4N60/2025-12-31/ESEF/ES/0/959800HSSNXWRKBK4N60-2025-12-31-1-es/reports/ixbrlviewer.html",
+    "source_type": "esef_xbrl"
+   }
+  },
+  "hook": "Grifols' average supplier payment period in Spain rose from 71 to 78 days in FY2025; the legal maximum per payment is 60."
+ },
+ {
+  "company_id": "publicis-q1537378",
+  "name": "Publicis",
+  "country": "FR",
+  "hq_city": "Paris",
+  "sector": "services",
+  "revenue": {
+   "amount": 16030000000.0,
+   "currency": "EUR",
+   "period_end": "2024-12-31",
+   "source_url": "https://filings.xbrl.org/2138004KW8BV57III342/2024-12-31/ESEF/FR/0/publicis-2024-12-31-2-fr/reports/ixbrlviewer.html",
+   "source_type": "esef_xbrl_json",
+   "stale": false
+  },
+  "scores": {
+   "fit": 72.5,
+   "pain": 92.1,
+   "signal": 54.2,
+   "priority": 77.6,
+   "fit_parts": {
+    "revenue": 21.0,
+    "geography": 25.0,
+    "sector": 16.5,
+    "erp": 5.0,
+    "supplier_breadth": 5.0
+   },
+   "pain_parts": {
+    "days": 43.9,
+    "pct_late": 25.0,
+    "pct_over_60": 15.0,
+    "trend": 8.3,
+    "uk_materiality_factor": 1.0
+   },
+   "pain_evidence_tier": 1.0,
+   "pain_basis": "uk_reported",
+   "method": "deterministic formula, weights in config/assumptions.yaml"
+  },
+  "why_now_signals": [
+   {
+    "type": "trend_worsening",
+    "text": "UK entities' average days to pay rose by about 4 days year on year (9 of 12 entities with a prior report got slower; median change +5 days)",
+    "url": "https://check-payment-practices.service.gov.uk/report/114785"
+   },
+   {
+    "type": "new_evidence",
+    "text": "Latest statutory UK payment report filed 2026-07-31 (Publicis Limited)",
+    "url": "https://check-payment-practices.service.gov.uk/report/115876"
+   },
+   {
+    "type": "code_status",
+    "text": "No UK reporting entity states membership of a payment code",
+    "url": "https://check-payment-practices.service.gov.uk/report/114785"
+   },
+   {
+    "type": "long_terms",
+    "text": "Maximum contractual payment period of 90 days reported by a UK entity",
+    "url": "https://check-payment-practices.service.gov.uk/report/114785"
+   },
+   {
+    "type": "dispute_share_high",
+    "text": "Across 13 UK reporting entities of Publicis, the reported share of invoices not paid within agreed terms because of a dispute is 12.2% (weighted by invoice value paid); the highest is PRODIGIOUS UK LIMITED at 32%.",
+    "url": "https://check-payment-practices.service.gov.uk/report/101119"
+   }
+  ],
+  "estimates": {
+   "estimate": true,
+   "assumptions": {
+    "early_pay_day": 10,
+    "max_days_accelerated": 60,
+    "scenarios": {
+     "low": {
+      "share_eligible": 0.05,
+      "annualised_rate": 0.12
+     },
+     "base": {
+      "share_eligible": 0.1,
+      "annualised_rate": 0.14
+     },
+     "high": {
+      "share_eligible": 0.15,
+      "annualised_rate": 0.18
+     }
+    },
+    "config_file": "config/assumptions.yaml",
+    "formula": "spend x share_eligible x annualised_rate x days_accelerated / 365"
+   },
+   "uk_scope": {
+    "basis": "Invoice value paid by the matched UK entities in their latest half-year reports, annualised x2 (reported base, estimated result)",
+    "currency": "GBP",
+    "annual_payments": 1907314908.0,
+    "days_used": 64.0,
+    "supplier_cash_beyond_30_days": 177667690.06027398,
+    "early_payment_discount_opportunity": {
+     "low": 1693068.5758684932,
+     "base": 3950493.343693151,
+     "high": 7618808.591408219
+    }
+   },
+   "whose_money": "The range is the gross annual discount a buyer could capture by paying eligible invoices early, before the buyer's own cost of funding that early payment and without netting any existing supply chain finance programme."
+  },
+  "payment_profile": {
+   "reported": {
+    "uk": {
+     "what": "Statutory UK payment practices reports filed by this group's UK legal entities. UK entities only, not global group behaviour.",
+     "estimate": false,
+     "entities_n": 13,
+     "avg_days_to_pay_mean_of_entities": 64.0,
+     "aggregation": "invoice_value_weighted_mean",
+     "avg_days_to_pay_simple_mean": 54.3,
+     "pct_invoices_paid_late_mean": 54.6,
+     "pct_invoices_paid_over_60_days_mean": 39.1,
+     "trend_days_year_on_year_mean": 4.4,
+     "trend_days_year_on_year_median": 5.0,
+     "trend_entities_slower": 9.0,
+     "trend_entities_compared": 12.0,
+     "slowest_entity": {
+      "name": "ZENITH INTERNATIONAL (MEDIA) LIMITED",
+      "avg_days_to_pay": 90.0,
+      "source_url": "https://check-payment-practices.service.gov.uk/report/114785"
+     },
+     "period": {
+      "start": "2025-01-01",
+      "end": "2026-06-30"
+     },
+     "entities_left_out_of_group_figures_as_extreme": null,
+     "entity_match_confidence_min": 0.9,
+     "entity_match_methods": "ch_psc_chain|exact_name",
+     "entities": [
+      {
+       "name": "ZENITH INTERNATIONAL (MEDIA) LIMITED",
+       "company_number": "02142261",
+       "avg_days_to_pay": 90.0,
+       "pct_paid_late": 78.0,
+       "pct_paid_late_note": null,
+       "trend_days_yoy": 9.0,
+       "invoice_value_gbp_half_year": 146884490.0,
+       "pct_paid_over_60": 69.0,
+       "standard_terms_days": [
+        1.0,
+        60.0
+       ],
+       "max_contractual_days": 60.0,
+       "period_start": "2026-01-01",
+       "period_end": "2026-06-30",
+       "source_url": "https://check-payment-practices.service.gov.uk/report/114785"
+      },
+      {
+       "name": "APX TRADING LIMITED",
+       "company_number": "01853627",
+       "avg_days_to_pay": 87.0,
+       "pct_paid_late": 66.0,
+       "pct_paid_late_note": null,
+       "trend_days_yoy": 34.0,
+       "invoice_value_gbp_half_year": 98312496.0,
+       "pct_paid_over_60": 52.0,
+       "standard_terms_days": [
+        1.0,
+        60.0
+       ],
+       "max_contractual_days": 60.0,
+       "period_start": "2026-01-01",
+       "period_end": "2026-06-30",
+       "source_url": "https://check-payment-practices.service.gov.uk/report/114790"
+      },
+      {
+       "name": "DIGITASLBI LIMITED",
+       "company_number": "SC177425",
+       "avg_days_to_pay": 77.0,
+       "pct_paid_late": 68.0,
+       "pct_paid_late_note": null,
+       "trend_days_yoy": 6.0,
+       "invoice_value_gbp_half_year": 11558549.0,
+       "pct_paid_over_60": 52.0,
+       "standard_terms_days": [
+        1.0,
+        60.0
+       ],
+       "max_contractual_days": 60.0,
+       "period_start": "2026-01-01",
+       "period_end": "2026-06-30",
+       "source_url": "https://check-payment-practices.service.gov.uk/report/114781"
+      },
+      {
+       "name": "ZENITH UK (MEDIA) LIMITED",
+       "company_number": "01921320",
+       "avg_days_to_pay": 63.0,
+       "pct_paid_late": 51.0,
+       "pct_paid_late_note": null,
+       "trend_days_yoy": -2.0,
+       "invoice_value_gbp_half_year": 247519866.0,
+       "pct_paid_over_60": 40.0,
+       "standard_terms_days": [
+        1.0,
+        60.0
+       ],
+       "max_contractual_days": 60.0,
+       "period_start": "2026-01-01",
+       "period_end": "2026-06-30",
+       "source_url": "https://check-payment-practices.service.gov.uk/report/114787"
+      },
+      {
+       "name": "PG MEDIA SERVICES LIMITED",
+       "company_number": "00926566",
+       "avg_days_to_pay": 54.0,
+       "pct_paid_late": 51.0,
+       "pct_paid_late_note": null,
+       "trend_days_yoy": 1.0,
+       "invoice_value_gbp_half_year": 225414516.0,
+       "pct_paid_over_60": 32.0,
+       "standard_terms_days": [
+        1.0,
+        60.0
+       ],
+       "max_contractual_days": 60.0,
+       "period_start": "2026-01-01",
+       "period_end": "2026-06-30",
+       "source_url": "https://check-payment-practices.service.gov.uk/report/114782"
+      },
+      {
+       "name": "SPARK FOUNDRY LIMITED",
+       "company_number": "03457650",
+       "avg_days_to_pay": 54.0,
+       "pct_paid_late": 43.0,
+       "pct_paid_late_note": null,
+       "trend_days_yoy": -4.0,
+       "invoice_value_gbp_half_year": 131175520.0,
+       "pct_paid_over_60": 26.0,
+       "standard_terms_days": [
+        1.0,
+        60.0
+       ],
+       "max_contractual_days": 60.0,
+       "period_start": "2026-01-01",
+       "period_end": "2026-06-30",
+       "source_url": "https://check-payment-practices.service.gov.uk/report/114783"
+      },
+      {
+       "name": "PUBLICIS LIMITED",
+       "company_number": "01046052",
+       "avg_days_to_pay": 48.0,
+       "pct_paid_late": 38.0,
+       "pct_paid_late_note": null,
+       "trend_days_yoy": 7.0,
+       "invoice_value_gbp_half_year": 10428341.0,
+       "pct_paid_over_60": 15.0,
+       "standard_terms_days": [
+        1.0,
+        60.0
+       ],
+       "max_contractual_days": 60.0,
+       "period_start": "2026-01-01",
+       "period_end": "2026-06-30",
+       "source_url": "https://check-payment-practices.service.gov.uk/report/115876"
+      },
+      {
+       "name": "PRODIGIOUS UK LIMITED",
+       "company_number": "00294029",
+       "avg_days_to_pay": 46.0,
+       "pct_paid_late": 48.0,
+       "pct_paid_late_note": null,
+       "trend_days_yoy": null,
+       "invoice_value_gbp_half_year": 7101736.0,
+       "pct_paid_over_60": 15.0,
+       "standard_terms_days": [
+        1.0,
+        60.0
+       ],
+       "max_contractual_days": 60.0,
+       "period_start": "2025-01-01",
+       "period_end": "2025-06-30",
+       "source_url": "https://check-payment-practices.service.gov.uk/report/101119"
+      },
+      {
+       "name": "PUBLICIS HEALTHCARE COMMUNICATIONS GROUP LIMITED",
+       "company_number": "01072087",
+       "avg_days_to_pay": 43.0,
+       "pct_paid_late": 49.0,
+       "pct_paid_late_note": null,
+       "trend_days_yoy": 5.0,
+       "invoice_value_gbp_half_year": 5879837.0,
+       "pct_paid_over_60": 17.0,
+       "standard_terms_days": [
+        1.0,
+        60.0
+       ],
+       "max_contractual_days": 60.0,
+       "period_start": "2026-01-01",
+       "period_end": "2026-06-30",
+       "source_url": "https://check-payment-practices.service.gov.uk/report/114768"
+      },
+      {
+       "name": "SAATCHI & SAATCHI GROUP LTD",
+       "company_number": "00231824",
+       "avg_days_to_pay": 41.0,
+       "pct_paid_late": 37.0,
+       "pct_paid_late_note": null,
+       "trend_days_yoy": 5.0,
+       "invoice_value_gbp_half_year": 19152452.0,
+       "pct_paid_over_60": 11.0,
+       "standard_terms_days": [
+        1.0,
+        60.0
+       ],
+       "max_contractual_days": 60.0,
+       "period_start": "2026-01-01",
+       "period_end": "2026-06-30",
+       "source_url": "https://check-payment-practices.service.gov.uk/report/114788"
+      },
+      {
+       "name": "EPSILON INTERNATIONAL UK LTD",
+       "company_number": "03610044",
+       "avg_days_to_pay": 38.0,
+       "pct_paid_late": 53.0,
+       "pct_paid_late_note": null,
+       "trend_days_yoy": -11.0,
+       "invoice_value_gbp_half_year": 10266357.0,
+       "pct_paid_over_60": 8.0,
+       "standard_terms_days": [
+        1.0,
+        60.0
+       ],
+       "max_contractual_days": 60.0,
+       "period_start": "2026-01-01",
+       "period_end": "2026-06-30",
+       "source_url": "https://check-payment-practices.service.gov.uk/report/115864"
+      },
+      {
+       "name": "LION RE:SOURCES UK LIMITED",
+       "company_number": "04239427",
+       "avg_days_to_pay": 34.0,
+       "pct_paid_late": 44.0,
+       "pct_paid_late_note": null,
+       "trend_days_yoy": 1.0,
+       "invoice_value_gbp_half_year": 22347723.0,
+       "pct_paid_over_60": 8.0,
+       "standard_terms_days": [
+        1.0,
+        60.0
+       ],
+       "max_contractual_days": 60.0,
+       "period_start": "2026-01-01",
+       "period_end": "2026-06-30",
+       "source_url": "https://check-payment-practices.service.gov.uk/report/114791"
+      },
+      {
+       "name": "SAPIENT LIMITED",
+       "company_number": "03144067",
+       "avg_days_to_pay": 31.0,
+       "pct_paid_late": 20.0,
+       "pct_paid_late_note": null,
+       "trend_days_yoy": 6.0,
+       "invoice_value_gbp_half_year": 17615571.0,
+       "pct_paid_over_60": 3.0,
+       "standard_terms_days": [
+        0.0,
+        90.0
+       ],
+       "max_contractual_days": 90.0,
+       "period_start": "2026-01-01",
+       "period_end": "2026-06-30",
+       "source_url": "https://check-payment-practices.service.gov.uk/report/114275"
+      }
+     ],
+     "source_type": "uk_ppr_statutory_report"
+    }
+   },
+   "computed_proxy": {
+    "what": "Computed DPO (proxy) = trade payables / cost of sales x 365 from XBRL financial statements. A balance-sheet proxy, not reported days to pay.",
+    "estimate": false,
+    "is_proxy": true,
+    "dpo_days": null,
+    "prior_year_dpo_days": null,
+    "flag": "missing_inputs",
+    "fiscal_year": 2024.0,
+    "period_end": "2024-12-31",
+    "sector_median_dpo_days": 26.4,
+    "payables_basis": "trade",
+    "cost_basis": "missing",
+    "confidence": 0.7,
+    "source_url": "https://filings.xbrl.org/2138004KW8BV57III342/2024-12-31/ESEF/FR/0/publicis-2024-12-31-2-fr/reports/ixbrlviewer.html",
+    "source_type": "esef_xbrl"
+   }
+  },
+  "hook": "Publicis' UK entities paid 55% of supplier invoices later than the agreed terms (weighted UK average 64 days across 13 entities; UK median 32)."
+ },
+ {
+  "company_id": "johnson-matthey-plc-leisc6z10",
+  "name": "Johnson Matthey plc",
+  "country": "GB",
+  "hq_city": null,
+  "sector": "manufacturing",
+  "revenue": {
+   "amount": 12573000000.0,
+   "currency": "GBP",
+   "period_end": "2026-03-31",
+   "source_url": "https://filings.xbrl.org/2138001AVBSD1HSC6Z10/2026-03-31/ESEF/GB/0/2138001AVBSD1HSC6Z10-2026-03-31/reports/ixbrlviewer.html",
+   "source_type": "esef_xbrl_json",
+   "stale": false
+  },
+  "scores": {
+   "fit": 83.5,
+   "pain": 88.4,
+   "signal": 30.0,
+   "priority": 77.4,
+   "fit_parts": {
+    "revenue": 21.0,
+    "geography": 25.0,
+    "sector": 30.0,
+    "erp": 5.0,
+    "supplier_breadth": 2.5
+   },
+   "pain_parts": {
+    "days": 45.0,
+    "pct_late": 25.0,
+    "pct_over_60": 15.0,
+    "trend": 3.4,
+    "uk_materiality_factor": 1.0
+   },
+   "pain_evidence_tier": 1.0,
+   "pain_basis": "uk_reported",
+   "method": "deterministic formula, weights in config/assumptions.yaml"
+  },
+  "why_now_signals": [
+   {
+    "type": "new_evidence",
+    "text": "Latest statutory UK payment report filed 2026-10-30 (Johnson Matthey Hydrogen Technologies Limited)",
+    "url": "https://check-payment-practices.service.gov.uk/report/118567"
+   },
+   {
+    "type": "code_status",
+    "text": "No UK reporting entity states membership of a payment code",
+    "url": "https://check-payment-practices.service.gov.uk/report/118566"
+   },
+   {
+    "type": "long_terms",
+    "text": "Maximum contractual payment period of 90 days reported by a UK entity",
+    "url": "https://check-payment-practices.service.gov.uk/report/118566"
+   }
+  ],
+  "estimates": {
+   "estimate": true,
+   "assumptions": {
+    "early_pay_day": 10,
+    "max_days_accelerated": 60,
+    "scenarios": {
+     "low": {
+      "share_eligible": 0.05,
+      "annualised_rate": 0.12
+     },
+     "base": {
+      "share_eligible": 0.1,
+      "annualised_rate": 0.14
+     },
+     "high": {
+      "share_eligible": 0.15,
+      "annualised_rate": 0.18
+     }
+    },
+    "config_file": "config/assumptions.yaml",
+    "formula": "spend x share_eligible x annualised_rate x days_accelerated / 365"
+   },
+   "uk_scope": {
+    "basis": "Invoice value paid by the matched UK entities in their latest half-year reports, annualised x2 (reported base, estimated result)",
+    "currency": "GBP",
+    "annual_payments": 1280734684.0,
+    "days_used": 72.4,
+    "supplier_cash_beyond_30_days": 148775755.07287672,
+    "early_payment_discount_opportunity": {
+     "low": 1263190.373260274,
+     "base": 2947444.204273973,
+     "high": 5684356.679671232
+    }
+   },
+   "whose_money": "The range is the gross annual discount a buyer could capture by paying eligible invoices early, before the buyer's own cost of funding that early payment and without netting any existing supply chain finance programme."
+  },
+  "payment_profile": {
+   "reported": {
+    "uk": {
+     "what": "Statutory UK payment practices reports filed by this group's UK legal entities. UK entities only, not global group behaviour.",
+     "estimate": false,
+     "entities_n": 2,
+     "avg_days_to_pay_mean_of_entities": 72.4,
+     "aggregation": "invoice_value_weighted_mean",
+     "avg_days_to_pay_simple_mean": 69.0,
+     "pct_invoices_paid_late_mean": 56.2,
+     "pct_invoices_paid_over_60_days_mean": 50.3,
+     "trend_days_year_on_year_mean": 1.8,
+     "trend_days_year_on_year_median": 6.5,
+     "trend_entities_slower": 2.0,
+     "trend_entities_compared": 2.0,
+     "slowest_entity": {
+      "name": "JOHNSON MATTHEY PLC",
+      "avg_days_to_pay": 73.0,
+      "source_url": "https://check-payment-practices.service.gov.uk/report/118566"
+     },
+     "period": {
+      "start": "2026-04-01",
+      "end": "2026-09-30"
+     },
+     "entities_left_out_of_group_figures_as_extreme": null,
+     "entity_match_confidence_min": 0.95,
+     "entity_match_methods": "ch_psc_chain|exact_name",
+     "entities": [
+      {
+       "name": "JOHNSON MATTHEY PLC",
+       "company_number": "00033774",
+       "avg_days_to_pay": 73.0,
+       "pct_paid_late": 57.0,
+       "pct_paid_late_note": null,
+       "trend_days_yoy": 1.0,
+       "invoice_value_gbp_half_year": 596196050.0,
+       "pct_paid_over_60": 52.0,
+       "standard_terms_days": [
+        1.0,
+        90.0
+       ],
+       "max_contractual_days": 90.0,
+       "period_start": "2026-04-01",
+       "period_end": "2026-09-30",
+       "source_url": "https://check-payment-practices.service.gov.uk/report/118566"
+      },
+      {
+       "name": "JOHNSON MATTHEY HYDROGEN TECHNOLOGIES LIMITED",
+       "company_number": "04393161",
+       "avg_days_to_pay": 65.0,
+       "pct_paid_late": 45.0,
+       "pct_paid_late_note": null,
+       "trend_days_yoy": 12.0,
+       "invoice_value_gbp_half_year": 44171292.0,
+       "pct_paid_over_60": 27.0,
+       "standard_terms_days": [
+        1.0,
+        90.0
+       ],
+       "max_contractual_days": 90.0,
+       "period_start": "2026-04-01",
+       "period_end": "2026-09-30",
+       "source_url": "https://check-payment-practices.service.gov.uk/report/118567"
+      }
+     ],
+     "source_type": "uk_ppr_statutory_report"
+    }
+   },
+   "computed_proxy": {
+    "what": "Computed DPO (proxy) = trade payables / cost of sales x 365 from XBRL financial statements. A balance-sheet proxy, not reported days to pay.",
+    "estimate": false,
+    "is_proxy": true,
+    "dpo_days": 65.8,
+    "prior_year_dpo_days": 70.0,
+    "flag": "ok",
+    "fiscal_year": 2026.0,
+    "period_end": "2026-03-31",
+    "sector_median_dpo_days": 63.0,
+    "payables_basis": "trade_and_other_broad",
+    "cost_basis": "cost_of_sales",
+    "confidence": 0.7,
+    "source_url": "https://filings.xbrl.org/2138001AVBSD1HSC6Z10/2026-03-31/ESEF/GB/0/2138001AVBSD1HSC6Z10-2026-03-31/reports/ixbrlviewer.html",
+    "source_type": "esef_xbrl"
+   }
+  },
+  "hook": "Johnson Matthey's UK entities paid 50% of supplier invoices after more than 60 days (weighted UK average 72 days across 2 entities; UK median 32)."
+ },
+ {
+  "company_id": "haleon-plc-cik1900304",
+  "name": "Haleon plc",
+  "country": "GB",
+  "hq_city": null,
+  "sector": "consumer_goods",
+  "revenue": {
+   "amount": 11030000000.0,
+   "currency": "GBP",
+   "period_end": "2025-12-31",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1900304/000110465926027443/",
+   "source_type": "sec_xbrl_companyfacts",
+   "stale": false
+  },
+  "scores": {
+   "fit": 82.0,
+   "pain": 75.9,
+   "signal": 62.8,
+   "priority": 76.7,
+   "fit_parts": {
+    "revenue": 21.0,
+    "geography": 25.0,
+    "sector": 28.5,
+    "erp": 5.0,
+    "supplier_breadth": 2.5
+   },
+   "pain_parts": {
+    "days": 45.0,
+    "pct_late": 1.9,
+    "pct_over_60": 15.0,
+    "trend": 14.1,
+    "uk_materiality_factor": 1.0
+   },
+   "pain_evidence_tier": 1.0,
+   "pain_basis": "uk_reported",
+   "method": "deterministic formula, weights in config/assumptions.yaml"
+  },
+  "why_now_signals": [
+   {
+    "type": "trend_worsening",
+    "text": "UK entities' average days to pay rose by about 8 days year on year (2 of 2 entities with a prior report got slower; median change +8 days)",
+    "url": "https://check-payment-practices.service.gov.uk/report/115059"
+   },
+   {
+    "type": "new_evidence",
+    "text": "Latest statutory UK payment report filed 2026-07-30 (Haleon Uk Trading Limited)",
+    "url": "https://check-payment-practices.service.gov.uk/report/115059"
+   },
+   {
+    "type": "code_status",
+    "text": "No UK reporting entity states membership of a payment code",
+    "url": "https://check-payment-practices.service.gov.uk/report/115059"
+   },
+   {
+    "type": "long_terms",
+    "text": "Maximum contractual payment period of 125 days reported by a UK entity",
+    "url": "https://check-payment-practices.service.gov.uk/report/115059"
+   },
+   {
+    "type": "scf_offered",
+    "text": "A UK entity reports offering supply chain finance to suppliers: ask which suppliers it reaches, at whose cost, and whether it lengthened terms",
+    "url": "https://check-payment-practices.service.gov.uk/report/115059"
+   }
+  ],
+  "estimates": {
+   "estimate": true,
+   "assumptions": {
+    "early_pay_day": 10,
+    "max_days_accelerated": 60,
+    "scenarios": {
+     "low": {
+      "share_eligible": 0.05,
+      "annualised_rate": 0.12
+     },
+     "base": {
+      "share_eligible": 0.1,
+      "annualised_rate": 0.14
+     },
+     "high": {
+      "share_eligible": 0.15,
+      "annualised_rate": 0.18
+     }
+    },
+    "config_file": "config/assumptions.yaml",
+    "formula": "spend x share_eligible x annualised_rate x days_accelerated / 365"
+   },
+   "uk_scope": {
+    "basis": "Invoice value paid by the matched UK entities in their latest half-year reports, annualised x2 (reported base, estimated result)",
+    "currency": "GBP",
+    "annual_payments": 849046642.0,
+    "days_used": 81.0,
+    "supplier_cash_beyond_30_days": 118633914.36164384,
+    "early_payment_discount_opportunity": {
+     "low": 837415.8660821918,
+     "base": 1953970.354191781,
+     "high": 3768371.397369863
+    }
+   },
+   "group_proxy": {
+    "basis": "Group cost of sales (cost_of_sales_fy2025) with group-level days from computed DPO (proxy), FY2025.0. A balance-sheet proxy, not reported days to pay.",
+    "currency": "GBP",
+    "spend_proxy": 3950000000.0,
+    "days_used": 190.2,
+    "supplier_cash_beyond_30_days": 1733671232.8767123,
+    "early_payment_discount_opportunity": {
+     "low": 3895890.4109589043,
+     "base": 9090410.958904112,
+     "high": 17531506.84931507
+    }
+   },
+   "whose_money": "The range is the gross annual discount a buyer could capture by paying eligible invoices early, before the buyer's own cost of funding that early payment and without netting any existing supply chain finance programme."
+  },
+  "payment_profile": {
+   "reported": {
+    "uk": {
+     "what": "Statutory UK payment practices reports filed by this group's UK legal entities. UK entities only, not global group behaviour.",
+     "estimate": false,
+     "entities_n": 2,
+     "avg_days_to_pay_mean_of_entities": 81.0,
+     "aggregation": "invoice_value_weighted_mean",
+     "avg_days_to_pay_simple_mean": 80.5,
+     "pct_invoices_paid_late_mean": 3.7,
+     "pct_invoices_paid_over_60_days_mean": 86.0,
+     "trend_days_year_on_year_mean": 7.5,
+     "trend_days_year_on_year_median": 7.5,
+     "trend_entities_slower": 2.0,
+     "trend_entities_compared": 2.0,
+     "slowest_entity": {
+      "name": "HALEON UK TRADING LIMITED",
+      "avg_days_to_pay": 82.0,
+      "source_url": "https://check-payment-practices.service.gov.uk/report/115059"
+     },
+     "period": {
+      "start": "2026-01-01",
+      "end": "2026-06-30"
+     },
+     "entities_left_out_of_group_figures_as_extreme": null,
+     "entity_match_confidence_min": 0.95,
+     "entity_match_methods": "ch_psc_chain",
+     "entities": [
+      {
+       "name": "HALEON UK TRADING LIMITED",
+       "company_number": "09237643",
+       "avg_days_to_pay": 82.0,
+       "pct_paid_late": 5.0,
+       "pct_paid_late_note": null,
+       "trend_days_yoy": 14.0,
+       "invoice_value_gbp_half_year": 282039789.0,
+       "pct_paid_over_60": 84.0,
+       "standard_terms_days": [
+        0.0,
+        120.0
+       ],
+       "max_contractual_days": 125.0,
+       "period_start": "2026-01-01",
+       "period_end": "2026-06-30",
+       "source_url": "https://check-payment-practices.service.gov.uk/report/115059"
+      },
+      {
+       "name": "HALEON UK SERVICES LIMITED",
+       "company_number": "09237639",
+       "avg_days_to_pay": 79.0,
+       "pct_paid_late": 1.0,
+       "pct_paid_late_note": null,
+       "trend_days_yoy": 1.0,
+       "invoice_value_gbp_half_year": 142483532.0,
+       "pct_paid_over_60": 90.0,
+       "standard_terms_days": [
+        0.0,
+        120.0
+       ],
+       "max_contractual_days": 125.0,
+       "period_start": "2026-01-01",
+       "period_end": "2026-06-30",
+       "source_url": "https://check-payment-practices.service.gov.uk/report/115063"
+      }
+     ],
+     "source_type": "uk_ppr_statutory_report"
+    }
+   },
+   "computed_proxy": {
+    "what": "Computed DPO (proxy) = trade payables / cost of sales x 365 from XBRL financial statements. A balance-sheet proxy, not reported days to pay.",
+    "estimate": false,
+    "is_proxy": true,
+    "dpo_days": 190.2,
+    "prior_year_dpo_days": 163.3,
+    "flag": "ok",
+    "fiscal_year": 2025.0,
+    "period_end": "2025-12-31",
+    "sector_median_dpo_days": 78.6,
+    "payables_basis": "trade",
+    "cost_basis": "cost_of_sales",
+    "confidence": 1.0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1900304/000110465926027443/",
+    "source_type": "sec_xbrl"
+   }
+  },
+  "hook": "Haleon's UK entities paid 86% of supplier invoices after more than 60 days (weighted UK average 81 days across 2 entities; UK median 32)."
+ },
+ {
+  "company_id": "eaton-corporation-q48872",
+  "name": "Eaton Corporation",
+  "country": "US",
+  "hq_city": "Cleveland",
+  "sector": "manufacturing",
+  "revenue": {
+   "amount": 27448000000.0,
+   "currency": "USD",
+   "period_end": "2025-12-31",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1551182/000155118226000007/",
+   "source_type": "sec_xbrl_companyfacts",
+   "stale": false
+  },
+  "scores": {
+   "fit": 86.8,
+   "pain": 78.1,
+   "signal": 30.0,
+   "priority": 74.8,
+   "fit_parts": {
+    "revenue": 25.5,
+    "geography": 21.2,
+    "sector": 30.0,
+    "erp": 5.0,
+    "supplier_breadth": 5.0
+   },
+   "pain_parts": {
+    "days": 45.0,
+    "pct_late": 18.1,
+    "pct_over_60": 15.0,
+    "trend": 0.0,
+    "uk_materiality_factor": 1.0
+   },
+   "pain_evidence_tier": 1.0,
+   "pain_basis": "uk_reported",
+   "method": "deterministic formula, weights in config/assumptions.yaml"
+  },
+  "why_now_signals": [
+   {
+    "type": "new_evidence",
+    "text": "Latest statutory UK payment report filed 2026-08-03 (Eaton Electrical Systems Limited)",
+    "url": "https://check-payment-practices.service.gov.uk/report/116074"
+   },
+   {
+    "type": "code_status",
+    "text": "No UK reporting entity states membership of a payment code",
+    "url": "https://check-payment-practices.service.gov.uk/report/116051"
+   },
+   {
+    "type": "long_terms",
+    "text": "Maximum contractual payment period of 120 days reported by a UK entity",
+    "url": "https://check-payment-practices.service.gov.uk/report/116051"
+   },
+   {
+    "type": "scf_offered",
+    "text": "A UK entity reports offering supply chain finance to suppliers: ask which suppliers it reaches, at whose cost, and whether it lengthened terms",
+    "url": "https://check-payment-practices.service.gov.uk/report/116051"
+   },
+   {
+    "type": "sf_disclosed",
+    "text": "Annual report for the year to 2025-12-31 discloses a supplier finance programme with USD 543m outstanding",
+    "url": "https://www.sec.gov/Archives/edgar/data/1551182/000155118226000007/etn-20251231.htm"
+   }
+  ],
+  "estimates": {
+   "estimate": true,
+   "assumptions": {
+    "early_pay_day": 10,
+    "max_days_accelerated": 60,
+    "scenarios": {
+     "low": {
+      "share_eligible": 0.05,
+      "annualised_rate": 0.12
+     },
+     "base": {
+      "share_eligible": 0.1,
+      "annualised_rate": 0.14
+     },
+     "high": {
+      "share_eligible": 0.15,
+      "annualised_rate": 0.18
+     }
+    },
+    "config_file": "config/assumptions.yaml",
+    "formula": "spend x share_eligible x annualised_rate x days_accelerated / 365"
+   },
+   "uk_scope": {
+    "basis": "Invoice value paid by the matched UK entities in their latest half-year reports, annualised x2 (reported base, estimated result)",
+    "currency": "GBP",
+    "annual_payments": 408082070.0,
+    "days_used": 81.0,
+    "supplier_cash_beyond_30_days": 57019686.49315068,
+    "early_payment_discount_opportunity": {
+     "low": 402491.9046575342,
+     "base": 939147.7775342466,
+     "high": 1811213.570958904
+    }
+   },
+   "group_proxy": {
+    "basis": "Group cost of sales (cost_of_sales_fy2025) with group-level days from computed DPO (proxy), FY2025.0. A balance-sheet proxy, not reported days to pay.",
+    "currency": "USD",
+    "spend_proxy": 17131000000.0,
+    "days_used": 88.8,
+    "supplier_cash_beyond_30_days": 2759733698.630137,
+    "early_payment_discount_opportunity": {
+     "low": 16896328.76712329,
+     "base": 39424767.12328768,
+     "high": 76033479.4520548
+    }
+   },
+   "whose_money": "The range is the gross annual discount a buyer could capture by paying eligible invoices early, before the buyer's own cost of funding that early payment and without netting any existing supply chain finance programme."
+  },
+  "payment_profile": {
+   "reported": {
+    "uk": {
+     "what": "Statutory UK payment practices reports filed by this group's UK legal entities. UK entities only, not global group behaviour.",
+     "estimate": false,
+     "entities_n": 3,
+     "avg_days_to_pay_mean_of_entities": 81.0,
+     "aggregation": "invoice_value_weighted_mean",
+     "avg_days_to_pay_simple_mean": 78.7,
+     "pct_invoices_paid_late_mean": 36.2,
+     "pct_invoices_paid_over_60_days_mean": 57.8,
+     "trend_days_year_on_year_mean": -10.0,
+     "trend_days_year_on_year_median": -10.0,
+     "trend_entities_slower": 0.0,
+     "trend_entities_compared": 3.0,
+     "slowest_entity": {
+      "name": "EATON LIMITED",
+      "avg_days_to_pay": 83.0,
+      "source_url": "https://check-payment-practices.service.gov.uk/report/116051"
+     },
+     "period": {
+      "start": "2026-01-01",
+      "end": "2026-06-30"
+     },
+     "entities_left_out_of_group_figures_as_extreme": null,
+     "entity_match_confidence_min": 0.95,
+     "entity_match_methods": "ch_psc_chain|exact_name",
+     "entities": [
+      {
+       "name": "EATON LIMITED",
+       "company_number": "00155621",
+       "avg_days_to_pay": 83.0,
+       "pct_paid_late": 39.0,
+       "pct_paid_late_note": null,
+       "trend_days_yoy": -1.0,
+       "invoice_value_gbp_half_year": 140365513.0,
+       "pct_paid_over_60": 61.0,
+       "standard_terms_days": [
+        7.0,
+        120.0
+       ],
+       "max_contractual_days": 120.0,
+       "period_start": "2026-01-01",
+       "period_end": "2026-06-30",
+       "source_url": "https://check-payment-practices.service.gov.uk/report/116051"
+      },
+      {
+       "name": "EATON ELECTRICAL SYSTEMS LIMITED",
+       "company_number": "03012749",
+       "avg_days_to_pay": 77.0,
+       "pct_paid_late": 28.0,
+       "pct_paid_late_note": null,
+       "trend_days_yoy": -14.0,
+       "invoice_value_gbp_half_year": 36649284.0,
+       "pct_paid_over_60": 43.0,
+       "standard_terms_days": [
+        7.0,
+        120.0
+       ],
+       "max_contractual_days": 120.0,
+       "period_start": "2026-01-01",
+       "period_end": "2026-06-30",
+       "source_url": "https://check-payment-practices.service.gov.uk/report/116074"
+      },
+      {
+       "name": "EATON MEDC LIMITED",
+       "company_number": "01202172",
+       "avg_days_to_pay": 76.0,
+       "pct_paid_late": 33.0,
+       "pct_paid_late_note": null,
+       "trend_days_yoy": -10.0,
+       "invoice_value_gbp_half_year": 27026238.0,
+       "pct_paid_over_60": 61.0,
+       "standard_terms_days": [
+        7.0,
+        120.0
+       ],
+       "max_contractual_days": 120.0,
+       "period_start": "2026-01-01",
+       "period_end": "2026-06-30",
+       "source_url": "https://check-payment-practices.service.gov.uk/report/116086"
+      }
+     ],
+     "source_type": "uk_ppr_statutory_report"
+    }
+   },
+   "computed_proxy": {
+    "what": "Computed DPO (proxy) = trade payables / cost of sales x 365 from XBRL financial statements. A balance-sheet proxy, not reported days to pay.",
+    "estimate": false,
+    "is_proxy": true,
+    "dpo_days": 88.8,
+    "prior_year_dpo_days": 87.3,
+    "flag": "ok",
+    "fiscal_year": 2025.0,
+    "period_end": "2025-12-31",
+    "sector_median_dpo_days": 63.0,
+    "payables_basis": "trade",
+    "cost_basis": "cost_of_sales",
+    "confidence": 1.0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1551182/000155118226000007/",
+    "source_type": "sec_xbrl"
+   }
+  },
+  "hook": "Eaton's UK entities paid 58% of supplier invoices after more than 60 days (weighted UK average 81 days across 3 entities; UK median 32)."
+ },
+ {
+  "company_id": "terex-corp-cik97216",
+  "name": "Terex Corp",
+  "country": "US",
+  "hq_city": null,
+  "sector": "manufacturing",
+  "revenue": {
+   "amount": 5421000000.0,
+   "currency": "USD",
+   "period_end": "2025-12-31",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/97216/000009721626000035/",
+   "source_type": "sec_xbrl_companyfacts",
+   "stale": false
+  },
+  "scores": {
+   "fit": 73.8,
+   "pain": 88.8,
+   "signal": 38.8,
+   "priority": 74.5,
+   "fit_parts": {
+    "revenue": 15.0,
+    "geography": 21.2,
+    "sector": 30.0,
+    "erp": 5.0,
+    "supplier_breadth": 2.5
+   },
+   "pain_parts": {
+    "days": 45.0,
+    "pct_late": 25.0,
+    "pct_over_60": 15.0,
+    "trend": 3.8,
+    "uk_materiality_factor": 1.0
+   },
+   "pain_evidence_tier": 1.0,
+   "pain_basis": "uk_reported",
+   "method": "deterministic formula, weights in config/assumptions.yaml"
+  },
+  "why_now_signals": [
+   {
+    "type": "trend_worsening",
+    "text": "The UK entity's average days to pay rose by 2.0 days year on year",
+    "url": "https://check-payment-practices.service.gov.uk/report/114230"
+   },
+   {
+    "type": "new_evidence",
+    "text": "Latest statutory UK payment report filed 2026-07-28 (Terex Gb Limited)",
+    "url": "https://check-payment-practices.service.gov.uk/report/114230"
+   },
+   {
+    "type": "code_status",
+    "text": "No UK reporting entity states membership of a payment code",
+    "url": "https://check-payment-practices.service.gov.uk/report/114230"
+   },
+   {
+    "type": "long_terms",
+    "text": "Maximum contractual payment period of 90 days reported by a UK entity",
+    "url": "https://check-payment-practices.service.gov.uk/report/114230"
+   },
+   {
+    "type": "sf_disclosed",
+    "text": "Annual report for the year to 2025-12-31 discloses a supplier finance programme with USD 36m outstanding",
+    "url": "https://www.sec.gov/Archives/edgar/data/97216/000009721626000035/tex-20251231.htm"
+   }
+  ],
+  "estimates": {
+   "estimate": true,
+   "assumptions": {
+    "early_pay_day": 10,
+    "max_days_accelerated": 60,
+    "scenarios": {
+     "low": {
+      "share_eligible": 0.05,
+      "annualised_rate": 0.12
+     },
+     "base": {
+      "share_eligible": 0.1,
+      "annualised_rate": 0.14
+     },
+     "high": {
+      "share_eligible": 0.15,
+      "annualised_rate": 0.18
+     }
+    },
+    "config_file": "config/assumptions.yaml",
+    "formula": "spend x share_eligible x annualised_rate x days_accelerated / 365"
+   },
+   "uk_scope": {
+    "basis": "Invoice value paid by the matched UK entities in their latest half-year reports, annualised x2 (reported base, estimated result)",
+    "currency": "GBP",
+    "annual_payments": 401673072.0,
+    "days_used": 69.0,
+    "supplier_cash_beyond_30_days": 42918492.624657534,
+    "early_payment_discount_opportunity": {
+     "low": 389567.85613150685,
+     "base": 908991.6643068495,
+     "high": 1753055.3525917805
+    }
+   },
+   "group_proxy": {
+    "basis": "Group cost of sales (cost_of_sales_fy2025) with group-level days from computed DPO (proxy), FY2025.0. A balance-sheet proxy, not reported days to pay.",
+    "currency": "USD",
+    "spend_proxy": 4370000000.0,
+    "days_used": 57.0,
+    "supplier_cash_beyond_30_days": 323260273.9726027,
+    "early_payment_discount_opportunity": {
+     "low": 3376273.97260274,
+     "base": 7877972.602739727,
+     "high": 15193232.87671233
+    }
+   },
+   "whose_money": "The range is the gross annual discount a buyer could capture by paying eligible invoices early, before the buyer's own cost of funding that early payment and without netting any existing supply chain finance programme."
+  },
+  "payment_profile": {
+   "reported": {
+    "uk": {
+     "what": "Statutory UK payment practices reports filed by this group's UK legal entities. UK entities only, not global group behaviour.",
+     "estimate": false,
+     "entities_n": 1,
+     "avg_days_to_pay_mean_of_entities": 69.0,
+     "aggregation": "invoice_value_weighted_mean",
+     "avg_days_to_pay_simple_mean": 69.0,
+     "pct_invoices_paid_late_mean": 97.0,
+     "pct_invoices_paid_over_60_days_mean": 80.0,
+     "trend_days_year_on_year_mean": 2.0,
+     "trend_days_year_on_year_median": 2.0,
+     "trend_entities_slower": 1.0,
+     "trend_entities_compared": 1.0,
+     "slowest_entity": {
+      "name": "TEREX GB LIMITED",
+      "avg_days_to_pay": 69.0,
+      "source_url": "https://check-payment-practices.service.gov.uk/report/114230"
+     },
+     "period": {
+      "start": "2026-01-01",
+      "end": "2026-06-30"
+     },
+     "entities_left_out_of_group_figures_as_extreme": null,
+     "entity_match_confidence_min": 0.95,
+     "entity_match_methods": "ch_psc_chain",
+     "entities": [
+      {
+       "name": "TEREX GB LIMITED",
+       "company_number": "NI006669",
+       "avg_days_to_pay": 69.0,
+       "pct_paid_late": 97.0,
+       "pct_paid_late_note": null,
+       "trend_days_yoy": 2.0,
+       "invoice_value_gbp_half_year": 200836536.0,
+       "pct_paid_over_60": 80.0,
+       "standard_terms_days": [
+        0.0,
+        null
+       ],
+       "max_contractual_days": 90.0,
+       "period_start": "2026-01-01",
+       "period_end": "2026-06-30",
+       "source_url": "https://check-payment-practices.service.gov.uk/report/114230"
+      }
+     ],
+     "source_type": "uk_ppr_statutory_report"
+    }
+   },
+   "computed_proxy": {
+    "what": "Computed DPO (proxy) = trade payables / cost of sales x 365 from XBRL financial statements. A balance-sheet proxy, not reported days to pay.",
+    "estimate": false,
+    "is_proxy": true,
+    "dpo_days": 57.0,
+    "prior_year_dpo_days": 52.2,
+    "flag": "ok",
+    "fiscal_year": 2025.0,
+    "period_end": "2025-12-31",
+    "sector_median_dpo_days": 63.0,
+    "payables_basis": "trade",
+    "cost_basis": "cost_of_sales",
+    "confidence": 1.0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/97216/000009721626000035/",
+    "source_type": "sec_xbrl"
+   }
+  },
+  "hook": "Terex's UK entity paid 80% of supplier invoices after more than 60 days (69 days on average; UK median 32)."
+ },
+ {
+  "company_id": "prysmian-group-q1964784",
+  "name": "Prysmian Group",
+  "country": "IT",
+  "hq_city": "Milan",
+  "sector": "manufacturing",
+  "revenue": {
+   "amount": 17165000000.0,
+   "currency": "EUR",
+   "period_end": "2024-12-31",
+   "source_url": "https://filings.xbrl.org/529900X0H1IO3RS1A464/2024-12-31/ESEF/IT/1/529900X0H1IO3RS1A464-2024-12-31-it/reports/ixbrlviewer.html",
+   "source_type": "esef_xbrl_json",
+   "stale": false
+  },
+  "scores": {
+   "fit": 80.8,
+   "pain": 77.5,
+   "signal": 45.8,
+   "priority": 74.2,
+   "fit_parts": {
+    "revenue": 21.0,
+    "geography": 21.2,
+    "sector": 30.0,
+    "erp": 5.0,
+    "supplier_breadth": 3.5
+   },
+   "pain_parts": {
+    "days": 37.7,
+    "pct_late": 18.1,
+    "pct_over_60": 15.0,
+    "trend": 6.8,
+    "uk_materiality_factor": 1.0
+   },
+   "pain_evidence_tier": 1.0,
+   "pain_basis": "uk_reported",
+   "method": "deterministic formula, weights in config/assumptions.yaml"
+  },
+  "why_now_signals": [
+   {
+    "type": "trend_worsening",
+    "text": "UK entities' average days to pay rose by about 4 days year on year (2 of 2 entities with a prior report got slower; median change +4 days)",
+    "url": "https://check-payment-practices.service.gov.uk/report/116280"
+   },
+   {
+    "type": "new_evidence",
+    "text": "Latest statutory UK payment report filed 2026-08-06 (Prysmian Cables & Systems Limited)",
+    "url": "https://check-payment-practices.service.gov.uk/report/116280"
+   },
+   {
+    "type": "code_status",
+    "text": "No UK reporting entity states membership of a payment code",
+    "url": "https://check-payment-practices.service.gov.uk/report/116280"
+   },
+   {
+    "type": "long_terms",
+    "text": "Maximum contractual payment period of 120 days reported by a UK entity",
+    "url": "https://check-payment-practices.service.gov.uk/report/116280"
+   }
+  ],
+  "estimates": {
+   "estimate": true,
+   "assumptions": {
+    "early_pay_day": 10,
+    "max_days_accelerated": 60,
+    "scenarios": {
+     "low": {
+      "share_eligible": 0.05,
+      "annualised_rate": 0.12
+     },
+     "base": {
+      "share_eligible": 0.1,
+      "annualised_rate": 0.14
+     },
+     "high": {
+      "share_eligible": 0.15,
+      "annualised_rate": 0.18
+     }
+    },
+    "config_file": "config/assumptions.yaml",
+    "formula": "spend x share_eligible x annualised_rate x days_accelerated / 365"
+   },
+   "uk_scope": {
+    "basis": "Invoice value paid by the matched UK entities in their latest half-year reports, annualised x2 (reported base, estimated result)",
+    "currency": "GBP",
+    "annual_payments": 262902880.0,
+    "days_used": 58.5,
+    "supplier_cash_beyond_30_days": 20528033.09589041,
+    "early_payment_discount_opportunity": {
+     "low": 209602.02213698628,
+     "base": 489071.3849863014,
+     "high": 943209.0996164384
+    }
+   },
+   "whose_money": "The range is the gross annual discount a buyer could capture by paying eligible invoices early, before the buyer's own cost of funding that early payment and without netting any existing supply chain finance programme."
+  },
+  "payment_profile": {
+   "reported": {
+    "uk": {
+     "what": "Statutory UK payment practices reports filed by this group's UK legal entities. UK entities only, not global group behaviour.",
+     "estimate": false,
+     "entities_n": 2,
+     "avg_days_to_pay_mean_of_entities": 58.5,
+     "aggregation": "invoice_value_weighted_mean",
+     "avg_days_to_pay_simple_mean": 56.0,
+     "pct_invoices_paid_late_mean": 36.1,
+     "pct_invoices_paid_over_60_days_mean": 45.3,
+     "trend_days_year_on_year_mean": 3.6,
+     "trend_days_year_on_year_median": 4.0,
+     "trend_entities_slower": 2.0,
+     "trend_entities_compared": 2.0,
+     "slowest_entity": {
+      "name": "PRYSMIAN CABLES & SYSTEMS LIMITED",
+      "avg_days_to_pay": 62.0,
+      "source_url": "https://check-payment-practices.service.gov.uk/report/116280"
+     },
+     "period": {
+      "start": "2025-07-01",
+      "end": "2025-12-31"
+     },
+     "entities_left_out_of_group_figures_as_extreme": null,
+     "entity_match_confidence_min": 0.95,
+     "entity_match_methods": "ch_psc_chain",
+     "entities": [
+      {
+       "name": "PRYSMIAN CABLES & SYSTEMS LIMITED",
+       "company_number": "00958507",
+       "avg_days_to_pay": 62.0,
+       "pct_paid_late": 25.0,
+       "pct_paid_late_note": null,
+       "trend_days_yoy": 3.0,
+       "invoice_value_gbp_half_year": 93211438.0,
+       "pct_paid_over_60": 52.0,
+       "standard_terms_days": [
+        66.0,
+        null
+       ],
+       "max_contractual_days": 120.0,
+       "period_start": "2025-07-01",
+       "period_end": "2025-12-31",
+       "source_url": "https://check-payment-practices.service.gov.uk/report/116280"
+      },
+      {
+       "name": "PRYSMIAN POWERLINK SERVICES LIMITED",
+       "company_number": "07656179",
+       "avg_days_to_pay": 50.0,
+       "pct_paid_late": 63.0,
+       "pct_paid_late_note": null,
+       "trend_days_yoy": 5.0,
+       "invoice_value_gbp_half_year": 38240002.0,
+       "pct_paid_over_60": 29.0,
+       "standard_terms_days": [
+        30.0,
+        120.0
+       ],
+       "max_contractual_days": 120.0,
+       "period_start": "2025-07-01",
+       "period_end": "2025-12-31",
+       "source_url": "https://check-payment-practices.service.gov.uk/report/109860"
+      }
+     ],
+     "source_type": "uk_ppr_statutory_report"
+    }
+   },
+   "computed_proxy": {
+    "what": "Computed DPO (proxy) = trade payables / cost of sales x 365 from XBRL financial statements. A balance-sheet proxy, not reported days to pay.",
+    "estimate": false,
+    "is_proxy": true,
+    "dpo_days": 66.3,
+    "prior_year_dpo_days": 65.4,
+    "flag": "ok",
+    "fiscal_year": 2024.0,
+    "period_end": "2024-12-31",
+    "sector_median_dpo_days": 63.0,
+    "payables_basis": "trade",
+    "cost_basis": "by_nature_fallback",
+    "confidence": 0.7,
+    "source_url": "https://filings.xbrl.org/529900X0H1IO3RS1A464/2024-12-31/ESEF/IT/1/529900X0H1IO3RS1A464-2024-12-31-it/reports/ixbrlviewer.html",
+    "source_type": "esef_xbrl"
+   }
+  },
+  "hook": "Prysmian Group's UK entities paid 45% of supplier invoices after more than 60 days (weighted UK average 58 days across 2 entities; UK median 32)."
+ },
+ {
+  "company_id": "unilever-q157062",
+  "name": "Unilever",
+  "country": "GB",
+  "hq_city": "Rotterdam",
+  "sector": "consumer_goods",
+  "revenue": {
+   "amount": 50503000000.0,
+   "currency": "EUR",
+   "period_end": "2025-12-31",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/217410/000021741026000007/",
+   "source_type": "sec_xbrl_companyfacts",
+   "stale": false
+  },
+  "scores": {
+   "fit": 93.5,
+   "pain": 65.7,
+   "signal": 38.8,
+   "priority": 74.2,
+   "fit_parts": {
+    "revenue": 30.0,
+    "geography": 25.0,
+    "sector": 28.5,
+    "erp": 5.0,
+    "supplier_breadth": 5.0
+   },
+   "pain_parts": {
+    "days": 45.0,
+    "pct_late": 1.9,
+    "pct_over_60": 15.0,
+    "trend": 3.8,
+    "uk_materiality_factor": 1.0
+   },
+   "pain_evidence_tier": 1.0,
+   "pain_basis": "uk_reported",
+   "method": "deterministic formula, weights in config/assumptions.yaml"
+  },
+  "why_now_signals": [
+   {
+    "type": "trend_worsening",
+    "text": "UK entities' average days to pay rose by about 2 days year on year (2 of 3 entities with a prior report got slower; median change +2 days)",
+    "url": "https://check-payment-practices.service.gov.uk/report/114855"
+   },
+   {
+    "type": "new_evidence",
+    "text": "Latest statutory UK payment report filed 2026-07-30 (Unilever Uk Limited)",
+    "url": "https://check-payment-practices.service.gov.uk/report/114859"
+   },
+   {
+    "type": "code_status",
+    "text": "No UK reporting entity states membership of a payment code",
+    "url": "https://check-payment-practices.service.gov.uk/report/114855"
+   },
+   {
+    "type": "long_terms",
+    "text": "Maximum contractual payment period of 180 days reported by a UK entity",
+    "url": "https://check-payment-practices.service.gov.uk/report/114855"
+   },
+   {
+    "type": "scf_offered",
+    "text": "A UK entity reports offering supply chain finance to suppliers: ask which suppliers it reaches, at whose cost, and whether it lengthened terms",
+    "url": "https://check-payment-practices.service.gov.uk/report/114855"
+   }
+  ],
+  "estimates": {
+   "estimate": true,
+   "assumptions": {
+    "early_pay_day": 10,
+    "max_days_accelerated": 60,
+    "scenarios": {
+     "low": {
+      "share_eligible": 0.05,
+      "annualised_rate": 0.12
+     },
+     "base": {
+      "share_eligible": 0.1,
+      "annualised_rate": 0.14
+     },
+     "high": {
+      "share_eligible": 0.15,
+      "annualised_rate": 0.18
+     }
+    },
+    "config_file": "config/assumptions.yaml",
+    "formula": "spend x share_eligible x annualised_rate x days_accelerated / 365"
+   },
+   "uk_scope": {
+    "basis": "Invoice value paid by the matched UK entities in their latest half-year reports, annualised x2 (reported base, estimated result)",
+    "currency": "GBP",
+    "annual_payments": 3365950478.0,
+    "days_used": 69.3,
+    "supplier_cash_beyond_30_days": 362416037.7682192,
+    "early_payment_discount_opportunity": {
+     "low": 3281110.082390137,
+     "base": 7655923.525576987,
+     "high": 14764995.370755613
+    }
+   },
+   "group_proxy": {
+    "basis": "Group cost of sales (cost_of_sales_fy2025) with group-level days from computed DPO (proxy), FY2025.0. A balance-sheet proxy, not reported days to pay.",
+    "currency": "EUR",
+    "spend_proxy": 26794000000.0,
+    "days_used": 149.8,
+    "supplier_cash_beyond_30_days": 8794304657.534248,
+    "early_payment_discount_opportunity": {
+     "low": 26426958.90410959,
+     "base": 61662904.109589055,
+     "high": 118921315.06849316
+    }
+   },
+   "whose_money": "The range is the gross annual discount a buyer could capture by paying eligible invoices early, before the buyer's own cost of funding that early payment and without netting any existing supply chain finance programme."
+  },
+  "payment_profile": {
+   "reported": {
+    "uk": {
+     "what": "Statutory UK payment practices reports filed by this group's UK legal entities. UK entities only, not global group behaviour.",
+     "estimate": false,
+     "entities_n": 3,
+     "avg_days_to_pay_mean_of_entities": 69.3,
+     "aggregation": "invoice_value_weighted_mean",
+     "avg_days_to_pay_simple_mean": 59.3,
+     "pct_invoices_paid_late_mean": 3.9,
+     "pct_invoices_paid_over_60_days_mean": 59.5,
+     "trend_days_year_on_year_mean": 2.0,
+     "trend_days_year_on_year_median": 2.0,
+     "trend_entities_slower": 2.0,
+     "trend_entities_compared": 3.0,
+     "slowest_entity": {
+      "name": "UNILEVER U.K. CENTRAL RESOURCES LIMITED",
+      "avg_days_to_pay": 74.0,
+      "source_url": "https://check-payment-practices.service.gov.uk/report/114855"
+     },
+     "period": {
+      "start": "2026-01-01",
+      "end": "2026-06-30"
+     },
+     "entities_left_out_of_group_figures_as_extreme": null,
+     "entity_match_confidence_min": 0.95,
+     "entity_match_methods": "ch_psc_chain",
+     "entities": [
+      {
+       "name": "UNILEVER U.K. CENTRAL RESOURCES LIMITED",
+       "company_number": "00029140",
+       "avg_days_to_pay": 74.0,
+       "pct_paid_late": 3.0,
+       "pct_paid_late_note": null,
+       "trend_days_yoy": 5.0,
+       "invoice_value_gbp_half_year": 926586564.0,
+       "pct_paid_over_60": 67.0,
+       "standard_terms_days": [
+        30.0,
+        90.0
+       ],
+       "max_contractual_days": 180.0,
+       "period_start": "2026-01-01",
+       "period_end": "2026-06-30",
+       "source_url": "https://check-payment-practices.service.gov.uk/report/114855"
+      },
+      {
+       "name": "UNILEVER UK LIMITED",
+       "company_number": "00334527",
+       "avg_days_to_pay": 65.0,
+       "pct_paid_late": 5.0,
+       "pct_paid_late_note": null,
+       "trend_days_yoy": 2.0,
+       "invoice_value_gbp_half_year": 714943215.0,
+       "pct_paid_over_60": 52.0,
+       "standard_terms_days": [
+        30.0,
+        90.0
+       ],
+       "max_contractual_days": 180.0,
+       "period_start": "2026-01-01",
+       "period_end": "2026-06-30",
+       "source_url": "https://check-payment-practices.service.gov.uk/report/114859"
+      },
+      {
+       "name": "UNILEVER GLOBAL IP LIMITED",
+       "company_number": "12920301",
+       "avg_days_to_pay": 39.0,
+       "pct_paid_late": 7.0,
+       "pct_paid_late_note": null,
+       "trend_days_yoy": -10.0,
+       "invoice_value_gbp_half_year": 41445460.0,
+       "pct_paid_over_60": 22.0,
+       "standard_terms_days": [
+        30.0,
+        90.0
+       ],
+       "max_contractual_days": 180.0,
+       "period_start": "2026-01-01",
+       "period_end": "2026-06-30",
+       "source_url": "https://check-payment-practices.service.gov.uk/report/114848"
+      }
+     ],
+     "source_type": "uk_ppr_statutory_report"
+    }
+   },
+   "computed_proxy": {
+    "what": "Computed DPO (proxy) = trade payables / cost of sales x 365 from XBRL financial statements. A balance-sheet proxy, not reported days to pay.",
+    "estimate": false,
+    "is_proxy": true,
+    "dpo_days": 149.8,
+    "prior_year_dpo_days": 133.8,
+    "flag": "ok",
+    "fiscal_year": 2025.0,
+    "period_end": "2025-12-31",
+    "sector_median_dpo_days": 78.6,
+    "payables_basis": "trade",
+    "cost_basis": "cost_of_sales",
+    "confidence": 1.0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/217410/000021741026000007/",
+    "source_type": "sec_xbrl"
+   }
+  },
+  "hook": "Unilever's UK entities paid 60% of supplier invoices after more than 60 days (weighted UK average 69 days across 3 entities; UK median 32)."
+ },
+ {
+  "company_id": "puig-q3410623",
+  "name": "Puig",
+  "country": "ES",
+  "hq_city": "L'Hospitalet de Llobregat",
+  "sector": "consumer_goods",
+  "revenue": {
+   "amount": 5042026000.0,
+   "currency": "EUR",
+   "period_end": "2025-12-31",
+   "source_url": "https://filings.xbrl.org/549300OVHNSX30L1AQ94/2025-12-31/ESEF/ES/0/549300OVHNSX30L1AQ94-2025-12-31-es/reports/ixbrlviewer.html",
+   "source_type": "esef_xbrl_json",
+   "stale": false
+  },
+  "scores": {
+   "fit": 77.0,
+   "pain": 75.0,
+   "signal": 60.6,
+   "priority": 73.7,
+   "fit_parts": {
+    "revenue": 15.0,
+    "geography": 25.0,
+    "sector": 28.5,
+    "erp": 5.0,
+    "supplier_breadth": 3.5
+   },
+   "pain_parts": {
+    "days": 38.2,
+    "pct_late": 10.8,
+    "pct_over_60": 12.9,
+    "trend": 13.1
+   },
+   "pain_evidence_tier": 1.0,
+   "pain_basis": "es_reported",
+   "method": "deterministic formula, weights in config/assumptions.yaml"
+  },
+  "why_now_signals": [
+   {
+    "type": "trend_worsening",
+    "text": "Average supplier payment period in Spain rose from 52 to 59 days",
+    "url": "https://filings.xbrl.org/549300OVHNSX30L1AQ94/2025-12-31/ESEF/ES/0/549300OVHNSX30L1AQ94-2025-12-31-es.json"
+   },
+   {
+    "type": "new_evidence",
+    "text": "Latest statutory UK payment report filed 2026-08-03 (Charlotte Tilbury Beauty Limited)",
+    "url": "https://check-payment-practices.service.gov.uk/report/116096"
+   },
+   {
+    "type": "code_status",
+    "text": "No UK reporting entity states membership of a payment code",
+    "url": "https://check-payment-practices.service.gov.uk/report/116096"
+   },
+   {
+    "type": "long_terms",
+    "text": "Maximum contractual payment period of 90 days reported by a UK entity",
+    "url": "https://check-payment-practices.service.gov.uk/report/116096"
+   },
+   {
+    "type": "sf_disclosed",
+    "text": "Annual report for the year to 2025-12-31 discloses a supplier finance programme with EUR 54m outstanding",
+    "url": "https://filings.xbrl.org/549300OVHNSX30L1AQ94/2025-12-31/ESEF/ES/0/549300OVHNSX30L1AQ94-2025-12-31-es.json"
+   }
+  ],
+  "estimates": {
+   "estimate": true,
+   "assumptions": {
+    "early_pay_day": 10,
+    "max_days_accelerated": 60,
+    "scenarios": {
+     "low": {
+      "share_eligible": 0.05,
+      "annualised_rate": 0.12
+     },
+     "base": {
+      "share_eligible": 0.1,
+      "annualised_rate": 0.14
+     },
+     "high": {
+      "share_eligible": 0.15,
+      "annualised_rate": 0.18
+     }
+    },
+    "config_file": "config/assumptions.yaml",
+    "formula": "spend x share_eligible x annualised_rate x days_accelerated / 365"
+   },
+   "uk_scope": {
+    "basis": "Invoice value paid by the matched UK entities in their latest half-year reports, annualised x2 (reported base, estimated result)",
+    "currency": "GBP",
+    "annual_payments": 302686890.0,
+    "days_used": 33.1,
+    "supplier_cash_beyond_30_days": 2570765.367123289,
+    "early_payment_discount_opportunity": {
+     "low": 114938.0902849315,
+     "base": 268188.87733150687,
+     "high": 517221.40628219175
+    }
+   },
+   "whose_money": "The range is the gross annual discount a buyer could capture by paying eligible invoices early, before the buyer's own cost of funding that early payment and without netting any existing supply chain finance programme."
+  },
+  "payment_profile": {
+   "reported": {
+    "uk": {
+     "what": "Statutory UK payment practices reports filed by this group's UK legal entities. UK entities only, not global group behaviour.",
+     "estimate": false,
+     "entities_n": 2,
+     "avg_days_to_pay_mean_of_entities": 33.1,
+     "aggregation": "invoice_value_weighted_mean",
+     "avg_days_to_pay_simple_mean": 32.0,
+     "pct_invoices_paid_late_mean": 25.6,
+     "pct_invoices_paid_over_60_days_mean": 4.5,
+     "trend_days_year_on_year_mean": 1.2,
+     "trend_days_year_on_year_median": 1.5,
+     "trend_entities_slower": 2.0,
+     "trend_entities_compared": 2.0,
+     "slowest_entity": {
+      "name": "CHARLOTTE TILBURY BEAUTY LIMITED",
+      "avg_days_to_pay": 34.0,
+      "source_url": "https://check-payment-practices.service.gov.uk/report/116096"
+     },
+     "period": {
+      "start": "2026-01-01",
+      "end": "2026-06-30"
+     },
+     "entities_left_out_of_group_figures_as_extreme": null,
+     "entity_match_confidence_min": 0.9,
+     "entity_match_methods": "ch_psc_chain",
+     "entities": [
+      {
+       "name": "CHARLOTTE TILBURY BEAUTY LIMITED",
+       "company_number": "08037372",
+       "avg_days_to_pay": 34.0,
+       "pct_paid_late": 24.0,
+       "pct_paid_late_note": null,
+       "trend_days_yoy": 1.0,
+       "invoice_value_gbp_half_year": 117122752.0,
+       "pct_paid_over_60": 5.0,
+       "standard_terms_days": [
+        30.0,
+        null
+       ],
+       "max_contractual_days": 90.0,
+       "period_start": "2026-01-01",
+       "period_end": "2026-06-30",
+       "source_url": "https://check-payment-practices.service.gov.uk/report/116096"
+      },
+      {
+       "name": "ISLESTARR HOLDINGS LIMITED",
+       "company_number": "07712458",
+       "avg_days_to_pay": 30.0,
+       "pct_paid_late": 31.0,
+       "pct_paid_late_note": null,
+       "trend_days_yoy": 2.0,
+       "invoice_value_gbp_half_year": 34220693.0,
+       "pct_paid_over_60": 3.0,
+       "standard_terms_days": [
+        30.0,
+        null
+       ],
+       "max_contractual_days": 90.0,
+       "period_start": "2026-01-01",
+       "period_end": "2026-06-30",
+       "source_url": "https://check-payment-practices.service.gov.uk/report/116098"
+      }
+     ],
+     "source_type": "uk_ppr_statutory_report"
+    },
+    "spain": {
+     "what": "Statutory average supplier payment period (PMP, Ley 15/2010) from the notes to the annual accounts.",
+     "estimate": false,
+     "pmp_days": 59.0,
+     "prior_year_pmp_days": 52.0,
+     "ratio_paid_days": 63.0,
+     "ratio_pending_days": 36.0,
+     "pct_paid_within_legal_max_by_value": 78.5,
+     "fiscal_year": 2025.0,
+     "scope": "consolidated_spanish_entities",
+     "legal_maximum_days": 60,
+     "source_url": "https://filings.xbrl.org/549300OVHNSX30L1AQ94/2025-12-31/ESEF/ES/0/549300OVHNSX30L1AQ94-2025-12-31-es/reports/549300OVHNSX30L1AQ94-2025-12-31-es.xhtml",
+     "extraction_confidence": 0.98,
+     "source_type": "es_annual_accounts_pmp_note"
+    }
+   },
+   "computed_proxy": {
+    "what": "Computed DPO (proxy) = trade payables / cost of sales x 365 from XBRL financial statements. A balance-sheet proxy, not reported days to pay.",
+    "estimate": false,
+    "is_proxy": true,
+    "dpo_days": 10.8,
+    "prior_year_dpo_days": 14.5,
+    "flag": "ok",
+    "fiscal_year": 2025.0,
+    "period_end": "2025-12-31",
+    "sector_median_dpo_days": 78.6,
+    "payables_basis": "trade_and_other_broad",
+    "cost_basis": "cost_of_sales",
+    "confidence": 0.7,
+    "source_url": "https://filings.xbrl.org/549300OVHNSX30L1AQ94/2025-12-31/ESEF/ES/0/549300OVHNSX30L1AQ94-2025-12-31-es/reports/ixbrlviewer.html",
+    "source_type": "esef_xbrl"
+   }
+  },
+  "hook": "Puig's average supplier payment period in Spain rose from 52 to 59 days in FY2025; the legal maximum per payment is 60."
+ },
+ {
+  "company_id": "mondelez-international-q12857502",
+  "name": "Mondelez International",
+  "country": "US",
+  "hq_city": "Chicago",
+  "sector": "consumer_goods",
+  "revenue": {
+   "amount": 38537000000.0,
+   "currency": "USD",
+   "period_end": "2025-12-31",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1103982/000162828026005345/",
+   "source_type": "sec_xbrl_companyfacts",
+   "stale": false
+  },
+  "scores": {
+   "fit": 82.8,
+   "pain": 71.6,
+   "signal": 51.4,
+   "priority": 73.6,
+   "fit_parts": {
+    "revenue": 25.5,
+    "geography": 21.2,
+    "sector": 28.5,
+    "erp": 5.0,
+    "supplier_breadth": 2.5
+   },
+   "pain_parts": {
+    "days": 45.0,
+    "pct_late": 2.5,
+    "pct_over_60": 15.0,
+    "trend": 9.2,
+    "uk_materiality_factor": 1.0
+   },
+   "pain_evidence_tier": 1.0,
+   "pain_basis": "uk_reported",
+   "method": "deterministic formula, weights in config/assumptions.yaml"
+  },
+  "why_now_signals": [
+   {
+    "type": "trend_worsening",
+    "text": "UK entities' average days to pay rose by about 5 days year on year (4 of 5 entities with a prior report got slower; median change +5 days)",
+    "url": "https://check-payment-practices.service.gov.uk/report/115294"
+   },
+   {
+    "type": "new_evidence",
+    "text": "Latest statutory UK payment report filed 2026-07-30 (Mondelez Uk Confectionery Production Limited)",
+    "url": "https://check-payment-practices.service.gov.uk/report/115294"
+   },
+   {
+    "type": "code_status",
+    "text": "No UK reporting entity states membership of a payment code",
+    "url": "https://check-payment-practices.service.gov.uk/report/115294"
+   },
+   {
+    "type": "long_terms",
+    "text": "Maximum contractual payment period of 180 days reported by a UK entity",
+    "url": "https://check-payment-practices.service.gov.uk/report/115294"
+   },
+   {
+    "type": "scf_offered",
+    "text": "A UK entity reports offering supply chain finance to suppliers: ask which suppliers it reaches, at whose cost, and whether it lengthened terms",
+    "url": "https://check-payment-practices.service.gov.uk/report/115294"
+   },
+   {
+    "type": "sf_disclosed",
+    "text": "Annual report for the year to 2025-12-31 discloses a supplier finance programme with USD 3,562m outstanding",
+    "url": "https://www.sec.gov/Archives/edgar/data/1103982/000162828026005345/mdlz-20251231.htm"
+   }
+  ],
+  "estimates": {
+   "estimate": true,
+   "assumptions": {
+    "early_pay_day": 10,
+    "max_days_accelerated": 60,
+    "scenarios": {
+     "low": {
+      "share_eligible": 0.05,
+      "annualised_rate": 0.12
+     },
+     "base": {
+      "share_eligible": 0.1,
+      "annualised_rate": 0.14
+     },
+     "high": {
+      "share_eligible": 0.15,
+      "annualised_rate": 0.18
+     }
+    },
+    "config_file": "config/assumptions.yaml",
+    "formula": "spend x share_eligible x annualised_rate x days_accelerated / 365"
+   },
+   "uk_scope": {
+    "basis": "Invoice value paid by the matched UK entities in their latest half-year reports, annualised x2 (reported base, estimated result)",
+    "currency": "GBP",
+    "annual_payments": 1185430316.0,
+    "days_used": 86.3,
+    "supplier_cash_beyond_30_days": 182848566.55013698,
+    "early_payment_discount_opportunity": {
+     "low": 1169191.5445479453,
+     "base": 2728113.603945206,
+     "high": 5261361.950465754
+    }
+   },
+   "group_proxy": {
+    "basis": "Group cost of sales (cost_of_sales_fy2025) with group-level days from computed DPO (proxy), FY2025.0. A balance-sheet proxy, not reported days to pay.",
+    "currency": "USD",
+    "spend_proxy": 27602000000.0,
+    "days_used": 134.1,
+    "supplier_cash_beyond_30_days": 7872241643.835616,
+    "early_payment_discount_opportunity": {
+     "low": 27223890.410958905,
+     "base": 63522410.95890412,
+     "high": 122507506.84931506
+    }
+   },
+   "whose_money": "The range is the gross annual discount a buyer could capture by paying eligible invoices early, before the buyer's own cost of funding that early payment and without netting any existing supply chain finance programme."
+  },
+  "payment_profile": {
+   "reported": {
+    "uk": {
+     "what": "Statutory UK payment practices reports filed by this group's UK legal entities. UK entities only, not global group behaviour.",
+     "estimate": false,
+     "entities_n": 5,
+     "avg_days_to_pay_mean_of_entities": 86.3,
+     "aggregation": "invoice_value_weighted_mean",
+     "avg_days_to_pay_simple_mean": 75.6,
+     "pct_invoices_paid_late_mean": 4.9,
+     "pct_invoices_paid_over_60_days_mean": 59.4,
+     "trend_days_year_on_year_mean": 4.9,
+     "trend_days_year_on_year_median": 5.0,
+     "trend_entities_slower": 4.0,
+     "trend_entities_compared": 5.0,
+     "slowest_entity": {
+      "name": "MONDELEZ UK CONFECTIONERY PRODUCTION LIMITED",
+      "avg_days_to_pay": 113.0,
+      "source_url": "https://check-payment-practices.service.gov.uk/report/115294"
+     },
+     "period": {
+      "start": "2025-01-01",
+      "end": "2026-06-30"
+     },
+     "entities_left_out_of_group_figures_as_extreme": null,
+     "entity_match_confidence_min": 0.9,
+     "entity_match_methods": "ch_psc_chain",
+     "entities": [
+      {
+       "name": "MONDELEZ UK CONFECTIONERY PRODUCTION LIMITED",
+       "company_number": "00474310",
+       "avg_days_to_pay": 113.0,
+       "pct_paid_late": 7.0,
+       "pct_paid_late_note": null,
+       "trend_days_yoy": 9.0,
+       "invoice_value_gbp_half_year": 87181888.0,
+       "pct_paid_over_60": 85.0,
+       "standard_terms_days": [
+        60.0,
+        null
+       ],
+       "max_contractual_days": 180.0,
+       "period_start": "2026-01-01",
+       "period_end": "2026-06-30",
+       "source_url": "https://check-payment-practices.service.gov.uk/report/115294"
+      },
+      {
+       "name": "CADBURY UK LIMITED",
+       "company_number": "00155256",
+       "avg_days_to_pay": 98.0,
+       "pct_paid_late": 13.0,
+       "pct_paid_late_note": null,
+       "trend_days_yoy": 2.0,
+       "invoice_value_gbp_half_year": 20362269.0,
+       "pct_paid_over_60": 74.0,
+       "standard_terms_days": [
+        60.0,
+        null
+       ],
+       "max_contractual_days": 180.0,
+       "period_start": "2026-01-01",
+       "period_end": "2026-06-30",
+       "source_url": "https://check-payment-practices.service.gov.uk/report/115273"
+      },
+      {
+       "name": "MONDELEZ UK LIMITED",
+       "company_number": "00203663",
+       "avg_days_to_pay": 87.0,
+       "pct_paid_late": 4.0,
+       "pct_paid_late_note": null,
+       "trend_days_yoy": 5.0,
+       "invoice_value_gbp_half_year": 441435252.0,
+       "pct_paid_over_60": 59.0,
+       "standard_terms_days": [
+        60.0,
+        null
+       ],
+       "max_contractual_days": 180.0,
+       "period_start": "2026-01-01",
+       "period_end": "2026-06-30",
+       "source_url": "https://check-payment-practices.service.gov.uk/report/115297"
+      },
+      {
+       "name": "READING SCIENTIFIC SERVICES LIMITED",
+       "company_number": "00741326",
+       "avg_days_to_pay": 69.0,
+       "pct_paid_late": 11.0,
+       "pct_paid_late_note": null,
+       "trend_days_yoy": 9.0,
+       "invoice_value_gbp_half_year": 7527648.0,
+       "pct_paid_over_60": 33.0,
+       "standard_terms_days": [
+        60.0,
+        null
+       ],
+       "max_contractual_days": 180.0,
+       "period_start": "2025-01-01",
+       "period_end": "2025-06-30",
+       "source_url": "https://check-payment-practices.service.gov.uk/report/102384"
+      },
+      {
+       "name": "GRENADE (UK) LIMITED",
+       "company_number": "06978658",
+       "avg_days_to_pay": 11.0,
+       "pct_paid_late": null,
+       "pct_paid_late_note": "reported late share contradicts the entity's own payment bands; not shown",
+       "trend_days_yoy": -6.0,
+       "invoice_value_gbp_half_year": 36208101.0,
+       "pct_paid_over_60": 0.0,
+       "standard_terms_days": [
+        30.0,
+        null
+       ],
+       "max_contractual_days": 90.0,
+       "period_start": "2026-01-01",
+       "period_end": "2026-06-30",
+       "source_url": "https://check-payment-practices.service.gov.uk/report/113398"
+      }
+     ],
+     "source_type": "uk_ppr_statutory_report"
+    }
+   },
+   "computed_proxy": {
+    "what": "Computed DPO (proxy) = trade payables / cost of sales x 365 from XBRL financial statements. A balance-sheet proxy, not reported days to pay.",
+    "estimate": false,
+    "is_proxy": true,
+    "dpo_days": 134.1,
+    "prior_year_dpo_days": 155.2,
+    "flag": "ok",
+    "fiscal_year": 2025.0,
+    "period_end": "2025-12-31",
+    "sector_median_dpo_days": 78.6,
+    "payables_basis": "trade",
+    "cost_basis": "cost_of_sales",
+    "confidence": 1.0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1103982/000162828026005345/",
+    "source_type": "sec_xbrl"
+   }
+  },
+  "hook": "Mondelez International's UK entities paid 59% of supplier invoices after more than 60 days (weighted UK average 86 days across 5 entities; UK median 32)."
+ },
+ {
+  "company_id": "airbus-q2311",
+  "name": "Airbus",
+  "country": "NL",
+  "hq_city": "Leiden",
+  "sector": "manufacturing",
+  "revenue": {
+   "amount": 73420000000.0,
+   "currency": "EUR",
+   "period_end": "2025-12-31",
+   "source_url": "https://filings.xbrl.org/MINO79WLOO247M1IL051/2025-12-31/ESEF/NL/0/MINO79WLOO247M1IL051-2025-12-31-1-en/reports/ixbrlviewer.html",
+   "source_type": "esef_xbrl_json",
+   "stale": false
+  },
+  "scores": {
+   "fit": 91.2,
+   "pain": 69.4,
+   "signal": 30.0,
+   "priority": 73.3,
+   "fit_parts": {
+    "revenue": 30.0,
+    "geography": 21.2,
+    "sector": 30.0,
+    "erp": 5.0,
+    "supplier_breadth": 5.0
+   },
+   "pain_parts": {
+    "days": 45.0,
+    "pct_late": 6.6,
+    "pct_over_60": 15.0,
+    "trend": 2.8,
+    "uk_materiality_factor": 1.0
+   },
+   "pain_evidence_tier": 1.0,
+   "pain_basis": "uk_reported",
+   "method": "deterministic formula, weights in config/assumptions.yaml"
+  },
+  "why_now_signals": [
+   {
+    "type": "new_evidence",
+    "text": "Latest statutory UK payment report filed 2026-08-18 (Airbus Belfast Limited)",
+    "url": "https://check-payment-practices.service.gov.uk/report/116515"
+   },
+   {
+    "type": "code_status",
+    "text": "No UK reporting entity states membership of a payment code",
+    "url": "https://check-payment-practices.service.gov.uk/report/114950"
+   },
+   {
+    "type": "long_terms",
+    "text": "Maximum contractual payment period of 120 days reported by a UK entity",
+    "url": "https://check-payment-practices.service.gov.uk/report/114950"
+   },
+   {
+    "type": "scf_offered",
+    "text": "A UK entity reports offering supply chain finance to suppliers: ask which suppliers it reaches, at whose cost, and whether it lengthened terms",
+    "url": "https://check-payment-practices.service.gov.uk/report/114950"
+   },
+   {
+    "type": "sf_disclosed",
+    "text": "Annual report for the year to 2025-12-31 discloses a supplier finance programme",
+    "url": "https://filings.xbrl.org/MINO79WLOO247M1IL051/2025-12-31/ESEF/NL/0/MINO79WLOO247M1IL051-2025-12-31-1-en.json"
+   }
+  ],
+  "estimates": {
+   "estimate": true,
+   "assumptions": {
+    "early_pay_day": 10,
+    "max_days_accelerated": 60,
+    "scenarios": {
+     "low": {
+      "share_eligible": 0.05,
+      "annualised_rate": 0.12
+     },
+     "base": {
+      "share_eligible": 0.1,
+      "annualised_rate": 0.14
+     },
+     "high": {
+      "share_eligible": 0.15,
+      "annualised_rate": 0.18
+     }
+    },
+    "config_file": "config/assumptions.yaml",
+    "formula": "spend x share_eligible x annualised_rate x days_accelerated / 365"
+   },
+   "uk_scope": {
+    "basis": "Invoice value paid by the matched UK entities in their latest half-year reports, annualised x2 (reported base, estimated result)",
+    "currency": "GBP",
+    "annual_payments": 5018960914.0,
+    "days_used": 65.6,
+    "supplier_cash_beyond_30_days": 489520571.3380821,
+    "early_payment_discount_opportunity": {
+     "low": 4587192.769617534,
+     "base": 10703449.795774247,
+     "high": 20642367.463278905
+    }
+   },
+   "group_proxy": {
+    "basis": "Group cost of sales (cost_of_sales_fy2025) with group-level days from computed DPO (proxy), FY2025.0. A balance-sheet proxy, not reported days to pay.",
+    "currency": "EUR",
+    "spend_proxy": 62453000000.0,
+    "days_used": 92.8,
+    "supplier_cash_beyond_30_days": 10745338082.19178,
+    "early_payment_discount_opportunity": {
+     "low": 61597479.45205479,
+     "base": 143727452.05479455,
+     "high": 277188657.53424656
+    }
+   },
+   "whose_money": "The range is the gross annual discount a buyer could capture by paying eligible invoices early, before the buyer's own cost of funding that early payment and without netting any existing supply chain finance programme."
+  },
+  "payment_profile": {
+   "reported": {
+    "uk": {
+     "what": "Statutory UK payment practices reports filed by this group's UK legal entities. UK entities only, not global group behaviour.",
+     "estimate": false,
+     "entities_n": 5,
+     "avg_days_to_pay_mean_of_entities": 65.6,
+     "aggregation": "invoice_value_weighted_mean",
+     "avg_days_to_pay_simple_mean": 54.2,
+     "pct_invoices_paid_late_mean": 13.2,
+     "pct_invoices_paid_over_60_days_mean": 54.6,
+     "trend_days_year_on_year_mean": 1.5,
+     "trend_days_year_on_year_median": 1.5,
+     "trend_entities_slower": 3.0,
+     "trend_entities_compared": 4.0,
+     "slowest_entity": {
+      "name": "PRESTWICK AEROSYSTEMS LIMITED",
+      "avg_days_to_pay": 73.0,
+      "source_url": "https://check-payment-practices.service.gov.uk/report/114950"
+     },
+     "period": {
+      "start": "2026-01-01",
+      "end": "2026-06-30"
+     },
+     "entities_left_out_of_group_figures_as_extreme": null,
+     "entity_match_confidence_min": 0.9,
+     "entity_match_methods": "ch_psc_chain",
+     "entities": [
+      {
+       "name": "PRESTWICK AEROSYSTEMS LIMITED",
+       "company_number": "05663660",
+       "avg_days_to_pay": 73.0,
+       "pct_paid_late": 38.0,
+       "pct_paid_late_note": null,
+       "trend_days_yoy": 2.0,
+       "invoice_value_gbp_half_year": 286908523.0,
+       "pct_paid_over_60": 61.0,
+       "standard_terms_days": [
+        7.0,
+        120.0
+       ],
+       "max_contractual_days": 120.0,
+       "period_start": "2026-01-01",
+       "period_end": "2026-06-30",
+       "source_url": "https://check-payment-practices.service.gov.uk/report/114950"
+      },
+      {
+       "name": "AIRBUS BELFAST LIMITED",
+       "company_number": "NI727952",
+       "avg_days_to_pay": 70.0,
+       "pct_paid_late": 56.0,
+       "pct_paid_late_note": null,
+       "trend_days_yoy": null,
+       "invoice_value_gbp_half_year": 110584315.0,
+       "pct_paid_over_60": 62.0,
+       "standard_terms_days": [
+        25.0,
+        115.0
+       ],
+       "max_contractual_days": 115.0,
+       "period_start": "2026-01-01",
+       "period_end": "2026-06-30",
+       "source_url": "https://check-payment-practices.service.gov.uk/report/116515"
+      },
+      {
+       "name": "AIRBUS OPERATIONS LIMITED",
+       "company_number": "03468788",
+       "avg_days_to_pay": 69.0,
+       "pct_paid_late": 8.0,
+       "pct_paid_late_note": null,
+       "trend_days_yoy": 3.0,
+       "invoice_value_gbp_half_year": 1836911838.0,
+       "pct_paid_over_60": 61.0,
+       "standard_terms_days": [
+        11.0,
+        115.0
+       ],
+       "max_contractual_days": 115.0,
+       "period_start": "2026-01-01",
+       "period_end": "2026-06-30",
+       "source_url": "https://check-payment-practices.service.gov.uk/report/112918"
+      },
+      {
+       "name": "AIRBUS DEFENCE AND SPACE LIMITED",
+       "company_number": "02449259",
+       "avg_days_to_pay": 34.0,
+       "pct_paid_late": 5.0,
+       "pct_paid_late_note": null,
+       "trend_days_yoy": 1.0,
+       "invoice_value_gbp_half_year": 256540015.0,
+       "pct_paid_over_60": 2.0,
+       "standard_terms_days": [
+        11.0,
+        85.0
+       ],
+       "max_contractual_days": 85.0,
+       "period_start": "2026-01-01",
+       "period_end": "2026-06-30",
+       "source_url": "https://check-payment-practices.service.gov.uk/report/113442"
+      },
+      {
+       "name": "SURREY SATELLITE TECHNOLOGY LIMITED",
+       "company_number": "01916260",
+       "avg_days_to_pay": 25.0,
+       "pct_paid_late": 5.0,
+       "pct_paid_late_note": null,
+       "trend_days_yoy": -4.0,
+       "invoice_value_gbp_half_year": 18535766.0,
+       "pct_paid_over_60": 2.0,
+       "standard_terms_days": [
+        14.0,
+        null
+       ],
+       "max_contractual_days": 60.0,
+       "period_start": "2026-01-01",
+       "period_end": "2026-06-30",
+       "source_url": "https://check-payment-practices.service.gov.uk/report/113449"
+      }
+     ],
+     "source_type": "uk_ppr_statutory_report"
+    }
+   },
+   "computed_proxy": {
+    "what": "Computed DPO (proxy) = trade payables / cost of sales x 365 from XBRL financial statements. A balance-sheet proxy, not reported days to pay.",
+    "estimate": false,
+    "is_proxy": true,
+    "dpo_days": 92.8,
+    "prior_year_dpo_days": 86.0,
+    "flag": "ok",
+    "fiscal_year": 2025.0,
+    "period_end": "2025-12-31",
+    "sector_median_dpo_days": 63.0,
+    "payables_basis": "trade",
+    "cost_basis": "cost_of_sales",
+    "confidence": 1.0,
+    "source_url": "https://filings.xbrl.org/MINO79WLOO247M1IL051/2025-12-31/ESEF/NL/0/MINO79WLOO247M1IL051-2025-12-31-1-en/reports/ixbrlviewer.html",
+    "source_type": "esef_xbrl"
+   }
+  },
+  "hook": "Airbus' UK entities paid 55% of supplier invoices after more than 60 days (weighted UK average 66 days across 5 entities; UK median 32)."
+ },
+ {
+  "company_id": "ge-aerospace-q1485061",
+  "name": "GE Aerospace",
+  "country": "US",
+  "hq_city": "Evendale",
+  "sector": "manufacturing",
+  "revenue": {
+   "amount": 45855000000.0,
+   "currency": "USD",
+   "period_end": "2025-12-31",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/40545/000004054526000008/",
+   "source_type": "sec_xbrl_companyfacts",
+   "stale": false
+  },
+  "scores": {
+   "fit": 86.8,
+   "pain": 73.9,
+   "signal": 30.0,
+   "priority": 73.1,
+   "fit_parts": {
+    "revenue": 25.5,
+    "geography": 21.2,
+    "sector": 30.0,
+    "erp": 5.0,
+    "supplier_breadth": 5.0
+   },
+   "pain_parts": {
+    "days": 33.9,
+    "pct_late": 25.0,
+    "pct_over_60": 15.0,
+    "trend": 0.0,
+    "uk_materiality_factor": 1.0
+   },
+   "pain_evidence_tier": 1.0,
+   "pain_basis": "uk_reported",
+   "method": "deterministic formula, weights in config/assumptions.yaml"
+  },
+  "why_now_signals": [
+   {
+    "type": "new_evidence",
+    "text": "Latest statutory UK payment report filed 2026-08-03 (Ge Caledonian Limited)",
+    "url": "https://check-payment-practices.service.gov.uk/report/116114"
+   },
+   {
+    "type": "code_status",
+    "text": "No UK reporting entity states membership of a payment code",
+    "url": "https://check-payment-practices.service.gov.uk/report/111790"
+   },
+   {
+    "type": "long_terms",
+    "text": "Maximum contractual payment period of 180 days reported by a UK entity",
+    "url": "https://check-payment-practices.service.gov.uk/report/111790"
+   },
+   {
+    "type": "sf_disclosed",
+    "text": "Annual report for the year to 2025-12-31 discloses a supplier finance programme with USD 1,247m outstanding",
+    "url": "https://www.sec.gov/Archives/edgar/data/40545/000004054526000008/ge-20251231.htm"
+   }
+  ],
+  "estimates": {
+   "estimate": true,
+   "assumptions": {
+    "early_pay_day": 10,
+    "max_days_accelerated": 60,
+    "scenarios": {
+     "low": {
+      "share_eligible": 0.05,
+      "annualised_rate": 0.12
+     },
+     "base": {
+      "share_eligible": 0.1,
+      "annualised_rate": 0.14
+     },
+     "high": {
+      "share_eligible": 0.15,
+      "annualised_rate": 0.18
+     }
+    },
+    "config_file": "config/assumptions.yaml",
+    "formula": "spend x share_eligible x annualised_rate x days_accelerated / 365"
+   },
+   "uk_scope": {
+    "basis": "Invoice value paid by the matched UK entities in their latest half-year reports, annualised x2 (reported base, estimated result)",
+    "currency": "GBP",
+    "annual_payments": 1269369672.0,
+    "days_used": 55.1,
+    "supplier_cash_beyond_30_days": 87290900.7320548,
+    "early_payment_discount_opportunity": {
+     "low": 941072.4198443836,
+     "base": 2195835.6463035624,
+     "high": 4234825.889299725
+    }
+   },
+   "whose_money": "The range is the gross annual discount a buyer could capture by paying eligible invoices early, before the buyer's own cost of funding that early payment and without netting any existing supply chain finance programme."
+  },
+  "payment_profile": {
+   "reported": {
+    "uk": {
+     "what": "Statutory UK payment practices reports filed by this group's UK legal entities. UK entities only, not global group behaviour.",
+     "estimate": false,
+     "entities_n": 3,
+     "avg_days_to_pay_mean_of_entities": 55.1,
+     "aggregation": "invoice_value_weighted_mean",
+     "avg_days_to_pay_simple_mean": 58.3,
+     "pct_invoices_paid_late_mean": 50.1,
+     "pct_invoices_paid_over_60_days_mean": 32.6,
+     "trend_days_year_on_year_mean": -1.6,
+     "trend_days_year_on_year_median": -1.0,
+     "trend_entities_slower": 1.0,
+     "trend_entities_compared": 2.0,
+     "slowest_entity": {
+      "name": "GE AVIATION SYSTEMS LIMITED",
+      "avg_days_to_pay": 70.0,
+      "source_url": "https://check-payment-practices.service.gov.uk/report/111790"
+     },
+     "period": {
+      "start": "2025-07-01",
+      "end": "2026-06-30"
+     },
+     "entities_left_out_of_group_figures_as_extreme": null,
+     "entity_match_confidence_min": 0.9,
+     "entity_match_methods": "ch_psc_chain",
+     "entities": [
+      {
+       "name": "GE AVIATION SYSTEMS LIMITED",
+       "company_number": "00745917",
+       "avg_days_to_pay": 70.0,
+       "pct_paid_late": 39.0,
+       "pct_paid_late_note": null,
+       "trend_days_yoy": 1.0,
+       "invoice_value_gbp_half_year": 86519232.0,
+       "pct_paid_over_60": 32.0,
+       "standard_terms_days": [
+        0.0,
+        null
+       ],
+       "max_contractual_days": 180.0,
+       "period_start": "2025-07-01",
+       "period_end": "2025-12-31",
+       "source_url": "https://check-payment-practices.service.gov.uk/report/111790"
+      },
+      {
+       "name": "GE CALEDONIAN LIMITED",
+       "company_number": "SC064580",
+       "avg_days_to_pay": 53.0,
+       "pct_paid_late": 61.0,
+       "pct_paid_late_note": null,
+       "trend_days_yoy": null,
+       "invoice_value_gbp_half_year": 391381831.0,
+       "pct_paid_over_60": 33.0,
+       "standard_terms_days": [
+        30.0,
+        120.0
+       ],
+       "max_contractual_days": 120.0,
+       "period_start": "2026-01-01",
+       "period_end": "2026-06-30",
+       "source_url": "https://check-payment-practices.service.gov.uk/report/116114"
+      },
+      {
+       "name": "GE AIRCRAFT ENGINE SERVICES LIMITED",
+       "company_number": "02605713",
+       "avg_days_to_pay": 52.0,
+       "pct_paid_late": 29.0,
+       "pct_paid_late_note": null,
+       "trend_days_yoy": -3.0,
+       "invoice_value_gbp_half_year": 156783773.0,
+       "pct_paid_over_60": 32.0,
+       "standard_terms_days": [
+        90.0,
+        120.0
+       ],
+       "max_contractual_days": 120.0,
+       "period_start": "2025-07-01",
+       "period_end": "2025-12-31",
+       "source_url": "https://check-payment-practices.service.gov.uk/report/107790"
+      }
+     ],
+     "source_type": "uk_ppr_statutory_report"
+    }
+   },
+   "computed_proxy": {
+    "what": "Computed DPO (proxy) = trade payables / cost of sales x 365 from XBRL financial statements. A balance-sheet proxy, not reported days to pay.",
+    "estimate": false,
+    "is_proxy": true,
+    "dpo_days": 98.5,
+    "prior_year_dpo_days": 86.6,
+    "flag": "ok",
+    "fiscal_year": 2025.0,
+    "period_end": "2025-12-31",
+    "sector_median_dpo_days": 63.0,
+    "payables_basis": "trade",
+    "cost_basis": "operating_expenses_fallback",
+    "confidence": 0.7,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/40545/000004054526000008/",
+    "source_type": "sec_xbrl"
+   }
+  },
+  "hook": "GE Aerospace's UK entities paid 50% of supplier invoices later than the agreed terms (weighted UK average 55 days across 3 entities; UK median 32)."
+ },
+ {
+  "company_id": "pilgrims-pride-corp-cik802481",
+  "name": "Pilgrims Pride Corp",
+  "country": "US",
+  "hq_city": null,
+  "sector": "consumer_goods",
+  "revenue": {
+   "amount": 18497553000.0,
+   "currency": "USD",
+   "period_end": "2025-12-28",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/802481/000080248126000011/",
+   "source_type": "sec_xbrl_companyfacts",
+   "stale": false
+  },
+  "scores": {
+   "fit": 78.2,
+   "pain": 77.7,
+   "signal": 43.1,
+   "priority": 72.7,
+   "fit_parts": {
+    "revenue": 21.0,
+    "geography": 21.2,
+    "sector": 28.5,
+    "erp": 5.0,
+    "supplier_breadth": 2.5
+   },
+   "pain_parts": {
+    "days": 32.1,
+    "pct_late": 25.0,
+    "pct_over_60": 15.0,
+    "trend": 5.6,
+    "uk_materiality_factor": 1.0
+   },
+   "pain_evidence_tier": 1.0,
+   "pain_basis": "uk_reported",
+   "method": "deterministic formula, weights in config/assumptions.yaml"
+  },
+  "why_now_signals": [
+   {
+    "type": "trend_worsening",
+    "text": "UK entities' average days to pay rose by about 3 days year on year (3 of 3 entities with a prior report got slower; median change +3 days)",
+    "url": "https://check-payment-practices.service.gov.uk/report/114774"
+   },
+   {
+    "type": "new_evidence",
+    "text": "Latest statutory UK payment report filed 2026-07-29 (Pilgrim'S Food Masters Uk Limited)",
+    "url": "https://check-payment-practices.service.gov.uk/report/114767"
+   },
+   {
+    "type": "code_status",
+    "text": "No UK reporting entity states membership of a payment code",
+    "url": "https://check-payment-practices.service.gov.uk/report/114774"
+   },
+   {
+    "type": "long_terms",
+    "text": "Maximum contractual payment period of 240 days reported by a UK entity",
+    "url": "https://check-payment-practices.service.gov.uk/report/114774"
+   },
+   {
+    "type": "scf_offered",
+    "text": "A UK entity reports offering supply chain finance to suppliers: ask which suppliers it reaches, at whose cost, and whether it lengthened terms",
+    "url": "https://check-payment-practices.service.gov.uk/report/114774"
+   },
+   {
+    "type": "sf_disclosed",
+    "text": "Annual report for the year to 2025-12-28 discloses a supplier finance programme with USD 209m outstanding",
+    "url": "https://www.sec.gov/Archives/edgar/data/802481/000080248126000011/ppc-20251228.htm"
+   }
+  ],
+  "estimates": {
+   "estimate": true,
+   "assumptions": {
+    "early_pay_day": 10,
+    "max_days_accelerated": 60,
+    "scenarios": {
+     "low": {
+      "share_eligible": 0.05,
+      "annualised_rate": 0.12
+     },
+     "base": {
+      "share_eligible": 0.1,
+      "annualised_rate": 0.14
+     },
+     "high": {
+      "share_eligible": 0.15,
+      "annualised_rate": 0.18
+     }
+    },
+    "config_file": "config/assumptions.yaml",
+    "formula": "spend x share_eligible x annualised_rate x days_accelerated / 365"
+   },
+   "uk_scope": {
+    "basis": "Invoice value paid by the matched UK entities in their latest half-year reports, annualised x2 (reported base, estimated result)",
+    "currency": "GBP",
+    "annual_payments": 1996582158.0,
+    "days_used": 53.5,
+    "supplier_cash_beyond_30_days": 128547070.44657534,
+    "early_payment_discount_opportunity": {
+     "low": 1427692.9951726028,
+     "base": 3331283.65540274,
+     "high": 6424618.478276711
+    }
+   },
+   "group_proxy": {
+    "basis": "Group cost of sales (cost_of_sales_fy2025) with group-level days from computed DPO (proxy), FY2025.0. A balance-sheet proxy, not reported days to pay.",
+    "currency": "USD",
+    "spend_proxy": 16139410000.0,
+    "days_used": 31.7,
+    "supplier_cash_beyond_30_days": 75169854.79452051,
+    "early_payment_discount_opportunity": {
+     "low": 5757126.526027397,
+     "base": 13433295.227397263,
+     "high": 25907069.367123287
+    }
+   },
+   "whose_money": "The range is the gross annual discount a buyer could capture by paying eligible invoices early, before the buyer's own cost of funding that early payment and without netting any existing supply chain finance programme."
+  },
+  "payment_profile": {
+   "reported": {
+    "uk": {
+     "what": "Statutory UK payment practices reports filed by this group's UK legal entities. UK entities only, not global group behaviour.",
+     "estimate": false,
+     "entities_n": 3,
+     "avg_days_to_pay_mean_of_entities": 53.5,
+     "aggregation": "invoice_value_weighted_mean",
+     "avg_days_to_pay_simple_mean": 55.3,
+     "pct_invoices_paid_late_mean": 78.1,
+     "pct_invoices_paid_over_60_days_mean": 36.3,
+     "trend_days_year_on_year_mean": 3.0,
+     "trend_days_year_on_year_median": 3.0,
+     "trend_entities_slower": 3.0,
+     "trend_entities_compared": 3.0,
+     "slowest_entity": {
+      "name": "PILGRIM'S PRIDE LTD.",
+      "avg_days_to_pay": 59.0,
+      "source_url": "https://check-payment-practices.service.gov.uk/report/114774"
+     },
+     "period": {
+      "start": "2025-12-29",
+      "end": "2026-06-28"
+     },
+     "entities_left_out_of_group_figures_as_extreme": null,
+     "entity_match_confidence_min": 0.9,
+     "entity_match_methods": "ch_psc_chain|exact_name",
+     "entities": [
+      {
+       "name": "PILGRIM'S PRIDE LTD.",
+       "company_number": "00608077",
+       "avg_days_to_pay": 59.0,
+       "pct_paid_late": 82.0,
+       "pct_paid_late_note": null,
+       "trend_days_yoy": 2.0,
+       "invoice_value_gbp_half_year": 278687584.0,
+       "pct_paid_over_60": 45.0,
+       "standard_terms_days": [
+        0.0,
+        180.0
+       ],
+       "max_contractual_days": 180.0,
+       "period_start": "2025-12-29",
+       "period_end": "2026-06-28",
+       "source_url": "https://check-payment-practices.service.gov.uk/report/114774"
+      },
+      {
+       "name": "PILGRIM'S FOOD MASTERS UK LIMITED",
+       "company_number": "13352340",
+       "avg_days_to_pay": 58.0,
+       "pct_paid_late": 81.0,
+       "pct_paid_late_note": null,
+       "trend_days_yoy": 6.0,
+       "invoice_value_gbp_half_year": 186499890.0,
+       "pct_paid_over_60": 44.0,
+       "standard_terms_days": [
+        0.0,
+        240.0
+       ],
+       "max_contractual_days": 240.0,
+       "period_start": "2025-12-29",
+       "period_end": "2026-06-28",
+       "source_url": "https://check-payment-practices.service.gov.uk/report/114767"
+      },
+      {
+       "name": "MOY PARK LIMITED",
+       "company_number": "NI004842",
+       "avg_days_to_pay": 49.0,
+       "pct_paid_late": 75.0,
+       "pct_paid_late_note": null,
+       "trend_days_yoy": 3.0,
+       "invoice_value_gbp_half_year": 533103605.0,
+       "pct_paid_over_60": 29.0,
+       "standard_terms_days": [
+        0.0,
+        240.0
+       ],
+       "max_contractual_days": 240.0,
+       "period_start": "2025-12-29",
+       "period_end": "2026-06-28",
+       "source_url": "https://check-payment-practices.service.gov.uk/report/114755"
+      }
+     ],
+     "source_type": "uk_ppr_statutory_report"
+    }
+   },
+   "computed_proxy": {
+    "what": "Computed DPO (proxy) = trade payables / cost of sales x 365 from XBRL financial statements. A balance-sheet proxy, not reported days to pay.",
+    "estimate": false,
+    "is_proxy": true,
+    "dpo_days": 31.7,
+    "prior_year_dpo_days": 29.8,
+    "flag": "ok",
+    "fiscal_year": 2025.0,
+    "period_end": "2025-12-28",
+    "sector_median_dpo_days": 78.6,
+    "payables_basis": "trade",
+    "cost_basis": "cost_of_sales",
+    "confidence": 1.0,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/802481/000080248126000011/",
+    "source_type": "sec_xbrl"
+   }
+  },
+  "hook": "Pilgrims Pride's UK entities reported paying suppliers in a weighted UK average of 54 days across 3 entities (by invoice value), against a UK median of 32."
+ }
+]

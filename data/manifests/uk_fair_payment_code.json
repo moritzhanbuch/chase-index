@@ -1,0 +1,618 @@
+{
+  "output": "data/raw/uk/fair_payment_code_awardees.csv",
+  "rows": 857,
+  "pages": 86,
+  "awardee_count_stated_on_page": "857",
+  "distinct_names": 857,
+  "with_valid_company_number": 838,
+  "award_levels": {
+    "Gold": 373,
+    "Bronze": 327,
+    "Silver": 155,
+    "NaN": 2
+  },
+  "pages_fetched": [
+    {
+      "source_url": "https://www.smallbusinesscommissioner.gov.uk/fpc/awardees/",
+      "sha256": "4fcd68c94fb739580978985ffe1346220c1b0ce4e0d4e5a5e6aa1fc87c1a905b",
+      "bytes": 98849,
+      "retrieved_at": "2026-11-16T10:04:16Z",
+      "rows": 10
+    },
+    {
+      "source_url": "https://www.smallbusinesscommissioner.gov.uk/fpc/awardees/page/2/",
+      "sha256": "47e37053a1f4d0b3af76150520393b2de5d70ee5e7c37aaa7a06185970f4d7cb",
+      "bytes": 99114,
+      "retrieved_at": "2026-11-16T10:04:40Z",
+      "rows": 10
+    },
+    {
+      "source_url": "https://www.smallbusinesscommissioner.gov.uk/fpc/awardees/page/3/",
+      "sha256": "9536f3461f895404421a94d6ac85c63c20d3e55fa6440db876f722896202ab93",
+      "bytes": 99156,
+      "retrieved_at": "2026-11-16T10:04:41Z",
+      "rows": 10
+    },
+    {
+      "source_url": "https://www.smallbusinesscommissioner.gov.uk/fpc/awardees/page/4/",
+      "sha256": "b72f20a097238e4f9b914b58c760a340a18f7aa0eb5c899773595d9c586e9130",
+      "bytes": 99433,
+      "retrieved_at": "2026-11-16T10:04:42Z",
+      "rows": 10
+    },
+    {
+      "source_url": "https://www.smallbusinesscommissioner.gov.uk/fpc/awardees/page/5/",
+      "sha256": "53c3ac0d6c0e4b9e9403b2d20e554e86744a6cbcae2119afc96150b2fb59fe00",
+      "bytes": 99300,
+      "retrieved_at": "2026-11-16T10:04:44Z",
+      "rows": 10
+    },
+    {
+      "source_url": "https://www.smallbusinesscommissioner.gov.uk/fpc/awardees/page/6/",
+      "sha256": "fe0771c02c965a86c1765a97f733fe3712f5d4fe8172cdb8bfbd9e770609ec33",
+      "bytes": 99416,
+      "retrieved_at": "2026-11-16T10:04:45Z",
+      "rows": 10
+    },
+    {
+      "source_url": "https://www.smallbusinesscommissioner.gov.uk/fpc/awardees/page/7/",
+      "sha256": "4786f89715a501477bf526ea7d1db01695182c5a3c3a0ffef2c0b535436b0ac4",
+      "bytes": 99478,
+      "retrieved_at": "2026-11-16T10:04:46Z",
+      "rows": 10
+    },
+    {
+      "source_url": "https://www.smallbusinesscommissioner.gov.uk/fpc/awardees/page/8/",
+      "sha256": "fb06b2223692568bcbc6ef0cbb22b8a4a391a55e3e5c018511a68c2a2c05047a",
+      "bytes": 99464,
+      "retrieved_at": "2026-11-16T10:04:47Z",
+      "rows": 10
+    },
+    {
+      "source_url": "https://www.smallbusinesscommissioner.gov.uk/fpc/awardees/page/9/",
+      "sha256": "1de4dd605f9c92af33af3790cccaaf4f4030365ebf98e1feea2714f301457511",
+      "bytes": 99389,
+      "retrieved_at": "2026-11-16T10:04:48Z",
+      "rows": 10
+    },
+    {
+      "source_url": "https://www.smallbusinesscommissioner.gov.uk/fpc/awardees/page/10/",
+      "sha256": "bec9695a4a80fe3bb730f04363021af977813ad53e94d850e7a3b9c5532dc68b",
+      "bytes": 99553,
+      "retrieved_at": "2026-11-16T10:04:49Z",
+      "rows": 10
+    },
+    {
+      "source_url": "https://www.smallbusinesscommissioner.gov.uk/fpc/awardees/page/11/",
+      "sha256": "18e38cb73b81e1b4b05e136d03c3e9285483704342e006bfda4e2cdca72abb0d",
+      "bytes": 99392,
+      "retrieved_at": "2026-11-16T10:04:50Z",
+      "rows": 10
+    },
+    {
+      "source_url": "https://www.smallbusinesscommissioner.gov.uk/fpc/awardees/page/12/",
+      "sha256": "3f5a7f7243563779526276e049b6ebfe5ddad76dd058eb45943879d8138ce4c9",
+      "bytes": 99452,
+      "retrieved_at": "2026-11-16T10:04:51Z",
+      "rows": 10
+    },
+    {
+      "source_url": "https://www.smallbusinesscommissioner.gov.uk/fpc/awardees/page/13/",
+      "sha256": "9b4192f726c98f2c111576647185525ddd5993f5d6e0bf010e974a44c9e9267e",
+      "bytes": 99344,
+      "retrieved_at": "2026-11-16T10:04:52Z",
+      "rows": 10
+    },
+    {
+      "source_url": "https://www.smallbusinesscommissioner.gov.uk/fpc/awardees/page/14/",
+      "sha256": "59782dce705f38c5dca260e5d4601c302cdab75d897961624ee3e5d6092324be",
+      "bytes": 99453,
+      "retrieved_at": "2026-11-16T10:04:53Z",
+      "rows": 10
+    },
+    {
+      "source_url": "https://www.smallbusinesscommissioner.gov.uk/fpc/awardees/page/15/",
+      "sha256": "ad992eb1b43caba219a150916851dfafd2ff27de96ebd0a823b1fe560041e16f",
+      "bytes": 99547,
+      "retrieved_at": "2026-11-16T10:04:54Z",
+      "rows": 10
+    },
+    {
+      "source_url": "https://www.smallbusinesscommissioner.gov.uk/fpc/awardees/page/16/",
+      "sha256": "75fc73a81d8463e9214b50ef34ac217a7c70f549f51b5c8c94276bd210ab8bf5",
+      "bytes": 99455,
+      "retrieved_at": "2026-11-16T10:04:55Z",
+      "rows": 10
+    },
+    {
+      "source_url": "https://www.smallbusinesscommissioner.gov.uk/fpc/awardees/page/17/",
+      "sha256": "bbe5303404bbf7d77d1b084158b672da204ce0bcacb9b8443992948b509f70ec",
+      "bytes": 99517,
+      "retrieved_at": "2026-11-16T10:04:56Z",
+      "rows": 10
+    },
+    {
+      "source_url": "https://www.smallbusinesscommissioner.gov.uk/fpc/awardees/page/18/",
+      "sha256": "31533ae861d56ab22666968cf3ecfc6f1bdb8a0d701538e748ffdd4be59b5e1f",
+      "bytes": 99467,
+      "retrieved_at": "2026-11-16T10:04:57Z",
+      "rows": 10
+    },
+    {
+      "source_url": "https://www.smallbusinesscommissioner.gov.uk/fpc/awardees/page/19/",
+      "sha256": "ab33c6ddcd25e150ffb7f461175282b16327f0da687d926815fd3007bf990cbc",
+      "bytes": 99454,
+      "retrieved_at": "2026-11-16T10:04:58Z",
+      "rows": 10
+    },
+    {
+      "source_url": "https://www.smallbusinesscommissioner.gov.uk/fpc/awardees/page/20/",
+      "sha256": "b067ba4f7a50e89c349c341d6c8b1c42f726d2f2bd759a3174fadf8fa53a541e",
+      "bytes": 99400,
+      "retrieved_at": "2026-11-16T10:05:00Z",
+      "rows": 10
+    },
+    {
+      "source_url": "https://www.smallbusinesscommissioner.gov.uk/fpc/awardees/page/21/",
+      "sha256": "a4c09586819472f3f2128b1120bd5c557d36dfba18ff08320641c88bce5ae530",
+      "bytes": 99501,
+      "retrieved_at": "2026-11-16T10:05:01Z",
+      "rows": 10
+    },
+    {
+      "source_url": "https://www.smallbusinesscommissioner.gov.uk/fpc/awardees/page/22/",
+      "sha256": "3356987fff70e1e54106f57dd7922aedcb2976ee130ddf7d0cd0cb125d8f083b",
+      "bytes": 99388,
+      "retrieved_at": "2026-11-16T10:05:02Z",
+      "rows": 10
+    },
+    {
+      "source_url": "https://www.smallbusinesscommissioner.gov.uk/fpc/awardees/page/23/",
+      "sha256": "a610a9af25dc1d60486e7b8e18d4e8febb9274a05549df3ce7813192a03d5037",
+      "bytes": 99343,
+      "retrieved_at": "2026-11-16T10:05:03Z",
+      "rows": 10
+    },
+    {
+      "source_url": "https://www.smallbusinesscommissioner.gov.uk/fpc/awardees/page/24/",
+      "sha256": "4027f377ce510eeccb87709afc6eebefc86a55e5be05f56c5bb33f2c2d1ccc4f",
+      "bytes": 99441,
+      "retrieved_at": "2026-11-16T10:05:05Z",
+      "rows": 10
+    },
+    {
+      "source_url": "https://www.smallbusinesscommissioner.gov.uk/fpc/awardees/page/25/",
+      "sha256": "7a1db44ba511903a62a0d19a2e31a8b0b0cd7102a0a5b44d600e1a4c4cd29bf2",
+      "bytes": 99493,
+      "retrieved_at": "2026-11-16T10:05:06Z",
+      "rows": 10
+    },
+    {
+      "source_url": "https://www.smallbusinesscommissioner.gov.uk/fpc/awardees/page/26/",
+      "sha256": "b87192e3f9d5a3878ff50ab04d1ca92fa154c414d4c3551acfd84124f517edee",
+      "bytes": 99367,
+      "retrieved_at": "2026-11-16T10:05:07Z",
+      "rows": 10
+    },
+    {
+      "source_url": "https://www.smallbusinesscommissioner.gov.uk/fpc/awardees/page/27/",
+      "sha256": "a5c1310e879920c1f6f67911ff34c28d93e4c371a257bfcf8033568e3c359aa7",
+      "bytes": 99490,
+      "retrieved_at": "2026-11-16T10:05:08Z",
+      "rows": 10
+    },
+    {
+      "source_url": "https://www.smallbusinesscommissioner.gov.uk/fpc/awardees/page/28/",
+      "sha256": "b12b8b1d2239e75d37a009aac0996ddccc073f3810a6639d763158b02f3e9ec1",
+      "bytes": 99394,
+      "retrieved_at": "2026-11-16T10:05:10Z",
+      "rows": 10
+    },
+    {
+      "source_url": "https://www.smallbusinesscommissioner.gov.uk/fpc/awardees/page/29/",
+      "sha256": "cb3598237c1713c0943c531faa4b1856820f4a79471a2e95c4ccce7af2177103",
+      "bytes": 99322,
+      "retrieved_at": "2026-11-16T10:05:12Z",
+      "rows": 10
+    },
+    {
+      "source_url": "https://www.smallbusinesscommissioner.gov.uk/fpc/awardees/page/30/",
+      "sha256": "48dde3662d6e92ef49b18f26a11c5a9a36a396c33093991249101e8655e7e78b",
+      "bytes": 99425,
+      "retrieved_at": "2026-11-16T10:05:13Z",
+      "rows": 10
+    },
+    {
+      "source_url": "https://www.smallbusinesscommissioner.gov.uk/fpc/awardees/page/31/",
+      "sha256": "3988f75ecb60f131e5d17913f9e3bf406faa9c61f083016c738316c8c3d859a3",
+      "bytes": 99480,
+      "retrieved_at": "2026-11-16T10:05:14Z",
+      "rows": 10
+    },
+    {
+      "source_url": "https://www.smallbusinesscommissioner.gov.uk/fpc/awardees/page/32/",
+      "sha256": "abaf820a779cc91c595edc2c1ac9512f5c67b984b0cfebe1688109adf9fc12de",
+      "bytes": 99418,
+      "retrieved_at": "2026-11-16T10:05:16Z",
+      "rows": 10
+    },
+    {
+      "source_url": "https://www.smallbusinesscommissioner.gov.uk/fpc/awardees/page/33/",
+      "sha256": "f1be82a70942dc85c7f38e619849e795f0ad8775bab02a41c8db88350766c94e",
+      "bytes": 99385,
+      "retrieved_at": "2026-11-16T10:05:17Z",
+      "rows": 10
+    },
+    {
+      "source_url": "https://www.smallbusinesscommissioner.gov.uk/fpc/awardees/page/34/",
+      "sha256": "238bd8b6e8d830676dd0a5c2119fddf484d70b25b6b001d58a3e1b8bad0a711f",
+      "bytes": 99437,
+      "retrieved_at": "2026-11-16T10:05:19Z",
+      "rows": 10
+    },
+    {
+      "source_url": "https://www.smallbusinesscommissioner.gov.uk/fpc/awardees/page/35/",
+      "sha256": "d485ea3640bd75ac7327741747703837886f1455a609a7528e5bd78be30adadb",
+      "bytes": 99493,
+      "retrieved_at": "2026-11-16T10:05:20Z",
+      "rows": 10
+    },
+    {
+      "source_url": "https://www.smallbusinesscommissioner.gov.uk/fpc/awardees/page/36/",
+      "sha256": "d22372a2429e842f20264f98fa650c844ba6668ba1bf55ac9350525cd4d1c9ff",
+      "bytes": 99523,
+      "retrieved_at": "2026-11-16T10:05:21Z",
+      "rows": 10
+    },
+    {
+      "source_url": "https://www.smallbusinesscommissioner.gov.uk/fpc/awardees/page/37/",
+      "sha256": "9eab825c4c9b3b0b865b006a011fa8fc802ff4e72e6fa2592947dcff53b4ed1a",
+      "bytes": 99486,
+      "retrieved_at": "2026-11-16T10:05:22Z",
+      "rows": 10
+    },
+    {
+      "source_url": "https://www.smallbusinesscommissioner.gov.uk/fpc/awardees/page/38/",
+      "sha256": "8908956cd690c0fd7a5147b1e613dbe849cf4f5c863c5c0be24ac8985ca063da",
+      "bytes": 99440,
+      "retrieved_at": "2026-11-16T10:05:26Z",
+      "rows": 10
+    },
+    {
+      "source_url": "https://www.smallbusinesscommissioner.gov.uk/fpc/awardees/page/39/",
+      "sha256": "6bc1620255e3fcce8321d22eacfd470368060b303ebff98006c09e3d2480b986",
+      "bytes": 99384,
+      "retrieved_at": "2026-11-16T10:05:27Z",
+      "rows": 10
+    },
+    {
+      "source_url": "https://www.smallbusinesscommissioner.gov.uk/fpc/awardees/page/40/",
+      "sha256": "99c5169422d1d6eb673a1aee4b007434d9ba236d691c5f1d4799da9fc01dc176",
+      "bytes": 99509,
+      "retrieved_at": "2026-11-16T10:05:30Z",
+      "rows": 10
+    },
+    {
+      "source_url": "https://www.smallbusinesscommissioner.gov.uk/fpc/awardees/page/41/",
+      "sha256": "9296ba54fbc7d78f50e96a01a7cea4a3b3c20b5c06e7a68d35c814969dbc64b4",
+      "bytes": 99496,
+      "retrieved_at": "2026-11-16T10:05:32Z",
+      "rows": 10
+    },
+    {
+      "source_url": "https://www.smallbusinesscommissioner.gov.uk/fpc/awardees/page/42/",
+      "sha256": "df87d6ee3927895796cb85abf47a8f53c4bce8a1fb193133e6936bbdaaea6ed2",
+      "bytes": 99482,
+      "retrieved_at": "2026-11-16T10:05:32Z",
+      "rows": 10
+    },
+    {
+      "source_url": "https://www.smallbusinesscommissioner.gov.uk/fpc/awardees/page/43/",
+      "sha256": "df3d97e2532baa6d6041d847359472f66d54e99dc6aec0766432af19f059cd81",
+      "bytes": 99440,
+      "retrieved_at": "2026-11-16T10:05:33Z",
+      "rows": 10
+    },
+    {
+      "source_url": "https://www.smallbusinesscommissioner.gov.uk/fpc/awardees/page/44/",
+      "sha256": "e515f126536955505128a09ec3c0ae7c3b11d2e63d15a8c034994e0cbf0c1d95",
+      "bytes": 99460,
+      "retrieved_at": "2026-11-16T10:05:34Z",
+      "rows": 10
+    },
+    {
+      "source_url": "https://www.smallbusinesscommissioner.gov.uk/fpc/awardees/page/45/",
+      "sha256": "e9f8fa61bccd79c87b6c7a3575c253b9e70854b080e8eb47c8f267f0c5368be1",
+      "bytes": 99444,
+      "retrieved_at": "2026-11-16T10:05:36Z",
+      "rows": 10
+    },
+    {
+      "source_url": "https://www.smallbusinesscommissioner.gov.uk/fpc/awardees/page/46/",
+      "sha256": "b6490a48610da49e3b46b06e40bd91b14a960f57f6a4889f302a57e0a394ab83",
+      "bytes": 99481,
+      "retrieved_at": "2026-11-16T10:05:37Z",
+      "rows": 10
+    },
+    {
+      "source_url": "https://www.smallbusinesscommissioner.gov.uk/fpc/awardees/page/47/",
+      "sha256": "925e11a92236c18c634e41cd584c977ca8d537cde79d8d5fad96b5f98b20d010",
+      "bytes": 99412,
+      "retrieved_at": "2026-11-16T10:05:38Z",
+      "rows": 10
+    },
+    {
+      "source_url": "https://www.smallbusinesscommissioner.gov.uk/fpc/awardees/page/48/",
+      "sha256": "b322675d139d26e3000123eb8b3bd05da1887c5f317bbc059e63337ac1cfd123",
+      "bytes": 99377,
+      "retrieved_at": "2026-11-16T10:05:39Z",
+      "rows": 10
+    },
+    {
+      "source_url": "https://www.smallbusinesscommissioner.gov.uk/fpc/awardees/page/49/",
+      "sha256": "79a613e60f871384dbd03127ce0f39571be38885b1a380f14827babcdf5270c6",
+      "bytes": 99514,
+      "retrieved_at": "2026-11-16T10:05:40Z",
+      "rows": 10
+    },
+    {
+      "source_url": "https://www.smallbusinesscommissioner.gov.uk/fpc/awardees/page/50/",
+      "sha256": "1e7d845bb508e364c89341fe02e8348ce182243e4eab0b0ea970a3ee84f8543d",
+      "bytes": 98871,
+      "retrieved_at": "2026-11-16T10:05:41Z",
+      "rows": 10
+    },
+    {
+      "source_url": "https://www.smallbusinesscommissioner.gov.uk/fpc/awardees/page/51/",
+      "sha256": "1429e8c54eccf57a1eb924b4ca75cd8f3b5f3e3193e4ca7bd134fea46fb8c337",
+      "bytes": 99364,
+      "retrieved_at": "2026-11-16T10:05:42Z",
+      "rows": 10
+    },
+    {
+      "source_url": "https://www.smallbusinesscommissioner.gov.uk/fpc/awardees/page/52/",
+      "sha256": "884324e1e4e9168e428be4c7adec75a981a63f88b29f405bcb7d463572bb573f",
+      "bytes": 99490,
+      "retrieved_at": "2026-11-16T10:05:43Z",
+      "rows": 10
+    },
+    {
+      "source_url": "https://www.smallbusinesscommissioner.gov.uk/fpc/awardees/page/53/",
+      "sha256": "8efe768172ed6ca6a6e67d665dd9ec62536f2731cad9e9c12e9cd494f57b6543",
+      "bytes": 99435,
+      "retrieved_at": "2026-11-16T10:05:44Z",
+      "rows": 10
+    },
+    {
+      "source_url": "https://www.smallbusinesscommissioner.gov.uk/fpc/awardees/page/54/",
+      "sha256": "4d1e831de45e733eef6c64b6816ab6a8a051f421a2bc14a7c8c5fd943b97bfb1",
+      "bytes": 98790,
+      "retrieved_at": "2026-11-16T10:05:45Z",
+      "rows": 10
+    },
+    {
+      "source_url": "https://www.smallbusinesscommissioner.gov.uk/fpc/awardees/page/55/",
+      "sha256": "3918fb24644c6fe985969c85346e279e6529624f81492ad94da0196438c468dd",
+      "bytes": 99514,
+      "retrieved_at": "2026-11-16T10:05:46Z",
+      "rows": 10
+    },
+    {
+      "source_url": "https://www.smallbusinesscommissioner.gov.uk/fpc/awardees/page/56/",
+      "sha256": "98569a0cb9581369bdd6fedc4bd1e0627b08fd16f32b3f6b0f65f601955bec00",
+      "bytes": 99304,
+      "retrieved_at": "2026-11-16T10:05:47Z",
+      "rows": 10
+    },
+    {
+      "source_url": "https://www.smallbusinesscommissioner.gov.uk/fpc/awardees/page/57/",
+      "sha256": "5c8b9e3632b7cf8678c5f67382b0eacb6ff647bbc8dda8069efe3e387f2b166c",
+      "bytes": 99505,
+      "retrieved_at": "2026-11-16T10:05:48Z",
+      "rows": 10
+    },
+    {
+      "source_url": "https://www.smallbusinesscommissioner.gov.uk/fpc/awardees/page/58/",
+      "sha256": "305ed15fe98a1ec05000ee002a336897726c1b2756ec5a0dd9c6a4e011841140",
+      "bytes": 99537,
+      "retrieved_at": "2026-11-16T10:05:50Z",
+      "rows": 10
+    },
+    {
+      "source_url": "https://www.smallbusinesscommissioner.gov.uk/fpc/awardees/page/59/",
+      "sha256": "de638dd709a3c3ff634cf1cff3beafc0fc0c39c7012387e040a04573a8deb6dd",
+      "bytes": 99474,
+      "retrieved_at": "2026-11-16T10:05:51Z",
+      "rows": 10
+    },
+    {
+      "source_url": "https://www.smallbusinesscommissioner.gov.uk/fpc/awardees/page/60/",
+      "sha256": "bc72b75ae8f05dc5824202423be51eb5969b0d0d07bd673c8a0ad406b0b95029",
+      "bytes": 99366,
+      "retrieved_at": "2026-11-16T10:05:52Z",
+      "rows": 10
+    },
+    {
+      "source_url": "https://www.smallbusinesscommissioner.gov.uk/fpc/awardees/page/61/",
+      "sha256": "9b77a3886c7dae876bba31ce99c11bbfe7d2b2f3e0df39f9661f61dfa2534a40",
+      "bytes": 99509,
+      "retrieved_at": "2026-11-16T10:05:52Z",
+      "rows": 10
+    },
+    {
+      "source_url": "https://www.smallbusinesscommissioner.gov.uk/fpc/awardees/page/62/",
+      "sha256": "f8fa2958921bbb512a53c8df3b96eb59c9ece66a3c85a987e1cc8ff6835affde",
+      "bytes": 99504,
+      "retrieved_at": "2026-11-16T10:05:55Z",
+      "rows": 10
+    },
+    {
+      "source_url": "https://www.smallbusinesscommissioner.gov.uk/fpc/awardees/page/63/",
+      "sha256": "56539541029a5680eb213d95b03c3de7dcbcb0792b3f58afa94e8ac289ea5eeb",
+      "bytes": 99405,
+      "retrieved_at": "2026-11-16T10:05:56Z",
+      "rows": 10
+    },
+    {
+      "source_url": "https://www.smallbusinesscommissioner.gov.uk/fpc/awardees/page/64/",
+      "sha256": "a17d22bdc492644f93240c43338bd5c4eb107920a5a9ef4ca3ceafa0c26445e2",
+      "bytes": 99390,
+      "retrieved_at": "2026-11-16T10:05:56Z",
+      "rows": 10
+    },
+    {
+      "source_url": "https://www.smallbusinesscommissioner.gov.uk/fpc/awardees/page/65/",
+      "sha256": "9fda71645362fba99cd1df8c9ffd6feeffd9e87303d6cb99b0e9ed346abddf63",
+      "bytes": 99445,
+      "retrieved_at": "2026-11-16T10:05:58Z",
+      "rows": 10
+    },
+    {
+      "source_url": "https://www.smallbusinesscommissioner.gov.uk/fpc/awardees/page/66/",
+      "sha256": "5880fa96560ca4b962cec3ec1aa76877c6a64fe5e70a21a2d34bc963c6721e14",
+      "bytes": 99510,
+      "retrieved_at": "2026-11-16T10:05:59Z",
+      "rows": 10
+    },
+    {
+      "source_url": "https://www.smallbusinesscommissioner.gov.uk/fpc/awardees/page/67/",
+      "sha256": "fe5656f9caa60f46931d2a4499bdea0bc144533cb51c2b3416873f5ad60f1d27",
+      "bytes": 99393,
+      "retrieved_at": "2026-11-16T10:06:00Z",
+      "rows": 10
+    },
+    {
+      "source_url": "https://www.smallbusinesscommissioner.gov.uk/fpc/awardees/page/68/",
+      "sha256": "230aed5cbf87e81da927593aeae017fba1a72e630b031d706d3f8185e510659d",
+      "bytes": 99340,
+      "retrieved_at": "2026-11-16T10:06:02Z",
+      "rows": 10
+    },
+    {
+      "source_url": "https://www.smallbusinesscommissioner.gov.uk/fpc/awardees/page/69/",
+      "sha256": "36338a4536af235f9488af410b2410b43ecc85c08668a53331a6ac14130a9f9a",
+      "bytes": 99443,
+      "retrieved_at": "2026-11-16T10:06:04Z",
+      "rows": 10
+    },
+    {
+      "source_url": "https://www.smallbusinesscommissioner.gov.uk/fpc/awardees/page/70/",
+      "sha256": "a0b09fcee4d328589b9e0e166f720c5f713ae9e031b4d04103c98a3dcb5fefb1",
+      "bytes": 99384,
+      "retrieved_at": "2026-11-16T10:06:05Z",
+      "rows": 10
+    },
+    {
+      "source_url": "https://www.smallbusinesscommissioner.gov.uk/fpc/awardees/page/71/",
+      "sha256": "320e8255e98a0250a7b25c7b0aa894b5341399d8583267b7896369a53206df0f",
+      "bytes": 99453,
+      "retrieved_at": "2026-11-16T10:06:06Z",
+      "rows": 10
+    },
+    {
+      "source_url": "https://www.smallbusinesscommissioner.gov.uk/fpc/awardees/page/72/",
+      "sha256": "442f7824c8e85aff84abf5b8e4b71b58dc305d86cc0d185854b5470a077b1ab2",
+      "bytes": 99464,
+      "retrieved_at": "2026-11-16T10:06:07Z",
+      "rows": 10
+    },
+    {
+      "source_url": "https://www.smallbusinesscommissioner.gov.uk/fpc/awardees/page/73/",
+      "sha256": "28b755f830fcef913a660c1221a60645028bc3d438f2a27552ad6600213042d9",
+      "bytes": 99394,
+      "retrieved_at": "2026-11-16T10:06:08Z",
+      "rows": 10
+    },
+    {
+      "source_url": "https://www.smallbusinesscommissioner.gov.uk/fpc/awardees/page/74/",
+      "sha256": "3932a43f2172b693b968214fd5b4a3ff6e12f0ecec8d0bf6a4149033cd6f6a49",
+      "bytes": 99382,
+      "retrieved_at": "2026-11-16T10:06:09Z",
+      "rows": 10
+    },
+    {
+      "source_url": "https://www.smallbusinesscommissioner.gov.uk/fpc/awardees/page/75/",
+      "sha256": "84d93ba59bc1c35e7d5ce45febaf4137be2295fc7faff0872f3c0b120489c7f0",
+      "bytes": 99450,
+      "retrieved_at": "2026-11-16T10:06:10Z",
+      "rows": 10
+    },
+    {
+      "source_url": "https://www.smallbusinesscommissioner.gov.uk/fpc/awardees/page/76/",
+      "sha256": "2c13242bec238125ed1b7093ad5e1298f48a477d88bba35aca53e9190d1b4bc2",
+      "bytes": 99461,
+      "retrieved_at": "2026-11-16T10:06:11Z",
+      "rows": 10
+    },
+    {
+      "source_url": "https://www.smallbusinesscommissioner.gov.uk/fpc/awardees/page/77/",
+      "sha256": "1bc458a155e7032dd0696ab0ea8593ef7e16cb1ff6d46d751af1aa7003c80b5e",
+      "bytes": 99453,
+      "retrieved_at": "2026-11-16T10:06:12Z",
+      "rows": 10
+    },
+    {
+      "source_url": "https://www.smallbusinesscommissioner.gov.uk/fpc/awardees/page/78/",
+      "sha256": "8f43bda96eaccfb8b930b64d5740dacd1a6d17eee070c86325441f9e1f78756a",
+      "bytes": 99405,
+      "retrieved_at": "2026-11-16T10:06:14Z",
+      "rows": 10
+    },
+    {
+      "source_url": "https://www.smallbusinesscommissioner.gov.uk/fpc/awardees/page/79/",
+      "sha256": "97ace7765dce2e07a8b6c5491962daf95f121b7c9fa6a854f9f412c82f647b9b",
+      "bytes": 99386,
+      "retrieved_at": "2026-11-16T10:06:15Z",
+      "rows": 10
+    },
+    {
+      "source_url": "https://www.smallbusinesscommissioner.gov.uk/fpc/awardees/page/80/",
+      "sha256": "c2323b0071ea5f2fec94c9f8b03c18d61d5e66598279fc52c0837e56a5735cc9",
+      "bytes": 99481,
+      "retrieved_at": "2026-11-16T10:06:18Z",
+      "rows": 10
+    },
+    {
+      "source_url": "https://www.smallbusinesscommissioner.gov.uk/fpc/awardees/page/81/",
+      "sha256": "40843f0cd96a9f71e4af7b8330333d8f9cd97c6b68380d4eedfd3faa5564126a",
+      "bytes": 99412,
+      "retrieved_at": "2026-11-16T10:06:20Z",
+      "rows": 10
+    },
+    {
+      "source_url": "https://www.smallbusinesscommissioner.gov.uk/fpc/awardees/page/82/",
+      "sha256": "1f96138a1b563a185da53c50580f225a153aeb6a49a5e950d4f34fe8c7c65da3",
+      "bytes": 99507,
+      "retrieved_at": "2026-11-16T10:06:21Z",
+      "rows": 10
+    },
+    {
+      "source_url": "https://www.smallbusinesscommissioner.gov.uk/fpc/awardees/page/83/",
+      "sha256": "1a864e6a922653b91ff1286b705bcfd0d8674bcc2f88d87b839d4f05f6897baa",
+      "bytes": 99403,
+      "retrieved_at": "2026-11-16T10:06:22Z",
+      "rows": 10
+    },
+    {
+      "source_url": "https://www.smallbusinesscommissioner.gov.uk/fpc/awardees/page/84/",
+      "sha256": "f501f3300ce35b2932ce8db81547092604c377e9f8f837f9e811542d7979df22",
+      "bytes": 99363,
+      "retrieved_at": "2026-11-16T10:06:23Z",
+      "rows": 10
+    },
+    {
+      "source_url": "https://www.smallbusinesscommissioner.gov.uk/fpc/awardees/page/85/",
+      "sha256": "51bbb9578a2db41ef03b644710f0a1617826ab125e069afd5da7e20d2365da90",
+      "bytes": 99114,
+      "retrieved_at": "2026-11-16T10:06:25Z",
+      "rows": 10
+    },
+    {
+      "source_url": "https://www.smallbusinesscommissioner.gov.uk/fpc/awardees/page/86/",
+      "sha256": "ca0ef70bdff310fa9976adc828aa8287815398dac527f2db85659e60c56ed8d3",
+      "bytes": 92775,
+      "retrieved_at": "2026-11-16T10:06:28Z",
+      "rows": 7
+    }
+  ]
+}

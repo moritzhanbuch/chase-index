@@ -1,0 +1,126 @@
+description: Foreign currency units per 1 USD. Used ONLY to convert non-USD revenue
+  to a rough USD figure for the >= USD 4B universe threshold. DPO is a ratio and never
+  uses FX.
+source: 'US Treasury, Bureau of the Fiscal Service: Treasury Reporting Rates of Exchange'
+source_url: https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v1/accounting/od/rates_of_exchange?filter=record_date:eq:2025-12-31&page[size]=400
+record_date: '2025-12-31'
+retrieved_at: '2026-11-16T10:03:10Z'
+licence: US government work, public domain
+rates:
+  EUR:
+    per_usd: 0.851
+    treasury_label: Euro Zone-Euro
+  JPY:
+    per_usd: 156.61
+    treasury_label: Japan-Yen
+  GBP:
+    per_usd: 0.743
+    treasury_label: United Kingdom-Pound
+  CNY:
+    per_usd: 6.998
+    treasury_label: China-Renminbi
+  TWD:
+    per_usd: 31.324
+    treasury_label: Taiwan-Dollar
+  KRW:
+    per_usd: 1443.75
+    treasury_label: Korea-Won
+  INR:
+    per_usd: 89.854
+    treasury_label: India-Rupee
+  BRL:
+    per_usd: 5.477
+    treasury_label: Brazil-Real
+  MXN:
+    per_usd: 17.956
+    treasury_label: Mexico-Peso
+  CAD:
+    per_usd: 1.369
+    treasury_label: Canada-Dollar
+  CHF:
+    per_usd: 0.792
+    treasury_label: Switzerland-Franc
+  AUD:
+    per_usd: 1.495
+    treasury_label: Australia-Dollar
+  SEK:
+    per_usd: 9.197
+    treasury_label: Sweden-Krona
+  NOK:
+    per_usd: 10.072
+    treasury_label: Norway-Krone
+  DKK:
+    per_usd: 6.355
+    treasury_label: Denmark-Krone
+  ILS:
+    per_usd: 3.191
+    treasury_label: Israel-Shekel
+  ZAR:
+    per_usd: 16.546
+    treasury_label: South Africa-Rand
+  HKD:
+    per_usd: 7.784
+    treasury_label: Hong Kong-Dollar
+  SGD:
+    per_usd: 1.285
+    treasury_label: Singapore-Dollar
+  ARS:
+    per_usd: 1480.0
+    treasury_label: Argentina-Peso
+  CLP:
+    per_usd: 900.35
+    treasury_label: Chile-Peso
+  COP:
+    per_usd: 3773.62
+    treasury_label: Colombia-Peso
+  PEN:
+    per_usd: 3.362
+    treasury_label: Peru-Sol
+  TRY:
+    per_usd: 42.951
+    treasury_label: Turkey-New Lira
+  RUB:
+    per_usd: 81.996
+    treasury_label: Russia-Ruble
+  IDR:
+    per_usd: 16649.99
+    treasury_label: Indonesia-Rupiah
+  THB:
+    per_usd: 31.66
+    treasury_label: Thailand-Baht
+  PHP:
+    per_usd: 58.911
+    treasury_label: Philippines-Peso
+  MYR:
+    per_usd: 4.056
+    treasury_label: Malaysia-Ringgit
+  NZD:
+    per_usd: 1.733
+    treasury_label: New Zealand-Dollar
+  PLN:
+    per_usd: 3.59
+    treasury_label: Poland-Zloty
+  CZK:
+    per_usd: 20.101
+    treasury_label: Czech Republic-Koruna
+  HUF:
+    per_usd: 327.22
+    treasury_label: Hungary-Forint
+  SAR:
+    per_usd: 3.75
+    treasury_label: Saudi Arabia-Riyal
+  AED:
+    per_usd: 3.672
+    treasury_label: United Arab Emirates-Dirham
+  VND:
+    per_usd: 26295.0
+    treasury_label: Vietnam-Dong
+  KZT:
+    per_usd: 506.28
+    treasury_label: Kazakhstan-Tenge
+  NGN:
+    per_usd: 1450.0
+    treasury_label: Nigeria-Naira
+  EGP:
+    per_usd: 47.6
+    treasury_label: Egypt-Pound

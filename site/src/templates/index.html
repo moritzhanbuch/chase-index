@@ -1,0 +1,98 @@
+{% extends "base.html" %}
+{% block head %}<script type="application/ld+json">{{ dataset_jsonld|safe }}</script>{% endblock %}
+{% block main %}
+<div class="wrap">
+  <p class="kicker">An independent, source-traceable dataset</p>
+  <h1>How long do large companies take to pay their suppliers?</h1>
+  <p class="lede">The Chase Index collects what large companies themselves report about paying invoices: statutory payment reports from {{ h.uk_current_n|int_c }} UK legal entities and the IBEX 35 in Spain. Where nothing is reported, it adds a clearly labelled balance-sheet proxy. Every figure links to its official source. Somebody is always chasing an invoice. This shows what companies themselves report.</p>
+
+  <ul class="stats" aria-label="Headline findings, computed from the data">
+    <li class="stat"><b>{{ h.uk_median_days|d1 }} days</b><span>median of the average reported days to pay across {{ h.uk_current_n|int_c }} UK legal entities with a current report</span><small>Official 2025 median for large UK businesses: {{ h.official_median_days|d1 }} days</small></li>
+    <li class="stat"><b>{{ h.uk_share_over_60|d1 }}%</b><span>of those entities report an average of more than 60 days to pay ({{ h.uk_n_over_60|int_c }} entities)</span><small>{{ h.uk_share_over_30|d1 }}% report an average of more than 30 days</small></li>
+    <li class="stat"><b>{{ h.uk_share_longer|d1 }}%</b><span>report a longer average than a year earlier, {{ h.uk_share_shorter|d1 }}% a shorter one</span><small>{{ h.uk_share_small_change|d1 }}% of all changes are one day or less. Out of {{ h.uk_trend_n|int_c }} entities with a report one year earlier</small></li>
+    <li class="stat"><b>{{ h.uk_median_late|d1 }}%</b><span>median share of invoices not paid within agreed terms, as reported by those entities</span><small>Official 2025 median: {{ h.official_median_late|d1 }}%</small></li>
+    <li class="stat"><b>{{ h.es_over_60_n }} of {{ h.es_n }}</b><span>IBEX 35 companies with a published figure report an average supplier payment period of more than 60 days</span><small>60 days is the legal maximum for an individual payment in Spain; an average above it is not a finding about any single invoice. Fiscal year {{ h.es_fy }}, median {{ h.es_median|d1 }} days. <a href="spain.html">See the table</a></small></li>
+  </ul>
+  <p class="small muted">All five figures are computed from the dataset when this site is built. "Current" means the entity's latest usable report ended within about 18 months of the latest data. UK reporting periods covered: {{ h.uk_period_min|dmy }} to {{ h.uk_period_max|dmy }}.</p>
+
+  <h2>What this is</h2>
+  <div class="narrow">
+    <p>Large UK companies must publish, twice a year, how long they take to pay invoices. Spanish companies must state their average supplier payment period in their annual accounts. Both are public, and both are awkward to use: the UK data is filed per legal entity, the Spanish data sits inside annual reports. The Chase Index cleans them, links UK entities to their parent groups where that can be done with confidence, and keeps the source link for every number.</p>
+    <p>Supplying a large UK company? <a href="lookup.html">Look up how long your customer takes to pay</a>. It searches {{ h.lookup_n|int_c }} UK legal entities by name or company number.</p>
+    <p><span class="chip reported">Reported</span> figures are what companies filed under a legal duty. <span class="chip proxy">Computed DPO (proxy)</span> is days payable outstanding, calculated from published financial statements. It is not the same thing as reported days to pay and is always shown separately. More in the <a href="methodology.html">methodology</a> and the <a href="limitations.html">limitations</a>.</p>
+  </div>
+
+  <h2>The UK picture in three charts</h2>
+  <div class="charts">
+    <figure class="chart wide">
+      <h3>Most UK entities pay in about a month. A long tail takes much longer.</h3>
+      <p class="sub">Number of UK legal entities by average reported days to pay, latest current report, {{ h.uk_current_n|int_c }} entities</p>
+      <div class="hist" role="img" aria-label="Histogram of average reported days to pay across current UK entities. Median {{ h.uk_median_days|d1 }} days.">
+        {% for b in hist.bins %}<div class="bar" tabindex="0" style="height:{{ b.h }}%" data-tip="{{ b.label }}: {{ b.n|int_c }} entities ({{ b.share|d1 }}%)"></div>{% endfor %}
+        <div class="marker" style="left:{{ hist.marker_pct }}%"><span>Official 2025 median: {{ h.official_median_days|d1 }} days</span></div>
+      </div>
+      <div class="axis" aria-hidden="true">{% for t in hist.ticks %}<span style="left:{{ t.pct }}%"{% if t.end %} class="end"{% endif %}>{{ t.label }}</span>{% endfor %}</div>
+      <p class="axis-title">Average reported days to pay</p>
+      <figcaption>Source: entity data in this index, parsed from the UK statutory reporting service. The marker is the official median for large UK businesses from the Department for Business and Trade statistics.
+        <details><summary>Show as a table</summary><div class="table-wrap"><table><thead><tr><th>Average days to pay</th><th class="num">Entities</th><th class="num">Share</th></tr></thead><tbody>{% for b in hist.bins %}<tr><td>{{ b.label }}</td><td class="num">{{ b.n|int_c }}</td><td class="num">{{ b.share|d1 }}%</td></tr>{% endfor %}</tbody></table></div></details>
+      </figcaption>
+    </figure>
+    <figure class="chart">
+      <h3>The share of invoices paid late differs by sector</h3>
+      <p class="sub">Median share of invoices not paid within agreed terms, by number, {{ sector.year }}, by UK industry section</p>
+      <div class="hbars">
+        {% for s in sector.rows %}<div class="lab">{{ s.label }}</div><div class="track"><div class="bar" tabindex="0" style="width:{{ s.w }}%" data-tip="{{ s.full }}: {{ s.v|d1 }}% of invoices paid late (median of {{ s.n|int_c }} reports)"></div><span class="val">{{ s.v|d1 }}%</span></div>{% endfor %}
+      </div>
+      <figcaption>Source: official benchmark table, not the entity data: <a href="{{ sector.source }}" rel="noopener">Department for Business and Trade, large businesses' payment practices and performance statistics</a>. Sections with fewer than {{ sector.min_n }} valid reports are left out.</figcaption>
+    </figure>
+    <figure class="chart">
+      <h3>The official median has moved by {{ trend.delta|d1 }} days in {{ trend.span }} years</h3>
+      <p class="sub">Official median time to pay for large UK businesses, days, by reporting year</p>
+      <div class="linechart" role="img" aria-label="Line chart of the official median days to pay by year, from {{ trend.points[0].v|d1 }} days in {{ trend.points[0].year }} to {{ trend.points[-1].v|d1 }} days in {{ trend.points[-1].year }}.">
+        <svg viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><polyline points="{{ trend.polyline }}"/></svg>
+        {% for p in trend.points %}<span class="pv" style="left:{{ p.x }}%;top:{{ p.y }}%">{{ p.v|d1 }}</span><span class="pt" tabindex="0" style="left:{{ p.x }}%;top:{{ p.y }}%" data-tip="{{ p.year }}: median {{ p.v|d1 }} days to pay, {{ p.late|d1 }}% of invoices paid late"></span>{% endfor %}
+      </div>
+      <div class="axis" aria-hidden="true">{% for p in trend.points %}<span style="left:{{ p.x }}%">{{ p.year }}</span>{% endfor %}</div>
+      <figcaption>The vertical axis starts at {{ trend.ymin }} days, not zero, to make a small change visible. Over the same years the official median share of invoices paid late went from {{ trend.points[0].late|d1 }}% to {{ trend.points[-1].late|d1 }}%. Source: <a href="{{ trend.source }}" rel="noopener">Department for Business and Trade official statistics</a>.</figcaption>
+    </figure>
+  </div>
+
+  <h2 id="groups">Groups in the index</h2>
+  <p class="narrow">{{ h.groups_reported_n|int_c }} large groups with reported data: {{ h.groups_uk_n|int_c }} with matched UK legal entities and {{ h.groups_es_n|int_c }} with a Spanish statutory figure. Listed alphabetically. Click a column to sort. Tick the box to add {{ h.groups_proxy_only_n|int_c }} more groups that only have a computed proxy.</p>
+  <p class="note">UK legal entities only, matched to the group. Not a statement about the group's global payment behaviour. Covers the group's Spanish entities as disclosed under Ley 15/2010.</p>
+  <p class="note">Sorting is for navigation. A group figure can rest on a single UK subsidiary, see the UK entities column. Rows with fewer than {{ small_base_n }} matched UK entities are marked.</p>
+  <div class="controls" data-filter-for="groups-table">
+    <label class="search">Search group<input type="search" data-f="q" placeholder="Company name" autocomplete="off"></label>
+    <label>Country<select data-f="country"><option value="">All countries</option>{% for code, name in countries %}<option value="{{ code }}">{{ name }}</option>{% endfor %}</select></label>
+    <label>Sector<select data-f="sector"><option value="">All sectors</option>{% for code, name in sectors %}<option value="{{ code }}">{{ name }}</option>{% endfor %}</select></label>
+    <label class="check"><input type="checkbox" data-f="proxy"> Include groups with a computed proxy only</label>
+    <span class="small muted" data-count aria-live="polite"></span>
+  </div>
+  <div class="table-wrap">
+    <table id="groups-table" data-sortable>
+      <thead>
+        <tr><th colspan="3"></th><th class="group-head" colspan="6"><span class="chip reported">Reported</span></th><th class="group-head proxy-col" colspan="2"><span class="chip proxy">Computed DPO (proxy)</span></th></tr>
+        <tr>
+          <th data-col="0" aria-sort="ascending"><button class="sort" type="button">Group</button></th>
+          <th data-col="1"><button class="sort" type="button">Country</button></th>
+          <th data-col="2"><button class="sort" type="button">Sector</button></th>
+          <th class="num" data-col="3" data-type="num"><button class="sort" type="button">UK entities</button></th>
+          <th class="num" data-col="4" data-type="num"><button class="sort" type="button">Avg days to pay (UK, value-weighted)</button></th>
+          <th class="num" data-col="5" data-type="num"><button class="sort" type="button">Paid late (UK)</button></th>
+          <th class="num" data-col="6" data-type="num"><button class="sort" type="button">Paid after 60 days (UK)</button></th>
+          <th class="num" data-col="7" data-type="num"><button class="sort" type="button">Latest period end (UK)</button></th>
+          <th class="num" data-col="8" data-type="num"><button class="sort" type="button">PMP days (Spain)</button></th>
+          <th class="num proxy-col" data-col="9" data-type="num"><button class="sort" type="button">DPO days</button></th>
+          <th class="num proxy-col" data-col="10" data-type="num"><button class="sort" type="button">Fiscal year</button></th>
+        </tr>
+      </thead>
+      <tbody>
+      {% for g in groups %}<tr data-name="{{ g.name|lower }}" data-country="{{ g.country }}" data-sector="{{ g.sector }}" data-reported="{{ 1 if g.reported else 0 }}"><td><a href="company/{{ g.id }}.html">{{ g.name }}</a></td><td data-v="{{ g.country_plain }}">{{ g.country_name }}</td><td>{{ g.sector_name }}</td><td class="num" data-v="{{ g.uk_n|raw }}">{% if g.uk_chip %}<span class="chip flag">{{ g.uk_chip }}</span>{% else %}{{ g.uk_n|d1 }}{% endif %}</td><td class="num" data-v="{{ g.uk_days|raw }}">{{ g.uk_days|d1 }}{% if g.uk_days is not none and not g.weighted %}<span class="muted" title="Simple mean: not all entities report an invoice value">*</span>{% endif %}</td><td class="num" data-v="{{ g.uk_late|raw }}">{{ g.uk_late|pct }}</td><td class="num" data-v="{{ g.uk_over60|raw }}">{{ g.uk_over60|pct }}</td><td class="num" data-v="{{ g.uk_period_end_sort }}">{{ g.uk_period_end|dmy }}</td><td class="num" data-v="{{ g.es_pmp|raw }}">{{ g.es_pmp|d1 }}</td><td class="num proxy-col" data-v="{{ g.dpo|raw }}">{{ g.dpo_text }}</td><td class="num proxy-col" data-v="{{ g.dpo_fy|raw }}">{{ g.dpo_fy|d1 }}</td></tr>
+      {% endfor %}
+      </tbody>
+    </table>
+  </div>
+  <p><button type="button" class="more" data-more-for="groups-table" hidden>Show all groups</button></p>
+  <p class="small muted">UK columns are averages across the group's matched UK entities with a current report, weighted by the invoice value each entity reports paying. An asterisk marks a simple mean, used where not every entity reports an invoice value. The simple mean is on each company page and in the CSV. "Latest period end" is the most recent reporting period among those entities. PMP is the statutory average supplier payment period for fiscal year {{ h.es_fy }}. An empty cell means no figure, not zero. DPO is shown only where the filing tags trade payables and cost of sales separately and the result is within the plausible range. Sector is a coarse classification made for this index, and "Filed in" means the country where the annual report was filed, which is not always the headquarters. <a href="data.html">Download the data as CSV</a>.</p>
+</div>
+{% endblock %}

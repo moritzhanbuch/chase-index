@@ -1,0 +1,30 @@
+rank,company_id,name,html,pdf,copy
+1,siemens-energy-ag-q89189545,Siemens Energy AG,outputs/one_pagers/siemens-energy-ag-q89189545.html,outputs/one_pagers/siemens-energy-ag-q89189545.pdf,agent_written
+2,alstom-q309084,Alstom,outputs/one_pagers/alstom-q309084.html,outputs/one_pagers/alstom-q309084.pdf,agent_written
+3,lkq-corporation-cik1065696,LKQ Corporation,outputs/one_pagers/lkq-corporation-cik1065696.html,outputs/one_pagers/lkq-corporation-cik1065696.pdf,agent_written
+5,nestle-q160746,Nestlé,outputs/one_pagers/nestle-q160746.html,outputs/one_pagers/nestle-q160746.pdf,agent_written
+6,ge-vernova-inc-cik1996810,GE Vernova Inc.,outputs/one_pagers/ge-vernova-inc-cik1996810.html,outputs/one_pagers/ge-vernova-inc-cik1996810.pdf,agent_written
+7,heineken-n-v-lei86uq23,Heineken N.V.,outputs/one_pagers/heineken-n-v-lei86uq23.html,outputs/one_pagers/heineken-n-v-lei86uq23.pdf,agent_written
+8,reckitt-benckiser-group-plc-lei48v108,Reckitt Benckiser Group plc,outputs/one_pagers/reckitt-benckiser-group-plc-lei48v108.html,outputs/one_pagers/reckitt-benckiser-group-plc-lei48v108.pdf,agent_written
+9,grifols-q901262,Grifols,outputs/one_pagers/grifols-q901262.html,outputs/one_pagers/grifols-q901262.pdf,agent_written
+10,publicis-q1537378,Publicis,outputs/one_pagers/publicis-q1537378.html,outputs/one_pagers/publicis-q1537378.pdf,agent_written
+11,johnson-matthey-plc-leisc6z10,Johnson Matthey plc,outputs/one_pagers/johnson-matthey-plc-leisc6z10.html,outputs/one_pagers/johnson-matthey-plc-leisc6z10.pdf,agent_written
+12,haleon-plc-cik1900304,Haleon plc,outputs/one_pagers/haleon-plc-cik1900304.html,outputs/one_pagers/haleon-plc-cik1900304.pdf,agent_written
+14,eaton-corporation-q48872,Eaton Corporation,outputs/one_pagers/eaton-corporation-q48872.html,outputs/one_pagers/eaton-corporation-q48872.pdf,agent_written
+15,terex-corp-cik97216,Terex Corp,outputs/one_pagers/terex-corp-cik97216.html,outputs/one_pagers/terex-corp-cik97216.pdf,agent_written
+16,prysmian-group-q1964784,Prysmian Group,outputs/one_pagers/prysmian-group-q1964784.html,outputs/one_pagers/prysmian-group-q1964784.pdf,agent_written
+17,unilever-q157062,Unilever,outputs/one_pagers/unilever-q157062.html,outputs/one_pagers/unilever-q157062.pdf,agent_written
+18,puig-q3410623,Puig,outputs/one_pagers/puig-q3410623.html,outputs/one_pagers/puig-q3410623.pdf,agent_written
+19,mondelez-international-q12857502,Mondelez International,outputs/one_pagers/mondelez-international-q12857502.html,outputs/one_pagers/mondelez-international-q12857502.pdf,agent_written
+20,airbus-q2311,Airbus,outputs/one_pagers/airbus-q2311.html,outputs/one_pagers/airbus-q2311.pdf,agent_written
+22,ge-aerospace-q1485061,GE Aerospace,outputs/one_pagers/ge-aerospace-q1485061.html,outputs/one_pagers/ge-aerospace-q1485061.pdf,agent_written
+24,pilgrims-pride-corp-cik802481,Pilgrims Pride Corp,outputs/one_pagers/pilgrims-pride-corp-cik802481.html,outputs/one_pagers/pilgrims-pride-corp-cik802481.pdf,agent_written
+25,cummins-inc-cik26172,Cummins Inc,outputs/one_pagers/cummins-inc-cik26172.html,outputs/one_pagers/cummins-inc-cik26172.pdf,agent_written
+28,pernod-ricard-q837049,Pernod Ricard,outputs/one_pagers/pernod-ricard-q837049.html,outputs/one_pagers/pernod-ricard-q837049.pdf,deterministic_fallback
+32,danone-q329426,Danone,outputs/one_pagers/danone-q329426.html,outputs/one_pagers/danone-q329426.pdf,deterministic_fallback
+47,zimmer-biomet-holdings-inc-cik1136869,"Zimmer Biomet Holdings, INC.",outputs/one_pagers/zimmer-biomet-holdings-inc-cik1136869.html,outputs/one_pagers/zimmer-biomet-holdings-inc-cik1136869.pdf,deterministic_fallback
+46,british-american-tobacco-q856411,British American Tobacco,outputs/one_pagers/british-american-tobacco-q856411.html,outputs/one_pagers/british-american-tobacco-q856411.pdf,deterministic_fallback
+34,cooper-companies-inc-cik711404,"Cooper Companies, INC.",outputs/one_pagers/cooper-companies-inc-cik711404.html,outputs/one_pagers/cooper-companies-inc-cik711404.pdf,deterministic_fallback
+29,roche-holding-q25463170,Roche Holding,outputs/one_pagers/roche-holding-q25463170.html,outputs/one_pagers/roche-holding-q25463170.pdf,deterministic_fallback
+53,technipfmc-q30324333,TechnipFMC,outputs/one_pagers/technipfmc-q30324333.html,outputs/one_pagers/technipfmc-q30324333.pdf,deterministic_fallback
+33,ds-smith-plc-leiblwh36,DS Smith plc,outputs/one_pagers/ds-smith-plc-leiblwh36.html,outputs/one_pagers/ds-smith-plc-leiblwh36.pdf,deterministic_fallback

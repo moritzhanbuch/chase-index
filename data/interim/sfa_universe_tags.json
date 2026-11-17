@@ -1,0 +1,43 @@
+{
+ "meta": {
+  "generated_at": "2026-11-16T20:05:55Z",
+  "extractor": "sfa-a (deterministic, XBRL tags only)",
+  "runtime_seconds": 143.1,
+  "companies": 1909,
+  "status_counts": {
+   "not_tagged": 1149,
+   "tagged": 191,
+   "no_structured_source": 560,
+   "tagged_text_only": 9
+  },
+  "source_counts": {
+   "sec": 999,
+   "none": 560,
+   "esef": 350
+  },
+  "text_mention_found": 147,
+  "concept_usage": {
+   "us-gaap:SupplierFinanceProgramObligationIncrease": 166,
+   "us-gaap:SupplierFinanceProgramObligationDecreaseSettlement": 165,
+   "us-gaap:SupplierFinanceProgramObligation": 139,
+   "us-gaap:SupplierFinanceProgramObligationCurrent": 84,
+   "us-gaap:SupplierFinanceProgramObligationPeriodIncreaseDecrease": 9,
+   "ifrs-full:DisclosureOfInformationRelatingToSupplierFinanceArrangementsExplanatory": 6,
+   "ifrs-full:DisclosureOfTermsAndConditionsOfSupplierFinanceArrangementsExplanatory": 4,
+   "ifrs-full:DisclosureOfFinancialLiabilitiesThatArePartOfSupplierFinanceArrangementsExplanatory": 3,
+   "ifrs-full:DisclosureOfRangeOfPaymentDueDatesOfFinancialLiabilitiesThatArePartOfSupplierFinanceArrangementsExplanatory": 3,
+   "ifrs-full:OtherNoncashEffectsSupplierFinanceArrangements": 2,
+   "us-gaap:SupplierFinanceProgramObligationNoncurrent": 2,
+   "tescoplc:DescriptionOfAccountingPolicyForSupplierFinancingArrangements": 1,
+   "CGEM:FinancialLiabilitiesThatArePartOfSupplierFinanceArrangements": 1,
+   "CGEM:TradeAndOtherCurrentPayablesToTradeSuppliersNotUnderReverseFactoringAgreements": 1,
+   "wmmorrison:DescriptionOfAccountingPolicyForSupplyChainFinancing": 1,
+   "kerrygroupplc:DescriptionOfAccountingPolicyForSupplierFinanceArrangements": 1,
+   "ifrs-full:NoncashEffectOfBusinessCombinationsSupplierFinanceArrangements": 1,
+   "ifrs-full:NoncashEffectOfExchangeDifferencesSupplierFinanceArrangements": 1,
+   "ifrs-full:DisclosureOfTypeAndEffectOfNoncashChangesToFinancialLiabilitiesThatArePartOfSupplierFinanceArrangementsExplanatory": 1
+  },
+  "interpretation": "not_tagged is NOT 'no programme'; see module docstring",
+  "tagged_with_amount": 188
+ }
+}

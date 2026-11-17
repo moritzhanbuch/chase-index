@@ -1,0 +1,203 @@
+{
+ "uk_reports_total": 116806,
+ "uk_reports_usable": 104993,
+ "uk_entities_total": 10309,
+ "uk_entities_current": 6262,
+ "uk_median_days_current": 31.0,
+ "uk_entities_over_60_days": 475,
+ "uk_entities_over_60_days_pct": 7.6,
+ "uk_entities_quarter_of_invoices_after_60_days": 1008,
+ "uk_entities_max_terms_90_plus": 1881,
+ "uk_entities_slower_yoy_pct": 41.3,
+ "uk_entities_with_yoy": 5708,
+ "uk_period_end_range": [
+  "2025-05-31",
+  "2026-10-31"
+ ],
+ "universe_companies": 1920,
+ "uk_entities_linked": 2091,
+ "groups_with_uk_data": 492,
+ "groups_with_uk_data_addressable": 442,
+ "groups_uk_median_days": 37.1,
+ "groups_uk_over_45": 147,
+ "groups_uk_over_60": 61,
+ "big_groups_20bn_with_uk_data": 194,
+ "big_groups_uk_over_45": 68,
+ "big_groups_uk_over_60": 27,
+ "big_groups_uk_median_days": 38.85,
+ "es_companies": 35,
+ "es_with_value": 32,
+ "es_linked_to_universe": 19,
+ "es_median_pmp": 30.5,
+ "es_above_60": [
+  [
+   "Acerinox, S.A.",
+   63.0
+  ],
+  [
+   "Grifols, S.A.",
+   78.0
+  ]
+ ],
+ "es_50_plus": [
+  [
+   "Grifols, S.A.",
+   78.0
+  ],
+  [
+   "Acerinox, S.A.",
+   63.0
+  ],
+  [
+   "Puig Brands, S.A.",
+   59.0
+  ],
+  [
+   "Fluidra, S.A.",
+   50.29
+  ]
+ ],
+ "tiers": {
+  "3": 1536,
+  "2": 199,
+  "1": 185
+ },
+ "tier1_by_evidence": {
+  "uk_reported": 131,
+  "computed_dpo_proxy": 49,
+  "es_reported": 5
+ },
+ "tier1_by_country_top": {
+  "US": 97,
+  "GB": 19,
+  "DE": 11,
+  "FR": 11,
+  "DK": 6,
+  "CH": 5,
+  "ES": 5,
+  "IT": 5
+ },
+ "dpo_companies": 967,
+ "top10": [
+  {
+   "rank": 1,
+   "name": "Siemens Energy AG",
+   "country": "DE",
+   "priority_tier": 1,
+   "pain_basis": "uk_reported",
+   "pain_days": 76.2,
+   "uk_entities_n": 4.0,
+   "uk_pct_paid_late_mean": 19.8,
+   "uk_worst_entity_source_url": "https://check-payment-practices.service.gov.uk/report/118651",
+   "es_source_url": NaN
+  },
+  {
+   "rank": 2,
+   "name": "Alstom",
+   "country": "FR",
+   "priority_tier": 1,
+   "pain_basis": "uk_reported",
+   "pain_days": 66.5,
+   "uk_entities_n": 3.0,
+   "uk_pct_paid_late_mean": 31.1,
+   "uk_worst_entity_source_url": "https://check-payment-practices.service.gov.uk/report/118196",
+   "es_source_url": NaN
+  },
+  {
+   "rank": 3,
+   "name": "LKQ Corporation",
+   "country": "US",
+   "priority_tier": 1,
+   "pain_basis": "uk_reported",
+   "pain_days": 86.0,
+   "uk_entities_n": 1.0,
+   "uk_pct_paid_late_mean": 39.0,
+   "uk_worst_entity_source_url": "https://check-payment-practices.service.gov.uk/report/114769",
+   "es_source_url": NaN
+  },
+  {
+   "rank": 4,
+   "name": "Fresenius Medical Care",
+   "country": "DE",
+   "priority_tier": 1,
+   "pain_basis": "uk_reported",
+   "pain_days": 95.0,
+   "uk_entities_n": 1.0,
+   "uk_pct_paid_late_mean": 56.0,
+   "uk_worst_entity_source_url": "https://check-payment-practices.service.gov.uk/report/114573",
+   "es_source_url": NaN
+  },
+  {
+   "rank": 5,
+   "name": "Nestl\u00e9",
+   "country": "CH",
+   "priority_tier": 1,
+   "pain_basis": "uk_reported",
+   "pain_days": 69.9,
+   "uk_entities_n": 7.0,
+   "uk_pct_paid_late_mean": 6.3,
+   "uk_worst_entity_source_url": "https://check-payment-practices.service.gov.uk/report/115188",
+   "es_source_url": NaN
+  },
+  {
+   "rank": 6,
+   "name": "GE Vernova Inc.",
+   "country": "US",
+   "priority_tier": 1,
+   "pain_basis": "uk_reported",
+   "pain_days": 61.1,
+   "uk_entities_n": 5.0,
+   "uk_pct_paid_late_mean": 22.8,
+   "uk_worst_entity_source_url": "https://check-payment-practices.service.gov.uk/report/114590",
+   "es_source_url": NaN
+  },
+  {
+   "rank": 7,
+   "name": "Heineken N.V.",
+   "country": "NL",
+   "priority_tier": 1,
+   "pain_basis": "uk_reported",
+   "pain_days": 93.0,
+   "uk_entities_n": 1.0,
+   "uk_pct_paid_late_mean": 11.0,
+   "uk_worst_entity_source_url": "https://check-payment-practices.service.gov.uk/report/116547",
+   "es_source_url": NaN
+  },
+  {
+   "rank": 8,
+   "name": "Reckitt Benckiser Group plc",
+   "country": "GB",
+   "priority_tier": 1,
+   "pain_basis": "uk_reported",
+   "pain_days": 79.2,
+   "uk_entities_n": 6.0,
+   "uk_pct_paid_late_mean": 14.2,
+   "uk_worst_entity_source_url": "https://check-payment-practices.service.gov.uk/report/113069",
+   "es_source_url": NaN
+  },
+  {
+   "rank": 9,
+   "name": "Grifols",
+   "country": "ES",
+   "priority_tier": 1,
+   "pain_basis": "es_reported",
+   "pain_days": 78.0,
+   "uk_entities_n": NaN,
+   "uk_pct_paid_late_mean": NaN,
+   "uk_worst_entity_source_url": NaN,
+   "es_source_url": "https://filings.xbrl.org/959800HSSNXWRKBK4N60/2025-12-31/ESEF/ES/0/959800HSSNXWRKBK4N60-2025-12-31-1-es.json"
+  },
+  {
+   "rank": 10,
+   "name": "Publicis",
+   "country": "FR",
+   "priority_tier": 1,
+   "pain_basis": "uk_reported",
+   "pain_days": 64.0,
+   "uk_entities_n": 13.0,
+   "uk_pct_paid_late_mean": 54.6,
+   "uk_worst_entity_source_url": "https://check-payment-practices.service.gov.uk/report/114785",
+   "es_source_url": NaN
+  }
+ ]
+}

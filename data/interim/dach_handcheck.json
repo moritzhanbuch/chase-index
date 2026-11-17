@@ -1,0 +1,202 @@
+[
+ {
+  "name": "Adidas",
+  "field": "trade_payables",
+  "year_rank": 1,
+  "value": 2910000000.0,
+  "currency": "EUR",
+  "page": 310,
+  "quote": "Accounts payable 2,910 3,096 (6.0%)",
+  "note": "Consolidated BS, 31 Dec 2025. 'Accounts payable' shown as one financial liability at amortised cost (p369); no non-trade items in it, accrued and other liabilities are separate lines."
+ },
+ {
+  "name": "Adidas",
+  "field": "cost_of_sales",
+  "year_rank": 1,
+  "value": 12006000000.0,
+  "currency": "EUR",
+  "page": 311,
+  "quote": "Cost of sales 12,006 11,658 3.0%",
+  "note": "Consolidated income statement (IFRS), FY2025."
+ },
+ {
+  "name": "BMW",
+  "field": "trade_payables",
+  "year_rank": 1,
+  "value": 12488000000.0,
+  "currency": "EUR",
+  "page": 5,
+  "quote": "Trade payables 38 12,488 14,126 11,001 12,556 495 561 984 997 8 12 – –",
+  "note": "Group column, current trade payables, 31 Dec 2025."
+ },
+ {
+  "name": "BMW",
+  "field": "cost_of_sales",
+  "year_rank": 1,
+  "value": 112858000000.0,
+  "currency": "EUR",
+  "page": 2,
+  "quote": "Cost of sales 8 – 112,858 – 119,485 – 103,206 – 107,729 ...",
+  "note": "Group column; includes Financial Services segment cost of sales as presented."
+ },
+ {
+  "name": "CTS Eventim AG & Co. KGaA",
+  "field": "trade_payables",
+  "year_rank": 1,
+  "value": 381261000.0,
+  "currency": "EUR",
+  "page": 188,
+  "quote": "Trade payables (19) 381,261 355,053",
+  "note": "Current line; non-current trade payables 1,400k excluded. Advances received (819m) and related-party liabilities are separate lines."
+ },
+ {
+  "name": "CTS Eventim AG & Co. KGaA",
+  "field": "cost_of_sales",
+  "year_rank": 1,
+  "value": 2249163000.0,
+  "currency": "EUR",
+  "page": 189,
+  "quote": "Cost of sales (2) -2,249,163 -2,068,013",
+  "note": "Consolidated income statement FY2025, EUR thousand."
+ },
+ {
+  "name": "DSM-Firmenich AG",
+  "field": "trade_payables",
+  "year_rank": 1,
+  "value": 1475000000.0,
+  "currency": "EUR",
+  "page": 272,
+  "quote": "Trade accounts payable 1,475 2,267",
+  "note": "Note 21: BS 'Trade payables' 1,481 includes received in advance 6; rule takes 1,475. 2025 excludes ANH business held for sale."
+ },
+ {
+  "name": "DSM-Firmenich AG",
+  "field": "cost_of_sales",
+  "year_rank": 1,
+  "value": 5504000000.0,
+  "currency": "EUR",
+  "page": 228,
+  "quote": "Cost of sales 5 (5,504) (5,501)",
+  "note": "Continuing operations, consolidated income statement."
+ },
+ {
+  "name": "MTU Aero Engines",
+  "field": "trade_payables",
+  "year_rank": 1,
+  "value": 588000000.0,
+  "currency": "EUR",
+  "page": 246,
+  "quote": "Trade payables (29.) 588 504",
+  "note": "Consolidated BS current liabilities, 31 Dec 2025."
+ },
+ {
+  "name": "MTU Aero Engines",
+  "field": "cost_of_sales",
+  "year_rank": 1,
+  "value": 7075000000.0,
+  "currency": "EUR",
+  "page": 243,
+  "quote": "Cost of goods sold (2.) –7,075 –6,178",
+  "note": "Consolidated income statement, labelled cost of goods sold."
+ },
+ {
+  "name": "Nemetschek SE",
+  "field": "trade_payables",
+  "year_rank": 1,
+  "value": 27002000.0,
+  "currency": "EUR",
+  "page": 183,
+  "quote": "Trade payables 27,002 20,820 [19], [23]",
+  "note": "Consolidated BS, EUR thousand."
+ },
+ {
+  "name": "Nemetschek SE",
+  "field": "cost_of_materials",
+  "year_rank": 1,
+  "value": 45025000.0,
+  "currency": "EUR",
+  "page": 181,
+  "quote": "Cost of goods and services – 45,025 – 40,489 [3]",
+  "note": "Nature-of-expense reporter (software); small materials line."
+ },
+ {
+  "name": "Puma SE",
+  "field": "trade_payables",
+  "year_rank": 1,
+  "value": 1271400000.0,
+  "currency": "EUR",
+  "page": 232,
+  "quote": "Trade payables 13 1,271.4 1,893.5",
+  "note": "Consolidated BS; includes supplier-finance payables (presented as trade payables, p278)."
+ },
+ {
+  "name": "Puma SE",
+  "field": "cost_of_sales",
+  "year_rank": 1,
+  "value": 4016500000.0,
+  "currency": "EUR",
+  "page": 233,
+  "quote": "Cost of sales 25 -4,016.5 -4,400.2",
+  "note": "Consolidated income statement FY2025."
+ },
+ {
+  "name": "Siemens Healthineers",
+  "field": "trade_payables",
+  "year_rank": 1,
+  "value": 2296000000.0,
+  "currency": "EUR",
+  "page": 140,
+  "quote": "Trade payables 25 2,296 2,126",
+  "note": "Consolidated BS, 30 Sep 2025. Liabilities to the Siemens Group are a separate line."
+ },
+ {
+  "name": "Siemens Healthineers",
+  "field": "cost_of_sales",
+  "year_rank": 1,
+  "value": 14345000000.0,
+  "currency": "EUR",
+  "page": 138,
+  "quote": "Cost of sales 9 −14,345 −13,895",
+  "note": "Consolidated statements of income FY2025."
+ },
+ {
+  "name": "Stadler Rail",
+  "field": "trade_payables",
+  "year_rank": 1,
+  "value": 304288000.0,
+  "currency": "CHF",
+  "page": 183,
+  "quote": "Trade payables 2.1 304,288 230,215",
+  "note": "Swiss GAAP FER. Note 2.1 (p194): third parties 297,390 + related parties 4,818 + associates 2,080; all classified as trade payables, so included."
+ },
+ {
+  "name": "Stadler Rail",
+  "field": "cost_of_sales",
+  "year_rank": 1,
+  "value": 3259058000.0,
+  "currency": "CHF",
+  "page": 182,
+  "quote": "Cost of goods sold and services provided (3,259,058) 88.6% (2,884,684) 88.6%",
+  "note": "Function-of-expense statement, CHF thousand."
+ },
+ {
+  "name": "Strabag",
+  "field": "trade_payables",
+  "year_rank": 1,
+  "value": 2979205000.0,
+  "currency": "EUR",
+  "page": 201,
+  "quote": "Trade payables (30) 2,979,205 2,790,820",
+  "note": "Note 30 (p276): trade payables 2,647,349k + payables from consortia 331,856k; company classifies consortia (joint arrangements) as trade payables, so included. Supplier-only alternative 2,647,349k."
+ },
+ {
+  "name": "Strabag",
+  "field": "cost_of_materials",
+  "year_rank": 1,
+  "value": 11168653000.0,
+  "currency": "EUR",
+  "page": 199,
+  "quote": "Construction materials, consumables and services used (3) -11,168,653 -10,463,013",
+  "note": "Nature-of-expense reporter; includes services used 7,695,238k (subcontractors)."
+ }
+]

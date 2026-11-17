@@ -1,0 +1,13 @@
+{
+  "wikidata_subsidiary_names": 17226,
+  "ch_chains_loaded": 10309,
+  "entities": 10309,
+  "matched": 2091,
+  "queued_for_review": 654,
+  "by_method": {
+    "ch_psc_chain": 1863,
+    "exact_name": 201,
+    "brand_prefix": 27
+  },
+  "groups_with_current_uk_data": 492
+}

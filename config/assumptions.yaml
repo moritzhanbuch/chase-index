@@ -1,0 +1,124 @@
+# The Chase Index: every adjustable assumption lives in this one file.
+# Change a value, run `make score assets site`, and every estimate updates.
+# Anything computed from these values is labelled `estimate` in all outputs.
+
+universe:
+  min_revenue_usd: 4.0e9          # "Global 2000-style" threshold (see DECISIONS.md)
+
+benchmarks:
+  days_reference: 30              # default statutory B2B term in the EU Late Payment Directive and UK guidance
+  days_legal_max_es: 60           # Spain: legal maximum (Ley 15/2010)
+  days_long: 60                   # secondary benchmark shown next to the 30-day one
+
+estimates:
+  # Annual external supplier spend proxy = cost of sales where reported.
+  # If cost of sales is missing: revenue x external_spend_ratio (ASSUMPTION, not a sourced statistic).
+  external_spend_ratio_default: 0.60
+  external_spend_ratio_by_sector:
+    retail: 0.75
+    consumer_goods: 0.55
+    manufacturing: 0.65
+    automotive: 0.75
+    construction: 0.75
+    energy: 0.70
+    utilities: 0.60
+    pharma: 0.35
+    logistics: 0.60
+    telecom: 0.45
+    technology: 0.40
+    services: 0.40
+    other: 0.60
+  # Early-payment discount opportunity (illustrative):
+  #   spend x share_eligible x annualised_rate x days_accelerated / 365
+  # days_accelerated = min(max_days_accelerated, max(0, days_to_pay - early_pay_day))
+  early_pay_day: 10               # day on which an early-paid invoice would be settled
+  max_days_accelerated: 60
+  scenarios:
+    # Annualised rates start at 12%: the "minimum APR" guardrail agent-to-agent payment products describe publicly means a CFO
+    # would reject early-payment deals below it, so lower rates are not an opportunity. (Before the
+    # practitioner review the scenarios were 8 / 10 / 12%.)
+    low:  {share_eligible: 0.05, annualised_rate: 0.12}
+    base: {share_eligible: 0.10, annualised_rate: 0.14}
+    high: {share_eligible: 0.15, annualised_rate: 0.18}
+
+scoring:
+  fit:
+    weights: {revenue: 30, geography: 25, sector: 30, erp: 10, supplier_breadth: 5}
+    erp_unknown_share: 0.5        # no ERP evidence found is neutral, not negative
+    revenue_bands_usd:            # [min revenue, points share 0..1]
+      - [50.0e+9, 1.00]
+      - [20.0e+9, 0.85]
+      - [10.0e+9, 0.70]
+      - [4.0e+9, 0.50]
+      - [1.0e+9, 0.25]
+      - [0, 0.10]
+    geography:                    # HQ country points share; presence via UK/ES filing counts as 0.85 minimum
+      core: [ES, DE, GB, FR]      # Madrid + Munich hubs, dinner cities
+      core_share: 1.00
+      europe_share: 0.85
+      us_share: 0.75              # planned New York office
+      other_share: 0.30
+      excluded: [RU, BY, IR, KP]  # not addressable: fit score 0
+      local_reporting_floor: 0.85 # company files UK or Spanish payment reports, so it has operations there
+    sector_share:
+      manufacturing: 1.00
+      automotive: 1.00
+      construction: 1.00
+      retail: 0.95
+      consumer_goods: 0.95
+      energy: 0.90
+      pharma: 0.90
+      logistics: 0.90
+      utilities: 0.80
+      telecom: 0.70
+      technology: 0.60
+      services: 0.55
+      other: 0.50
+      financials: 0.05
+  pain:
+    # Tier 1 (reported): piecewise-linear on average days to pay, plus share late and share >60 days.
+    tier1_weights: {days: 45, pct_late: 25, pct_over_60: 15, trend: 15}
+    days_floor: 25                # <= this many days scores 0 on the days component
+    days_cap: 65                  # >= this many days (about twice the UK median) scores full; was 75 before calibration iteration 8
+    pct_late_cap: 50              # % of invoices paid late that scores full
+    pct_over_60_cap: 25
+    trend_cap_days: 8             # worsening by this many days YoY scores full on trend
+    # UK evidence materiality: annualised invoice value paid by the matched UK entities (GBP) -> factor on the pain score
+    uk_materiality_bands_gbp:
+      - [250.0e+6, 1.00]
+      - [50.0e+6, 0.85]
+      - [0, 0.70]
+    uk_materiality_unknown: 0.85
+    uk_materiality_implausible: 0.60   # UK invoice value above half the group's cost base: intercompany or unit error
+    # Tier 2 (computed DPO proxy): relative to sector median, capped below Tier 1.
+    tier2_max: 70                 # a DPO-only company can never outrank strong reported evidence
+    dpo_max_plausible: 200        # a computed DPO above this is treated as a tagging artefact and not scored
+    dpo_ratio_cap: 2.0            # DPO at 2x sector median scores full (x tier2_max)
+  signal:
+    # data-driven signals work without any web research; hiring and press come from data/processed/signals.csv
+    weights: {trend_worsening: 35, finance_hiring: 20, press: 15, code_status: 10, new_evidence: 10, long_terms: 10,
+              # Phase 12: dated UK filing-field changes and confirmed supplier finance disclosures (sum capped at 100)
+              terms_changed_longer: 15, scf_started: 0, einvoicing_started: 5, dispute_share_high: 5, sf_disclosed: 0}
+              # supplier finance is CONTEXT, not priority (critic, Phase 12): a programme can mean terms are being extended
+              # through a funder (Alstom: +0 to 20 days) as much as appetite for early payment. Shown on every surface, never scored.
+    trend_min_days: 2             # YoY increase in days to pay that starts to count
+    new_evidence_days: 180        # a statutory report filed within this many days counts as fresh evidence
+    long_terms_days: 90           # maximum contractual payment period at or above this counts as a structural signal
+  thin_evidence_share: 0.01      # UK invoice value below this share of group revenue: flagged thin_evidence, no one-pager
+  priority_score_weights: {pain: 0.40, fit: 0.45, signal: 0.15}   # ordering inside a tier
+  tiers:
+    fit_gate: 55                  # below this, never better than Tier 3
+    tier1_min_pain: 50            # calibration iteration 6: 55 left clear slow payers (66 days weighted) in Tier 2
+    tier2_min_pain: 30
+    signal_upgrade_min: 45        # a signal score at or above this upgrades one tier (if the fit gate passes)
+
+queue:
+  size: 25                    # accounts per weekly queue (one person's week)
+  trigger_boost_max: 15       # added to the base priority score for the strongest live trigger (more triggers add a little)
+  warm_boost: 12              # a network supplier names the account as a customer (bring your own data)
+  peer_boost: 3               # a buyer in the same sector and country is on the network
+  investor_boost: 6           # an investor link is on file
+  dinner_boost: 6             # reserved
+  sfa_whitespace_boost: 0     # off: supplier finance is context, not priority (see scoring.signal.weights)
+  tier2_penalty: 8
+  thin_penalty: 10            # UK invoice value under 1% of group revenue: one entity is one conversation, not the account

@@ -1,0 +1,51 @@
+rank,company_id,name,country,hq_city,sector,cik,lei,isin,tickers,website,in_sec,in_esef,revenue_usd,pain_basis,priority_tier
+1,alstom-q309084,Alstom,FR,Saint-Ouen-sur-Seine,manufacturing,,96950032TUYMW11FB530,FR0010220475,ALO,https://www.alstom.com/,False,True,20704680000.0,uk_reported,1
+2,siemens-energy-ag-q89189545,Siemens Energy AG,DE,Munich,manufacturing,,5299005CHJZ14D4FDJ62,DE000ENER6Y0,ENR,https://www.siemens-energy.com/,False,False,33608520000.000004,uk_reported,1
+3,lkq-corporation-cik1065696,LKQ Corporation,US,,logistics,0001065696,,,LKQ,,True,False,13651000000.0,uk_reported,1
+4,fresenius-medical-care-q650259,Fresenius Medical Care,DE,Bad Homburg vor der Höhe,pharma,0001333141,549300CP8NY40UP89Q40,DE0005785802,"FMS,FMCQF",https://fmcna.com/,True,False,23064162162.0,uk_reported,1
+5,nestle-q160746,Nestlé,CH,Vevey,consumer_goods,,KY37LUS27QQX7BB93L28,CH0038863350|US6410694060,NESN,https://www.nestle.com/,False,False,101123699999.99998,uk_reported,1
+6,heineken-holding-n-v-leitybs04,Heineken Holding N.V.,NL,,consumer_goods,,724500M1WJLFM9TYBS04,,,,False,True,36997560000.0,uk_reported,1
+7,ge-vernova-inc-cik1996810,GE Vernova Inc.,US,,manufacturing,0001996810,,,GEV,,True,False,38068000000.0,uk_reported,1
+8,reckitt-benckiser-group-plc-lei48v108,Reckitt Benckiser Group plc,GB,,consumer_goods,,5493003JFSMOJG48V108,,,,False,True,18040350000.0,uk_reported,1
+9,grifols-q901262,Grifols,ES,Sant Cugat del Vallès,pharma,0001438569,959800HSSNXWRKBK4N60,ES0171996012,"GRFS,GIFLF,GIFOF,GIKLY",https://www.grifols.com/en/home,True,True,8475184489.0,es_reported,1
+10,johnson-matthey-plc-leisc6z10,Johnson Matthey plc,GB,,manufacturing,,2138001AVBSD1HSC6Z10,,,,False,True,15967710000.0,uk_reported,1
+11,publicis-q1537378,Publicis,FR,Paris,services,,2138004KW8BV57III342,FR0000130577,PUB,https://www.publicisgroupe.com/,False,True,17312400000.0,uk_reported,1
+12,haleon-plc-cik1900304,Haleon plc,GB,,consumer_goods,0001900304,549300PSB3WWEODCUP19,,"HLN,HLNCF",,True,True,14845222073.0,uk_reported,1
+13,lyondellbasell-q899255,LyondellBasell,US,Houston,manufacturing,0001489393,BN6WCCZ8OVP3ITUUVN49,NL0009434992,LYB,https://www.lyondellbasell.com/,True,False,30153000000.0,uk_reported,1
+14,eaton-corporation-q48872,Eaton Corporation,US,Cleveland,manufacturing,0001551182,549300VDIGTMXUNT7H71,IE00B8KQN827,ETN,https://www.eaton.com/us/en-us.html,True,False,27448000000.0,uk_reported,1
+15,terex-corp-cik97216,Terex Corp,US,,manufacturing,0000097216,,,TEX,,True,False,5421000000.0,uk_reported,1
+16,prysmian-group-q1964784,Prysmian Group,IT,Milan,manufacturing,,529900X0H1IO3RS1A464,IT0004176001,PRY|PRYMF,https://www.prysmian.com/en,False,True,18538200000.0,uk_reported,1
+17,unilever-q157062,Unilever,GB,Rotterdam,consumer_goods,0000217410,549300MKFYEKVRWML317|549300TK7G7NZTVM1Z30,GB00B10RZP78,"UL,UNLYF",https://unilever.com,True,True,59345475911.0,uk_reported,1
+18,puig-q3410623,Puig,ES,L'Hospitalet de Llobregat,consumer_goods,,549300OVHNSX30L1AQ94,ES0105777017,,https://www.puig.com,False,True,5445388080.0,es_reported,1
+19,mondelez-international-q12857502,Mondelez International,US,Chicago,consumer_goods,0001103982,549300DV9GIB88LZ5P30,US6092071058,MDLZ,https://www.mondelezinternational.com/,True,False,38537000000.0,uk_reported,1
+20,airbus-q2311,Airbus,NL,Leiden,manufacturing,,MINO79WLOO247M1IL051,NL0000235190,AIR,https://airbus.com,False,True,79293600000.0,uk_reported,1
+21,saint-gobain-q678565,Saint-Gobain,FR,La Défense,construction,,529900VHGS3F092FTK82|NFONVGN05Z0FMN5PEC35,FR0000125007,SGO,https://www.saint-gobain.com/,False,True,50201640000.0,uk_reported,1
+22,ge-aerospace-q1485061,GE Aerospace,US,Evendale,manufacturing,0000040545,3C7474T6CDKPR9K6YT90,US3696041033|US3696043013,GE,https://www.geaerospace.com/,True,False,45855000000.0,uk_reported,1
+23,abbvie-q14662364,AbbVie,US,North Chicago,pharma,0001551152,FR5LCKFTG8054YNNRU85,US00287Y1091,ABBV,http://www.abbvie.com,True,False,61160000000.0,uk_reported,1
+24,pilgrims-pride-corp-cik802481,Pilgrims Pride Corp,US,,consumer_goods,0000802481,,,PPC,,True,False,18497553000.0,uk_reported,1
+25,cummins-inc-cik26172,Cummins Inc,US,,manufacturing,0000026172,,,CMI,,True,False,33670000000.0,uk_reported,1
+26,pernod-ricard-q837049,Pernod Ricard,FR,Paris,consumer_goods,,52990097YFPX9J0H5D87,FR0000120693,RI,http://pernod-ricard.com/,False,True,11835720000.0,uk_reported,1
+27,roche-holding-q25463170,Roche Holding,CH,Basel,pharma,,549300U41AUUVOAAOB37,CH0012032048|CH0012032113,RO|ROG,https://www.roche.com/,False,False,70965130000.0,uk_reported,1
+28,anheuser-busch-inbev-q128738,Anheuser-Busch InBev,BE,Leuven,consumer_goods,0001668717,5493008H3828EMEXB082,BE0974293251,"BUD,BUDFF",https://www.ab-inbev.com/,True,False,59320000000.0,uk_reported,1
+29,bunzl-public-limited-company-lei78um09,Bunzl Public Limited Company,GB,,logistics,,213800Q1Q9DV4L78UM09,,,,False,True,15043658000.0,uk_reported,1
+30,danone-q329426,Danone,FR,Paris,consumer_goods,,969500KMUQ2B6CBAF162,FR0000120644,DANOY|BN,https://www.danone.com/,False,True,29566080000.000004,uk_reported,1
+31,ds-smith-plc-leiblwh36,DS Smith plc,GB,,manufacturing,,39RSBE4RCI4M15BLWH36,,,,False,True,8663940000.0,uk_reported,1
+32,sherwin-williams-q48881,Sherwin-Williams,US,Cleveland,retail,0000089800,Z15BMIOX8DDH0X2OBP21,US8243481061,SHW,https://www.sherwin-williams.com.mx,True,False,23574300000.0,uk_reported,1
+33,itochu-q717093,Itochu,JP,Umeda,energy,,J48DJYXDTLHM30UMYI18,JP3143600009,ITOCY|8001,https://www.itochu.co.jp,False,False,69429607600.0,uk_reported,1
+34,kronospan-aps-lei6v0282,Kronospan ApS,DK,,manufacturing,,894500U71P0EXV6V0282,,,,False,True,65165040000.00001,uk_reported,1
+35,ppg-industries-q48754,PPG Industries,US,Pittsburgh,manufacturing,0000079879,549300BKPEP01R3V6C59,US6935061076,PPG,https://www.ppg.com/,True,False,15875000000.0,uk_reported,1
+36,vistry-group-plc-lei9slk53,Vistry Group plc,GB,,construction,,2138001KOWN7CG9SLK53,,,,False,True,5277231000.0,uk_reported,1
+37,genuine-parts-co-cik40987,Genuine Parts Co,US,,logistics,0000040987,,,GPC,,True,False,24300141000.0,uk_reported,1
+38,the-coca-cola-company-q3295867,The Coca-Cola Company,US,Atlanta,consumer_goods,0000021344,UWJKFUJFZ02DKWI3RY53,US1912161007,KO,https://www.coca-colacompany.com/,True,False,47941000000.0,uk_reported,1
+39,procter-gamble-q212405,Procter & Gamble,US,Ohio,consumer_goods,0000080424,2572IBTT8CCZW6AU4141,US7427181091,PG,http://www.pg.com/,True,False,87032000000.0,uk_reported,1
+40,puma-q157064,Puma,DE,Herzogenaurach,consumer_goods,,529900GRZ2BQY5ZM9N49,DE0006969603,,https://eu.puma.com/de/en/home,False,False,9522576000.0,uk_reported,1
+41,pepsico-q334800,PepsiCo,US,Purchase,consumer_goods,0000077476,FJSUNZKFNQ5YPJ5OT455,US7134481081,PEP,https://www.pepsico.com/,True,False,93925000000.0,uk_reported,1
+42,bayer-q152051,Bayer,DE,Leverkusen,pharma,,549300J4U55H3WP1XT59,DE000BAY0017,BAYN|DE000BAY0017,https://bayer.com,False,False,51447960000.0,uk_reported,1
+43,zimmer-biomet-holdings-inc-cik1136869,"Zimmer Biomet Holdings, INC.",US,,pharma,0001136869,,,ZBH,,True,False,8231500000.0,uk_reported,1
+44,amazon-q3884,Amazon,US,Seattle,retail,0001018724,ZXTILKJKG63JELOEG630,US0231351067,AMZN,https://www.amazon.com/,True,False,716924000000.0,uk_reported,1
+45,british-american-tobacco-q856411,British American Tobacco,GB,London,consumer_goods,0001303523,213800FKA5MF17RJKT63,GB0002875804,"BTI,BTAFF",https://bat.com,True,True,34468371467.0,uk_reported,1
+46,baxter-international-q761965,Baxter International,US,Deerfield,pharma,0000010456,,US0718131099,BAX,http://www.baxter.com/,True,False,11244000000.0,uk_reported,1
+47,cargill-q1036056,Cargill,US,Minnetonka,consumer_goods,,QXZYQNMR4JZ5RIRN4T31,,,http://www.cargill.com/,False,False,144695000000.0,uk_reported,1
+48,technipfmc-q30324333,TechnipFMC,GB,London,manufacturing,0001681459,549300D5I93QWCJTCK36,GB00BDSFG982,FTI,http://www.technipfmc.com,True,False,9932600000.0,uk_reported,1
+49,caterpillar-inc-q459965,Caterpillar Inc.,US,Irving,manufacturing,0000018230,WRJR7GS4GTRECRRTVX92,US1491231015,CAT,https://www.caterpillar.com/,True,False,67589000000.0,uk_reported,1
+50,coca-cola-europacific-partners-q20811256,Coca-Cola Europacific Partners,GB,Uxbridge,consumer_goods,0001650107,549300LTH67W4GWMRF57,GB00BDCPN049,CCEP,https://www.cocacolaep.com/,True,True,24560517039.0,uk_reported,1

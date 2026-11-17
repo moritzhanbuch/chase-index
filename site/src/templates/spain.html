@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% block main %}
+<div class="wrap">
+  <p class="kicker">Spain <span class="chip reported">Reported</span></p>
+  <h1>IBEX 35: average supplier payment period</h1>
+  <p class="lede">Spanish companies must state their average supplier payment period ("periodo medio de pago a proveedores", PMP) in the notes to their annual accounts. This table shows the figure for {{ n }} of the {{ total }} IBEX 35 companies, fiscal year {{ fy }}, each with a link to the filing.</p>
+  <p class="note">Covers the group's Spanish entities as disclosed under Ley 15/2010.</p>
+  <ul class="stats">
+    <li class="stat"><b>{{ median|d1 }} days</b><span>median PMP across the {{ n }} companies with a figure</span></li>
+    <li class="stat"><b>{{ over60 }} of {{ n }}</b><span>report a PMP above the 60-day legal maximum</span></li>
+    <li class="stat"><b>{{ longer }} of {{ with_prior }}</b><span>report a longer PMP than in the previous fiscal year</span></li>
+  </ul>
+
+  <h2>The 60-day legal maximum</h2>
+  <div class="narrow">
+    <p>Spanish law on late payment (Ley 3/2004, as amended by Ley 15/2010) sets a default payment period of 30 days between companies, which the parties can extend by agreement to a maximum of 60 days. Ley 15/2010, as amended by Ley 18/2022, also requires companies to disclose their average supplier payment period, and since 2022 the volume and number of invoices paid within the legal maximum.</p>
+    <p>The PMP is a weighted average: the ratio of paid operations weighted by payments made, and the ratio of pending operations weighted by payments still outstanding. A PMP under 60 days does not mean that every invoice was paid within 60 days, and a PMP above 60 days is an average, not a finding about any single invoice.</p>
+  </div>
+
+  <h2>Reported figures</h2>
+  <div class="table-wrap">
+    <table data-sortable>
+      <thead><tr>
+        <th data-col="0"><button class="sort" type="button">Company</button></th>
+        <th class="num" data-col="1" data-type="num" aria-sort="descending"><button class="sort" type="button">PMP days, FY {{ fy }}</button></th>
+        <th class="num" data-col="2" data-type="num"><button class="sort" type="button">Previous year</button></th>
+        <th class="num" data-col="3" data-type="num"><button class="sort" type="button">Ratio paid, days</button></th>
+        <th class="num" data-col="4" data-type="num"><button class="sort" type="button">Ratio pending, days</button></th>
+        <th class="num" data-col="5" data-type="num"><button class="sort" type="button">Paid within legal maximum, by value</button></th>
+        <th data-col="6">Scope</th>
+        <th data-col="7">Notes</th>
+        <th data-col="8">Source</th>
+      </tr></thead>
+      <tbody>
+      {% for r in rows %}<tr><td>{% if r.page %}<a href="company/{{ r.page }}.html">{{ r.name }}</a>{% else %}{{ r.name }}{% endif %}<br><span class="small muted">{{ r.ticker }}</span></td><td class="num" data-v="{{ r.pmp|raw }}">{{ r.pmp|d1 }}</td><td class="num" data-v="{{ r.prior|raw }}">{{ r.prior|d1 }}</td><td class="num" data-v="{{ r.paid|raw }}">{{ r.paid|d1 }}</td><td class="num" data-v="{{ r.pending|raw }}">{{ r.pending|d1 }}</td><td class="num" data-v="{{ r.within|raw }}">{{ r.within|pct }}</td><td>{{ r.scope }}</td><td>{{ r.flag }}</td><td><a href="{{ r.url }}" rel="noopener">Annual report</a></td></tr>
+      {% endfor %}
+      </tbody>
+    </table>
+  </div>
+  <p class="small muted">Values as printed in each filing. Two independent readers extracted every figure, and a third checked any disagreement, see the <a href="methodology.html">methodology</a>. An empty cell means the company did not print that item or it could not be read with confidence.</p>
+
+  {% if missing %}
+  <h2>Companies without a figure</h2>
+  <div class="table-wrap">
+    <table><thead><tr><th>Company</th><th>Why there is no figure</th></tr></thead>
+    <tbody>{% for m in missing %}<tr><td>{{ m.name }}<br><span class="small muted">{{ m.ticker }}</span></td><td>{{ m.reason }}</td></tr>{% endfor %}</tbody></table>
+  </div>
+  {% endif %}
+  <p class="small muted">IBEX 35 composition as of {{ ibex_date }}. Other analyses of payment delays in Spain use different methods and are not comparable with the statutory PMP.</p>
+</div>
+{% endblock %}

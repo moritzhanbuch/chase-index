@@ -1,0 +1,285 @@
+{
+  "files": {
+    "BasicCompanyDataAsOneFile-2026-11-01.zip": {
+      "bytes": 494554856,
+      "last_modified": "Sat, 07 Nov 2026 09:10:12 GMT",
+      "retrieved_at": "2026-11-16T10:13:40Z",
+      "sha256": "c64fb0b5538d9b7a1e1ae4d8388f9c414b550270645f7f71837708c718ed78cb",
+      "url": "https://download.companieshouse.gov.uk/BasicCompanyDataAsOneFile-2026-11-01.zip"
+    },
+    "psc-snapshot-2026-11-16_10of33.zip": {
+      "bytes": 85792945,
+      "last_modified": "Mon, 16 Nov 2026 08:04:05 GMT",
+      "retrieved_at": "2026-11-16T10:42:18Z",
+      "sha256": "ce6fb5cab7e57c119d04309657a683433890ee95ae4a26285a00b0e52b65a9f1",
+      "url": "https://download.companieshouse.gov.uk/psc-snapshot-2026-11-16_10of33.zip"
+    },
+    "psc-snapshot-2026-11-16_11of33.zip": {
+      "bytes": 86036413,
+      "last_modified": "Mon, 16 Nov 2026 08:05:20 GMT",
+      "retrieved_at": "2026-11-16T10:44:45Z",
+      "sha256": "73796852ccbe3bddf6bd413fd3478227adf2b9313ca5cb10e989a95266c070e2",
+      "url": "https://download.companieshouse.gov.uk/psc-snapshot-2026-11-16_11of33.zip"
+    },
+    "psc-snapshot-2026-11-16_12of33.zip": {
+      "bytes": 86247037,
+      "last_modified": "Mon, 16 Nov 2026 08:06:27 GMT",
+      "retrieved_at": "2026-11-16T10:47:18Z",
+      "sha256": "3fdaebd5c23e98627f923e681d8ffca11cbecd0bc7197b65c473cf2935ff6920",
+      "url": "https://download.companieshouse.gov.uk/psc-snapshot-2026-11-16_12of33.zip"
+    },
+    "psc-snapshot-2026-11-16_13of33.zip": {
+      "bytes": 86223884,
+      "last_modified": "Mon, 16 Nov 2026 08:07:41 GMT",
+      "retrieved_at": "2026-11-16T10:49:34Z",
+      "sha256": "ff285c81bf873b446f32c5b3c4a7df73472c19fa7e0aa7ef90f7946fb7512021",
+      "url": "https://download.companieshouse.gov.uk/psc-snapshot-2026-11-16_13of33.zip"
+    },
+    "psc-snapshot-2026-11-16_14of33.zip": {
+      "bytes": 85465169,
+      "last_modified": "Mon, 16 Nov 2026 08:08:46 GMT",
+      "retrieved_at": "2026-11-16T10:51:05Z",
+      "sha256": "43d0bf83d4935fd598472e5463d8f20af9e25d30a62dc5343679f5258795bd54",
+      "url": "https://download.companieshouse.gov.uk/psc-snapshot-2026-11-16_14of33.zip"
+    },
+    "psc-snapshot-2026-11-16_15of33.zip": {
+      "bytes": 85992945,
+      "last_modified": "Mon, 16 Nov 2026 08:09:51 GMT",
+      "retrieved_at": "2026-11-16T10:51:52Z",
+      "sha256": "7cf9a54ecc6009b1b30abe0d8906b5fa294587331cb22085c263a5ac4b2063bc",
+      "url": "https://download.companieshouse.gov.uk/psc-snapshot-2026-11-16_15of33.zip"
+    },
+    "psc-snapshot-2026-11-16_16of33.zip": {
+      "bytes": 86055079,
+      "last_modified": "Mon, 16 Nov 2026 08:11:04 GMT",
+      "retrieved_at": "2026-11-16T10:52:43Z",
+      "sha256": "aadb4cea8fa434b041c8418eb1a77c0ab76e7abcd7d49a64785bd0d24c74148d",
+      "url": "https://download.companieshouse.gov.uk/psc-snapshot-2026-11-16_16of33.zip"
+    },
+    "psc-snapshot-2026-11-16_17of33.zip": {
+      "bytes": 86576726,
+      "last_modified": "Mon, 16 Nov 2026 08:12:14 GMT",
+      "retrieved_at": "2026-11-16T10:53:47Z",
+      "sha256": "e9ba557c059d78f0997e2d19f168c2ff35d68503811be1d7d9ea44f6c50273f4",
+      "url": "https://download.companieshouse.gov.uk/psc-snapshot-2026-11-16_17of33.zip"
+    },
+    "psc-snapshot-2026-11-16_18of33.zip": {
+      "bytes": 85803187,
+      "last_modified": "Mon, 16 Nov 2026 08:13:26 GMT",
+      "retrieved_at": "2026-11-16T10:54:49Z",
+      "sha256": "1e8a10bcb158a12824feca9dc4dd6adb87fa6aabcf64c74173e8a9cf88c459be",
+      "url": "https://download.companieshouse.gov.uk/psc-snapshot-2026-11-16_18of33.zip"
+    },
+    "psc-snapshot-2026-11-16_19of33.zip": {
+      "bytes": 86077755,
+      "last_modified": "Mon, 16 Nov 2026 08:14:31 GMT",
+      "retrieved_at": "2026-11-16T10:55:49Z",
+      "sha256": "c51b7586d8b4700f1a4e4c37b4eebf3894e28096b411a8f9de5be82c83772195",
+      "url": "https://download.companieshouse.gov.uk/psc-snapshot-2026-11-16_19of33.zip"
+    },
+    "psc-snapshot-2026-11-16_1of33.zip": {
+      "bytes": 86604778,
+      "last_modified": "Mon, 16 Nov 2026 07:53:40 GMT",
+      "retrieved_at": "2026-11-16T10:15:02Z",
+      "sha256": "78af1f9c9390f4bc093b51307b28714fcbfc818820348005de4efb88f1e6c34e",
+      "url": "https://download.companieshouse.gov.uk/psc-snapshot-2026-11-16_1of33.zip"
+    },
+    "psc-snapshot-2026-11-16_20of33.zip": {
+      "bytes": 85118096,
+      "last_modified": "Mon, 16 Nov 2026 08:15:35 GMT",
+      "retrieved_at": "2026-11-16T10:56:36Z",
+      "sha256": "441549d67c3bc7c3dc2b811c7fd8909973cdc461e27faf4f749a33329ffb4a60",
+      "url": "https://download.companieshouse.gov.uk/psc-snapshot-2026-11-16_20of33.zip"
+    },
+    "psc-snapshot-2026-11-16_21of33.zip": {
+      "bytes": 85322017,
+      "last_modified": "Mon, 16 Nov 2026 08:16:40 GMT",
+      "retrieved_at": "2026-11-16T10:57:23Z",
+      "sha256": "8459b17bea9bfc540f58ffba2a6fb715c77dee8189123e804164a0f53c31dc44",
+      "url": "https://download.companieshouse.gov.uk/psc-snapshot-2026-11-16_21of33.zip"
+    },
+    "psc-snapshot-2026-11-16_22of33.zip": {
+      "bytes": 85095487,
+      "last_modified": "Mon, 16 Nov 2026 08:17:42 GMT",
+      "retrieved_at": "2026-11-16T10:58:16Z",
+      "sha256": "f831e263281b2cb72b08e90e2f942a4795b0d4432d74afd2c8193149c4e64f4a",
+      "url": "https://download.companieshouse.gov.uk/psc-snapshot-2026-11-16_22of33.zip"
+    },
+    "psc-snapshot-2026-11-16_23of33.zip": {
+      "bytes": 84565379,
+      "last_modified": "Mon, 16 Nov 2026 08:18:44 GMT",
+      "retrieved_at": "2026-11-16T10:59:02Z",
+      "sha256": "d696db6a5471f46a18a1a1ca5b60b8b308da604445622a0b69263bcf3ea6d3b0",
+      "url": "https://download.companieshouse.gov.uk/psc-snapshot-2026-11-16_23of33.zip"
+    },
+    "psc-snapshot-2026-11-16_24of33.zip": {
+      "bytes": 85108273,
+      "last_modified": "Mon, 16 Nov 2026 08:19:54 GMT",
+      "retrieved_at": "2026-11-16T10:59:52Z",
+      "sha256": "9ed6360f7fa8e2be27eab0cfee9ac9f54d57d523b893ed5ac6b93c7495a9050b",
+      "url": "https://download.companieshouse.gov.uk/psc-snapshot-2026-11-16_24of33.zip"
+    },
+    "psc-snapshot-2026-11-16_25of33.zip": {
+      "bytes": 84440186,
+      "last_modified": "Mon, 16 Nov 2026 08:21:08 GMT",
+      "retrieved_at": "2026-11-16T11:00:41Z",
+      "sha256": "a655a65b94ca0e769d6a3e986fba7dcd5e5aecae0917cfc88fb5d7e54eb33959",
+      "url": "https://download.companieshouse.gov.uk/psc-snapshot-2026-11-16_25of33.zip"
+    },
+    "psc-snapshot-2026-11-16_26of33.zip": {
+      "bytes": 84014992,
+      "last_modified": "Mon, 16 Nov 2026 08:22:30 GMT",
+      "retrieved_at": "2026-11-16T11:01:32Z",
+      "sha256": "b9e95ee3e55ab40f8911b1b20166e390f428f90069f899baed10cd0431905a3d",
+      "url": "https://download.companieshouse.gov.uk/psc-snapshot-2026-11-16_26of33.zip"
+    },
+    "psc-snapshot-2026-11-16_27of33.zip": {
+      "bytes": 84322688,
+      "last_modified": "Mon, 16 Nov 2026 08:23:36 GMT",
+      "retrieved_at": "2026-11-16T11:03:02Z",
+      "sha256": "de33453e6fd29a56081bc29a8b9b8fe15e0c1c4aeae6ef2816560755f4d464e5",
+      "url": "https://download.companieshouse.gov.uk/psc-snapshot-2026-11-16_27of33.zip"
+    },
+    "psc-snapshot-2026-11-16_28of33.zip": {
+      "bytes": 84043283,
+      "last_modified": "Mon, 16 Nov 2026 08:24:48 GMT",
+      "retrieved_at": "2026-11-16T11:09:16Z",
+      "sha256": "cbcc3e94dbd769079af1a5532497a51d7d68a58a132a43346c17b6f9c6724f11",
+      "url": "https://download.companieshouse.gov.uk/psc-snapshot-2026-11-16_28of33.zip"
+    },
+    "psc-snapshot-2026-11-16_29of33.zip": {
+      "bytes": 85602456,
+      "last_modified": "Mon, 16 Nov 2026 08:26:01 GMT",
+      "retrieved_at": "2026-11-16T11:13:04Z",
+      "sha256": "f5f045c930aa32a6456d488d95ec7a0046ae633131926a43001088d3356e0d6e",
+      "url": "https://download.companieshouse.gov.uk/psc-snapshot-2026-11-16_29of33.zip"
+    },
+    "psc-snapshot-2026-11-16_2of33.zip": {
+      "bytes": 85721789,
+      "last_modified": "Mon, 16 Nov 2026 07:54:42 GMT",
+      "retrieved_at": "2026-11-16T10:16:24Z",
+      "sha256": "611c7a916c4426106d791e4a8546a23f38d959782abdfd870daa287a2389d65b",
+      "url": "https://download.companieshouse.gov.uk/psc-snapshot-2026-11-16_2of33.zip"
+    },
+    "psc-snapshot-2026-11-16_30of33.zip": {
+      "bytes": 86075163,
+      "last_modified": "Mon, 16 Nov 2026 08:27:20 GMT",
+      "retrieved_at": "2026-11-16T11:15:45Z",
+      "sha256": "d714fb8968b7bc6c3bcb0813dea679f1d124ebbc16b2b5a06140a88e5c381d55",
+      "url": "https://download.companieshouse.gov.uk/psc-snapshot-2026-11-16_30of33.zip"
+    },
+    "psc-snapshot-2026-11-16_31of33.zip": {
+      "bytes": 56820892,
+      "last_modified": "Mon, 16 Nov 2026 08:28:04 GMT",
+      "retrieved_at": "2026-11-16T11:17:43Z",
+      "sha256": "b64ad64d2cb432870378f904ee579fe8fa087d38f7bc4f7bbef037d133cfc1a9",
+      "url": "https://download.companieshouse.gov.uk/psc-snapshot-2026-11-16_31of33.zip"
+    },
+    "psc-snapshot-2026-11-16_32of33.zip": {
+      "bytes": 33012194,
+      "last_modified": "Mon, 16 Nov 2026 08:28:39 GMT",
+      "retrieved_at": "2026-11-16T11:18:58Z",
+      "sha256": "f9bd7f5452662739f1bc9025dff2ec9645e900552cb6cb2207efb79c691929b7",
+      "url": "https://download.companieshouse.gov.uk/psc-snapshot-2026-11-16_32of33.zip"
+    },
+    "psc-snapshot-2026-11-16_33of33.zip": {
+      "bytes": 10263176,
+      "last_modified": "Mon, 16 Nov 2026 08:28:49 GMT",
+      "retrieved_at": "2026-11-16T11:19:10Z",
+      "sha256": "a01963977185188f172d918492333469bc9bf0eaa779bbe03963cb76201b12c3",
+      "url": "https://download.companieshouse.gov.uk/psc-snapshot-2026-11-16_33of33.zip"
+    },
+    "psc-snapshot-2026-11-16_3of33.zip": {
+      "bytes": 86164093,
+      "last_modified": "Mon, 16 Nov 2026 07:55:49 GMT",
+      "retrieved_at": "2026-11-16T10:19:42Z",
+      "sha256": "08280e7ef82de1db61c7c41732e8e37b2057c65ecfe10387ecf1d26071cdf9a3",
+      "url": "https://download.companieshouse.gov.uk/psc-snapshot-2026-11-16_3of33.zip"
+    },
+    "psc-snapshot-2026-11-16_4of33.zip": {
+      "bytes": 85780883,
+      "last_modified": "Mon, 16 Nov 2026 07:56:56 GMT",
+      "retrieved_at": "2026-11-16T10:23:12Z",
+      "sha256": "1bc1cd875bf56b4b866740deab52cf546e030c58cdc1acbc8502eee7af86f8a0",
+      "url": "https://download.companieshouse.gov.uk/psc-snapshot-2026-11-16_4of33.zip"
+    },
+    "psc-snapshot-2026-11-16_5of33.zip": {
+      "bytes": 85211396,
+      "last_modified": "Mon, 16 Nov 2026 07:58:05 GMT",
+      "retrieved_at": "2026-11-16T10:27:07Z",
+      "sha256": "8a5d302e2294f40d4da7560cfe94f6609b8ecbf6d7e41927c67a792cb7e25ac7",
+      "url": "https://download.companieshouse.gov.uk/psc-snapshot-2026-11-16_5of33.zip"
+    },
+    "psc-snapshot-2026-11-16_6of33.zip": {
+      "bytes": 85166328,
+      "last_modified": "Mon, 16 Nov 2026 07:59:22 GMT",
+      "retrieved_at": "2026-11-16T10:31:19Z",
+      "sha256": "19184f0c8fc4c8e3c7b536a8556e030b59eeb64eba5c68ece03f301c7967b9dc",
+      "url": "https://download.companieshouse.gov.uk/psc-snapshot-2026-11-16_6of33.zip"
+    },
+    "psc-snapshot-2026-11-16_7of33.zip": {
+      "bytes": 85576387,
+      "last_modified": "Mon, 16 Nov 2026 08:00:35 GMT",
+      "retrieved_at": "2026-11-16T10:34:07Z",
+      "sha256": "2fcc993657d05a5f596624a35a7b51a63d2b16190561a2abf50d3ad942a5aba3",
+      "url": "https://download.companieshouse.gov.uk/psc-snapshot-2026-11-16_7of33.zip"
+    },
+    "psc-snapshot-2026-11-16_8of33.zip": {
+      "bytes": 85856887,
+      "last_modified": "Mon, 16 Nov 2026 08:01:45 GMT",
+      "retrieved_at": "2026-11-16T10:37:10Z",
+      "sha256": "e89ca612d35ec5b0a7889195c220d0c83471c20b261abafc8b8b10d9de5ac5b8",
+      "url": "https://download.companieshouse.gov.uk/psc-snapshot-2026-11-16_8of33.zip"
+    },
+    "psc-snapshot-2026-11-16_9of33.zip": {
+      "bytes": 85414903,
+      "last_modified": "Mon, 16 Nov 2026 08:02:52 GMT",
+      "retrieved_at": "2026-11-16T10:39:24Z",
+      "sha256": "a02bdb71b4bcf60dc54b62013726accc2581b0728d584a3a4aa10dff08393728",
+      "url": "https://download.companieshouse.gov.uk/psc-snapshot-2026-11-16_9of33.zip"
+    }
+  },
+  "snapshot": {
+    "basic": "BasicCompanyDataAsOneFile-2026-11-01.zip",
+    "discovered_at": "2026-11-16T11:19:29Z",
+    "psc_parts": [
+      "psc-snapshot-2026-11-16_1of33.zip",
+      "psc-snapshot-2026-11-16_2of33.zip",
+      "psc-snapshot-2026-11-16_3of33.zip",
+      "psc-snapshot-2026-11-16_4of33.zip",
+      "psc-snapshot-2026-11-16_5of33.zip",
+      "psc-snapshot-2026-11-16_6of33.zip",
+      "psc-snapshot-2026-11-16_7of33.zip",
+      "psc-snapshot-2026-11-16_8of33.zip",
+      "psc-snapshot-2026-11-16_9of33.zip",
+      "psc-snapshot-2026-11-16_10of33.zip",
+      "psc-snapshot-2026-11-16_11of33.zip",
+      "psc-snapshot-2026-11-16_12of33.zip",
+      "psc-snapshot-2026-11-16_13of33.zip",
+      "psc-snapshot-2026-11-16_14of33.zip",
+      "psc-snapshot-2026-11-16_15of33.zip",
+      "psc-snapshot-2026-11-16_16of33.zip",
+      "psc-snapshot-2026-11-16_17of33.zip",
+      "psc-snapshot-2026-11-16_18of33.zip",
+      "psc-snapshot-2026-11-16_19of33.zip",
+      "psc-snapshot-2026-11-16_20of33.zip",
+      "psc-snapshot-2026-11-16_21of33.zip",
+      "psc-snapshot-2026-11-16_22of33.zip",
+      "psc-snapshot-2026-11-16_23of33.zip",
+      "psc-snapshot-2026-11-16_24of33.zip",
+      "psc-snapshot-2026-11-16_25of33.zip",
+      "psc-snapshot-2026-11-16_26of33.zip",
+      "psc-snapshot-2026-11-16_27of33.zip",
+      "psc-snapshot-2026-11-16_28of33.zip",
+      "psc-snapshot-2026-11-16_29of33.zip",
+      "psc-snapshot-2026-11-16_30of33.zip",
+      "psc-snapshot-2026-11-16_31of33.zip",
+      "psc-snapshot-2026-11-16_32of33.zip",
+      "psc-snapshot-2026-11-16_33of33.zip"
+    ]
+  },
+  "source_pages": {
+    "basic": "https://download.companieshouse.gov.uk/en_output.html",
+    "psc": "https://download.companieshouse.gov.uk/en_pscdata.html"
+  }
+}

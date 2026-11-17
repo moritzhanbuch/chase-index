@@ -1,0 +1,795 @@
+company_id,name,country,wikidata_industries,keyword_guess
+contemporary-amperex-technology-co-limited-q18653563,Contemporary Amperex Technology Co. Limited,CN,battery industry,manufacturing
+mitsubishi-q183275,Mitsubishi,JP,arms industry|trade,manufacturing
+saudi-aramco-q679322,Saudi Aramco,SA,oil refining|petroleum industry|extraction of petroleum|extraction of crude petroleum and natural gas,energy
+sinopec-q831445,Sinopec,CN,petroleum industry,energy
+china-national-petroleum-corporation-q588786,China National Petroleum Corporation,CN,petroleum industry,energy
+state-grid-corporation-of-china-q209078,State Grid Corporation of China,CN,electric power industry,utilities
+volkswagen-group-q156578,Volkswagen Group,DE,automotive industry,automotive
+volkswagen-q246,Volkswagen,DE,automotive industry,automotive
+vitol-q687365,Vitol,CH,petroleum industry,energy
+glencore-q169339,Glencore,CH,mining industry|security and commodity contracts brokerage,energy
+samsung-electronics-q20718,Samsung Electronics,KR,electronics industry,technology
+trafigura-q687508,Trafigura,SG,petroleum industry,energy
+petrochina-company-limited-q503182,PetroChina Company Limited,CN,petroleum industry,energy
+samsung-group-q20716,Samsung Group,KR,conglomerate,manufacturing
+foxconn-q463094,Foxconn,TW,electronics industry|electronics,technology
+allianz-se-q487292,Allianz SE,DE,financial services|insurance industry|insurance,financials
+schwarz-group-q712034,Schwarz Group,DE,logistics|cloud computing|food industry|waste management,consumer_goods
+ping-an-insurance-q1256188,Ping An Insurance,CN,insurance,financials
+china-state-railway-group-q1073489,China State Railway Group,CN,rail transport,logistics
+uniper-q19839259,Uniper,DE,electricity generation,utilities
+cargill-aqua-nutrition-q133797382,Cargill Aqua Nutrition,,,other
+china-state-construction-engineering-corporation-q69923136,China State Construction Engineering Corporation Limited,CN,,construction
+mercedes-benz-group-q27530,Mercedes-Benz Group,DE,automotive industry,automotive
+bmw-q26678,BMW,DE,automotive industry|aeronautical engineering|activities of holding companies|manufacture of motor vehicles,automotive
+electricite-de-france-q274591,Électricité de France,FR,"electric power generation, transmission and distribution",utilities
+cargill-q1036056,Cargill,US,conglomerate,manufacturing
+china-construction-bank-q26299,China Construction Bank,CN,financial sector,financials
+agricultural-bank-of-china-q26298,Agricultural Bank of China,CN,economics of banking|financial sector,financials
+pemex-q871308,Pemex,MX,oil refining|petroleum industry|extraction of crude petroleum and natural gas,energy
+deutsche-telekom-q9396,Deutsche Telekom,DE,telecommunications industry|mobile phone industry,telecom
+bank-of-china-q790068,Bank of China,CN,financial sector,financials
+industrial-and-commercial-bank-of-china-q26463,Industrial and Commercial Bank of China,CN,economics of banking|financial services|financial sector,financials
+gazprom-q102673,Gazprom,RU,satellite communication|gas industry|telecommunications|internet service provider|telephone company|extraction of petroleum|International Standard Industrial Classification,energy
+china-life-insurance-company-q1073306,China Life Insurance Company,CN,insurance industry,financials
+china-mobile-q741618,China Mobile,CN,telecommunications industry|mobile phone industry,telecom
+saic-motor-q910401,SAIC Motor,CN,automotive industry,automotive
+china-railway-engineering-corporation-q20051446,China Railway Engineering Corporation,CN,holding company,financials
+assicurazioni-generali-q670482,Assicurazioni Generali,IT,insurance industry,financials
+china-railway-construction-corporation-limited-q1073482,China Railway Construction Corporation Limited,CN,construction,construction
+mercedes-benz-ag-q76754241,Mercedes-Benz AG,DE,automotive industry,automotive
+nestle-q160746,Nestlé,CH,food industry,consumer_goods
+huawei-q160120,Huawei,CN,information and communications technology|telecommunications industry|electronics industry,telecom
+ahold-delhaize-q20539261,Ahold Delhaize,NL,retail,retail
+china-national-offshore-oil-corporation-q795354,China National Offshore Oil Corporation,CN,petroleum industry,energy
+axa-q160054,AXA,FR,financial services|insurance|insurance industry|investment funds and similar financial entities,financials
+robert-bosch-q234021,Robert Bosch,DE,automotive supplier|home appliance industry|semiconductor industry,automotive
+china-development-bank-q1064065,China Development Bank,CN,financial sector,financials
+tesco-q487494,Tesco,GB,retail chain,retail
+suning-holdings-group-q24451600,Suning Holdings Group,CN,holding company,financials
+carrefour-group-q3117359,Carrefour Group,FR,retail|product distribution|holding company activities,financials
+lvmh-q504998,LVMH,FR,retail,retail
+rosneft-q1141123,Rosneft,RU,petroleum industry|petroleum-gas industry,energy
+aldi-sud-q41171672,Aldi Süd,DE,retail,retail
+japan-post-holdings-q1372049,Japan Post Holdings,JP,economics of banking|postal service,financials
+dhl-group-q157645,DHL Group,DE,logistics|postal and telecommunications services|mail,telecom
+veidekke-q7918631,Veidekke,NO,construction|Category:Norwegian civil engineers|construction industry,construction
+china-resources-q1073501,China Resources,CN,conglomerate,manufacturing
+siemens-q81230,Siemens,DE,mechanical engineering|biomedical engineering|electrical engineering|powertrain technology|telecommunications industry|electronics industry|medical device|lighting technique|electrical industry|power plant technology,manufacturing
+byd-company-q2608329,BYD Company,CN,automotive industry|consumer electronics industry|battery industry,automotive
+dongfeng-motor-corporation-q1138452,Dongfeng Motor Corporation,CN,automotive industry,automotive
+energy-transfer-q5377000,Energy Transfer,US,petroleum industry,energy
+faw-group-q1124351,FAW Group,CN,automotive industry,automotive
+shandong-weiqiao-pioneering-group-q17036101,Shandong Weiqiao Pioneering Group,CN,aluminium industry|textile industry|energy industry,energy
+state-farm-insurance-q2007336,State Farm Insurance,US,insurance,financials
+maersk-q18224,Maersk,DK,water transport,logistics
+vinci-q1475312,Vinci,FR,construction industry|activities of head offices,construction
+edeka-q701755,Edeka,DE,retail,retail
+sinochem-group-q4390358,Sinochem Group,CN,petroleum industry,energy
+nissan-q20165,Nissan,FR,automotive industry,automotive
+enel-q651222,Enel,IT,energy industry,energy
+china-pacific-construction-group-q63148388,China Pacific Construction Group,CN,construction,construction
+united-states-postal-service-q668687,United States Postal Service,US,mail,logistics
+airbus-q2311,Airbus,NL,arms industry|aviation|spaceflight|aircraft construction,manufacturing
+seven-i-holdings-co-q639447,Seven & I Holdings Co.,JP,retail,retail
+china-post-q1066476,China Post,CN,logistics,logistics
+engie-q13416787,Engie,FR,waste management|facility management|energy industry,energy
+chn-energy-q38180956,CHN Energy,CN,coal industry,energy
+china-southern-power-grid-q209039,China Southern Power Grid,CN,electric power industry,utilities
+basf-q9401,BASF,DE,chemical industry|plant protection|extraction of petroleum,energy
+rewe-group-q573266,REWE Group,DE,retail|e-commerce|cooperative movement|tourism|food retail sector,retail
+china-minmetals-q846839,China Minmetals,CN,trade,other
+citic-limited-q1023763,CITIC Limited,CN,conglomerate,manufacturing
+caverton-offshore-support-group-q123487943,Caverton Offshore Support Group,NG,logistics,logistics
+roche-holding-q25463170,Roche Holding,CH,,other
+sk-hynix-q370719,SK Hynix,KR,semiconductor industry|semiconductor industry in South Korea,technology
+evergrande-group-q5417145,Evergrande Group,KY,real estate development|real estate industry,other
+amer-international-group-limited-q16926201,Amer International Group Limited,,conglomerate,manufacturing
+itochu-q717093,Itochu,JP,trade|sōgō shōsha,other
+orlen-q971649,Orlen,PL,petroleum industry,energy
+auchan-q758603,Auchan,FR,retail,retail
+bunge-limited-q1009458,Bunge Limited,US,food industry,consumer_goods
+byd-auto-q27423,BYD Auto,CN,automotive industry,automotive
+baic-group-q814712,BAIC Group,CN,automotive industry,automotive
+chery-q591001,Chery,CN,automotive industry,automotive
+e-on-q270223,E.ON,DE,energy sector|energy industry|energy and water industries,energy
+uro-akovic-q342143,Đuro Đaković,HR,conglomerate,manufacturing
+munich-re-q166637,Munich Re,DE,financial services|reinsurance|insurance industry|insurance,financials
+groupe-psa-q275623,Groupe PSA,FR,automotive industry,automotive
+cofco-group-q4382137,COFCO Group,CN,food processing,consumer_goods
+citic-group-q856322,CITIC Group,CN,finance,other
+china-telecommunications-corporation-q1073540,China Telecommunications Corporation,CN,terrestrial television|telecommunications industry,telecom
+renault-q6686,Renault,FR,automotive industry|funding|holding company activities,financials
+hsbc-q190464,HSBC,GB,economics of banking|financial services|financial sector|insurance,financials
+chemchina-q16739781,ChemChina,CN,,other
+a-p-m-ller-holding-q26702890,A.P. Møller Holding,DK,holding company|conglomerate,financials
+softbank-group-q201653,SoftBank Group,JP,telecommunications industry|telecommunications|information technology|International Standard Industrial Classification,telecom
+bouygues-q895325,Bouygues,FR,construction|conglomerate|activities of head offices,construction
+daimler-truck-q1157624,Daimler Truck,DE,automotive industry,automotive
+bank-of-communications-q806680,Bank of Communications,CN,financial services,financials
+repsol-q174747,Repsol,ES,petroleum industry,energy
+zurich-insurance-group-q230426,Zurich Insurance Group,CH,insurance,financials
+power-china-q10873928,Power China,CN,construction industry,construction
+bnp-paribas-q499707,BNP Paribas,FR,other monetary intermediations,other
+tongrentang-q842099,Tongrentang,CN,pharmaceutical industry,pharma
+dow-chemical-company-q855639,Dow Chemical Company,US,chemical industry,manufacturing
+red-bull-gmbh-q698639,Red Bull GmbH,AT,beverage industry|media industry,consumer_goods
+cma-cgm-q1023867,CMA CGM,FR,maritime and coastal freight transport,logistics
+grupo-acs-q1550888,Grupo ACS,ES,construction|transport|tertiary sector of the economy,construction
+nationwide-mutual-insurance-company-q6979886,Nationwide Mutual Insurance Company,US,financial services,financials
+audi-ag-q23317,Audi AG,DE,automotive industry,automotive
+country-garden-q5177291,Country Garden,CN,real estate development,other
+hengli-group-q70822135,Hengli Group,CN,chemical industry,manufacturing
+bayer-q152051,Bayer,DE,chemical industry|pharmaceutical industry|phytopharmaceuticals|plastic,pharma
+deutsche-bahn-q9322,Deutsche Bahn,DE,logistics|rail transport|business and other management consulting,logistics
+china-merchants-bank-q1073327,China Merchants Bank,CN,bank,financials
+lenovo-q14799,Lenovo,CN,computer hardware industry|electronics,technology
+guangzhou-automobile-industry-group-q15807676,Guangzhou Automobile Industry Group,CN,automotive industry,automotive
+saint-gobain-q678565,Saint-Gobain,FR,chemical industry|glass production|activities of head offices,manufacturing
+cnooc-limited-q795221,CNOOC Limited,CN,petroleum industry,energy
+novo-nordisk-foundation-q22723716,Novo Nordisk Foundation,DK,foundation,other
+geely-auto-q55118127,Geely Auto,CN,automotive industry,automotive
+santander-group-q806215,Santander Group,ES,financial services,financials
+china-pacific-insurance-q1003813,China Pacific Insurance,CN,financial services,financials
+panasonic-holdings-corporation-q53247,Panasonic Holdings Corporation,JP,home appliance|semiconductor industry|video game industry|electronics,technology
+dubai-investment-fund-q114877710,Dubai Investment Fund,AE,financial services,financials
+greenland-holdings-corp-ltd-q15902946,"Greenland Holdings Corp., Ltd.",CN,,other
+veolia-q1632461,Veolia,FR,waste management|water supply,utilities
+liberty-mutual-insurance-q1516450,Liberty Mutual Insurance,US,insurance,financials
+enbw-q644304,EnBW,DE,energy industry|energy supply,energy
+iberdrola-q1437502,Iberdrola,ES,electricity supply company|electricity generation,utilities
+l-oreal-q156077,L'Oréal,FR,personal care product|cosmetics industry|fast-moving consumer goods,consumer_goods
+sanofi-q158205,Sanofi,FR,pharmaceutical industry,pharma
+shagang-group-q3138458,Shagang Group,CN,iron and steel industry,manufacturing
+hbis-group-q675867,HBIS Group,CN,iron and steel industry,manufacturing
+societe-nationale-des-chemins-de-fer-francais-q13646,Société nationale des chemins de fer français,FR,rail transport industry,logistics
+compass-group-plc-lei6u2t68,COMPASS GROUP PLC,GB,,other
+nippon-steel-corporation-q1151693,Nippon Steel Corporation,JP,iron and steel industry,manufacturing
+pricewaterhousecoopers-q488048,PricewaterhouseCoopers,GB,audit|consultation|consulting company|accounting services|management consulting industry,services
+america-movil-q482267,América Móvil,MX,mobile phone industry|telecommunications industry,telecom
+idemitsu-kosan-q2216770,Idemitsu Kosan,JP,petroleum industry,energy
+continental-ag-q163241,Continental AG,DE,automotive industry|plastics and rubber industry|bicycle industry|manufacture of rubber tyres and tubes; retreading and rebuilding of rubber tyres,automotive
+orange-q1431486,Orange,FR,,other
+tencent-q860580,Tencent,GB,video game industry|information technology,technology
+schneider-electric-q49053,Schneider Electric,FR,production of electrical distribution and control equipment|electrical industry,manufacturing
+inditex-q44504,Inditex,ES,retail|textile industry|fast fashion|clothing industry,consumer_goods
+talanx-q2389856,Talanx,DE,financial services|insurance,financials
+china-poly-group-corporation-q5099859,China Poly Group Corporation,CN,conglomerate,manufacturing
+china-aerospace-science-and-technology-corporati-q2777589,China Aerospace Science and Technology Corporation,CN,aerospace industry,manufacturing
+sinomach-q7524901,Sinomach,CN,,other
+lukoil-q329347,Lukoil,RU,petroleum industry|extraction of petroleum,energy
+vanke-q861340,Vanke,CN,real estate industry,other
+ntt-docomo-q853958,NTT DoCoMo,JP,telecommunications industry|mobile phone industry,telecom
+standard-life-plc-leiu33t68,STANDARD LIFE PLC,GB,,financials
+china-unicom-q1068485,China Unicom,CN,telecommunications industry|mobile phone industry,telecom
+baoshan-iron-steel-q11452539,Baoshan Iron & Steel,CN,iron and steel industry,manufacturing
+lufthansa-q9325,Lufthansa,DE,passenger air transport|freight air transport|air transport,logistics
+tiaa-q740999,TIAA,US,financial services,financials
+new-york-life-insurance-company-q1039380,New York Life Insurance Company,US,insurance|life insurance,financials
+gazprom-neft-q1461799,Gazprom Neft,RU,retail|oil refining industry in Russia|extraction of petroleum,energy
+xiamen-c-d-q10911437,Xiamen C&D,CN,,other
+nbcuniversal-q724759,NBCUniversal,US,television,other
+china-cosco-shipping-q26263180,China COSCO Shipping,CN,financial services|real estate development,financials
+shaanxi-coal-and-chemical-industry-q27487446,Shaanxi Coal and Chemical Industry,CN,chemical industry|coal industry,energy
+cnp-assurances-q1023930,CNP Assurances,FR,insurance company,financials
+china-huaneng-group-co-ltd-q842509,"China Huaneng Group Co., Ltd.",CN,mining industry|electric power industry,energy
+magnit-q940518,Magnit,RU,retail,retail
+telefonica-q160229,Telefónica,ES,telecommunications industry|telecommunications,telecom
+ingka-group-q47508300,INGKA Group,,retail,retail
+thyssenkrupp-ag-q137910,thyssenkrupp AG,DE,arms industry|iron and steel industry,manufacturing
+usaa-q7865722,USAA,US,economics of banking|financial services|insurance industry|financial sector,financials
+la-poste-leiap0l59,LA POSTE,FR,,other
+heineken-holding-n-v-leitybs04,Heineken Holding N.V.,NL,,other
+heineken-n-v-lei86uq23,Heineken N.V.,NL,,other
+maersk-a-s-q446750,Maersk A/S,DK,shipping line,logistics
+international-airlines-group-q8774,International Airlines Group,ES,air travel|aviation,logistics
+porsche-q40993,Porsche,DE,automotive industry,automotive
+mars-incorporated-q695087,"Mars, Incorporated",US,food processing,consumer_goods
+x5-retail-group-q258748,X5 Retail Group,RU,retail,retail
+ubs-q193199,UBS,CH,"economics of banking|financial services|financial service activities, except insurance and pension funding|financial sector",financials
+jardine-matheson-holdings-limited-leiolpk41,JARDINE MATHESON HOLDINGS LIMITED,GB,,other
+safran-q1886126,Safran,FR,defence industry|aerospace industry|activities of head offices,manufacturing
+dsv-q1155771,DSV,DK,logistics|freight transport,logistics
+northwestern-mutual-q1630166,Northwestern Mutual,US,financial services,financials
+air-france-klm-q407237,Air France-KLM,FR,holding company activities,financials
+siemens-energy-ag-q89189545,Siemens Energy AG,DE,energy technology,energy
+metro-group-q169167,METRO Group,DE,retail|wholesale,retail
+holcim-q267818,Holcim,CH,other mining and quarrying|mining,energy
+rostec-q1840188,Rostec,RU,technology industry,other
+china-energy-engineering-q20724247,China Energy Engineering,CN,construction industry,construction
+volvo-cars-q215293,Volvo Cars,SE,automotive industry|car manufacturing,automotive
+metrorex-q1091725,Metrorex,RO,passenger transport,logistics
+phoenix-pharmahandel-q871799,Phoenix Pharmahandel,DE,pharmaceutical industry,pharma
+china-electronics-corporation-q18533575,China Electronics Corporation,CN,,technology
+comision-federal-de-electricidad-q1114680,Comisión Federal de Electricidad,MX,"electric power generation, transmission and distribution",utilities
+skoda-auto-q29637,Škoda Auto,CZ,automotive industry,automotive
+hochtief-q136542,Hochtief,DE,construction|construction industry,construction
+boehringer-ingelheim-q699532,Boehringer Ingelheim,DE,pharmaceutical industry|chemical industry|animal health|manufacture of basic pharmaceutical products and pharmaceutical preparations,pharma
+crrc-q19840026,CRRC,CN,rolling stock industry|rail industry|manufacture of machinery and equipment,manufacturing
+health-service-executive-q5690681,Health Service Executive,IE,,other
+ep-group-q104245554,EP Group,CZ,holding industry,other
+luxshare-q16926220,Luxshare,CN,,other
+cmoc-group-limited-q5099785,CMOC Group Limited,CN,mining,energy
+danone-q329426,Danone,FR,fast-moving consumer goods|food industry|activities of head offices,consumer_goods
+forvia-leiiulv85,FORVIA,FR,,other
+bae-systems-q739416,BAE Systems,GB,arms industry|information security|aerospace industry|aerospace engineering,manufacturing
+air-liquide-q407448,Air Liquide,FR,"manufacture of industrial gases|engineering, technical studies",energy
+emirates-q180432,Emirates,AE,,other
+energeticky-a-prumyslovy-holding-q4162216,Energetický a průmyslový holding,CZ,energy industry,energy
+jaguar-land-rover-q6122893,Jaguar Land Rover,GB,automobile manufacturer,automotive
+abb-group-q52825,ABB Group,SE,robotics|electrical engineering,manufacturing
+essilorluxottica-q56853086,EssilorLuxottica,FR,glasses manufacturing,manufacturing
+syngenta-group-q114634360,Syngenta Group,CH,agribusiness,other
+michelin-q151107,Michelin,FR,automotive industry|plastics and rubber industry|business and other management consulting|manufacture of rubber tyres and tubes; retreading and rebuilding of rubber tyres,automotive
+hyundai-mobis-q497534,Hyundai Mobis,KR,automotive industry,automotive
+gree-electric-q1544535,Gree Electric,CN,electronics,technology
+wistron-q441821,Wistron,TW,electronics industry,technology
+emaar-properties-q1153463,Emaar Properties,AE,real estate development,other
+credit-agricole-group-q590952,Credit Agricole Group,FR,financial sector|other monetary intermediations,financials
+rolls-royce-q243278,Rolls-Royce,GB,arms industry|aerospace industry|energy industry,manufacturing
+rwe-q138133,RWE,DE,"energy industry|electric power generation, transmission and distribution|energy supply",energy
+aldi-nord-q41171373,Aldi Nord,DE,retail,retail
+sodexo-q1475554,Sodexo,FR,,other
+sberbank-q205012,Sberbank,RU,"banking in Russia|financial service activities, except insurance and pension funding|financial sector",financials
+mazda-q35996,Mazda,JP,automotive industry,automotive
+viacom-q214346,Viacom,US,media industry,services
+bpce-q806941,BPCE,FR,other monetary intermediations,other
+wanda-group-q5210937,Wanda Group,CN,conglomerate,manufacturing
+openai-q21708200,OpenAI,US,artificial intelligence,other
+randstad-n-v-q267840,Randstad N.V.,NL,human resource management|employment services industry,other
+russian-railways-q660770,Russian Railways,RU,rail transport,logistics
+ing-bank-n-v-leiu0qe75,ING BANK N.V.,NL,,financials
+inter-ikea-holding-q47508289,Inter IKEA Holding,,,other
+fresenius-se-co-kgaa-q705361,Fresenius SE & Co. KGaA,DE,pharmaceutical industry|health care industry,pharma
+pioneer-natural-resources-q4046987,Pioneer Natural Resources,US,petroleum industry,energy
+eiffage-q1302944,Eiffage,FR,public works|activities of head offices,other
+xinxing-jihua-group-q11084189,Xinxing Jihua Group,CN,,other
+thales-group-q1161666,Thales Group,FR,software industry|telecommunications industry|aerospace industry|computer security|arms industry|activities of head offices,technology
+capgemini-q1034621,Capgemini,FR,IT service management|activities of head offices,other
+jinneng-holding-equipment-manufacturing-group-q15950384,Jinneng Holding Equipment Manufacturing Group,CN,mining industry,energy
+mediamarktsaturn-retail-group-q659320,MediaMarktSaturn Retail Group,DE,retail,retail
+henan-energy-chemical-industry-group-china-q52849120,Henan Energy & Chemical Industry Group (China),CN,,energy
+china-general-technology-group-q10874142,China General Technology Group,CN,,other
+adidas-ag-q3895,Adidas AG,DE,textile industry|sports industry,consumer_goods
+ceconomy-q28858523,Ceconomy,DE,retail,retail
+canon-inc-q62621,Canon Inc.,JP,electronics|electrical industry,technology
+endesa-q1275336,Endesa,ES,energy industry|energy supply,energy
+ineos-q673231,Ineos,LU,petroleum industry,energy
+valeo-q1305281,Valeo,FR,automotive industry|holding company activities,financials
+staples-inc-q785943,Staples Inc.,US,retail,retail
+aviation-industry-corporation-of-china-ltd-q2667719,"Aviation Industry Corporation of China, Ltd.",CN,aerospace industry,manufacturing
+ergo-q541909,Ergo,DE,insurance industry,financials
+shanghai-pharmaceuticals-q104876809,Shanghai Pharmaceuticals,CN,,pharma
+bright-food-q2925357,Bright Food,CN,fast-moving consumer goods,consumer_goods
+marks-and-spencer-group-p-l-c-leizg1x44,MARKS AND SPENCER GROUP P.L.C.,GB,,other
+bertelsmann-q156913,Bertelsmann,DE,educational system|service|media industry,services
+acciona-sa-leillno21,Acciona SA,ES,,other
+wurth-q679750,Würth,DE,wholesale,retail
+groupama-q3083531,Groupama,FR,financial services|insurance industry,financials
+new-china-life-insurance-co-ltd-q11084240,"New China Life Insurance Co., Ltd.",CN,financial services,financials
+ageas-q392338,Ageas,BE,financial services,financials
+kering-q931207,Kering,FR,activities of head offices,other
+virgin-group-q494917,Virgin Group,GB,music industry|economics of banking|food industry|air cargo|telecommunications industry|tourism industry|health care industry|publishing industry,services
+naturgy-energy-group-sa-lei5sv098,NATURGY ENERGY GROUP SA,ES,,energy
+brenntag-q828445,Brenntag,DE,wholesale|Wholesale of chemical products,retail
+umicore-q902769,Umicore,BE,mining,energy
+china-national-coal-group-q10875850,China National Coal Group,CN,coal industry,energy
+ferrero-spa-q269792,Ferrero SpA,IT,food industry,consumer_goods
+omv-q168238,OMV,AT,petroleum industry,energy
+henkel-kgaa-q276507,Henkel KGaA,DE,chemical industry,manufacturing
+morrisons-q922344,Morrisons,GB,retail,retail
+alstom-q309084,Alstom,FR,rail vehicle industry|activities of head offices,automotive
+rexel-q962489,Rexel,FR,wholesale|holding company activities,financials
+saudi-telecom-company-q1535171,Saudi Telecom Company,SA,telecommunications industry|mobile phone industry,telecom
+saudi-electricity-company-q12188903,Saudi Electricity Company,SA,,utilities
+tatneft-q1616858,Tatneft,RU,petroleum industry,energy
+h-m-q188326,H&M,SE,retail|fast fashion,retail
+chanel-q218115,Chanel,FR,Wholesale trade (business-to-business) of clothing and footwear,retail
+pjsc-inter-rao-q1963801,PJSC Inter RAO,RU,power engineering,manufacturing
+east-japan-railway-company-q499071,East Japan Railway Company,JP,rail transport,logistics
+dte-energy-q5206232,DTE Energy,US,energy industry,energy
+leonardo-q910379,Leonardo,IT,information security|aircraft industry|aerospace industry|aerospace engineering|arms industry,manufacturing
+rsted-q1241260,Ørsted,DK,energy industry,energy
+fujifilm-corporation-q164740,Fujifilm Corporation,JP,photographic process|medical imaging|printing company|Document Solutions|regenerative medicine|photo industry,other
+heidelberg-materials-q632233,Heidelberg Materials,DE,cement industry|other mining and quarrying|construction materials industry|construction industry,construction
+air-china-q51747,Air China,CN,,other
+merck-kgaa-q156959,Merck KGaA,DE,chemical industry|pharmaceutical industry|manufacture of pharmaceutical preparations,pharma
+spacex-q193701,SpaceX,US,space industry,other
+prysmian-group-q1964784,Prysmian Group,IT,industrial manufacturing,manufacturing
+founder-group-q4384042,Founder Group,CN,pharmaceutical industry|real property|information technology|commodities market|finance,pharma
+lactalis-q1799825,Lactalis,FR,,other
+rwe-supply-trading-cz-q2124734,RWE Supply & Trading CZ,CZ,petroleum industry,energy
+enedis-q3587594,Enedis,FR,electricity distribution,utilities
+cooperatieve-rabobank-u-a-leif9wn62,Coöperatieve Rabobank U.A.,NL,,financials
+perusahaan-listrik-negara-q4201636,Perusahaan Listrik Negara,ID,electric power industry|energy industry,energy
+hisense-q2527941,Hisense,CN,consumer electronics industry,technology
+publicis-q1537378,Publicis,FR,public relations|advertising industry|activities of head offices,services
+zte-q136484,ZTE,CN,telecommunications industry,telecom
+wanda-commercial-q18658349,Wanda Commercial,CN,,other
+novonor-q94849,Novonor,BR,construction,construction
+yamaha-motor-company-q158888,Yamaha Motor Company,JP,mechanical engineering|industrial manufacturing|automotive industry|motorcycle industry,manufacturing
+otto-group-q466688,Otto Group,DE,retail|financial services,financials
+ant-group-q21979415,Ant Group,CN,financial services,financials
+edison-s-p-a-lei5j4l49,EDISON S.P.A.,IT,,other
+hancock-prospecting-q5647056,Hancock Prospecting,AU,mining,energy
+british-airways-q8766,British Airways,GB,,other
+hermes-q843887,Hermès,FR,clothing industry|cosmetics industry,consumer_goods
+selfinvest-q137739015,Selfinvest,DK,,other
+bank-of-beijing-q39146,Bank of Beijing,CN,economics of banking|financial services,financials
+scania-q219960,Scania,SE,automotive industry,automotive
+generali-deutschland-q318616,Generali Deutschland,DE,insurance industry,financials
+jd-sports-fashion-plc-leiuu8375,JD SPORTS FASHION PLC,GB,,other
+mckinsey-company-q310207,McKinsey & Company,US,management consulting industry,services
+johnson-matthey-plc-leisc6z10,JOHNSON MATTHEY PLC,GB,,other
+united-shipping-trading-company-q7889139,United Shipping & Trading Company,DK,conglomerate,manufacturing
+desjardins-group-q2933350,Desjardins Group,CA,financial services,financials
+the-ordinary-q126595227,The Ordinary,GB,cosmetics industry,consumer_goods
+novatek-q251546,Novatek,RU,petroleum industry|gas industry,energy
+fidelity-investments-q1411292,Fidelity Investments,US,financial services,financials
+transneft-q2116312,Transneft,RU,transport industry,logistics
+huaneng-power-international-q1507642,Huaneng Power International,CN,electric power industry,utilities
+vestas-q868259,Vestas,DK,wind power industry,other
+synchrony-financial-q18387139,Synchrony Financial,US,financial services,financials
+wanxiang-q1463781,Wanxiang,CN,automotive industry,automotive
+covestro-q812142,Covestro,DE,chemical industry,manufacturing
+china-non-ferrous-metal-mining-q5099821,China Non-Ferrous Metal Mining,CN,,energy
+richemont-q689240,Richemont,CH,,other
+overseas-chinese-town-enterprises-q3347522,Overseas Chinese Town Enterprises,CN,tourism,other
+xcel-energy-q1486956,Xcel Energy,US,public utility,utilities
+en-group-q4038038,En+ Group,JE,asset management|non-ferrous metallurgy|mining industry|energy industry,energy
+china-national-heavy-duty-truck-group-q3952867,China National Heavy Duty Truck Group,CN,automotive industry,automotive
+fosun-international-limited-q3079736,Fosun International Limited,CN,conglomerate,manufacturing
+a2a-energia-s-p-a-lei8c1896,A2A ENERGIA S.P.A.,IT,,other
+youtube-llc-q112247183,YouTube LLC,US,,other
+china-electronics-technology-group-corporation-q10873927,China Electronics Technology Group Corporation,CN,telecommunications industry|vehicle industry|information technology industry,automotive
+citic-financial-amc-q21584822,CITIC Financial AMC,CN,financial services,financials
+tim-group-q144617,TIM Group,IT,telecommunications industry,telecom
+cez-group-q336735,ČEZ Group,CZ,energy industry,energy
+rusal-q1642605,Rusal,RU,aluminium industry|metal industry,manufacturing
+tcl-technology-q733958,TCL Technology,CN,technology|semiconductor|electronics,technology
+lufthansa-group-q62589018,Lufthansa Group,DE,aircraft industry,manufacturing
+sistema-q1781702,Sistema,RU,mechanical engineering|retail|financial services|petroleum industry|insurance industry|electronics industry|telecommunications technology,financials
+logista-integral-sa-leiuj7x28,LOGISTA INTEGRAL SA,ES,,other
+china-north-industries-group-corporation-limited-q1538336,China North Industries Group Corporation Limited,CN,chemical industry|arms industry|manufacture of machinery and equipment,manufacturing
+iveco-group-n-v-lei9eor96,IVECO GROUP N.V.,NL,,other
+jinneng-holding-power-group-q17025517,Jinneng Holding Power Group,CN,,other
+lekkerland-q1816527,Lekkerland,DE,logistics|wholesale|stimulant foodstuff,retail
+t-bank-q4457878,T-Bank,RU,financial sector,financials
+jio-platforms-q96418672,Jio Platforms,IN,technology,other
+foton-motor-q814825,Foton Motor,CN,automotive industry,automotive
+hera-s-p-a-lei443b48,HERA S.P.A.,IT,,other
+dsm-firmenich-ag-leim4bi12,DSM-Firmenich AG,NL,,other
+helleniq-energy-q903198,HELLENiQ ENERGY,GR,oil refining|extraction of petroleum|power engineering,energy
+barry-callebaut-q809018,Barry Callebaut,CH,food industry,consumer_goods
+nornickel-q1284261,Nornickel,RU,mining industry|mining|non-ferrous metallurgy,energy
+webuild-q21693482,Webuild,IT,construction industry,construction
+bae-systems-inc-q4834524,BAE Systems Inc.,US,arms industry,manufacturing
+poste-italiane-q495026,Poste Italiane,IT,logistics|economics of banking|postal sector,logistics
+battelle-memorial-institute-q810911,Battelle Memorial Institute,US,research,other
+hal-trust-leioy3r07,HAL Trust,NL,,other
+universal-music-group-q38903,Universal Music Group,US,music industry|phonographic industry,other
+strabag-q681316,Strabag,AT,construction,construction
+mahle-gmbh-q659379,Mahle GmbH,DE,automotive industry,automotive
+vmware-q11407,VMware,US,software industry,technology
+hsbc-uk-bank-plc-lei86cb82,HSBC UK BANK PLC,GB,,financials
+sika-ag-q691382,Sika AG,CH,construction|chemical industry,construction
+inventec-q6059838,Inventec,TW,original design manufacturer|consumer electronics industry,technology
+dm-drogerie-markt-q266572,dm-drogerie markt,DE,drugstore,pharma
+pyaterochka-q1768969,Pyaterochka,RU,retail,retail
+kbc-group-q29560723,KBC Group,BE,financial sector|insurance industry,financials
+evonik-industries-q473513,Evonik Industries,DE,chemical industry,manufacturing
+rossmann-q316004,Rossmann,DE,drugstore,pharma
+toyota-boshoku-q7830755,Toyota Boshoku,JP,automotive supplier,automotive
+rvb-q140787683,RVB,RU,retail industry,retail
+vtb-bank-q1549389,VTB Bank,RU,financial sector,financials
+zhejiang-energy-group-china-q52850659,Zhejiang Energy Group (China),CN,,energy
+china-international-marine-containers-q1073291,China International Marine Containers,CN,logistics,logistics
+volkswagen-slovakia-q2532301,Volkswagen Slovakia,SK,automotive industry,automotive
+alrajhi-bank-q1761176,Alrajhi Bank,SA,financial sector,financials
+surgutneftegas-q680776,Surgutneftegas,RU,petroleum industry|extraction of petroleum,energy
+discover-financial-q5281775,Discover Financial,US,financial services,financials
+easyjet-plc-leib7th90,EASYJET PLC,GB,,other
+jeronimo-martins-polska-q108169128,Jeronimo Martins Polska,PL,,other
+kingston-technology-q683771,Kingston Technology,US,random-access memory,other
+magang-group-holding-company-limited-q5947574,Magang (Group) Holding Company Limited,CN,iron and steel industry,manufacturing
+nordea-q1123823,Nordea,FI,economics of banking|financial services|financial sector,financials
+sharp-corporation-q53227,Sharp Corporation,JP,semiconductor industry|consumer electronics industry,technology
+bluescope-steel-q885589,BlueScope Steel,AU,iron and steel industry,manufacturing
+vodafone-germany-q2529830,Vodafone Germany,DE,telecommunications industry|telecommunications,telecom
+electrolux-q505922,Electrolux,SE,mechanical engineering|electrical industry|consumer goods industry|home appliance industry,manufacturing
+saras-s-p-a-o-in-forma-estesa-saras-s-p-a-raffin-leiujuh84,SARAS S.P.A. O IN FORMA ESTESA SARAS S.P.A. - RAFFINERIE SARDE,IT,,other
+gestamp-automocion-sa-lei484363,GESTAMP AUTOMOCION SA,ES,,other
+zest-societa-per-azioni-leicb0760,ZEST SOCIETA' PER AZIONI,IT,,other
+andel-holding-q131350142,Andel Holding,DK,energy company,energy
+jointown-pharmaceutical-group-q10878836,Jointown Pharmaceutical Group,CN,health care,services
+arla-foods-q674575,Arla Foods,DK,food industry,consumer_goods
+reitan-as-q3357065,Reitan AS,NO,retail|real property|investment company,financials
+bulgarian-energy-holding-q4996202,Bulgarian Energy Holding,BG,activities of holding companies,energy
+commerzbank-ag-q157617,Commerzbank AG,DE,"financial service activities, except insurance and pension funding|financial sector",financials
+china-hongqiao-q10874559,China Hongqiao,CN,aluminium industry,other
+klm-q181912,KLM,,passenger air transport|freight air transport|air transport,logistics
+infineon-technologies-q311394,Infineon Technologies,DE,electrical industry|semiconductor industry,technology
+apa-corporation-q119991,APA Corporation,US,petroleum industry|gas industry,energy
+eni-plenitude-q96240525,Eni Plenitude,IT,energy industry,energy
+pernod-ricard-q837049,Pernod Ricard,FR,"distilling, rectifying and blending of spirits|food and tobacco industry|activities of head offices",consumer_goods
+wsp-global-q1333162,WSP Global,CA,engineering,manufacturing
+thrivent-financial-for-lutherans-q7798301,Thrivent Financial for Lutherans,US,financial services,financials
+man-truck-bus-q708667,MAN Truck & Bus,DE,automotive industry|bus manufacturing,automotive
+central-japan-railway-company-q513679,Central Japan Railway Company,JP,rail transport,logistics
+currys-plc-leidqqf16,CURRYS PLC,GB,,other
+dignity-health-q5276334,Dignity Health,US,health care,services
+bon-secours-mercy-health-q99578113,Bon Secours Mercy Health,US,,other
+hearst-communications-q1065024,Hearst Communications,US,media industry,services
+iss-q689791,ISS,DK,facility management,services
+asahi-group-holdings-q11283168,Asahi Group Holdings,JP,beverage industry,consumer_goods
+colruyt-group-q1111963,Colruyt Group,BE,"retail sale in non-specialised stores with food, beverages or tobacco predominating",retail
+schindler-elevator-q651212,Schindler Elevator,CH,mechanical engineering,manufacturing
+vivendi-q1127887,Vivendi,FR,activities of head offices,other
+intersport-q666888,Intersport,CH,retail|sporting goods industry,retail
+zalando-q136570,Zalando,DE,retail|clothing industry,retail
+spie-sa-leiwj8x85,SPIE SA,FR,,other
+ly-corporation-q86734122,LY Corporation,JP,Internet,technology
+fnac-darty-leilpho35,FNAC DARTY,FR,,other
+danfoss-q1159510,Danfoss,DK,industrial manufacturing|energy technology,energy
+airbus-commercial-aircraft-q67,Airbus Commercial Aircraft,FR,aircraft and space construction,construction
+opmobility-q3391735,OPmobility,FR,automotive industry|automotive supplier|International Standard Industrial Classification,automotive
+teleperformance-q2392255,Teleperformance,FR,advertising agency activities,services
+rosseti-q4499024,Rosseti,RU,,other
+siemens-gamesa-renewable-energy-q820588,Siemens Gamesa Renewable Energy,ES,wind power,energy
+simplot-q3484788,Simplot,US,food industry,consumer_goods
+ozon-q2365235,Ozon,RU,retail|e-commerce,retail
+akzonobel-q50912,AkzoNobel,NL,chemical industry,manufacturing
+swiss-federal-railways-q83835,Swiss Federal Railways,CH,rail transport,logistics
+bashneft-q809985,Bashneft,RU,Russian chemical industry|extraction of petroleum,energy
+banner-health-q4856918,Banner Health,US,health care,services
+tennet-holding-b-v-leig63903,TenneT Holding B.V.,NL,,other
+ashtead-group-public-limited-company-leik1a235,ASHTEAD GROUP PUBLIC LIMITED COMPANY,GB,,other
+delivery-hero-q23384493,Delivery Hero,DE,food delivery,consumer_goods
+kweichow-moutai-company-q1518607,Kweichow Moutai Company,CN,alcohol industry,other
+jde-peet-s-n-v-lei5zrt89,JDE Peet's N.V.,NL,,other
+southern-and-eastern-norway-regional-health-auth-q7570642,Southern and Eastern Norway Regional Health Authority,NO,,other
+newyork-presbyterian-hospital-q975653,NewYork–Presbyterian Hospital,US,hospitals and rehabilitation,services
+rosatom-q514140,Rosatom,RU,nuclear industry|energy industry,energy
+qantas-airways-q32491,Qantas Airways,AU,aviation|air transport,logistics
+telenor-q845632,Telenor,NO,telecommunications industry,telecom
+fomento-de-construcciones-y-contratas-s-a-lei178328,FOMENTO DE CONSTRUCCIONES Y CONTRATAS S.A.,ES,,other
+sudzucker-q474565,Südzucker,DE,food and tobacco industry,consumer_goods
+siemens-mobility-q391895,Siemens Mobility,DE,rail vehicle manufacturer,automotive
+polskie-gornictwo-naftowe-i-gazownictwo-q673670,Polskie Górnictwo Naftowe i Gazownictwo,PL,petroleum industry,energy
+legrand-q636755,Legrand,FR,,other
+beiersdorf-q201691,Beiersdorf,DE,chemical industry|cosmetics industry|manufacture of pharmaceutical preparations|manufacture of perfumes and toilet preparations|manufacture of glues,manufacturing
+carlsberg-group-q113215,Carlsberg Group,DK,food industry|beverage industry,consumer_goods
+transdev-group-q104185516,Transdev Group,FR,auxiliary land transport services,logistics
+vienna-insurance-group-q694257,Vienna Insurance Group,AT,insurance industry,financials
+tk-elevator-q2430466,TK Elevator,DE,mechanical engineering,manufacturing
+bloomberg-l-p-q13977,Bloomberg L.P.,US,media industry,services
+mediatek-q699848,MediaTek,TW,semiconductor industry,technology
+rt-mart-china-q139575422,RT-Mart China,CN,,other
+aeroflot-q58707,Aeroflot,RU,air cargo|air transport,logistics
+danish-crown-q3365718,Danish Crown,DK,meatpacking industry,other
+lg-energy-solution-wroc-aw-q132420942,LG Energy Solution Wrocław,PL,,energy
+arkema-leikp2785,ARKEMA,FR,,other
+lagardere-sa-leiq65g45,LAGARDERE SA,FR,,other
+rostelecom-q1477012,Rostelecom,RU,telecommunications industry|mobile phone industry,telecom
+mol-group-q549181,MOL Group,HU,petroleum industry|energy industry,energy
+the-lego-group-q1063455,The Lego Group,DK,video game industry|game industry,technology
+puma-q157064,Puma,DE,textile industry|sports industry,consumer_goods
+globus-q457503,Globus,DE,,other
+suez-q177814,SUEZ,FR,industry,other
+seat-q188217,SEAT,ES,automotive industry,automotive
+norgesgruppen-q2575956,NorgesGruppen,NO,retail|food retail sector,retail
+groupe-spie-batignolles-leigsyg40,GROUPE SPIE BATIGNOLLES,FR,,other
+almaz-antey-q1331507,Almaz-Antey,RU,arms industry,manufacturing
+abn-amro-q287471,ABN AMRO,NL,economics of banking|financial services|financial sector,financials
+casino-guichard-perrachon-leibl6l29,"CASINO, GUICHARD-PERRACHON",FR,,other
+sandoz-q528468,Sandoz,DE,chemical industry|pharmaceutical industry,pharma
+perdue-farms-q7167716,Perdue Farms,US,food industry,consumer_goods
+ppf-group-q1979720,PPF Group,CZ,,other
+novolipetsk-steel-q1768082,Novolipetsk Steel,RU,iron and steel industry,manufacturing
+agrofert-q5374450,Agrofert,CZ,food industry|chemical industry|agriculture,consumer_goods
+sabic-q903219,SABIC,SA,chemical industry,manufacturing
+bauhaus-q672043,Bauhaus,CH,retail|hardware store,retail
+mobile-telesystems-q1368919,Mobile TeleSystems,RU,telecommunications industry|mobile phone industry,telecom
+seb-s-a-q125082559,SEB S.A.,FR,holding company activities,financials
+dansk-landbrugs-grovvareselskab-q12306870,Dansk Landbrugs Grovvareselskab,DK,agriculture|conglomerate,manufacturing
+nebius-group-q47120756,Nebius Group,,artificial intelligence|information technology industry,technology
+safran-aircraft-engines-q773875,Safran Aircraft Engines,FR,aircraft and space construction,construction
+polyus-q2005769,Polyus,RU,gold mining|mining,energy
+sansteel-minguang-q115754739,Sansteel Minguang,CN,iron and steel industry,manufacturing
+d-ieteren-group-q1139707,D'Ieteren Group,BE,car dealership|automobile repair shop,automotive
+vanderbilt-university-medical-center-q7914455,Vanderbilt University Medical Center,US,hospitals and rehabilitation,services
+kia-slovakia-q116493917,Kia Slovakia,SK,,other
+atos-se-q757689,Atos SE,FR,IT service management|information technology consulting|activities of head offices,technology
+hella-q452726,Hella,DE,automotive supplier,automotive
+fincantieri-s-p-a-lei8b6239,FINCANTIERI S.P.A.,IT,,other
+memorial-hermann-healthcare-system-q6815444,Memorial Hermann Healthcare System,US,,services
+knorr-bremse-q256290,Knorr-Bremse,DE,electrical industry|railway|machinery industry and plant construction,construction
+memorial-sloan-kettering-cancer-center-q1808012,Memorial Sloan Kettering Cancer Center,US,hospitals and rehabilitation|research,services
+nexans-lei4uiv14,NEXANS,FR,,other
+stark-group-q10465506,Stark Group,DK,building materials trade|wholesale,construction
+shanghai-huayi-group-company-q7488454,Shanghai Huayi (Group) Company,CN,,other
+xinyu-iron-and-steel-group-q11081084,Xinyu Iron and Steel Group,,,manufacturing
+wendel-leijd5o34,WENDEL,FR,,other
+meiji-holdings-q11512295,Meiji Holdings,JP,,other
+ucb-q902046,UCB,BE,chemical industry|pharmaceutical industry,pharma
+teda-holding-q10940256,TEDA Holding,CN,,other
+arcelik-q640497,Arçelik,TR,consumer electronics industry,technology
+hyundai-motor-india-limited-q1525445,Hyundai Motor India Limited,IN,automotive industry,automotive
+if-p-c-insurance-q4131723,If P&C Insurance,SE,insurance industry,financials
+dyson-q621429,Dyson,SG,home appliance industry,other
+hellofresh-q23014836,HelloFresh,DE,meal kit|food delivery|food retail sector,retail
+m-t-bank-q3272257,M&T Bank,US,economics of banking|financial services|financial sector,financials
+telia-company-q862303,Telia Company,SE,telecommunications industry|mobile phone industry,telecom
+signa-holding-gmbh-q1422071,Signa Holding GmbH,AT,real estate development,other
+gates-foundation-q655286,Gates Foundation,US,philanthropy|research,other
+hyundai-motor-manufacturing-czech-q1564355,Hyundai Motor Manufacturing Czech,CZ,automotive industry,automotive
+marathon-oil-q1577587,Marathon Oil,US,petroleum industry|gas industry,energy
+audi-hungaria-q781027,Audi Hungaria,HU,automotive industry,automotive
+severstal-q638448,Severstal,RU,mining industry|iron and steel industry,energy
+technip-energies-n-v-leiscip70,Technip Energies N.V.,NL,,other
+rwjbarnabas-health-q62083907,RWJBarnabas Health,US,hospitals and rehabilitation|health system,services
+rheinmetall-ag-q161544,Rheinmetall AG,DE,mechanical engineering|automotive industry|arms industry|metal industry|machinery industry and plant construction|Manufacture of parts and accessories for motor vehicles|Manufacture of military fighting vehicles|engine manufacturing,manufacturing
+kia-motors-slovakia-q1333043,Kia Motors Slovakia,SK,automobile manufacturer,automotive
+maire-s-p-a-lei0a1b83,MAIRE S.P.A.,IT,,other
+mondi-group-q779252,Mondi Group,GB,papermaking,manufacturing
+perenco-q762953,Perenco,FR,petroleum industry,energy
+activision-blizzard-q344341,Activision Blizzard,US,video game industry,technology
+suffolk-construction-company-q7634545,Suffolk Construction Company,US,construction,construction
+mansour-group-q431077,Mansour Group,,automotive industry,automotive
+british-broadcasting-corporation-q9531,British Broadcasting Corporation,GB,broadcasting|media industry|journalism,services
+stadtwerke-munchen-q882871,Stadtwerke München,DE,water supply|energy supply|steam and air conditioning supply,energy
+huk-coburg-q1566111,HUK-Coburg,DE,insurance industry,financials
+china-bohai-bank-q4208326,China Bohai Bank,,financial services,financials
+tonnies-holding-q2464046,Tönnies Holding,DE,food industry|meat industry,consumer_goods
+gruppo-api-q646807,Gruppo API,IT,petroleum industry,energy
+heartland-a-s-q28172433,Heartland A/S,DK,conglomerate,manufacturing
+pirelli-q207770,Pirelli,IT,plastics and rubber industry,manufacturing
+erste-group-q1310001,Erste Group,AT,financial services|financial sector,financials
+rushydro-q2035424,RusHydro,RU,hydroelectricity,other
+orlando-health-q7103097,Orlando Health,US,health care,services
+czechoslovak-group-q24708162,Czechoslovak Group,CZ,defence industry|industrial manufacturing|aircraft industry,manufacturing
+sony-music-q56760250,Sony Music,US,entertainment industry|show business|music industry,services
+acer-q481778,Acer,TW,computer hardware industry|information technology industry|information and communications industry,technology
+wildberries-q24933714,Wildberries,RU,retail,retail
+hilti-q1361530,Hilti,LI,industrial manufacturing|machinery industry and plant construction,construction
+rubis-leitc9742,RUBIS,FR,,other
+iren-s-p-a-lei474e60,IREN S.P.A.,IT,,other
+barratt-redrow-plc-lei5ynk29,BARRATT REDROW PLC,GB,,other
+amadeus-it-group-q696061,Amadeus IT Group,ES,software industry|computer programming,technology
+eurofins-scientific-q324846,Eurofins Scientific,LU,"technical analyses, tests and inspections",other
+vilniaus-prekyba-q1460895,Vilniaus prekyba,LT,retail,retail
+dertour-group-q56707994,DERTOUR Group,DE,tourism,other
+orlen-unipetrol-q1593113,Orlen Unipetrol,CZ,chemical industry|refinery,energy
+goldwind-q1090900,Goldwind,CN,wind power industry,other
+signal-iduna-q2285066,Signal Iduna,DE,insurance company,financials
+bureau-veritas-lei5d1f11,BUREAU VERITAS,FR,,other
+tecnicas-reunidas-sa-leiwjgf49,TECNICAS REUNIDAS SA,ES,,other
+koninklijke-bam-groep-n-v-leiy5bs93,Koninklijke BAM Groep N.V.,NL,,other
+evraz-q1382653,Evraz,GB,iron and steel industry,manufacturing
+kg-group-q114243585,KG Group,KR,,other
+bank-rakyat-indonesia-q623042,Bank Rakyat Indonesia,ID,economics of banking|microfinance,financials
+lanxess-q682992,Lanxess,DE,chemical industry,manufacturing
+lubrizol-q3610112,Lubrizol,US,chemical industry,manufacturing
+etihad-airways-q212304,Etihad Airways,AE,,other
+sabadell-bank-q762330,Sabadell Bank,ES,economics of banking|financial services|financial sector,financials
+aena-s-m-e-sa-leinfmt29,AENA S.M.E. SA,ES,,other
+dassault-systemes-q1172038,Dassault Systèmes,FR,software industry|digital distribution|electronics industry|information industry|publishing of application software,technology
+rtl-group-q921159,RTL Group,LU,mass media,services
+groupe-bruxelles-lambert-q972966,Groupe Bruxelles Lambert,BE,holding company,financials
+magnitogorsk-iron-and-steel-works-q1884500,Magnitogorsk Iron and Steel Works,RU,iron and steel industry|metallurgy,manufacturing
+zurich-gruppe-deutschland-q230410,Zurich Gruppe Deutschland,DE,insurance industry|insurance,financials
+entain-plc-leiqr8l28,ENTAIN PLC,GB,,other
+wind-tre-q28119223,Wind Tre,IT,telecommunications industry,telecom
+groupe-adp-q794563,Groupe ADP,FR,fixed-base operator,other
+lantmannen-q1805602,Lantmännen,SE,,other
+coop-danmark-q12306665,Coop Danmark,DK,retail|food retail sector,retail
+elior-group-lei00sq95,ELIOR GROUP,FR,,other
+wolters-kluwer-q249798,Wolters Kluwer,NL,publishing|software publishing,technology
+danish-agro-q5219677,Danish Agro,DK,agribusiness|food industry|conglomerate|agricultural trade,consumer_goods
+aperam-q6479764,Aperam,LU,iron and steel industry,manufacturing
+hamburg-sud-q565050,Hamburg Süd,DE,water transport|sea and coastal freight water transport (NACE 50.2)|sea and coastal passenger water transport,logistics
+samsung-sdi-hungary-q116760752,Samsung SDI Hungary,HU,,other
+pge-polska-grupa-energetyczna-q787714,PGE Polska Grupa Energetyczna,PL,energy industry,energy
+remondis-q884975,Remondis,DE,waste management,other
+catalana-occidente-group-q5936881,Catalana Occidente Group,ES,insurance industry,financials
+syensqo-q123752186,SYENSQO,BE,chemical industry|specialty chemicals,manufacturing
+ackermans-van-haaren-q341828,Ackermans & van Haaren,BE,activities of holding companies,other
+dino-polska-q11694239,Dino Polska,PL,trade,other
+robert-bosch-elektronika-gyarto-kft-q108169064,Robert Bosch Elektronika Gyártó Kft.,HU,,other
+lars-larsen-group-q66626422,Lars Larsen Group,DK,retail|wholesale|furniture industry,retail
+morgan-sindall-group-plc-leizrb345,MORGAN SINDALL GROUP PLC,GB,,other
+energoatom-q938225,Energoatom,UA,nuclear power plant|energy industry|nuclear power,energy
+emeis-leipk1v89,EMEIS,FR,,other
+ldc-group-q3205967,LDC Group,FR,activities of head offices,other
+helios-kliniken-q1254151,Helios Kliniken,DE,,other
+koninklijke-kpn-n-v-lei7fvp81,Koninklijke KPN N.V.,NL,,other
+acerinox-sa-lei582721,ACERINOX SA,ES,,other
+signify-n-v-lei8nzo35,SIGNIFY N.V.,NL,,other
+distribuidora-internacional-de-alimentacion-sa-leifl6h10,DISTRIBUIDORA INTERNACIONAL DE ALIMENTACION SA,ES,,other
+atb-market-q4054103,ATB-Market,UA,retail,retail
+ewe-ag-q1276459,EWE AG,DE,energy supply,energy
+wizz-air-holdings-plc-leiljza85,WIZZ AIR HOLDINGS PLC,GB,,other
+sanford-health-q7417625,Sanford Health,US,health care,services
+alexion-pharmaceuticals-q204727,Alexion Pharmaceuticals,US,pharmaceutical industry,pharma
+sopra-steria-q21021580,Sopra Steria,FR,IT systems and software consulting,technology
+accor-q212599,Accor,FR,hospitality industry,services
+slovnaft-q1587563,Slovnaft,SK,petroleum industry,energy
+tcl-electronics-q29468800,TCL Electronics,CN,home appliance|consumer electronics industry,technology
+danske-bank-q1636974,Danske Bank,DK,financial services|financial sector,financials
+qaf-limited-q10887008,QAF Limited,SG,,other
+jungheinrich-ag-q536228,Jungheinrich AG,DE,mechanical engineering|machinery industry and plant construction|vehicle construction,automotive
+eroski-scoop-leip6s661,EROSKI SCOOP,ES,,other
+stihl-q239372,Stihl,DE,mechanical engineering|machinery industry and plant construction,construction
+montefiore-medical-center-q6905066,Montefiore Medical Center,US,hospitals and rehabilitation,services
+sbm-offshore-n-v-leiqe6513,SBM OFFSHORE N.V.,NL,,other
+indra-sistemas-q1661823,Indra Sistemas,ES,IT service management|information technology consulting,technology
+bkw-energie-q670895,BKW Energie,CH,"electric power generation, transmission and distribution|energy supply",energy
+general-logistics-systems-q366182,General Logistics Systems,,logistics,logistics
+ramsay-generale-de-sante-lei223f44,RAMSAY GENERALE DE SANTE,FR,,other
+bain-company-q764850,Bain & Company,US,management consulting industry|Administrative Management and General Management Consulting Services,services
+travis-perkins-plc-leif22k83,TRAVIS PERKINS PLC,GB,,other
+mvm-group-q1162287,MVM Group,HU,,other
+metropolitan-transportation-authority-q1146109,Metropolitan Transportation Authority,US,passenger transport,logistics
+gefco-forwarding-cz-q115135618,GEFCO Forwarding CZ,CZ,,other
+sibur-q899012,Sibur,RU,chemical industry,manufacturing
+clariane-leitjm037,CLARIANE,FR,,other
+eurocash-q16544331,Eurocash,PL,trade,other
+dacia-q27460,Dacia,RO,automotive industry,automotive
+coop-amba-q7062253,Coop amba,DK,cooperative|food retail sector,retail
+avon-products-inc-q791285,Avon Products Inc.,US,cosmetics industry,consumer_goods
+siberian-coal-energy-company-q4418250,Siberian Coal Energy Company,RU,coal industry|mining of coal,energy
+olympus-corporation-q688619,Olympus Corporation,JP,electronics,technology
+ayvens-leinp7427,AYVENS,FR,,other
+fifth-third-bank-q1411810,Fifth Third Bank,US,financial services|financial sector,financials
+maxima-grupe-uab-q1881222,"Maxima Grupė, UAB",LT,retail,retail
+vonovia-q1202053,Vonovia,DE,real estate industry,other
+swiss-international-air-lines-q156776,Swiss International Air Lines,CH,,other
+transmashholding-q1519572,Transmashholding,RU,rail vehicle manufacturer,automotive
+kier-group-plc-lei4y7o48,KIER GROUP PLC,GB,,other
+holding-slovenske-elektrarne-d-o-o-q113466433,HOLDING SLOVENSKE ELEKTRARNE d.o.o.,SI,,other
+iberostar-hotels-resorts-q2035939,Iberostar Hotels & Resorts,ES,hospitality industry,services
+skyworks-solutions-q7538146,Skyworks Solutions,US,semiconductor industry,technology
+prosus-q67389109,Prosus,NL,investment,financials
+coop-norge-sa-q1618373,Coop Norge SA,NO,food retail sector,retail
+kongsberg-gruppen-q1770909,Kongsberg Gruppen,NO,space technology|arms industry|petroleum industry|maritime,energy
+puig-q3410623,Puig,ES,cosmetics industry|fashion,consumer_goods
+western-southern-financial-group-q7987429,Western & Southern Financial Group,US,financial services|insurance,financials
+emmi-ag-q632030,Emmi AG,CH,food industry,consumer_goods
+lite-on-technology-q34534,Lite-On Technology,TW,consumer electronics industry,technology
+jollibee-group-q45208078,Jollibee Group,PH,fast food,consumer_goods
+toyota-central-europe-q132420943,Toyota Central Europe,PL,,other
+prosegur-compania-de-seguridad-s-a-leidbfg97,"PROSEGUR COMPAÑIA DE SEGURIDAD, S.A.",ES,,other
+lenta-q4258608,Lenta,RU,retail,retail
+airgas-q80635,Airgas,US,industrial gas,energy
+stena-ab-q18332843,Stena AB,SE,conglomerate,manufacturing
+henry-ford-health-q5721418,Henry Ford Health,US,health care,services
+vistry-group-plc-lei9slk53,VISTRY GROUP PLC,GB,,other
+gamestop-q202210,GameStop,US,retail,retail
+banijay-group-n-v-lei3rf180,Banijay Group N.V.,NL,,other
+arcadis-n-v-lei047n03,ARCADIS N.V.,NL,,other
+jysk-q138913,Jysk,DK,retail,retail
+metalloinvest-q1924939,Metalloinvest,RU,iron and steel industry,manufacturing
+barnes-noble-q795454,Barnes & Noble,US,bookselling,other
+dassault-aviation-q460487,Dassault Aviation,FR,arms industry|aerospace industry|aircraft and space construction,manufacturing
+intercontinental-hotels-group-plc-leilu3j98,INTERCONTINENTAL HOTELS GROUP PLC,GB,,services
+elis-leimay492,ELIS,FR,,other
+aramco-fuels-poland-q132420944,Aramco Fuels Poland,PL,,other
+wartsila-q327429,Wärtsilä,FI,mechanical engineering|industrial manufacturing|electrical industry,manufacturing
+kghm-polska-miedz-q1476710,KGHM Polska Miedź,PL,mining,energy
+united-aircraft-corporation-q1136226,United Aircraft Corporation,RU,aircraft industry|aviation,logistics
+scripps-health-q7439200,Scripps Health,US,health care,services
+foxconn-cz-q27898860,Foxconn CZ,CZ,electronics industry,technology
+bestseller-q594721,Bestseller,DK,retail|wholesale|clothing industry,retail
+imcd-nv-q63184341,IMCD NV,NL,,other
+dnb-bank-q80788,DNB Bank,NO,financial services,financials
+uralkali-q904594,Uralkali,RU,chemical industry|mining,energy
+orlen-lietuva-ab-q950584,"Orlen Lietuva, AB",LT,,other
+fortuna-game-q12016781,Fortuna Game,CZ,gambling industry,services
+sacyr-sa-leivn9425,SACYR SA,ES,,other
+schouw-co-q12334747,Schouw & Co.,DK,conglomerate,manufacturing
+mercer-q1391599,Mercer,US,risk management|professional service|consulting company,services
+first-republic-bank-q5453752,First Republic Bank,US,economics of banking|financial services|financial sector,financials
+vall-companys-q138855851,Vall Companys,ES,agribusiness,other
+siemens-gamesa-q1493131,Siemens Gamesa,ES,wind power,other
+m-video-q6558800,M.video,RU,retail,retail
+ote-q10380001,OTE,CZ,energy industry,energy
+aercap-q4687934,AerCap,IE,financial services|aerospace industry,financials
+tryg-q1772027,Tryg,DK,insurance industry,financials
+pepco-group-n-v-lei9ob449,PEPCO GROUP N.V.,NL,,other
+yale-new-haven-hospital-q12073283,Yale – New Haven Hospital,US,,services
+taylor-wimpey-plc-lei8s3r66,TAYLOR WIMPEY PLC,GB,,other
+meiji-corporation-q11512281,Meiji Corporation,JP,food industry,consumer_goods
+vodacom-q1856518,Vodacom,ZA,telecommunications industry,telecom
+zublin-q247910,Züblin,DE,construction|speciality construction,construction
+construcciones-y-auxiliar-de-ferrocarriles-s-a-lei275134,"CONSTRUCCIONES Y AUXILIAR DE FERROCARRILES, S.A.",ES,,other
+elia-group-q1131131,Elia Group,BE,electric power industry,utilities
+regions-financial-corporation-q917131,Regions Financial Corporation,US,economics of banking|financial services|financial sector,financials
+stellantis-slovakia-q3552624,Stellantis Slovakia,SK,automotive industry,automotive
+elecnor-sa-lei491250,ELECNOR SA,ES,,other
+petrol-group-q174824,Petrol Group,SI,petroleum industry,energy
+dns-store-chain-q4036922,DNS (store chain),RU,retail,retail
+fanuc-q212116,FANUC,JP,industrial manufacturing,manufacturing
+buzzi-spa-leivj6k59,BUZZI SPA,IT,,other
+naval-group-q1227511,Naval Group,FR,arms industry|construction of ships and floating structures,construction
+mount-sinai-hospital-q1476505,Mount Sinai Hospital,US,hospitals and rehabilitation,services
+lidl-ceska-republika-q29477065,Lidl Česká republika,CZ,retail,retail
+esprinet-s-p-a-lei6add08,ESPRINET S.P.A.,IT,,other
+vkr-holding-q10711838,VKR Holding,DK,construction materials industry,construction
+phosagro-q386414,PhosAgro,RU,chemical industry,manufacturing
+hugo-boss-q491627,Hugo Boss,DE,textile industry,consumer_goods
+china-south-industries-group-q1022190,China South Industries Group,CN,defence industry|automotive industry,automotive
+anthropic-q116758847,Anthropic,US,artificial intelligence,other
+versalis-q4010228,Versalis,IT,,other
+franz-haniel-cie-q320785,Franz Haniel & Cie.,DE,holding company|water transport|mining industry|commodity trade and trade in recycled materials,energy
+tauron-polska-energia-q2397198,Tauron Polska Energia,PL,energy sector,energy
+energyaustralia-q5376876,EnergyAustralia,AU,electric power industry|trade of electricity|energy industry,utilities
+penguin-random-house-q2908540,Penguin Random House,US,publishing,services
+united-shipbuilding-corporation-q4330413,United Shipbuilding Corporation,RU,shipbuilding,manufacturing
+dongfang-electric-q5295864,Dongfang Electric,CN,power station,other
+inter-cars-q114809284,Inter Cars,PL,,other
+deme-q2265286,DEME,BE,construction of water projects,construction
+volkswagen-poznan-q9369097,Volkswagen Poznań,PL,,other
+solvay-s-a-q706184,Solvay S.A.,BE,chemical industry|manufacture of other inorganic basic chemicals,manufacturing
+cellnex-telecom-sa-leiui7p67,CELLNEX TELECOM SA,ES,,telecom
+trubnaya-metallurgicheskaya-kompaniya-q1809133,Trubnaya Metallurgicheskaya Kompaniya,RU,iron and steel industry,manufacturing
+azelis-group-q115167314,Azelis Group,BE,,other
+ural-mining-and-metallurgical-company-q1349918,Ural Mining and Metallurgical Company,RU,metal industry,manufacturing
+danieli-q367162,Danieli,IT,iron and steel industry,manufacturing
+mbda-q1475070,MBDA,FR,arms industry|holding company activities,financials
+alten-lei24gn07,ALTEN,FR,,other
+edeka-nord-q26085458,EDEKA Nord,DE,,other
+orlen-unipetrol-rpa-q11878499,ORLEN Unipetrol RPA,CZ,chemical industry,manufacturing
+biomerieux-sa-leiq4t071,BIOMERIEUX SA,FR,,other
+osf-healthcare-q7073001,OSF HealthCare,US,hospitals and rehabilitation|health care,services
+eurochem-q905159,EuroChem,CH,chemical industry,manufacturing
+julius-baer-group-q671901,Julius Baer Group,CH,financial sector,other
+rusagro-q4400200,Rusagro,RU,agriculture,other
+intertek-group-plc-lei1rn369,INTERTEK GROUP PLC,GB,,other
+vallourec-lei4mcj34,VALLOUREC,FR,,other
+arcelormittal-poland-q11822675,ArcelorMittal Poland,PL,,other
+worldline-q2869596,Worldline,FR,"data processing, hosting and related activities",other
+nationwide-children-s-hospital-q6979874,Nationwide Children's Hospital,US,hospitals and rehabilitation,services
+fraport-q643578,Fraport,DE,airport,other
+prosiebensat-1-media-se-q59165,ProSiebenSat.1 Media SE,DE,mass media,services
+dfds-q1243964,DFDS,DK,shipping line,logistics
+mfe-mediaforeurope-n-v-leib97a50,MFE-MEDIAFOREUROPE N.V.,NL,,services
+china-airlines-q51756,China Airlines,TW,aviation,logistics
+kolon-corporation-q141493911,KOLON Corporation,KR,holding company activities,financials
+mtu-aero-engines-q128929,MTU Aero Engines,DE,aviation|aerospace industry,logistics
+aryzta-q718109,ARYZTA,CH,,other
+cie-automotive-sa-lei381252,CIE AUTOMOTIVE SA,ES,,automotive
+lehigh-valley-hospital-q6518847,Lehigh Valley Hospital,US,hospitals and rehabilitation,services
+gkn-aerospace-q121362615,GKN Aerospace,GB,aerospace industry,manufacturing
+alcampo-q2832081,Alcampo,ES,retail,retail
+stena-metall-q10678277,Stena Metall,SE,conglomerate,manufacturing
+telekom-greece-q206678,Telekom (Greece),GR,mobile phone industry|telecommunications industry,telecom
+rockwool-q255661,Rockwool,DK,construction materials industry,construction
+lavazza-q543750,Lavazza,IT,coffee industry,other
+fibercop-q107214638,FiberCop,IT,telecommunications industry,telecom
+elektroprivreda-srbije-q1327532,Elektroprivreda Srbije,RS,energy industry,energy
+asseco-poland-q740032,Asseco Poland,PL,information technology,technology
+dji-q16924332,DJI,CN,electronics industry|electronics|information technology|unmanned aerial vehicle,technology
+pik-group-q691418,PIK Group,RU,construction|real property,construction
+grundfos-q1550517,Grundfos,DK,industrial manufacturing|hydraulic engineering,manufacturing
+children-s-hospital-of-philadelphia-q4569202,Children's Hospital of Philadelphia,US,,services
+vicat-leiovdp79,VICAT,FR,,other
+argenx-se-q63152908,Argenx SE,NL,biotechnology,pharma
+brembo-q907265,Brembo,IT,automotive industry,automotive
+omv-petrom-marketing-q108169261,OMV Petrom Marketing,RO,,other
+rema-1000-danmark-q115768834,REMA 1000 Danmark,DK,food retail sector,retail
+schroders-plc-leisz2h24,SCHRODERS PLC,GB,,other
+omv-petrom-q1755034,OMV Petrom,RO,petroleum industry,energy
+frasers-group-q2913554,Frasers Group,GB,retail,retail
+knds-q19966744,KNDS,,arms industry|military–industrial complex,manufacturing
+knds-deutschland-q141858248,KNDS Deutschland,DE,arms industry,manufacturing
+stadler-rail-q666703,Stadler Rail,CH,,other
+slovenske-elektrarne-q3559219,Slovenské elektrárne,SK,energy industry,energy
+orkla-group-q60003,Orkla Group,NO,industrial manufacturing|conglomerate|financial services|food industry,manufacturing
+de-longhi-s-p-a-lei4f8a38,DE' LONGHI S.P.A.,IT,,other
+unibel-leioxfh76,UNIBEL,FR,,other
+id-logistics-group-leimj9p45,ID LOGISTICS GROUP,FR,,logistics
+lidl-poland-q108169129,Lidl Poland,PL,,other
+peacehealth-q16966652,PeaceHealth,US,health care,services
+vauxhall-q59187,Vauxhall,GB,automotive industry|vehicle construction,automotive
+bellway-p-l-c-lei4fgz98,BELLWAY P L C,GB,,other

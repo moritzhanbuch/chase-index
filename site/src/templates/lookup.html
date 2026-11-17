@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block main %}
+<div class="wrap">
+  <p class="kicker">Free supplier lookup</p>
+  <h1>How long does my customer take to pay?</h1>
+  <p class="lede">Search {{ n|int_c }} UK legal entities by name or company number and see what each one reported: average days to pay, how many invoices it pays late, and its standard payment terms. Straight from the company's own statutory report, with a link to the original.</p>
+  <div class="search-hero">
+    <label for="lookup-q">How long does my customer take to pay?</label>
+    <input type="search" id="lookup-q" data-index="data/lookup-index.json" placeholder="Company name or company number" autocomplete="off" spellcheck="false">
+    <p class="small muted" id="lookup-status" aria-live="polite">Type at least two characters. The index loads on your first keystroke and the search runs in your browser. Nothing you type is sent anywhere.</p>
+    <ul class="results" id="lookup-results"></ul>
+  </div>
+  <p class="small muted">Large UK companies and LLPs report under their legal entity name, which is often not the brand name. If you cannot find a customer, check the name on its invoice or purchase order. {{ current_n|int_c }} of the {{ n|int_c }} entities have a current report. Older reports are shown with a note. {{ ogl }}</p>
+
+  <h2>Six practical things for suppliers</h2>
+  <p class="small muted">General information, not legal advice. Rules change, so check the official guidance for your situation.</p>
+  <ul class="tips">
+    <li><b>Check reported terms before you agree terms.</b>A customer's statutory report shows its standard payment terms and how long it really takes on average. If its average is well beyond the terms you are offered, price that in or negotiate before you sign.</li>
+    <li><b>UK law provides for statutory interest on late payment.</b>UK law gives businesses a statutory right to interest on late commercial payments. Under the Late Payment of Commercial Debts (Interest) Act 1998 the rate is 8% above the Bank of England base rate, plus a fixed sum of GBP 40 to 100 depending on the size of the debt. If no payment date was agreed, payment is generally due 30 days after delivery or after the invoice is received, whichever is later. A contract can set a different remedy, so check yours. <a href="https://www.gov.uk/late-commercial-payments-interest-debt-recovery" rel="noopener">Official guidance on GOV.UK</a>.</li>
+    <li><b>Get the purchase order number right.</b>Many invoices at large companies are held up because they cannot be matched to a purchase order or a goods receipt. Ask for the PO number before you deliver, and quote it exactly on the invoice.</li>
+    <li><b>Invoice electronically where you can.</b>Ask how the customer wants to receive invoices: a supplier portal, a structured e-invoice or a dedicated mailbox. An invoice that enters the customer's system on day one cannot be lost in a post room.</li>
+    <li><b>Ask about early-payment programmes.</b>Some large buyers offer supply chain finance or dynamic discounting: you get paid earlier in return for a small discount. Compare the discount with your own cost of borrowing before you accept.</li>
+    <li><b>Know the routes if it goes wrong.</b>The UK Fair Payment Code recognises companies that commit to paying quickly, so it is worth checking whether a customer holds an award. Small businesses with a payment problem with a larger customer can bring a complaint to the Small Business Commissioner.</li>
+  </ul>
+</div>
+{% endblock %}
+{% block scripts %}<script src="assets/lookup.js" defer></script>{% endblock %}

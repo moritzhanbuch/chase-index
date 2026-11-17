@@ -1,0 +1,1034 @@
+{
+ "generated_at": "2026-11-16T10:42:51Z",
+ "generated_by": "scout-es",
+ "constituents_source": "https://www.bolsasymercados.es/dam/descargas/indices/composicion-ibex-35-es-en.pdf",
+ "route": "Primary: filings.xbrl.org ESEF xBRL-JSON (text-block facts contain the notes). Fallback: company IR PMP web page.",
+ "documents": [
+  {
+   "ticker": "ACS",
+   "company_name": "ACS, Actividades de Construcción y Servicios, S.A.",
+   "fiscal_year": 2025,
+   "fiscal_period_end": "2025-12-31",
+   "document_title": "Informe financiero anual consolidado 2025 (ESEF), xBRL-JSON rendering by filings.xbrl.org",
+   "document_type": "esef_xbrl_json",
+   "scope": "consolidated annual report (PMP table covers the Spanish entities of the group per ICAC Resolution art. 6.2; extractor must confirm wording in snippet)",
+   "language": "es",
+   "source_url": "https://filings.xbrl.org/95980020140005558665/2025-12-31/ESEF/ES/0/95980020140005558665-2025-12-31-1-es.json",
+   "landing_page_url": "https://filings.xbrl.org/entity/95980020140005558665",
+   "human_readable_report_url": "https://filings.xbrl.org/95980020140005558665/2025-12-31/ESEF/ES/0/95980020140005558665-2025-12-31-1-es/reports/95980020140005558665-2025-12-31-1-es.xhtml",
+   "local_path": "data/raw/es/ACS/95980020140005558665-2025-12-31-1-es.json",
+   "sha256": "a7aac75f0e6047bf0bfcb50bdcdcda89f3e3decfa59fdba7abdd65f5c5005429",
+   "bytes": 9621745,
+   "retrieved_at": "2026-11-16T10:08:17Z",
+   "pmp_pages": [
+    {
+     "concept": "ifrs-full:DisclosureOfTradeAndOtherPayablesExplanatory",
+     "fact_id": "f-658",
+     "offset": 0,
+     "strong": true
+    }
+   ],
+   "snippet_path": "data/interim/es_snippets/ACS.txt",
+   "status": "ok",
+   "notes": "Located by text search inside XBRL text-block facts; pmp_pages holds concept/fact_id/char offset instead of page numbers (xBRL-JSON has no pages). Duplicate nested text blocks were de-duplicated."
+  },
+  {
+   "ticker": "ACX",
+   "company_name": "Acerinox, S.A.",
+   "fiscal_year": 2025,
+   "fiscal_period_end": "2025-12-31",
+   "document_title": "Informe financiero anual consolidado 2025 (ESEF), xBRL-JSON rendering by filings.xbrl.org",
+   "document_type": "esef_xbrl_json",
+   "scope": "consolidated annual report (PMP table covers the Spanish entities of the group per ICAC Resolution art. 6.2; extractor must confirm wording in snippet)",
+   "language": "es",
+   "source_url": "https://filings.xbrl.org/95980020140005582721/2025-12-31/ESEF/ES/0/95980020140005582721-2025-12-31-1-es.json",
+   "landing_page_url": "https://filings.xbrl.org/entity/95980020140005582721",
+   "human_readable_report_url": "https://filings.xbrl.org/95980020140005582721/2025-12-31/ESEF/ES/0/95980020140005582721-2025-12-31-1-es/reports/95980020140005582721-2025-12-31-1-es.xhtml",
+   "local_path": "data/raw/es/ACX/95980020140005582721-2025-12-31-1-es.json",
+   "sha256": "9a97d1277c0370ac722a07d894649bb1d54cbaacdc00955cd24cd76df5f7ad1b",
+   "bytes": 7243939,
+   "retrieved_at": "2026-11-16T10:08:06Z",
+   "pmp_pages": [
+    {
+     "concept": "ifrs-full:DisclosureOfFinancialInstrumentsExplanatory",
+     "fact_id": "f-723",
+     "offset": 4282,
+     "strong": true
+    },
+    {
+     "concept": "ifrs-full:DisclosureOfTradeAndOtherPayablesExplanatory",
+     "fact_id": "f-726",
+     "offset": 0,
+     "strong": true
+    },
+    {
+     "concept": "acerinox:RevelacionDelPeriodoMedioDePagoAProveedoresTextBlock",
+     "fact_id": "f-727",
+     "offset": 0,
+     "strong": true
+    },
+    {
+     "concept": "ifrs-full:DisclosureOfFinancialInstrumentsExplanatory",
+     "fact_id": "f-723",
+     "offset": 12310,
+     "strong": false
+    }
+   ],
+   "snippet_path": "data/interim/es_snippets/ACX.txt",
+   "status": "ok",
+   "notes": "Located by text search inside XBRL text-block facts; pmp_pages holds concept/fact_id/char offset instead of page numbers (xBRL-JSON has no pages). Duplicate nested text blocks were de-duplicated."
+  },
+  {
+   "ticker": "AENA",
+   "company_name": "Aena S.M.E., S.A.",
+   "fiscal_year": 2025,
+   "fiscal_period_end": "2025-12-31",
+   "document_title": "Informe financiero anual consolidado 2025 (ESEF), xBRL-JSON rendering by filings.xbrl.org",
+   "document_type": "esef_xbrl_json",
+   "scope": "consolidated annual report (PMP table covers the Spanish entities of the group per ICAC Resolution art. 6.2; extractor must confirm wording in snippet)",
+   "language": "es",
+   "source_url": "https://filings.xbrl.org/959800R7QMXKF0NFMT29/2025-12-31/ESEF/ES/0/959800R7QMXKF0NFMT29-2025-12-31-1-es.json",
+   "landing_page_url": "https://filings.xbrl.org/entity/959800R7QMXKF0NFMT29",
+   "human_readable_report_url": "https://filings.xbrl.org/959800R7QMXKF0NFMT29/2025-12-31/ESEF/ES/0/959800R7QMXKF0NFMT29-2025-12-31-1-es/reports/959800R7QMXKF0NFMT29-2025-12-31-1-es.xhtml",
+   "local_path": "data/raw/es/AENA/959800R7QMXKF0NFMT29-2025-12-31-1-es.json",
+   "sha256": "e533f6fd92187a0bb32c11b6fb0e3f3af3eebd87ada6f7ccec5a934394861570",
+   "bytes": 8268761,
+   "retrieved_at": "2026-11-16T10:08:23Z",
+   "pmp_pages": [
+    {
+     "concept": "ifrs-full:DisclosureOfFinancialInstrumentsExplanatory",
+     "fact_id": "f-605",
+     "offset": 35918,
+     "strong": true
+    }
+   ],
+   "snippet_path": "data/interim/es_snippets/AENA.txt",
+   "status": "ok",
+   "notes": "Located by text search inside XBRL text-block facts; pmp_pages holds concept/fact_id/char offset instead of page numbers (xBRL-JSON has no pages). Duplicate nested text blocks were de-duplicated."
+  },
+  {
+   "ticker": "AMS",
+   "company_name": "Amadeus IT Group, S.A.",
+   "fiscal_year": 2025,
+   "fiscal_period_end": "2025-12-31",
+   "document_title": "Informe financiero anual consolidado 2025 (ESEF), xBRL-JSON rendering by filings.xbrl.org",
+   "document_type": "esef_xbrl_json",
+   "scope": "consolidated annual report (PMP table covers the Spanish entities of the group per ICAC Resolution art. 6.2; extractor must confirm wording in snippet)",
+   "language": "es",
+   "source_url": "https://filings.xbrl.org/9598004A3FTY3TEHHN09/2025-12-31/ESEF/ES/0/9598004A3FTY3TEHHN09-2025-12-31-1-es.json",
+   "landing_page_url": "https://filings.xbrl.org/entity/9598004A3FTY3TEHHN09",
+   "human_readable_report_url": "https://filings.xbrl.org/9598004A3FTY3TEHHN09/2025-12-31/ESEF/ES/0/9598004A3FTY3TEHHN09-2025-12-31-1-es/reports/9598004A3FTY3TEHHN09-2025-12-31-1-es.xhtml",
+   "local_path": "data/raw/es/AMS/9598004A3FTY3TEHHN09-2025-12-31-1-es.json",
+   "sha256": "bce031e6336959946b5afea79a6d3a56a88d62015a2d29848d646908ad9ee7bf",
+   "bytes": 3803896,
+   "retrieved_at": "2026-11-16T10:08:27Z",
+   "pmp_pages": [
+    {
+     "concept": "ifrs-full:DisclosureOfFinancialLiabilitiesExplanatory",
+     "fact_id": "f-479",
+     "offset": 10678,
+     "strong": true
+    }
+   ],
+   "snippet_path": "data/interim/es_snippets/AMS.txt",
+   "status": "ok",
+   "notes": "Located by text search inside XBRL text-block facts; pmp_pages holds concept/fact_id/char offset instead of page numbers (xBRL-JSON has no pages). Duplicate nested text blocks were de-duplicated."
+  },
+  {
+   "ticker": "ANA",
+   "company_name": "Acciona, S.A.",
+   "fiscal_year": 2025,
+   "fiscal_period_end": "2025-12-31",
+   "document_title": "Informe financiero anual consolidado 2025 (ESEF), xBRL-JSON rendering by filings.xbrl.org",
+   "document_type": "esef_xbrl_json",
+   "scope": "consolidated annual report (PMP table covers the Spanish entities of the group per ICAC Resolution art. 6.2; extractor must confirm wording in snippet)",
+   "language": "es",
+   "source_url": "https://filings.xbrl.org/54930002KP75TLLLNO21/2025-12-31/ESEF/ES/0/54930002KP75TLLLNO21-2025-12-31-1-es.json",
+   "landing_page_url": "https://filings.xbrl.org/entity/54930002KP75TLLLNO21",
+   "human_readable_report_url": "https://filings.xbrl.org/54930002KP75TLLLNO21/2025-12-31/ESEF/ES/0/54930002KP75TLLLNO21-2025-12-31-1-es/reports/54930002KP75TLLLNO21-2025-12-31-1-es.html",
+   "local_path": "data/raw/es/ANA/54930002KP75TLLLNO21-2025-12-31-1-es.json",
+   "sha256": "e1eec74a3aa2f6589c41017bc1de07b35865cf7b929818c862ea2427df9b7a9e",
+   "bytes": 11329357,
+   "retrieved_at": "2026-11-16T10:06:50Z",
+   "pmp_pages": [
+    {
+     "concept": "ifrs-full:DisclosureOfTradeAndOtherPayablesExplanatory",
+     "fact_id": "ID_511",
+     "offset": 0,
+     "strong": true
+    }
+   ],
+   "snippet_path": "data/interim/es_snippets/ANA.txt",
+   "status": "ok",
+   "notes": "Report file is .html (inline XBRL). Located by text search inside XBRL text-block facts; pmp_pages holds concept/fact_id/char offset instead of page numbers (xBRL-JSON has no pages). Duplicate nested text blocks were de-duplicated."
+  },
+  {
+   "ticker": "ANE",
+   "company_name": "Corporación Acciona Energías Renovables, S.A.",
+   "fiscal_year": 2025,
+   "fiscal_period_end": "2025-12-31",
+   "document_title": "Informe financiero anual consolidado 2025 (ESEF), xBRL-JSON rendering by filings.xbrl.org",
+   "document_type": "esef_xbrl_json",
+   "scope": "consolidated annual report (PMP table covers the Spanish entities of the group per ICAC Resolution art. 6.2; extractor must confirm wording in snippet)",
+   "language": "es",
+   "source_url": "https://filings.xbrl.org/254900UPX0OEHTKB9Y44/2025-12-31/ESEF/ES/0/254900UPX0OEHTKB9Y44-2025-12-31-1-es.json",
+   "landing_page_url": "https://filings.xbrl.org/entity/254900UPX0OEHTKB9Y44",
+   "human_readable_report_url": "https://filings.xbrl.org/254900UPX0OEHTKB9Y44/2025-12-31/ESEF/ES/0/254900UPX0OEHTKB9Y44-2025-12-31-1-es/reports/254900UPX0OEHTKB9Y44-2025-12-31-1-es.html",
+   "local_path": "data/raw/es/ANE/254900UPX0OEHTKB9Y44-2025-12-31-1-es.json",
+   "sha256": "9b4ddbef3f9ef1efc3c09f08dc034e9c764fd36d82b72dbd09d7e39936af1796",
+   "bytes": 8948139,
+   "retrieved_at": "2026-11-16T10:06:47Z",
+   "pmp_pages": [
+    {
+     "concept": "ifrs-full:DisclosureOfTradeAndOtherPayablesExplanatory",
+     "fact_id": "ID_567",
+     "offset": 0,
+     "strong": true
+    }
+   ],
+   "snippet_path": "data/interim/es_snippets/ANE.txt",
+   "status": "ok",
+   "notes": "Report file is .html (inline XBRL). Located by text search inside XBRL text-block facts; pmp_pages holds concept/fact_id/char offset instead of page numbers (xBRL-JSON has no pages). Duplicate nested text blocks were de-duplicated."
+  },
+  {
+   "ticker": "BBVA",
+   "company_name": "Banco Bilbao Vizcaya Argentaria, S.A.",
+   "fiscal_year": 2025,
+   "fiscal_period_end": "2025-12-31",
+   "document_title": "Periodo medio de pago a proveedores (investor relations web page)",
+   "document_type": "pmp_page",
+   "scope": "individual (parent company only, as stated on the page)",
+   "language": "es",
+   "source_url": "https://accionistaseinversores.bbva.com/informacion-financiera/periodo-medio-de-pago-a-proveedores/",
+   "landing_page_url": "https://accionistaseinversores.bbva.com/informacion-financiera/periodo-medio-de-pago-a-proveedores/",
+   "human_readable_report_url": "https://filings.xbrl.org/K8MS7FD7N5Z2WQ51AZ71/2025-12-31/ESEF/ES/0/K8MS7FD7N5Z2WQ51AZ71-2025-12-31-1-es/reports/K8MS7FD7N5Z2WQ51AZ71-2025-12-31-1-es.xhtml",
+   "local_path": "data/raw/es/BBVA/pmp_page.html",
+   "sha256": "4369ecbd16663a8da0747f247546dd3fa43eb1821329199637d349a2dc231215",
+   "bytes": 79040,
+   "retrieved_at": "2026-11-16T10:42:04Z",
+   "pmp_pages": [
+    {
+     "html_text_offset": 3260
+    }
+   ],
+   "snippet_path": "data/interim/es_snippets/BBVA.txt",
+   "status": "ok",
+   "notes": "ESEF xBRL-JSON (also downloaded: data/raw/es/BBVA/K8MS7FD7N5Z2WQ51AZ71-2025-12-31-1-es.json) contains no PMP text in tagged text blocks; full ESEF XHTML (https://filings.xbrl.org/K8MS7FD7N5Z2WQ51AZ71/2025-12-31/ESEF/ES/0/K8MS7FD7N5Z2WQ51AZ71-2025-12-31-1-es/reports/K8MS7FD7N5Z2WQ51AZ71-2025-12-31-1-es.xhtml) not downloaded (about 28 MB gzip at ~65 KB/s from filings.xbrl.org). Web page gives PMP only; ratios of paid/pending operations not on the page. Group-level note should be in the annual accounts XHTML/PDF."
+  },
+  {
+   "ticker": "BKT",
+   "company_name": "Bankinter, S.A.",
+   "fiscal_year": 2025,
+   "fiscal_period_end": "2025-12-31",
+   "document_title": "Informe financiero anual consolidado 2025 (ESEF), xBRL-JSON rendering by filings.xbrl.org",
+   "document_type": "esef_xbrl_json",
+   "scope": "consolidated annual report (PMP table covers the Spanish entities of the group per ICAC Resolution art. 6.2; extractor must confirm wording in snippet)",
+   "language": "es",
+   "source_url": "https://filings.xbrl.org/VWMYAEQSTOPNV0SUGU82/2025-12-31/ESEF/ES/0/VWMYAEQSTOPNV0SUGU82-2025-12-31-1-es.json",
+   "landing_page_url": "https://filings.xbrl.org/entity/VWMYAEQSTOPNV0SUGU82",
+   "human_readable_report_url": "https://filings.xbrl.org/VWMYAEQSTOPNV0SUGU82/2025-12-31/ESEF/ES/0/VWMYAEQSTOPNV0SUGU82-2025-12-31-1-es/reports/VWMYAEQSTOPNV0SUGU82-2025-12-31-1-es.xhtml",
+   "local_path": "data/raw/es/BKT/VWMYAEQSTOPNV0SUGU82-2025-12-31-1-es.json",
+   "sha256": "3c2bbb5dd8bb2db4983e039c201538f234e68a4ef374fb2a08cbcae72dadf965",
+   "bytes": 13964302,
+   "retrieved_at": "2026-11-16T10:14:58Z",
+   "pmp_pages": [
+    {
+     "concept": "ifrs-full:DisclosureOfTradeAndOtherPayablesExplanatory",
+     "fact_id": "f-1374",
+     "offset": 0,
+     "strong": true
+    }
+   ],
+   "snippet_path": "data/interim/es_snippets/BKT.txt",
+   "status": "ok",
+   "notes": "Financial entity: supplier payments are a small part of the business. Located by text search inside XBRL text-block facts; pmp_pages holds concept/fact_id/char offset instead of page numbers (xBRL-JSON has no pages). Duplicate nested text blocks were de-duplicated."
+  },
+  {
+   "ticker": "CABK",
+   "company_name": "CaixaBank, S.A.",
+   "fiscal_year": 2025,
+   "fiscal_period_end": "2025-12-31",
+   "document_title": "Informe financiero anual consolidado 2025 (ESEF), xBRL-JSON rendering by filings.xbrl.org",
+   "document_type": "esef_xbrl_json",
+   "scope": "consolidated annual report (PMP table covers the Spanish entities of the group per ICAC Resolution art. 6.2; extractor must confirm wording in snippet)",
+   "language": "es",
+   "source_url": "https://filings.xbrl.org/7CUNS533WID6K7DGFI87/2025-12-31/ESEF/ES/0/7CUNS533WID6K7DGFI87-2025-12-31-1-es.json",
+   "landing_page_url": "https://filings.xbrl.org/entity/7CUNS533WID6K7DGFI87",
+   "human_readable_report_url": "https://filings.xbrl.org/7CUNS533WID6K7DGFI87/2025-12-31/ESEF/ES/0/7CUNS533WID6K7DGFI87-2025-12-31-1-es/reports/7CUNS533WID6K7DGFI87-2025-12-31-1-es.xhtml",
+   "local_path": "data/raw/es/CABK/7CUNS533WID6K7DGFI87-2025-12-31-1-es.json",
+   "sha256": "3c990f761b3e5368a0248fb52b8d6681f92ada8834b6d1de03260eae9a13c3a6",
+   "bytes": 20594818,
+   "retrieved_at": "2026-11-16T10:07:38Z",
+   "pmp_pages": [
+    {
+     "concept": "ifrs-full:DisclosureOfExpensesByNatureExplanatory",
+     "fact_id": "f-1285",
+     "offset": 2565,
+     "strong": true
+    }
+   ],
+   "snippet_path": "data/interim/es_snippets/CABK.txt",
+   "status": "ok",
+   "notes": "Financial entity: supplier payments are a small part of the business. Located by text search inside XBRL text-block facts; pmp_pages holds concept/fact_id/char offset instead of page numbers (xBRL-JSON has no pages). Duplicate nested text blocks were de-duplicated."
+  },
+  {
+   "ticker": "CLNX",
+   "company_name": "Cellnex Telecom, S.A.",
+   "fiscal_year": 2025,
+   "fiscal_period_end": "2025-12-31",
+   "document_title": "Informe financiero anual consolidado 2025 (ESEF), xBRL-JSON rendering by filings.xbrl.org",
+   "document_type": "esef_xbrl_json",
+   "scope": "consolidated annual report (PMP table covers the Spanish entities of the group per ICAC Resolution art. 6.2; extractor must confirm wording in snippet)",
+   "language": "es",
+   "source_url": "https://filings.xbrl.org/5493008T4YG3AQUI7P67/2025-12-31/ESEF/ES/0/5493008T4YG3AQUI7P67-2025-12-31-1-es.json",
+   "landing_page_url": "https://filings.xbrl.org/entity/5493008T4YG3AQUI7P67",
+   "human_readable_report_url": "https://filings.xbrl.org/5493008T4YG3AQUI7P67/2025-12-31/ESEF/ES/0/5493008T4YG3AQUI7P67-2025-12-31-1-es/reports/5493008T4YG3AQUI7P67-2025-12-31-1-es.xhtml",
+   "local_path": "data/raw/es/CLNX/5493008T4YG3AQUI7P67-2025-12-31-1-es.json",
+   "sha256": "e80847b6b84e93ecb7e5fb3d4d1ddd2425c961b3635da46bbc7378b1c7dba698",
+   "bytes": 6537847,
+   "retrieved_at": "2026-11-16T10:06:53Z",
+   "pmp_pages": [
+    {
+     "concept": "ifrs-full:DisclosureOfTradeAndOtherPayablesExplanatory",
+     "fact_id": "f-523",
+     "offset": 0,
+     "strong": true
+    }
+   ],
+   "snippet_path": "data/interim/es_snippets/CLNX.txt",
+   "status": "ok",
+   "notes": "Located by text search inside XBRL text-block facts; pmp_pages holds concept/fact_id/char offset instead of page numbers (xBRL-JSON has no pages). Duplicate nested text blocks were de-duplicated."
+  },
+  {
+   "ticker": "COL",
+   "company_name": "Colonial SFL, SOCIMI, S.A. (formerly Inmobiliaria Colonial)",
+   "fiscal_year": 2025,
+   "fiscal_period_end": "2025-12-31",
+   "document_title": "Informe financiero anual consolidado 2025 (ESEF), xBRL-JSON rendering by filings.xbrl.org",
+   "document_type": "esef_xbrl_json",
+   "scope": "consolidated annual report (PMP table covers the Spanish entities of the group per ICAC Resolution art. 6.2; extractor must confirm wording in snippet)",
+   "language": "es",
+   "source_url": "https://filings.xbrl.org/95980020140005007414/2025-12-31/ESEF/ES/0/95980020140005007414-2025-12-31-1-es.json",
+   "landing_page_url": "https://filings.xbrl.org/entity/95980020140005007414",
+   "human_readable_report_url": "https://filings.xbrl.org/95980020140005007414/2025-12-31/ESEF/ES/0/95980020140005007414-2025-12-31-1-es/reports/95980020140005007414-2025-12-31-1-es.xhtml",
+   "local_path": "data/raw/es/COL/95980020140005007414-2025-12-31-1-es.json",
+   "sha256": "7830b8b3ee0e9c6f04d74fe136e9afaa999df6149be3cc7e015480b67acad421",
+   "bytes": 5083119,
+   "retrieved_at": "2026-11-16T10:07:36Z",
+   "pmp_pages": [
+    {
+     "concept": "ifrs-full:DisclosureOfOtherCurrentLiabilitiesExplanatory",
+     "fact_id": "f-473",
+     "offset": 630,
+     "strong": true
+    }
+   ],
+   "snippet_path": "data/interim/es_snippets/COL.txt",
+   "status": "ok",
+   "notes": "Located by text search inside XBRL text-block facts; pmp_pages holds concept/fact_id/char offset instead of page numbers (xBRL-JSON has no pages). Duplicate nested text blocks were de-duplicated."
+  },
+  {
+   "ticker": "ELE",
+   "company_name": "Endesa, S.A.",
+   "fiscal_year": 2025,
+   "fiscal_period_end": "2025-12-31",
+   "document_title": "Informe financiero anual consolidado 2025 (ESEF), xBRL-JSON rendering by filings.xbrl.org",
+   "document_type": "esef_xbrl_json",
+   "scope": "consolidated annual report (PMP table covers the Spanish entities of the group per ICAC Resolution art. 6.2; extractor must confirm wording in snippet)",
+   "language": "es",
+   "source_url": "https://filings.xbrl.org/549300LHK07F2CHV4X31/2025-12-31/ESEF/ES/0/549300LHK07F2CHV4X31-2025-12-31-1-es.json",
+   "landing_page_url": "https://filings.xbrl.org/entity/549300LHK07F2CHV4X31",
+   "human_readable_report_url": "https://filings.xbrl.org/549300LHK07F2CHV4X31/2025-12-31/ESEF/ES/0/549300LHK07F2CHV4X31-2025-12-31-1-es/reports/549300LHK07F2CHV4X31-2025-12-31-1-es.xhtml",
+   "local_path": "data/raw/es/ELE/549300LHK07F2CHV4X31-2025-12-31-1-es.json",
+   "sha256": "eaee5b6a540ecc93df474f541bf0ee64aa0f87964f9462d40ac99e2acc770125",
+   "bytes": 36862402,
+   "retrieved_at": "2026-11-16T10:07:59Z",
+   "pmp_pages": [
+    {
+     "concept": "ifrs-full:DisclosureOfOtherLiabilitiesExplanatory",
+     "fact_id": "Tag1090",
+     "offset": 2416,
+     "strong": true
+    }
+   ],
+   "snippet_path": "data/interim/es_snippets/ELE.txt",
+   "status": "ok",
+   "notes": "Text has letter-spacing artefacts (words and numbers split by spaces); read numbers carefully or check against the XHTML / endesa.com PMP page. Located by text search inside XBRL text-block facts; pmp_pages holds concept/fact_id/char offset instead of page numbers (xBRL-JSON has no pages). Duplicate nested text blocks were de-duplicated."
+  },
+  {
+   "ticker": "ENG",
+   "company_name": "Enagás, S.A.",
+   "fiscal_year": 2025,
+   "fiscal_period_end": "2025-12-31",
+   "document_title": "Informe financiero anual consolidado 2025 (ESEF), xBRL-JSON rendering by filings.xbrl.org",
+   "document_type": "esef_xbrl_json",
+   "scope": "consolidated annual report (PMP table covers the Spanish entities of the group per ICAC Resolution art. 6.2; extractor must confirm wording in snippet)",
+   "language": "es",
+   "source_url": "https://filings.xbrl.org/213800OU3FQKGM4M2U23/2025-12-31/ESEF/ES/0/213800OU3FQKGM4M2U23-2025-12-31-1-es.json",
+   "landing_page_url": "https://filings.xbrl.org/entity/213800OU3FQKGM4M2U23",
+   "human_readable_report_url": "https://filings.xbrl.org/213800OU3FQKGM4M2U23/2025-12-31/ESEF/ES/0/213800OU3FQKGM4M2U23-2025-12-31-1-es/reports/213800OU3FQKGM4M2U23-2025-12-31-1-es.xhtml",
+   "local_path": "data/raw/es/ENG/213800OU3FQKGM4M2U23-2025-12-31-1-es.json",
+   "sha256": "2deaf1c4e6524efa36d921b774d3b6d73f902d1a6e0450cf3639902e27d401c9",
+   "bytes": 7974723,
+   "retrieved_at": "2026-11-16T10:06:44Z",
+   "pmp_pages": [
+    {
+     "concept": "ena:DisclosureOfOperationalPerformance",
+     "fact_id": "f-516",
+     "offset": 20857,
+     "strong": true
+    }
+   ],
+   "snippet_path": "data/interim/es_snippets/ENG.txt",
+   "status": "ok",
+   "notes": "Located by text search inside XBRL text-block facts; pmp_pages holds concept/fact_id/char offset instead of page numbers (xBRL-JSON has no pages). Duplicate nested text blocks were de-duplicated."
+  },
+  {
+   "ticker": "FDR",
+   "company_name": "Fluidra, S.A.",
+   "fiscal_year": 2025,
+   "fiscal_period_end": "2025-12-31",
+   "document_title": "Informe financiero anual consolidado 2025 (ESEF), xBRL-JSON rendering by filings.xbrl.org",
+   "document_type": "esef_xbrl_json",
+   "scope": "consolidated annual report (PMP table covers the Spanish entities of the group per ICAC Resolution art. 6.2; extractor must confirm wording in snippet)",
+   "language": "es",
+   "source_url": "https://filings.xbrl.org/95980020140005026620/2025-12-31/ESEF/ES/0/95980020140005026620-2025-12-31-1-es.json",
+   "landing_page_url": "https://filings.xbrl.org/entity/95980020140005026620",
+   "human_readable_report_url": "https://filings.xbrl.org/95980020140005026620/2025-12-31/ESEF/ES/0/95980020140005026620-2025-12-31-1-es/reports/95980020140005026620-2025-12-31-1-es.xhtml",
+   "local_path": "data/raw/es/FDR/95980020140005026620-2025-12-31-1-es.json",
+   "sha256": "51a90a309d9ed6fecd9b36e5c9f21a2c79b554ed423a0d0f02df67d64e293006",
+   "bytes": 3641405,
+   "retrieved_at": "2026-11-16T10:07:39Z",
+   "pmp_pages": [
+    {
+     "concept": "ifrs-full:DisclosureOfAdditionalInformationExplanatory",
+     "fact_id": "f-574",
+     "offset": 0,
+     "strong": true
+    }
+   ],
+   "snippet_path": "data/interim/es_snippets/FDR.txt",
+   "status": "ok",
+   "notes": "Located by text search inside XBRL text-block facts; pmp_pages holds concept/fact_id/char offset instead of page numbers (xBRL-JSON has no pages). Duplicate nested text blocks were de-duplicated."
+  },
+  {
+   "ticker": "FER",
+   "company_name": "Ferrovial SE",
+   "fiscal_year": 2025,
+   "fiscal_period_end": "2025-12-31",
+   "document_title": "Ferrovial SE annual report 2025 (ESEF, filed in NL), xBRL-JSON",
+   "document_type": "esef_xbrl_json",
+   "scope": "consolidated",
+   "language": "en",
+   "source_url": "https://filings.xbrl.org/72450022R2ZFL41Y6I04/2025-12-31/ESEF/NL/0/fer-2025-12-31-1-en.json",
+   "landing_page_url": "https://filings.xbrl.org/entity/72450022R2ZFL41Y6I04",
+   "human_readable_report_url": "https://filings.xbrl.org/72450022R2ZFL41Y6I04/2025-12-31/ESEF/NL/0/fer-2025-12-31-1-en/reports/fer-2025-12-31-1-en.xhtml",
+   "local_path": "data/raw/es/FER/fer-2025-12-31-1-en.json",
+   "sha256": "804f12e7ecfd664c72d76387bf10525588fcb6772c11caa2072e185e61727930",
+   "bytes": 8674630,
+   "retrieved_at": "2026-11-16T10:23:33Z",
+   "pmp_pages": [],
+   "snippet_path": null,
+   "status": "not_found",
+   "notes": "Ferrovial SE is a Dutch SE since 2023 (ISIN NL0015001FS8), files ESEF in the Netherlands. No PMP / Ley 15/2010 text found in the tagged text blocks of the FY2025 filing (searched: average payment period, payment period to suppliers, 15/2010, medio de pago, paid transactions). Company PDF host static-iai.ferrovial.com returned 403 on robots.txt for our client, so no PDF was downloaded (not bypassed). Ley 15/2010 DA 3a applies to Spanish sociedades mercantiles: Ferrovial's Spanish subsidiaries disclose individually, the Dutch parent's group accounts apparently do not."
+  },
+  {
+   "ticker": "GRF",
+   "company_name": "Grifols, S.A.",
+   "fiscal_year": 2025,
+   "fiscal_period_end": "2025-12-31",
+   "document_title": "Informe financiero anual consolidado 2025 (ESEF), xBRL-JSON rendering by filings.xbrl.org",
+   "document_type": "esef_xbrl_json",
+   "scope": "consolidated annual report (PMP table covers the Spanish entities of the group per ICAC Resolution art. 6.2; extractor must confirm wording in snippet)",
+   "language": "es",
+   "source_url": "https://filings.xbrl.org/959800HSSNXWRKBK4N60/2025-12-31/ESEF/ES/0/959800HSSNXWRKBK4N60-2025-12-31-1-es.json",
+   "landing_page_url": "https://filings.xbrl.org/entity/959800HSSNXWRKBK4N60",
+   "human_readable_report_url": "https://filings.xbrl.org/959800HSSNXWRKBK4N60/2025-12-31/ESEF/ES/0/959800HSSNXWRKBK4N60-2025-12-31-1-es/reports/959800HSSNXWRKBK4N60-2025-12-31-1-es.xhtml",
+   "local_path": "data/raw/es/GRF/959800HSSNXWRKBK4N60-2025-12-31-1-es.json",
+   "sha256": "0b14c8d2453c4655e25d91eb2e536f1269acec4daf346582207e2d57c89a8592",
+   "bytes": 9704531,
+   "retrieved_at": "2026-11-16T10:09:03Z",
+   "pmp_pages": [
+    {
+     "concept": "ifrs-full:DisclosureOfFinancialInstrumentsExplanatory",
+     "fact_id": "f-1186",
+     "offset": 28293,
+     "strong": true
+    },
+    {
+     "concept": "ifrs-full:DisclosureOfTradeAndOtherPayablesExplanatory",
+     "fact_id": "f-1185",
+     "offset": 5485,
+     "strong": true
+    }
+   ],
+   "snippet_path": "data/interim/es_snippets/GRF.txt",
+   "status": "ok",
+   "notes": "Located by text search inside XBRL text-block facts; pmp_pages holds concept/fact_id/char offset instead of page numbers (xBRL-JSON has no pages). Duplicate nested text blocks were de-duplicated."
+  },
+  {
+   "ticker": "IAG",
+   "company_name": "International Consolidated Airlines Group, S.A.",
+   "fiscal_year": 2025,
+   "fiscal_period_end": "2025-12-31",
+   "document_title": "Informe financiero anual consolidado 2025 (ESEF), xBRL-JSON rendering by filings.xbrl.org",
+   "document_type": "esef_xbrl_json",
+   "scope": "consolidated annual report (PMP table covers the Spanish entities of the group per ICAC Resolution art. 6.2; extractor must confirm wording in snippet)",
+   "language": "es",
+   "source_url": "https://filings.xbrl.org/959800TZHQRUSH1ESL13/2025-12-31/ESEF/ES/0/959800TZHQRUSH1ESL13-2025-12-31-1-es.json",
+   "landing_page_url": "https://filings.xbrl.org/entity/959800TZHQRUSH1ESL13",
+   "human_readable_report_url": "https://filings.xbrl.org/959800TZHQRUSH1ESL13/2025-12-31/ESEF/ES/0/959800TZHQRUSH1ESL13-2025-12-31-1-es/reports/959800TZHQRUSH1ESL13-2025-12-31-1-es.xhtml",
+   "local_path": "data/raw/es/IAG/959800TZHQRUSH1ESL13-2025-12-31-1-es.json",
+   "sha256": "ea594c5e87eace566d02c81a3f7eb11156696067a471dc36bdf328d045901e0e",
+   "bytes": 6390829,
+   "retrieved_at": "2026-11-16T10:14:08Z",
+   "pmp_pages": [
+    {
+     "concept": "ifrs-full:DisclosureOfFinancialInstrumentsExplanatory",
+     "fact_id": "f-767",
+     "offset": 4511,
+     "strong": true
+    },
+    {
+     "concept": "ifrs-full:DisclosureOfTradeAndOtherPayablesExplanatory",
+     "fact_id": "f-772",
+     "offset": 0,
+     "strong": true
+    }
+   ],
+   "snippet_path": "data/interim/es_snippets/IAG.txt",
+   "status": "ok",
+   "notes": "Located by text search inside XBRL text-block facts; pmp_pages holds concept/fact_id/char offset instead of page numbers (xBRL-JSON has no pages). Duplicate nested text blocks were de-duplicated."
+  },
+  {
+   "ticker": "IBE",
+   "company_name": "Iberdrola, S.A.",
+   "fiscal_year": 2025,
+   "fiscal_period_end": "2025-12-31",
+   "document_title": "Informe financiero anual consolidado 2025 (ESEF), xBRL-JSON rendering by filings.xbrl.org",
+   "document_type": "esef_xbrl_json",
+   "scope": "consolidated annual report (PMP table covers the Spanish entities of the group per ICAC Resolution art. 6.2; extractor must confirm wording in snippet)",
+   "language": "es",
+   "source_url": "https://filings.xbrl.org/5QK37QC7NWOJ8D7WVQ45/2025-12-31/ESEF/ES/0/5QK37QC7NWOJ8D7WVQ45-2025-12-31-1-es.json",
+   "landing_page_url": "https://filings.xbrl.org/entity/5QK37QC7NWOJ8D7WVQ45",
+   "human_readable_report_url": "https://filings.xbrl.org/5QK37QC7NWOJ8D7WVQ45/2025-12-31/ESEF/ES/0/5QK37QC7NWOJ8D7WVQ45-2025-12-31-1-es/reports/5QK37QC7NWOJ8D7WVQ45-2025-12-31-1-es.xhtml",
+   "local_path": "data/raw/es/IBE/5QK37QC7NWOJ8D7WVQ45-2025-12-31-1-es.json",
+   "sha256": "d03b977b5cf44ff92c784bb4f4469b2842e92bb6764dd04e5d1837853a3a3900",
+   "bytes": 20867083,
+   "retrieved_at": "2026-11-16T10:07:27Z",
+   "pmp_pages": [
+    {
+     "concept": "ifrs-full:DisclosureOfAdditionalInformationExplanatory",
+     "fact_id": "f-775",
+     "offset": 16291,
+     "strong": true
+    }
+   ],
+   "snippet_path": "data/interim/es_snippets/IBE.txt",
+   "status": "ok",
+   "notes": "Located by text search inside XBRL text-block facts; pmp_pages holds concept/fact_id/char offset instead of page numbers (xBRL-JSON has no pages). Duplicate nested text blocks were de-duplicated."
+  },
+  {
+   "ticker": "IDR",
+   "company_name": "Indra Sistemas, S.A.",
+   "fiscal_year": 2025,
+   "fiscal_period_end": "2025-12-31",
+   "document_title": "Informe financiero anual consolidado 2025 (ESEF), xBRL-JSON rendering by filings.xbrl.org",
+   "document_type": "esef_xbrl_json",
+   "scope": "consolidated annual report (PMP table covers the Spanish entities of the group per ICAC Resolution art. 6.2; extractor must confirm wording in snippet)",
+   "language": "es",
+   "source_url": "https://filings.xbrl.org/95980020140005308793/2025-12-31/ESEF/ES/0/95980020140005308793-2025-12-31-1-es.json",
+   "landing_page_url": "https://filings.xbrl.org/entity/95980020140005308793",
+   "human_readable_report_url": "https://filings.xbrl.org/95980020140005308793/2025-12-31/ESEF/ES/0/95980020140005308793-2025-12-31-1-es/reports/95980020140005308793-2025-12-31-1-es.xhtml",
+   "local_path": "data/raw/es/IDR/95980020140005308793-2025-12-31-1-es.json",
+   "sha256": "23e2c25e3fccce570477443e8ccf7f4dd85520157fdc1a77eab4e734a14285c5",
+   "bytes": 6523855,
+   "retrieved_at": "2026-11-16T10:07:49Z",
+   "pmp_pages": [
+    {
+     "concept": "ifrs-full:DisclosureOfTradeAndOtherPayablesExplanatory",
+     "fact_id": "f-570",
+     "offset": 976,
+     "strong": true
+    }
+   ],
+   "snippet_path": "data/interim/es_snippets/IDR.txt",
+   "status": "ok",
+   "notes": "Located by text search inside XBRL text-block facts; pmp_pages holds concept/fact_id/char offset instead of page numbers (xBRL-JSON has no pages). Duplicate nested text blocks were de-duplicated."
+  },
+  {
+   "ticker": "ITX",
+   "company_name": "Industria de Diseño Textil, S.A. (Inditex)",
+   "fiscal_year": 2025,
+   "fiscal_period_end": "2026-01-31",
+   "document_title": "Informe financiero anual consolidado 2025 (ESEF), xBRL-JSON rendering by filings.xbrl.org",
+   "document_type": "esef_xbrl_json",
+   "scope": "consolidated annual report (PMP table covers the Spanish entities of the group per ICAC Resolution art. 6.2; extractor must confirm wording in snippet)",
+   "language": "es",
+   "source_url": "https://filings.xbrl.org/549300TTCXZOGZM2EY83/2026-01-31/ESEF/ES/0/549300TTCXZOGZM2EY83-2026-01-31-1-es.json",
+   "landing_page_url": "https://filings.xbrl.org/entity/549300TTCXZOGZM2EY83",
+   "human_readable_report_url": "https://filings.xbrl.org/549300TTCXZOGZM2EY83/2026-01-31/ESEF/ES/0/549300TTCXZOGZM2EY83-2026-01-31-1-es/reports/549300TTCXZOGZM2EY83-2026-01-31-1-es.xhtml",
+   "local_path": "data/raw/es/ITX/549300TTCXZOGZM2EY83-2026-01-31-1-es.json",
+   "sha256": "00e10cbac83a2994d791838f6d93dd601f55df6c37021f3286338d4b1ab00f5e",
+   "bytes": 3926378,
+   "retrieved_at": "2026-11-16T10:03:44Z",
+   "pmp_pages": [
+    {
+     "concept": "ifrs-full:DisclosureOfTradeAndOtherPayablesExplanatory",
+     "fact_id": "f-609",
+     "offset": 0,
+     "strong": true
+    }
+   ],
+   "snippet_path": "data/interim/es_snippets/ITX.txt",
+   "status": "ok",
+   "notes": "Fiscal year 2025 runs 1 Feb 2025 to 31 Jan 2026. Located by text search inside XBRL text-block facts; pmp_pages holds concept/fact_id/char offset instead of page numbers (xBRL-JSON has no pages). Duplicate nested text blocks were de-duplicated."
+  },
+  {
+   "ticker": "LOG",
+   "company_name": "Logista Integral, S.A.",
+   "fiscal_year": 2025,
+   "fiscal_period_end": "2025-09-30",
+   "document_title": "Informe financiero anual consolidado 2025 (ESEF), xBRL-JSON rendering by filings.xbrl.org",
+   "document_type": "esef_xbrl_json",
+   "scope": "consolidated annual report (PMP table covers the Spanish entities of the group per ICAC Resolution art. 6.2; extractor must confirm wording in snippet)",
+   "language": "es",
+   "source_url": "https://filings.xbrl.org/9598000ANNAL42UJ7X28/2025-09-30/ESEF/ES/0/9598000ANNAL42UJ7X28-20250930-es.json",
+   "landing_page_url": "https://filings.xbrl.org/entity/9598000ANNAL42UJ7X28",
+   "human_readable_report_url": "https://filings.xbrl.org/9598000ANNAL42UJ7X28/2025-09-30/ESEF/ES/0/9598000ANNAL42UJ7X28-20250930-es/reports/9598000ANNAL42UJ7X28-20250930-es.xhtml",
+   "local_path": "data/raw/es/LOG/9598000ANNAL42UJ7X28-20250930-es.json",
+   "sha256": "a302e283abf9c7a44fa47d9a2016dec6a627a9b3215c5eb4b2554fe1f8e004ab",
+   "bytes": 4028106,
+   "retrieved_at": "2026-11-16T10:07:33Z",
+   "pmp_pages": [
+    {
+     "concept": "log:InformacionSobreLosAplazamientosDePagoEfectuadosAProveedoresTextBlock",
+     "fact_id": "f-712",
+     "offset": 0,
+     "strong": true
+    },
+    {
+     "concept": "ifrs-full:DisclosureOfTradeAndOtherPayablesExplanatory",
+     "fact_id": "f-696",
+     "offset": 0,
+     "strong": false
+    }
+   ],
+   "snippet_path": "data/interim/es_snippets/LOG.txt",
+   "status": "ok",
+   "notes": "Fiscal year ends 30 September (FY2025 = Oct 2024 to Sep 2025). Located by text search inside XBRL text-block facts; pmp_pages holds concept/fact_id/char offset instead of page numbers (xBRL-JSON has no pages). Duplicate nested text blocks were de-duplicated."
+  },
+  {
+   "ticker": "MAP",
+   "company_name": "Mapfre, S.A.",
+   "fiscal_year": 2025,
+   "fiscal_period_end": "2025-12-31",
+   "document_title": "Informe financiero anual consolidado 2025 (ESEF), xBRL-JSON rendering by filings.xbrl.org",
+   "document_type": "esef_xbrl_json",
+   "scope": "consolidated annual report (PMP table covers the Spanish entities of the group per ICAC Resolution art. 6.2; extractor must confirm wording in snippet)",
+   "language": "es",
+   "source_url": "https://filings.xbrl.org/95980020140005693107/2025-12-31/ESEF/ES/0/95980020140005693107-2025-12-31-1-es.json",
+   "landing_page_url": "https://filings.xbrl.org/entity/95980020140005693107",
+   "human_readable_report_url": "https://filings.xbrl.org/95980020140005693107/2025-12-31/ESEF/ES/0/95980020140005693107-2025-12-31-1-es/reports/95980020140005693107-2025-12-31-1-es.xhtml",
+   "local_path": "data/raw/es/MAP/95980020140005693107-2025-12-31-1-es.json",
+   "sha256": "6a5642196f8154e59f1b4189b2138b88572a3fde5c7847066d6937c7b12895f2",
+   "bytes": 21022490,
+   "retrieved_at": "2026-11-16T10:08:21Z",
+   "pmp_pages": [
+    {
+     "concept": "ifrs-full:DisclosureOfAdditionalInformationExplanatory",
+     "fact_id": "f-806",
+     "offset": 580,
+     "strong": true
+    },
+    {
+     "concept": "ifrs-full:DisclosureOfTradeAndOtherPayablesExplanatory",
+     "fact_id": "f-842",
+     "offset": 3683,
+     "strong": true
+    }
+   ],
+   "snippet_path": "data/interim/es_snippets/MAP.txt",
+   "status": "ok",
+   "notes": "Financial entity: supplier payments are a small part of the business. Located by text search inside XBRL text-block facts; pmp_pages holds concept/fact_id/char offset instead of page numbers (xBRL-JSON has no pages). Duplicate nested text blocks were de-duplicated."
+  },
+  {
+   "ticker": "MRL",
+   "company_name": "Merlin Properties SOCIMI, S.A.",
+   "fiscal_year": 2025,
+   "fiscal_period_end": "2025-12-31",
+   "document_title": "Informe financiero anual consolidado 2025 (ESEF), xBRL-JSON rendering by filings.xbrl.org",
+   "document_type": "esef_xbrl_json",
+   "scope": "consolidated annual report (PMP table covers the Spanish entities of the group per ICAC Resolution art. 6.2; extractor must confirm wording in snippet)",
+   "language": "es",
+   "source_url": "https://filings.xbrl.org/959800L8KD863DP30X04/2025-12-31/ESEF/ES/0/959800L8KD863DP30X04-2025-12-31-es.json",
+   "landing_page_url": "https://filings.xbrl.org/entity/959800L8KD863DP30X04",
+   "human_readable_report_url": "https://filings.xbrl.org/959800L8KD863DP30X04/2025-12-31/ESEF/ES/0/959800L8KD863DP30X04-2025-12-31-es/reports/959800L8KD863DP30X04-2025-12-31-es.xhtml",
+   "local_path": "data/raw/es/MRL/959800L8KD863DP30X04-2025-12-31-es.json",
+   "sha256": "0f907caf95ba7c294c34530d9d60cabaf6a16a7ed5f6cd1c1489c4345573bde9",
+   "bytes": 7181985,
+   "retrieved_at": "2026-11-16T10:40:31Z",
+   "pmp_pages": [
+    {
+     "concept": "ifrs-full:DisclosureOfFinancialInstrumentsExplanatory",
+     "fact_id": "f-518",
+     "offset": 39211,
+     "strong": true
+    },
+    {
+     "concept": "ifrs-full:DisclosureOfTradeAndOtherPayablesExplanatory",
+     "fact_id": "f-570",
+     "offset": 0,
+     "strong": true
+    }
+   ],
+   "snippet_path": "data/interim/es_snippets/MRL.txt",
+   "status": "ok",
+   "notes": "Located by text search inside XBRL text-block facts; pmp_pages holds concept/fact_id/char offset instead of page numbers (xBRL-JSON has no pages). Duplicate nested text blocks were de-duplicated."
+  },
+  {
+   "ticker": "MTS",
+   "company_name": "ArcelorMittal S.A.",
+   "fiscal_year": 2024,
+   "fiscal_period_end": "2024-12-31",
+   "document_title": "ArcelorMittal annual report 2024 (ESEF, filed in LU), xBRL-JSON",
+   "document_type": "esef_xbrl_json",
+   "scope": "consolidated",
+   "language": "en",
+   "source_url": "https://filings.xbrl.org/2EULGUTUI56JI9SAL165/2024-12-31/ESEF/LU/0/mt-2024-12-31-en.json",
+   "landing_page_url": "https://filings.xbrl.org/entity/2EULGUTUI56JI9SAL165",
+   "human_readable_report_url": "https://filings.xbrl.org/2EULGUTUI56JI9SAL165/2024-12-31/ESEF/LU/0/mt-2024-12-31-en/reports/mt-2024-12-31-en.xhtml",
+   "local_path": "data/raw/es/MTS/mt-2024-12-31-en.json",
+   "sha256": "7109661a89b4b00a3b42339690895d9ff4e083ff6dd034746a8a02b8c9008529",
+   "bytes": 17514690,
+   "retrieved_at": "2026-11-16T10:41:53Z",
+   "pmp_pages": [],
+   "snippet_path": null,
+   "status": "not_found",
+   "notes": "ArcelorMittal S.A. is a Luxembourg company (ISIN LU1598757687); Ley 15/2010 DA 3a does not apply to the group parent. Latest filing on filings.xbrl.org is FY2024 (no FY2025 there on 2026-11-16); no PMP / payment period text found in it. Spanish subsidiaries would disclose in their own individual accounts (Registro Mercantil), not sourced."
+  },
+  {
+   "ticker": "NTGY",
+   "company_name": "Naturgy Energy Group, S.A.",
+   "fiscal_year": 2025,
+   "fiscal_period_end": "2025-12-31",
+   "document_title": "Informe financiero anual consolidado 2025 (ESEF), xBRL-JSON rendering by filings.xbrl.org",
+   "document_type": "esef_xbrl_json",
+   "scope": "consolidated annual report (PMP table covers the Spanish entities of the group per ICAC Resolution art. 6.2; extractor must confirm wording in snippet)",
+   "language": "es",
+   "source_url": "https://filings.xbrl.org/TL2N6M87CW970S5SV098/2025-12-31/ESEF/ES/0/TL2N6M87CW970S5SV098-2025-12-31-es.json",
+   "landing_page_url": "https://filings.xbrl.org/entity/TL2N6M87CW970S5SV098",
+   "human_readable_report_url": "https://filings.xbrl.org/TL2N6M87CW970S5SV098/2025-12-31/ESEF/ES/0/TL2N6M87CW970S5SV098-2025-12-31-es/reports/TL2N6M87CW970S5SV098-2025-12-31-es.xhtml",
+   "local_path": "data/raw/es/NTGY/TL2N6M87CW970S5SV098-2025-12-31-es.json",
+   "sha256": "c1a0cbe7000843300f1c62b722150aa770f9827d47d80ee2acd5d11c4b0a298e",
+   "bytes": 10636771,
+   "retrieved_at": "2026-11-16T10:14:39Z",
+   "pmp_pages": [
+    {
+     "concept": "ifrs-full:DisclosureOfTradeAndOtherPayablesExplanatory",
+     "fact_id": "f-632",
+     "offset": 84,
+     "strong": true
+    }
+   ],
+   "snippet_path": "data/interim/es_snippets/NTGY.txt",
+   "status": "ok",
+   "notes": "Located by text search inside XBRL text-block facts; pmp_pages holds concept/fact_id/char offset instead of page numbers (xBRL-JSON has no pages). Duplicate nested text blocks were de-duplicated."
+  },
+  {
+   "ticker": "PUIG",
+   "company_name": "Puig Brands, S.A.",
+   "fiscal_year": 2025,
+   "fiscal_period_end": "2025-12-31",
+   "document_title": "Informe financiero anual consolidado 2025 (ESEF), xBRL-JSON rendering by filings.xbrl.org",
+   "document_type": "esef_xbrl_json",
+   "scope": "consolidated annual report (PMP table covers the Spanish entities of the group per ICAC Resolution art. 6.2; extractor must confirm wording in snippet)",
+   "language": "es",
+   "source_url": "https://filings.xbrl.org/549300OVHNSX30L1AQ94/2025-12-31/ESEF/ES/0/549300OVHNSX30L1AQ94-2025-12-31-es.json",
+   "landing_page_url": "https://filings.xbrl.org/entity/549300OVHNSX30L1AQ94",
+   "human_readable_report_url": "https://filings.xbrl.org/549300OVHNSX30L1AQ94/2025-12-31/ESEF/ES/0/549300OVHNSX30L1AQ94-2025-12-31-es/reports/549300OVHNSX30L1AQ94-2025-12-31-es.xhtml",
+   "local_path": "data/raw/es/PUIG/549300OVHNSX30L1AQ94-2025-12-31-es.json",
+   "sha256": "9c947eb7b5a7a8aaf3dc3f4654df0a4e3de3ad5d4e3ceb0135a068619d45b594",
+   "bytes": 4813519,
+   "retrieved_at": "2026-11-16T10:07:15Z",
+   "pmp_pages": [
+    {
+     "concept": "ifrs-full:DisclosureOfAdditionalInformationExplanatory",
+     "fact_id": "f-442",
+     "offset": 0,
+     "strong": true
+    }
+   ],
+   "snippet_path": "data/interim/es_snippets/PUIG.txt",
+   "status": "ok",
+   "notes": "Located by text search inside XBRL text-block facts; pmp_pages holds concept/fact_id/char offset instead of page numbers (xBRL-JSON has no pages). Duplicate nested text blocks were de-duplicated."
+  },
+  {
+   "ticker": "RED",
+   "company_name": "Redeia Corporación, S.A.",
+   "fiscal_year": 2025,
+   "fiscal_period_end": "2025-12-31",
+   "document_title": "Informe financiero anual consolidado 2025 (ESEF), xBRL-JSON rendering by filings.xbrl.org",
+   "document_type": "esef_xbrl_json",
+   "scope": "consolidated annual report (PMP table covers the Spanish entities of the group per ICAC Resolution art. 6.2; extractor must confirm wording in snippet)",
+   "language": "es",
+   "source_url": "https://filings.xbrl.org/5493009HMD0C90GUV498/2025-12-31/ESEF/ES/0/5493009HMD0C90GUV498-2025-12-31-1-es.json",
+   "landing_page_url": "https://filings.xbrl.org/entity/5493009HMD0C90GUV498",
+   "human_readable_report_url": "https://filings.xbrl.org/5493009HMD0C90GUV498/2025-12-31/ESEF/ES/0/5493009HMD0C90GUV498-2025-12-31-1-es/reports/5493009HMD0C90GUV498-2025-12-31-1-es.xhtml",
+   "local_path": "data/raw/es/RED/5493009HMD0C90GUV498-2025-12-31-1-es.json",
+   "sha256": "706bd8dab0b55a77fdcfbc5709a8fcb6b36667beb40ba456ffd818bba03a8da8",
+   "bytes": 11047431,
+   "retrieved_at": "2026-11-16T10:06:56Z",
+   "pmp_pages": [
+    {
+     "concept": "redeia:RevelacionSobreElPeriodoMedioDePagoAProveedoresExplanatory",
+     "fact_id": "f-674",
+     "offset": 0,
+     "strong": true
+    }
+   ],
+   "snippet_path": "data/interim/es_snippets/RED.txt",
+   "status": "ok",
+   "notes": "Located by text search inside XBRL text-block facts; pmp_pages holds concept/fact_id/char offset instead of page numbers (xBRL-JSON has no pages). Duplicate nested text blocks were de-duplicated."
+  },
+  {
+   "ticker": "REP",
+   "company_name": "Repsol, S.A.",
+   "fiscal_year": 2025,
+   "fiscal_period_end": "2025-12-31",
+   "document_title": "Informe financiero anual consolidado 2025 (ESEF), xBRL-JSON rendering by filings.xbrl.org",
+   "document_type": "esef_xbrl_json",
+   "scope": "consolidated annual report (PMP table covers the Spanish entities of the group per ICAC Resolution art. 6.2; extractor must confirm wording in snippet)",
+   "language": "es",
+   "source_url": "https://filings.xbrl.org/BSYCX13Y0NOTV14V9N85/2025-12-31/ESEF/ES/0/BSYCX13Y0NOTV14V9N85-2025-12-31-1-es.json",
+   "landing_page_url": "https://filings.xbrl.org/entity/BSYCX13Y0NOTV14V9N85",
+   "human_readable_report_url": "https://filings.xbrl.org/BSYCX13Y0NOTV14V9N85/2025-12-31/ESEF/ES/0/BSYCX13Y0NOTV14V9N85-2025-12-31-1-es/reports/BSYCX13Y0NOTV14V9N85-2025-12-31-1-es.xhtml",
+   "local_path": "data/raw/es/REP/BSYCX13Y0NOTV14V9N85-2025-12-31-1-es.json",
+   "sha256": "8ceec9d17fad52e7531039d36be6910ffb62c6c1036fb51063da18d9389f7f54",
+   "bytes": 21038132,
+   "retrieved_at": "2026-11-16T10:14:33Z",
+   "pmp_pages": [
+    {
+     "concept": "ifrs-full:DisclosureOfTradeAndOtherPayablesExplanatory",
+     "fact_id": "f-529",
+     "offset": 0,
+     "strong": true
+    },
+    {
+     "concept": "ifrs-full:DisclosureOfFinancialRiskManagementExplanatory",
+     "fact_id": "f-494",
+     "offset": 10142,
+     "strong": false
+    }
+   ],
+   "snippet_path": "data/interim/es_snippets/REP.txt",
+   "status": "ok",
+   "notes": "Located by text search inside XBRL text-block facts; pmp_pages holds concept/fact_id/char offset instead of page numbers (xBRL-JSON has no pages). Duplicate nested text blocks were de-duplicated."
+  },
+  {
+   "ticker": "ROVI",
+   "company_name": "Laboratorios Farmacéuticos Rovi, S.A.",
+   "fiscal_year": 2025,
+   "fiscal_period_end": "2025-12-31",
+   "document_title": "Informe financiero anual consolidado 2025 (ESEF), xBRL-JSON rendering by filings.xbrl.org",
+   "document_type": "esef_xbrl_json",
+   "scope": "consolidated annual report (PMP table covers the Spanish entities of the group per ICAC Resolution art. 6.2; extractor must confirm wording in snippet)",
+   "language": "es",
+   "source_url": "https://filings.xbrl.org/95980020140005936480/2025-12-31/ESEF/ES/0/95980020140005936480-2025-12-31-1-es.json",
+   "landing_page_url": "https://filings.xbrl.org/entity/95980020140005936480",
+   "human_readable_report_url": "https://filings.xbrl.org/95980020140005936480/2025-12-31/ESEF/ES/0/95980020140005936480-2025-12-31-1-es/reports/95980020140005936480-2025-12-31-1-es.xhtml",
+   "local_path": "data/raw/es/ROVI/95980020140005936480-2025-12-31-1-es.json",
+   "sha256": "7250ce5458919d38ba62b41c4780cb6a2f751c7b775813eea5f51e3c1f2c19de",
+   "bytes": 3645734,
+   "retrieved_at": "2026-11-16T10:08:21Z",
+   "pmp_pages": [
+    {
+     "concept": "ifrs-full:DisclosureOfFinancialInstrumentsExplanatory",
+     "fact_id": "f-457",
+     "offset": 9761,
+     "strong": true
+    },
+    {
+     "concept": "ifrs-full:DisclosureOfAuditorsRemunerationExplanatory",
+     "fact_id": "f-520",
+     "offset": 0,
+     "strong": true
+    }
+   ],
+   "snippet_path": "data/interim/es_snippets/ROVI.txt",
+   "status": "ok",
+   "notes": "Located by text search inside XBRL text-block facts; pmp_pages holds concept/fact_id/char offset instead of page numbers (xBRL-JSON has no pages). Duplicate nested text blocks were de-duplicated."
+  },
+  {
+   "ticker": "SAB",
+   "company_name": "Banco de Sabadell, S.A.",
+   "fiscal_year": 2025,
+   "fiscal_period_end": "2025-12-31",
+   "document_title": "Informe financiero anual consolidado 2025 (ESEF), xBRL-JSON rendering by filings.xbrl.org",
+   "document_type": "esef_xbrl_json",
+   "scope": "consolidated annual report (PMP table covers the Spanish entities of the group per ICAC Resolution art. 6.2; extractor must confirm wording in snippet)",
+   "language": "es",
+   "source_url": "https://filings.xbrl.org/SI5RG2M0WQQLZCXKRM20/2025-12-31/ESEF/ES/0/SI5RG2M0WQQLZCXKRM20-2025-12-31-1-es.json",
+   "landing_page_url": "https://filings.xbrl.org/entity/SI5RG2M0WQQLZCXKRM20",
+   "human_readable_report_url": "https://filings.xbrl.org/SI5RG2M0WQQLZCXKRM20/2025-12-31/ESEF/ES/0/SI5RG2M0WQQLZCXKRM20-2025-12-31-1-es/reports/SI5RG2M0WQQLZCXKRM20-2025-12-31-1-es.xhtml",
+   "local_path": "data/raw/es/SAB/SI5RG2M0WQQLZCXKRM20-2025-12-31-1-es.json",
+   "sha256": "d83b491b240a9bd9c68684e36ba28829295d300ef6f81c2de7bb0446c6f854fa",
+   "bytes": 8938477,
+   "retrieved_at": "2026-11-16T10:14:36Z",
+   "pmp_pages": [
+    {
+     "concept": "ifrs-full:DisclosureOfFinancialInstrumentsExplanatory",
+     "fact_id": "f-1336",
+     "offset": 45439,
+     "strong": true
+    }
+   ],
+   "snippet_path": "data/interim/es_snippets/SAB.txt",
+   "status": "ok",
+   "notes": "Financial entity: supplier payments are a small part of the business. Located by text search inside XBRL text-block facts; pmp_pages holds concept/fact_id/char offset instead of page numbers (xBRL-JSON has no pages). Duplicate nested text blocks were de-duplicated."
+  },
+  {
+   "ticker": "SAN",
+   "company_name": "Banco Santander, S.A.",
+   "fiscal_year": 2025,
+   "fiscal_period_end": "2025-12-31",
+   "document_title": "Periodo medio de pago a proveedores (investor relations web page)",
+   "document_type": "pmp_page",
+   "scope": "individual (parent company only, as stated on the page)",
+   "language": "es",
+   "source_url": "https://www.santander.com/es/accionistas-e-inversores/informacion-para-accionistas-e-inversores/periodo-medio-de-pago-a-proveedores",
+   "landing_page_url": "https://www.santander.com/es/accionistas-e-inversores/informacion-para-accionistas-e-inversores/periodo-medio-de-pago-a-proveedores",
+   "human_readable_report_url": "https://filings.xbrl.org/5493006QMFDDMYWIAM13/2025-12-31/ESEF/ES/0/5493006QMFDDMYWIAM13-2025-12-31-1-es/reports/5493006QMFDDMYWIAM13-2025-12-31-1-es.xhtml",
+   "local_path": "data/raw/es/SAN/pmp_page.html",
+   "sha256": "ff3152f7459411a23d77ec6234ee72028f1d2a756bad093698a6ea62c14fda62",
+   "bytes": 104600,
+   "retrieved_at": "2026-11-16T10:41:47Z",
+   "pmp_pages": [
+    {
+     "html_text_offset": 3816
+    }
+   ],
+   "snippet_path": "data/interim/es_snippets/SAN.txt",
+   "status": "ok",
+   "notes": "ESEF xBRL-JSON (also downloaded: data/raw/es/SAN/5493006QMFDDMYWIAM13-2025-12-31-1-es.json) contains no PMP text in tagged text blocks; full ESEF XHTML (https://filings.xbrl.org/5493006QMFDDMYWIAM13/2025-12-31/ESEF/ES/0/5493006QMFDDMYWIAM13-2025-12-31-1-es/reports/5493006QMFDDMYWIAM13-2025-12-31-1-es.xhtml) not downloaded (about 28 MB gzip at ~65 KB/s from filings.xbrl.org). Web page gives PMP only plus invoices paid within legal maximum; ratios of paid/pending operations not on the page. Group-level note should be in the annual accounts XHTML/PDF."
+  },
+  {
+   "ticker": "SCYR",
+   "company_name": "Sacyr, S.A.",
+   "fiscal_year": 2025,
+   "fiscal_period_end": "2025-12-31",
+   "document_title": "Informe financiero anual consolidado 2025 (ESEF), xBRL-JSON rendering by filings.xbrl.org",
+   "document_type": "esef_xbrl_json",
+   "scope": "consolidated annual report (PMP table covers the Spanish entities of the group per ICAC Resolution art. 6.2; extractor must confirm wording in snippet)",
+   "language": "es",
+   "source_url": "https://filings.xbrl.org/959800XKAB9VNAVN9425/2025-12-31/ESEF/ES/0/959800XKAB9VNAVN9425-2025-12-31-1-es.json",
+   "landing_page_url": "https://filings.xbrl.org/entity/959800XKAB9VNAVN9425",
+   "human_readable_report_url": "https://filings.xbrl.org/959800XKAB9VNAVN9425/2025-12-31/ESEF/ES/0/959800XKAB9VNAVN9425-2025-12-31-1-es/reports/959800XKAB9VNAVN9425-2025-12-31-1-es.xhtml",
+   "local_path": "data/raw/es/SCYR/959800XKAB9VNAVN9425-2025-12-31-1-es.json",
+   "sha256": "4b9bfcec407f1d1300b37b18230fa30f4cbe39c732a2a0cbb595d4b6dd63b5d7",
+   "bytes": 15763482,
+   "retrieved_at": "2026-11-16T10:14:21Z",
+   "pmp_pages": [
+    {
+     "concept": "ifrs-full:DisclosureOfGeneralInformationAboutFinancialStatementsExplanatory",
+     "fact_id": "f-522",
+     "offset": 12298,
+     "strong": true
+    },
+    {
+     "concept": "ifrs-full:DisclosureOfTradeAndOtherPayablesExplanatory",
+     "fact_id": "f-637",
+     "offset": 877,
+     "strong": true
+    }
+   ],
+   "snippet_path": "data/interim/es_snippets/SCYR.txt",
+   "status": "ok",
+   "notes": "Located by text search inside XBRL text-block facts; pmp_pages holds concept/fact_id/char offset instead of page numbers (xBRL-JSON has no pages). Duplicate nested text blocks were de-duplicated."
+  },
+  {
+   "ticker": "SLR",
+   "company_name": "Solaria Energía y Medio Ambiente, S.A.",
+   "fiscal_year": 2025,
+   "fiscal_period_end": "2025-12-31",
+   "document_title": "Informe financiero anual consolidado 2025 (ESEF), xBRL-JSON rendering by filings.xbrl.org",
+   "document_type": "esef_xbrl_json",
+   "scope": "consolidated annual report (PMP table covers the Spanish entities of the group per ICAC Resolution art. 6.2; extractor must confirm wording in snippet)",
+   "language": "es",
+   "source_url": "https://filings.xbrl.org/959800PM2YJU406K2789/2025-12-31/ESEF/ES/0/solariaenergiaymedioambientesa-2025-12-31-1-es.json",
+   "landing_page_url": "https://filings.xbrl.org/entity/959800PM2YJU406K2789",
+   "human_readable_report_url": "https://filings.xbrl.org/959800PM2YJU406K2789/2025-12-31/ESEF/ES/0/959800PM2YJU406K2789-2025-12-31-1-es/reports/solariaenergiaymedioambientesa-2025-12-31-1-es.xhtml",
+   "local_path": "data/raw/es/SLR/solariaenergiaymedioambientesa-2025-12-31-1-es.json",
+   "sha256": "24c5be8f6e3852424c7e950d3de68aaf415a3f57d239f3c2e60085b4f1694d8e",
+   "bytes": 1458799,
+   "retrieved_at": "2026-11-16T10:13:52Z",
+   "pmp_pages": [
+    {
+     "concept": "ifrs-full:DisclosureOfTradeAndOtherPayablesExplanatory",
+     "fact_id": "fact-422",
+     "offset": 0,
+     "strong": true
+    }
+   ],
+   "snippet_path": "data/interim/es_snippets/SLR.txt",
+   "status": "ok",
+   "notes": "Located by text search inside XBRL text-block facts; pmp_pages holds concept/fact_id/char offset instead of page numbers (xBRL-JSON has no pages). Duplicate nested text blocks were de-duplicated."
+  },
+  {
+   "ticker": "TEF",
+   "company_name": "Telefónica, S.A.",
+   "fiscal_year": 2025,
+   "fiscal_period_end": "2025-12-31",
+   "document_title": "Informe financiero anual consolidado 2025 (ESEF), xBRL-JSON rendering by filings.xbrl.org",
+   "document_type": "esef_xbrl_json",
+   "scope": "consolidated annual report (PMP table covers the Spanish entities of the group per ICAC Resolution art. 6.2; extractor must confirm wording in snippet)",
+   "language": "es",
+   "source_url": "https://filings.xbrl.org/549300EEJH4FEPDBBR25/2025-12-31/ESEF/ES/0/549300EEJH4FEPDBBR25-2025-12-31-1-es.json",
+   "landing_page_url": "https://filings.xbrl.org/entity/549300EEJH4FEPDBBR25",
+   "human_readable_report_url": "https://filings.xbrl.org/549300EEJH4FEPDBBR25/2025-12-31/ESEF/ES/0/549300EEJH4FEPDBBR25-2025-12-31-1-es/reports/549300EEJH4FEPDBBR25-2025-12-31-1-es.xhtml",
+   "local_path": "data/raw/es/TEF/549300EEJH4FEPDBBR25-2025-12-31-1-es.json",
+   "sha256": "281048fc0e33087b2176ae6e6c7af6f2a42c1d32d40203633bf64d9b8a5266b7",
+   "bytes": 14468249,
+   "retrieved_at": "2026-11-16T10:07:03Z",
+   "pmp_pages": [
+    {
+     "concept": "ifrs-full:DisclosureOfOtherCurrentLiabilitiesExplanatory",
+     "fact_id": "f-701",
+     "offset": 5543,
+     "strong": true
+    }
+   ],
+   "snippet_path": "data/interim/es_snippets/TEF.txt",
+   "status": "ok",
+   "notes": "Located by text search inside XBRL text-block facts; pmp_pages holds concept/fact_id/char offset instead of page numbers (xBRL-JSON has no pages). Duplicate nested text blocks were de-duplicated."
+  },
+  {
+   "ticker": "UNI",
+   "company_name": "Unicaja Banco, S.A.",
+   "fiscal_year": 2025,
+   "fiscal_period_end": "2025-12-31",
+   "document_title": "Informe financiero anual consolidado 2025 (ESEF), xBRL-JSON rendering by filings.xbrl.org",
+   "document_type": "esef_xbrl_json",
+   "scope": "consolidated annual report (PMP table covers the Spanish entities of the group per ICAC Resolution art. 6.2; extractor must confirm wording in snippet)",
+   "language": "es",
+   "source_url": "https://filings.xbrl.org/5493007SJLLCTM6J6M37/2025-12-31/ESEF/ES/0/5493007SJLLCTM6J6M37-2025-12-31-1-es.json",
+   "landing_page_url": "https://filings.xbrl.org/entity/5493007SJLLCTM6J6M37",
+   "human_readable_report_url": "https://filings.xbrl.org/5493007SJLLCTM6J6M37/2025-12-31/ESEF/ES/0/5493007SJLLCTM6J6M37-2025-12-31-1-es/reports/5493007SJLLCTM6J6M37-2025-12-31-1-es.xhtml",
+   "local_path": "data/raw/es/UNI/5493007SJLLCTM6J6M37-2025-12-31-1-es.json",
+   "sha256": "0b3d1cd9cca5d32e2fdaf58991d65e1e012a741f1d28a1fd8a7639195d70bca7",
+   "bytes": 16990863,
+   "retrieved_at": "2026-11-16T10:07:03Z",
+   "pmp_pages": [
+    {
+     "concept": "ifrs-full:DisclosureOfTradeAndOtherPayablesExplanatory",
+     "fact_id": "f-1368",
+     "offset": 682,
+     "strong": true
+    }
+   ],
+   "snippet_path": "data/interim/es_snippets/UNI.txt",
+   "status": "ok",
+   "notes": "Financial entity: supplier payments are a small part of the business. Located by text search inside XBRL text-block facts; pmp_pages holds concept/fact_id/char offset instead of page numbers (xBRL-JSON has no pages). Duplicate nested text blocks were de-duplicated."
+  }
+ ]
+}

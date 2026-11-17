@@ -1,0 +1,30 @@
+# DACH slice (src/chase/sources/dach_slice.py). Reviewed by hand; every entry has a reason.
+#
+# Bavarian DAX and MDAX members that are not yet in the universe are added to it (universe.py), even below the
+# USD 4bn revenue threshold: index membership is the inclusion rule for this slice, and the Munich dinner is the use.
+# They are flagged universe_source = dach_slice_index_member. Revenue comes from the extracted annual report.
+#
+# key = Wikidata QID of the company (from dach_index_members.csv)
+additions:
+  Q472451:  {name: Siemens Healthineers, sector: pharma, hq_city: Erlangen}            # medtech; the universe files healthcare under pharma (as Fresenius)
+  Q1024514: {name: CTS Eventim, sector: services, hq_city: Bremen}                     # registered seat Munich, run from Bremen: Bremen is used so the Munich dinner does not count it as local
+  Q2261455: {name: Scout24, sector: technology, hq_city: Munich}                       # online property marketplace
+  Q21236526: {name: Hensoldt, sector: manufacturing, hq_city: Taufkirchen}             # defence electronics
+  Q705337:  {name: Krones, sector: manufacturing, hq_city: Neutraubling}               # filling and packaging machinery
+  Q666476:  {name: Nemetschek, sector: technology, hq_city: Munich}                    # construction software
+  Q1638448: {name: Rational, sector: manufacturing, hq_city: Landsberg am Lech}         # commercial kitchen equipment
+  Q2144015: {name: Renk Group, sector: manufacturing, hq_city: Augsburg}               # gearboxes and drive systems
+  Q459367:  {name: Schaeffler, sector: automotive, hq_city: Herzogenaurach}            # automotive and industrial bearings; most revenue automotive
+  Q2286374: {name: Siltronic, sector: technology, hq_city: Munich}                     # silicon wafers; same bucket as Infineon
+  Q2382257: {name: SUSS MicroTec, sector: manufacturing, hq_city: Garching}            # semiconductor equipment
+  Q28228137: {name: Traton, sector: automotive, hq_city: Munich}                       # trucks and buses; majority-owned by Volkswagen but files its own group accounts
+  Q535517:  {name: Wacker Chemie, sector: manufacturing, hq_city: Munich}              # chemicals; same bucket as BASF
+
+# Bavarian towns that count as the Munich area for the dinner list (added to chase.query.CITIES["munich"]).
+munich_area_add: [taufkirchen, garching, garching bei münchen, pullach, oberhaching, unterhaching, grünwald, ottobrunn, planegg, martinsried, aschheim, feldkirchen, hallbergmoos, freising, oberschleißheim]
+
+# Prior-year balance sheet on a different perimeter from the restated prior-year income statement (QA adjudication):
+# the prior-year DPO is kept for reference but flagged, so it never feeds a year-on-year trend.
+perimeter_change_prior_year:
+  DSM-Firmenich AG: "2024 balance sheet still includes Animal Nutrition & Health (held for sale at end-2025); 2024 income statement restated to continuing operations"
+  Holcim: "2024 balance sheet still includes the North American business spun off in 2025; 2024 income statement restated"

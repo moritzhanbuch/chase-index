@@ -1,0 +1,30 @@
+# Manual corrections. Every entry needs a reason. Kept small on purpose: rules first, overrides last.
+# Applied by src/chase/resolve/universe.py (names, countries, sectors) and src/chase/resolve/uk_rollup.py (entity exclusions).
+
+display_names:            # current company name -> better display name (company_id is rebuilt from it)
+  "Dr Pepper Snapple Group": "Keurig Dr Pepper"        # Wikidata label predates the 2018 merger
+  "Lkq Corp": "LKQ Corporation"
+  "Garmin Group": "Garmin"
+  "Kerry Group Public Limited Company": "Kerry Group"
+
+countries:                # display name -> ISO-2 HQ country, where the automatic source is wrong
+  "Coca-Cola Europacific Partners": GB                 # UK plc headquartered in Uxbridge; Wikidata HQ field said France
+  "Kerry Group": IE                                    # Irish plc; the ESEF index lists the UK filing
+  "Garmin": CH                                         # incorporated and headquartered in Switzerland (operational HQ in Kansas)
+  "ABB Group": CH                                      # ABB Ltd is headquartered in Zurich; the Wikidata item carried ABB Sweden's seat (DACH slice review)
+
+hq_cities:                # display name -> HQ city, where Wikidata is wrong or names a non-HQ site
+  "Coca-Cola Europacific Partners": Uxbridge
+  "Garmin": Schaffhausen
+  "ABB Group": Zurich
+
+sectors:                  # display name -> sector, where the SIC code misleads
+  "3M": manufacturing                                  # SIC 3841 (medical instruments) describes one division
+  "Murphy USA Inc.": retail                            # SIC 5500 covers fuel stations
+  "Heineken Holding N.V.": consumer_goods
+  "Fresenius Medical Care": pharma                     # dialysis products and services; SIC 8090 put it under services
+
+entity_exclusions:        # UK company number -> reason. The entity is NOT attributed to any group.
+  "00999990": "Jacobs Douwe Egberts GB: acquired by Keurig Dr Pepper only recently; reported periods fall largely under the previous owner"
+  "01574907": "CNBC (UK): reported period ends before the Versant spin-off from Comcast"
+  "NI606497": "BRS Golf: reported period ends before the Versant spin-off from Comcast"

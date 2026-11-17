@@ -1,0 +1,7 @@
+# SYNTHETIC DEMO DATA. Invented for demonstration. Not real network, pipeline or dinner data.
+name,account_type,sector,country,known_customers,since
+SYNTHETIC Packaging Supplier GmbH,supplier,manufacturing,DE,Nestlé|Reckitt Benckiser Group plc|Unilever,2026-09-01
+SYNTHETIC Logistics Supplier Ltd,supplier,logistics,GB,Reckitt Benckiser Group plc|Haleon plc|Saint-Gobain,2026-10-05
+SYNTHETIC Ingredients Supplier SA,supplier,consumer_goods,ES,Nestlé|Mondelez International,2026-10-20
+SYNTHETIC Steel Buyer AG,buyer,manufacturing,DE,,2026-06-15
+DS Smith plc,buyer,,,,2026-08-01

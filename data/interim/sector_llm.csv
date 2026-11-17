@@ -1,0 +1,912 @@
+company_id,name,sector,confidence,is_subsidiary_or_unit,not_a_company
+contemporary-amperex-technology-co-limited-q18653563,Contemporary Amperex Technology Co. Limited,manufacturing,0.7,false,false
+mitsubishi-q183275,Mitsubishi,energy,0.5,false,false
+saudi-aramco-q679322,Saudi Aramco,energy,0.9,false,false
+sinopec-q831445,Sinopec,energy,0.9,false,false
+china-national-petroleum-corporation-q588786,China National Petroleum Corporation,energy,0.9,false,false
+state-grid-corporation-of-china-q209078,State Grid Corporation of China,utilities,0.9,false,false
+volkswagen-group-q156578,Volkswagen Group,automotive,0.9,false,false
+volkswagen-q246,Volkswagen,automotive,0.9,false,false
+vitol-q687365,Vitol,energy,0.9,false,false
+glencore-q169339,Glencore,energy,0.9,false,false
+samsung-electronics-q20718,Samsung Electronics,technology,0.9,false,false
+trafigura-q687508,Trafigura,energy,0.9,false,false
+petrochina-company-limited-q503182,PetroChina Company Limited,energy,0.9,false,false
+samsung-group-q20716,Samsung Group,manufacturing,0.5,false,false
+foxconn-q463094,Foxconn,technology,0.9,false,false
+allianz-se-q487292,Allianz SE,financials,0.9,false,false
+schwarz-group-q712034,Schwarz Group,retail,0.9,false,false
+ping-an-insurance-q1256188,Ping An Insurance,financials,0.9,false,false
+china-state-railway-group-q1073489,China State Railway Group,logistics,0.9,false,false
+uniper-q19839259,Uniper,utilities,0.9,false,false
+cargill-aqua-nutrition-q133797382,Cargill Aqua Nutrition,consumer_goods,0.7,true,false
+china-state-construction-engineering-corporation-q69923136,China State Construction Engineering Corporation Limited,construction,0.9,false,false
+mercedes-benz-group-q27530,Mercedes-Benz Group,automotive,0.9,false,false
+bmw-q26678,BMW,automotive,0.9,false,false
+electricite-de-france-q274591,Électricité de France,utilities,0.9,false,false
+cargill-q1036056,Cargill,consumer_goods,0.7,false,false
+china-construction-bank-q26299,China Construction Bank,financials,0.9,false,false
+agricultural-bank-of-china-q26298,Agricultural Bank of China,financials,0.9,false,false
+pemex-q871308,Pemex,energy,0.9,false,false
+deutsche-telekom-q9396,Deutsche Telekom,telecom,0.9,false,false
+bank-of-china-q790068,Bank of China,financials,0.9,false,false
+industrial-and-commercial-bank-of-china-q26463,Industrial and Commercial Bank of China,financials,0.9,false,false
+gazprom-q102673,Gazprom,energy,0.9,false,false
+china-life-insurance-company-q1073306,China Life Insurance Company,financials,0.9,false,false
+china-mobile-q741618,China Mobile,telecom,0.9,false,false
+saic-motor-q910401,SAIC Motor,automotive,0.9,false,false
+china-railway-engineering-corporation-q20051446,China Railway Engineering Corporation,construction,0.9,false,false
+assicurazioni-generali-q670482,Assicurazioni Generali,financials,0.9,false,false
+china-railway-construction-corporation-limited-q1073482,China Railway Construction Corporation Limited,construction,0.9,false,false
+mercedes-benz-ag-q76754241,Mercedes-Benz AG,automotive,0.9,true,false
+nestle-q160746,Nestlé,consumer_goods,0.9,false,false
+huawei-q160120,Huawei,technology,0.7,false,false
+ahold-delhaize-q20539261,Ahold Delhaize,retail,0.9,false,false
+china-national-offshore-oil-corporation-q795354,China National Offshore Oil Corporation,energy,0.9,false,false
+axa-q160054,AXA,financials,0.9,false,false
+robert-bosch-q234021,Robert Bosch,automotive,0.7,false,false
+china-development-bank-q1064065,China Development Bank,financials,0.9,false,false
+tesco-q487494,Tesco,retail,0.9,false,false
+suning-holdings-group-q24451600,Suning Holdings Group,retail,0.7,false,false
+carrefour-group-q3117359,Carrefour Group,retail,0.9,false,false
+lvmh-q504998,LVMH,consumer_goods,0.9,false,false
+rosneft-q1141123,Rosneft,energy,0.9,false,false
+aldi-sud-q41171672,Aldi Süd,retail,0.9,false,false
+japan-post-holdings-q1372049,Japan Post Holdings,financials,0.7,false,false
+dhl-group-q157645,DHL Group,logistics,0.9,false,false
+veidekke-q7918631,Veidekke,construction,0.9,false,false
+china-resources-q1073501,China Resources,other,0.5,false,false
+siemens-q81230,Siemens,manufacturing,0.9,false,false
+byd-company-q2608329,BYD Company,automotive,0.9,false,false
+dongfeng-motor-corporation-q1138452,Dongfeng Motor Corporation,automotive,0.9,false,false
+energy-transfer-q5377000,Energy Transfer,energy,0.9,false,false
+faw-group-q1124351,FAW Group,automotive,0.9,false,false
+shandong-weiqiao-pioneering-group-q17036101,Shandong Weiqiao Pioneering Group,manufacturing,0.7,false,false
+state-farm-insurance-q2007336,State Farm Insurance,financials,0.9,false,false
+maersk-q18224,Maersk,logistics,0.9,false,false
+vinci-q1475312,Vinci,construction,0.9,false,false
+edeka-q701755,Edeka,retail,0.9,false,false
+sinochem-group-q4390358,Sinochem Group,manufacturing,0.5,false,false
+nissan-q20165,Nissan,automotive,0.9,false,false
+enel-q651222,Enel,utilities,0.9,false,false
+china-pacific-construction-group-q63148388,China Pacific Construction Group,construction,0.9,false,false
+united-states-postal-service-q668687,United States Postal Service,logistics,0.9,false,false
+airbus-q2311,Airbus,manufacturing,0.9,false,false
+seven-i-holdings-co-q639447,Seven & I Holdings Co.,retail,0.9,false,false
+china-post-q1066476,China Post,logistics,0.9,false,false
+engie-q13416787,Engie,utilities,0.9,false,false
+chn-energy-q38180956,CHN Energy,energy,0.7,false,false
+china-southern-power-grid-q209039,China Southern Power Grid,utilities,0.9,false,false
+basf-q9401,BASF,manufacturing,0.9,false,false
+rewe-group-q573266,REWE Group,retail,0.9,false,false
+china-minmetals-q846839,China Minmetals,energy,0.7,false,false
+citic-limited-q1023763,CITIC Limited,financials,0.7,false,false
+caverton-offshore-support-group-q123487943,Caverton Offshore Support Group,logistics,0.7,false,false
+roche-holding-q25463170,Roche Holding,pharma,0.9,false,false
+sk-hynix-q370719,SK Hynix,technology,0.9,false,false
+evergrande-group-q5417145,Evergrande Group,construction,0.7,false,false
+amer-international-group-limited-q16926201,Amer International Group Limited,energy,0.5,false,false
+itochu-q717093,Itochu,energy,0.5,false,false
+orlen-q971649,Orlen,energy,0.9,false,false
+auchan-q758603,Auchan,retail,0.9,false,false
+bunge-limited-q1009458,Bunge Limited,consumer_goods,0.9,false,false
+byd-auto-q27423,BYD Auto,automotive,0.9,true,false
+baic-group-q814712,BAIC Group,automotive,0.9,false,false
+chery-q591001,Chery,automotive,0.9,false,false
+e-on-q270223,E.ON,utilities,0.9,false,false
+uro-akovic-q342143,Đuro Đaković,manufacturing,0.7,false,false
+munich-re-q166637,Munich Re,financials,0.9,false,false
+groupe-psa-q275623,Groupe PSA,automotive,0.9,false,false
+cofco-group-q4382137,COFCO Group,consumer_goods,0.9,false,false
+citic-group-q856322,CITIC Group,financials,0.7,false,false
+china-telecommunications-corporation-q1073540,China Telecommunications Corporation,telecom,0.9,false,false
+renault-q6686,Renault,automotive,0.9,false,false
+hsbc-q190464,HSBC,financials,0.9,false,false
+chemchina-q16739781,ChemChina,manufacturing,0.9,false,false
+a-p-m-ller-holding-q26702890,A.P. Møller Holding,financials,0.7,false,false
+softbank-group-q201653,SoftBank Group,financials,0.7,false,false
+bouygues-q895325,Bouygues,construction,0.9,false,false
+daimler-truck-q1157624,Daimler Truck,automotive,0.9,false,false
+bank-of-communications-q806680,Bank of Communications,financials,0.9,false,false
+repsol-q174747,Repsol,energy,0.9,false,false
+zurich-insurance-group-q230426,Zurich Insurance Group,financials,0.9,false,false
+power-china-q10873928,Power China,construction,0.9,false,false
+bnp-paribas-q499707,BNP Paribas,financials,0.9,false,false
+tongrentang-q842099,Tongrentang,pharma,0.9,false,false
+dow-chemical-company-q855639,Dow Chemical Company,manufacturing,0.9,false,false
+red-bull-gmbh-q698639,Red Bull GmbH,consumer_goods,0.9,false,false
+cma-cgm-q1023867,CMA CGM,logistics,0.9,false,false
+grupo-acs-q1550888,Grupo ACS,construction,0.9,false,false
+nationwide-mutual-insurance-company-q6979886,Nationwide Mutual Insurance Company,financials,0.9,false,false
+audi-ag-q23317,Audi AG,automotive,0.9,true,false
+country-garden-q5177291,Country Garden,construction,0.9,false,false
+hengli-group-q70822135,Hengli Group,manufacturing,0.9,false,false
+bayer-q152051,Bayer,pharma,0.9,false,false
+deutsche-bahn-q9322,Deutsche Bahn,logistics,0.9,false,false
+china-merchants-bank-q1073327,China Merchants Bank,financials,0.9,false,false
+lenovo-q14799,Lenovo,technology,0.9,false,false
+guangzhou-automobile-industry-group-q15807676,Guangzhou Automobile Industry Group,automotive,0.9,false,false
+saint-gobain-q678565,Saint-Gobain,construction,0.7,false,false
+cnooc-limited-q795221,CNOOC Limited,energy,0.9,true,false
+novo-nordisk-foundation-q22723716,Novo Nordisk Foundation,other,0.9,false,true
+geely-auto-q55118127,Geely Auto,automotive,0.9,false,false
+santander-group-q806215,Santander Group,financials,0.9,false,false
+china-pacific-insurance-q1003813,China Pacific Insurance,financials,0.9,false,false
+panasonic-holdings-corporation-q53247,Panasonic Holdings Corporation,manufacturing,0.7,false,false
+dubai-investment-fund-q114877710,Dubai Investment Fund,financials,0.5,false,false
+greenland-holdings-corp-ltd-q15902946,"Greenland Holdings Corp., Ltd.",construction,0.9,false,false
+veolia-q1632461,Veolia,utilities,0.9,false,false
+liberty-mutual-insurance-q1516450,Liberty Mutual Insurance,financials,0.9,false,false
+enbw-q644304,EnBW,utilities,0.9,false,false
+iberdrola-q1437502,Iberdrola,utilities,0.9,false,false
+l-oreal-q156077,L'Oréal,consumer_goods,0.9,false,false
+sanofi-q158205,Sanofi,pharma,0.9,false,false
+shagang-group-q3138458,Shagang Group,manufacturing,0.9,false,false
+hbis-group-q675867,HBIS Group,manufacturing,0.9,false,false
+societe-nationale-des-chemins-de-fer-francais-q13646,Société nationale des chemins de fer français,logistics,0.9,false,false
+compass-group-plc-lei6u2t68,COMPASS GROUP PLC,services,0.9,false,false
+nippon-steel-corporation-q1151693,Nippon Steel Corporation,manufacturing,0.9,false,false
+pricewaterhousecoopers-q488048,PricewaterhouseCoopers,services,0.9,false,false
+america-movil-q482267,América Móvil,telecom,0.9,false,false
+idemitsu-kosan-q2216770,Idemitsu Kosan,energy,0.9,false,false
+continental-ag-q163241,Continental AG,automotive,0.9,false,false
+orange-q1431486,Orange,telecom,0.9,false,false
+tencent-q860580,Tencent,technology,0.9,false,false
+schneider-electric-q49053,Schneider Electric,manufacturing,0.9,false,false
+inditex-q44504,Inditex,consumer_goods,0.9,false,false
+talanx-q2389856,Talanx,financials,0.9,false,false
+china-poly-group-corporation-q5099859,China Poly Group Corporation,other,0.5,false,false
+china-aerospace-science-and-technology-corporati-q2777589,China Aerospace Science and Technology Corporation,manufacturing,0.9,false,false
+sinomach-q7524901,Sinomach,manufacturing,0.7,false,false
+lukoil-q329347,Lukoil,energy,0.9,false,false
+vanke-q861340,Vanke,construction,0.7,false,false
+ntt-docomo-q853958,NTT DoCoMo,telecom,0.7,true,false
+standard-life-plc-leiu33t68,STANDARD LIFE PLC,financials,0.9,false,false
+china-unicom-q1068485,China Unicom,telecom,0.9,false,false
+baoshan-iron-steel-q11452539,Baoshan Iron & Steel,manufacturing,0.9,false,false
+lufthansa-q9325,Lufthansa,logistics,0.9,false,false
+tiaa-q740999,TIAA,financials,0.9,false,false
+new-york-life-insurance-company-q1039380,New York Life Insurance Company,financials,0.9,false,false
+gazprom-neft-q1461799,Gazprom Neft,energy,0.9,true,false
+xiamen-c-d-q10911437,Xiamen C&D,logistics,0.5,false,false
+nbcuniversal-q724759,NBCUniversal,services,0.9,true,false
+china-cosco-shipping-q26263180,China COSCO Shipping,logistics,0.9,false,false
+shaanxi-coal-and-chemical-industry-q27487446,Shaanxi Coal and Chemical Industry,energy,0.7,false,false
+cnp-assurances-q1023930,CNP Assurances,financials,0.9,false,false
+china-huaneng-group-co-ltd-q842509,"China Huaneng Group Co., Ltd.",utilities,0.7,false,false
+magnit-q940518,Magnit,retail,0.9,false,false
+telefonica-q160229,Telefónica,telecom,0.9,false,false
+ingka-group-q47508300,INGKA Group,retail,0.9,false,false
+thyssenkrupp-ag-q137910,thyssenkrupp AG,manufacturing,0.9,false,false
+usaa-q7865722,USAA,financials,0.9,false,false
+la-poste-leiap0l59,LA POSTE,logistics,0.9,false,false
+heineken-holding-n-v-leitybs04,Heineken Holding N.V.,consumer_goods,0.9,false,false
+heineken-n-v-lei86uq23,Heineken N.V.,consumer_goods,0.9,false,false
+maersk-a-s-q446750,Maersk A/S,logistics,0.9,false,false
+international-airlines-group-q8774,International Airlines Group,logistics,0.9,false,false
+porsche-q40993,Porsche,automotive,0.9,false,false
+mars-incorporated-q695087,"Mars, Incorporated",consumer_goods,0.9,false,false
+x5-retail-group-q258748,X5 Retail Group,retail,0.9,false,false
+ubs-q193199,UBS,financials,0.9,false,false
+jardine-matheson-holdings-limited-leiolpk41,JARDINE MATHESON HOLDINGS LIMITED,other,0.5,false,false
+safran-q1886126,Safran,manufacturing,0.9,false,false
+dsv-q1155771,DSV,logistics,0.9,false,false
+northwestern-mutual-q1630166,Northwestern Mutual,financials,0.9,false,false
+air-france-klm-q407237,Air France-KLM,logistics,0.9,false,false
+siemens-energy-ag-q89189545,Siemens Energy AG,manufacturing,0.9,false,false
+metro-group-q169167,METRO Group,retail,0.7,false,false
+holcim-q267818,Holcim,construction,0.9,false,false
+rostec-q1840188,Rostec,manufacturing,0.7,false,false
+china-energy-engineering-q20724247,China Energy Engineering,construction,0.9,false,false
+volvo-cars-q215293,Volvo Cars,automotive,0.9,false,false
+metrorex-q1091725,Metrorex,logistics,0.9,false,false
+phoenix-pharmahandel-q871799,Phoenix Pharmahandel,pharma,0.9,false,false
+china-electronics-corporation-q18533575,China Electronics Corporation,technology,0.9,false,false
+comision-federal-de-electricidad-q1114680,Comisión Federal de Electricidad,utilities,0.9,false,false
+skoda-auto-q29637,Škoda Auto,automotive,0.9,true,false
+hochtief-q136542,Hochtief,construction,0.9,false,false
+boehringer-ingelheim-q699532,Boehringer Ingelheim,pharma,0.9,false,false
+crrc-q19840026,CRRC,manufacturing,0.9,false,false
+health-service-executive-q5690681,Health Service Executive,other,0.9,false,true
+ep-group-q104245554,EP Group,energy,0.7,false,false
+luxshare-q16926220,Luxshare,technology,0.9,false,false
+cmoc-group-limited-q5099785,CMOC Group Limited,energy,0.9,false,false
+danone-q329426,Danone,consumer_goods,0.9,false,false
+forvia-leiiulv85,FORVIA,automotive,0.9,false,false
+bae-systems-q739416,BAE Systems,manufacturing,0.9,false,false
+air-liquide-q407448,Air Liquide,manufacturing,0.9,false,false
+emirates-q180432,Emirates,logistics,0.9,false,false
+energeticky-a-prumyslovy-holding-q4162216,Energetický a průmyslový holding,energy,0.9,false,false
+jaguar-land-rover-q6122893,Jaguar Land Rover,automotive,0.7,true,false
+abb-group-q52825,ABB Group,manufacturing,0.9,false,false
+essilorluxottica-q56853086,EssilorLuxottica,consumer_goods,0.5,false,false
+syngenta-group-q114634360,Syngenta Group,consumer_goods,0.7,false,false
+michelin-q151107,Michelin,automotive,0.9,false,false
+hyundai-mobis-q497534,Hyundai Mobis,automotive,0.9,false,false
+gree-electric-q1544535,Gree Electric,manufacturing,0.7,false,false
+wistron-q441821,Wistron,technology,0.9,false,false
+emaar-properties-q1153463,Emaar Properties,construction,0.7,false,false
+credit-agricole-group-q590952,Credit Agricole Group,financials,0.9,false,false
+rolls-royce-q243278,Rolls-Royce,manufacturing,0.9,false,false
+rwe-q138133,RWE,utilities,0.9,false,false
+aldi-nord-q41171373,Aldi Nord,retail,0.9,false,false
+sodexo-q1475554,Sodexo,services,0.9,false,false
+sberbank-q205012,Sberbank,financials,0.9,false,false
+mazda-q35996,Mazda,automotive,0.9,false,false
+viacom-q214346,Viacom,services,0.7,false,false
+bpce-q806941,BPCE,financials,0.9,false,false
+wanda-group-q5210937,Wanda Group,other,0.5,false,false
+openai-q21708200,OpenAI,technology,0.9,false,false
+randstad-n-v-q267840,Randstad N.V.,services,0.9,false,false
+russian-railways-q660770,Russian Railways,logistics,0.9,false,false
+ing-bank-n-v-leiu0qe75,ING BANK N.V.,financials,0.9,false,false
+inter-ikea-holding-q47508289,Inter IKEA Holding,retail,0.7,false,false
+fresenius-se-co-kgaa-q705361,Fresenius SE & Co. KGaA,pharma,0.7,false,false
+pioneer-natural-resources-q4046987,Pioneer Natural Resources,energy,0.9,false,false
+eiffage-q1302944,Eiffage,construction,0.9,false,false
+xinxing-jihua-group-q11084189,Xinxing Jihua Group,manufacturing,0.5,false,false
+thales-group-q1161666,Thales Group,manufacturing,0.9,false,false
+capgemini-q1034621,Capgemini,technology,0.9,false,false
+jinneng-holding-equipment-manufacturing-group-q15950384,Jinneng Holding Equipment Manufacturing Group,energy,0.5,false,false
+mediamarktsaturn-retail-group-q659320,MediaMarktSaturn Retail Group,retail,0.9,true,false
+henan-energy-chemical-industry-group-china-q52849120,Henan Energy & Chemical Industry Group (China),energy,0.7,false,false
+china-general-technology-group-q10874142,China General Technology Group,manufacturing,0.5,false,false
+adidas-ag-q3895,Adidas AG,consumer_goods,0.9,false,false
+ceconomy-q28858523,Ceconomy,retail,0.9,false,false
+canon-inc-q62621,Canon Inc.,technology,0.7,false,false
+endesa-q1275336,Endesa,utilities,0.9,false,false
+ineos-q673231,Ineos,manufacturing,0.9,false,false
+valeo-q1305281,Valeo,automotive,0.9,false,false
+staples-inc-q785943,Staples Inc.,retail,0.9,false,false
+aviation-industry-corporation-of-china-ltd-q2667719,"Aviation Industry Corporation of China, Ltd.",manufacturing,0.9,false,false
+ergo-q541909,Ergo,financials,0.7,true,false
+shanghai-pharmaceuticals-q104876809,Shanghai Pharmaceuticals,pharma,0.9,false,false
+bright-food-q2925357,Bright Food,consumer_goods,0.9,false,false
+marks-and-spencer-group-p-l-c-leizg1x44,MARKS AND SPENCER GROUP P.L.C.,retail,0.9,false,false
+bertelsmann-q156913,Bertelsmann,services,0.9,false,false
+acciona-sa-leillno21,Acciona SA,construction,0.7,false,false
+wurth-q679750,Würth,logistics,0.7,false,false
+groupama-q3083531,Groupama,financials,0.9,false,false
+new-china-life-insurance-co-ltd-q11084240,"New China Life Insurance Co., Ltd.",financials,0.9,false,false
+ageas-q392338,Ageas,financials,0.9,false,false
+kering-q931207,Kering,consumer_goods,0.9,false,false
+virgin-group-q494917,Virgin Group,other,0.5,false,false
+naturgy-energy-group-sa-lei5sv098,NATURGY ENERGY GROUP SA,utilities,0.9,false,false
+brenntag-q828445,Brenntag,logistics,0.9,false,false
+umicore-q902769,Umicore,manufacturing,0.7,false,false
+china-national-coal-group-q10875850,China National Coal Group,energy,0.9,false,false
+ferrero-spa-q269792,Ferrero SpA,consumer_goods,0.9,false,false
+omv-q168238,OMV,energy,0.9,false,false
+henkel-kgaa-q276507,Henkel KGaA,consumer_goods,0.7,false,false
+morrisons-q922344,Morrisons,retail,0.9,false,false
+alstom-q309084,Alstom,manufacturing,0.9,false,false
+rexel-q962489,Rexel,logistics,0.9,false,false
+saudi-telecom-company-q1535171,Saudi Telecom Company,telecom,0.9,false,false
+saudi-electricity-company-q12188903,Saudi Electricity Company,utilities,0.9,false,false
+tatneft-q1616858,Tatneft,energy,0.9,false,false
+h-m-q188326,H&M,retail,0.9,false,false
+chanel-q218115,Chanel,consumer_goods,0.9,false,false
+pjsc-inter-rao-q1963801,PJSC Inter RAO,utilities,0.7,false,false
+east-japan-railway-company-q499071,East Japan Railway Company,logistics,0.9,false,false
+dte-energy-q5206232,DTE Energy,utilities,0.9,false,false
+leonardo-q910379,Leonardo,manufacturing,0.9,false,false
+rsted-q1241260,Ørsted,utilities,0.7,false,false
+fujifilm-corporation-q164740,Fujifilm Corporation,manufacturing,0.7,false,false
+heidelberg-materials-q632233,Heidelberg Materials,construction,0.9,false,false
+air-china-q51747,Air China,logistics,0.9,false,false
+merck-kgaa-q156959,Merck KGaA,pharma,0.7,false,false
+spacex-q193701,SpaceX,manufacturing,0.7,false,false
+prysmian-group-q1964784,Prysmian Group,manufacturing,0.9,false,false
+founder-group-q4384042,Founder Group,other,0.5,false,false
+lactalis-q1799825,Lactalis,consumer_goods,0.9,false,false
+rwe-supply-trading-cz-q2124734,RWE Supply & Trading CZ,energy,0.9,true,false
+enedis-q3587594,Enedis,utilities,0.9,true,false
+cooperatieve-rabobank-u-a-leif9wn62,Coöperatieve Rabobank U.A.,financials,0.9,false,false
+perusahaan-listrik-negara-q4201636,Perusahaan Listrik Negara,utilities,0.9,false,false
+hisense-q2527941,Hisense,manufacturing,0.5,false,false
+publicis-q1537378,Publicis,services,0.9,false,false
+zte-q136484,ZTE,technology,0.7,false,false
+wanda-commercial-q18658349,Wanda Commercial,construction,0.5,true,false
+novonor-q94849,Novonor,construction,0.9,false,false
+yamaha-motor-company-q158888,Yamaha Motor Company,automotive,0.7,false,false
+otto-group-q466688,Otto Group,retail,0.9,false,false
+ant-group-q21979415,Ant Group,financials,0.9,false,false
+edison-s-p-a-lei5j4l49,EDISON S.P.A.,utilities,0.7,false,false
+hancock-prospecting-q5647056,Hancock Prospecting,energy,0.9,false,false
+british-airways-q8766,British Airways,logistics,0.9,true,false
+hermes-q843887,Hermès,consumer_goods,0.9,false,false
+selfinvest-q137739015,Selfinvest,financials,0.5,false,false
+bank-of-beijing-q39146,Bank of Beijing,financials,0.9,false,false
+scania-q219960,Scania,automotive,0.7,true,false
+generali-deutschland-q318616,Generali Deutschland,financials,0.9,true,false
+jd-sports-fashion-plc-leiuu8375,JD SPORTS FASHION PLC,retail,0.9,false,false
+mckinsey-company-q310207,McKinsey & Company,services,0.9,false,false
+johnson-matthey-plc-leisc6z10,JOHNSON MATTHEY PLC,manufacturing,0.9,false,false
+united-shipping-trading-company-q7889139,United Shipping & Trading Company,energy,0.5,false,false
+desjardins-group-q2933350,Desjardins Group,financials,0.9,false,false
+the-ordinary-q126595227,The Ordinary,consumer_goods,0.9,false,false
+novatek-q251546,Novatek,energy,0.9,false,false
+fidelity-investments-q1411292,Fidelity Investments,financials,0.9,false,false
+transneft-q2116312,Transneft,energy,0.7,false,false
+huaneng-power-international-q1507642,Huaneng Power International,utilities,0.9,false,false
+vestas-q868259,Vestas,manufacturing,0.9,false,false
+synchrony-financial-q18387139,Synchrony Financial,financials,0.9,false,false
+wanxiang-q1463781,Wanxiang,automotive,0.7,false,false
+covestro-q812142,Covestro,manufacturing,0.9,false,false
+china-non-ferrous-metal-mining-q5099821,China Non-Ferrous Metal Mining,energy,0.7,false,false
+richemont-q689240,Richemont,consumer_goods,0.9,false,false
+overseas-chinese-town-enterprises-q3347522,Overseas Chinese Town Enterprises,construction,0.5,false,false
+xcel-energy-q1486956,Xcel Energy,utilities,0.9,false,false
+en-group-q4038038,En+ Group,energy,0.7,false,false
+china-national-heavy-duty-truck-group-q3952867,China National Heavy Duty Truck Group,automotive,0.9,false,false
+fosun-international-limited-q3079736,Fosun International Limited,other,0.5,false,false
+a2a-energia-s-p-a-lei8c1896,A2A ENERGIA S.P.A.,utilities,0.9,false,false
+youtube-llc-q112247183,YouTube LLC,technology,0.9,true,false
+china-electronics-technology-group-corporation-q10873927,China Electronics Technology Group Corporation,technology,0.7,false,false
+citic-financial-amc-q21584822,CITIC Financial AMC,financials,0.9,true,false
+tim-group-q144617,TIM Group,telecom,0.9,false,false
+cez-group-q336735,ČEZ Group,utilities,0.9,false,false
+rusal-q1642605,Rusal,manufacturing,0.7,false,false
+tcl-technology-q733958,TCL Technology,technology,0.7,false,false
+lufthansa-group-q62589018,Lufthansa Group,logistics,0.9,false,false
+sistema-q1781702,Sistema,other,0.5,false,false
+logista-integral-sa-leiuj7x28,LOGISTA INTEGRAL SA,logistics,0.9,false,false
+china-north-industries-group-corporation-limited-q1538336,China North Industries Group Corporation Limited,manufacturing,0.9,false,false
+iveco-group-n-v-lei9eor96,IVECO GROUP N.V.,automotive,0.9,false,false
+jinneng-holding-power-group-q17025517,Jinneng Holding Power Group,energy,0.5,false,false
+lekkerland-q1816527,Lekkerland,logistics,0.7,false,false
+t-bank-q4457878,T-Bank,financials,0.9,false,false
+jio-platforms-q96418672,Jio Platforms,telecom,0.7,true,false
+foton-motor-q814825,Foton Motor,automotive,0.9,false,false
+hera-s-p-a-lei443b48,HERA S.P.A.,utilities,0.9,false,false
+dsm-firmenich-ag-leim4bi12,DSM-Firmenich AG,manufacturing,0.5,false,false
+helleniq-energy-q903198,HELLENiQ ENERGY,energy,0.9,false,false
+barry-callebaut-q809018,Barry Callebaut,consumer_goods,0.9,false,false
+nornickel-q1284261,Nornickel,energy,0.9,false,false
+webuild-q21693482,Webuild,construction,0.9,false,false
+bae-systems-inc-q4834524,BAE Systems Inc.,manufacturing,0.9,true,false
+poste-italiane-q495026,Poste Italiane,logistics,0.7,false,false
+battelle-memorial-institute-q810911,Battelle Memorial Institute,other,0.7,false,true
+hal-trust-leioy3r07,HAL Trust,financials,0.9,false,false
+universal-music-group-q38903,Universal Music Group,services,0.9,false,false
+strabag-q681316,Strabag,construction,0.9,false,false
+mahle-gmbh-q659379,Mahle GmbH,automotive,0.9,false,false
+vmware-q11407,VMware,technology,0.9,false,false
+hsbc-uk-bank-plc-lei86cb82,HSBC UK BANK PLC,financials,0.9,true,false
+sika-ag-q691382,Sika AG,construction,0.7,false,false
+inventec-q6059838,Inventec,technology,0.9,false,false
+dm-drogerie-markt-q266572,dm-drogerie markt,retail,0.9,false,false
+pyaterochka-q1768969,Pyaterochka,retail,0.9,true,false
+kbc-group-q29560723,KBC Group,financials,0.9,false,false
+evonik-industries-q473513,Evonik Industries,manufacturing,0.9,false,false
+rossmann-q316004,Rossmann,retail,0.9,false,false
+toyota-boshoku-q7830755,Toyota Boshoku,automotive,0.9,false,false
+rvb-q140787683,RVB,retail,0.7,false,false
+vtb-bank-q1549389,VTB Bank,financials,0.9,false,false
+zhejiang-energy-group-china-q52850659,Zhejiang Energy Group (China),energy,0.7,false,false
+china-international-marine-containers-q1073291,China International Marine Containers,manufacturing,0.7,false,false
+volkswagen-slovakia-q2532301,Volkswagen Slovakia,automotive,0.9,true,false
+alrajhi-bank-q1761176,Alrajhi Bank,financials,0.9,false,false
+surgutneftegas-q680776,Surgutneftegas,energy,0.9,false,false
+discover-financial-q5281775,Discover Financial,financials,0.9,false,false
+easyjet-plc-leib7th90,EASYJET PLC,logistics,0.9,false,false
+jeronimo-martins-polska-q108169128,Jeronimo Martins Polska,retail,0.9,true,false
+kingston-technology-q683771,Kingston Technology,technology,0.9,false,false
+magang-group-holding-company-limited-q5947574,Magang (Group) Holding Company Limited,manufacturing,0.9,false,false
+nordea-q1123823,Nordea,financials,0.9,false,false
+sharp-corporation-q53227,Sharp Corporation,technology,0.7,false,false
+bluescope-steel-q885589,BlueScope Steel,manufacturing,0.9,false,false
+vodafone-germany-q2529830,Vodafone Germany,telecom,0.9,true,false
+electrolux-q505922,Electrolux,manufacturing,0.7,false,false
+saras-s-p-a-o-in-forma-estesa-saras-s-p-a-raffin-leiujuh84,SARAS S.P.A. O IN FORMA ESTESA SARAS S.P.A. - RAFFINERIE SARDE,energy,0.9,false,false
+gestamp-automocion-sa-lei484363,GESTAMP AUTOMOCION SA,automotive,0.9,false,false
+zest-societa-per-azioni-leicb0760,ZEST SOCIETA' PER AZIONI,other,0.5,false,false
+andel-holding-q131350142,Andel Holding,utilities,0.5,false,false
+jointown-pharmaceutical-group-q10878836,Jointown Pharmaceutical Group,pharma,0.9,false,false
+arla-foods-q674575,Arla Foods,consumer_goods,0.9,false,false
+reitan-as-q3357065,Reitan AS,retail,0.9,false,false
+bulgarian-energy-holding-q4996202,Bulgarian Energy Holding,utilities,0.5,false,false
+commerzbank-ag-q157617,Commerzbank AG,financials,0.9,false,false
+china-hongqiao-q10874559,China Hongqiao,manufacturing,0.7,false,false
+klm-q181912,KLM,logistics,0.9,true,false
+infineon-technologies-q311394,Infineon Technologies,technology,0.9,false,false
+apa-corporation-q119991,APA Corporation,energy,0.9,false,false
+eni-plenitude-q96240525,Eni Plenitude,utilities,0.9,true,false
+pernod-ricard-q837049,Pernod Ricard,consumer_goods,0.9,false,false
+wsp-global-q1333162,WSP Global,services,0.9,false,false
+thrivent-financial-for-lutherans-q7798301,Thrivent Financial for Lutherans,financials,0.9,false,false
+man-truck-bus-q708667,MAN Truck & Bus,automotive,0.9,true,false
+central-japan-railway-company-q513679,Central Japan Railway Company,logistics,0.9,false,false
+currys-plc-leidqqf16,CURRYS PLC,retail,0.9,false,false
+dignity-health-q5276334,Dignity Health,services,0.9,false,true
+bon-secours-mercy-health-q99578113,Bon Secours Mercy Health,services,0.7,false,true
+hearst-communications-q1065024,Hearst Communications,services,0.9,false,false
+iss-q689791,ISS,services,0.9,false,false
+asahi-group-holdings-q11283168,Asahi Group Holdings,consumer_goods,0.9,false,false
+colruyt-group-q1111963,Colruyt Group,retail,0.9,false,false
+schindler-elevator-q651212,Schindler Elevator,manufacturing,0.9,false,false
+vivendi-q1127887,Vivendi,services,0.7,false,false
+intersport-q666888,Intersport,retail,0.9,false,false
+zalando-q136570,Zalando,retail,0.9,false,false
+spie-sa-leiwj8x85,SPIE SA,services,0.7,false,false
+ly-corporation-q86734122,LY Corporation,technology,0.9,false,false
+fnac-darty-leilpho35,FNAC DARTY,retail,0.9,false,false
+danfoss-q1159510,Danfoss,manufacturing,0.9,false,false
+airbus-commercial-aircraft-q67,Airbus Commercial Aircraft,manufacturing,0.9,true,false
+opmobility-q3391735,OPmobility,automotive,0.9,false,false
+teleperformance-q2392255,Teleperformance,services,0.9,false,false
+rosseti-q4499024,Rosseti,utilities,0.9,false,false
+siemens-gamesa-renewable-energy-q820588,Siemens Gamesa Renewable Energy,manufacturing,0.9,false,false
+simplot-q3484788,Simplot,consumer_goods,0.9,false,false
+ozon-q2365235,Ozon,retail,0.9,false,false
+akzonobel-q50912,AkzoNobel,manufacturing,0.9,false,false
+swiss-federal-railways-q83835,Swiss Federal Railways,logistics,0.9,false,false
+bashneft-q809985,Bashneft,energy,0.9,true,false
+banner-health-q4856918,Banner Health,services,0.9,false,true
+tennet-holding-b-v-leig63903,TenneT Holding B.V.,utilities,0.9,false,false
+ashtead-group-public-limited-company-leik1a235,ASHTEAD GROUP PUBLIC LIMITED COMPANY,services,0.7,false,false
+delivery-hero-q23384493,Delivery Hero,technology,0.7,false,false
+kweichow-moutai-company-q1518607,Kweichow Moutai Company,consumer_goods,0.9,false,false
+jde-peet-s-n-v-lei5zrt89,JDE Peet's N.V.,consumer_goods,0.9,false,false
+southern-and-eastern-norway-regional-health-auth-q7570642,Southern and Eastern Norway Regional Health Authority,other,0.9,false,true
+newyork-presbyterian-hospital-q975653,NewYork–Presbyterian Hospital,services,0.7,false,true
+rosatom-q514140,Rosatom,energy,0.5,false,false
+qantas-airways-q32491,Qantas Airways,logistics,0.9,false,false
+telenor-q845632,Telenor,telecom,0.9,false,false
+fomento-de-construcciones-y-contratas-s-a-lei178328,FOMENTO DE CONSTRUCCIONES Y CONTRATAS S.A.,construction,0.7,false,false
+sudzucker-q474565,Südzucker,consumer_goods,0.9,false,false
+siemens-mobility-q391895,Siemens Mobility,manufacturing,0.9,true,false
+polskie-gornictwo-naftowe-i-gazownictwo-q673670,Polskie Górnictwo Naftowe i Gazownictwo,energy,0.9,false,false
+legrand-q636755,Legrand,manufacturing,0.9,false,false
+beiersdorf-q201691,Beiersdorf,consumer_goods,0.9,false,false
+carlsberg-group-q113215,Carlsberg Group,consumer_goods,0.9,false,false
+transdev-group-q104185516,Transdev Group,logistics,0.9,false,false
+vienna-insurance-group-q694257,Vienna Insurance Group,financials,0.9,false,false
+tk-elevator-q2430466,TK Elevator,manufacturing,0.9,false,false
+bloomberg-l-p-q13977,Bloomberg L.P.,services,0.5,false,false
+mediatek-q699848,MediaTek,technology,0.9,false,false
+rt-mart-china-q139575422,RT-Mart China,retail,0.9,true,false
+aeroflot-q58707,Aeroflot,logistics,0.9,false,false
+danish-crown-q3365718,Danish Crown,consumer_goods,0.9,false,false
+lg-energy-solution-wroc-aw-q132420942,LG Energy Solution Wrocław,manufacturing,0.7,true,false
+arkema-leikp2785,ARKEMA,manufacturing,0.9,false,false
+lagardere-sa-leiq65g45,LAGARDERE SA,services,0.5,false,false
+rostelecom-q1477012,Rostelecom,telecom,0.9,false,false
+mol-group-q549181,MOL Group,energy,0.9,false,false
+the-lego-group-q1063455,The Lego Group,consumer_goods,0.7,false,false
+puma-q157064,Puma,consumer_goods,0.9,false,false
+globus-q457503,Globus,retail,0.7,false,false
+suez-q177814,SUEZ,utilities,0.9,false,false
+seat-q188217,SEAT,automotive,0.7,true,false
+norgesgruppen-q2575956,NorgesGruppen,retail,0.9,false,false
+groupe-spie-batignolles-leigsyg40,GROUPE SPIE BATIGNOLLES,construction,0.9,false,false
+almaz-antey-q1331507,Almaz-Antey,manufacturing,0.9,false,false
+abn-amro-q287471,ABN AMRO,financials,0.9,false,false
+casino-guichard-perrachon-leibl6l29,"CASINO, GUICHARD-PERRACHON",retail,0.9,false,false
+sandoz-q528468,Sandoz,pharma,0.9,false,false
+perdue-farms-q7167716,Perdue Farms,consumer_goods,0.9,false,false
+ppf-group-q1979720,PPF Group,financials,0.7,false,false
+novolipetsk-steel-q1768082,Novolipetsk Steel,manufacturing,0.9,false,false
+agrofert-q5374450,Agrofert,consumer_goods,0.7,false,false
+sabic-q903219,SABIC,manufacturing,0.9,false,false
+bauhaus-q672043,Bauhaus,retail,0.9,false,false
+mobile-telesystems-q1368919,Mobile TeleSystems,telecom,0.9,false,false
+seb-s-a-q125082559,SEB S.A.,consumer_goods,0.9,false,false
+dansk-landbrugs-grovvareselskab-q12306870,Dansk Landbrugs Grovvareselskab,consumer_goods,0.7,false,false
+nebius-group-q47120756,Nebius Group,technology,0.9,false,false
+safran-aircraft-engines-q773875,Safran Aircraft Engines,manufacturing,0.9,true,false
+polyus-q2005769,Polyus,energy,0.9,false,false
+sansteel-minguang-q115754739,Sansteel Minguang,manufacturing,0.9,false,false
+d-ieteren-group-q1139707,D'Ieteren Group,automotive,0.5,false,false
+vanderbilt-university-medical-center-q7914455,Vanderbilt University Medical Center,services,0.9,false,true
+kia-slovakia-q116493917,Kia Slovakia,automotive,0.9,true,false
+atos-se-q757689,Atos SE,technology,0.9,false,false
+hella-q452726,Hella,automotive,0.9,false,false
+fincantieri-s-p-a-lei8b6239,FINCANTIERI S.P.A.,manufacturing,0.7,false,false
+memorial-hermann-healthcare-system-q6815444,Memorial Hermann Healthcare System,services,0.9,false,true
+knorr-bremse-q256290,Knorr-Bremse,manufacturing,0.7,false,false
+memorial-sloan-kettering-cancer-center-q1808012,Memorial Sloan Kettering Cancer Center,services,0.9,false,true
+nexans-lei4uiv14,NEXANS,manufacturing,0.9,false,false
+stark-group-q10465506,Stark Group,construction,0.5,false,false
+shanghai-huayi-group-company-q7488454,Shanghai Huayi (Group) Company,manufacturing,0.7,false,false
+xinyu-iron-and-steel-group-q11081084,Xinyu Iron and Steel Group,manufacturing,0.9,false,false
+wendel-leijd5o34,WENDEL,financials,0.9,false,false
+meiji-holdings-q11512295,Meiji Holdings,consumer_goods,0.9,false,false
+ucb-q902046,UCB,pharma,0.9,false,false
+teda-holding-q10940256,TEDA Holding,other,0.5,false,false
+arcelik-q640497,Arçelik,manufacturing,0.7,false,false
+hyundai-motor-india-limited-q1525445,Hyundai Motor India Limited,automotive,0.7,true,false
+if-p-c-insurance-q4131723,If P&C Insurance,financials,0.9,true,false
+dyson-q621429,Dyson,manufacturing,0.7,false,false
+hellofresh-q23014836,HelloFresh,retail,0.9,false,false
+m-t-bank-q3272257,M&T Bank,financials,0.9,false,false
+telia-company-q862303,Telia Company,telecom,0.9,false,false
+signa-holding-gmbh-q1422071,Signa Holding GmbH,financials,0.7,false,false
+gates-foundation-q655286,Gates Foundation,other,0.9,false,true
+hyundai-motor-manufacturing-czech-q1564355,Hyundai Motor Manufacturing Czech,automotive,0.9,true,false
+marathon-oil-q1577587,Marathon Oil,energy,0.9,false,false
+audi-hungaria-q781027,Audi Hungaria,automotive,0.9,true,false
+severstal-q638448,Severstal,manufacturing,0.7,false,false
+technip-energies-n-v-leiscip70,Technip Energies N.V.,manufacturing,0.5,false,false
+rwjbarnabas-health-q62083907,RWJBarnabas Health,services,0.9,false,true
+rheinmetall-ag-q161544,Rheinmetall AG,manufacturing,0.9,false,false
+kia-motors-slovakia-q1333043,Kia Motors Slovakia,automotive,0.9,true,false
+maire-s-p-a-lei0a1b83,MAIRE S.P.A.,construction,0.5,false,false
+mondi-group-q779252,Mondi Group,manufacturing,0.9,false,false
+perenco-q762953,Perenco,energy,0.9,false,false
+activision-blizzard-q344341,Activision Blizzard,technology,0.9,false,false
+suffolk-construction-company-q7634545,Suffolk Construction Company,construction,0.9,false,false
+mansour-group-q431077,Mansour Group,automotive,0.5,false,false
+british-broadcasting-corporation-q9531,British Broadcasting Corporation,services,0.9,false,false
+stadtwerke-munchen-q882871,Stadtwerke München,utilities,0.9,false,false
+huk-coburg-q1566111,HUK-Coburg,financials,0.9,false,false
+china-bohai-bank-q4208326,China Bohai Bank,financials,0.9,false,false
+tonnies-holding-q2464046,Tönnies Holding,consumer_goods,0.9,false,false
+gruppo-api-q646807,Gruppo API,energy,0.9,false,false
+heartland-a-s-q28172433,Heartland A/S,consumer_goods,0.5,false,false
+pirelli-q207770,Pirelli,automotive,0.9,false,false
+erste-group-q1310001,Erste Group,financials,0.9,false,false
+rushydro-q2035424,RusHydro,utilities,0.9,false,false
+orlando-health-q7103097,Orlando Health,services,0.9,false,true
+czechoslovak-group-q24708162,Czechoslovak Group,manufacturing,0.9,false,false
+sony-music-q56760250,Sony Music,services,0.9,true,false
+acer-q481778,Acer,technology,0.9,false,false
+wildberries-q24933714,Wildberries,retail,0.9,false,false
+hilti-q1361530,Hilti,manufacturing,0.7,false,false
+rubis-leitc9742,RUBIS,energy,0.9,false,false
+iren-s-p-a-lei474e60,IREN S.P.A.,utilities,0.9,false,false
+barratt-redrow-plc-lei5ynk29,BARRATT REDROW PLC,construction,0.9,false,false
+amadeus-it-group-q696061,Amadeus IT Group,technology,0.9,false,false
+eurofins-scientific-q324846,Eurofins Scientific,services,0.7,false,false
+vilniaus-prekyba-q1460895,Vilniaus prekyba,retail,0.9,false,false
+dertour-group-q56707994,DERTOUR Group,services,0.9,false,false
+orlen-unipetrol-q1593113,Orlen Unipetrol,energy,0.9,true,false
+goldwind-q1090900,Goldwind,manufacturing,0.9,false,false
+signal-iduna-q2285066,Signal Iduna,financials,0.9,false,false
+bureau-veritas-lei5d1f11,BUREAU VERITAS,services,0.9,false,false
+tecnicas-reunidas-sa-leiwjgf49,TECNICAS REUNIDAS SA,construction,0.7,false,false
+koninklijke-bam-groep-n-v-leiy5bs93,Koninklijke BAM Groep N.V.,construction,0.9,false,false
+evraz-q1382653,Evraz,manufacturing,0.9,false,false
+kg-group-q114243585,KG Group,manufacturing,0.5,false,false
+bank-rakyat-indonesia-q623042,Bank Rakyat Indonesia,financials,0.9,false,false
+lanxess-q682992,Lanxess,manufacturing,0.9,false,false
+lubrizol-q3610112,Lubrizol,manufacturing,0.7,true,false
+etihad-airways-q212304,Etihad Airways,logistics,0.9,false,false
+sabadell-bank-q762330,Sabadell Bank,financials,0.9,false,false
+aena-s-m-e-sa-leinfmt29,AENA S.M.E. SA,logistics,0.9,false,false
+dassault-systemes-q1172038,Dassault Systèmes,technology,0.9,false,false
+rtl-group-q921159,RTL Group,services,0.9,false,false
+groupe-bruxelles-lambert-q972966,Groupe Bruxelles Lambert,financials,0.9,false,false
+magnitogorsk-iron-and-steel-works-q1884500,Magnitogorsk Iron and Steel Works,manufacturing,0.9,false,false
+zurich-gruppe-deutschland-q230410,Zurich Gruppe Deutschland,financials,0.9,true,false
+entain-plc-leiqr8l28,ENTAIN PLC,services,0.7,false,false
+wind-tre-q28119223,Wind Tre,telecom,0.9,false,false
+groupe-adp-q794563,Groupe ADP,logistics,0.9,false,false
+lantmannen-q1805602,Lantmännen,consumer_goods,0.9,false,false
+coop-danmark-q12306665,Coop Danmark,retail,0.9,false,false
+elior-group-lei00sq95,ELIOR GROUP,services,0.9,false,false
+wolters-kluwer-q249798,Wolters Kluwer,technology,0.5,false,false
+danish-agro-q5219677,Danish Agro,consumer_goods,0.9,false,false
+aperam-q6479764,Aperam,manufacturing,0.9,false,false
+hamburg-sud-q565050,Hamburg Süd,logistics,0.9,true,false
+samsung-sdi-hungary-q116760752,Samsung SDI Hungary,manufacturing,0.9,true,false
+pge-polska-grupa-energetyczna-q787714,PGE Polska Grupa Energetyczna,utilities,0.9,false,false
+remondis-q884975,Remondis,services,0.7,false,false
+catalana-occidente-group-q5936881,Catalana Occidente Group,financials,0.9,false,false
+syensqo-q123752186,SYENSQO,manufacturing,0.9,false,false
+ackermans-van-haaren-q341828,Ackermans & van Haaren,financials,0.9,false,false
+dino-polska-q11694239,Dino Polska,retail,0.9,false,false
+robert-bosch-elektronika-gyarto-kft-q108169064,Robert Bosch Elektronika Gyártó Kft.,automotive,0.9,true,false
+lars-larsen-group-q66626422,Lars Larsen Group,retail,0.9,false,false
+morgan-sindall-group-plc-leizrb345,MORGAN SINDALL GROUP PLC,construction,0.9,false,false
+energoatom-q938225,Energoatom,utilities,0.7,false,false
+emeis-leipk1v89,EMEIS,services,0.9,false,false
+ldc-group-q3205967,LDC Group,consumer_goods,0.9,false,false
+helios-kliniken-q1254151,Helios Kliniken,services,0.9,false,false
+koninklijke-kpn-n-v-lei7fvp81,Koninklijke KPN N.V.,telecom,0.9,false,false
+acerinox-sa-lei582721,ACERINOX SA,manufacturing,0.9,false,false
+signify-n-v-lei8nzo35,SIGNIFY N.V.,manufacturing,0.9,false,false
+distribuidora-internacional-de-alimentacion-sa-leifl6h10,DISTRIBUIDORA INTERNACIONAL DE ALIMENTACION SA,retail,0.9,false,false
+atb-market-q4054103,ATB-Market,retail,0.9,false,false
+ewe-ag-q1276459,EWE AG,utilities,0.9,false,false
+wizz-air-holdings-plc-leiljza85,WIZZ AIR HOLDINGS PLC,logistics,0.9,false,false
+sanford-health-q7417625,Sanford Health,services,0.9,false,true
+alexion-pharmaceuticals-q204727,Alexion Pharmaceuticals,pharma,0.9,false,false
+sopra-steria-q21021580,Sopra Steria,technology,0.9,false,false
+accor-q212599,Accor,services,0.9,false,false
+slovnaft-q1587563,Slovnaft,energy,0.9,true,false
+tcl-electronics-q29468800,TCL Electronics,technology,0.5,false,false
+danske-bank-q1636974,Danske Bank,financials,0.9,false,false
+qaf-limited-q10887008,QAF Limited,consumer_goods,0.5,false,false
+jungheinrich-ag-q536228,Jungheinrich AG,manufacturing,0.9,false,false
+eroski-scoop-leip6s661,EROSKI SCOOP,retail,0.9,false,false
+stihl-q239372,Stihl,manufacturing,0.9,false,false
+montefiore-medical-center-q6905066,Montefiore Medical Center,services,0.9,false,true
+sbm-offshore-n-v-leiqe6513,SBM OFFSHORE N.V.,energy,0.5,false,false
+indra-sistemas-q1661823,Indra Sistemas,technology,0.9,false,false
+bkw-energie-q670895,BKW Energie,utilities,0.9,false,false
+general-logistics-systems-q366182,General Logistics Systems,logistics,0.9,false,false
+ramsay-generale-de-sante-lei223f44,RAMSAY GENERALE DE SANTE,services,0.9,false,false
+bain-company-q764850,Bain & Company,services,0.9,false,false
+travis-perkins-plc-leif22k83,TRAVIS PERKINS PLC,construction,0.5,false,false
+mvm-group-q1162287,MVM Group,utilities,0.9,false,false
+metropolitan-transportation-authority-q1146109,Metropolitan Transportation Authority,logistics,0.9,false,true
+gefco-forwarding-cz-q115135618,GEFCO Forwarding CZ,logistics,0.9,true,false
+sibur-q899012,Sibur,manufacturing,0.9,false,false
+clariane-leitjm037,CLARIANE,services,0.9,false,false
+eurocash-q16544331,Eurocash,logistics,0.7,false,false
+dacia-q27460,Dacia,automotive,0.9,true,false
+coop-amba-q7062253,Coop amba,retail,0.9,false,false
+avon-products-inc-q791285,Avon Products Inc.,consumer_goods,0.9,false,false
+siberian-coal-energy-company-q4418250,Siberian Coal Energy Company,energy,0.9,false,false
+olympus-corporation-q688619,Olympus Corporation,pharma,0.7,false,false
+ayvens-leinp7427,AYVENS,financials,0.5,false,false
+fifth-third-bank-q1411810,Fifth Third Bank,financials,0.9,false,false
+maxima-grupe-uab-q1881222,"Maxima Grupė, UAB",retail,0.9,false,false
+vonovia-q1202053,Vonovia,financials,0.9,false,false
+swiss-international-air-lines-q156776,Swiss International Air Lines,logistics,0.9,true,false
+transmashholding-q1519572,Transmashholding,manufacturing,0.7,false,false
+kier-group-plc-lei4y7o48,KIER GROUP PLC,construction,0.9,false,false
+holding-slovenske-elektrarne-d-o-o-q113466433,HOLDING SLOVENSKE ELEKTRARNE d.o.o.,utilities,0.9,false,false
+iberostar-hotels-resorts-q2035939,Iberostar Hotels & Resorts,services,0.9,false,false
+skyworks-solutions-q7538146,Skyworks Solutions,technology,0.9,false,false
+prosus-q67389109,Prosus,technology,0.5,false,false
+coop-norge-sa-q1618373,Coop Norge SA,retail,0.9,false,false
+kongsberg-gruppen-q1770909,Kongsberg Gruppen,manufacturing,0.7,false,false
+puig-q3410623,Puig,consumer_goods,0.9,false,false
+western-southern-financial-group-q7987429,Western & Southern Financial Group,financials,0.9,false,false
+emmi-ag-q632030,Emmi AG,consumer_goods,0.9,false,false
+lite-on-technology-q34534,Lite-On Technology,technology,0.9,false,false
+jollibee-group-q45208078,Jollibee Group,services,0.7,false,false
+toyota-central-europe-q132420943,Toyota Central Europe,automotive,0.9,true,false
+prosegur-compania-de-seguridad-s-a-leidbfg97,"PROSEGUR COMPAÑIA DE SEGURIDAD, S.A.",services,0.9,false,false
+lenta-q4258608,Lenta,retail,0.9,false,false
+airgas-q80635,Airgas,manufacturing,0.9,true,false
+stena-ab-q18332843,Stena AB,logistics,0.5,false,false
+henry-ford-health-q5721418,Henry Ford Health,services,0.9,false,true
+vistry-group-plc-lei9slk53,VISTRY GROUP PLC,construction,0.9,false,false
+gamestop-q202210,GameStop,retail,0.9,false,false
+banijay-group-n-v-lei3rf180,Banijay Group N.V.,services,0.9,false,false
+arcadis-n-v-lei047n03,ARCADIS N.V.,services,0.9,false,false
+jysk-q138913,Jysk,retail,0.9,false,false
+metalloinvest-q1924939,Metalloinvest,manufacturing,0.9,false,false
+barnes-noble-q795454,Barnes & Noble,retail,0.9,false,false
+dassault-aviation-q460487,Dassault Aviation,manufacturing,0.9,false,false
+intercontinental-hotels-group-plc-leilu3j98,INTERCONTINENTAL HOTELS GROUP PLC,services,0.9,false,false
+elis-leimay492,ELIS,services,0.9,false,false
+aramco-fuels-poland-q132420944,Aramco Fuels Poland,energy,0.9,true,false
+wartsila-q327429,Wärtsilä,manufacturing,0.9,false,false
+kghm-polska-miedz-q1476710,KGHM Polska Miedź,energy,0.9,false,false
+united-aircraft-corporation-q1136226,United Aircraft Corporation,manufacturing,0.7,false,false
+scripps-health-q7439200,Scripps Health,services,0.9,false,true
+foxconn-cz-q27898860,Foxconn CZ,technology,0.9,true,false
+bestseller-q594721,Bestseller,consumer_goods,0.7,false,false
+imcd-nv-q63184341,IMCD NV,logistics,0.9,false,false
+dnb-bank-q80788,DNB Bank,financials,0.9,false,false
+uralkali-q904594,Uralkali,manufacturing,0.7,false,false
+orlen-lietuva-ab-q950584,"Orlen Lietuva, AB",energy,0.9,true,false
+fortuna-game-q12016781,Fortuna Game,services,0.9,false,false
+sacyr-sa-leivn9425,SACYR SA,construction,0.9,false,false
+schouw-co-q12334747,Schouw & Co.,manufacturing,0.5,false,false
+mercer-q1391599,Mercer,services,0.9,true,false
+first-republic-bank-q5453752,First Republic Bank,financials,0.9,false,false
+vall-companys-q138855851,Vall Companys,consumer_goods,0.9,false,false
+siemens-gamesa-q1493131,Siemens Gamesa,manufacturing,0.9,false,false
+m-video-q6558800,M.video,retail,0.9,false,false
+ote-q10380001,OTE,utilities,0.5,false,false
+aercap-q4687934,AerCap,financials,0.7,false,false
+tryg-q1772027,Tryg,financials,0.9,false,false
+pepco-group-n-v-lei9ob449,PEPCO GROUP N.V.,retail,0.9,false,false
+yale-new-haven-hospital-q12073283,Yale – New Haven Hospital,services,0.9,false,true
+taylor-wimpey-plc-lei8s3r66,TAYLOR WIMPEY PLC,construction,0.9,false,false
+meiji-corporation-q11512281,Meiji Corporation,consumer_goods,0.9,true,false
+vodacom-q1856518,Vodacom,telecom,0.9,false,false
+zublin-q247910,Züblin,construction,0.9,true,false
+construcciones-y-auxiliar-de-ferrocarriles-s-a-lei275134,"CONSTRUCCIONES Y AUXILIAR DE FERROCARRILES, S.A.",manufacturing,0.9,false,false
+elia-group-q1131131,Elia Group,utilities,0.9,false,false
+regions-financial-corporation-q917131,Regions Financial Corporation,financials,0.9,false,false
+stellantis-slovakia-q3552624,Stellantis Slovakia,automotive,0.9,true,false
+elecnor-sa-lei491250,ELECNOR SA,construction,0.7,false,false
+petrol-group-q174824,Petrol Group,energy,0.9,false,false
+dns-store-chain-q4036922,DNS (store chain),retail,0.9,false,false
+fanuc-q212116,FANUC,manufacturing,0.9,false,false
+buzzi-spa-leivj6k59,BUZZI SPA,construction,0.9,false,false
+naval-group-q1227511,Naval Group,manufacturing,0.9,false,false
+mount-sinai-hospital-q1476505,Mount Sinai Hospital,services,0.9,false,true
+lidl-ceska-republika-q29477065,Lidl Česká republika,retail,0.9,true,false
+esprinet-s-p-a-lei6add08,ESPRINET S.P.A.,logistics,0.7,false,false
+vkr-holding-q10711838,VKR Holding,construction,0.7,false,false
+phosagro-q386414,PhosAgro,manufacturing,0.7,false,false
+hugo-boss-q491627,Hugo Boss,consumer_goods,0.9,false,false
+china-south-industries-group-q1022190,China South Industries Group,manufacturing,0.5,false,false
+anthropic-q116758847,Anthropic,technology,0.9,false,false
+versalis-q4010228,Versalis,manufacturing,0.9,true,false
+franz-haniel-cie-q320785,Franz Haniel & Cie.,financials,0.7,false,false
+tauron-polska-energia-q2397198,Tauron Polska Energia,utilities,0.9,false,false
+energyaustralia-q5376876,EnergyAustralia,utilities,0.9,true,false
+penguin-random-house-q2908540,Penguin Random House,services,0.9,true,false
+united-shipbuilding-corporation-q4330413,United Shipbuilding Corporation,manufacturing,0.9,false,false
+dongfang-electric-q5295864,Dongfang Electric,manufacturing,0.9,false,false
+inter-cars-q114809284,Inter Cars,logistics,0.7,false,false
+deme-q2265286,DEME,construction,0.9,false,false
+volkswagen-poznan-q9369097,Volkswagen Poznań,automotive,0.9,true,false
+solvay-s-a-q706184,Solvay S.A.,manufacturing,0.9,false,false
+cellnex-telecom-sa-leiui7p67,CELLNEX TELECOM SA,telecom,0.9,false,false
+trubnaya-metallurgicheskaya-kompaniya-q1809133,Trubnaya Metallurgicheskaya Kompaniya,manufacturing,0.9,false,false
+azelis-group-q115167314,Azelis Group,logistics,0.7,false,false
+ural-mining-and-metallurgical-company-q1349918,Ural Mining and Metallurgical Company,manufacturing,0.5,false,false
+danieli-q367162,Danieli,manufacturing,0.9,false,false
+mbda-q1475070,MBDA,manufacturing,0.9,false,false
+alten-lei24gn07,ALTEN,services,0.7,false,false
+edeka-nord-q26085458,EDEKA Nord,retail,0.9,true,false
+orlen-unipetrol-rpa-q11878499,ORLEN Unipetrol RPA,energy,0.9,true,false
+biomerieux-sa-leiq4t071,BIOMERIEUX SA,pharma,0.7,false,false
+osf-healthcare-q7073001,OSF HealthCare,services,0.9,false,true
+eurochem-q905159,EuroChem,manufacturing,0.7,false,false
+julius-baer-group-q671901,Julius Baer Group,financials,0.9,false,false
+rusagro-q4400200,Rusagro,consumer_goods,0.9,false,false
+intertek-group-plc-lei1rn369,INTERTEK GROUP PLC,services,0.9,false,false
+vallourec-lei4mcj34,VALLOUREC,manufacturing,0.9,false,false
+arcelormittal-poland-q11822675,ArcelorMittal Poland,manufacturing,0.9,true,false
+worldline-q2869596,Worldline,technology,0.7,false,false
+nationwide-children-s-hospital-q6979874,Nationwide Children's Hospital,services,0.9,false,true
+fraport-q643578,Fraport,logistics,0.9,false,false
+prosiebensat-1-media-se-q59165,ProSiebenSat.1 Media SE,services,0.9,false,false
+dfds-q1243964,DFDS,logistics,0.9,false,false
+mfe-mediaforeurope-n-v-leib97a50,MFE-MEDIAFOREUROPE N.V.,services,0.9,false,false
+china-airlines-q51756,China Airlines,logistics,0.9,false,false
+kolon-corporation-q141493911,KOLON Corporation,manufacturing,0.5,false,false
+mtu-aero-engines-q128929,MTU Aero Engines,manufacturing,0.9,false,false
+aryzta-q718109,ARYZTA,consumer_goods,0.9,false,false
+cie-automotive-sa-lei381252,CIE AUTOMOTIVE SA,automotive,0.9,false,false
+lehigh-valley-hospital-q6518847,Lehigh Valley Hospital,services,0.9,false,true
+gkn-aerospace-q121362615,GKN Aerospace,manufacturing,0.7,true,false
+alcampo-q2832081,Alcampo,retail,0.7,true,false
+stena-metall-q10678277,Stena Metall,manufacturing,0.5,false,false
+telekom-greece-q206678,Telekom (Greece),telecom,0.7,false,false
+rockwool-q255661,Rockwool,construction,0.7,false,false
+lavazza-q543750,Lavazza,consumer_goods,0.9,false,false
+fibercop-q107214638,FiberCop,telecom,0.9,false,false
+elektroprivreda-srbije-q1327532,Elektroprivreda Srbije,utilities,0.9,false,false
+asseco-poland-q740032,Asseco Poland,technology,0.9,false,false
+dji-q16924332,DJI,technology,0.9,false,false
+pik-group-q691418,PIK Group,construction,0.9,false,false
+grundfos-q1550517,Grundfos,manufacturing,0.9,false,false
+children-s-hospital-of-philadelphia-q4569202,Children's Hospital of Philadelphia,services,0.9,false,true
+vicat-leiovdp79,VICAT,construction,0.9,false,false
+argenx-se-q63152908,Argenx SE,pharma,0.9,false,false
+brembo-q907265,Brembo,automotive,0.9,false,false
+omv-petrom-marketing-q108169261,OMV Petrom Marketing,energy,0.9,true,false
+rema-1000-danmark-q115768834,REMA 1000 Danmark,retail,0.9,false,false
+schroders-plc-leisz2h24,SCHRODERS PLC,financials,0.9,false,false
+omv-petrom-q1755034,OMV Petrom,energy,0.7,true,false
+frasers-group-q2913554,Frasers Group,retail,0.9,false,false
+knds-q19966744,KNDS,manufacturing,0.9,false,false
+knds-deutschland-q141858248,KNDS Deutschland,manufacturing,0.9,true,false
+stadler-rail-q666703,Stadler Rail,manufacturing,0.9,false,false
+slovenske-elektrarne-q3559219,Slovenské elektrárne,utilities,0.9,false,false
+orkla-group-q60003,Orkla Group,consumer_goods,0.9,false,false
+de-longhi-s-p-a-lei4f8a38,DE' LONGHI S.P.A.,consumer_goods,0.5,false,false
+unibel-leioxfh76,UNIBEL,consumer_goods,0.5,false,false
+id-logistics-group-leimj9p45,ID LOGISTICS GROUP,logistics,0.9,false,false
+lidl-poland-q108169129,Lidl Poland,retail,0.9,true,false
+peacehealth-q16966652,PeaceHealth,services,0.9,false,true
+vauxhall-q59187,Vauxhall,automotive,0.9,true,false
+bellway-p-l-c-lei4fgz98,BELLWAY P L C,construction,0.9,false,false
+kronospan-aps-lei6v0282,Kronospan ApS,manufacturing,0.7,false,false
+dansk-landbrugs-grovvareselskab-a-m-b-a-leigcsv45,Dansk Landbrugs Grovvareselskab A.m.b.a.,consumer_goods,0.7,false,false
+aktiebolaget-volvo-leic8jd22,Aktiebolaget Volvo,automotive,0.9,false,false
+simple-agency-group-a-s-lei5e0517,Simple Agency Group A/S,other,0.5,false,false
+j-sainsbury-plc-leij9y484,J Sainsbury plc,retail,0.9,false,false
+imperial-brands-plc-leijl3a42,Imperial Brands plc,consumer_goods,0.9,false,false
+nestle-holdings-inc-leimqxp30,"Nestle Holdings, INC.",consumer_goods,0.9,true,false
+british-telecommunications-limited-leiyv4h90,British Telecommunications Limited,telecom,0.9,true,false
+bt-group-plc-leiyqmn21,BT Group plc,telecom,0.9,false,false
+associated-british-foods-plc-leiq8oq72,Associated British Foods plc,consumer_goods,0.9,false,false
+lloyds-bank-plc-leixq1z70,Lloyds Bank plc,financials,0.9,true,false
+telefonaktiebolaget-lm-ericsson-leixifm52,Telefonaktiebolaget LM Ericsson,technology,0.7,false,false
+tui-ag-lei93b552,Tui AG,services,0.9,false,false
+vattenfall-ab-leihz3109,Vattenfall AB,utilities,0.9,false,false
+marks-and-spencer-group-plc-leizg1x44,Marks and Spencer Group plc,retail,0.9,false,false
+standard-chartered-plc-lei5f2g91,Standard Chartered plc,financials,0.9,false,false
+neste-oyj-lei66am14,Neste Oyj,energy,0.9,false,false
+dcc-public-limited-company-leitd3t45,Dcc Public Limited Company,energy,0.7,false,false
+anglo-american-plc-leix8me43,Anglo American plc,energy,0.9,false,false
+reckitt-benckiser-group-plc-lei48v108,Reckitt Benckiser Group plc,consumer_goods,0.9,false,false
+skanska-ab-leihgmg07,Skanska AB,construction,0.9,false,false
+kingfisher-plc-lei2fy281,Kingfisher plc,retail,0.9,false,false
+international-distributions-services-plc-lei8z2m70,International Distributions Services plc,logistics,0.9,false,false
+atlas-copco-aktiebolag-leiyjzr07,Atlas Copco Aktiebolag,manufacturing,0.9,false,false
+bunzl-public-limited-company-lei78um09,Bunzl Public Limited Company,logistics,0.9,false,false
+securitas-ab-leiwds617,Securitas AB,services,0.9,false,false
+australia-and-new-zealand-banking-group-limited-leiyttu19,Australia and New Zealand Banking Group Limited,financials,0.9,false,false
+assa-abloy-ab-leiimmb67,Assa Abloy AB,manufacturing,0.9,false,false
+co-operative-group-limited-leiz69v16,Co-Operative Group Limited,retail,0.9,false,false
+mind-energy-a-s-leijmm315,Mind Energy A/S,energy,0.5,false,false
+kesko-oyj-leiahpb95,Kesko Oyj,retail,0.9,false,false
+essity-aktiebolag-publ-lei1da153,Essity Aktiebolag (publ),consumer_goods,0.9,false,false
+bunker-holding-a-s-lei2b7a63,Bunker Holding A/s,energy,0.7,false,false
+standard-chartered-bank-lei6pct96,Standard Chartered Bank,financials,0.9,true,false
+sse-plc-leimsk856,SSE plc,utilities,0.9,false,false
+carlsberg-breweries-a-s-leidmwn61,Carlsberg Breweries A/s,consumer_goods,0.9,true,false
+kirkbi-a-s-lei2e5305,Kirkbi A/s,financials,0.7,false,false
+smurfit-kappa-group-public-limited-company-leitdvt56,Smurfit Kappa Group Public Limited Company,manufacturing,0.9,false,false
+kone-oyj-lei5xzk38,Kone Oyj,manufacturing,0.9,false,false
+salling-group-a-s-leism0112,Salling Group A/S,retail,0.9,false,false
+balfour-beatty-plc-leimenq17,Balfour Beatty plc,construction,0.9,false,false
+scottish-power-uk-plc-leimekq11,Scottish Power UK plc,utilities,0.9,true,false
+quilter-plc-leirzgm95,Quilter plc,financials,0.9,false,false
+computacenter-plc-lei9db105,Computacenter plc,technology,0.9,false,false
+inchcape-plc-leinm2t57,Inchcape plc,automotive,0.5,false,false
+london-stock-exchange-group-plc-lei445n30,London Stock Exchange Group plc,financials,0.9,false,false
+sandvik-aktiebolag-leilvzf54,Sandvik Aktiebolag,manufacturing,0.9,false,false
+upm-kymmene-oyj-lei4j9u64,Upm-Kymmene Oyj,manufacturing,0.9,false,false
+bitten-og-mads-clausens-fond-leixekp28,Bitten Og Mads Clausens Fond,other,0.9,false,true
+harbour-energy-plc-leikvpf97,Harbour Energy plc,energy,0.9,false,false
+stora-enso-oyj-leiutz738,Stora Enso Oyj,manufacturing,0.9,false,false
+ssab-ab-leiiml164,Ssab AB,manufacturing,0.9,false,false
+cvs-group-plc-leix48o05,CVS Group plc,services,0.5,false,false
+boliden-ab-leiondj56,Boliden AB,energy,0.9,false,false
+dfi-retail-group-holdings-limited-leivnnx48,Dfi Retail Group Holdings Limited,retail,0.9,false,false
+next-plc-leip9ph98,Next plc,retail,0.9,false,false
+hsbc-bank-plc-leipyfy54,HSBC Bank plc,financials,0.9,true,false
+skf-group-leiovbi12,SKF Group,manufacturing,0.9,false,false
+ds-smith-plc-leiblwh36,DS Smith plc,manufacturing,0.9,false,false
+antofagasta-plc-leivld628,Antofagasta plc,energy,0.9,false,false
+axfood-ab-leihe8l05,Axfood AB,retail,0.9,false,false
+experian-plc-leijtsz26,Experian plc,services,0.7,false,false
+hays-plc-leio8th08,Hays plc,services,0.9,false,false
+stark-sourcing-a-s-leif1md69,Stark Sourcing A/s,construction,0.5,true,false
+saab-aktiebolag-leii13m69,SAAB Aktiebolag,manufacturing,0.9,false,false
+kerry-group-public-limited-company-leifhwc59,Kerry Group Public Limited Company,consumer_goods,0.9,false,false
+b-m-european-value-retail-plc-leik1x530,B&m European Value Retail plc,retail,0.9,false,false
+skandinaviska-enskilda-banken-ab-leibptn86,Skandinaviska Enskilda Banken AB,financials,0.9,false,false
+bank-of-scotland-plc-leijevi93,Bank of Scotland plc,financials,0.9,true,false
+hbos-plc-leih5qu25,Hbos plc,financials,0.9,true,false
+mitie-group-plc-leiwzmj03,Mitie Group plc,services,0.9,false,false
+3i-group-plc-leiatnm84,3i Group plc,financials,0.9,false,false
+wartsila-oyj-abp-leim3x223,Wärtsilä Oyj Abp,manufacturing,0.9,false,false
+canal-lei3bxn18,Canal+,services,0.9,false,false
+rentokil-initial-plc-leit14k68,Rentokil Initial plc,services,0.9,false,false
+drax-group-plc-leizhsr98,Drax Group plc,utilities,0.9,false,false
+alfa-laval-ab-lei8ag251,Alfa Laval AB,manufacturing,0.9,false,false
+babcock-international-group-plc-leiu6l377,Babcock International Group plc,services,0.5,false,false
+company-leio79q77,华泰证券股份有限公司,financials,0.9,false,false
+swedbank-ab-leic71685,Swedbank AB,financials,0.9,false,false
+airtel-africa-plc-leiwqh623,Airtel Africa plc,telecom,0.9,false,false
+lundbeckfonden-lei6mc463,Lundbeckfonden,other,0.9,false,true
+serco-group-plc-lei5gwj21,Serco Group plc,services,0.9,false,false
+investor-aktiebolag-leibkux38,Investor Aktiebolag,financials,0.9,false,false
+firstgroup-plc-lei4hkm93,Firstgroup plc,logistics,0.9,false,false
+outokumpu-oyj-leiff0r80,Outokumpu Oyj,manufacturing,0.9,false,false
+epiroc-aktiebolag-lei1spe91,Epiroc Aktiebolag,manufacturing,0.9,false,false
+hexagon-aktiebolag-leii4ta80,Hexagon Aktiebolag,technology,0.7,false,false
+south32-limited-leikvhr17,South32 Limited,energy,0.9,false,false
+metso-oyj-lei1w0e07,Metso Oyj,manufacturing,0.9,false,false
+valmet-oyj-leih83v62,Valmet Oyj,manufacturing,0.9,false,false
+peab-ab-lei53i854,Peab AB,construction,0.9,false,false
+dowlais-group-plc-lei6vpc92,Dowlais Group plc,automotive,0.9,false,false
+svenska-handelsbanken-ab-lei5uyz31,Svenska Handelsbanken AB,financials,0.9,false,false
+fortum-oyj-leisamf76,Fortum Oyj,utilities,0.9,false,false
+hilton-food-group-plc-leioox355,Hilton Food Group plc,consumer_goods,0.9,false,false
+allied-irish-banks-public-limited-company-lei7z1q21,Allied Irish Banks Public Limited Company,financials,0.9,false,false
+john-wood-group-plc-leib6s323,John Wood Group plc,services,0.7,false,false
+informa-plc-leisedu20,Informa plc,services,0.9,false,false
+grundfos-holding-a-s-lei54x103,Grundfos Holding A/s,manufacturing,0.9,false,false
+aib-group-public-limited-company-leiwnql34,Aib Group Public Limited Company,financials,0.9,false,false
+persimmon-public-limited-company-leiwn6f31,Persimmon Public Limited Company,construction,0.9,false,false
+the-governor-and-company-of-the-bank-of-ireland-lei42g291,The Governor and Company of the Bank of Ireland,financials,0.9,false,false
+pandora-a-s-leie46843,Pandora A/S,consumer_goods,0.9,false,false
+ssp-group-plc-leimenj24,Ssp Group plc,services,0.9,false,false
+fresnillo-plc-leij0xv81,Fresnillo plc,energy,0.9,false,false
+melrose-industries-plc-leim7tr85,Melrose Industries plc,manufacturing,0.9,false,false
+konecranes-oyj-leibma096,Konecranes Oyj,manufacturing,0.9,false,false
+bank-of-ireland-group-plc-lei12lj39,Bank of Ireland Group plc,financials,0.9,false,false
+transnet-soc-ltd-lei1ea796,Transnet SOC Ltd,logistics,0.9,false,false
+itv-plc-leiycxz59,ITV plc,services,0.9,false,false
+husqvarna-ab-leixb7655,Husqvarna AB,manufacturing,0.7,false,false
+aak-ab-publ-leiwjwl07,Aak AB (publ),consumer_goods,0.9,false,false
+william-demant-invest-a-s-leitcoe28,William Demant Invest A/s,pharma,0.5,false,false
+huhtamaki-oyj-leixn6l29,Huhtamäki Oyj,manufacturing,0.9,false,false
+lundin-mining-corporation-leihtn269,Lundin Mining Corporation,energy,0.9,false,false
+verisure-plc-leixta943,Verisure plc,services,0.9,false,false

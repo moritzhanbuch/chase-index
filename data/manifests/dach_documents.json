@@ -1,0 +1,242 @@
+[
+  {
+    "source_url": "https://report.adidas-group.com/2025/en/_assets/downloads/annual-report-adidas-ar25.pdf",
+    "path": "data/raw/dach/adidas/report.pdf",
+    "sha256": "0b069b745ea2ea2f20d4eeaf7e58903a0aee717bea2fd78a95081f45721cbd49",
+    "bytes": 38495392,
+    "retrieved_at": "2026-11-17T11:55:28Z",
+    "content_type": "application/pdf"
+  },
+  {
+    "source_url": "https://www.bmwgroup.com/en/report/2025/downloads/BMW-Group-Financial-Statements-2025-en.pdf",
+    "path": "data/raw/dach/bmw/report.pdf",
+    "sha256": "51a51054de764e94dbc00ed5c43fd550a2a36e7a28656788cbcb2215a6e8bb22",
+    "bytes": 1915610,
+    "retrieved_at": "2026-11-17T11:55:33Z",
+    "content_type": "application/pdf"
+  },
+  {
+    "source_url": "https://www.infineon.com/assets/row/public/documents/corporate/investors/annual-reports/2025/2025-annual-report-v01-00-en.pdf",
+    "path": "data/raw/dach/infineon/report.pdf",
+    "sha256": "4da7852d5e554c6cb4813e3bf0e19530e7b32b1ad7501bec0ca4d90a36451687",
+    "bytes": 5028776,
+    "retrieved_at": "2026-11-17T11:55:38Z",
+    "content_type": "application/pdf"
+  },
+  {
+    "source_url": "https://www.mtu.de/fileadmin/DE/5_Investoren/Financial_Report/2025_Results/MTUAeroEnginesAG_AnnualReport_2025_en_locked.pdf",
+    "path": "data/raw/dach/mtu-aero-engines/report.pdf",
+    "sha256": "52edb9448b6bfa5afc67c915f5504ae68e5c80cc5cffa42fe202cb10c6a1ea83",
+    "bytes": 3634649,
+    "retrieved_at": "2026-11-17T11:55:49Z",
+    "content_type": "application/pdf"
+  },
+  {
+    "source_url": "https://www.scout24.com/media/scout24/Investor_Relations/Berichte_und_Praesentationen/2025/Scout24_Annual_Report_2025_EN.pdf",
+    "path": "data/raw/dach/scout24/report.pdf",
+    "sha256": "ce12817225e0ba31c6bbf9189f38c2d85f188195852c735c890c9a27385798f5",
+    "bytes": 13913568,
+    "retrieved_at": "2026-11-17T11:56:01Z",
+    "content_type": "application/pdf"
+  },
+  {
+    "source_url": "https://assets.ctfassets.net/17si5cpawjzf/3XulIKlbpUZ6RplTRZbdKQ/2228242f3c9337073601ddd9e860d36a/Siemens_Report_FY2025__1_.pdf",
+    "path": "data/raw/dach/siemens/report.pdf",
+    "sha256": "a702335f2c2d4f18d3ead4053df2fc3a9be3ad69b062bedd938f3b2551213b27",
+    "bytes": 6199134,
+    "retrieved_at": "2026-11-17T11:56:09Z",
+    "content_type": "application/pdf"
+  },
+  {
+    "source_url": "https://assets.siemens-energy.com/dam/32b27e9a-af91-4915-8b51-b3af012d0d98/A-Siemens_Energy_Annual_Report_2025-pdf_Original%20file.pdf",
+    "path": "data/raw/dach/siemens-energy/report.pdf",
+    "sha256": "e1a6b748568204b1c287a689e03615729c7f5b44d5c2a0d6c338160421bf6ee4",
+    "bytes": 4871008,
+    "retrieved_at": "2026-11-17T11:56:16Z",
+    "content_type": "application/pdf"
+  },
+  {
+    "source_url": "https://corporate.webassets.siemens-healthineers.com/a364b935102e7df5/d7fdacda458e/siemens-healthineers-ir-annual-report-2025.pdf",
+    "path": "data/raw/dach/siemens-healthineers/report.pdf",
+    "sha256": "100e91f05170e532b2cc91eb346c2d75e9f9b337600f8dc2626ef8bb6e330a0f",
+    "bytes": 3939164,
+    "retrieved_at": "2026-11-17T11:56:22Z",
+    "content_type": "application/pdf"
+  },
+  {
+    "source_url": "https://corporate.eventim.de/media/document/b42d98d3-2f3a-430e-8cec-44aec6529782/assets/DE0005470306-JA-2025-EQ-E-00.pdf",
+    "path": "data/raw/dach/cts-eventim-ag-co-kgaa/report.pdf",
+    "sha256": "6147480c9829ab50265206099c6c85dd1afdedb12ecd5d42ebd16e26afd745f7",
+    "bytes": 4968428,
+    "retrieved_at": "2026-11-17T11:56:34Z",
+    "content_type": "application/pdf"
+  },
+  {
+    "source_url": "https://investors.hensoldt.net/media/document/a5ee9bbe-ee55-4b0f-960e-542b2dc673eb/assets/DE000HAG0005-JA-2025-EQ-E-00.pdf",
+    "path": "data/raw/dach/hensoldt-ag/report.pdf",
+    "sha256": "fff889f13482e3f013012b8e5a2fe91f4777d3ff2ab1a204e7c271bbb50a9a5b",
+    "bytes": 2637671,
+    "retrieved_at": "2026-11-17T11:56:40Z",
+    "content_type": "application/pdf"
+  },
+  {
+    "source_url": "https://ir.knorr-bremse.com/media/document/59b02f0f-b3d0-427c-9183-44e9746eea61/assets/DE000KBX1006-JA-2025-EQ-E-01.pdf",
+    "path": "data/raw/dach/knorr-bremse-ag/report.pdf",
+    "sha256": "dc2f7f0d1c9cce0dbf1a0e07feff6a90794b828fef85e7451c98e93b141843c7",
+    "bytes": 5751695,
+    "retrieved_at": "2026-11-17T11:56:56Z",
+    "content_type": "application/pdf"
+  },
+  {
+    "source_url": "https://www.krones.com/media/downloads/GB_2025_Konzern_e.pdf",
+    "path": "data/raw/dach/krones-ag/report.pdf",
+    "sha256": "2beb94a014645d4d3358debdc411043b4f7bdd927d80752061d935968b38eb3a",
+    "bytes": 14845222,
+    "retrieved_at": "2026-11-17T11:57:08Z",
+    "content_type": "application/pdf"
+  },
+  {
+    "source_url": "https://ir.nemetschek.com/media/document/b26659fa-1299-4d6b-a2e8-d293ab7b3a66/assets/DE0006452907-JA-2025-EQ-E-00.pdf",
+    "path": "data/raw/dach/nemetschek-se/report.pdf",
+    "sha256": "2c05a5f37094d6c4209273040ba5e974957afe0dabf943117c54c4e654889588",
+    "bytes": 3610488,
+    "retrieved_at": "2026-11-17T11:57:18Z",
+    "content_type": "application/pdf"
+  },
+  {
+    "source_url": "https://annual-report.puma.com/2025/en/downloads/PUMA_Annual_Report_2025_EN.pdf",
+    "path": "data/raw/dach/puma-se/report.pdf",
+    "sha256": "d376e7dc2454df73f0750285e2cba255dc9ad05d61faa1aa5d508eb16991e13e",
+    "bytes": 9620949,
+    "retrieved_at": "2026-11-17T11:57:49Z",
+    "content_type": "application/pdf"
+  },
+  {
+    "source_url": "https://www.rational-online.com/media/investor-relations/veroeffentlichungen-gj-2025/rational-ag---annual-report-fy-2025-(single-pages).pdf",
+    "path": "data/raw/dach/rational-ag/report.pdf",
+    "sha256": "84ff01a4178f91d552252e51db0acb7bb539e89e66e4845e4233662f1975cd81",
+    "bytes": 3311620,
+    "retrieved_at": "2026-11-17T11:58:00Z",
+    "content_type": "application/pdf"
+  },
+  {
+    "source_url": "https://www.siltronic.com/fileadmin/investorrelations/Archiv/2025/Q4/260420_Siltronic_Annual_Report_2025_safe.pdf",
+    "path": "data/raw/dach/siltronic-ag/report.pdf",
+    "sha256": "812e9cdd21746fe1ca27ee454b3903cdc9a3c44d45feff761b3addd101bfc925",
+    "bytes": 7354188,
+    "retrieved_at": "2026-11-17T11:58:10Z",
+    "content_type": "application/pdf"
+  },
+  {
+    "source_url": "https://www.suss.com/en/content/download/3228/47132/2026_03_30_SUSS_Annual%20Report%202025.pdf?version=3",
+    "path": "data/raw/dach/suss-microtec-se/report.pdf",
+    "sha256": "c6a25d9cc4c86ef95ce6352e5136c120743e68d2f1661e6b493c8477410308da",
+    "bytes": 3910418,
+    "retrieved_at": "2026-11-17T11:58:29Z",
+    "content_type": "application/pdf"
+  },
+  {
+    "source_url": "https://annualreport.traton.com/2025/en/assets/downloads/TRA_GB25_EN.pdf",
+    "path": "data/raw/dach/traton-se/report.pdf",
+    "sha256": "d62b4e4cae9be441f4635bebd94a45e46b44385ef60df4d743341c55d11e3039",
+    "bytes": 7861830,
+    "retrieved_at": "2026-11-17T11:58:46Z",
+    "content_type": "application/pdf"
+  },
+  {
+    "source_url": "https://reports.wacker.com/2025/annual-report/_assets/downloads/entire-wacker-ar25.pdf",
+    "path": "data/raw/dach/wacker-chemie-ag/report.pdf",
+    "sha256": "9ced9b10ffb600568f5a3b0b0d06f68572b8c2f28b9ad9d0e9a523e627595f4e",
+    "bytes": 13360729,
+    "retrieved_at": "2026-11-17T11:59:11Z",
+    "content_type": "application/pdf"
+  },
+  {
+    "source_url": "https://www.holcim.com/sites/holcim/files/docs/27022026-holcim-financial-report-2025.pdf",
+    "path": "data/raw/dach/holcim/report.pdf",
+    "sha256": "1ae6e65fef1c7324c21c67b49ddec3e7964d0fbb2cfe556961e6cf379f148d26",
+    "bytes": 3844047,
+    "retrieved_at": "2026-11-17T11:59:20Z",
+    "content_type": "application/pdf"
+  },
+  {
+    "source_url": "https://library.e.abb.com/public/b32991481e8b4418a5c5261c5ff25440/ABB%20Financial%20Report%202025.pdf",
+    "path": "data/raw/dach/abb-group/report.pdf",
+    "sha256": "df0f0ba33dcf5efc1bbcd98c508e056770de5c1a7a4c3446f466099664d2a7c9",
+    "bytes": 2859632,
+    "retrieved_at": "2026-11-17T12:08:14Z",
+    "content_type": "application/pdf"
+  },
+  {
+    "source_url": "https://filings.xbrl.org/506700G44V67MPM4BI12/2024-12-31/ESEF/NL/0/506700G44V67MPM4BI12-2024-12-31-0-en.json",
+    "path": "data/raw/dach/dsm-firmenich-ag/esef.json",
+    "sha256": "713d0f6828512dd020923fefd56ed244d0aa0c152502269e6e3059e901e6769f",
+    "bytes": 7540651,
+    "retrieved_at": "2026-11-17T11:59:26Z",
+    "content_type": "application/json"
+  },
+  {
+    "source_url": "https://annualreport.dsm-firmenich.com/2025/_assets/downloads/entire-dsmfirmenich-iar25.pdf",
+    "path": "data/raw/dach/dsm-firmenich-ag/report.pdf",
+    "sha256": "c753a47f3d6fa0a7da415b478089cc74d0ad05f3317e403b53dfb0af3d32906b",
+    "bytes": 36745517,
+    "retrieved_at": "2026-11-17T12:01:03Z",
+    "content_type": "application/pdf"
+  },
+  {
+    "source_url": "https://annualreport.dsm-firmenich.com/2025/_assets/downloads/downloads-xbrl-dsmfirmenich-iar25.zip?h=Yz4Yb0U0",
+    "path": "data/raw/dach/dsm-firmenich-ag/esef.xhtml",
+    "sha256": "633e186f4534b535dfdad16d57a3b22510963a91846dadba7446c4dbfcdd87cf",
+    "bytes": 88642775,
+    "retrieved_at": "2026-11-17T12:05:53Z",
+    "content_type": "application/zip"
+  },
+  {
+    "source_url": "https://www.sika.com/dam/dms/corporate/media/glo-ar-25-annual-report.pdf",
+    "path": "data/raw/dach/sika-ag/report.pdf",
+    "sha256": "e2ba745f1a3b974db6af2e2dd9105468ff507c659c1f8655aa172fba6ebe3dbc",
+    "bytes": 6427343,
+    "retrieved_at": "2026-11-17T12:06:03Z",
+    "content_type": "application/pdf"
+  },
+  {
+    "source_url": "https://group.schindler.com/content/dam/website/group/docs/investors/2025/2025-schindler-fy-financial-statements-en.pdf/_jcr_content/renditions/original./2025-schindler-fy-financial-statements-en.pdf",
+    "path": "data/raw/dach/schindler-elevator/report.pdf",
+    "sha256": "bacb6a5e48675b72830b056edc03a8127ed314bad53df0370b2958a200d1787b",
+    "bytes": 5761216,
+    "retrieved_at": "2026-11-17T12:06:32Z",
+    "content_type": "application/pdf"
+  },
+  {
+    "source_url": "https://www.stadlerrail.com/api/docs/x/518f589306/annual-report_2025_en.pdf",
+    "path": "data/raw/dach/stadler-rail/report.pdf",
+    "sha256": "2fb7d7590e261b5aab7bfe2754d48ab358ae19498813cf52efe4d1b7a0725d08",
+    "bytes": 12373991,
+    "retrieved_at": "2026-11-17T12:07:00Z",
+    "content_type": "application/pdf"
+  },
+  {
+    "source_url": "https://filings.xbrl.org/529900TYYSRJH2VJSP60/2025-12-31/ESEF/AT/0/529900TYYSRJH2VJSP60-2025-12-31-1-en.json",
+    "path": "data/raw/dach/strabag/esef.json",
+    "sha256": "760511c4a43001838c2f71903206e2cdb7d60292916ed63a2e2dceffab480ae1",
+    "bytes": 5605602,
+    "retrieved_at": "2026-11-17T11:09:52Z",
+    "content_type": "application/json"
+  },
+  {
+    "source_url": "https://report.strabag.com/2025/ar/downloads/en/Group_Management_Report,_Consolidated_Financial_Statements_Notes_2025.pdf",
+    "path": "data/raw/dach/strabag/report.pdf",
+    "sha256": "8db80922c81d25e7840a10b1348e594d7a9bffa4cb7dee1cc96842bc399887cf",
+    "bytes": 3082595,
+    "retrieved_at": "2026-11-17T12:07:12Z",
+    "content_type": "application/pdf"
+  },
+  {
+    "source_url": "https://filings.xbrl.org/529900TYYSRJH2VJSP60/2025-12-31/ESEF/AT/0/529900TYYSRJH2VJSP60-2025-12-31-1-en/reports/529900TYYSRJH2VJSP60-2025-12-31-1-en.xhtml",
+    "path": "data/raw/dach/strabag/esef.xhtml",
+    "sha256": "98af8e001b819862e6f0b18bbf5e16ce0dbd1155a829ff9706cfab655468b7b0",
+    "bytes": 34461368,
+    "retrieved_at": "2026-11-17T11:10:34Z",
+    "content_type": "application/xhtml+xml"
+  }
+]

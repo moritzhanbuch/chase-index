@@ -1,0 +1,8 @@
+# Wikidata parent links (P749) that are NOT majority control and must not roll one universe company into another.
+# Found in the Phase 12 external-validation check (Renault was carrying Nissan's UK entities).
+# Each entry: the child company_id and the reason. The child stays its own group.
+cut:
+  - {child: nissan-q20165, wikidata_parent: Renault, reason: "Renault holds a minority stake in Nissan and accounts for it as an associate; not a subsidiary."}
+  - {child: wistron-q441821, wikidata_parent: Acer, reason: "Wistron was spun off from Acer in 2000-2001; not a subsidiary."}
+  - {child: vanke-q861340, wikidata_parent: China Resources, reason: "China Resources sold its Vanke stake in 2017; stale Wikidata link."}
+  - {child: fibercop-q107214638, wikidata_parent: KKR, reason: "An investor's holding does not make a portfolio company part of an operating group."}

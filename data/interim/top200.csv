@@ -1,0 +1,201 @@
+rank,company_id,name,country,hq_city,sector,cik,lei,isin,tickers,website,in_sec,in_esef,revenue_usd,pain_basis,priority_tier
+1,alstom-q309084,Alstom,FR,Saint-Ouen-sur-Seine,manufacturing,,96950032TUYMW11FB530,FR0010220475,ALO,https://www.alstom.com/,False,True,20704680000.0,uk_reported,1
+2,siemens-energy-ag-q89189545,Siemens Energy AG,DE,Munich,manufacturing,,5299005CHJZ14D4FDJ62,DE000ENER6Y0,ENR,https://www.siemens-energy.com/,False,False,33608520000.000004,uk_reported,1
+3,lkq-corporation-cik1065696,LKQ Corporation,US,,logistics,0001065696,,,LKQ,,True,False,13651000000.0,uk_reported,1
+4,fresenius-medical-care-q650259,Fresenius Medical Care,DE,Bad Homburg vor der Höhe,pharma,0001333141,549300CP8NY40UP89Q40,DE0005785802,"FMS,FMCQF",https://fmcna.com/,True,False,23064162162.0,uk_reported,1
+5,nestle-q160746,Nestlé,CH,Vevey,consumer_goods,,KY37LUS27QQX7BB93L28,CH0038863350|US6410694060,NESN,https://www.nestle.com/,False,False,101123699999.99998,uk_reported,1
+6,heineken-holding-n-v-leitybs04,Heineken Holding N.V.,NL,,consumer_goods,,724500M1WJLFM9TYBS04,,,,False,True,36997560000.0,uk_reported,1
+7,ge-vernova-inc-cik1996810,GE Vernova Inc.,US,,manufacturing,0001996810,,,GEV,,True,False,38068000000.0,uk_reported,1
+8,reckitt-benckiser-group-plc-lei48v108,Reckitt Benckiser Group plc,GB,,consumer_goods,,5493003JFSMOJG48V108,,,,False,True,18040350000.0,uk_reported,1
+9,grifols-q901262,Grifols,ES,Sant Cugat del Vallès,pharma,0001438569,959800HSSNXWRKBK4N60,ES0171996012,"GRFS,GIFLF,GIFOF,GIKLY",https://www.grifols.com/en/home,True,True,8475184489.0,es_reported,1
+10,johnson-matthey-plc-leisc6z10,Johnson Matthey plc,GB,,manufacturing,,2138001AVBSD1HSC6Z10,,,,False,True,15967710000.0,uk_reported,1
+11,publicis-q1537378,Publicis,FR,Paris,services,,2138004KW8BV57III342,FR0000130577,PUB,https://www.publicisgroupe.com/,False,True,17312400000.0,uk_reported,1
+12,haleon-plc-cik1900304,Haleon plc,GB,,consumer_goods,0001900304,549300PSB3WWEODCUP19,,"HLN,HLNCF",,True,True,14845222073.0,uk_reported,1
+13,lyondellbasell-q899255,LyondellBasell,US,Houston,manufacturing,0001489393,BN6WCCZ8OVP3ITUUVN49,NL0009434992,LYB,https://www.lyondellbasell.com/,True,False,30153000000.0,uk_reported,1
+14,eaton-corporation-q48872,Eaton Corporation,US,Cleveland,manufacturing,0001551182,549300VDIGTMXUNT7H71,IE00B8KQN827,ETN,https://www.eaton.com/us/en-us.html,True,False,27448000000.0,uk_reported,1
+15,terex-corp-cik97216,Terex Corp,US,,manufacturing,0000097216,,,TEX,,True,False,5421000000.0,uk_reported,1
+16,prysmian-group-q1964784,Prysmian Group,IT,Milan,manufacturing,,529900X0H1IO3RS1A464,IT0004176001,PRY|PRYMF,https://www.prysmian.com/en,False,True,18538200000.0,uk_reported,1
+17,unilever-q157062,Unilever,GB,Rotterdam,consumer_goods,0000217410,549300MKFYEKVRWML317|549300TK7G7NZTVM1Z30,GB00B10RZP78,"UL,UNLYF",https://unilever.com,True,True,59345475911.0,uk_reported,1
+18,puig-q3410623,Puig,ES,L'Hospitalet de Llobregat,consumer_goods,,549300OVHNSX30L1AQ94,ES0105777017,,https://www.puig.com,False,True,5445388080.0,es_reported,1
+19,mondelez-international-q12857502,Mondelez International,US,Chicago,consumer_goods,0001103982,549300DV9GIB88LZ5P30,US6092071058,MDLZ,https://www.mondelezinternational.com/,True,False,38537000000.0,uk_reported,1
+20,airbus-q2311,Airbus,NL,Leiden,manufacturing,,MINO79WLOO247M1IL051,NL0000235190,AIR,https://airbus.com,False,True,79293600000.0,uk_reported,1
+21,saint-gobain-q678565,Saint-Gobain,FR,La Défense,construction,,529900VHGS3F092FTK82|NFONVGN05Z0FMN5PEC35,FR0000125007,SGO,https://www.saint-gobain.com/,False,True,50201640000.0,uk_reported,1
+22,ge-aerospace-q1485061,GE Aerospace,US,Evendale,manufacturing,0000040545,3C7474T6CDKPR9K6YT90,US3696041033|US3696043013,GE,https://www.geaerospace.com/,True,False,45855000000.0,uk_reported,1
+23,abbvie-q14662364,AbbVie,US,North Chicago,pharma,0001551152,FR5LCKFTG8054YNNRU85,US00287Y1091,ABBV,http://www.abbvie.com,True,False,61160000000.0,uk_reported,1
+24,pilgrims-pride-corp-cik802481,Pilgrims Pride Corp,US,,consumer_goods,0000802481,,,PPC,,True,False,18497553000.0,uk_reported,1
+25,cummins-inc-cik26172,Cummins Inc,US,,manufacturing,0000026172,,,CMI,,True,False,33670000000.0,uk_reported,1
+26,pernod-ricard-q837049,Pernod Ricard,FR,Paris,consumer_goods,,52990097YFPX9J0H5D87,FR0000120693,RI,http://pernod-ricard.com/,False,True,11835720000.0,uk_reported,1
+27,roche-holding-q25463170,Roche Holding,CH,Basel,pharma,,549300U41AUUVOAAOB37,CH0012032048|CH0012032113,RO|ROG,https://www.roche.com/,False,False,70965130000.0,uk_reported,1
+28,anheuser-busch-inbev-q128738,Anheuser-Busch InBev,BE,Leuven,consumer_goods,0001668717,5493008H3828EMEXB082,BE0974293251,"BUD,BUDFF",https://www.ab-inbev.com/,True,False,59320000000.0,uk_reported,1
+29,bunzl-public-limited-company-lei78um09,Bunzl Public Limited Company,GB,,logistics,,213800Q1Q9DV4L78UM09,,,,False,True,15043658000.0,uk_reported,1
+30,danone-q329426,Danone,FR,Paris,consumer_goods,,969500KMUQ2B6CBAF162,FR0000120644,DANOY|BN,https://www.danone.com/,False,True,29566080000.000004,uk_reported,1
+31,ds-smith-plc-leiblwh36,DS Smith plc,GB,,manufacturing,,39RSBE4RCI4M15BLWH36,,,,False,True,8663940000.0,uk_reported,1
+32,sherwin-williams-q48881,Sherwin-Williams,US,Cleveland,retail,0000089800,Z15BMIOX8DDH0X2OBP21,US8243481061,SHW,https://www.sherwin-williams.com.mx,True,False,23574300000.0,uk_reported,1
+33,itochu-q717093,Itochu,JP,Umeda,energy,,J48DJYXDTLHM30UMYI18,JP3143600009,ITOCY|8001,https://www.itochu.co.jp,False,False,69429607600.0,uk_reported,1
+34,kronospan-aps-lei6v0282,Kronospan ApS,DK,,manufacturing,,894500U71P0EXV6V0282,,,,False,True,65165040000.00001,uk_reported,1
+35,ppg-industries-q48754,PPG Industries,US,Pittsburgh,manufacturing,0000079879,549300BKPEP01R3V6C59,US6935061076,PPG,https://www.ppg.com/,True,False,15875000000.0,uk_reported,1
+36,vistry-group-plc-lei9slk53,Vistry Group plc,GB,,construction,,2138001KOWN7CG9SLK53,,,,False,True,5277231000.0,uk_reported,1
+37,genuine-parts-co-cik40987,Genuine Parts Co,US,,logistics,0000040987,,,GPC,,True,False,24300141000.0,uk_reported,1
+38,the-coca-cola-company-q3295867,The Coca-Cola Company,US,Atlanta,consumer_goods,0000021344,UWJKFUJFZ02DKWI3RY53,US1912161007,KO,https://www.coca-colacompany.com/,True,False,47941000000.0,uk_reported,1
+39,procter-gamble-q212405,Procter & Gamble,US,Ohio,consumer_goods,0000080424,2572IBTT8CCZW6AU4141,US7427181091,PG,http://www.pg.com/,True,False,87032000000.0,uk_reported,1
+40,puma-q157064,Puma,DE,Herzogenaurach,consumer_goods,,529900GRZ2BQY5ZM9N49,DE0006969603,,https://eu.puma.com/de/en/home,False,False,9522576000.0,uk_reported,1
+41,pepsico-q334800,PepsiCo,US,Purchase,consumer_goods,0000077476,FJSUNZKFNQ5YPJ5OT455,US7134481081,PEP,https://www.pepsico.com/,True,False,93925000000.0,uk_reported,1
+42,bayer-q152051,Bayer,DE,Leverkusen,pharma,,549300J4U55H3WP1XT59,DE000BAY0017,BAYN|DE000BAY0017,https://bayer.com,False,False,51447960000.0,uk_reported,1
+43,zimmer-biomet-holdings-inc-cik1136869,"Zimmer Biomet Holdings, INC.",US,,pharma,0001136869,,,ZBH,,True,False,8231500000.0,uk_reported,1
+44,amazon-q3884,Amazon,US,Seattle,retail,0001018724,ZXTILKJKG63JELOEG630,US0231351067,AMZN,https://www.amazon.com/,True,False,716924000000.0,uk_reported,1
+45,british-american-tobacco-q856411,British American Tobacco,GB,London,consumer_goods,0001303523,213800FKA5MF17RJKT63,GB0002875804,"BTI,BTAFF",https://bat.com,True,True,34468371467.0,uk_reported,1
+46,baxter-international-q761965,Baxter International,US,Deerfield,pharma,0000010456,,US0718131099,BAX,http://www.baxter.com/,True,False,11244000000.0,uk_reported,1
+47,cargill-q1036056,Cargill,US,Minnetonka,consumer_goods,,QXZYQNMR4JZ5RIRN4T31,,,http://www.cargill.com/,False,False,144695000000.0,uk_reported,1
+48,technipfmc-q30324333,TechnipFMC,GB,London,manufacturing,0001681459,549300D5I93QWCJTCK36,GB00BDSFG982,FTI,http://www.technipfmc.com,True,False,9932600000.0,uk_reported,1
+49,caterpillar-inc-q459965,Caterpillar Inc.,US,Irving,manufacturing,0000018230,WRJR7GS4GTRECRRTVX92,US1491231015,CAT,https://www.caterpillar.com/,True,False,67589000000.0,uk_reported,1
+50,coca-cola-europacific-partners-q20811256,Coca-Cola Europacific Partners,GB,Uxbridge,consumer_goods,0001650107,549300LTH67W4GWMRF57,GB00BDCPN049,CCEP,https://www.cocacolaep.com/,True,True,24560517039.0,uk_reported,1
+51,syngenta-group-q114634360,Syngenta Group,CH,Basel,consumer_goods,,,,,https://www.syngentagroup.com,False,False,28200000000.0,uk_reported,1
+52,rolls-royce-q243278,Rolls-Royce,GB,London,manufacturing,,213800EC7997ZBLZJH69|X57JK1U580XATGR67572,GB00B63H8491,RR,https://www.rolls-royce.com/,False,True,26932890000.0,uk_reported,1
+53,holcim-q267818,Holcim,CH,Zug,construction,,529900EHPFPYHV6IQO98,,,http://www.holcim.com,False,False,32983569999.999996,uk_reported,1
+54,kimberly-clark-q1741634,Kimberly-Clark,US,Irving,manufacturing,0000055785,MP3J6QPYPGN75NVW2S34,US4943681035,KMB,http://www.kimberly-clark.com,True,False,16447000000.0,uk_reported,1
+55,church-dwight-co-inc-cik313927,Church & Dwight Co Inc,US,,consumer_goods,0000313927,,,CHD,,True,False,6203200000.0,uk_reported,1
+56,kraft-heinz-q19681433,Kraft Heinz,US,Pittsburgh,consumer_goods,0001637459,9845007488EC87F5AF14,US5007541064,KHC,https://www.kraftheinzcompany.com/,True,False,24942000000.0,uk_reported,1
+57,acerinox-sa-lei582721,Acerinox SA,ES,,manufacturing,,95980020140005582721,,,,False,True,6242954040.0,es_reported,1
+58,cooper-companies-inc-cik711404,"Cooper Companies, INC.",US,,pharma,0000711404,,,COO,,True,False,4092400000.0,uk_reported,1
+59,rheinmetall-ag-q161544,Rheinmetall AG,DE,Düsseldorf,manufacturing,,5299001OU9CSE29O6S05,DE0007030009,RHM,https://www.rheinmetall.com/de,False,False,7750080000.000001,uk_reported,1
+60,safran-q1886126,Safran,FR,Paris,manufacturing,,969500UIC89GT3UL7L24,FR0000073272,SAF,https://www.safran-group.com,False,True,34188480000.000004,uk_reported,1
+61,pirelli-q207770,Pirelli,IT,Milan,automotive,,815600A0C9AFC1F2A709,IT0005278236,PIRC,https://www.pirelli.com/,False,True,7318249560.000001,uk_reported,1
+62,diageo-q161140,Diageo,GB,London,consumer_goods,0000835403,213800ZVIELEA55JMJ32,GB0002374006,"DEO,DGEAF",http://www.diageo.com,True,True,27964000000.0,uk_reported,1
+63,stellantis-q97439162,Stellantis,NL,Amsterdam,automotive,0001605484,549300LKT9PW7ZIBDF31,NL00150001Q9,STLA,https://www.stellantis.com/,True,True,180385428907.0,uk_reported,1
+64,crown-holdings-inc-cik1219601,"Crown Holdings, INC.",US,,manufacturing,0001219601,,,CCK,,True,False,12365000000.0,uk_reported,1
+65,starbucks-q37158,Starbucks,US,Seattle,retail,0000829224,OQSJ1DU9TAOC51A47K68,US8552441094,SBUX,https://www.starbucks.com/,True,False,37910600000.0,uk_reported,1
+66,akzonobel-q50912,AkzoNobel,NL,Amsterdam,manufacturing,,724500XYIJUGXAA5QD70,NL0013267909,AKZA|AKZOY,https://www.akzonobel.com/,False,True,10970640000.0,uk_reported,1
+67,brenntag-q828445,Brenntag,DE,Essen,logistics,,NNROIXVWJ7CPSR27SV97,DE000A1DAHH0|US1071801013,BNR,https://www.brenntag.com/,False,False,20952000000.0,uk_reported,1
+68,adient-plc-cik1670541,Adient plc,IE,,automotive,0001670541,,,ADNT,,True,False,15168000000.0,uk_reported,1
+69,nov-inc-cik1021860,NOV Inc.,US,,manufacturing,0001021860,,,NOV,,True,False,8744000000.0,uk_reported,1
+70,arrow-electronics-inc-cik7536,"Arrow Electronics, INC.",US,,logistics,0000007536,,,ARW,,True,False,30852935000.0,uk_reported,1
+71,heidelberg-materials-q632233,Heidelberg Materials,DE,Heidelberg,construction,,LZ2C6E0W5W7LQMX5ZI37,DE0006047004,HEI,https://www.heidelbergmaterials.com,False,False,19014372000.0,uk_reported,1
+72,carlsberg-group-q113215,Carlsberg Group,DK,Copenhagen,consumer_goods,,5299001O0WJQYB5GYZ19,DK0010181676|DK0010181759,CARL A|CARL B,https://www.carlsberggroup.com,False,True,12918775000.0,uk_reported,1
+73,garmin-q658789,Garmin,CH,Schaffhausen,manufacturing,0001121788,,,GRMN,https://www.garmin.com,True,False,7245519000.0,uk_reported,1
+74,abbott-laboratories-q306764,Abbott Laboratories,US,North Chicago,pharma,0000001800,HQD377W2YR662HK5JX27,US0028241000,ABT,https://abbott.com,True,False,44328000000.0,uk_reported,1
+75,graphic-packaging-holding-co-cik1408075,Graphic Packaging Holding Co,US,,manufacturing,0001408075,,,GPK,,True,False,8617000000.0,uk_reported,1
+76,ametek-q470317,Ametek,US,Berwyn,manufacturing,0001037868,549300WZDEF9KKE40E98,US0311001004,AME,http://ametek.co.jp/index.aspx,True,False,7401116000.0,uk_reported,1
+77,tjx-companies-q1285819,TJX Companies,US,Framingham,retail,0000109198,V167QI9I69W364E2DY52,US8725401090,TJX,http://www.tjx.com/,True,False,60372000000.0,uk_reported,1
+78,ford-motor-company-q44294,Ford Motor Company,US,Dearborn,automotive,0000037996,20S05OYHG0MQM4VUIC57,US3453708600,"F,F-PB,F-PC,F-PD",https://www.ford.com,True,False,187267000000.0,uk_reported,1
+79,gilead-sciences-q663596,Gilead Sciences,US,Foster City,pharma,0000882095,549300WTZWR07K8MNV44,US3755581036,GILD,https://www.gilead.com/,True,False,29443000000.0,uk_reported,1
+80,continental-ag-q163241,Continental AG,DE,Hanover,automotive,,529900A7YD9C0LLXM621,DE0005439004,CON,https://continental.com/,False,False,44734140000.0,uk_reported,1
+81,assa-abloy-ab-leiimmb67,Assa Abloy AB,SE,,manufacturing,,549300YECS8HKCIMMB67,,,,False,True,14478855000.0,uk_reported,1
+82,kone-oyj-lei5xzk38,Kone Oyj,FI,,manufacturing,,2138001CNF45JP5XZK38,,,,False,True,12144816000.0,uk_reported,1
+83,xerox-q152433,Xerox,US,Norwalk,technology,0001770450,4KF48RN45X1OO8UBLY20,US9841211033,"XRX,XRXDW",https://www.xerox.com/,True,False,7022000000.0,uk_reported,1
+84,asahi-group-holdings-q11283168,Asahi Group Holdings,JP,Tokyo,consumer_goods,,353800KAJ02XNHLCJW79,,2502,http://www.asahigroup-holdings.com/,False,False,11436236700.0,uk_reported,1
+85,forvia-leiiulv85,Forvia,FR,,automotive,,969500F0VMZLK2IULV85,,,,False,True,29427732000.000004,uk_reported,1
+86,kenvue-inc-cik1944048,Kenvue Inc.,US,,consumer_goods,0001944048,,,KVUE,,True,False,15124000000.0,uk_reported,1
+87,fujifilm-corporation-q164740,Fujifilm Corporation,JP,Minato,manufacturing,,3538006FOBB5D741GF13,JP3814000000,4901,https://www.fujifilm.com/,False,False,19155574700.0,uk_reported,1
+88,zebra-technologies-corp-cik877212,Zebra Technologies Corp,US,,manufacturing,0000877212,,,ZBRA,,True,False,5396000000.0,uk_reported,1
+89,sanofi-q158205,Sanofi,FR,Paris,pharma,,549300E9PC51EN656011,FR0000120578,SNY|SAN,https://www.sanofi.com/,False,True,47116080000.0,uk_reported,1
+90,organon-co-q903372,Organon & Co.,US,Oss,pharma,0001821825,549300AMCKY57OK2CO56,US68622V1061,OGN,https://www.organon.com/,True,False,6216000000.0,uk_reported,1
+91,universal-music-group-q38903,Universal Music Group,US,New York,services,,724500GJBUL3D9TW9Y18,NL0015000IY2,UMG,http://www.universalmusic.fr/,False,True,13507560000.0,uk_reported,1
+92,travis-perkins-plc-leif22k83,Travis Perkins plc,GB,,construction,,2138001I27OUBAF22K83,,,,False,True,5797042000.0,uk_reported,1
+93,imperial-brands-plc-leijl3a42,Imperial Brands plc,GB,,consumer_goods,,549300DFVPOB67JL3A42,,,,False,True,40857170000.0,uk_reported,1
+94,plexus-corp-cik785786,Plexus Corp,US,,technology,0000785786,,,PLXS,,True,False,4032966000.0,uk_reported,1
+95,lanxess-q682992,Lanxess,DE,Cologne,manufacturing,,529900PTLRE72EMYIJ77|529900RXI97THSFCH777,DE0005470405,LNXSF,http://www.lanxess.com,False,False,6912000000.0,uk_reported,1
+96,brown-forman-corp-cik14693,Brown Forman Corp,US,,consumer_goods,0000014693,,,"BF-B,BF-A",,True,False,5082000000.0,uk_reported,1
+97,xylem-inc-q3146975,Xylem Inc.,US,White Plains,manufacturing,0001524472,549300DF5MV96DRYLQ48,US98419M1009,XYL,http://www.xylem.com,True,False,9035000000.0,uk_reported,1
+98,bristol-myers-squibb-q266423,Bristol-Myers Squibb,US,New York City,pharma,0000014272,HLYYNH7UQUORYSJQCN42,US1101221083,"BMY,CELG-RI",https://www.bms.com/,True,False,48194000000.0,uk_reported,1
+99,cf-industries-holdings-inc-cik1324404,"CF Industries Holdings, Inc.",US,,manufacturing,0001324404,,,CF,,True,False,7084000000.0,uk_reported,1
+100,eni-q565594,Eni,IT,Rome,energy,0001002242,BUCRF72VH5RBN7X3VL35,IT0003132476,"E,EIPAF",https://www.eni.com/,True,True,96534665100.0,uk_reported,1
+101,axalta-coating-systems-ltd-cik1616862,Axalta Coating Systems Ltd.,US,,manufacturing,0001616862,,,AXTA,,True,False,5117000000.0,uk_reported,1
+102,telefonaktiebolaget-lm-ericsson-leixifm52,Telefonaktiebolaget LM Ericsson,SE,,technology,,549300W9JLPW15XIFM52,,,,False,True,22484695000.0,uk_reported,1
+103,post-holdings-inc-cik1530950,"Post Holdings, Inc.",US,,consumer_goods,0001530950,,,POST,,True,False,8158100000.0,uk_reported,1
+104,ge-healthcare-technologies-inc-cik1932393,GE HealthCare Technologies Inc.,US,,pharma,0001932393,,,GEHC,,True,False,20625000000.0,uk_reported,1
+105,currys-plc-leidqqf16,Currys plc,GB,,retail,,2138001E12GWLLDQQF16,,,,False,True,11752580000.0,uk_reported,1
+106,teledyne-technologies-inc-cik1094285,Teledyne Technologies Inc,US,,manufacturing,0001094285,,,TDY,,True,False,6115400000.0,uk_reported,1
+107,iqvia-holdings-inc-cik1478242,Iqvia Holdings INC.,US,,pharma,0001478242,,,IQV,,True,False,16310000000.0,uk_reported,1
+108,niq-global-intelligence-plc-cik2054696,NIQ Global Intelligence plc,US,,technology,0002054696,,,NIQ,,True,False,4198400000.0,uk_reported,1
+109,gsk-plc-cik1131399,GSK plc,GB,,pharma,0001131399,5493000HZTVUYLO1D793,,"GSK,GLAXF",,True,True,43966352624.0,uk_reported,1
+110,anglo-american-plc-leix8me43,Anglo American plc,GB,,energy,,549300S9XF92D1X8ME43,,,,False,True,18546000000.0,uk_reported,1
+111,viatris-inc-cik1792044,Viatris Inc,US,,pharma,0001792044,,,VTRS,,True,False,14299900000.0,uk_reported,1
+112,kerry-group-leifhwc59,Kerry Group,IE,,other,,635400TLVVBNXLFHWC59,,,,False,True,7483428000.000001,uk_reported,1
+113,ardagh-metal-packaging-s-a-cik1845097,Ardagh Metal Packaging S.A.,LU,,manufacturing,0001845097,,,AMBP,,True,False,5497000000.0,uk_reported,1
+114,arla-foods-q674575,Arla Foods,DK,Aarhus,consumer_goods,,529900IJ6T4P1O10R377,GB0002577657,,https://www.arla.com,False,True,16271280000.000002,uk_reported,1
+115,amphenol-q474621,Amphenol,US,Wallingford,technology,0000820313,549300D3L3G0R4U4VT04,US0320951017,APH,http://www.amphenol.com,True,False,23094700000.0,uk_reported,1
+116,cellnex-telecom-sa-leiui7p67,Cellnex Telecom SA,ES,,telecom,,5493008T4YG3AQUI7P67,,,,False,True,4449877560.0,es_reported,1
+117,accor-q212599,Accor,FR,Issy-les-Moulineaux,services,,969500QZC2Q0TK11NV07,FR0000120404,AC,https://all.accor.com/,False,True,6090120000.0,uk_reported,1
+118,harley-davidson-inc-cik793952,"Harley-Davidson, INC.",US,,automotive,0000793952,,,HOG,,True,False,4473175000.0,uk_reported,1
+119,stryker-corporation-q2357515,Stryker Corporation,US,Portage,pharma,0000310764,5493002F0SC4JTBU5137,US8636671013,SYK,https://stryker.com,True,False,25116000000.0,uk_reported,1
+120,smith-nephew-plc-cik845982,Smith & Nephew plc,GB,,pharma,0000845982,213800ZTMDN8S67S1H61,,"SNN,SNNUF",,True,True,6164000000.0,uk_reported,1
+121,steris-plc-cik1757898,STERIS plc,IE,,pharma,0001757898,,,STE,,True,False,5935900000.0,uk_reported,1
+122,rpm-international-inc-cik110621,Rpm International Inc,US,,manufacturing,0000110621,,,RPM,,True,False,7863422000.0,uk_reported,1
+123,robert-half-inc-cik315213,Robert Half INC.,US,,services,0000315213,,,RHI,,True,False,5378506000.0,uk_reported,1
+124,hilton-worldwide-q1057464,Hilton Worldwide,US,McLean,services,0001585689,549300HVGPK36ICB0B89,US43300A2033,HLT,https://www.hilton.com,True,False,12039000000.0,uk_reported,1
+125,elior-group-lei00sq95,Elior Group,FR,,services,,969500LYSYS0E800SQ95,,,,False,True,6642000000.0,uk_reported,1
+126,avis-budget-group-q2874395,Avis Budget Group,US,Parsippany-Troy Hills,services,0000723612,529900E95812SYWMCE44,US0537741052,CAR,https://avisbudgetgroup.com/,True,False,11652000000.0,uk_reported,1
+127,indra-sistemas-q1661823,Indra Sistemas,ES,Alcobendas,technology,,95980020140005308793,ES0118594417,IDR|ISMAY,https://www.indracompany.com/en/,False,True,5893184160.0,es_reported,1
+128,visa-inc-q328840,Visa Inc.,US,Mission Rock,services,0001403161,549300JZ4OKEHW3DPJ59,US92826C8394,V,https://corporate.visa.com/,True,False,45903000000.0,uk_reported,1
+129,intertek-group-plc-lei1rn369,Intertek Group plc,GB,,services,,2138003GAT25WW1RN369,,,,False,True,4358132000.0,uk_reported,1
+130,ciena-corp-cik936395,Ciena Corp,US,,technology,0000936395,,,CIEN,,True,False,4769507000.0,uk_reported,1
+131,azelis-group-q115167314,Azelis Group,BE,Antwerp,logistics,,699400M9RRMTV264FM70,BE0974400328,AZE,https://www.azelis.com/,False,False,4439642400.0,uk_reported,1
+132,trip-com-group-ltd-cik1269238,Trip.com Group Ltd,SG,,services,0001269238,,,"TCOM,TRPCF",,True,False,8939000000.0,uk_reported,1
+133,broadridge-financial-solutions-inc-cik1383312,"Broadridge Financial Solutions, INC.",US,,services,0001383312,,,BR,,True,False,7476800000.0,uk_reported,1
+134,corteva-q63197674,Corteva,US,"Washington, D.C.",consumer_goods,0001755672,549300WZN9I2QKLS0O94,US22052L1044,CTVA,https://www.corteva.com/,True,False,17401000000.0,computed_dpo_proxy,1
+135,berkshire-hathaway-energy-q16840677,Berkshire Hathaway Energy,US,Des Moines,utilities,0001081316,,,,http://www.berkshirehathawayenergyco.com/,True,False,26198000000.0,computed_dpo_proxy,1
+136,american-electric-power-co-inc-cik4904,American Electric Power Co Inc,US,,utilities,0000004904,,,AEP,,True,False,21876000000.0,computed_dpo_proxy,1
+137,conocophillips-q214763,ConocoPhillips,US,Houston,energy,0001163165,WPTL2Z3FIYTHSP5V2253,US20825C1045,COP,https://www.conocophillips.com/,True,False,58944000000.0,computed_dpo_proxy,1
+138,flex-ltd-q1140680,Flex Ltd.,US,San Jose,technology,0000866374,549300EAQH74YHD07T53,SG9999000020,FLEX,https://www.flex.com,True,False,27914000000.0,computed_dpo_proxy,1
+139,coherent-corp-cik820318,Coherent Corp.,US,,manufacturing,0000820318,,,COHR,,True,False,7118181000.0,computed_dpo_proxy,1
+140,jabil-inc-cik898293,Jabil Inc,US,,technology,0000898293,,,JBL,,True,False,35954000000.0,computed_dpo_proxy,1
+141,coupang-inc-cik1834584,"Coupang, Inc.",US,,retail,0001834584,,,CPNG,,True,False,34534000000.0,computed_dpo_proxy,1
+142,vale-s-a-cik917851,Vale S.A.,BR,,energy,0000917851,,,VALE,,True,False,38403000000.0,computed_dpo_proxy,1
+143,tapestry-inc-cik1116132,"Tapestry, INC.",US,,manufacturing,0001116132,,,TPR,,True,False,8004200000.0,computed_dpo_proxy,1
+144,public-service-enterprise-group-q930919,Public Service Enterprise Group,US,Newark,utilities,0000788784,549300RUHPVD434XUK18|PUSS41EMO3E6XXNV3U28,US7445731067,PEG,http://www.pseg.com,True,False,12168000000.0,computed_dpo_proxy,1
+145,pinnacle-west-capital-corp-cik764622,Pinnacle West Capital Corp,US,,utilities,0000764622,,,PNW,,True,False,5339939000.0,computed_dpo_proxy,1
+146,pdd-holdings-q124461238,PDD Holdings,IE,Dublin,services,0001737806,5493000573DS7005T657,US7223041028,PDD,https://www.pddholdings.com/,True,False,61753116000.0,computed_dpo_proxy,1
+147,novo-q818846,Novo,DK,Bagsværd,pharma,0000353278,549300DAQ1CVT6CXN342,DK0062498333,"NVO,NONOF",https://www.novonordisk.com,True,False,48633202203.0,computed_dpo_proxy,1
+148,kinder-morgan-q931032,Kinder Morgan,US,Houston,energy,0001506307,549300WR7IX8XE0TBO16,US49456B1017,"KMI,EP-PC",http://www.kindermorgan.com/,True,False,16937000000.0,computed_dpo_proxy,1
+149,stark-group-q10465506,Stark Group,DK,Frederiksberg,construction,,213800TVFZLS2UKKDC72,,,https://starkgroup.dk,False,True,8380800000.000001,computed_dpo_proxy,1
+150,esprinet-s-p-a-lei6add08,Esprinet S.p.a.,IT,,logistics,,8156007E3375956ADD08,,,,False,True,4635414000.0,computed_dpo_proxy,1
+151,floor-decor-holdings-inc-cik1507079,"Floor & Decor Holdings, Inc.",US,,retail,0001507079,,,FND,,True,False,4684088000.0,computed_dpo_proxy,1
+152,shift4-payments-inc-cik1794669,"Shift4 Payments, Inc.",US,,services,0001794669,,,"FOUR,FOUR-PA",,True,False,4180000000.0,computed_dpo_proxy,1
+153,resideo-technologies-inc-cik1740332,"Resideo Technologies, INC.",US,,logistics,0001740332,,,REZI,,True,False,7472000000.0,computed_dpo_proxy,1
+154,keurig-dr-pepper-q1254149,Keurig Dr Pepper,US,Plano,consumer_goods,0001418135,DYTQ8KRTKO7Y2BVU5K74,US26138E1091,KDP,http://www.drpeppersnapplegroup.com/,True,False,16603000000.0,computed_dpo_proxy,1
+155,iveco-group-n-v-lei9eor96,Iveco Group N.V.,IT,,automotive,,549300ZWF2ZJDD9EOR96,,,,False,True,14502240000.000002,computed_dpo_proxy,1
+156,western-digital-corp-cik106040,Western Digital Corp,US,,technology,0000106040,,,WDC,,True,False,12919000000.0,computed_dpo_proxy,1
+157,wec-energy-group-inc-cik783325,"Wec Energy Group, INC.",US,,utilities,0000783325,,,WEC,,True,False,9800100000.0,computed_dpo_proxy,1
+158,teck-resources-ltd-cik886986,Teck Resources Ltd,CA,,energy,0000886986,,,"TECK,TCKRF",,True,False,7856829803.0,computed_dpo_proxy,1
+159,ambev-s-a-cik1565025,Ambev S.A.,BR,,consumer_goods,0001565025,,,ABEV,,True,False,16111466131.0,computed_dpo_proxy,1
+160,community-health-systems-inc-cik1108109,Community Health Systems Inc,US,,services,0001108109,,,CYH,,True,False,12485000000.0,computed_dpo_proxy,1
+161,optimum-communications-inc-cik1702780,"Optimum Communications, Inc.",US,,telecom,0001702780,,,OPTU,,True,False,8590467000.0,computed_dpo_proxy,1
+162,liberty-latin-america-ltd-cik1712184,Liberty Latin America Ltd.,US,,telecom,0001712184,,,"LILA,LILAK,LILAB,LILAP",,True,False,4442200000.0,computed_dpo_proxy,1
+163,nutrien-ltd-cik1725964,Nutrien Ltd.,CA,,manufacturing,0001725964,,,NTR,,True,False,26885000000.0,computed_dpo_proxy,1
+164,targa-resources-corp-cik1389170,Targa Resources Corp.,US,,energy,0001389170,,,TRGP,,True,False,17028300000.0,computed_dpo_proxy,1
+165,casino-guichard-perrachon-leibl6l29,"Casino, Guichard-Perrachon",FR,,retail,,969500VHL8F83GBL6L29,,,,False,True,9244800000.0,computed_dpo_proxy,1
+166,pool-corp-cik945841,Pool Corp,US,,logistics,0000945841,,,POOL,,True,False,5289396000.0,computed_dpo_proxy,1
+167,marvell-technology-inc-cik1835632,"Marvell Technology, Inc.",US,,technology,0001835632,,,MRVL,,True,False,8194600000.0,computed_dpo_proxy,1
+168,qnity-electronics-inc-cik2058873,"Qnity Electronics, Inc.",US,,technology,0002058873,,,Q,,True,False,4754000000.0,computed_dpo_proxy,1
+169,teva-pharmaceutical-industries-ltd-cik818686,Teva Pharmaceutical Industries Ltd,IL,,pharma,0000818686,,,TEVA,,True,False,17258000000.0,computed_dpo_proxy,1
+170,travel-leisure-co-cik1361658,Travel & Leisure Co.,US,,services,0001361658,,,TNL,,True,False,4021000000.0,computed_dpo_proxy,1
+171,ecopetrol-q1282130,Ecopetrol,CO,Bogotá,energy,0001444406,254900IDGKCJICKBPA66,US2791581091,EC,http://www.ecopetrol.com.co/,True,False,35332234830.0,computed_dpo_proxy,1
+172,telus-corp-cik868675,Telus Corp,CA,,telecom,0000868675,,,TU,,True,False,14978816654.0,computed_dpo_proxy,1
+173,option-care-health-inc-cik1014739,"Option Care Health, Inc.",US,,services,0001014739,,,OPCH,,True,False,5649519000.0,computed_dpo_proxy,1
+174,vertiv-q5370909,Vertiv,US,Westerville,technology,0001674101,549300KTTIRAOGXCRV69,US92537N1081,VRT,https://www.vertiv.com/,True,False,10229900000.0,computed_dpo_proxy,1
+175,seagate-technology-q705392,Seagate Technology,US,Cupertino,technology,0001137789,44WLCTE321JACKS7ED43,IE00BKVD2N49,STX,http://www.seagate.com,True,False,12195000000.0,computed_dpo_proxy,1
+176,fortive-corp-cik1659166,Fortive Corp,US,,manufacturing,0001659166,,,FTV,,True,False,4159100000.0,computed_dpo_proxy,1
+177,v2x-inc-cik1601548,"V2X, Inc.",US,,services,0001601548,,,VVX,,True,False,4480038000.0,computed_dpo_proxy,1
+178,atlassian-corp-cik1650372,Atlassian Corp,US,,technology,0001650372,,,TEAM,,True,False,6572308000.0,computed_dpo_proxy,1
+179,cemex-sab-de-cv-cik1076378,Cemex Sab de Cv,MX,,manufacturing,0001076378,,,"CX,CXMSF",,True,False,16200000000.0,computed_dpo_proxy,1
+180,netapp-inc-cik1002047,"NetApp, Inc.",US,,technology,0001002047,,,NTAP,,True,False,6925000000.0,computed_dpo_proxy,1
+181,robert-bosch-q234021,Robert Bosch,DE,Gerlingen,automotive,,529900F0LT5OP4SV6122,,,https://www.bosch.com/,False,False,98280000000.0,uk_reported,2
+182,red-bull-gmbh-q698639,Red Bull GmbH,AT,Fuschl am See,consumer_goods,,5299000HTNHA5ACH9N32,,,http://www.redbull.com,False,False,54475200000.0,uk_reported,2
+183,cencora-q470156,Cencora,US,Chesterbrook,pharma,0001140859,AI8GXW8LG5WK7E9UD086,US03073E1055,COR,http://www.cencora.com/,True,False,321332819000.0,uk_reported,2
+184,fresenius-se-co-kgaa-q705361,Fresenius SE & Co. KGaA,DE,Bad Homburg vor der Höhe,pharma,,XDFJ0CYCOO1FXRFTQS51,DE0005785604,FRE|FSNUF,http://fresenius.com,False,False,24358320000.0,uk_reported,2
+185,general-dynamics-q502940,General Dynamics,US,Reston,manufacturing,0000040533,9C1X8XOOTYY2FNYTVH06,US3695501086,GD,https://www.gd.com/,True,False,52550000000.0,uk_reported,2
+186,amcor-plc-cik1748790,Amcor plc,GB,,manufacturing,0001748790,,,"AMCR,AMCCF",,True,False,23506000000.0,uk_reported,2
+187,td-synnex-corp-cik1177394,TD Synnex Corp,US,,logistics,0001177394,,,SNX,,True,False,62508086000.0,uk_reported,2
+188,schneider-electric-q49053,Schneider Electric,FR,Mâcon,manufacturing,,969500A1YF1XUYYXS284,FR0000121972,SU,https://www.se.com,False,True,43364160000.0,uk_reported,2
+189,ferrero-spa-q269792,Ferrero SpA,IT,Alba,consumer_goods,,,,,https://www.ferrero.com.cn,False,False,20844000000.0,uk_reported,2
+190,danaher-corporation-q1159256,Danaher Corporation,US,"Washington, D.C.",manufacturing,0000313616,S4BKK9OTCEWQ3YHPFM11,US2358511028,DHR,https://www.danaher.com/,True,False,24568000000.0,uk_reported,2
+191,pfizer-q206921,Pfizer,US,New York City,pharma,0000078003,765LHXWGK1KXCLTFYQ30,US7170811035,PFE,https://www.pfizer.com/,True,False,62579000000.0,uk_reported,2
+192,morrisons-q922344,Morrisons,GB,Bradford,retail,,213800IN6LSRGTZSOS29,GB0006043169,MRW,https://www.morrisons.com/,False,True,23314660000.0,uk_reported,2
+193,telefonica-q160229,Telefónica,ES,Madrid,telecom,,549300EEJH4FEPDBBR25,ES0178430E18,TEF,https://www.telefonica.com/,False,True,37929600000.0,es_reported,2
+194,johnson-johnson-q333718,Johnson & Johnson,US,New Brunswick,pharma,0000200406,549300G0CFPGEF6X2043,US4781601046,JNJ,https://www.jnj.com,True,False,94193000000.0,uk_reported,2
+195,astrazeneca-q731938,AstraZeneca,GB,Cambridge,pharma,0000901832,PY6ZZQWO2IZFZC3IOL08,GB0009895292,AZN,http://www.astrazeneca.com/,True,True,58739000000.0,uk_reported,2
+196,te-connectivity-q663452,TE Connectivity,CH,Schaffhausen,logistics,0001385157,894500ZRIX9K13RHXR17,CH0102993182,TEL,http://www.te.com/,True,False,19885000000.0,uk_reported,2
+197,goodyear-tire-and-rubber-company-q620875,Goodyear Tire and Rubber Company,US,Akron,manufacturing,0000042582,5493002BI0S2ZQUY3437,US3825501014,GT,https://www.goodyear.com/,True,False,18280000000.0,uk_reported,2
+198,corning-inc-q5842736,Corning Inc.,US,Corning,manufacturing,0000024741,549300X2937PB0CJ7I56,US2193501051,GLW,http://www.corning.com/,True,False,15629000000.0,uk_reported,2
+199,cma-cgm-q1023867,Cma Cgm,FR,Marseille,logistics,,,,,https://www.cma-cgm.com/,False,False,54380000000.0,uk_reported,2
+200,kingfisher-plc-lei2fy281,Kingfisher plc,GB,,retail,,213800KBMEV7I92FY281,,,,False,True,16440150000.0,uk_reported,2

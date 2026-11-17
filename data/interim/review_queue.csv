@@ -1,0 +1,655 @@
+company_number,company_name,reason,candidates
+00002065,LLOYDS BANK PLC,name_and_parent_chain_disagree,name:Lloyds Bank plc|chain:Lloyds Banking Group plc
+00014259,HSBC BANK PLC,name_and_parent_chain_disagree,name:HSBC Bank plc|chain:HSBC
+00025932,LCH LIMITED,financial_parent_without_name_link,chain:London Stock Exchange Group plc
+00027657,THE BOOTS COMPANY PLC,wikidata_or_weak_name_only,wikidata:Walgreens Boots Alliance|weak:None
+00036695,COUTTS & COMPANY,financial_parent_without_name_link,chain:NatWest Group plc
+00036833,SOLVAY SOLUTIONS UK LIMITED,name_and_parent_chain_disagree,name:Solvay S.A.|chain:Syensqo
+00037038,"EQUITABLE LIFE ASSURANCE SOCIETY,(THE)",name_and_parent_chain_disagree,"name:Equitable Holdings, Inc.|chain:Brookfield Asset Management Ltd."
+00042342,LIBERTY RETAIL LIMITED,brand_prefix_but_entity_has_corporate_owners,brand:Liberty Global
+00061135,STENA DRILLING LIMITED,wikidata_or_weak_name_only,wikidata:None|weak:Stena AB
+00078950,AXA INSURANCE UK PLC,financial_parent_without_name_link,chain:AXA
+00084559,MICHELIN TYRE PUBLIC LIMITED COMPANY,wikidata_or_weak_name_only,wikidata:None|weak:Michelin
+00095489,MANCHESTER UNITED FOOTBALL CLUB LIMITED,wikidata_or_weak_name_only,wikidata:Ineos|weak:None
+00112075,SHS INTERNATIONAL LTD,name_and_parent_chain_disagree,name:Wells Fargo|chain:Danone
+00145516,REFINITIV LIMITED,financial_parent_without_name_link,chain:London Stock Exchange Group plc
+00149435,CASTROL LIMITED,wikidata_or_weak_name_only,wikidata:BP|weak:None
+00165772,COFCO INTERNATIONAL UK LTD,brand_prefix_but_entity_has_corporate_owners,brand:COFCO Group
+00184739,UNITED DOMINIONS TRUST LIMITED,financial_parent_without_name_link,chain:Lloyds Bank plc
+00194561,INCHCAPE RETAIL LIMITED,brand_prefix_but_entity_has_corporate_owners,brand:Inchcape plc
+00204373,LLOYDS BANK GENERAL INSURANCE LIMITED,name_and_parent_chain_disagree,name:Lloyds Bank plc|chain:Lloyds Banking Group plc
+00229341,HSBC ASSET FINANCE (UK) LIMITED,financial_parent_without_name_link,chain:HSBC Bank plc
+00234742,THE AGRICULTURAL MORTGAGE CORPORATION PLC,financial_parent_without_name_link,chain:Lloyds Bank plc
+00241882,FULLER SMITH & TURNER PLC,wikidata_or_weak_name_only,wikidata:Asahi Group Holdings|weak:None
+00243883,ZURICH EMPLOYMENT SERVICES LIMITED,financial_parent_without_name_link,chain:Zurich Insurance Group
+00247740,STENA LINE IRISH SEA FERRIES LIMITED,wikidata_or_weak_name_only,wikidata:None|weak:Stena AB
+00285988,THREADNEEDLE PORTFOLIO SERVICES LIMITED,financial_parent_without_name_link,chain:Ameriprise Financial
+00290604,RENAULT TRUCK COMMERCIALS LIMITED,wikidata_or_weak_name_only,wikidata:None|weak:Renault
+00303951,SPS TECHNOLOGIES LIMITED,financial_parent_without_name_link,chain:Berkshire Hathaway
+00337004,LOMBARD NORTH CENTRAL PUBLIC LIMITED COMPANY,financial_parent_without_name_link,chain:NatWest Group plc
+00347103,ARRIVA LIMITED,wikidata_or_weak_name_only,wikidata:Deutsche Bahn|weak:None
+00383032,CATER ALLEN LIMITED,financial_parent_without_name_link,chain:Santander Group
+00397156,3I PLC,financial_parent_without_name_link,chain:3i Group plc
+00423930,FAIRMEAD INSURANCE LIMITED,financial_parent_without_name_link,chain:Allianz SE
+00434724,REXEL UK LIMITED,brand_prefix_but_entity_has_corporate_owners,brand:Rexel
+00439526,MARSH CORPORATE SERVICES LIMITED,financial_parent_without_name_link,chain:Marsh & McLennan Companies
+00446043,AXA SERVICES LIMITED,financial_parent_without_name_link,chain:AXA
+00499482,HSBC PRIVATE BANK (UK) LIMITED,financial_parent_without_name_link,chain:HSBC UK Bank plc
+00509596,HAYES & JARVIS (TRAVEL) LIMITED,financial_parent_without_name_link,chain:Kohlberg Kravis Roberts
+00521852,AIG EUROPE (SERVICES) LIMITED,financial_parent_without_name_link,chain:American International Group
+00530589,TIMET UK LIMITED,financial_parent_without_name_link,chain:Berkshire Hathaway
+00549690,UNITED TRUST BANK LIMITED,wikidata_or_weak_name_only,wikidata:None|weak:Northern Trust
+00573204,THREADNEEDLE ASSET MANAGEMENT LIMITED,financial_parent_without_name_link,chain:Ameriprise Financial
+00585852,LOCKHEED MARTIN UK AMPTHILL LIMITED,brand_prefix_but_entity_has_corporate_owners,brand:Lockheed Martin
+00614938,J.M.FINN NOMINEES LIMITED,financial_parent_without_name_link,chain:Ackermans & van Haaren
+00621757,WILLIS GROUP LIMITED,financial_parent_without_name_link,chain:Willis Towers Watson
+00633328,ARCONIC MANUFACTURING (GB) LIMITED,financial_parent_without_name_link,"chain:Apollo Global Management, Inc."
+00635311,JOHNSON MATTHEY DAVY TECHNOLOGIES LIMITED,name_and_parent_chain_disagree,name:Johnson Matthey plc|chain:Honeywell
+00653648,PURMO GROUP (UK) LTD,financial_parent_without_name_link,"chain:Apollo Global Management, Inc."
+00661204,BLACK HORSE LIMITED,financial_parent_without_name_link,chain:Lloyds Bank plc
+00661449,CBRE GWS LIMITED,financial_parent_without_name_link,chain:CBRE Group
+00662221,RBS INVOICE FINANCE LIMITED,financial_parent_without_name_link,chain:NatWest Group plc
+00710383,ABBEY LIFE ASSURANCE COMPANY LIMITED,financial_parent_without_name_link,chain:Standard Life plc
+00734396,SAINT-GOBAIN CONSTRUCTION PRODUCTS UK LIMITED,brand_prefix_but_entity_has_corporate_owners,brand:Saint-Gobain
+00735844,CARDNET MERCHANT SERVICES LIMITED,financial_parent_without_name_link,chain:Lloyds Bank plc
+00745328,BOSKALIS WESTMINSTER LIMITED,financial_parent_without_name_link,chain:HAL Trust
+00754167,REASSURE LIMITED,financial_parent_without_name_link,chain:Standard Life plc
+00759657,HSBC INVOICE FINANCE (UK) LIMITED,financial_parent_without_name_link,chain:HSBC UK Bank plc
+00759991,STEMCOR DISTRIBUTION LIMITED,financial_parent_without_name_link,chain:CITIC Group
+00787446,MERCEDES-BENZ GRAND PRIX LTD,brand_prefix_but_entity_has_corporate_owners,brand:Mercedes-Benz Group
+00805960,GRUNDFOS PUMPS LIMITED,wikidata_or_weak_name_only,wikidata:None|weak:Grundfos
+00809238,ALCON EYE CARE UK LIMITED,wikidata_or_weak_name_only,wikidata:None|weak:Alcon Inc
+00809688,LAKELAND LIMITED,financial_parent_without_name_link,chain:Orix Corp
+00817692,SCOTIABANK EUROPE PLC,financial_parent_without_name_link,chain:Bank of Nova Scotia
+00827982,INSIGHT INVESTMENT MANAGEMENT (GLOBAL) LIMITED,financial_parent_without_name_link,chain:The Bank of New York Mellon
+00837227,JELF INSURANCE BROKERS LIMITED,financial_parent_without_name_link,chain:Marsh & McLennan Companies
+00872308,LINDE HOLDINGS LIMITED,brand_prefix_but_entity_has_corporate_owners,brand:Linde Group
+00891554,CREDIT SUISSE SECURITIES (EUROPE) LIMITED,financial_parent_without_name_link,chain:UBS
+00928555,BOOTS UK LIMITED,wikidata_or_weak_name_only,wikidata:Walgreens Boots Alliance|weak:None
+00929027,NATIONAL WESTMINSTER BANK PUBLIC LIMITED COMPANY,financial_parent_without_name_link,chain:NatWest Group plc
+00929621,COPART UK LIMITED,brand_prefix_but_entity_has_corporate_owners,brand:Copart Inc
+00931954,BLUEFIN INSURANCE SERVICES LIMITED,financial_parent_without_name_link,chain:Marsh & McLennan Companies
+00941082,HBOS INVESTMENT FUND MANAGERS LIMITED,financial_parent_without_name_link,chain:Lloyds Banking Group plc
+00968406,LLOYDS BANK INSURANCE SERVICES LIMITED,name_and_parent_chain_disagree,name:Lloyds Bank plc|chain:Lloyds Banking Group plc
+00972175,TRAVELERS MANAGEMENT LIMITED,financial_parent_without_name_link,chain:The Travelers Companies
+00972265,JCB FINANCE LTD,financial_parent_without_name_link,chain:NatWest Group plc
+00973765,BARCLAYS INSURANCE SERVICES COMPANY LIMITED,financial_parent_without_name_link,chain:Barclays Bank plc
+00982901,CLARIOS UK LIMITED,financial_parent_without_name_link,chain:BROOKFIELD Corp
+00984167,THREADNEEDLE PENSIONS LIMITED,financial_parent_without_name_link,chain:Ameriprise Financial
+00990937,THE CO-OPERATIVE BANK P.L.C.,brand_prefix_but_entity_has_corporate_owners,brand:Co-Operative Group Limited
+00995939,RBC EUROPE LIMITED,financial_parent_without_name_link,chain:Royal Bank of Canada
+00999990,JACOBS DOUWE EGBERTS GB LTD,manual_exclusion,Jacobs Douwe Egberts GB: acquired by Keurig Dr Pepper only recently; reported periods fall largely under the previous owner
+01006065,CHEVRON BRITAIN LIMITED,brand_prefix_but_entity_has_corporate_owners,brand:Chevron Corporation
+01016187,ACCOR UK BUSINESS & LEISURE HOTELS LIMITED,wikidata_or_weak_name_only,wikidata:None|weak:Accor
+01016269,PHOENIX LIFE LIMITED,financial_parent_without_name_link,chain:Standard Life plc
+01024618,PGIM FINANCIAL LIMITED,financial_parent_without_name_link,chain:Prudential Financial
+01026167,BARCLAYS BANK PLC,name_and_parent_chain_disagree,name:Barclays Bank plc|chain:Barclays plc
+01050340,MAGNA SPECIALIST CONFECTIONERS LIMITED,wikidata_or_weak_name_only,wikidata:None|weak:Magna International Inc
+01072921,HWS RESTAURANTS LIMITED,wikidata_or_weak_name_only,wikidata:Yum! Brands|weak:None
+01073929,VIRGIN ENTERPRISES LIMITED,brand_prefix_but_entity_has_corporate_owners,brand:Virgin Group
+01088268,LIBERTY MUTUAL INSURANCE EUROPE PLC,brand_prefix_but_entity_has_corporate_owners,brand:Liberty Mutual Insurance
+01090741,LEX AUTOLEASE LIMITED,financial_parent_without_name_link,chain:Lloyds Bank plc
+01113112,HSBC ASIA PACIFIC HOLDINGS (UK) LIMITED,financial_parent_without_name_link,chain:HSBC
+01118580,BNY MELLON INVESTMENT MANAGEMENT EMEA LIMITED,financial_parent_without_name_link,chain:The Bank of New York Mellon
+01132760,SCOTTISH WIDOWS ADMINISTRATION SERVICES LIMITED,financial_parent_without_name_link,chain:Lloyds Banking Group plc
+01161446,JPMORGAN ASSET MANAGEMENT (UK) LIMITED,financial_parent_without_name_link,chain:JPMorgan Chase
+01164090,AIRBUS HELICOPTERS UK LIMITED,wikidata_or_weak_name_only,wikidata:None|weak:Airbus
+01203696,MIZUHO INTERNATIONAL PLC,brand_prefix_but_entity_has_corporate_owners,brand:Mizuho Financial Group Inc
+01208137,TARGET GROUP LIMITED,brand_prefix_but_entity_has_corporate_owners,brand:Target Corporation
+01217165,SAMSUNG C&T U.K. LIMITED,wikidata_or_weak_name_only,wikidata:None|weak:Samsung Group
+01234512,WILLIS INTERNATIONAL LIMITED,financial_parent_without_name_link,chain:Willis Towers Watson
+01244907,ACCOR UK ECONOMY HOTELS LIMITED,wikidata_or_weak_name_only,wikidata:None|weak:Accor
+01284170,THE BODY SHOP INTERNATIONAL LIMITED,wikidata_or_weak_name_only,wikidata:L'Oréal|weak:None
+01290912,MUNICH RE UK SERVICES LIMITED,brand_prefix_but_entity_has_corporate_owners,brand:Munich Re
+01316230,FITCH RATINGS LTD,wikidata_or_weak_name_only,wikidata:Hearst Communications|weak:None
+01328742,MUNICH RE SYNDICATE LIMITED,brand_prefix_but_entity_has_corporate_owners,brand:Munich Re
+01342230,EATON ELECTRICAL PRODUCTS LIMITED,wikidata_or_weak_name_only,wikidata:None|weak:Eaton Corporation
+01345670,JOHN LAING LIMITED,financial_parent_without_name_link,chain:Kohlberg Kravis Roberts
+01363932,REASSURE LIFE LIMITED,financial_parent_without_name_link,chain:Standard Life plc
+01371973,NEWTON INVESTMENT MANAGEMENT LIMITED,financial_parent_without_name_link,chain:The Bank of New York Mellon
+01376182,MARMON GROUP LIMITED(THE),financial_parent_without_name_link,chain:Berkshire Hathaway
+01377658,DS SMITH LIMITED,name_and_parent_chain_disagree,name:DS Smith plc|chain:International Paper
+01386469,WILLIS FABER LIMITED,financial_parent_without_name_link,chain:Willis Towers Watson
+01397939,LEASEPLAN UK LIMITED,financial_parent_without_name_link,chain:Ayvens
+01402237,STENA LINE LIMITED,wikidata_or_weak_name_only,wikidata:None|weak:Stena AB
+01404713,PRUDENTIAL CORPORATION HOLDINGS LIMITED,financial_parent_without_name_link,chain:Prudential plc
+01415100,CBRE MANAGEMENT SERVICES LIMITED,financial_parent_without_name_link,chain:CBRE Group
+01431036,CARTUS LIMITED,financial_parent_without_name_link,"chain:Compass, Inc."
+01431068,AXA INVESTMENT MANAGERS UK LIMITED,financial_parent_without_name_link,chain:BNP Paribas
+01442922,RELIANCE WORLDWIDE CORPORATION (UK) LIMITED,brand_prefix_but_entity_has_corporate_owners,brand:Reliance Industries Limited
+01451456,WILLIS GROUP SERVICES LIMITED,financial_parent_without_name_link,chain:Willis Towers Watson
+01471066,SONY MUSIC ENTERTAINMENT UK LIMITED,name_and_parent_chain_disagree,name:Sony Music|chain:Sony Group
+01475009,HSBC LATIN AMERICA HOLDINGS (UK) LIMITED,financial_parent_without_name_link,chain:HSBC
+01483208,APOLLO FIRE DETECTORS LIMITED,wikidata_or_weak_name_only,"wikidata:None|weak:Apollo Global Management, Inc."
+01492302,SANTANDER INSURANCE SERVICES UK LIMITED,brand_prefix_but_entity_has_corporate_owners,brand:Santander Group
+01503727,HSBC EQUIPMENT FINANCE (UK) LIMITED,financial_parent_without_name_link,chain:HSBC UK Bank plc
+01507274,MARSH LIMITED,financial_parent_without_name_link,chain:Marsh & McLennan Companies
+01509033,CHUBB SERVICES UK LIMITED,brand_prefix_but_entity_has_corporate_owners,brand:Chubb Corp.
+01535477,MWH TREATMENT LIMITED,financial_parent_without_name_link,chain:Ares Management Corp
+01536540,JLT SPECIALTY LIMITED,financial_parent_without_name_link,chain:Marsh & McLennan Companies
+01541168,FEDEX UK LIMITED,brand_prefix_but_entity_has_corporate_owners,brand:FedEx
+01546400,UBS ASSET MANAGEMENT (UK) LTD,financial_parent_without_name_link,chain:UBS
+01574907,CNBC (UK) LIMITED,manual_exclusion,CNBC (UK): reported period ends before the Versant spin-off from Comcast
+01592029,J.P. MORGAN MARKETS LIMITED,financial_parent_without_name_link,chain:JPMorgan Chase
+01613098,CAPITAL INTERNATIONAL LIMITED,brand_prefix_financial_unconfirmed,brand:Capital One
+01615055,GALLAGHER ACTUARIAL CONSULTANTS LIMITED,financial_parent_without_name_link,chain:Arthur J. Gallagher & Co.
+01615598,HSBC GLOBAL ASSET MANAGEMENT LIMITED,financial_parent_without_name_link,chain:HSBC
+01628564,LLOYDS BANK GENERAL INSURANCE HOLDINGS LIMITED,name_and_parent_chain_disagree,name:Lloyds Bank plc|chain:Lloyds Banking Group plc
+01629925,SCOTTISH WIDOWS UNIT TRUST MANAGERS LIMITED,financial_parent_without_name_link,chain:Lloyds Banking Group plc
+01647362,STARK BUILDING MATERIALS UK LIMITED,wikidata_or_weak_name_only,wikidata:Saint-Gobain|weak:Stark Group
+01656361,HSBC OVERSEAS HOLDINGS (UK) LIMITED,financial_parent_without_name_link,chain:HSBC
+01658245,SUNSAIL WORLDWIDE SAILING LIMITED,financial_parent_without_name_link,chain:Kohlberg Kravis Roberts
+01676637,NEWSQUEST MEDIA GROUP LIMITED,wikidata_or_weak_name_only,wikidata:SoftBank Group|weak:None
+01679046,THOMSON REUTERS (PROFESSIONAL) UK LIMITED,brand_prefix_but_entity_has_corporate_owners,brand:Thomson Reuters
+01688075,CREDIT SUISSE ASSET MANAGEMENT LIMITED,financial_parent_without_name_link,chain:UBS
+01692513,BANIJAY UK PRODUCTIONS LIMITED,wikidata_or_weak_name_only,wikidata:The Walt Disney Company|weak:Banijay Group N.V.
+01698498,MUFG SECURITIES EMEA PLC,financial_parent_without_name_link,chain:Mitsubishi Ufj Financial Group Inc
+01709830,ACTIVISION BLIZZARD UK LTD,name_and_parent_chain_disagree,name:Activision Blizzard|chain:Microsoft
+01710361,AWP ASSISTANCE UK LTD,financial_parent_without_name_link,chain:Allianz SE
+01721842,STONBURY LIMITED,financial_parent_without_name_link,chain:Lloyds Banking Group plc
+01732037,LEGG MASON INVESTMENTS (EUROPE) LIMITED,financial_parent_without_name_link,chain:Franklin Templeton Investments
+01743099,TELEFONICA UK LIMITED,brand_prefix_but_entity_has_corporate_owners,brand:Telefónica
+01772585,MARKS AND SPENCER FINANCIAL SERVICES LIMITED,name_and_parent_chain_disagree,name:Marks and Spencer Group plc|chain:HSBC UK Bank plc
+01786117,HYDRO ALUMINIUM DEESIDE LIMITED,wikidata_or_weak_name_only,wikidata:None|weak:Hydro One Ltd
+01787359,JLT MANAGEMENT SERVICES LIMITED,financial_parent_without_name_link,chain:Marsh & McLennan Companies
+01799580,CBRE MANAGED SERVICES LIMITED,financial_parent_without_name_link,chain:CBRE Group
+01800000,BRITISH TELECOMMUNICATIONS LIMITED,name_and_parent_chain_disagree,name:British Telecommunications Limited|chain:BT Group plc
+01810354,R.J. O'BRIEN LIMITED,financial_parent_without_name_link,chain:StoneX
+01821312,GUARDIAN ROYAL EXCHANGE PUBLIC LIMITED COMPANY,financial_parent_without_name_link,chain:AXA
+01835691,INSIGHT INVESTMENT FUNDS MANAGEMENT LIMITED,financial_parent_without_name_link,chain:The Bank of New York Mellon
+01876136,PEARSON ENGINEERING LIMITED,wikidata_or_weak_name_only,wikidata:None|weak:Pearson plc
+01915763,SIEMENS HEALTHCARE DIAGNOSTICS MANUFACTURING LTD,wikidata_or_weak_name_only,wikidata:None|weak:Siemens
+01915885,CIB PROPERTIES LIMITED,financial_parent_without_name_link,chain:Citigroup
+01915961,INSTINET EUROPE LIMITED,financial_parent_without_name_link,chain:Nomura Holdings Inc
+01917956,HSBC GLOBAL ASSET MANAGEMENT (UK) LIMITED,financial_parent_without_name_link,chain:HSBC
+01929333,BARCLAYS CAPITAL SECURITIES LIMITED,financial_parent_without_name_link,chain:Barclays Bank plc
+01934008,MITSUBISHI UFJ TRUST INTERNATIONAL LIMITED,brand_prefix_financial_unconfirmed,brand:Mitsubishi Ufj Financial Group Inc
+01945689,SPS AEROSTRUCTURES LIMITED,financial_parent_without_name_link,chain:Berkshire Hathaway
+01952719,MERIDIAN HEALTHCARE LIMITED,financial_parent_without_name_link,chain:Welltower INC.
+01996052,BARCLAYS INVESTMENT MANAGEMENT LIMITED,financial_parent_without_name_link,chain:Barclays Bank plc
+01997277,THE MORTGAGE BUSINESS PUBLIC LIMITED COMPANY,financial_parent_without_name_link,chain:Bank of Scotland plc
+01998251,BNY MELLON FUND MANAGERS LIMITED,financial_parent_without_name_link,chain:The Bank of New York Mellon
+02005794,SIEMENS HEALTHCARE DIAGNOSTICS PRODUCTS LTD,wikidata_or_weak_name_only,wikidata:None|weak:Siemens
+02009520,CREDIT SUISSE (UK) LIMITED,financial_parent_without_name_link,chain:UBS
+02025064,VALEO CONFECTIONERY LIMITED,wikidata_or_weak_name_only,wikidata:None|weak:Valeo
+02035315,SYSCO GB LIMITED,brand_prefix_but_entity_has_corporate_owners,brand:Sysco
+02072264,PERSHING LIMITED,financial_parent_without_name_link,chain:The Bank of New York Mellon
+02076511,CBRE INVESTMENT MANAGEMENT INDIRECT LIMITED,financial_parent_without_name_link,chain:CBRE Group
+02089076,REFINITIV TRANSACTION SERVICES LIMITED,financial_parent_without_name_link,chain:London Stock Exchange Group plc
+02095375,CROWN TRAVEL LIMITED,financial_parent_without_name_link,chain:Kohlberg Kravis Roberts
+02100691,J.M. FINN (OWN NAME) NOMINEES LIMITED,financial_parent_without_name_link,chain:Ackermans & van Haaren
+02111149,INSIGHT INVESTMENT MANAGEMENT LIMITED,financial_parent_without_name_link,chain:The Bank of New York Mellon
+02135610,ESURE SERVICES LIMITED,financial_parent_without_name_link,chain:Ageas
+02135876,BREWIN DOLPHIN LIMITED,financial_parent_without_name_link,chain:Royal Bank of Canada
+02137137,"ERM-EUROPE,LTD",financial_parent_without_name_link,chain:Kohlberg Kravis Roberts
+02147831,MARELLI AUTOMOTIVE SYSTEMS UK LIMITED,financial_parent_without_name_link,chain:Kohlberg Kravis Roberts
+02164270,CIRCLE HEALTH GROUP LIMITED,wikidata_or_weak_name_only,wikidata:Centene Corporation|weak:None
+02165592,TURNER & TOWNSEND COST MANAGEMENT LIMITED,financial_parent_without_name_link,chain:CBRE Group
+02173954,SCANIA FINANCE GREAT BRITAIN LIMITED,name_and_parent_chain_disagree,name:Scania|chain:Traton
+02181315,GERRARD MANAGEMENT SERVICES LIMITED,financial_parent_without_name_link,chain:Barclays Bank plc
+02218729,JPMORGAN ASSET MANAGEMENT HOLDINGS (UK) LIMITED,financial_parent_without_name_link,chain:JPMorgan Chase
+02223073,BARCLAYS ALDERSGATE INVESTMENTS LIMITED,financial_parent_without_name_link,chain:Barclays Bank plc
+02230827,ST. CLOUD CARE LIMITED,financial_parent_without_name_link,chain:Welltower INC.
+02238458,PHOENIX WEALTH SERVICES LIMITED,financial_parent_without_name_link,chain:Standard Life plc
+02240496,JLT BENEFIT SOLUTIONS LIMITED,financial_parent_without_name_link,chain:Marsh & McLennan Companies
+02244967,BUREAU VERITAS CERTIFICATION UK LIMITED,brand_prefix_but_entity_has_corporate_owners,brand:Bureau Veritas
+02251850,UBS ASSET MANAGEMENT HOLDING LTD,financial_parent_without_name_link,chain:UBS
+02283244,THREADNEEDLE INTERNATIONAL LIMITED,financial_parent_without_name_link,chain:Ameriprise Financial
+02290621,J.P. MORGAN CAPITAL FINANCING LIMITED,financial_parent_without_name_link,chain:JPMorgan Chase
+02294743,FIRST SENTIER INVESTORS (UK) FUNDS LIMITED,financial_parent_without_name_link,chain:Mitsubishi Ufj Financial Group Inc
+02299428,CHELTENHAM & GLOUCESTER PLC,financial_parent_without_name_link,chain:Lloyds Bank plc
+02312079,MERRILL LYNCH INTERNATIONAL,financial_parent_without_name_link,chain:Bank of America
+02313235,PRUDENTIAL SERVICES LIMITED,financial_parent_without_name_link,chain:Prudential plc
+02344610,SAFRAN NACELLES LIMITED,wikidata_or_weak_name_only,wikidata:None|weak:Safran
+02366665,SOUTH WEST WATER LIMITED,wikidata_or_weak_name_only,wikidata:UBS|weak:None
+02366852,EDF ENERGY LIMITED,wikidata_or_weak_name_only,wikidata:Électricité de France|weak:None
+02375296,NUMIS CORPORATION PLC,financial_parent_without_name_link,chain:Deutsche Bank
+02412574,LBG EQUITY INVESTMENTS LIMITED,financial_parent_without_name_link,chain:Lloyds Banking Group plc
+02412672,ABBEY NATIONAL PROPERTY INVESTMENTS,financial_parent_without_name_link,chain:Santander Group
+02442570,SAINT-GOBAIN GLASS (UNITED KINGDOM) LIMITED,brand_prefix_but_entity_has_corporate_owners,brand:Saint-Gobain
+02456473,VIRIDOR LIMITED,financial_parent_without_name_link,chain:Kohlberg Kravis Roberts
+02456671,ZURICH ASSURANCE LTD,financial_parent_without_name_link,chain:Zurich Insurance Group
+02458961,LOGISTEED UK LIMITED,financial_parent_without_name_link,chain:Kohlberg Kravis Roberts
+02461639,UNUM EUROPEAN HOLDING COMPANY LIMITED,financial_parent_without_name_link,chain:Unum
+02462001,EUROSTAR INTERNATIONAL LIMITED,wikidata_or_weak_name_only,wikidata:Société nationale des chemins de fer français|weak:None
+02462482,RANDSTAD PUBLIC SERVICES LIMITED,brand_prefix_but_entity_has_corporate_owners,brand:Randstad N.V.
+02466043,HERMES INVESTMENT MANAGEMENT LTD,wikidata_or_weak_name_only,wikidata:None|weak:Hermès
+02468686,AVIVA PLC,wikidata_or_weak_name_only,wikidata:BlackRock|weak:None
+02474901,GOLDMAN SACHS ASSET MANAGEMENT INTERNATIONAL,brand_prefix_but_entity_has_corporate_owners,brand:Goldman Sachs
+02474912,PERSHING SECURITIES LIMITED,financial_parent_without_name_link,chain:The Bank of New York Mellon
+02479336,DLJ GROUP,financial_parent_without_name_link,chain:UBS
+02500199,CREDIT SUISSE INTERNATIONAL,financial_parent_without_name_link,chain:UBS
+02509755,NO ORDINARY DESIGNER LABEL LIMITED,wikidata_or_weak_name_only,wikidata:None|weak:Estée Lauder Companies
+02522321,EAGLE FINANCIAL AND LEASING SERVICES (UK) LIMITED,financial_parent_without_name_link,chain:Barclays Bank plc
+02530163,BARCLAYCARD FUNDING PLC,financial_parent_without_name_link,chain:Barclays Bank plc
+02579457,HENRY SCHEIN UK HOLDINGS LIMITED,brand_prefix_but_entity_has_corporate_owners,brand:Henry Schein Inc
+02597050,LASALLE INVESTMENT MANAGEMENT,financial_parent_without_name_link,chain:Jones Lang Lasalle Inc
+02604517,PIMCO EUROPE LTD,financial_parent_without_name_link,chain:Allianz SE
+02605568,MUFG CORPORATE MARKETS (UK) LIMITED,financial_parent_without_name_link,chain:Mitsubishi Ufj Financial Group Inc
+02609772,MASCO UK WINDOW GROUP LIMITED,wikidata_or_weak_name_only,wikidata:None|weak:Masco Corp
+02633663,EBS GROUP LIMITED,financial_parent_without_name_link,chain:CME Group
+02636007,PD TEESPORT LIMITED,financial_parent_without_name_link,chain:Brookfield Asset Management Ltd.
+02638607,ARCHITAS LIMITED,financial_parent_without_name_link,chain:AXA
+02644862,CARE UK COMMUNITY PARTNERSHIPS LTD,financial_parent_without_name_link,chain:Welltower INC.
+02645715,BROKERTEC EUROPE LIMITED,financial_parent_without_name_link,chain:CME Group
+02650571,NOKIA UK LIMITED,brand_prefix_but_entity_has_corporate_owners,brand:Nokia
+02656007,WELLS FARGO CAPITAL FINANCE (UK) LIMITED,brand_prefix_but_entity_has_corporate_owners,brand:Wells Fargo
+02662755,VIRIDOR WASTE LIMITED,financial_parent_without_name_link,chain:Kohlberg Kravis Roberts
+02734652,TD BANK EUROPE LIMITED,financial_parent_without_name_link,chain:Toronto Dominion Bank
+02752982,BARCLAYS INVESTMENT SOLUTIONS LIMITED,financial_parent_without_name_link,chain:Barclays Bank plc
+02769904,NEWTON MANAGEMENT LIMITED,financial_parent_without_name_link,chain:The Bank of New York Mellon
+02783251,MBNA LIMITED,financial_parent_without_name_link,chain:Bank of Scotland plc
+02786571,TESLA ENGINEERING LIMITED,wikidata_or_weak_name_only,wikidata:None|weak:Tesla
+02815114,HSBC FINANCE (NETHERLANDS),financial_parent_without_name_link,chain:HSBC
+02841906,GRF SERVICES LIMITED,financial_parent_without_name_link,chain:Berkshire Hathaway
+02845800,HSBC ALTERNATIVE INVESTMENTS LIMITED,financial_parent_without_name_link,chain:HSBC
+02889486,WYMAN-GORDON LIMITED,financial_parent_without_name_link,chain:Berkshire Hathaway
+02892559,FRONTIER DEVELOPMENTS PLC,wikidata_or_weak_name_only,wikidata:Tencent|weak:None
+02895722,MERCANTILE LEASING COMPANY (NO.132) LIMITED,financial_parent_without_name_link,chain:Barclays Bank plc
+02901725,CLYDESDALE FINANCIAL SERVICES LIMITED,financial_parent_without_name_link,chain:Barclays plc
+02906593,NORTHERN POWERGRID (NORTHEAST) PLC,financial_parent_without_name_link,chain:Berkshire Hathaway
+02928224,BMO CAPITAL MARKETS LIMITED,financial_parent_without_name_link,chain:Bank of Montreal
+02937724,AXA UK PLC,financial_parent_without_name_link,chain:AXA
+02939726,PGH CA LIMITED,financial_parent_without_name_link,chain:Standard Life plc
+02957951,MANAGEMENT CONSORTIUM BID LIMITED,financial_parent_without_name_link,chain:BROOKFIELD Corp
+02958399,BENEFIT STREET PARTNERS LIMITED,financial_parent_without_name_link,chain:Franklin Templeton Investments
+02968384,CATLIN SYNDICATE LIMITED,financial_parent_without_name_link,chain:AXA
+02970583,REASSURE MIDCO LIMITED,financial_parent_without_name_link,chain:Standard Life plc
+02975376,JELF LIMITED,financial_parent_without_name_link,chain:Marsh & McLennan Companies
+02982540,FARADAY CAPITAL LIMITED,financial_parent_without_name_link,chain:Berkshire Hathaway
+02995605,OLIVER WYMAN LIMITED,financial_parent_without_name_link,chain:Marsh & McLennan Companies
+02998217,HIGHWAY INSURANCE GROUP LIMITED,financial_parent_without_name_link,chain:Allianz SE
+03002815,ABBEY NATIONAL TREASURY SERVICES OVERSEAS HOLDINGS,financial_parent_without_name_link,chain:Santander Group
+03023304,OLIVER WYMAN SERVICES LIMITED,financial_parent_without_name_link,chain:Marsh & McLennan Companies
+03032971,HEWLETT-PACKARD CDS LIMITED,name_and_parent_chain_disagree,name:Hewlett-Packard|chain:Hewlett Packard Enterprise
+03049877,KENSINGTON MORTGAGE COMPANY LIMITED,financial_parent_without_name_link,chain:Barclays Bank plc
+03053552,MARSH SERVICES LIMITED,financial_parent_without_name_link,chain:Marsh & McLennan Companies
+03104671,ST ANDREW'S INSURANCE PLC,financial_parent_without_name_link,chain:Lloyds Banking Group plc
+03108236,FTSE INTERNATIONAL LIMITED,financial_parent_without_name_link,chain:London Stock Exchange Group plc
+03120645,RED BULL RACING LIMITED,brand_prefix_but_entity_has_corporate_owners,brand:Red Bull GmbH
+03120999,SMITH & WILLIAMSON CORPORATE SERVICES LIMITED,financial_parent_without_name_link,chain:NatWest Group plc
+03141245,HSBC INVESTMENT BANK HOLDINGS LIMITED,financial_parent_without_name_link,chain:HSBC Bank plc
+03148093,OPEN TEXT UK LIMITED,brand_prefix_but_entity_has_corporate_owners,brand:Open Text Corp
+03148119,AXA PPP HEALTHCARE LIMITED,financial_parent_without_name_link,chain:AXA
+03148346,AXA PPP HEALTHCARE GROUP LIMITED,financial_parent_without_name_link,chain:AXA
+03154484,TURNER & TOWNSEND GROUP LIMITED,financial_parent_without_name_link,chain:CBRE Group
+03162046,URANIUM ASSET MANAGEMENT LIMITED,financial_parent_without_name_link,chain:BROOKFIELD Corp
+03163649,BINNIES UK LIMITED,financial_parent_without_name_link,chain:Ares Management Corp
+03195646,HALIFAX SHARE DEALING LIMITED,financial_parent_without_name_link,chain:Lloyds Banking Group plc
+03196171,SCOTTISH WIDOWS LIMITED,financial_parent_without_name_link,chain:Lloyds Banking Group plc
+03197379,SMS ENERGY SERVICES LIMITED,financial_parent_without_name_link,chain:Kohlberg Kravis Roberts
+03205768,PGIM FUND MANAGEMENT LIMITED,financial_parent_without_name_link,chain:Prudential Financial
+03232514,LIVERPOOL VICTORIA INSURANCE COMPANY LIMITED,financial_parent_without_name_link,chain:Allianz SE
+03266453,MUNICH RE CAPITAL LIMITED,brand_prefix_but_entity_has_corporate_owners,brand:Munich Re
+03273685,LANDMARK MORTGAGES LIMITED,wikidata_or_weak_name_only,wikidata:Virgin Group|weak:None
+03282075,ALPHABET (GB) LIMITED,name_and_parent_chain_disagree,name:Alphabet Inc.|chain:BMW
+03285932,WILLIS CORROON LICENSING LIMITED,financial_parent_without_name_link,chain:Willis Towers Watson
+03316774,CHEVRON TRAFFIC MANAGEMENT LIMITED,wikidata_or_weak_name_only,wikidata:None|weak:Chevron Corporation
+03320455,LONDON RESIDENTIAL HEALTHCARE LIMITED,financial_parent_without_name_link,chain:Welltower INC.
+03322151,HBOS FINANCIAL SERVICES LIMITED,financial_parent_without_name_link,chain:Lloyds Banking Group plc
+03352071,PPF LIMITED,financial_parent_without_name_link,chain:PPF Group
+03364976,INFRARED CAPITAL PARTNERS LIMITED,financial_parent_without_name_link,chain:Sun Life Financial Inc
+03376459,EULER HERMES SERVICES UK LIMITED,financial_parent_without_name_link,chain:Allianz SE
+03385354,LEIDOS SECURITY DETECTION & AUTOMATION U.K. LTD.,wikidata_or_weak_name_only,wikidata:None|weak:Leidos
+03399109,MUNICH RE SPECIALTY GROUP LIMITED,brand_prefix_but_entity_has_corporate_owners,brand:Munich Re
+03420615,CNH INDUSTRIAL CAPITAL EUROPE LIMITED,name_and_parent_chain_disagree,name:CNH Industrial|chain:BNP Paribas
+03424583,DLJ UK INVESTMENT HOLDINGS LIMITED,financial_parent_without_name_link,chain:UBS
+03426903,WELLS FARGO SECURITIES INTERNATIONAL LIMITED,brand_prefix_but_entity_has_corporate_owners,brand:Wells Fargo
+03429917,AXA HEALTH SERVICES LIMITED,financial_parent_without_name_link,chain:AXA
+03460854,BUREAU VERITAS BUILDING CONTROL UK LIMITED,brand_prefix_but_entity_has_corporate_owners,brand:Bureau Veritas
+03489004,PARATUS AMC LIMITED,financial_parent_without_name_link,"chain:Apollo Global Management, Inc."
+03522604,ROLLS-ROYCE MOTOR CARS LIMITED,name_and_parent_chain_disagree,name:Rolls-Royce|chain:BMW
+03524909,PEARL GROUP HOLDINGS (NO. 1) LIMITED,financial_parent_without_name_link,chain:Standard Life plc
+03528628,SAFRAN LANDING SYSTEMS SERVICES UK LTD,wikidata_or_weak_name_only,wikidata:None|weak:Safran
+03536032,CBRE LIMITED,financial_parent_without_name_link,chain:CBRE Group
+03554212,THREADNEEDLE ASSET MANAGEMENT HOLDINGS LIMITED,financial_parent_without_name_link,chain:Ameriprise Financial
+03588031,PHOENIX UNIT TRUST MANAGERS LIMITED,financial_parent_without_name_link,chain:Standard Life plc
+03588063,PHOENIX GROUP MANAGEMENT SERVICES LIMITED,financial_parent_without_name_link,chain:Standard Life plc
+03588080,TA I LIMITED,financial_parent_without_name_link,chain:Willis Towers Watson
+03588435,TRINITY ACQUISITION PLC,financial_parent_without_name_link,chain:Willis Towers Watson
+03600726,CHEVRON PRODUCTS UK LIMITED,brand_prefix_but_entity_has_corporate_owners,brand:Chevron Corporation
+03647343,RBC GLOBAL ASSET MANAGEMENT (UK) LIMITED,financial_parent_without_name_link,chain:Royal Bank of Canada
+03649069,VIRIDOR RESOURCE MANAGEMENT LIMITED,financial_parent_without_name_link,chain:Kohlberg Kravis Roberts
+03655704,HEALTH-ON-LINE COMPANY UK LIMITED,financial_parent_without_name_link,chain:AXA
+03676366,SCULPTOR CAPITAL MANAGEMENT EUROPE LIMITED,financial_parent_without_name_link,chain:Rithm Capital Corp.
+03699550,MMC INTERNATIONAL LIMITED,financial_parent_without_name_link,chain:Marsh & McLennan Companies
+03701768,THREADNEEDLE INVESTMENT SERVICES LIMITED,financial_parent_without_name_link,chain:Ameriprise Financial
+03704258,MMC UK GROUP LIMITED,financial_parent_without_name_link,chain:Marsh & McLennan Companies
+03730662,HIGHWAY INSURANCE COMPANY LIMITED,financial_parent_without_name_link,chain:Allianz SE
+03750288,E D F TRADING LIMITED,wikidata_or_weak_name_only,wikidata:Électricité de France|weak:None
+03753969,INTERXION CARRIER HOTEL LIMITED,financial_parent_without_name_link,"chain:Digital Realty Trust, INC."
+03755033,BNY MELLON INTERNATIONAL ASSET MANAGEMENT GROUP LIMITED,financial_parent_without_name_link,chain:The Bank of New York Mellon
+03767075,SABIC UK PETROCHEMICALS LIMITED,wikidata_or_weak_name_only,wikidata:None|weak:Saudi Aramco
+03809039,PGIM LIMITED,financial_parent_without_name_link,chain:Prudential Financial
+03838766,J.P. MORGAN INTERNATIONAL BANK LIMITED,financial_parent_without_name_link,chain:JPMorgan Chase
+03857770,SPRINGFIELDS FUELS LIMITED,financial_parent_without_name_link,chain:BROOKFIELD Corp
+03864648,TUSKERDIRECT LIMITED,financial_parent_without_name_link,chain:Lloyds Bank plc
+03885534,ESURE INSURANCE LIMITED,financial_parent_without_name_link,chain:Ageas
+03904320,FIRST SENTIER INVESTORS (UK) SERVICES LIMITED,financial_parent_without_name_link,chain:Mitsubishi Ufj Financial Group Inc
+03934849,GUMTREE.COM LIMITED,wikidata_or_weak_name_only,wikidata:Blackstone Inc.|weak:None
+03936272,ALDERMANBURY INVESTMENTS LIMITED,financial_parent_without_name_link,chain:JPMorgan Chase
+03958476,INTERACTIVE BROKERS (U.K.) LIMITED,brand_prefix_financial_unconfirmed,"brand:Interactive Brokers Group, Inc."
+03967717,XBRIDGE LIMITED,financial_parent_without_name_link,chain:The Travelers Companies
+03982428,HOLMES FUNDING LIMITED,financial_parent_without_name_link,chain:M&T Bank
+03997584,BNP PARIBAS FLEET HOLDINGS LIMITED,brand_prefix_but_entity_has_corporate_owners,brand:BNP Paribas
+04006213,WESTINGHOUSE ELECTRIC COMPANY UK LIMITED,financial_parent_without_name_link,chain:BROOKFIELD Corp
+04085334,DARWIN TECHNOLOGIES HOLDINGS LIMITED,financial_parent_without_name_link,chain:Marsh & McLennan Companies
+04094249,HOLDFAST TRAINING SERVICES LIMITED,financial_parent_without_name_link,chain:Sun Life Financial Inc
+04112320,NORTHERN POWERGRID (YORKSHIRE) PLC,financial_parent_without_name_link,chain:Berkshire Hathaway
+04115691,JEMELLA LIMITED,financial_parent_without_name_link,chain:Kohlberg Kravis Roberts
+04118370,TELFORD HOMES LIMITED,financial_parent_without_name_link,chain:CBRE Group
+04134880,NEWDAY CARDS LTD,financial_parent_without_name_link,chain:Kohlberg Kravis Roberts
+04138203,ROYAL MAIL GROUP LIMITED,wikidata_or_weak_name_only,wikidata:EP Group|weak:None
+04176956,AMCOR EUROPE GROUP MANAGEMENT,brand_prefix_but_entity_has_corporate_owners,brand:Amcor plc
+04176965,BNP PARIBAS REAL ESTATE ADVISORY & PROPERTY MANAGEMENT UK LIMITED,brand_prefix_but_entity_has_corporate_owners,brand:BNP Paribas
+04194548,JPMORGAN ASSET MANAGEMENT INTERNATIONAL LIMITED,financial_parent_without_name_link,chain:JPMorgan Chase
+04220587,COMMUNITY HEALTH PARTNERSHIPS LIMITED,brand_prefix_but_entity_has_corporate_owners,brand:Community Health Systems Inc
+04267931,GENERAL ELECTRIC ENERGY UK LIMITED,name_and_parent_chain_disagree,name:GE Aerospace|chain:GE Vernova Inc.
+04278474,BABCOCK MISSION CRITICAL SERVICES OFFSHORE LIMITED,wikidata_or_weak_name_only,wikidata:None|weak:Babcock International Group plc
+04305751,RAW TV LIMITED,wikidata_or_weak_name_only,wikidata:Liberty Global|weak:None
+04308091,HSBC INVESTMENT COMPANY LIMITED,financial_parent_without_name_link,chain:HSBC
+04328242,HSBC GLOBAL SERVICES (CHINA) HOLDINGS LIMITED,financial_parent_without_name_link,chain:HSBC
+04332926,LIVERPOOL VICTORIA GENERAL INSURANCE GROUP LIMITED,financial_parent_without_name_link,chain:Allianz SE
+04367985,APOLLO CINEMAS LIMITED,wikidata_or_weak_name_only,"wikidata:None|weak:Apollo Global Management, Inc."
+04380759,ALCENTRA ASSET MANAGEMENT LIMITED,financial_parent_without_name_link,chain:Franklin Templeton Investments
+04387591,KUDOS FILM & TELEVISION LIMITED,wikidata_or_weak_name_only,wikidata:The Walt Disney Company|weak:None
+04402048,XC TRAINS LIMITED,wikidata_or_weak_name_only,wikidata:Deutsche Bahn|weak:None
+04456744,PREQIN LTD,financial_parent_without_name_link,chain:BlackRock
+04463679,NATIONAL GRID GRAIN LNG LIMITED,brand_prefix_but_entity_has_corporate_owners,brand:National Grid plc
+04471826,INSIGHT INVESTMENT SERVICES LIMITED,financial_parent_without_name_link,chain:The Bank of New York Mellon
+04527558,BROOKFIELD GLOBAL INFRASTRUCTURE ADVISOR LIMITED,financial_parent_without_name_link,chain:Brookfield Asset Management Ltd.
+04544722,TAPESTRY LEARNING PARTNERSHIP,wikidata_or_weak_name_only,"wikidata:None|weak:Tapestry, INC."
+04560778,PEARL LIFE HOLDINGS LIMITED,financial_parent_without_name_link,chain:Standard Life plc
+04566809,EVEREST LIMITED,brand_prefix_but_entity_has_corporate_owners,"brand:Everest Group, LTD."
+04610749,CWBC PROPERTIES (BP1) LIMITED,financial_parent_without_name_link,chain:Barclays plc
+04617032,EATON ELECTRIC LIMITED,wikidata_or_weak_name_only,wikidata:None|weak:Eaton Corporation
+04622227,IQVIA LABORATORIES DISCOVERY UK LTD,wikidata_or_weak_name_only,wikidata:None|weak:Iqvia Holdings INC.
+04659431,PERSHING HOLDINGS (UK) LIMITED,financial_parent_without_name_link,chain:The Bank of New York Mellon
+04665011,AIG ASSET MANAGEMENT (EUROPE) LIMITED,financial_parent_without_name_link,chain:Corebridge Financial
+04682458,JUST RETIREMENT MANAGEMENT SERVICES LIMITED,financial_parent_without_name_link,chain:Brookfield Wealth Solutions Ltd.
+04780736,TESCO MOBILE LIMITED,wikidata_or_weak_name_only,wikidata:None|weak:Tesco
+04793636,CATALYST HEALTHCARE (ROMFORD) LIMITED,financial_parent_without_name_link,chain:Kohlberg Kravis Roberts
+04912819,LENOVO TECHNOLOGY (UNITED KINGDOM) LIMITED,wikidata_or_weak_name_only,wikidata:None|weak:Lenovo
+04943863,RMPA SERVICES PLC,financial_parent_without_name_link,chain:Allianz SE
+04958135,SCOTIA GAS NETWORKS LIMITED,financial_parent_without_name_link,chain:BROOKFIELD Corp
+04980958,INCHCAPE SHIPPING SERVICES HOLDINGS LIMITED,wikidata_or_weak_name_only,wikidata:None|weak:Inchcape plc
+05017193,JUST RETIREMENT LIMITED,financial_parent_without_name_link,chain:Brookfield Wealth Solutions Ltd.
+05078978,JUST RETIREMENT (HOLDINGS) LIMITED,financial_parent_without_name_link,chain:Brookfield Wealth Solutions Ltd.
+05092104,LAGARDÈRE TRAVEL RETAIL (UK) LTD,brand_prefix_but_entity_has_corporate_owners,brand:Lagardere SA
+05108846,PARTNERSHIP HOME LOANS LIMITED,financial_parent_without_name_link,chain:Brookfield Wealth Solutions Ltd.
+05113447,PARTNERS GROUP (UK) LIMITED,brand_prefix_but_entity_has_corporate_owners,brand:Global Partners LP
+05114385,LIFESTYLE SERVICES GROUP LIMITED,financial_parent_without_name_link,"chain:Assurant, INC."
+05125701,HUB FINANCIAL SOLUTIONS LIMITED,financial_parent_without_name_link,chain:Brookfield Wealth Solutions Ltd.
+05125745,ENHANCED RETIREMENT LIMITED,financial_parent_without_name_link,chain:Brookfield Wealth Solutions Ltd.
+05135289,JUST EQUITY RELEASE LIMITED,financial_parent_without_name_link,chain:Brookfield Wealth Solutions Ltd.
+05135298,JUST ANNUITIES LIMITED,financial_parent_without_name_link,chain:Brookfield Wealth Solutions Ltd.
+05167021,SOUTHERN GAS NETWORKS PLC,financial_parent_without_name_link,chain:BROOKFIELD Corp
+05169111,EVELYN PARTNERS SERVICES LIMITED,financial_parent_without_name_link,chain:NatWest Group plc
+05172311,PEN UNDERWRITING LIMITED,financial_parent_without_name_link,chain:Arthur J. Gallagher & Co.
+05204742,JUST RETIREMENT NOMINEES LIMITED,financial_parent_without_name_link,chain:Brookfield Wealth Solutions Ltd.
+05282342,PEARL GROUP HOLDINGS (NO. 2) LIMITED,financial_parent_without_name_link,chain:Standard Life plc
+05307588,INTEGRAL UK LIMITED,financial_parent_without_name_link,chain:Jones Lang Lasalle Inc
+05328622,AXA XL INSURANCE COMPANY UK LIMITED,financial_parent_without_name_link,chain:AXA
+05379716,TOWERS WATSON LIMITED,financial_parent_without_name_link,chain:Willis Towers Watson
+05460862,SUNLIFE LIMITED,financial_parent_without_name_link,chain:Standard Life plc
+05465261,PARTNERSHIP LIFE ASSURANCE COMPANY LIMITED,financial_parent_without_name_link,chain:Brookfield Wealth Solutions Ltd.
+05465380,PARTNERSHIP SERVICES LIMITED,financial_parent_without_name_link,chain:Brookfield Wealth Solutions Ltd.
+05465382,PARTNERSHIP GROUP HOLDINGS LIMITED,financial_parent_without_name_link,chain:Brookfield Wealth Solutions Ltd.
+05499464,VIRIDOR POLYMER RECYCLING LIMITED,financial_parent_without_name_link,chain:Kohlberg Kravis Roberts
+05523613,JLT REINSURANCE BROKERS LIMITED,financial_parent_without_name_link,chain:Marsh & McLennan Companies
+05534464,TOWERS WATSON INVESTMENT MANAGEMENT LIMITED,financial_parent_without_name_link,chain:Willis Towers Watson
+05565220,MEDIATONIC LIMITED,wikidata_or_weak_name_only,wikidata:The Walt Disney Company|weak:None
+05636081,LV INSURANCE MANAGEMENT LIMITED,financial_parent_without_name_link,chain:Allianz SE
+05639234,HSBC GLOBAL SERVICES LIMITED,financial_parent_without_name_link,chain:HSBC
+05713164,HEAVY HAUL MAINTENANCE LIMITED,financial_parent_without_name_link,chain:BROOKFIELD Corp
+05772581,J.M. FINN & CO.LTD,financial_parent_without_name_link,chain:Ackermans & van Haaren
+05798594,VESTAS OFFSHORE WIND UK LTD,wikidata_or_weak_name_only,wikidata:None|weak:Vestas
+05805963,THALES GTS UK LIMITED,wikidata_or_weak_name_only,wikidata:None|weak:Thales Group
+05828394,LIMECAY LIMITED,financial_parent_without_name_link,chain:Welltower INC.
+05849220,LACTALIS NESTLE CHILLED DAIRY COMPANY LIMITED,wikidata_or_weak_name_only,wikidata:None|weak:Lactalis
+05897457,MMC INTERNATIONAL TREASURY CENTRE LIMITED,financial_parent_without_name_link,chain:Marsh & McLennan Companies
+05917160,ARCADIS GEN UK LIMITED,wikidata_or_weak_name_only,wikidata:None|weak:Arcadis N.V.
+05934241,TRAVELOPIA HOLDINGS LIMITED,financial_parent_without_name_link,chain:Kohlberg Kravis Roberts
+05935957,JOHN LAING HOLDCO LIMITED,financial_parent_without_name_link,chain:Kohlberg Kravis Roberts
+05953811,HOLMES MASTER ISSUER PLC,financial_parent_without_name_link,chain:M&T Bank
+05975300,JOHN LAING GROUP PLC,financial_parent_without_name_link,chain:Kohlberg Kravis Roberts
+05989428,NORTHROP GRUMMAN UK LIMITED,brand_prefix_but_entity_has_corporate_owners,brand:Northrop Grumman Corporation
+06054624,PETERBOROUGH (PROGRESS HEALTH) PLC,financial_parent_without_name_link,chain:Sun Life Financial Inc
+06073794,BRIGHTHOUSE LIMITED,brand_prefix_but_entity_has_corporate_owners,"brand:Brighthouse Financial, Inc."
+06092695,CARNIVAL (CHARLES DICKENS) LIMITED,name_and_parent_chain_disagree,name:Carnival Corp Ltd.|chain:Comcast
+06199816,JUST PROTECTION LIMITED,financial_parent_without_name_link,chain:Brookfield Wealth Solutions Ltd.
+06226624,INEOS AROMATICS LIMITED,wikidata_or_weak_name_only,wikidata:None|weak:Ineos
+06250176,BRIGHTHOUSE GROUP LIMITED,brand_prefix_but_entity_has_corporate_owners,"brand:Brighthouse Financial, Inc."
+06251062,KKR CAPITAL MARKETS LIMITED,financial_parent_without_name_link,chain:Kohlberg Kravis Roberts
+06251606,BRIGHTHOUSE HOLDINGS LIMITED,brand_prefix_but_entity_has_corporate_owners,"brand:Brighthouse Financial, Inc."
+06279646,AIRTANKER SERVICES LIMITED,wikidata_or_weak_name_only,wikidata:Airbus|weak:None
+06306909,IMPALA HOLDINGS LIMITED,financial_parent_without_name_link,chain:Standard Life plc
+06367517,CARING HOMES HEALTHCARE GROUP LIMITED,financial_parent_without_name_link,chain:Welltower INC.
+06375035,ELQ INVESTORS II LTD,financial_parent_without_name_link,chain:Goldman Sachs
+06375220,MOBILE BROADBAND NETWORK LIMITED,wikidata_or_weak_name_only,wikidata:Orange|weak:None
+06395378,LBG CAPITAL HOLDINGS LIMITED,financial_parent_without_name_link,chain:Lloyds Banking Group plc
+06458527,TURNER & TOWNSEND COST MANAGEMENT LIMITED,financial_parent_without_name_link,chain:CBRE Group
+06518638,ALESCO RISK MANAGEMENT SERVICES LIMITED,financial_parent_without_name_link,chain:Arthur J. Gallagher & Co.
+06547680,CBOE EUROPE LIMITED,financial_parent_without_name_link,"chain:Cboe Global Markets, Inc."
+06555131,INFRASTRUCTURE INVESTMENTS HOLDINGS LIMITED,financial_parent_without_name_link,chain:Sun Life Financial Inc
+06575668,INEOS RUNCORN (TPS) LIMITED,wikidata_or_weak_name_only,wikidata:None|weak:Ineos
+06610600,PARTNERSHIP HOLDINGS LIMITED,financial_parent_without_name_link,chain:Brookfield Wealth Solutions Ltd.
+06645619,ARCH EUROPE INSURANCE SERVICES LTD,financial_parent_without_name_link,chain:Arch Capital Group
+06649987,LAVAZZA PROFESSIONAL UK LIMITED,wikidata_or_weak_name_only,wikidata:None|weak:Lavazza
+06677275,WILLIS INVESTMENT UK HOLDINGS LIMITED,financial_parent_without_name_link,chain:Willis Towers Watson
+06679031,ROSNEFT MARINE (UK) LIMITED,wikidata_or_weak_name_only,wikidata:None|weak:Rosneft
+06694512,NEX GROUP HOLDINGS LIMITED,financial_parent_without_name_link,chain:CME Group
+06719097,CALM FINANCE HOLDINGS LIMITED,financial_parent_without_name_link,chain:Marsh & McLennan Companies
+06778819,JACKSON CIVIL ENGINEERING GROUP LIMITED,wikidata_or_weak_name_only,wikidata:None|weak:Jackson Financial Inc.
+06817403,RELATIVE VALUE TRADING LIMITED,financial_parent_without_name_link,chain:Barclays Bank plc
+06844261,HORIZON ENERGY INFRASTRUCTURE LIMITED,financial_parent_without_name_link,chain:Kohlberg Kravis Roberts
+06864784,VIRIDOR EFW (RUNCORN) LIMITED,financial_parent_without_name_link,chain:Kohlberg Kravis Roberts
+06930326,JUST RETIREMENT GROUP HOLDINGS LIMITED,financial_parent_without_name_link,chain:Brookfield Wealth Solutions Ltd.
+06952311,VIRGIN MONEY PLC,wikidata_or_weak_name_only,wikidata:Virgin Group|weak:None
+06977344,PHOENIX LIFE HOLDINGS LIMITED,financial_parent_without_name_link,chain:Standard Life plc
+06981874,INEOS INFRASTRUCTURE (GRANGEMOUTH) LIMITED,wikidata_or_weak_name_only,wikidata:None|weak:Ineos
+06991560,BARCLAYS ASSET MANAGEMENT LIMITED,financial_parent_without_name_link,chain:Barclays Bank plc
+07022885,BANK OF IRELAND (UK) PLC,financial_parent_without_name_link,chain:The Governor and Company of the Bank of Ireland
+07026575,CHAPELCREST INVESTMENTS LIMITED,financial_parent_without_name_link,chain:Barclays Bank plc
+07130752,BOSKALIS SUBSEA LIMITED,financial_parent_without_name_link,chain:HAL Trust
+07272547,HSBC GLOBAL SERVICES (UK) LIMITED,financial_parent_without_name_link,chain:HSBC
+07277272,OODLE FINANCIAL SERVICES LIMITED,financial_parent_without_name_link,chain:Kohlberg Kravis Roberts
+07277854,SCARBOROUGH HALL LIMITED,financial_parent_without_name_link,chain:Welltower INC.
+07279467,VICTORIA'S SECRET UK LIMITED,brand_prefix_but_entity_has_corporate_owners,brand:Victoria's Secret & Co.
+07296068,COMMUNITY HEALTH AND EYECARE LIMITED,brand_prefix_but_entity_has_corporate_owners,brand:Community Health Systems Inc
+07306335,CME OPERATIONS LIMITED,financial_parent_without_name_link,chain:CME Group
+07343925,VIRIDOR OXFORDSHIRE LIMITED,financial_parent_without_name_link,chain:Kohlberg Kravis Roberts
+07371283,HUAWEI TECHNOLOGIES RESEARCH & DEVELOPMENT (UK) LIMITED,wikidata_or_weak_name_only,wikidata:None|weak:Huawei
+07371844,AERFIN LIMITED,financial_parent_without_name_link,chain:Orix Corp
+07386165,HUB ACQUISITIONS LIMITED,financial_parent_without_name_link,chain:Brookfield Wealth Solutions Ltd.
+07394406,ROBERT BOSCH UK HOLDINGS LIMITED,brand_prefix_but_entity_has_corporate_owners,brand:Robert Bosch
+07403376,EQUINOR PRODUCTION UK LIMITED,wikidata_or_weak_name_only,wikidata:None|weak:Equinor ASA
+07445497,INEOS COMMERCIAL SERVICES UK LIMITED,brand_prefix_but_entity_has_corporate_owners,brand:Ineos
+07450219,LONG ISLAND ASSETS LIMITED,financial_parent_without_name_link,chain:Barclays Bank plc
+07503666,J.P. MORGAN PERSONAL INVESTING LIMITED,wikidata_or_weak_name_only,wikidata:JPMorgan Chase|weak:None
+07541243,CH4 GAS UTILITY AND MAINTENANCE SERVICES LIMITED,financial_parent_without_name_link,chain:Kohlberg Kravis Roberts
+07647856,NORTHERN POWERGRID METERING LIMITED,financial_parent_without_name_link,chain:Berkshire Hathaway
+07656429,CENTER PARCS (HOLDINGS 1) LIMITED,financial_parent_without_name_link,chain:BROOKFIELD Corp
+07662889,AEQUOR INVESTMENTS LIMITED,financial_parent_without_name_link,chain:Barclays Bank plc
+07712656,HC-ONE LIMITED,financial_parent_without_name_link,chain:Welltower INC.
+07764918,STEMCOR LONDON LIMITED,financial_parent_without_name_link,chain:CITIC Group
+07807276,CANAL & RIVER TRUST,wikidata_or_weak_name_only,wikidata:None|weak:Canal+
+07844791,THE OLYMPUS ACADEMY TRUST,wikidata_or_weak_name_only,wikidata:None|weak:Olympus Corporation
+07860886,REASSURE UK SERVICES LIMITED,financial_parent_without_name_link,chain:Standard Life plc
+07865850,MAGNA LEARNING PARTNERSHIP,wikidata_or_weak_name_only,wikidata:None|weak:Magna International Inc
+07866192,PAYINGFORCARE LIMITED,financial_parent_without_name_link,chain:Brookfield Wealth Solutions Ltd.
+07878775,STENA DRILLMAX ICE LIMITED,wikidata_or_weak_name_only,wikidata:None|weak:Stena AB
+07945949,HYUNDAI CAPITAL UK LIMITED,financial_parent_without_name_link,chain:Santander Group
+07977364,VIRIDOR TRIDENT PARK LIMITED,financial_parent_without_name_link,chain:Kohlberg Kravis Roberts
+08106962,VIRIDOR SOUTH LONDON LIMITED,financial_parent_without_name_link,chain:Kohlberg Kravis Roberts
+08206590,NEWDAY FUNDING TRANSFEROR LTD,financial_parent_without_name_link,chain:Kohlberg Kravis Roberts
+08210882,WT UK OPCO 4 LIMITED,financial_parent_without_name_link,chain:Welltower INC.
+08260807,BNY MELLON INTERNATIONAL ASSET MANAGEMENT (HOLDINGS) LIMITED,financial_parent_without_name_link,chain:The Bank of New York Mellon
+08260933,BNY MELLON INTERNATIONAL ASSET MANAGEMENT (HOLDINGS) NO. 1 LIMITED,financial_parent_without_name_link,chain:The Bank of New York Mellon
+08293315,BOSKALIS OFFSHORE LIMITED,financial_parent_without_name_link,chain:HAL Trust
+08310962,WAYMARK ASSET INVESTMENTS LIMITED,financial_parent_without_name_link,chain:Bank of Scotland plc
+08312487,BNY MELLON INVESTMENT MANAGEMENT EUROPE HOLDINGS LIMITED,financial_parent_without_name_link,chain:The Bank of New York Mellon
+08314326,PRINCIPAL FINANCIAL SERVICES V (UK) LTD,financial_parent_without_name_link,chain:Principal Financial Group
+08328159,NORRINGTON SOLAR FARM LIMITED,financial_parent_without_name_link,chain:BROOKFIELD Corp
+08331325,NEWDAY PARTNERSHIP TRANSFEROR PLC,financial_parent_without_name_link,chain:Kohlberg Kravis Roberts
+08338094,PASPV LIMITED,financial_parent_without_name_link,chain:Brookfield Wealth Solutions Ltd.
+08367059,BROOKFIELD GLOBAL PROPERTY ADVISOR LIMITED,financial_parent_without_name_link,chain:Brookfield Asset Management Ltd.
+08419490,PARTNERSHIP ASSURANCE GROUP LIMITED,financial_parent_without_name_link,chain:Brookfield Wealth Solutions Ltd.
+08451384,LSEG REGULATORY REPORTING LIMITED,financial_parent_without_name_link,chain:London Stock Exchange Group plc
+08506758,TRANSRE LONDON LIMITED,financial_parent_without_name_link,chain:Berkshire Hathaway
+08506838,TRANSRE LONDON SERVICES LIMITED,financial_parent_without_name_link,chain:Berkshire Hathaway
+08541574,THOMSON REUTERS BENCHMARK SERVICES LIMITED,name_and_parent_chain_disagree,name:Thomson Reuters|chain:London Stock Exchange Group plc
+08568957,JUST GROUP PLC,financial_parent_without_name_link,chain:Brookfield Wealth Solutions Ltd.
+08630286,OPTUM HEALTH SOLUTIONS (UK) LIMITED,financial_parent_without_name_link,chain:UnitedHealth Group
+08647225,THALES ALENIA SPACE UK LIMITED,wikidata_or_weak_name_only,wikidata:None|weak:Thales Group
+08700698,SANTANDER UK GROUP HOLDINGS PLC,brand_prefix_but_entity_has_corporate_owners,brand:Santander Group
+08762711,BROOKFIELD GLOBAL RENEWABLE ENERGY ADVISOR LIMITED,financial_parent_without_name_link,chain:Brookfield Asset Management Ltd.
+08812602,NEWDAY TECHNOLOGY LTD,financial_parent_without_name_link,chain:Kohlberg Kravis Roberts
+08836589,CNA SERVICES (UK) LIMITED,financial_parent_without_name_link,chain:Cna Financial Corp
+08862096,SMART METER ASSETS 1 LTD,financial_parent_without_name_link,chain:Kohlberg Kravis Roberts
+08980140,LSEG BUSINESS SERVICES LIMITED,financial_parent_without_name_link,chain:London Stock Exchange Group plc
+09100833,LSEG EMPLOYMENT SERVICES LIMITED,financial_parent_without_name_link,chain:London Stock Exchange Group plc
+09170456,VESTAS OFFSHORE WIND BLADES UK LTD,wikidata_or_weak_name_only,wikidata:None|weak:Vestas
+09182214,ELQ INVESTORS VIII LTD,financial_parent_without_name_link,chain:Goldman Sachs
+09209355,SANTANDER FINTECH LIMITED,brand_prefix_but_entity_has_corporate_owners,brand:Santander Group
+09231974,HSBC GROUP MANAGEMENT SERVICES LIMITED,financial_parent_without_name_link,chain:HSBC
+09297460,JUST RETIREMENT FINANCE PLC,financial_parent_without_name_link,chain:Brookfield Wealth Solutions Ltd.
+09409135,MMC FINANCE HOLDINGS (US) LIMITED,financial_parent_without_name_link,chain:Marsh & McLennan Companies
+09409156,MMC FINANCE (US) LIMITED,financial_parent_without_name_link,chain:Marsh & McLennan Companies
+09415215,JUST RETIREMENT MONEY LIMITED,financial_parent_without_name_link,chain:Brookfield Wealth Solutions Ltd.
+09570877,EATON VANCE ADVISERS INTERNATIONAL LTD,financial_parent_without_name_link,chain:Morgan Stanley
+09572658,JUST RE 1 LIMITED,financial_parent_without_name_link,chain:Brookfield Wealth Solutions Ltd.
+09572665,JUST RE 2 LIMITED,financial_parent_without_name_link,chain:Brookfield Wealth Solutions Ltd.
+09593988,STENA CARRON DRILLING LIMITED,wikidata_or_weak_name_only,wikidata:None|weak:Stena AB
+09623556,DUPONT (UK) ELECTRONIC MATERIALS LIMITED,wikidata_or_weak_name_only,wikidata:None|weak:DuPont
+09659859,STEMCOR LONDON TRADING LIMITED,financial_parent_without_name_link,chain:CITIC Group
+09725785,JRP NOMINEES LIMITED,financial_parent_without_name_link,chain:Brookfield Wealth Solutions Ltd.
+09736376,CLEARBANK LIMITED,wikidata_or_weak_name_only,wikidata:PPF Group|weak:None
+09740322,BARCLAYS BANK UK PLC,name_and_parent_chain_disagree,name:Barclays Bank plc|chain:Barclays plc
+09787086,CALM TREASURY HOLDINGS LIMITED,financial_parent_without_name_link,chain:Marsh & McLennan Companies
+09814435,BROOKFIELD GLOBAL BUSINESS ADVISOR LIMITED,financial_parent_without_name_link,chain:Brookfield Asset Management Ltd.
+09831612,MMC HOLDINGS (UK) LIMITED,financial_parent_without_name_link,chain:Marsh & McLennan Companies
+09928101,PLACL RE 1 LIMITED,financial_parent_without_name_link,chain:Brookfield Wealth Solutions Ltd.
+09928412,HSBC UK BANK PLC,name_and_parent_chain_disagree,name:HSBC UK Bank plc|chain:HSBC
+09936051,NEX SERVICES LIMITED,financial_parent_without_name_link,chain:CME Group
+09955930,EMBARK INVESTMENT SERVICES LIMITED,financial_parent_without_name_link,chain:Lloyds Banking Group plc
+09959621,US REAL ESTATE HOLDINGS NO.1 LIMITED,financial_parent_without_name_link,chain:Barclays Bank plc
+09961642,US REAL ESTATE HOLDINGS NO.2 LIMITED,financial_parent_without_name_link,chain:Barclays Bank plc
+09983270,DIGITAL LONDON LIMITED,financial_parent_without_name_link,"chain:Digital Realty Trust, INC."
+10007198,ACTIVISION BLIZZARD MEDIA LIMITED,name_and_parent_chain_disagree,name:Activision Blizzard|chain:Microsoft
+10185006,GRAPHCORE LIMITED,financial_parent_without_name_link,chain:SoftBank Group
+10219781,LENOVO GLOBAL TECHNOLOGY UK LIMITED,wikidata_or_weak_name_only,wikidata:None|weak:Lenovo
+10257888,HC-ONE NO.1 LIMITED,financial_parent_without_name_link,chain:Welltower INC.
+10284928,CASCADE REGIONAL HOLDINGS LIMITED,financial_parent_without_name_link,chain:Marsh & McLennan Companies
+10299085,MMC MIDDLE EAST HOLDINGS LIMITED,financial_parent_without_name_link,chain:Marsh & McLennan Companies
+10399850,LLOYDS BANK CORPORATE MARKETS PLC,name_and_parent_chain_disagree,name:Lloyds Bank plc|chain:Lloyds Banking Group plc
+10442670,SAINT-GOBAIN ISOVER UK LIMITED,brand_prefix_but_entity_has_corporate_owners,brand:Saint-Gobain
+10452758,JUST RETIREMENT SOLUTIONS LIMITED,financial_parent_without_name_link,chain:Brookfield Wealth Solutions Ltd.
+10459817,HUB PENSION SOLUTIONS LIMITED,financial_parent_without_name_link,chain:Brookfield Wealth Solutions Ltd.
+10491963,GS FUNDING EUROPE III LTD,financial_parent_without_name_link,chain:Goldman Sachs
+10496704,JUST INCORPORATED LIMITED,financial_parent_without_name_link,chain:Brookfield Wealth Solutions Ltd.
+10496803,JRP GROUP LIMITED,financial_parent_without_name_link,chain:Brookfield Wealth Solutions Ltd.
+10559664,UTMOST LIFE AND PENSIONS LIMITED,financial_parent_without_name_link,chain:Brookfield Asset Management Ltd.
+10608445,ARNOLD LAVER & COMPANY LIMITED,financial_parent_without_name_link,chain:Prudential Financial
+10651705,BLUEBAY ASSET MANAGEMENT CORPORATION LTD,financial_parent_without_name_link,chain:Royal Bank of Canada
+10691596,PHOENIX GROUP MANAGEMENT SERVICES LIMITED,financial_parent_without_name_link,chain:Standard Life plc
+10735268,OCTAVIUS INFRASTRUCTURE LTD.,financial_parent_without_name_link,chain:Ares Management Corp
+10737370,AMERICAN INTERNATIONAL GROUP UK LIMITED,financial_parent_without_name_link,chain:American International Group
+10842189,INFRASTRUCTURE INVESTMENTS GROUP LIMITED,financial_parent_without_name_link,chain:Sun Life Financial Inc
+11127126,CBRE GLOBAL SERVICES (UK) LIMITED,financial_parent_without_name_link,chain:CBRE Group
+11143010,STEWART MILNE HOMES NORTH WEST ENGLAND (DEVELOPMENTS) LIMITED,financial_parent_without_name_link,chain:Lloyds Banking Group plc
+11202361,STENA DON DRILLING LIMITED,wikidata_or_weak_name_only,wikidata:None|weak:Stena AB
+11273377,FINANCIAL & RISK ORGANISATION LIMITED,financial_parent_without_name_link,chain:London Stock Exchange Group plc
+11283101,CITIBANK UK LIMITED,financial_parent_without_name_link,chain:Citigroup
+11305395,HANDELSBANKEN PLC,financial_parent_without_name_link,chain:Svenska Handelsbanken AB
+11333774,HUB TRANSFER SOLUTIONS LIMITED,financial_parent_without_name_link,chain:Brookfield Wealth Solutions Ltd.
+11389531,KEOLIS AMEY OPERATIONS / GWEITHREDIADAU KEOLIS AMEY LIMITED,wikidata_or_weak_name_only,wikidata:Société nationale des chemins de fer français|weak:None
+11448177,TOMAS ACQUISITIONS LIMITED,financial_parent_without_name_link,chain:Brookfield Wealth Solutions Ltd.
+11461801,BROAD STREET EQUITY INVESTMENTS EUROPE LTD,financial_parent_without_name_link,chain:Goldman Sachs
+11597179,REASSURE GROUP PLC,financial_parent_without_name_link,chain:Standard Life plc
+11737836,SOMERSET BRIDGE GROUP LIMITED,financial_parent_without_name_link,chain:Arch Capital Group
+11867122,CHEVRON INTERNATIONAL EXPLORATION AND PRODUCTION COMPANY LIMITED,wikidata_or_weak_name_only,wikidata:None|weak:Chevron Corporation
+11894677,CNOOC U.K. MARKETING LTD,brand_prefix_but_entity_has_corporate_owners,brand:China National Offshore Oil Corporation
+12117130,H&M HENNES & MAURITZ UK SERVICES LIMITED,brand_prefix_but_entity_has_corporate_owners,brand:H&M
+12297075,POWER & ENERGY INTERNATIONAL LIMITED,financial_parent_without_name_link,"chain:Apollo Global Management, Inc."
+12495519,TURNER & TOWNSEND INFRASTRUCTURE LIMITED,financial_parent_without_name_link,chain:CBRE Group
+12528962,BENSONSFORBEDSRETAIL LTD,financial_parent_without_name_link,"chain:Apollo Global Management, Inc."
+12546585,HSBC INNOVATION BANK LIMITED,financial_parent_without_name_link,chain:HSBC UK Bank plc
+12683167,BENSONSFORBEDSMANUFACTURING LTD,financial_parent_without_name_link,"chain:Apollo Global Management, Inc."
+12718441,VOLVO CAR FINANCIAL SERVICES UK LIMITED,name_and_parent_chain_disagree,name:Volvo Cars|chain:Santander Group
+12857361,WELLA UK LTD,financial_parent_without_name_link,chain:Kohlberg Kravis Roberts
+12873827,VIRIDOR ENERGY LIMITED,financial_parent_without_name_link,chain:Kohlberg Kravis Roberts
+12875694,VIRIDOR AVONMOUTH WASTE SERVICES LIMITED,financial_parent_without_name_link,chain:Kohlberg Kravis Roberts
+13306073,CITRA LIVING PROPERTIES (NO. 1) LIMITED,financial_parent_without_name_link,chain:Lloyds Banking Group plc
+13642628,CARGILL BIOINDUSTRIAL UK LIMITED,wikidata_or_weak_name_only,wikidata:None|weak:Cargill
+13692557,MARSH MCLENNAN REGIONAL HOLDINGS LIMITED,financial_parent_without_name_link,chain:Marsh & McLennan Companies
+13846748,JUNO BIDCO LIMITED,financial_parent_without_name_link,chain:AXA
+14550061,STENA EVOLUTION DRILLING LIMITED,wikidata_or_weak_name_only,wikidata:None|weak:Stena AB
+15107559,FARADAY CORPORATE CAPITAL LIMITED,financial_parent_without_name_link,chain:Berkshire Hathaway
+15391314,MOSAIC PARTNERSHIP TRUST,wikidata_or_weak_name_only,wikidata:None|weak:The Mosaic Company
+15952302,MAKALU UK BORROWERCO LIMITED,financial_parent_without_name_link,chain:Brookfield Asset Management Ltd.
+NI003721,N.I.I.B. GROUP LIMITED,financial_parent_without_name_link,chain:The Governor and Company of the Bank of Ireland
+NI038564,TOMAS ONLINE DEVELOPMENT LIMITED,financial_parent_without_name_link,chain:Brookfield Wealth Solutions Ltd.
+NI061370,THE OPEN MARKET ANNUITY SERVICE LIMITED,financial_parent_without_name_link,chain:Brookfield Wealth Solutions Ltd.
+NI071100,GRAHAM ASSET MANAGEMENT LIMITED,wikidata_or_weak_name_only,wikidata:None|weak:Graham Holdings Co
+NI606497,BRS GOLF LIMITED,manual_exclusion,BRS Golf: reported period ends before the Versant spin-off from Comcast
+NI610336,CME TECHNOLOGY AND SUPPORT SERVICES LIMITED,financial_parent_without_name_link,chain:CME Group
+NI627893,ARITY INTERNATIONAL LIMITED,financial_parent_without_name_link,chain:Allstate
+NI650449,HUB ONLINE DEVELOPMENT LIMITED,financial_parent_without_name_link,chain:Brookfield Wealth Solutions Ltd.
+OC307419,CQS (UK) LLP,financial_parent_without_name_link,chain:Manulife Financial Corp
+OC309347,PRICEWATERHOUSECOOPERS CI LLP,brand_prefix_but_entity_has_corporate_owners,brand:PricewaterhouseCoopers
+OC310386,HBOS SOCIAL HOUSING COVERED BONDS LLP,financial_parent_without_name_link,chain:Bank of Scotland plc
+OC332284,BARCLAYS COVERED BONDS LIMITED LIABILITY PARTNERSHIP,financial_parent_without_name_link,chain:Barclays Bank plc
+OC343461,RELATIVE VALUE INVESTMENTS UK LIMITED LIABILITY PARTNERSHIP,financial_parent_without_name_link,chain:Barclays Bank plc
+OC349085,BARCLAYS COVERED BOND FUNDING LLP,financial_parent_without_name_link,chain:Barclays Bank plc
+OC352581,BLACKSTONE EUROPE LLP,brand_prefix_financial_unconfirmed,brand:Blackstone Inc.
+OC357077,CECP ADVISORS LLP,financial_parent_without_name_link,chain:Carlyle Group Inc.
+OC357078,CELF ADVISORS LLP,financial_parent_without_name_link,chain:Carlyle Group Inc.
+OC359978,RVT CLO INVESTMENTS LLP,financial_parent_without_name_link,chain:Barclays Bank plc
+OC363917,OAKTREE CAPITAL MANAGEMENT (UK) LLP,financial_parent_without_name_link,chain:Brookfield Asset Management Ltd.
+OC369632,SMITH & WILLIAMSON INVESTMENT MANAGEMENT LLP,financial_parent_without_name_link,chain:NatWest Group plc
+OC370085,BLUEBAY ASSET MANAGEMENT LLP,financial_parent_without_name_link,chain:Royal Bank of Canada
+OC412196,ALBACORE CAPITAL LLP,financial_parent_without_name_link,chain:Mitsubishi Ufj Financial Group Inc
+OC428664,KKR CAPITAL MARKETS PARTNERS LLP,financial_parent_without_name_link,chain:Kohlberg Kravis Roberts
+R0000568,NORTHERN BANK LIMITED,financial_parent_without_name_link,chain:Danske Bank
+R0000733,"ULSTER BANK, LIMITED",financial_parent_without_name_link,chain:NatWest Group plc
+SC010975,DOBBIES GARDEN CENTRES LIMITED,wikidata_or_weak_name_only,wikidata:Tesco|weak:None
+SC014583,LACTALIS MCLELLAND LIMITED,wikidata_or_weak_name_only,wikidata:None|weak:Lactalis
+SC019438,JPMORGAN FUNDS LIMITED,financial_parent_without_name_link,chain:JPMorgan Chase
+SC027389,HARPERCOLLINS PUBLISHERS LIMITED,wikidata_or_weak_name_only,wikidata:News Corp|weak:None
+SC047678,JACOBS & TURNER LIMITED,wikidata_or_weak_name_only,wikidata:None|weak:Jacobs Solutions INC.
+SC047708,FIRST SENTIER INVESTORS (UK) IM LIMITED,financial_parent_without_name_link,chain:Mitsubishi Ufj Financial Group Inc
+SC057709,STEWART MILNE GROUP LIMITED,financial_parent_without_name_link,chain:Lloyds Banking Group plc
+SC066107,CLEARBRIDGE INVESTMENT MANAGEMENT LIMITED,financial_parent_without_name_link,chain:Franklin Templeton Investments
+SC073998,UBERIOR INVESTMENTS LIMITED,financial_parent_without_name_link,chain:Lloyds Banking Group plc
+SC079063,FIRST SENTIER INVESTORS INTERNATIONAL IM LIMITED,financial_parent_without_name_link,chain:Mitsubishi Ufj Financial Group Inc
+SC083026,THE ROYAL BANK OF SCOTLAND PUBLIC LIMITED COMPANY,financial_parent_without_name_link,chain:NatWest Group plc
+SC091725,CHARLES RIVER LABORATORIES EDINBURGH LIMITED,brand_prefix_but_entity_has_corporate_owners,"brand:Charles River Laboratories International, INC."
+SC093685,WALTER SCOTT & PARTNERS LIMITED,financial_parent_without_name_link,chain:The Bank of New York Mellon
+SC095237,TSB BANK PLC,financial_parent_without_name_link,chain:Santander Group
+SC099834,W.G.M (ENGINEERING)LIMITED,financial_parent_without_name_link,chain:Ares Management Corp
+SC106669,SANTANDER ASSET MANAGEMENT UK LIMITED,brand_prefix_but_entity_has_corporate_owners,brand:Santander Group
+SC111488,STANDARD LIFE INVESTMENTS (CORPORATE FUNDS) LIMITED,brand_prefix_but_entity_has_corporate_owners,brand:Standard Life plc
+SC112421,LEIDOS INNOVATIONS UK LTD,wikidata_or_weak_name_only,wikidata:None|weak:Leidos
+SC115530,RSK ENVIRONMENT LIMITED,financial_parent_without_name_link,chain:Ares Management Corp
+SC123322,STANDARD LIFE INVESTMENTS (MUTUAL FUNDS) LIMITED,brand_prefix_but_entity_has_corporate_owners,brand:Standard Life plc
+SC151198,COLUMBIA THREADNEEDLE INVESTMENT BUSINESS LIMITED,financial_parent_without_name_link,chain:Ameriprise Financial
+SC189975,SCOTTISH WIDOWS SERVICES LIMITED,financial_parent_without_name_link,chain:Lloyds Bank plc
+SC199547,SCOTTISH WIDOWS GROUP LIMITED,financial_parent_without_name_link,chain:Lloyds Banking Group plc
+SC199548,SCOTTISH WIDOWS FINANCIAL SERVICES HOLDINGS,financial_parent_without_name_link,chain:Lloyds Banking Group plc
+SC210546,PRUDENTIAL HOLDINGS LIMITED,financial_parent_without_name_link,chain:Prudential plc
+SC216807,VESTAS-CELTIC WIND TECHNOLOGY LTD.,wikidata_or_weak_name_only,wikidata:None|weak:Vestas
+SC218813,HBOS PLC,name_and_parent_chain_disagree,name:Hbos plc|chain:Lloyds Bank plc
+SC233070,PD & MS ENERGY (ABERDEEN) LIMITED,financial_parent_without_name_link,chain:Ares Management Corp
+SC233297,COLUMBIA THREADNEEDLE (SERVICES) LIMITED,financial_parent_without_name_link,chain:Ameriprise Financial
+SC264065,SCOTLAND GAS NETWORKS PLC,financial_parent_without_name_link,chain:BROOKFIELD Corp
+SC317760,CLYDE UNION LIMITED,financial_parent_without_name_link,"chain:Apollo Global Management, Inc."
+SC320750,SMS METER ASSETS LIMITED,financial_parent_without_name_link,chain:Kohlberg Kravis Roberts
+SC327000,BANK OF SCOTLAND PLC,name_and_parent_chain_disagree,name:Bank of Scotland plc|chain:Hbos plc
+SC350248,BEATRICE OFFSHORE WINDFARM LIMITED,financial_parent_without_name_link,chain:Mitsubishi Ufj Financial Group Inc
+SC444366,CLEAR BUSINESS WATER LIMITED,financial_parent_without_name_link,chain:Ares Management Corp
+SC545400,STEWART MILNE HOMES CENTRAL SCOTLAND LIMITED,financial_parent_without_name_link,chain:Lloyds Banking Group plc
+SE000080,XL INSURANCE COMPANY SE,financial_parent_without_name_link,chain:AXA
+SE000103,XL CATLIN SERVICES SE,financial_parent_without_name_link,chain:AXA
+SE000116,CHUBB EUROPEAN GROUP SE,brand_prefix_but_entity_has_corporate_owners,brand:Chubb Corp.
+ZC000018,STANDARD CHARTERED BANK,name_and_parent_chain_disagree,name:Standard Chartered Bank|chain:Standard Chartered plc

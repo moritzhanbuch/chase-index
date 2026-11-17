@@ -1,0 +1,5 @@
+# SYNTHETIC DEMO DATA. Invented for demonstration. Not real network, pipeline or dinner data.
+account_name,stage,owner,last_touch
+Siemens Energy AG,discovery,SYNTHETIC owner A,2026-11-03
+Heineken Holding N.V.,proposal,SYNTHETIC owner B,2026-10-21
+LyondellBasell,closed_lost,SYNTHETIC owner A,2026-09-10

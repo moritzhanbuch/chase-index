@@ -1,0 +1,294 @@
+{
+  "source": "https://filings.xbrl.org",
+  "index_urls": [
+    "https://filings.xbrl.org/indexes/filings-2023.json",
+    "https://filings.xbrl.org/indexes/filings-2024.json",
+    "https://filings.xbrl.org/indexes/filings-2025.json",
+    "https://filings.xbrl.org/indexes/filings-2026.json"
+  ],
+  "run_started_at": "2026-11-16T20:48:27Z",
+  "run_finished_at": "2026-11-16T20:48:39Z",
+  "selection_rule": "one filing per LEI, latest period_end between 2023-01-01 and run date, with xBRL-JSON; excludes ['UA']",
+  "download_stats_this_run": {},
+  "build_stats": {
+    "processed": 2342,
+    "not_downloaded": 984
+  },
+  "entities_selected": 3326,
+  "companies_rows": 2342,
+  "dpo_rows": 4368,
+  "large_cap_4b": 371,
+  "coverage_by_country": [
+    {
+      "country": "GB",
+      "entities_in_index_any_year": 716,
+      "entities_selected": 694,
+      "downloaded_and_parsed": 694,
+      "with_revenue": 563,
+      "financial": 92,
+      "large_cap_4b": 118,
+      "with_dpo_latest": 307,
+      "large_cap_with_dpo": 57
+    },
+    {
+      "country": "SE",
+      "entities_in_index_any_year": 407,
+      "entities_selected": 407,
+      "downloaded_and_parsed": 407,
+      "with_revenue": 350,
+      "financial": 29,
+      "large_cap_4b": 32,
+      "with_dpo_latest": 224,
+      "large_cap_with_dpo": 25
+    },
+    {
+      "country": "DK",
+      "entities_in_index_any_year": 354,
+      "entities_selected": 351,
+      "downloaded_and_parsed": 351,
+      "with_revenue": 208,
+      "financial": 16,
+      "large_cap_4b": 26,
+      "with_dpo_latest": 131,
+      "large_cap_with_dpo": 17
+    },
+    {
+      "country": "NO",
+      "entities_in_index_any_year": 274,
+      "entities_selected": 260,
+      "downloaded_and_parsed": 21,
+      "with_revenue": 20,
+      "financial": 3,
+      "large_cap_4b": 7,
+      "with_dpo_latest": 8,
+      "large_cap_with_dpo": 3
+    },
+    {
+      "country": "FR",
+      "entities_in_index_any_year": 244,
+      "entities_selected": 241,
+      "downloaded_and_parsed": 241,
+      "with_revenue": 207,
+      "financial": 22,
+      "large_cap_4b": 66,
+      "with_dpo_latest": 128,
+      "large_cap_with_dpo": 33
+    },
+    {
+      "country": "IT",
+      "entities_in_index_any_year": 197,
+      "entities_selected": 197,
+      "downloaded_and_parsed": 197,
+      "with_revenue": 164,
+      "financial": 26,
+      "large_cap_4b": 19,
+      "with_dpo_latest": 143,
+      "large_cap_with_dpo": 14
+    },
+    {
+      "country": "PL",
+      "entities_in_index_any_year": 158,
+      "entities_selected": 157,
+      "downloaded_and_parsed": 4,
+      "with_revenue": 3,
+      "financial": 0,
+      "large_cap_4b": 3,
+      "with_dpo_latest": 4,
+      "large_cap_with_dpo": 3
+    },
+    {
+      "country": "FI",
+      "entities_in_index_any_year": 146,
+      "entities_selected": 143,
+      "downloaded_and_parsed": 143,
+      "with_revenue": 134,
+      "financial": 15,
+      "large_cap_4b": 13,
+      "with_dpo_latest": 54,
+      "large_cap_with_dpo": 7
+    },
+    {
+      "country": "NL",
+      "entities_in_index_any_year": 138,
+      "entities_selected": 133,
+      "downloaded_and_parsed": 133,
+      "with_revenue": 119,
+      "financial": 15,
+      "large_cap_4b": 40,
+      "with_dpo_latest": 70,
+      "large_cap_with_dpo": 25
+    },
+    {
+      "country": "ES",
+      "entities_in_index_any_year": 130,
+      "entities_selected": 128,
+      "downloaded_and_parsed": 128,
+      "with_revenue": 113,
+      "financial": 13,
+      "large_cap_4b": 27,
+      "with_dpo_latest": 88,
+      "large_cap_with_dpo": 21
+    },
+    {
+      "country": "GR",
+      "entities_in_index_any_year": 116,
+      "entities_selected": 116,
+      "downloaded_and_parsed": 2,
+      "with_revenue": 2,
+      "financial": 0,
+      "large_cap_4b": 1,
+      "with_dpo_latest": 1,
+      "large_cap_with_dpo": 1
+    },
+    {
+      "country": "BE",
+      "entities_in_index_any_year": 97,
+      "entities_selected": 94,
+      "downloaded_and_parsed": 13,
+      "with_revenue": 13,
+      "financial": 1,
+      "large_cap_4b": 13,
+      "with_dpo_latest": 9,
+      "large_cap_with_dpo": 9
+    },
+    {
+      "country": "AT",
+      "entities_in_index_any_year": 81,
+      "entities_selected": 80,
+      "downloaded_and_parsed": 4,
+      "with_revenue": 2,
+      "financial": 2,
+      "large_cap_4b": 2,
+      "with_dpo_latest": 1,
+      "large_cap_with_dpo": 1
+    },
+    {
+      "country": "LU",
+      "entities_in_index_any_year": 71,
+      "entities_selected": 63,
+      "downloaded_and_parsed": 3,
+      "with_revenue": 3,
+      "financial": 0,
+      "large_cap_4b": 3,
+      "with_dpo_latest": 1,
+      "large_cap_with_dpo": 1
+    },
+    {
+      "country": "MT",
+      "entities_in_index_any_year": 63,
+      "entities_selected": 63,
+      "downloaded_and_parsed": 0,
+      "with_revenue": 0,
+      "financial": 0,
+      "large_cap_4b": 0,
+      "with_dpo_latest": 0,
+      "large_cap_with_dpo": 0
+    },
+    {
+      "country": "PT",
+      "entities_in_index_any_year": 46,
+      "entities_selected": 46,
+      "downloaded_and_parsed": 0,
+      "with_revenue": 0,
+      "financial": 0,
+      "large_cap_4b": 0,
+      "with_dpo_latest": 0,
+      "large_cap_with_dpo": 0
+    },
+    {
+      "country": "HU",
+      "entities_in_index_any_year": 31,
+      "entities_selected": 31,
+      "downloaded_and_parsed": 0,
+      "with_revenue": 0,
+      "financial": 0,
+      "large_cap_4b": 0,
+      "with_dpo_latest": 0,
+      "large_cap_with_dpo": 0
+    },
+    {
+      "country": "IS",
+      "entities_in_index_any_year": 28,
+      "entities_selected": 28,
+      "downloaded_and_parsed": 0,
+      "with_revenue": 0,
+      "financial": 0,
+      "large_cap_4b": 0,
+      "with_dpo_latest": 0,
+      "large_cap_with_dpo": 0
+    },
+    {
+      "country": "LT",
+      "entities_in_index_any_year": 25,
+      "entities_selected": 24,
+      "downloaded_and_parsed": 0,
+      "with_revenue": 0,
+      "financial": 0,
+      "large_cap_4b": 0,
+      "with_dpo_latest": 0,
+      "large_cap_with_dpo": 0
+    },
+    {
+      "country": "HR",
+      "entities_in_index_any_year": 23,
+      "entities_selected": 22,
+      "downloaded_and_parsed": 0,
+      "with_revenue": 0,
+      "financial": 0,
+      "large_cap_4b": 0,
+      "with_dpo_latest": 0,
+      "large_cap_with_dpo": 0
+    },
+    {
+      "country": "SI",
+      "entities_in_index_any_year": 21,
+      "entities_selected": 21,
+      "downloaded_and_parsed": 1,
+      "with_revenue": 1,
+      "financial": 0,
+      "large_cap_4b": 1,
+      "with_dpo_latest": 1,
+      "large_cap_with_dpo": 1
+    },
+    {
+      "country": "SK",
+      "entities_in_index_any_year": 15,
+      "entities_selected": 15,
+      "downloaded_and_parsed": 0,
+      "with_revenue": 0,
+      "financial": 0,
+      "large_cap_4b": 0,
+      "with_dpo_latest": 0,
+      "large_cap_with_dpo": 0
+    },
+    {
+      "country": "LV",
+      "entities_in_index_any_year": 6,
+      "entities_selected": 6,
+      "downloaded_and_parsed": 0,
+      "with_revenue": 0,
+      "financial": 0,
+      "large_cap_4b": 0,
+      "with_dpo_latest": 0,
+      "large_cap_with_dpo": 0
+    },
+    {
+      "country": "EE",
+      "entities_in_index_any_year": 6,
+      "entities_selected": 6,
+      "downloaded_and_parsed": 0,
+      "with_revenue": 0,
+      "financial": 0,
+      "large_cap_4b": 0,
+      "with_dpo_latest": 0,
+      "large_cap_with_dpo": 0
+    }
+  ],
+  "not_covered_note": "Germany (DE), Ireland (IE) and Switzerland (CH) have no filings in the index; see docs/sources/esef.md",
+  "outputs": [
+    "data/interim/esef_companies.parquet",
+    "data/interim/esef_companies.csv",
+    "data/interim/esef_dpo.parquet",
+    "data/interim/esef_dpo.csv"
+  ]
+}

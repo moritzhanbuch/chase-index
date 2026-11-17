@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ title }}</title>
+<meta name="description" content="{{ description }}">
+<link rel="canonical" href="{{ site_url }}{{ path }}">
+<meta property="og:title" content="{{ title }}">
+<meta property="og:description" content="{{ description }}">
+<meta property="og:type" content="website">
+<link rel="stylesheet" href="{{ root }}assets/style.css">
+{% block head %}{% endblock %}
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="{{ root }}index.html">The Chase <span>Index</span></a>
+    <nav class="main" aria-label="Main">
+      {% for href, label in nav %}<a href="{{ root }}{{ href }}"{% if href == active %} aria-current="page"{% endif %}>{{ label }}</a>
+      {% endfor %}
+    </nav>
+  </div>
+</header>
+<main id="main">
+{% block main %}{% endblock %}
+</main>
+<footer class="site">
+  <div class="wrap">
+    <p class="disclaimer">{{ disclaimer }}</p>
+    <p>{{ ogl }} {{ ch_attribution }}. UK figures come from the statutory Payment Practices and Performance Reporting service. Spanish figures come from annual accounts (ESEF filings and company investor-relations pages). Every figure links to its official source, and the official source wins.</p>
+    <p>{{ disclosure }}</p>
+    <nav aria-label="Footer">
+      <a href="{{ root }}methodology.html">Methodology</a>
+      <a href="{{ root }}limitations.html">Limitations</a>
+      <a href="{{ root }}data-dictionary.html">Data dictionary</a>
+      <a href="{{ root }}data.html">Download the data</a>
+      <a href="{{ root }}corrections.html">Corrections</a>
+      <a href="{{ root }}about.html">About</a>
+    </nav>
+    <p class="muted">Source data retrieved {{ data_date }}. Company-level data only.</p>
+  </div>
+</footer>
+<div id="tip" role="tooltip"></div>
+<script src="{{ root }}assets/site.js" defer></script>
+{% block scripts %}{% endblock %}
+</body>
+</html>

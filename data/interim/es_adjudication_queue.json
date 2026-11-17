@@ -1,0 +1,112 @@
+[
+  {
+    "ticker": "ACX",
+    "company_name": "Acerinox, S.A.",
+    "fields": [
+      {
+        "field": "pmp_days",
+        "value_a": 60.0,
+        "value_b": 63.0,
+        "status": "disagree"
+      },
+      {
+        "field": "ratio_paid_days",
+        "value_a": 61.0,
+        "value_b": 65.0,
+        "status": "disagree"
+      },
+      {
+        "field": "ratio_pending_days",
+        "value_a": 49.0,
+        "value_b": 44.0,
+        "status": "disagree"
+      },
+      {
+        "field": "prior_year_pmp_days",
+        "value_a": 64.0,
+        "value_b": 67.0,
+        "status": "disagree"
+      },
+      {
+        "field": "pct_invoices_paid_within_legal_max_by_value",
+        "value_a": 49.0,
+        "value_b": 41.0,
+        "status": "disagree"
+      },
+      {
+        "field": "pct_invoices_paid_within_legal_max_by_number",
+        "value_a": 41.0,
+        "value_b": 49.0,
+        "status": "disagree"
+      }
+    ],
+    "snippet_path": "data/interim/es_snippets/ACX.txt",
+    "location_a": "fact_id=f-723; concept=ifrs-full:DisclosureOfFinancialInstrumentsExplanatory; linearised_text_offset=7210",
+    "location_b": "HIT 1 f-723 offset 4282",
+    "notes_a": "money unit not stated near the totals: left null; pct_invoices_paid_within_legal_max_by_number: classified by its own label, but the row above it is about amounts (labels may be swapped in the source); pct_invoices_paid_within_legal_max_by_value: classified by its own label, but the row above it is about invoice counts (labels may be swapped in the source); 2 distinct PMP tables in the document; chosen header 'Solo nacionales | 2025 | 2024 Días | Días'; others: [table, fact f-723, scope consolidated_spanish_entities, PMP 63, header 'Incluyendo sólo proveedores fuera del Grupo | 2025 | 2024 Días | Días']",
+    "notes_b": "Main table: all suppliers (national+foreign) of Spanish group companies, excl. intra-group. Second table, national suppliers only: PMP 60 (prior 64), paid 61, pending 49, made 838,001, pending 89,265. Unit 'Importe' not stated in table, thousands EUR inferred from surrounding 'miles de euros'. Source text labels for the two percentage rows look swapped (value-row labelled 'sobre el número', number-row labelled 'sobre el total monetario'); I assigned by arithmetic: 512,492/1,257,041=41% by value, 19,064 invoices=49% by number."
+  },
+  {
+    "ticker": "AENA",
+    "company_name": "Aena S.M.E., S.A.",
+    "fields": [
+      {
+        "field": "pct_invoices_paid_within_legal_max_by_value",
+        "value_a": NaN,
+        "value_b": 99.5,
+        "status": "only_b"
+      },
+      {
+        "field": "pct_invoices_paid_within_legal_max_by_number",
+        "value_a": NaN,
+        "value_b": 98.8,
+        "status": "only_b"
+      }
+    ],
+    "snippet_path": "data/interim/es_snippets/AENA.txt",
+    "location_a": "fact_id=f-605; concept=ifrs-full:DisclosureOfFinancialInstrumentsExplanatory; linearised_text_offset=38113",
+    "location_b": "HIT 1 f-605 offset 35918",
+    "notes_a": null,
+    "notes_b": "Scope: AENA S.M.E., Aena Desarrollo Internacional and Aena Sociedad Concesionaria Murcia (Spanish group entities), in the consolidated notes. Unit 'miles de euros' stated in the column header."
+  },
+  {
+    "ticker": "AMS",
+    "company_name": "Amadeus IT Group, S.A.",
+    "fields": [
+      {
+        "field": "pct_invoices_paid_within_legal_max_by_value",
+        "value_a": NaN,
+        "value_b": 86.0,
+        "status": "only_b"
+      },
+      {
+        "field": "pct_invoices_paid_within_legal_max_by_number",
+        "value_a": NaN,
+        "value_b": 77.0,
+        "status": "only_b"
+      }
+    ],
+    "snippet_path": "data/interim/es_snippets/AMS.txt",
+    "location_a": "fact_id=f-479; concept=ifrs-full:DisclosureOfFinancialLiabilitiesExplanatory; linearised_text_offset=12857",
+    "location_b": "HIT 1 f-479 offset 10678",
+    "notes_a": null,
+    "notes_b": "Spanish subsidiaries ('sociedades dependientes espanolas'). Legal-max threshold used for the split is 45 days (Menor o igual de 45 dias)."
+  },
+  {
+    "ticker": "REP",
+    "company_name": "Repsol, S.A.",
+    "fields": [
+      {
+        "field": "pct_invoices_paid_within_legal_max_by_number",
+        "value_a": NaN,
+        "value_b": 95.0,
+        "status": "only_b"
+      }
+    ],
+    "snippet_path": "data/interim/es_snippets/REP.txt",
+    "location_a": "fact_id=f-529; concept=ifrs-full:DisclosureOfTradeAndOtherPayablesExplanatory; linearised_text_offset=1083",
+    "location_b": "HIT 1 f-529",
+    "notes_a": "pct_invoices_paid_within_legal_max_by_value: read from a sentence, not from a table row",
+    "notes_b": "'en España'. Percentages from footnotes (4) and (5): 97% of payments by value, 95% of invoices by number. Total paid within legal limit 15,503 millions EUR."
+  }
+]

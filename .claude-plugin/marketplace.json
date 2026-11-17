@@ -1,0 +1,12 @@
+{
+  "name": "chase-index",
+  "owner": {"name": "Moritz Hanbuch"},
+  "description": "Independent project by Moritz Hanbuch.",
+  "plugins": [
+    {
+      "name": "chase-index",
+      "source": "./",
+      "description": "/chase-brief skill and a read-only MCP server over the Chase Index data."
+    }
+  ]
+}

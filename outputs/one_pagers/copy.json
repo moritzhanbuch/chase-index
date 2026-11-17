@@ -1,0 +1,178 @@
+{
+ "alstom-q309084": {
+  "what_changes": [
+   "A UK entity already offers supply chain finance, and agent-negotiated early-payment discounts bring a similar option to smaller suppliers, each inside the minimum APR and maximum discount the CFO sets.",
+   "Alstom Engineering and Services Limited, which carries most of the UK invoice value, reports a maximum contractual term of 240 days: the two agents can agree payment timing per invoice instead of applying the longest term by default.",
+   "Across three UK entities, 62% of invoices were paid after 60 days, so Alstom invites its suppliers and the agent emails those not yet on the network, which brings the long tail in."
+  ],
+  "angle": "Open with the UK finance director of Alstom Engineering and Services Limited, which carries most of the UK invoice value. All three UK entities got slower year on year, by 7 to 14 days: ask how many suppliers the existing supply chain finance programme reaches."
+ },
+ "siemens-energy-ag-q89189545": {
+  "what_changes": [
+   "Standard terms at three of the four UK entities run to 180 days: agents on both sides can settle payment timing per invoice, so a small supplier is not held to the longest term by default.",
+   "Only 20% of UK entity invoices were paid late while 51% were paid after 60 days, so the wait is contractual, and that is where negotiated early-payment discounts apply, above a CFO-set minimum APR.",
+   "3 of 3 UK entities with a report from a year earlier got slower, and a live cash forecast shows treasury that movement as it builds."
+  ],
+  "angle": "Open with the head of UK finance. The UK entities with a comparable prior report all got slower year on year; Siemens Gamesa Renewable Energy Limited jumped from a very low prior figure and should be verified first. Ask how early payment is offered today beyond supply chain finance."
+ },
+ "lkq-corporation-cik1065696": {
+  "what_changes": [
+   "LKQ Group (UK) Limited reports a maximum contractual term of 270 days and offers supply chain finance: agents negotiate early-payment discounts supplier by supplier, including the long tail of smaller suppliers.",
+   "The entity paid 39% of invoices late, and where a dispute is the cause the AR and AP agents clear it between themselves and escalate only what they cannot resolve.",
+   "With the balance sheet implying a DPO of 92 days, up from 78, a live cash forecast shows the CFO what each change in payables does to cash before it is approved."
+  ],
+  "angle": "Open with the finance director of LKQ Group (UK) Limited, the one UK entity reporting. Its filing shows 86 average days, 23 more than a year earlier, with supply chain finance already offered: ask what share of suppliers actually uses it."
+ },
+ "nestle-q160746": {
+  "what_changes": [
+   "Only 6% of UK entity invoices were paid late but 63% were paid after 60 days, so the delay is the contract and the value lies in agents negotiating early-payment discounts supplier by supplier.",
+   "Seven UK entities report separately, from Tailsco Limited at 18 average days to Nestle Purina UK Manufacturing Operations Limited at 78: a live cash forecast puts all of them in one view for treasury.",
+   "Terms run to 180 days at four entities, and CFO-set guardrails such as a blocklist and a rule against negotiating on payroll day decide where and when the agents may act."
+  ],
+  "angle": "Open with the finance director of Nestle UK Ltd, which carries most of the UK invoice value. It paid 6% of invoices late yet 72% after 60 days, and four of seven UK entities got slower year on year: ask how many suppliers outside supply chain finance would take earlier cash at a discount."
+ },
+ "ge-vernova-inc-cik1996810": {
+  "what_changes": [
+   "GE Energy Power Conversion UK Limited reported 84 average days with 0% paid late, so long terms are the driver and agents can trade earlier payment for a discount within the CFO's minimum APR.",
+   "GE Energy (UK) Limited paid 43% of invoices late on standard terms of 30 to 120 days: n-way matching checks invoice, purchase order and proof of delivery before the due date, not after.",
+   "Five UK entities report averages from 25 to 84 days, so the buyer invites its suppliers and the agent emails those not yet on the network."
+  ],
+  "angle": "Open with the UK finance director or the group treasurer. Four of five UK entities average 57 to 84 days on standard terms of up to 120, and four of five got slower year on year: ask how much of that is terms and how much is approvals that miss the date."
+ },
+ "reckitt-benckiser-group-plc-lei48v108": {
+  "what_changes": [
+   "Reckitt Benckiser Health Limited, the largest UK entity by invoice value, averaged 77 days, 18 more than a year earlier, with 46% paid after 60: agents can negotiate early-payment discounts with suppliers who want cash sooner.",
+   "All six UK entities state standard terms of 30 to 180 days, and CFO-set guardrails such as a maximum discount and a blocklist decide which suppliers the agents may approach.",
+   "RB UK Commercial Limited is the exception with 29% of invoices paid late, which is where direct dispute clearing between the supplier's agent and the AP agent applies."
+  ],
+  "angle": "Open with the group treasurer or the head of procure-to-pay. The six UK entities took 79 days on average, weighted by invoice value, and five of six got slower year on year, led by Reckitt Benckiser Health Limited at 18 days: ask how many suppliers outside supply chain finance want earlier cash."
+ },
+ "grifols-q901262": {
+  "what_changes": [
+   "In Spain, 29% of payments by value were made within the 60-day legal maximum: n-way matching clears clean invoices early, so approval time is not what pushes them past the limit.",
+   "The average supplier payment period in Spain rose from 71 to 78 days, and a live cash forecast shows the CFO what moving back toward 60 would take, supplier by supplier.",
+   "Paid operations in Spain averaged 81 days, so suppliers who want cash sooner can offer a discount through their agent and the AP agent accepts only above the CFO's minimum APR."
+  ],
+  "angle": "Open with the head of accounts payable, with the CFO office in copy. The FY2025 accounts show a 78-day average payment period in Spain against a 60-day legal maximum, up from 71, and only 29% of payments by value inside the limit: ask where invoices wait longest and who owns bringing it down."
+ },
+ "johnson-matthey-plc-leisc6z10": {
+  "what_changes": [
+   "Terms at the two UK entities run up to 90 days and 50% of invoices were paid after 60, so suppliers who want cash sooner can trade a discount for it, above a minimum APR the CFO sets.",
+   "Johnson Matthey PLC reported 57% of invoices paid late: n-way matching against purchase order and proof of delivery separates invoices that are blocked from invoices that are only waiting.",
+   "Johnson Matthey PLC carries most of the UK invoice value, and there the agents only propose: posting happens after a human approves."
+  ],
+  "angle": "Open with the group financial controller or the head of AP at Johnson Matthey PLC, which carries most of the UK invoice value. The October filing shows 73 average days with 57% of invoices paid late, on terms of up to 90: ask how much is agreed terms and how much is exceptions."
+ },
+ "publicis-q1537378": {
+  "what_changes": [
+   "Zenith International (Media) Limited paid 78% of invoices late against a 60-day maximum term: n-way matching checks invoice, purchase order and proof of delivery before the due date passes.",
+   "Thirteen UK entities report separately, from Sapient Limited at 31 average days to 90 at the slowest, so Publicis invites its suppliers and the agent emails those not yet on the network.",
+   "UK entities paid 55% of invoices late on terms of up to 60 days, and where a dispute is the cause the AR and AP agents clear it directly and escalate only the exceptions."
+  ],
+  "angle": "Open with the head of shared services or the UK finance director. The thirteen UK entities took 64 days on average, weighted by invoice value, with 55% of invoices paid late on 60-day terms: ask whether they run one AP process or thirteen."
+ },
+ "haleon-plc-cik1900304": {
+  "what_changes": [
+   "UK entities paid 86% of invoices after 60 days and under 4% late: suppliers wait by contract, and agent-negotiated early-payment discounts put a price on that wait, above the CFO's minimum APR.",
+   "Standard terms run to 120 days with a 125-day maximum, so the two agents can agree payment timing per supplier instead of one date for everyone.",
+   "With the balance sheet implying a DPO of 190 days, up from 163, a live cash forecast shows what each earlier payment costs in working capital before anyone approves it."
+  ],
+  "angle": "Open with the group treasurer or the CFO. Haleon's two UK entities paid almost every invoice on time, yet 86% took more than 60 days, and both got slower year on year, Haleon UK Trading Limited by 14 days: ask whether supply chain finance reaches the smaller suppliers."
+ },
+ "eaton-corporation-q48872": {
+  "what_changes": [
+   "Eaton Limited, which carries most of the UK invoice value, paid 61% of invoices after 60 days on terms of up to 120: the two agents can agree payment timing per invoice within those terms.",
+   "With supply chain finance already offered by a UK entity, agents negotiating early-payment discounts give suppliers outside that programme the same choice, above the minimum APR the CFO sets.",
+   "Across three UK entities, 36% of invoices were paid late, and n-way matching against purchase order and proof of delivery separates blocked invoices from invoices that are only waiting."
+  ],
+  "angle": "Open with the UK finance director of Eaton Limited, which carries most of the UK invoice value at 83 average days. All three UK entities got faster year on year, so do not argue from a trend: ask how many suppliers the supply chain finance programme reaches on terms of up to 120 days."
+ },
+ "terex-corp-cik97216": {
+  "what_changes": [
+   "Terex GB Limited reported 80% of invoices paid after 60 days on terms of up to 90, so suppliers who want cash sooner can offer a discount through their agent, accepted only above the CFO's minimum APR.",
+   "The same filing shows 97% of invoices paid late: n-way matching against purchase order and proof of delivery shows which invoices are blocked and which are only waiting.",
+   "Group-wide, the balance sheet implies 57 days of payables, up from 52 the year before, and a live cash forecast shows treasury that movement as it builds."
+  ],
+  "angle": "Open with the UK finance director of Terex GB Limited, the group's one UK reporting entity. It reported 69 average days with 97% of invoices paid late, on a shortest standard term of 0 days: ask whether that late share reflects overdue invoices or how terms are recorded."
+ },
+ "unilever-q157062": {
+  "what_changes": [
+   "The largest UK entity by invoice value paid 67% of invoices after 60 days and 3% late, so suppliers wait by contract, and agent-negotiated early-payment discounts put a price on that wait, above the CFO's minimum APR.",
+   "All three UK entities state standard terms of 30 to 90 days and a 180-day maximum, so the two agents can agree payment timing per supplier inside that range.",
+   "The balance sheet implies a DPO of 150 days, up from 134, and a live cash forecast lets treasury see what paying selected suppliers sooner would cost before agreeing to it."
+  ],
+  "angle": "Open with the group treasurer or the UK head of procure-to-pay. UK entities paid 4% of invoices late but 60% after 60 days, and two of three got slower year on year, by 2 and 5 days: ask whether supply chain finance reaches the smaller suppliers."
+ },
+ "puig-q3410623": {
+  "what_changes": [
+   "In Spain, the average supplier payment period rose from 52 to 59 days against a legal maximum of 60 per payment, and a live cash forecast shows the CFO where payables are heading before the next annual accounts.",
+   "Paid operations in Spain averaged 63 days and 78.5% of payments by value fell within the legal maximum: n-way matching clears clean invoices early, so approval time is not what pushes the rest past 60.",
+   "Charlotte Tilbury Beauty Limited, which carries most of the UK invoice value, paid 24% of invoices late at 34 average days, so the supplier-side agent raises each dispute and the AP agent clears it directly."
+  ],
+  "angle": "Open with the CFO or the head of treasury in Spain. The FY2025 accounts show the average payment period up from 52 to 59 days, with paid operations at 63 against a 60-day legal maximum: ask what drove the rise and who owns bringing it back."
+ },
+ "mondelez-international-q12857502": {
+  "what_changes": [
+   "Only 5% of UK entity invoices were paid late but 59% were paid after 60 days, so the wait is in the agreed terms, which is where agents negotiate early-payment discounts above a CFO-set minimum APR.",
+   "Average days range from 11 at Grenade (UK) Limited to 113 at Mondelez UK Confectionery Production Limited, and a live cash forecast puts all five UK entities in one view for treasury.",
+   "Standard terms are 60 days at four UK entities with a maximum of 180, and the two agents can agree payment timing per invoice instead of applying the longest term by default."
+  ],
+  "angle": "Open with the finance director of Mondelez UK Limited, which carries most of the UK invoice value at 87 average days. Four of five UK entities got slower year on year and the balance sheet implies 134 days group-wide: ask how many suppliers outside supply chain finance would take earlier cash at a discount."
+ },
+ "airbus-q2311": {
+  "what_changes": [
+   "Airbus Operations Limited carries most of the UK invoice value and paid 61% of invoices after 60 days with 8% late, so agents can negotiate early-payment discounts with suppliers who want cash sooner.",
+   "Airbus Belfast Limited paid 56% of invoices late and Prestwick Aerosystems Limited 38%: n-way matching checks invoice, purchase order and proof of delivery before the due date, not after.",
+   "Five UK entities report separately, with averages from 25 to 73 days, and a live cash forecast gives treasury one view across all of them."
+  ],
+  "angle": "Open with the finance director of Airbus Operations Limited. It averaged 69 days on standard terms of 11 to 115, and three of four UK entities with a prior report got slower, each by 3 days or less: ask which suppliers would take a discount for earlier cash."
+ },
+ "ge-aerospace-q1485061": {
+  "what_changes": [
+   "GE Caledonian Limited, which carries most of the UK invoice value, paid 61% of invoices late on standard terms of 30 to 120 days: n-way matching against purchase order and proof of delivery shows which invoices are blocked.",
+   "Roughly 33% of UK entity invoices were paid after 60 days, so suppliers who want cash sooner can offer a discount through their agent, accepted only above the CFO's minimum APR.",
+   "GE Aviation Systems Limited averaged 70 days to pay and reports a maximum contractual term of 180: the two agents can agree payment timing per invoice instead of applying the longest term by default."
+  ],
+  "angle": "Open with the UK finance director of GE Caledonian Limited, which carries most of the UK invoice value at 53 average days. It paid 61% of invoices late and has no prior report to compare, so skip the trend: ask what holds invoices past terms of 30 to 120 days."
+ },
+ "pilgrims-pride-corp-cik802481": {
+  "what_changes": [
+   "Moy Park Limited, which carries most of the UK invoice value, paid 75% of invoices late at 49 average days: n-way matching against purchase order and proof of delivery shows which invoices are blocked and which only wait.",
+   "Terms run to 240 days at two UK entities and supply chain finance is already offered, so agent-negotiated early-payment discounts give suppliers outside that programme a similar choice, above the CFO's minimum APR.",
+   "All three UK entities got slower year on year, by a median of 3 days, and a live cash forecast shows treasury that drift before the next statutory report."
+  ],
+  "angle": "Open with the finance director of Moy Park Limited, which carries most of the UK invoice value. UK entities only: the group balance sheet implies 32 days, so keep the conversation in the UK and ask whether the 75% late share reflects overdue invoices or a shortest standard term of 0 days."
+ },
+ "heineken-n-v-lei86uq23": {
+  "what_changes": [
+   "Heineken UK Limited averaged 93 days on standard terms of 60 to 120: agents negotiate payment timing with each supplier's agent, so a supplier that needs day 30 can ask and get an answer.",
+   "The UK business already reports supply chain finance, and outcome-based pricing means adding agent-negotiated offers for other suppliers costs nothing unless a discount is captured or cash moves.",
+   "Average days to pay at Heineken UK Limited rose 17 days in a year, and a live cash forecast shows the CFO that movement as it builds and what earlier payment would do to cash."
+  ],
+  "angle": "Open with the UK finance director of Heineken UK Limited, the one UK entity reporting. It paid 11% of invoices late yet 60% after 60 days, with a 180-day maximum term: ask which suppliers would accept a discount for earlier cash."
+ },
+ "cummins-inc-cik26172": {
+  "what_changes": [
+   "Across five UK entities, 38.5% of invoices were paid after terms and 43% after 60 days: n-way matching of invoice, PO and proof of delivery clears the approvals that hold them before anyone has to chase.",
+   "Cummins Generator Technologies Limited newly reports offering supply chain finance, and agent-negotiated early-payment offers reach the suppliers a bank programme leaves out, inside the minimum APR the CFO sets.",
+   "Meritor Aftermarket Europe Limited paid 65% of its invoices late: the supplier's agent gets payment status and dispute answers directly, instead of an AP team answering emails."
+  ],
+  "angle": "Open with the UK finance lead at Cummins Generator Technologies Limited, the slowest UK entity at 73 days on average. It just started offering supply chain finance: ask which suppliers it reaches and what happens to the rest."
+ },
+ "heineken-holding-n-v-leitybs04": {
+  "what_changes": [
+   "Heineken UK Limited averaged 93 days on standard terms of 60 to 120: agents negotiate payment timing with each supplier's agent, so a supplier that needs day 30 can ask and get an answer.",
+   "The UK business already reports supply chain finance, and outcome-based pricing means adding agent-negotiated offers for other suppliers costs nothing unless a discount is captured or cash moves.",
+   "Average days to pay at Heineken UK Limited rose 17 days in a year, and a live cash forecast shows the CFO that movement as it builds and what earlier payment would do to cash."
+  ],
+  "angle": "Open with the UK finance director of Heineken UK Limited, the one UK entity reporting. It paid 11% of invoices late yet 60% after 60 days, with a 180-day maximum term: ask which suppliers would accept a discount for earlier cash."
+ },
+ "prysmian-group-q1964784": {
+  "what_changes": [
+   "Prysmian Cables & Systems Limited, which carries most of the UK invoice value, reports a standard term of 66 days and a maximum of 120: the two agents can settle payment timing per invoice inside those terms.",
+   "Prysmian Powerlink Services Limited paid 63% of invoices late while averaging 50 days, and n-way matching against purchase order and proof of delivery shows which invoices are blocked.",
+   "Both UK entities got slower year on year, by 3 and 5 days, and a live cash forecast shows treasury that drift before the next statutory report."
+  ],
+  "angle": "Open with the UK finance director of Prysmian Cables & Systems Limited, which carries most of the UK invoice value. It paid 52% of invoices after 60 days on a 66-day standard term: ask which suppliers would take earlier cash at a discount."
+ }
+}

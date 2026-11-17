@@ -1,0 +1,88 @@
+{% extends "base.html" %}
+{% block main %}
+<div class="wrap">
+  <p class="crumbs"><a href="../index.html#groups">Index</a> / {{ c.name }}</p>
+  <p class="kicker">{{ c.country_name }}{% if c.hq_city %}, {{ c.hq_city }}{% endif %} · {{ c.sector_name }} (coarse classification)</p>
+  <h1>{{ c.name }}: how long it takes to pay suppliers</h1>
+  <p class="lede">{{ c.summary }}</p>
+  {% if c.revenue_text %}<p class="small muted">Latest known annual revenue: {{ c.revenue_text }}{% if c.revenue_period_end %}, period ending {{ c.revenue_period_end|dmy }}{% endif %} (<a href="{{ c.revenue_source_url }}" rel="noopener">source</a>).{% if c.is_unit %} This entry is a subsidiary or unit of a larger group.{% endif %}</p>{% endif %}
+
+  {% if uk %}
+  <section class="block">
+    <h2>UK statutory payment reports <span class="chip reported">Reported</span></h2>
+    <p class="note">UK legal entities only, matched to the group. Not a statement about the group's global payment behaviour.</p>
+    <div class="kv">
+      <div><b>{{ uk.avg_days_to_pay_mean_of_entities|d1 }}</b><span>{{ uk_days_label }}</span></div>
+      <div>{% if uk.pct_invoices_paid_late_mean is none %}<b>n/a</b><span>share of invoices not paid within agreed terms (reported value inconsistent with the payment bands)</span>{% else %}<b>{{ uk.pct_invoices_paid_late_mean|pct }}</b><span>share of invoices not paid within agreed terms</span>{% endif %}</div>
+      <div><b>{{ uk.pct_invoices_paid_over_60_days_mean|pct }}</b><span>share of invoices paid after more than 60 days</span></div>
+      <div><b>{{ uk_trend_value|signed }}</b><span>{{ uk_trend_label }}{% if uk_trend_weighted is not none %} Weighted by invoice value: {{ uk_trend_weighted|signed }}.{% endif %}</span></div>
+    </div>
+    <p class="small">Reporting periods: {{ uk.period.start|dmy }} to {{ uk.period.end|dmy }}. Longest reported average among these entities: {{ uk.slowest_entity.name }}, {{ uk.slowest_entity.avg_days_to_pay|d1 }} days (<a href="{{ uk.slowest_entity.source_url }}" rel="noopener">official report</a>). For comparison, the official 2025 median for large UK businesses is {{ official_median|d1 }} days.{% if uk_weighted %} The shares of invoices paid late and after 60 days are weighted the same way as the days figure. The year-on-year change is the median across entities, with the invoice-value-weighted mean next to it.{% endif %}</p>
+    {% if uk_left_out %}<p class="note">One or more entities report extreme values and are left out of the group figure until verified: {{ uk_left_out }}. Their own reports are linked below.</p>{% endif %}
+    <h3>Per legal entity</h3>
+    <p class="small">Figures describe each legal entity in its stated reporting period, whoever owned it then. Group links reflect ownership records as of November 2026 and can include recently acquired or part-owned entities. Includes part-owned entities where this group is the registered controlling company.</p>
+    <div class="table-wrap">
+      <table data-sortable>
+        <thead><tr>
+          <th data-col="0"><button class="sort" type="button">Legal entity</button></th>
+          <th data-col="1">Period</th>
+          <th class="num" data-col="2" data-type="num" aria-sort="descending"><button class="sort" type="button">Avg days to pay</button></th>
+          <th class="num" data-col="3" data-type="num"><button class="sort" type="button">One year earlier</button></th>
+          <th class="num" data-col="4" data-type="num"><button class="sort" type="button">Within 30 days</button></th>
+          <th class="num" data-col="5" data-type="num"><button class="sort" type="button">31 to 60 days</button></th>
+          <th class="num" data-col="6" data-type="num"><button class="sort" type="button">After 60 days</button></th>
+          <th class="num" data-col="7" data-type="num"><button class="sort" type="button">Paid late</button></th>
+          <th data-col="8">Standard terms</th>
+          <th class="num" data-col="9" data-type="num"><button class="sort" type="button">Longest contractual</button></th>
+          <th data-col="10">Matched by</th>
+          <th data-col="11">Source</th>
+        </tr></thead>
+        <tbody>
+        {% for e in entities %}<tr><td>{{ e.name }}<br><span class="small muted">{{ e.number }}</span>{% if e.left_out %}<br><span class="chip flag">not in the group figure</span>{% endif %}</td><td class="nw">{{ e.period_start|dmy }} to<br>{{ e.period_end|dmy }}</td><td class="num" data-v="{{ e.days|raw }}">{{ e.days|d1 }}</td><td class="num" data-v="{{ e.prior|raw }}">{{ e.prior|d1 }}</td><td class="num" data-v="{{ e.w30|raw }}">{{ e.w30|pct }}</td><td class="num" data-v="{{ e.m31|raw }}">{{ e.m31|pct }}</td><td class="num" data-v="{{ e.o60|raw }}">{{ e.o60|pct }}</td><td class="num" data-v="{{ e.late|raw }}">{{ e.late|pct }}{% if e.late_flag %} <span class="chip flag" title="The late share does not fit the report's own payment bands">check</span>{% endif %}</td><td>{{ e.terms }}</td><td class="num" data-v="{{ e.maxc|raw }}">{{ e.maxc|d1 }}</td><td>{{ e.match }}</td><td><a href="{{ e.url }}" rel="noopener">Official report</a></td></tr>
+        {% endfor %}
+        </tbody>
+      </table>
+    </div>
+    <p class="small muted">Figures as filed by each entity. "Paid late" is the share of invoices not paid within agreed terms. "Matched by" says how the entity was linked to this group, see the <a href="../methodology.html">methodology</a>.{% if other_entities_n %} {{ other_entities_n }} more matched {{ "entity has no current usable report and is" if other_entities_n == 1 else "entities have no current usable report and are" }} left out.{% endif %}</p>
+  </section>
+  {% endif %}
+
+  {% if es %}
+  <section class="block">
+    <h2>Spain: statutory average supplier payment period <span class="chip reported">Reported</span></h2>
+    <p class="note">Covers the group's Spanish entities as disclosed under Ley 15/2010.{% if es.scope == "parent_only" %} This figure is for the parent company only.{% endif %}</p>
+    <div class="kv">
+      <div><b>{{ es.pmp_days|d1 }}</b><span>average supplier payment period (PMP), days, fiscal year {{ es.fiscal_year|d1 }}</span></div>
+      <div><b>{{ es.prior_year_pmp_days|d1 }}</b><span>previous fiscal year, days</span></div>
+      <div><b>{{ es.ratio_paid_days|d1 }}</b><span>ratio of paid operations, days</span></div>
+      <div><b>{{ es.ratio_pending_days|d1 }}</b><span>ratio of pending operations, days</span></div>
+      <div><b>{{ es.pct_paid_within_legal_max_by_value|pct }}</b><span>of invoice value paid within the legal maximum</span></div>
+    </div>
+    <p class="small">The legal maximum for payments between companies in Spain is 60 days. Source: <a href="{{ es.source_url }}" rel="noopener">annual report for fiscal year {{ es.fiscal_year|d1 }}</a>. More on the <a href="../spain.html">Spain page</a>.</p>
+  </section>
+  {% endif %}
+
+  {% if dpo %}
+  <section class="block proxy">
+    <h2>Balance-sheet view <span class="chip proxy">Computed DPO (proxy)</span></h2>
+    <p class="note proxy">This is not a reported figure. Computed DPO (proxy) is {{ dpo_payables }} divided by {{ dpo_cost }}, times 365, from the group's published financial statements. It includes accruals and timing effects and is not the same thing as days to pay.</p>
+    {% if dpo.dpo_days is not none %}
+    <div class="kv">
+      <div><b>{{ dpo.dpo_days|d1 }}</b><span>computed DPO (proxy), days, fiscal year {{ dpo.fiscal_year|d1 }}</span></div>
+      <div><b>{{ dpo.prior_year_dpo_days|d1 }}</b><span>previous fiscal year, days</span></div>
+      {% if dpo_show_median and dpo.sector_median_dpo_days is not none %}<div><b>{{ dpo.sector_median_dpo_days|d1 }}</b><span>median computed DPO for the sector in this index, days (sector is a coarse classification)</span></div>{% endif %}
+    </div>
+    {% endif %}
+    <p class="small">{{ dpo_note }}{% if dpo.period_end %} Balance sheet date: {{ dpo.period_end|dmy }}.{% endif %} Source: <a href="{{ dpo.source_url }}" rel="noopener">{{ dpo_source_label }}</a>.</p>
+  </section>
+  {% endif %}
+
+  <section class="narrow">
+    <h2>How to read this</h2>
+    <p>Reported figures are what the company's own legal entities filed under a statutory duty. They cover the entities and the period shown, nothing more. A group can pay quickly in one country and slowly in another, and a long average can reflect long agreed terms as well as late payment.</p>
+    <p>The computed proxy answers a different question: how large trade payables are next to annual costs. Use it to compare groups roughly, not to say how many days a supplier waits.</p>
+    <h2>Corrections</h2>
+    <p>If a figure here differs from the official source, the official source wins. Each number links to it. See <a href="../corrections.html">how to report an error</a>.</p>
+  </section>
+</div>
+{% endblock %}

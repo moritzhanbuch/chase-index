@@ -1,6 +1,6 @@
 [project]
 name = "chase-index"
-version = "0.3.0"
+version = "0.3.1"
 description = "The Chase Index: source-traceable dataset on how fast large companies pay suppliers"
 requires-python = ">=3.11"
 license = "MIT"

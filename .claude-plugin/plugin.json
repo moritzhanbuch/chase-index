@@ -1,7 +1,7 @@
 {
   "name": "chase-index",
   "description": "The Chase Index for GTM teams: the /chase-brief skill plus a read-only MCP server (weekly queue, account workspace, dinner builder, triggers, payment profiles) over source-traceable data on how long large companies take to pay suppliers.",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "author": {
     "name": "Moritz Hanbuch"
   },

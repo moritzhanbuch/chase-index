@@ -27,7 +27,19 @@ From a clone of the repository, run the same commands with `uv run chase-brief .
 
 ## How to present the result
 
-- Relay the answer as printed: it already leads with the key number, its source link, why now and the draft opener. Do not pad it.
+- Relay the answer without padding: keep the tool's wording, numbers and source links.
+- For a brief on one account, always use this order, and use it every time:
+  1. **Header line**: company name, tier, rank, queue position, sector, headquarters.
+  2. **Key number**: with its label (REPORTED / COMPUTED PROXY / ESTIMATE) and source link.
+  3. **UK entities table**: include it only when the account has UK entities (`uk_entities` in the structured details, or `--json` from the script). Use the columns Entity | Avg days | Paid >60d | Paid late | YoY. Add one row per entity, slowest first. Link the entity name to its `source_url`, show percentages with %, and show YoY as signed days (e.g. +8, -3). Leave the table out when there are no UK entities.
+  4. **Why now**: the trigger signals, with source links.
+  5. **Who to ask for**.
+  6. **Draft opener**: quoted, marked as a draft to edit and send.
+  7. **Estimate**: labelled ESTIMATE, with the low / base / high range.
+  8. **One-pager link**.
+  9. **My take**: one or two blunt lines from you on the best angle and the weakest point of the pitch.
+- Leave out a section only when the tool has no data for it. Do not reorder sections or add new ones.
+- Queue, dinner and triggers answers keep the tool's own order.
 - Keep the labels REPORTED, COMPUTED PROXY and ESTIMATE. Never present a proxy or an estimate as a reported fact.
 - UK figures cover the group's UK legal entities only; Spanish figures its Spanish entities. Say so when it matters.
 - Openers and invite lines are drafts for a person to edit and send. Never send anything.

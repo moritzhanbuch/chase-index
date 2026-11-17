@@ -6,9 +6,9 @@ Not run, on purpose: `claude plugin marketplace add` and `claude plugin install`
 
 | Check | Command (in the clone) | Result |
 |---|---|---|
-| MCP server, the plugin's exact command | `uv run --quiet --project <clone> python <clone>/mcp/server.py` | 12 tools. First start 17 s with an empty uv cache (installs dependencies), second start 0.4 s |
+| MCP server, the plugin's exact command | `uv run --quiet --project <clone> python <clone>/mcp/server.py` | 12 tools. First start 20 s with an empty uv cache (installs dependencies), second start 0.4 s |
 | Skill entry point | `uv run --quiet chase-brief --queue 3` | OK, queue printed with openers and source links (1 s) |
-| Test suite | `uv run --quiet --extra build python -m pytest -q` | OK, 322 passed, 3 skipped in 32.91s (37 s) |
+| Test suite | `uv run --quiet --extra build python -m pytest -q` | OK, 323 passed, 3 skipped in 32.91s (38 s) |
 | Workspace build | `uv run --quiet python workspace/build.py` | OK, workspace: 100 account pages, 25 queued, 282 live public triggers, 4 dinner cities, 29 one-pagers -> workspace/dist (20 s) |
 | Plugin and marketplace manifests | `claude plugin validate .` | Passed |
 | Clone left clean (read-only tools) | `git status --porcelain` | clean |

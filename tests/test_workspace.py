@@ -80,3 +80,28 @@ def test_private_trigger_text_not_in_queue():
 def test_no_demo_data():
     q = json.loads((DIST / "data" / "queue.json").read_text())
     assert "SYNTHETIC" not in json.dumps(q)
+
+
+def test_queue_page_is_compact_rows_with_details():
+    """One compact row per account (rank, company, tier, play, role, key number, at most 2 tags), no intro paragraph,
+    and the evidence, its source, why-now events and the opener available in the expanded view."""
+    import re
+    h = (DIST / "index.html").read_text()
+    q = json.loads((DIST / "data" / "queue.json").read_text())
+    assert 'class="lede"' not in h
+    rows = re.findall(r'<details class="qrow".*?</details>', h, re.S)
+    assert len(rows) == len(q["accounts"]) > 0
+    for row, a in zip(rows, q["accounts"]):
+        summary = row.split("</summary>")[0]
+        assert re.search(r'class="c-key \w+"><b>\d+d</b> <span>vs ', summary), a["company"]
+        assert summary.count('class="chip"') <= 2 and "<p" not in summary and "<li" not in summary
+        detail = row.split("</summary>")[1]
+        if a.get("evidence_url"):
+            assert html_escape(a["evidence_url"]) in detail
+        assert html_escape(a["opener_draft"]) in detail and "Copy opener" in detail
+        assert f'accounts/{a["company_id"]}.html' in detail
+
+
+def html_escape(s):
+    import html
+    return html.escape(s)

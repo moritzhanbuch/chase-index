@@ -9,7 +9,7 @@ A static page set a sales person opens on Monday morning:
 
 | Page | What it shows |
 |---|---|
-| `index.html` (Queue) | This week's queue: account, tier, play (next best action), who to reach by role, reported evidence with source, why now. Filter by country, play, tier. |
+| `index.html` (Queue) | This week's queue, one compact row per account: rank, company, tier, play, who to ask for, key number vs benchmark, up to 2 why-now tags. Click a row (or Enter) to expand the evidence with its source, all why-now events with links, the draft opener with a copy button, priority breakdown and links to the account page and one-pager. Filter by country, play, tier; expand or collapse all. |
 | `accounts/<id>.html` | One page per queued and top-100 account: evidence with source links (Reported, Computed proxy), scores and their components, triggers, supplier finance and UK filing features, the opportunity range (labelled Estimate), draft opener, link to the one-pager. |
 | `dinners.html` | Per dinner city in `config/dinners.yaml` (real dates only in the gitignored `config/dinners.local.yaml`): shortlist with hooks. Tick or untick accounts, then copy as CSV or text (clipboard only). |
 | `triggers.html` | Live public triggers, newest first, filter by type. E-invoicing mandates say whether they bind the buyer or its small suppliers. |

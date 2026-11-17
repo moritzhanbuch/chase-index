@@ -121,34 +121,83 @@ def load():
 
 
 # ---------------------------------------------------------------- pages
+ROW_TAG = {"einvoicing_mandate": "e-inv. deadline", "einvoicing_mandate_suppliers": "e-inv. (suppliers)",
+           "einvoicing_started": "e-invoicing", "sf_disclosed": "supplier finance", "terms_changed_other": "terms changed"}
+
+
+ROLE_SHORT = {"Head of accounts payable or shared services": "Head of AP / shared services",
+              "Group treasurer or CFO office": "Treasurer / CFO office", "CFO office": "CFO office"}
+
+
+def key_number(company_id: str) -> tuple[str, str, str]:
+    """Compact key number for the queue row: ('79d', 'vs 32 UK median', css class). The same figure the opener uses."""
+    hv = q.hook_variables(q._row(company_id))
+    days, kind = hv.get("days"), hv.get("evidence_kind")
+    if not days:
+        return "n/a", "", "prx"
+    if kind == "uk_reported":
+        return f"{days}d", "vs 32 UK median", "rep"
+    if kind == "es_reported":
+        return f"{days}d", "vs 60 legal max (ES)", "rep"
+    med = str(hv.get("benchmark") or "").split(" ")[0]
+    return f"{days}d", f"vs {med} sector median, DPO proxy", "prx"
+
+
 def build_queue(queue: dict, types: dict) -> str:
     rows, countries, plays = [], set(), set()
     for a in queue["accounts"]:
+        cid = a["company_id"]
         countries.add(a.get("country") or "")
         plays.add(a.get("play") or "")
         tt = [x for x in (a.get("why_now_types") or "").split("|") if x]
-        why = "".join(f"<li>{E(s)}</li>" for s in a["why_now"].split(" | "))
-        thin = ' <span class="flag" title="UK invoice value under 1% of group revenue">thin evidence</span>' if a.get("thin_evidence") else ""
-        rows.append(f"""<tr data-country="{E(a.get('country') or '')}" data-play="{E(a.get('play') or '')}" data-tier="{E(str(a.get('tier')))}">
-<td class="num">{a['queue_rank']}</td>
-<td><a href="accounts/{E(a['company_id'])}.html"><strong>{E(a['company'])}</strong></a> {tier_badge(a.get('tier'))}{thin}
-<div class="muted small">{E(a.get('country') or '')} · {E(a.get('sector') or '')} · priority {num(a.get('queue_priority'), 1)} ({E(a.get('priority_explained') or '')})</div></td>
-<td><span class="play">{E(PLAY_LABEL.get(a.get('play'), a.get('play') or ''))}</span><div class="small muted">Who: {E(a.get('who_role') or 'n/a')}</div></td>
-<td class="small"><p class="ev"><span class="lbl rep">Reported</span> {E(a.get('evidence') or '')} {link(a.get('evidence_url'))}</p>
-<ul class="why">{why}</ul>{('<div class="small">' + link(a.get('why_now_url'), 'trigger source') + '</div>') if a.get('why_now_url') else ''}
-<div class="chips">{''.join(f'<span class="chip" title="{E(types.get(x, x))}">{E(short_label(x))}</span>' for x in tt)}</div></td></tr>""")
+        tags = "".join(f'<span class="chip" title="{E(types.get(x, x))}">{E(ROW_TAG.get(x, short_label(x)))}</span>' for x in tt[:2])
+        more = f'<span class="chip more" title="{len(tt) - 2} more in the details">+{len(tt) - 2}</span>' if len(tt) > 2 else ""
+        kn, kvs, kcls = key_number(cid)
+        role = a.get("who_role") or "n/a"
+        thin = '<span class="flag" title="UK invoice value under 1% of group revenue">thin</span>' if a.get("thin_evidence") else ""
+        why = "".join(f"<li>{E(x)}</li>" for x in a["why_now"].split(" | "))
+        all_tags = "".join(f'<span class="chip" title="{E(types.get(x, x))}">{E(short_label(x))}</span>' for x in tt) or '<span class="muted">none</span>'
+        one_pager = (f' · <a href="one_pagers/{E(cid)}.html">one-pager</a>' if a.get("one_pager") else "")
+        rows.append(f"""<details class="qrow" data-country="{E(a.get('country') or '')}" data-play="{E(a.get('play') or '')}" data-tier="{E(str(a.get('tier')))}">
+<summary>
+<span class="c-rank">{a['queue_rank']}</span>
+<span class="c-co"><strong>{E(a['company'])}</strong> {tier_badge(a.get('tier'))}{thin}<span class="c-cc">{E(a.get('country') or '')}</span></span>
+<span class="c-play play-{E(a.get('play') or '')}">{E(PLAY_LABEL.get(a.get('play'), a.get('play') or ''))}</span>
+<span class="c-who" title="{E(role)}">{E(ROLE_SHORT.get(role, role))}</span>
+<span class="c-key {kcls}"><b>{E(kn)}</b> <span>{E(kvs)}</span></span>
+<span class="c-tags">{tags}{more}</span>
+</summary>
+<div class="qdetail">
+<div class="qd-main">
+<h3>Evidence</h3>
+<p><span class="lbl {'rep' if kcls == 'rep' else 'prx'}">{'Reported' if kcls == 'rep' else 'Computed proxy'}</span> {E(a.get('evidence') or '')} {link(a.get('evidence_url'))}</p>
+<h3>Why now</h3>
+<ul class="why">{why}</ul>
+<p class="small">{link(a.get('why_now_url'), 'trigger source') if a.get('why_now_url') else '<span class="muted">no dated public trigger source</span>'} · {a.get('triggers_live_n') or 0} live events</p>
+<div class="chips">{all_tags}</div>
+<h3>Opener <span class="muted small">draft, edit before sending</span></h3>
+<blockquote class="opener">{E(a.get('opener_draft') or '')}</blockquote>
+<button type="button" class="copy" data-copy="{E(a.get('opener_draft') or '')}">Copy opener</button>
+</div>
+<dl class="qd-side">
+<dt>Ask for</dt><dd>{E(role)}<div class="small muted">{E(a.get('who_role_reason') or '')}</div></dd>
+<dt>Play</dt><dd>{E(PLAY_LABEL.get(a.get('play'), a.get('play') or ''))}</dd>
+<dt>Priority</dt><dd>{num(a.get('queue_priority'), 1)} <span class="small muted">({E(a.get('priority_explained') or '')})</span></dd>
+<dt>Account</dt><dd>{E(a.get('country') or '')} · {E((a.get('sector') or '').replace('_', ' '))} · index rank {E(str(a.get('index_rank') or ''))}</dd>
+<dt>Links</dt><dd><a href="accounts/{E(cid)}.html">account page</a>{one_pager}</dd>
+</dl>
+</div>
+</details>""")
     sel = lambda name, vals, lab: (f'<label>{lab} <select data-filter="{name}"><option value="">All</option>'
                                    + "".join(f'<option value="{E(v)}">{E(PLAY_LABEL.get(v, v))}</option>' for v in sorted(vals) if v)
                                    + "</select></label>")
-    body = f"""<h1>This week's queue <span class="muted">week {E(queue['week'])}</span></h1>
-<p class="lede">{queue['count']} accounts to work this week, out of {queue['eligible_accounts']} eligible. Each row: the play, who to reach (by role),
-the reported evidence with its source, and why now. Openers are on the account page. Drafts only: a human sends everything.</p>
+    body = f"""<div class="qbar"><h1>Queue <span class="muted">week {E(queue['week'])}</span></h1>
+<span class="muted small">{queue['count']} of {queue['eligible_accounts']} eligible</span>
 <div class="filters" data-target="#queue">{sel('country', countries, 'Country')}{sel('play', plays, 'Play')}{sel('tier', {'1', '2', '3'}, 'Tier')}
-<span class="count muted" aria-live="polite"></span></div>
-<div class="tablewrap"><table id="queue" class="data"><thead><tr><th>#</th><th>Account</th><th>Play</th><th>Evidence and why now</th></tr></thead>
-<tbody>{''.join(rows)}</tbody></table></div>
-<p class="small muted">{E(queue['note'].replace(' who_named is present only when local private data exists.', ''))}
-Priority boosts from triggers are computed upstream and may include signals not shown here.</p>"""
+<button type="button" data-toggle-all="#queue">Expand all</button><span class="count muted" aria-live="polite"></span></div></div>
+<div class="qhead" aria-hidden="true"><span>#</span><span>Account</span><span>Play</span><span>Ask for</span><span>Key number</span><span>Why now</span></div>
+<div id="queue" class="qlist">{''.join(rows)}</div>
+<p class="small muted">Drafts only: a person edits and sends every message. {E(queue['note'].replace(' who_named is present only when local private data exists.', ''))}</p>"""
     return page("Queue", body, 0, "queue")
 
 

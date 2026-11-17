@@ -9,7 +9,7 @@
     var selects = box.querySelectorAll("select[data-filter]");
     var count = box.querySelector(".count");
     function apply() {
-      var n = 0, rows = table.querySelectorAll("tbody tr");
+      var n = 0, rows = table.querySelectorAll("tbody tr, .qrow");
       rows.forEach(function (tr) {
         var ok = true;
         selects.forEach(function (s) {
@@ -22,6 +22,21 @@
     }
     selects.forEach(function (s) { s.addEventListener("change", apply); });
     apply();
+  });
+
+  // queue: expand / collapse all, copy an opener
+  document.querySelectorAll("[data-toggle-all]").forEach(function (b) {
+    var list = document.querySelector(b.getAttribute("data-toggle-all"));
+    if (!list) return;
+    b.addEventListener("click", function () {
+      var items = list.querySelectorAll("details:not([hidden])");
+      var open = Array.prototype.some.call(items, function (d) { return !d.open; });
+      items.forEach(function (d) { d.open = open; });
+      b.textContent = open ? "Collapse all" : "Expand all";
+    });
+  });
+  document.querySelectorAll("button.copy[data-copy]").forEach(function (b) {
+    b.addEventListener("click", function () { copy(b.getAttribute("data-copy"), b); });
   });
 
   // dinner builder

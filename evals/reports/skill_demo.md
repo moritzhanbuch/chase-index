@@ -1,6 +1,6 @@
 # /chase-brief skill demo
 
-Run at 2026-11-17 23:10. Each block is the unedited output of `skill/chase-brief/scripts/chase_brief.py`. Cases: a reported-UK account, a reported-Spain account, a multi-entity UK account, a proxy-only account, a poor-fit account, a UK legal entity name (falls back to the group or the entity lookup) and a dinner shortlist.
+Run at 2026-11-17 23:28. Each block is the unedited output of `skill/chase-brief/scripts/chase_brief.py`. Cases: a reported-UK account, a reported-Spain account, a multi-entity UK account, a proxy-only account, a poor-fit account, a UK legal entity name (falls back to the group or the entity lookup) and a dinner shortlist.
 
 Result: 7/7 runs exited cleanly and carry the disclaimer.
 

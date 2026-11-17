@@ -1,6 +1,6 @@
 # Copy validation
 
-Run: 2026-11-17T22:03:27Z. Script: `evals/validate_copy.py`.
+Run: 2026-11-17T22:28:11Z. Script: `evals/validate_copy.py`.
 
 **Overall: PASS**
 
@@ -9,9 +9,9 @@ Run: 2026-11-17T22:03:27Z. Script: `evals/validate_copy.py`.
 The texts are hand-written against these exact files. If a pipeline rerun changes them, rerun this script:
 it lists every text whose numbers no longer match.
 
-- `outputs/one_pagers/facts_for_copy.json` md5 `e05ed26e504b826943d25312dfb8f461` modified 2026-11-17T22:01:43Z
+- `outputs/one_pagers/facts_for_copy.json` md5 `09d1918efb0545e5cbbf967dfa1323d4` modified 2026-11-17T22:27:22Z
 - `outputs/one_pagers/copy.json` md5 `163045f0f0c1f54ebb0ce456a2511cb1` modified 2026-11-16T20:52:02Z
-- `outputs/targets/target_list.csv` md5 `7eba6cce8dacd331258fdeacf3c8b14f` modified 2026-11-17T13:49:22Z
+- `outputs/targets/target_list.csv` md5 `ef2401d5375ea5b9c89738a4b6d4d73a` modified 2026-11-17T22:27:21Z
 - `data/processed/rationales_llm.csv` md5 `63b2b3af236150e43c69d667b543b5f8` modified 2026-11-17T13:49:15Z
 
 ## What was checked

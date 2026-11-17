@@ -252,9 +252,8 @@ def score_row(r, cfg, sig_rows: pd.DataFrame, today: date) -> dict:
         elif r.uk_trend_entities_n == 1:
             trend_txt = f"The UK entity's average days to pay rose by {r.uk_trend_days_yoy_mean:.1f} days year on year"
         else:
-            trend_txt = (f"UK entities' average days to pay rose by about {r.uk_trend_days_yoy_mean:.0f} days year on year "
-                         f"({int(r.uk_trend_entities_slower_n)} of {int(r.uk_trend_entities_n)} entities with a prior report got slower; "
-                         f"median change {r.uk_trend_days_yoy_median:+.0f} days)")
+            trend_txt = (f"UK entities' days to pay: median entity change {r.uk_trend_days_yoy_median:+.0f} days year on year "
+                         f"({int(r.uk_trend_entities_slower_n)} of {int(r.uk_trend_entities_n)} entities with a prior report got slower)")
     elif nn(r.es_pmp_days) is not None and nn(r.es_prior_year_pmp_days) is not None and \
             r.es_pmp_days - r.es_prior_year_pmp_days >= s_cfg["trend_min_days"]:
         trend_d, trend_url = r.es_pmp_days - r.es_prior_year_pmp_days, r.es_source_url

@@ -4,9 +4,10 @@
   python -m chase.assets.build --no-pdf     # skip PDF rendering (no browser needed)
   python -m chase.assets.build --company "Nestle"   # one extra one-pager on demand
 
-Numbers come only from data/processed/companies.parquet via chase.query. The two free-text
-blocks ("what would change", "first conversation angle") come from outputs/one_pagers/copy.json
-when an entry exists (written by the `assets` agent, grounded in the row and in an agent-to-agent payments team's
+Numbers come only from data/processed/companies.parquet via chase.query. The suggested first
+conversation is a template (conversation_angle) using the same rules as the queue opener in
+chase.gtm.nba, so every account follows one logic. The "what would change" block comes from
+outputs/one_pagers/copy.json when an entry exists (written by the `assets` agent, grounded in the row and in an agent-to-agent payments team's
 publicly described product); otherwise from the deterministic fallback below.
 """
 from __future__ import annotations
@@ -124,6 +125,75 @@ def fallback_copy(b: dict) -> dict:
     return {"what_changes": changes[:3], "angle": angle}
 
 
+UK_TABLE_ALL_MAX = 8   # show every UK entity up to this many; above it, the 5 slowest
+
+
+def conversation_angle(b: dict, r) -> str:
+    """Suggested first conversation, from the same rules as the queue opener (chase.gtm.nba): who to ask for
+    (nba.suggested_role), then the framing. Late share 25-75% is a process topic (matching and approvals);
+    long reported days with few late invoices are a terms and working-capital topic; otherwise an open
+    question. A disclosed supplier finance programme adds the reach-and-terms question and drops the
+    early-cash line. Year-on-year changes read "up N days to X days"."""
+    from chase.gtm import nba
+    from chase.resolve.uk_rollup import EXTREME_YOY_JUMP
+    role, _ = nba.suggested_role(r, None)
+    basis = b["scores"]["pain_basis"]
+    pp = b["payment_profile"]
+    uk, es, dpo = pp["reported"].get("uk"), pp["reported"].get("spain"), pp.get("computed_proxy")
+    short = q.short_name(b["name"])
+    out = [f"Ask for the {role[0].lower() + role[1:]}."]
+    days = None
+    if basis == "uk_reported":
+        days, n = uk["avg_days_to_pay_mean_of_entities"], uk["entities_n"]
+        if n == 1:
+            ev = f"{q._poss(short)} UK entity pays in {days:.0f} days on average (UK median {UK_MEDIAN})"
+        else:
+            kind = "weighted by invoice value" if uk.get("aggregation") == "invoice_value_weighted_mean" else "unweighted"
+            ev = f"{q._poss(short)} UK entities pay in {days:.0f} days on average ({kind}, {n} entities; UK median {UK_MEDIAN})"
+        # same rule as the trigger model: a jump this large is a re-filing or entity change to verify, not a talking point
+        movers = [e for e in uk["entities"] if e.get("trend_days_yoy") is not None and 5 <= e["trend_days_yoy"] < EXTREME_YOY_JUMP
+                  and e["avg_days_to_pay"] - e["trend_days_yoy"] > 0 and e["avg_days_to_pay"] / (e["avg_days_to_pay"] - e["trend_days_yoy"]) < 4]
+        if movers:
+            m = max(movers, key=lambda e: e["trend_days_yoy"])
+            ev += (f", and {nice(m['name'])} is up {m['trend_days_yoy']:.0f} days to {m['avg_days_to_pay']:.0f} days year on year"
+                   if n > 1 else f", up {m['trend_days_yoy']:.0f} days to {m['avg_days_to_pay']:.0f} days year on year")
+    elif basis == "es_reported":
+        days, prior = es["pmp_days"], es.get("prior_year_pmp_days")
+        ev = (f"{q._poss(short)} Spanish payment period is up {days - prior:.0f} days to {days:.0f} days in FY{int(es['fiscal_year'])}"
+              if prior is not None and days - prior >= 1 else f"{q._poss(short)} Spanish payment period is {days:.0f} days in FY{int(es['fiscal_year'])}")
+        ev += " (legal maximum per payment 60)"
+    else:
+        days, prior = dpo["dpo_days"], dpo.get("prior_year_dpo_days")
+        ev = (f"{q._poss(short)} computed DPO (a balance-sheet proxy) is up {days - prior:.0f} days to {days:.0f} days"
+              if prior is not None and days - prior >= 1 else f"{q._poss(short)} computed DPO (a balance-sheet proxy) is {days:.0f} days")
+        ev += f" (sector median {dpo['sector_median_dpo_days']:.0f})"
+    out.append(f"Open with the public number: {ev}.")
+
+    sf = b.get("supplier_finance") or {}
+    ff = b.get("uk_filing_features") or {}
+    sf_line = None
+    if sf.get("programme_disclosed") and sf.get("confirmed"):
+        amt = f" ({money(sf['obligations_outstanding'], sf['currency'])} outstanding at {str(sf['period_end'])[:7]})" if sf.get("obligations_outstanding") else ""
+        sf_line = f"The annual report discloses a supplier finance programme{amt}: ask which suppliers it reaches, and did terms get longer when the programme came in?"
+    elif basis == "uk_reported" and (ff.get("scf_offered_n") or 0) > 0:
+        sf_line = ("UK entities report offering supply chain finance: ask which suppliers it reaches, "
+                   "and did terms get longer when the programme came in?")
+    late = uk.get("pct_invoices_paid_late_mean") if basis == "uk_reported" else None
+    within = es.get("pct_paid_within_legal_max_by_value") if basis == "es_reported" else None
+    if late is not None and 25 <= late <= 75:           # nba: cold_email_late
+        out.append(f"With {late:.0f}% of invoices paid after the agreed terms, start with process: what stops an invoice from being "
+                   "approved on time (a missing PO match, an unconfirmed delivery, a supplier waiting on an answer)?")
+    elif basis in ("uk_reported", "es_reported") and (days or 0) >= 55 and (within is None or within >= 60):   # nba: cold_email_terms
+        low = f"only {late:.0f}% of invoices are paid late" if late is not None else "few invoices miss the legal limit"
+        out.append(f"Since {low}, the long days are agreed terms: a working-capital topic. Ask whether they are a deliberate lever"
+                   + ("." if sf_line else ", and what earlier cash would be worth to suppliers inside limits treasury sets."))
+    else:                                               # nba: cold_email_generic
+        out.append("Ask how much of the number is deliberate terms and how much is invoices stuck between AP and the supplier.")
+    if sf_line:
+        out.append(sf_line)
+    return " ".join(out)
+
+
 def render_one_pager(company: str, copy: dict | None = None) -> tuple[str, str]:
     b = q.get_account_brief(company)
     r = q._row(company)
@@ -148,13 +218,13 @@ def render_one_pager(company: str, copy: dict | None = None) -> tuple[str, str]:
             f"<td class=r>{pct(e['pct_paid_late'])}</td>"
             f"<td style='width:34%'><div class=barwrap><div class=bar style='width:{min(100, e['avg_days_to_pay'] / 1.2):.0f}%'></div>"
             f"<div class=mark style='left:{UK_MEDIAN / 1.2:.0f}%'></div></div></td></tr>"
-            for e in uk["entities"][:5])
+            for e in (uk["entities"] if uk["entities_n"] <= UK_TABLE_ALL_MAX else uk["entities"][:5]))
         facts = [("Invoices paid late", f"{uk['pct_invoices_paid_late_mean']:.0f}%" if uk["pct_invoices_paid_late_mean"] is not None else "n/a"),
                  ("Invoices paid after 60 days", f"{uk['pct_invoices_paid_over_60_days_mean']:.0f}%" if uk["pct_invoices_paid_over_60_days_mean"] is not None else "n/a"),
                  ("Change vs a year earlier", f"{uk['trend_days_year_on_year_mean']:+.1f} days" if uk["trend_days_year_on_year_mean"] is not None else "n/a"),
                  ("Reporting periods", f"{uk['period']['start']} to {uk['period']['end']}")]
         detail = (f"<table><tr><th>UK entity (link = official report)</th><th class=r>Days</th><th class=r>Late</th><th>vs median (red line)</th></tr>{rows}</table>")
-        if uk["entities_n"] > 5:
+        if uk["entities_n"] > UK_TABLE_ALL_MAX:
             detail += f"<p class=fine>The 5 slowest of {uk['entities_n']} entities are shown. All are in the group figure.</p>"
         scope = (f"UK legal entities only, matched to the group with confidence {uk['entity_match_confidence_min']:.2f} or higher. "
                  "Not a statement about the group's global payment behaviour.")
@@ -248,7 +318,7 @@ def render_one_pager(company: str, copy: dict | None = None) -> tuple[str, str]:
     check_rows = [("Fit " + f"{b['scores']['fit']:.0f}", fit_txt), ("Pain " + f"{b['scores']['pain']:.0f}", pain_txt)]
     if uk:
         check_rows.append(("Group link", f"{uk['entities_n']} UK entit{'y' if uk['entities_n'] == 1 else 'ies'} linked by {str(uk['entity_match_methods']).replace('|', ', ').replace('_', ' ')}; "
-                           f"lowest link confidence {uk['entity_match_confidence_min']:.2f}. Simple mean of the entities: {uk['avg_days_to_pay_simple_mean']:.0f} days."))
+                           f"lowest link confidence {uk['entity_match_confidence_min']:.2f}. Simple mean of the entities (unweighted): {uk['avg_days_to_pay_simple_mean']:.0f} days."))
     check_html = "".join(f"<tr><td style='width:16%'><b>{esc(k)}</b></td><td>{esc(v)}</td></tr>" for k, v in check_rows)
     changes_html = "".join(f"<li>{esc(c)}</li>" for c in copy["what_changes"])
     sc_ = b["scores"]
@@ -271,7 +341,7 @@ def render_one_pager(company: str, copy: dict | None = None) -> tuple[str, str]:
   <div class=box>{est_html}<p class=fine style="margin-top:7px">{esc(est_note)}</p></div>
 </div></div>
 
-<div class=angle style="margin-top:12px"><div class=kicker>Suggested first conversation</div><p>{esc(copy['angle'])}</p></div>
+<div class=angle style="margin-top:12px"><div class=kicker>Suggested first conversation</div><p>{esc(conversation_angle(b, r))}</p></div>
 
 <div class=kicker>How the score was built</div>
 <table class=fine style="font-size:9.5px">{check_html}</table>

@@ -258,6 +258,33 @@ def test_headlines_primary_actions_and_ticker():
     assert "animation:none" in rm and "transition:none" in rm
 
 
+def test_account_record_layout_angle_kpis_and_dedupe():
+    """CRM record page: header with status pill, a template 'angle' sentence, KPI tiles with data only, a main column and a
+    sticky right rail (ask for, opener with Copy, links). Standing facts never repeat Why now or Supplier finance."""
+    import html
+    import re
+    h = (DIST / "accounts" / "reckitt-benckiser-group-plc-lei48v108.html").read_text()
+    assert 'class="rec-grid"' in h and 'class="rec-rail"' in h and 'class="spill" data-cid="reckitt-benckiser-group-plc-lei48v108"' in h
+    ang = html.unescape(re.search(r'<span class="a-l">The angle</span><p>(.*?)</p>', h).group(1))
+    assert ang.startswith("Supplier finance outstanding fell from \u00a3437m to \u00a3277m while UK days to pay rose") and "ask treasury" in ang
+    tiles = [html.unescape(re.sub(r"<[^>]+>", " ", k)) for k in re.findall(r'<div class="kpi">(.*?)</div></div>', h)]
+    assert any("Days to pay" in t and "79d" in t for t in tiles) and any("Supplier finance" in t and "\u2193" in t for t in tiles)
+    rail = h.split('<aside class="rec-rail"')[1].split("</aside>")[0]
+    assert "Find on LinkedIn" in rail and "Copy opener" in rail and "One-pager" in rail
+    assert h.count('class="tb-g"') == 3                       # inventories, freight, net operating expenses
+    facts = h.split("Standing facts</h4>")[1].split("</ul>")[0].lower()
+    assert "median entity change" not in facts and "supplier finance programme" not in facts and "supply chain finance" not in facts
+    # every account page: an angle, at most one tile per kind, no proxy wording in the angle when there is reported data
+    sys.path.insert(0, str(ROOT / "src"))
+    from chase import query as q
+    for f in (DIST / "accounts").glob("*.html"):
+        t = f.read_text()
+        a = html.unescape(re.search(r'<span class="a-l">The angle</span><p>(.*?)</p>', t).group(1))
+        assert a.endswith(".") and not re.search(r"[{}]|\bNone\b|\bnan\b", a), (f.name, a)
+        if q.get_payment_profile(f.stem)["reported"]:
+            assert "DPO" not in a, f.name
+
+
 def test_theme_override_is_sanitised():
     wb = _wb()
     css = wb.theme_css({"light": {"bg": "#fff", "--accent": "color-mix(in srgb, #123 40%, #fff)", "unknown": "red",

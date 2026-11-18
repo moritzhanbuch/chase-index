@@ -463,6 +463,89 @@ def linkedin(company: str, role: str) -> str:
             f'rel="noopener noreferrer" title="Opens a LinkedIn people search for: {E(kw)}">Find on LinkedIn</a>')
 
 
+_RANGE = re.compile(r"(\d+)\s*(?:to|-|–|and)\s*(\d+)")
+
+
+def term_ranges(text) -> list[tuple[str, int, int]]:
+    """[(label, low, high)] from a filing's payment-terms text: 'cost of inventories 45 to 225 days; freight 120 to 210'.
+    Extensions ('extended by 0 to 20 days') are not absolute terms and are skipped."""
+    out = []
+    for seg in str(text or "").split(";"):
+        if re.search(r"\bextended\b[^;]*\bby\b", seg):
+            continue
+        m = _RANGE.search(seg)
+        if not m:
+            continue
+        lo, hi = int(m.group(1)), int(m.group(2))
+        if not (0 <= lo <= hi <= 720):
+            continue
+        label = re.sub(r"\b(generally|typically|between|maturity dates|general payment terms of|payment terms|majority of suppliers on)\b", "",
+                       seg[:m.start()], flags=re.I).strip(" :,()")
+        out.append((label, lo, hi))
+    return out
+
+
+def terms_bars(with_t, without_t) -> str:
+    """Two horizontal range bars per category (with / without the programme) on one shared day axis."""
+    w, wo = term_ranges(with_t), term_ranges(without_t)
+    if not w or not wo:
+        return ""
+    rows = []
+    overall_wo = next((r for r in wo if not r[0]), None) if len(wo) == 1 else None
+    for lab, lo, hi in w:
+        match = next((r for r in wo if r[0] and lab and r[0].lower() == lab.lower()), None) or overall_wo or (wo[0] if len(w) == 1 else None)
+        if match:
+            rows.append((lab or "All suppliers", (lo, hi), (match[1], match[2])))
+    if not rows:
+        return ""
+    top = max(max(a[1], b[1]) for _, a, b in rows)
+    axis = max(60, -(-top // 60) * 60)
+    pct = lambda v: f"{v * 100 / axis:.2f}%"
+
+    def bar(cls, r, lab):
+        return (f'<div class="tb-row"><span class="tb-k">{lab}</span><span class="tb-track"><i class="{cls}" style="left:{pct(r[0])};width:{pct(r[1] - r[0])}"></i></span>'
+                f'<span class="tb-v">{r[0]}–{r[1]}d</span></div>')
+    ticks = "".join(f'<span style="left:{pct(t)}">{t}</span>' for t in range(0, axis + 1, 60))
+    body = "".join(f'<div class="tb-g"><div class="tb-cat">{E(clean(lab))}</div>{bar("w", a, "With programme")}{bar("wo", b, "Without")}</div>' for lab, a, b in rows)
+    return f'<div class="tbars">{body}<div class="tb-axis"><span class="tb-k"></span><span class="tb-ticks">{ticks}</span><span class="tb-v">days</span></div></div>'
+
+
+def angle(b: dict, cid: str, kn: str, kvs: str, kind: str) -> str:
+    """One sentence from the opener rules (chase.gtm.nba), as a template with data slots. No model text."""
+    short = q.short_name(b["name"])
+    pp = b.get("payment_profile") or {}
+    uk, es, cp = (pp.get("reported") or {}).get("uk") or {}, (pp.get("reported") or {}).get("spain") or {}, pp.get("computed_proxy") or {}
+    sf = b.get("supplier_finance") or {}
+    days = kn.rstrip("d")
+    med = uk.get("trend_days_year_on_year_median")
+    trend = (f"UK days to pay rose (median entity +{int(med + 0.5)} days, now {days})" if kind == "uk_reported" and med is not None and med >= 1
+             else f"days to pay sit at {days}")
+    if sf.get("programme_disclosed") and sf.get("confirmed") and sf.get("obligations_outstanding"):
+        now, prior, cur = sf["obligations_outstanding"], sf.get("prior_year"), sf.get("currency")
+        if prior and abs(now - prior) / prior >= 0.1:
+            moved = "fell" if now < prior else "rose"
+            return (f"Supplier finance outstanding {moved} from {short_money(prior, cur)} to {short_money(now, cur)} while {trend}; "
+                    f"ask treasury why, and whether terms got longer when the programme came in.")
+        return f"{short} runs a {short_money(now, cur)} supplier finance programme while {trend}; ask treasury who it reaches and whether terms got longer with it."
+    late = uk.get("pct_invoices_paid_late_mean") if kind == "uk_reported" else None
+    if late is not None and 25 <= late <= 75:
+        return f"{late:.0f}% of UK invoices are paid after the agreed terms at {days} days on average; ask the head of AP what stops invoices being approved on time."
+    within = es.get("pct_paid_within_legal_max_by_value") if kind == "es_reported" else None
+    if within is not None and within < 60:
+        return f"Only {within:.0f}% of Spanish invoice value is paid within the legal 60 days ({days} days on average); ask AP where invoices get stuck."
+    if kind in ("uk_reported", "es_reported") and days.isdigit() and int(days) >= 55:
+        low = f"only {late:.0f}% paid late" if late is not None else "few invoices over the legal limit"
+        return f"{days} days to pay with {low}: the long days are agreed terms; ask treasury whether they are a deliberate working-capital lever."
+    if kind not in ("uk_reported", "es_reported") and cp.get("dpo_days") is not None:
+        return (f"Computed DPO of {cp['dpo_days']:.0f} days against a sector median of {cp.get('sector_median_dpo_days') or 0:.0f} (a balance-sheet proxy); "
+                f"ask the CFO office how much is terms and how much is process.")
+    return f"{days} days to pay {kvs}; ask how much is deliberate terms and how much is invoices stuck between AP and the supplier."
+
+
+def kpi(label, value, sub="", cls="") -> str:
+    return f'<div class="kpi"><div class="k-l">{label}</div><div class="k-v {cls}">{value}</div><div class="k-s">{sub}</div></div>'
+
+
 def build_account(w: dict, public_keys: set, in_queue: bool) -> str:
     from chase.gtm import nba as nba_mod
     b = w["brief"]
@@ -471,103 +554,120 @@ def build_account(w: dict, public_keys: set, in_queue: bool) -> str:
     pp = b.get("payment_profile") or {}
     rep = pp.get("reported") or {}
     uk, es, cp = rep.get("uk"), rep.get("spain"), pp.get("computed_proxy")
+    sf = b.get("supplier_finance") or {}
+    uf = b.get("uk_filing_features") or {}
+    nba = w.get("next_best_action") or {}
     rev = b.get("revenue") or {}
-    parts = []
-
-    # header
-    thin = ' · <span class="flag">thin evidence</span>' if b.get("thin_evidence") else ""
-    parts.append(f"""<p class="crumbs"><a href="../index.html">Queue</a> <span class="faint">/</span> {E(b['name'])}</p>
-<header class="p-head">{avatar(b['name'])}<div><h1>{E(b['name'])} {tier_badge(b.get('priority_tier'))}</h1>
-<div class="sub">{E(b.get('country') or '')} · {E(b.get('hq_city') or 'HQ city unknown')} · {E(human(b.get('sector')))} · index rank {b.get('rank')}
-· revenue {money(rev.get('amount'), rev.get('currency'))} ({E(str(rev.get('period_end') or '')[:4])}){icon_link(rev.get('source_url'), 'revenue source')}{thin}</div></div>
-{('<a class="btn" href="../one_pagers/' + E(cid) + '.html">One-pager</a>') if b.get('one_pager') else ''}</header>""")
-
-    # key number + trend
     kn, kvs, kcls, kind = key_number(cid)
-    spark = sparkline(*days_series(cid, kind), w=160, h=34)
-    src = (uk or {}).get("slowest_entity", {}).get("source_url") if kind == "uk_reported" else (es or {}).get("source_url") if kind == "es_reported" else (cp or {}).get("source_url")
-    parts.append(f"""<section class="p-key"><div><span class="p-num {kcls}">{E(kn)}</span> <span class="muted">{E(kvs)}</span>
-<div class="p-basis"><span class="lbl {'rep' if kcls == 'rep' else 'prx'}">{'Reported' if kcls == 'rep' else 'Computed proxy'}</span>
-<span class="faint small">{E(PAIN_BASIS.get(s.get('pain_basis'), human(s.get('pain_basis'))))}</span>{icon_link(src)}</div></div>{spark}</section>""")
 
-    # UK entity table
+    # ---- header
+    play = nba.get("play") or ""
+    status = (f'<button type="button" class="spill" data-cid="{E(cid)}" data-company="{E(b["name"])}" data-play="{E(play)}" data-status="todo" '
+              f'title="Click to change status (same as the queue)">To do</button>')
+    head = f"""<p class="crumbs"><a href="../index.html">Queue</a> <span class="faint">/</span> {E(b['name'])}</p>
+<header class="rec-head">{avatar(b['name'])}<div class="rh-t"><h1>{E(b['name'])} {tier_badge(b.get('priority_tier'))}</h1>
+<div class="sub">{E(b.get('country') or '')} · {E(b.get('hq_city') or 'HQ city unknown')} · {E(human(b.get('sector')))}
+<span class="faint"> · index rank {b.get('rank')} · revenue {money(rev.get('amount'), rev.get('currency'))} ({E(str(rev.get('period_end') or '')[:4])})</span>{icon_link(rev.get('source_url'), 'revenue source')}
+{' · <span class="flag">thin evidence</span>' if b.get('thin_evidence') else ''}</div></div>
+<div class="rh-a">{status}{('<a class="btn" href="../one_pagers/' + E(cid) + '.html">One-pager</a>') if b.get('one_pager') else ''}</div></header>
+<div class="angle"><span class="a-l">The angle</span><p>{E(angle(b, cid, kn, kvs, kind))}</p></div>"""
+
+    # ---- KPI tiles (only those with data)
+    tiles = [kpi("Days to pay", E(kn), E(kvs), kcls)]
+    if uk and uk.get("pct_invoices_paid_over_60_days_mean") is not None:
+        tiles.append(kpi("Paid after 60 days", pct(uk["pct_invoices_paid_over_60_days_mean"]), "share of UK invoices"))
+    if uk and uk.get("pct_invoices_paid_late_mean") is not None:
+        tiles.append(kpi("Paid late", pct(uk["pct_invoices_paid_late_mean"]), "after the agreed terms"))
+    if es and es.get("pct_paid_within_legal_max_by_value") is not None:
+        tiles.append(kpi("Within legal 60 days", pct(es["pct_paid_within_legal_max_by_value"]), "Spanish invoice value"))
+    if sf.get("programme_disclosed") and sf.get("obligations_outstanding"):
+        now, prior, cur = sf["obligations_outstanding"], sf.get("prior_year"), sf.get("currency")
+        arrow = ""
+        if prior:
+            arrow = (f'<span class="k-arrow down">↓</span> from {short_money(prior, cur)}' if now < prior
+                     else f'<span class="k-arrow up">↑</span> from {short_money(prior, cur)}' if now > prior else "unchanged")
+        if not sf.get("confirmed"):
+            arrow = (arrow + " \u00b7 " if arrow else "") + "one reader only"
+        tiles.append(kpi("Supplier finance", short_money(now, cur), arrow or "outstanding"))
+    spark = sparkline(*days_series(cid, kind), w=150, h=40)
+    kpis = f'<div class="kpis">{"".join(tiles)}<div class="kpi k-spark"><div class="k-l">Trend</div>{spark}</div></div>'
+
+    main = []
+    # ---- UK entities with mini bars vs the median
     if uk:
-        ents = "".join(f"""<tr><td>{E(_ent(e['name'] or ''))} <span class="faint small">{E(e.get('company_number') or '')}</span></td>
-<td class="num">{num(e.get('avg_days_to_pay'))}</td><td class="num">{pct(e.get('pct_paid_late')) if e.get('pct_paid_late') is not None else '<span class="faint" title="' + E(e.get('pct_paid_late_note') or '') + '">n/s</span>'}</td>
+        ents = uk.get("entities", [])
+        scale = max([e.get("avg_days_to_pay") or 0 for e in ents] + [90])
+        rows = "".join(f"""<tr><td>{E(_ent(e['name'] or ''))} <span class="faint small">{E(e.get('company_number') or '')}</span></td>
+<td class="num">{days_bar(int(e['avg_days_to_pay']) if e.get('avg_days_to_pay') is not None else None, 32, scale, 'rep', f"{e.get('avg_days_to_pay')} days vs UK median 32")}</td>
+<td class="num">{pct(e.get('pct_paid_late')) if e.get('pct_paid_late') is not None else '<span class="faint" title="' + E(e.get('pct_paid_late_note') or '') + '">n/s</span>'}</td>
 <td class="num">{pct(e.get('pct_paid_over_60'))}</td><td class="num">{('+' if (e.get('trend_days_yoy') or 0) > 0 else '') + num(e.get('trend_days_yoy')) if e.get('trend_days_yoy') is not None else '<span class="faint">n/a</span>'}</td>
-<td class="faint small nowrap">{E(str(e.get('period_end'))[:7])}</td><td>{icon_link(e.get('source_url'))}</td></tr>""" for e in uk.get("entities", []))
+<td class="faint small nowrap">{E(str(e.get('period_end'))[:7])}</td><td>{icon_link(e.get('source_url'))}</td></tr>""" for e in ents)
         per = uk.get("period") or {}
-        uf = b.get("uk_filing_features") or {}
         share = uf.get("einvoicing_offered_share")
-        feat = (f"""<details class="p-more"><summary>UK filing details</summary><dl class="p-dl">
+        feat = f"""<details class="p-more"><summary>UK filing details</summary><dl class="p-dl">
 <dt>Late because of disputes</dt><dd>{pct(uf.get('late_because_of_dispute_pct'))} {icon_link(uf.get('late_because_of_dispute_url'))}</dd>
 <dt>Terms made longer</dt><dd>{uf.get('terms_changed_longer_n')} entities {icon_link(uf.get('terms_changed_longer_url')) if uf.get('terms_changed_longer_url') else ''}</dd>
-<dt>Offer supply chain finance</dt><dd>{uf.get('scf_offered_n')} entities{' · newly started' if uf.get('scf_started') else ''}</dd>
 <dt>Offer e-invoicing</dt><dd>{pct(share * 100) if share is not None else 'n/a'}{' · newly started' if uf.get('einvoicing_started') else ''}</dd>
 <dt>Payment codes</dt><dd>{E(clean(uf.get('payment_codes') or 'none stated'))}{' · pay to stay reported' if uf.get('pay_to_stay') else ''}</dd>
 <dt>Entity matching</dt><dd>lowest confidence {num(uk.get('entity_match_confidence_min'), 2)} · {E(', '.join(MATCH.get(m, human(m)) for m in str(uk.get('entity_match_methods') or '').split('|') if m))}</dd>
-</dl></details>""" if uk else "")
-        parts.append(section("UK entities", f"""<dl class="p-dl"><dt>Average</dt><dd>{num(uk.get('avg_days_to_pay_mean_of_entities'))} days across {uk['entities_n']} UK entities, {E(AGG.get(uk.get('aggregation'), human(uk.get('aggregation'))))}</dd>
-<dt>Paid late</dt><dd>{pct(uk.get('pct_invoices_paid_late_mean'))} · over 60 days {pct(uk.get('pct_invoices_paid_over_60_days_mean'))}</dd>
-<dt>Year on year</dt><dd>median entity {('+' if (uk.get('trend_days_year_on_year_median') or 0) > 0 else '') + num(uk.get('trend_days_year_on_year_median'))} days</dd>
-<dt>Period</dt><dd>{E(str(per.get('start')))} to {E(str(per.get('end')))}</dd></dl>
-<div class="tablewrap"><table class="data ents"><thead><tr><th>Entity</th><th class="num">Days</th><th class="num">Late</th><th class="num">&gt;60d</th><th class="num">YoY</th><th>Period</th><th></th></tr></thead><tbody>{ents}</tbody></table></div>
+</dl></details>""" if uf else ""
+        main.append(section("UK entities", f"""<p class="sec-sum">{num(uk.get('avg_days_to_pay_mean_of_entities'))} days across {uk['entities_n']} UK entities, {E(AGG.get(uk.get('aggregation'), human(uk.get('aggregation'))))}
+· median entity {('+' if (uk.get('trend_days_year_on_year_median') or 0) > 0 else '') + num(uk.get('trend_days_year_on_year_median'))} days year on year · {E(str(per.get('start')))} to {E(str(per.get('end')))}</p>
+<div class="tablewrap"><table class="data ents"><thead><tr><th>Entity</th><th class="num">Days <span class="faint">· median 32</span></th><th class="num">Late</th><th class="num">&gt;60d</th><th class="num">YoY</th><th>Period</th><th></th></tr></thead><tbody>{rows}</tbody></table></div>
 <p class="faint small">UK legal entities only, not the whole group.</p>{feat}"""))
     if es:
-        parts.append(section("Spain", f"""<dl class="p-dl"><dt>Payment period</dt><dd>{num(es.get('pmp_days'))} days in FY{fy(es.get('fiscal_year'))} (prior year {num(es.get('prior_year_pmp_days'))}) · legal maximum 60 {icon_link(es.get('source_url'))}</dd>
+        main.append(section("Spain", f"""<dl class="p-dl"><dt>Payment period</dt><dd>{num(es.get('pmp_days'))} days in FY{fy(es.get('fiscal_year'))} (prior year {num(es.get('prior_year_pmp_days'))}) · legal maximum 60 {icon_link(es.get('source_url'))}</dd>
 <dt>Paid in time</dt><dd>{pct(es.get('pct_paid_within_legal_max_by_value'))} of invoice value within the legal maximum</dd>
 <dt>Scope</dt><dd>{E(human(es.get('scope')) or 'n/a')} · extraction confidence {num(es.get('extraction_confidence'), 2)}</dd></dl>"""))
 
-    # why now
+    # ---- why now (dated), then standing facts not already shown elsewhere
     live = sorted([t for t in w.get("triggers", []) if (cid, t["text"]) in public_keys], key=lambda t: str(t.get("trigger_date")), reverse=True)
     lines = []
     for t in live:
         what, chg = trigger_line(t)
         lines.append(f'<li title="{E(t["text"])}"><span class="w-date">{E(str(t.get("trigger_date"))[:10])}</span><span class="w-what">{E(what)}</span>'
                      f'<span class="sep">·</span><span class="w-chg">{E(chg)}</span>{icon_link(t.get("evidence_url"))}</li>')
-    facts = [f'<li><span class="w-chg">{E(clean(x.get("text") or ""))}</span>{icon_link(x.get("url"))}</li>' for x in b.get("why_now_signals") or []]
-    inner = (f'<ul class="why">{"".join(lines)}</ul>' if lines else '<p class="faint">No public dated trigger.</p>')
+    shown_sf = bool(sf.get("programme_disclosed")) or (uf.get("scf_offered_n") or 0) > 0
+
+    def repeated(text: str) -> bool:
+        low = text.lower()
+        return (any(low in t["text"].lower() or t["text"].lower() in low for t in live)
+                or (uk and "median entity change" in low)                                     # in the UK section and the KPI tiles
+                or (shown_sf and ("supplier finance programme" in low or "supply chain finance" in low)))  # in Supplier finance
+    facts = [f'<li><span class="w-chg">{E(clean(x.get("text") or ""))}</span>{icon_link(x.get("url"))}</li>'
+             for x in b.get("why_now_signals") or [] if not repeated(x.get("text") or "")]
+    inner = f'<ul class="why">{"".join(lines)}</ul>' if lines else '<p class="faint">No public dated trigger.</p>'
     if facts:
         inner += f'<h4 class="subh">Standing facts</h4><ul class="why">{"".join(facts)}</ul>'
-    parts.append(section("Why now", inner))
+    main.append(section("Why now", inner))
 
-    # opener and who
-    nba = w.get("next_best_action") or {}
-    role = nba.get("who_role") or nba_mod.suggested_role(q._row(cid), None)[0]
-    reason = nba.get("who_role_reason") or nba_mod.suggested_role(q._row(cid), None)[1]
-    who = (f'<dl class="p-dl"><dt>Ask for</dt><dd>{E(ROLE_SHORT.get(role, role))} · {linkedin(b["name"], role)}<div class="faint small">{E(clean(reason))}</div></dd>'
-           + (f'<dt>Play</dt><dd>{E(PLAY_LABEL.get(nba["play"], nba["play"]))} · queue #{nba.get("queue_rank")} · priority {num(nba.get("queue_priority"), 1)} '
-              f'<span class="faint">({E(nba.get("priority_explained") or "")})</span></dd>' if "play" in nba else "") + "</dl>")
-    if nba.get("opener_draft"):
-        parts.append(section("Opener", opener_card(nba["opener_draft"]) + who))
-    else:
-        parts.append(section("Who to ask for", who + '<p class="faint small">Not in this week\'s queue, so no opener draft.</p>'))
-
-    # supplier finance
-    sf = b.get("supplier_finance")
-    if sf:
+    # ---- supplier finance, with terms as range bars on one day axis
+    if sf or (uf.get("scf_offered_n") or 0) > 0:
+        uk_scf = (f'<dt>UK filings</dt><dd>{uf.get("scf_offered_n")} UK entit{"y" if uf.get("scf_offered_n") == 1 else "ies"} report offering supply chain finance'
+                  f'{" (newly started)" if uf.get("scf_started") else ""}</dd>') if (uf.get("scf_offered_n") or 0) > 0 else ""
         if sf.get("programme_disclosed"):
             conf = "confirmed by two readers" if sf.get("confirmed") else "one reader only, not used in scoring"
+            bars = terms_bars(sf.get("terms_with_programme"), sf.get("terms_without_programme"))
             sfh = f"""<dl class="p-dl"><dt>Programme</dt><dd><span class="lbl rep">Reported</span> disclosed in the annual report · {E(conf)} {icon_link(sf.get('source_url'))}</dd>
-<dt>Outstanding</dt><dd>{money(sf.get('obligations_outstanding'), sf.get('currency'))} (prior year {money(sf.get('prior_year'), sf.get('currency'))}) at {E(str(sf.get('period_end'))[:10])}</dd>
-<dt>Terms with it</dt><dd>{E(clean(str(sf.get('terms_with_programme') or 'n/a')))}</dd><dt>Without</dt><dd>{E(clean(str(sf.get('terms_without_programme') or 'n/a')))}</dd></dl>
-{('<details class="p-more"><summary>Quote from the filing</summary><blockquote class="small">' + E(sf['quote']) + '</blockquote></details>') if sf.get('quote') else ''}"""
+<dt>Outstanding</dt><dd>{money(sf.get('obligations_outstanding'), sf.get('currency'))} (prior year {money(sf.get('prior_year'), sf.get('currency'))}) at {E(str(sf.get('period_end'))[:10])}</dd>{uk_scf}</dl>
+{('<h4 class="subh">Payment terms, with and without the programme</h4>' + bars) if bars else ''}
+<details class="p-more"><summary>Terms as written in the filing</summary><dl class="p-dl"><dt>With it</dt><dd>{E(clean(sf.get('terms_with_programme') or 'n/a'))}</dd>
+<dt>Without</dt><dd>{E(clean(sf.get('terms_without_programme') or 'n/a'))}</dd></dl>
+{('<blockquote class="small">' + E(sf['quote']) + '</blockquote>') if sf.get('quote') else ''}</details>"""
         else:
-            sfh = f'<p class="muted">No supplier finance programme found in the annual report. {icon_link(sf.get("source_url"))}</p>'
-        parts.append(section("Supplier finance", sfh))
+            sfh = (f'<p class="muted">No supplier finance programme found in the annual report. {icon_link(sf.get("source_url"))}</p>' if sf else "") + (f'<dl class="p-dl">{uk_scf}</dl>' if uk_scf else "")
+        main.append(section("Supplier finance", sfh))
 
-    # proxy data (collapsed): the computed DPO, never next to reported evidence in the main view
+    # ---- collapsed: proxy data, estimate, scoring
     if cp:
         broad = cp.get("payables_basis") == "trade_and_other_broad"
         caveat = ("Computed by us from the balance sheet: payables / cost of sales x 365. A proxy, not reported days to pay."
                   + (" The payables line here is broad (it includes non-trade items), so the figure overstates days and is not used as evidence." if broad else "")
                   + (" The account has reported figures above; those take precedence." if rep else ""))
-        parts.append(f"""<details class="p-more sec"><summary>Proxy data <span class="faint">computed DPO</span></summary>
+        main.append(f"""<details class="p-more sec"><summary>Proxy data <span class="faint">computed DPO</span></summary>
 <p class="faint small">{E(caveat)}</p><dl class="p-dl"><dt>DPO FY{fy(cp.get('fiscal_year'))}</dt><dd>{num(cp.get('dpo_days'))} days (prior year {num(cp.get('prior_year_dpo_days'))}; sector median {num(cp.get('sector_median_dpo_days'))}) {icon_link(cp.get('source_url'))}</dd>
 <dt>Payables</dt><dd>{E(PAYABLES.get(cp.get('payables_basis'), human(cp.get('payables_basis'))))}</dd><dt>Cost</dt><dd>{E(COST.get(cp.get('cost_basis'), human(cp.get('cost_basis'))))}</dd>
 <dt>Confidence</dt><dd>{num(cp.get('confidence'), 2)}{'' if cp.get('flag') in (None, 'ok') else ' · ' + E(human(cp.get('flag')))}</dd></dl></details>""")
-
-    # estimate (collapsed)
     est = b.get("estimates") or {}
     eh = []
     for key, lab in (("uk_scope", "UK scope"), ("group_proxy", "Group (proxy)")):
@@ -579,28 +679,41 @@ def build_account(w: dict, public_keys: set, in_queue: bool) -> str:
         eh.append(f"""<dt>{lab}</dt><dd>{money(o.get('low'), cur)} to {money(o.get('high'), cur)} a year (base {money(o.get('base'), cur)}) ·
 supplier cash beyond 30 days {money(x.get('supplier_cash_beyond_30_days'), cur)}<div class="faint small">{E(clean(x['basis']))}</div></dd>""")
     a = est.get("assumptions") or {}
-    sc = a.get("scenarios") or {}
-    sct = " · ".join(f"{k}: {v.get('share_eligible', 0)*100:.0f}% eligible at {v.get('annualised_rate', 0)*100:.0f}% APR" for k, v in sc.items())
+    sct = " · ".join(f"{k}: {v.get('share_eligible', 0)*100:.0f}% eligible at {v.get('annualised_rate', 0)*100:.0f}% APR" for k, v in (a.get("scenarios") or {}).items())
     if eh:
-        parts.append(f"""<details class="p-more sec"><summary>Opportunity estimate <span class="lbl est">Estimate</span></summary><dl class="p-dl">{''.join(eh)}</dl>
+        main.append(f"""<details class="p-more sec"><summary>Opportunity estimate <span class="lbl est">Estimate</span></summary><dl class="p-dl">{''.join(eh)}</dl>
 <p class="faint small">{E(clean(a.get('formula') or ''))}. {E(sct)}. Early pay on day {E(str(a.get('early_pay_day')))}, at most {E(str(a.get('max_days_accelerated')))} days accelerated.
 Assumptions in {E(a.get('config_file') or '')}. {E(clean(est.get('uk_scope_note') or ''))} {E(clean(est.get('whose_money') or ''))}</p></details>""")
 
-    # how it's scored (collapsed)
     def tbl(d):
         return "".join(f"<tr><td>{E(PART.get(k, human(k)))}</td><td class='num'>{num(v, 1)}</td></tr>" for k, v in (d or {}).items())
-    parts.append(f"""<details class="p-more sec"><summary>How it’s scored <span class="faint">fit {num(s.get('fit'))} · pain {num(s.get('pain'))} · signal {num(s.get('signal'))} · priority {num(s.get('priority'))}</span></summary>
+    main.append(f"""<details class="p-more sec"><summary>How it’s scored <span class="faint">fit {num(s.get('fit'))} · pain {num(s.get('pain'))} · signal {num(s.get('signal'))} · priority {num(s.get('priority'))}</span></summary>
 <p class="small">{E(clean(b.get('rationale') or ''))} <span class="faint">({E(RATIONALE.get(b.get('rationale_method'), human(b.get('rationale_method'))))})</span></p>
 <p class="faint small">Deterministic formula, weights in <code>config/assumptions.yaml</code>. Pain is based on {E(PAIN_BASIS.get(s.get('pain_basis'), human(s.get('pain_basis'))))}; reported evidence always outranks a computed proxy. <a href="../method.html">Method</a></p>
 <div class="two"><table class="data small"><thead><tr><th>Fit</th><th class="num">Points</th></tr></thead><tbody>{tbl(s.get('fit_parts'))}</tbody></table>
 <table class="data small"><thead><tr><th>Pain</th><th class="num">Points</th></tr></thead><tbody>{tbl(s.get('pain_parts'))}</tbody></table></div></details>""")
 
-    if not in_queue:
-        parts.append('<p class="faint small">In the top 100, not in this week’s queue.</p>')
-    return page(b["name"], f'<div class="acct">{"".join(parts)}</div>', 1)
+    # ---- right rail: who, opener, play, links
+    role = nba.get("who_role") or nba_mod.suggested_role(q._row(cid), None)[0]
+    reason = nba.get("who_role_reason") or nba_mod.suggested_role(q._row(cid), None)[1]
+    trig_url = next((t.get("evidence_url") for t in live if isinstance(t.get("evidence_url"), str) and t["trigger_type"] not in ("dinner_city",)), None)
+    ev_url = (uk or {}).get("slowest_entity", {}).get("source_url") if kind == "uk_reported" else (es or {}).get("source_url") if kind == "es_reported" else (cp or {}).get("source_url")
+    links = " · ".join(x for x in (
+        f'<a href="../one_pagers/{E(cid)}.html">One-pager</a>' if b.get("one_pager") else "",
+        link(ev_url, "Evidence") if ev_url else "", link(trig_url, "Trigger source") if trig_url else "") if x)
+    rail = [f"""<section><h3>Ask for</h3><p class="r-role">{E(ROLE_SHORT.get(role, role))}</p><p class="faint small">{E(clean(reason))}</p><p>{linkedin(b['name'], role)}</p></section>"""]
+    if nba.get("opener_draft"):
+        rail.append(f'<section><h3>Opener</h3>{opener_card(nba["opener_draft"])}</section>')
+        rail.append(f"""<section><dl class="p-dl"><dt>Play</dt><dd>{E(PLAY_LABEL.get(nba['play'], nba['play']))}</dd>
+<dt>Priority</dt><dd>{num(nba.get('queue_priority'), 1)} · queue #{nba.get('queue_rank')}<div class="faint small">{E(nba.get('priority_explained') or '')}</div></dd></dl></section>""")
+    else:
+        rail.append('<section><p class="faint small">Not in this week’s queue, so no opener draft. In the top 100 or on a dinner list.</p></section>')
+    if links:
+        rail.append(f'<section><h3>Links</h3><p class="r-links">{links}</p></section>')
 
-
-INVITE_OPTS = (("", "To invite"), ("invited", "Invited"), ("accepted", "Confirmed"), ("declined", "Declined"))
+    body = f"""<div class="rec">{head}{kpis}<div class="rec-grid"><div class="rec-main">{''.join(main)}</div>
+<aside class="rec-rail" aria-label="Next step">{''.join(rail)}</aside></div></div>"""
+    return page(b["name"], body, 1)
 
 
 INVITE_ROLE = {"Group treasurer or CFO office": "CFO / Treasurer", "CFO office": "CFO", "Head of accounts payable or shared services": "CFO / Head of AP"}

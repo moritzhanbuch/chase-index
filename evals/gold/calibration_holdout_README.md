@@ -44,7 +44,7 @@ Code: `tmp/holdout_selection/holdout_pick.py`. `tmp/` is gitignored, so copy the
 - Two rules were tightened after the first pass, before the final run. "holding company" no longer counts as financial: it had swept in China Railway Engineering and Air France-KLM. Brand-named UK reporters must also be fast for a fast-payer zero: Siemens plc was fast, but other Siemens entities reported 43 to 84 days. The same brand entities also count in the ten median.
 - Thresholds were briefly loosened (median 38, fast at 25 days) while coverage was broken. They went back to 40 and 20 once the industry fix was in. The final set uses the strict thresholds.
 
-## Known weaknesses (for Mo's review)
+## Known weaknesses
 
 - UK evidence covers UK legal entities only, not global group behaviour. Several tens rest on one or two UK subsidiaries (Continental via Dunlop Oil & Marine, Organon, Puma, Kone, Elanco, Terex, Kerry).
 - Stellantis includes IBC Vehicles at 295 days. That is the reported figure and looks anomalous, but the ten also rests on Peugeot Citroen Automobiles UK (67 days, 60% late).

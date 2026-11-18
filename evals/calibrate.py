@@ -22,7 +22,7 @@ tens, zeros = j[j.expected == "ten"], j[j.expected == "zero"]
 note = sys.argv[1] if len(sys.argv) > 1 else ""
 rep = ROOT / "evals/reports/calibration.md"
 head = ("# Calibration\n\nGold set: `evals/gold/calibration.csv`, built by a separate agent that could not see the scores "
-        "(17 \"obvious tens\" expected in Tier 1, 15 \"obvious zeros\" expected in Tier 3). **Mo should review the gold set by hand.**\n\n"
+        "(17 \"obvious tens\" expected in Tier 1, 15 \"obvious zeros\" expected in Tier 3). **The gold set should be reviewed by hand.**\n\n"
         "Pass rule: every ten in Tier 1 and every zero in Tier 3. Each run of `evals/calibrate.py` appends an iteration below.\n")
 txt = rep.read_text() if rep.exists() else head
 n = txt.count("\n## Iteration ") + 1

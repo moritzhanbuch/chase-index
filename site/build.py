@@ -39,7 +39,7 @@ IMPRINT_PLACEHOLDER = "[postal address to be added before publication]"
 IMPRINT_ADDRESS = os.environ.get("CHASE_IMPRINT_ADDRESS", IMPRINT_PLACEHOLDER)
 RELEASE_PLACEHOLDERS = ("example.org", "example.com", IMPRINT_PLACEHOLDER)
 CH_ATTRIBUTION = "Contains public sector information from Companies House"
-DISCLOSURE = "Disclosure: the author built this index as part of a job application to an agent-to-agent B2B payments startup."
+DISCLOSURE = "Built independently as a portfolio project. Not affiliated with any company it mentions."
 SMALL_BASE_N = 3            # groups resting on fewer UK entities than this get a chip in the home table
 MIN_SECTOR_CONFIDENCE = 0.7
 DISCLAIMER = q.DISCLAIMER
@@ -805,7 +805,7 @@ def llms_txt(h, files, pages_n):
 - {CH_ATTRIBUTION} (group links, corporate records only).
 
 ## Disclosure
-The author built this index as part of a job application to an agent-to-agent B2B payments startup. {DISCLAIMER}
+Built independently as a portfolio project. Not affiliated with any company it mentions. {DISCLAIMER}
 """
 
 

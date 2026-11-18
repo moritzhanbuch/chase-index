@@ -1,6 +1,6 @@
 # Calibration
 
-Gold set: `evals/gold/calibration.csv`, built by a separate agent that could not see the scores (17 "obvious tens" expected in Tier 1, 15 "obvious zeros" expected in Tier 3). **Mo should review the gold set by hand.**
+Gold set: `evals/gold/calibration.csv`, built by a separate agent that could not see the scores (17 "obvious tens" expected in Tier 1, 15 "obvious zeros" expected in Tier 3). **The gold set should be reviewed by hand.**
 
 Pass rule: every ten in Tier 1 and every zero in Tier 3. Each run of `evals/calibrate.py` appends an iteration below.
 

@@ -22,7 +22,7 @@ Independent project by Moritz Hanbuch.
 
 A source-traceable dataset and toolkit on how long large companies take to pay their suppliers, turned into a ranked target list, account one-pagers, dinner-invite hooks, a public index site with a supplier lookup, a Claude Code skill and a read-only MCP server. Built with Claude Code and subagents from public data only.
 
-**What it found.** Nestle UK reports paying suppliers in 76 days on average with only 6% of invoices late: long terms by design. Across the 193 largest groups in the data, 27 have UK entities that average more than 60 days. The official UK median is 32.
+**What it found.** Nestlé's UK entities report paying suppliers in 70 days on average with only 6% of invoices late: long terms by design. Of the 492 groups with UK payment reports in the data, 62 have UK entities that average more than 60 days. The official UK median is 32.
 
 **What it is for.** A ranked target list, account one-pagers, a weekly queue with draft openers and dinner lists for a GTM team selling to enterprise finance, plus a public index and supplier lookup that answer engines can cite.
 

@@ -1,7 +1,8 @@
-# Chase Index workspace (internal)
+# Chase Index workspace
 
-**Warning: this contains internal scoring, priority tiers and draft openers. It is for the GTM team, not the public.**
-Every page carries `noindex`. The public, press-safe version of the data is the site in `site/`.
+The weekly GTM workspace: scoring, priority tiers and draft openers on top of the public data. Live demo:
+https://chase-index-mh.vercel.app. Every page carries `noindex` and the deployment sends an `X-Robots-Tag: noindex` header,
+so it stays out of search. The press-safe, company-level index site is in `site/`.
 
 ## What it is
 
@@ -40,8 +41,10 @@ python -m http.server -d workspace/dist 8000
 # open http://localhost:8000
 ```
 
-## Deploy later (not done; only after Mo reviews)
+## Deploy
 
-- **Vercel:** build locally first. Then from `workspace/` run `vercel deploy` with Root Directory `workspace`. `vercel.json` serves the prebuilt `dist/` (no build command, no secrets) and adds an `X-Robots-Tag: noindex` header. `.vercelignore` makes sure the gitignored `dist/` is uploaded. Put it behind Vercel password protection.
+The live demo is a Vercel deployment of the prebuilt `dist/` (no build command, no secrets). Build locally first, then deploy
+`workspace/dist`. `vercel.json` adds an `X-Robots-Tag: noindex` header, and `.vercelignore` makes sure the gitignored `dist/` is
+uploaded.
 
 Independent project by Moritz Hanbuch.

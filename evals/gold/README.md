@@ -4,7 +4,7 @@
 
 Purpose: an independent check on the priority tiers. It lists 17 "obvious tens" (expected Tier 1) and 15 "obvious zeros" (expected Tier 3). The scoring model passes calibration if tens land in Tier 1 and zeros in Tier 3.
 
-**Mo: please review this file by hand before relying on the calibration result.** It was chosen by an agent (`qa-calibration`), not by a person. Delete or relabel any row you would not defend in front of your team.
+**Review this file by hand before relying on the calibration result.** It was chosen by an agent (`qa-calibration`), not by a person. Delete or relabel any row you would not defend in front of your team.
 
 ### How it was chosen
 

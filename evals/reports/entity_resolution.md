@@ -88,7 +88,7 @@ The 0.95 bar is met on round 2 (60/60). It is fair to report "precision 1.00 on 
 3. Hand-check all 27 `brand_prefix` links. It takes minutes and removes the weakest stratum from the uncertainty.
 4. Draw a targeted sample of chain links whose top company is an investor, bank or holding vehicle to test the new investor rule, since the random sample contained none.
 5. Add a note field for groups that changed owner recently (Wood under Sidara, Warner Bros. under Skydance) so one-pagers do not describe the wrong ultimate parent.
-6. Mo should review the judgement calls in the gold file (Inovyn, Wood, MAN, and the round-1 calls) in the morning.
+6. Review by hand: the judgement calls in the gold file (Inovyn, Wood, MAN, and the round-1 calls).
 
 ## Round 1 (history): 0.833, failed
 

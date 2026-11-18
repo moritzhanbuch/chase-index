@@ -110,7 +110,7 @@ def test_required_notes_and_markup(dist):
     assert "computed DPO (proxy)" in home.lower() or "Computed DPO (proxy)" in home
     faq = (dist / "faq.html").read_text(encoding="utf-8")
     assert '"@type": "FAQPage"' in faq
-    assert "Disclosure: the author built this index as part of a job application to an agent-to-agent B2B payments startup." in faq
+    assert "Built independently as a portfolio project. Not affiliated with any company it mentions." in faq
     assert "Covers the group's Spanish entities as disclosed under Ley 15/2010." in (dist / "spain.html").read_text(encoding="utf-8").replace("&#39;", "'")
     assert OGL in (dist / "lookup.html").read_text(encoding="utf-8")
     for p in dist.rglob("*.html"):

@@ -92,3 +92,36 @@ def test_search_dropdown_arrow_keys_and_enter(site):
     pg.keyboard.press("Enter")
     pg.wait_for_load_state("networkidle")
     assert "/accounts/" in pg.url and want in pg.locator("h1").inner_text()
+
+
+def test_ticker_pauses_dismisses_and_respects_reduced_motion(site):
+    b, base = site
+    pg = b.new_page(viewport={"width": 1280, "height": 900})
+    pg.goto(base + "index.html")
+    track = ".ticker .tk-track"
+    assert pg.eval_on_selector(track, "e => getComputedStyle(e).animationName") == "tk"
+    pg.hover(".ticker .tk-view")
+    assert pg.eval_on_selector(track, "e => getComputedStyle(e).animationPlayState") == "paused"
+    pg.click(".tk-x")
+    assert not pg.locator(".ticker").is_visible()
+    pg.reload()
+    assert not pg.locator(".ticker").is_visible()          # stays dismissed until a newer trigger arrives
+    ctx = b.new_context(viewport={"width": 1280, "height": 900}, reduced_motion="reduce")
+    pg2 = ctx.new_page()
+    pg2.goto(base + "index.html")
+    assert pg2.eval_on_selector(track, "e => getComputedStyle(e).animationName") == "none"
+    ctx.close()
+
+
+def test_copy_shows_tick_then_resets(site):
+    b, base = site
+    ctx = b.new_context(viewport={"width": 1280, "height": 900}, permissions=["clipboard-read", "clipboard-write"])
+    pg = ctx.new_page()
+    pg.goto(base + "index.html")
+    pg.locator(".qrow").first.click()
+    btn = pg.locator("#panel button.copy")
+    btn.click()
+    pg.wait_for_function("() => document.querySelector('#panel button.copy').textContent === 'Copied \u2713'", timeout=1000)
+    pg.wait_for_timeout(1700)
+    assert btn.text_content() == "Copy opener"
+    ctx.close()

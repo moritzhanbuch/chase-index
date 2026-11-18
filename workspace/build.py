@@ -45,10 +45,12 @@ E = html.escape
 THEME_LOCAL = ROOT / "config" / "theme.local.json"
 THEME_ON = False   # set in main(): link assets/theme.css only when a local override was written
 DEFAULT_SCHEME = ""  # "light" or "dark" from the theme file; empty = follow the system. The top-bar toggle overrides it per browser
-SEARCH: list[tuple[str, str, str]] = []   # (account name, company_id) for the top-bar search, filled in main()
+SEARCH: list[tuple[str, str, str]] = []
+TICKER: list[dict] = []   # the 8 newest dated triggers, shown in the bar under the nav on every page   # (account name, company_id) for the top-bar search, filled in main()
 # variables a theme may set (everything else in the file is ignored); values may not break out of the declaration
 THEME_VARS = {"bg", "fg", "muted", "line", "card", "accent", "rep", "rep-bg", "prx", "prx-bg", "est", "est-bg", "flag", "flag-bg",
-              "t1", "t2", "t3", "tier-fg", "chip", "chip-fg", "font", "font-mono", "radius", "panel", "faint", "link", "ink"}
+              "t1", "t2", "t3", "tier-fg", "chip", "chip-fg", "font", "font-mono", "radius", "panel", "faint", "link", "ink",
+              "focus", "accent-fg", "glass-hi"}
 _UNSAFE = re.compile(r"[;{}<>\\]|url\(|@|/\*|\*/|expression", re.I)
 
 
@@ -103,7 +105,8 @@ def page(title: str, body: str, depth: int = 0, active: str = "") -> str:
     scheme = f' data-theme="{DEFAULT_SCHEME}"' if DEFAULT_SCHEME in ("light", "dark") else ""
     return f"""<!doctype html>
 <html lang="en"{scheme}><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<script>try{{var t=localStorage.getItem("chase-workspace-theme");if(t)document.documentElement.setAttribute("data-theme",t)}}catch(e){{}}</script>
+<script>try{{var t=localStorage.getItem("chase-workspace-theme");if(t)document.documentElement.setAttribute("data-theme",t);
+if(localStorage.getItem("chase-workspace-ticker")==="{TICKER[0]['key'] if TICKER else ''}")document.documentElement.setAttribute("data-ticker","off")}}catch(e){{}}</script>
 {NOINDEX}
 <title>{E(title)} | Chase Index workspace</title>
 <link rel="stylesheet" href="{up}assets/style.css">{f'<link rel="stylesheet" href="{up}assets/theme.css">' if THEME_ON else ''}</head>
@@ -111,12 +114,25 @@ def page(title: str, body: str, depth: int = 0, active: str = "") -> str:
 <nav>{navh}</nav>
 <div class="tools"><div class="search"><input type="search" id="acct-search" placeholder="Jump to account" aria-label="Jump to an account page (press /)" data-up="{up}" autocomplete="off"
 role="combobox" aria-expanded="false" aria-controls="acct-dd" aria-autocomplete="list"><kbd>/</kbd><ul id="acct-dd" class="dd" role="listbox" hidden></ul></div>
-<datalist id="acct-list">{opts}</datalist><button type="button" class="theme-btn" data-theme-toggle aria-label="Switch light or dark">Dark</button></div></div></header>
+<datalist id="acct-list">{opts}</datalist><button type="button" class="theme-btn" data-theme-toggle aria-label="Switch light or dark">Dark</button></div></div>{ticker(up)}</header>
 <main class="wrap">{body}</main>
 <footer class="wrap foot"><p>{DISCLAIMER}</p>
 <p class="muted">Internal GTM workspace built {date.today().isoformat()} from public data only. Contains internal scoring: do not publish.
 Reported = statutory filings. Computed proxy = derived from financial statements. Estimate = model output with stated assumptions.</p></footer>
 <script src="{up}assets/app.js"></script></body></html>"""
+
+
+def ticker(up: str) -> str:
+    """Thin bar under the nav: the newest dated triggers, scrolling (static with reduced motion), pause on hover, dismissible."""
+    if not TICKER:
+        return ""
+    def items(hidden):
+        attrs = ' tabindex="-1"' if hidden else ""
+        return "".join(f'<a href="{up}accounts/{E(t["company_id"])}.html"{attrs} title="{E(t["text"])}"><b>{E(t["company"])}</b> \u00b7 {E(t["what"])} \u00b7 {E(t["change"])}</a>'
+                       for t in TICKER)
+    return (f'<div class="ticker" role="region" aria-label="Newest triggers" data-key="{E(TICKER[0]["key"])}"><span class="tk-lab">Latest</span>'
+            f'<div class="tk-view"><div class="tk-track"><span class="tk-set">{items(False)}</span><span class="tk-set" aria-hidden="true">{items(True)}</span></div></div>'
+            f'<button type="button" class="tk-x" aria-label="Dismiss the trigger ticker" title="Dismiss">\u00d7</button></div>')
 
 
 def tier_badge(t) -> str:
@@ -316,6 +332,12 @@ def why_pill(a: dict, trig_by_type: dict) -> str | None:
     return None
 
 
+def opener_card(text: str) -> str:
+    """The draft opener as a small document card, Copy as the primary action."""
+    return (f'<div class="doc"><blockquote class="opener">{E(text)}</blockquote><div class="doc-foot"><span class="faint">Draft \u00b7 edit before sending</span>'
+            f'<button type="button" class="copy primary" data-copy="{E(text)}">Copy opener</button></div></div>')
+
+
 def build_queue(queue: dict, types: dict, public: list[dict] | None = None) -> str:
     by_key = {(t["company_id"], t["text"]): t for t in (public or [])}
     acc = queue["accounts"]
@@ -364,8 +386,7 @@ def build_queue(queue: dict, types: dict, public: list[dict] | None = None) -> s
 <section class="p-key"><div><span class="p-num {kcls}">{E(kn)}</span> <span class="muted">{E(kvs)}</span>
 <div class="p-basis"><span class="lbl {'rep' if kcls == 'rep' else 'prx'}">{'Reported' if kcls == 'rep' else 'Computed proxy'}</span>{icon_link(a.get('evidence_url'), 'evidence source')}</div></div>{spark}</section>
 <section><h3>Why now {('<span class="pill">' + E(pv) + '</span>') if pv else ''} <span class="faint">{('top ' + str(n_shown) + ' of ') if n_live > n_shown else ''}{n_live} live event{'' if n_live == 1 else 's'}</span></h3><ul class="why">{why}</ul></section>
-<section><h3>Opener <span class="faint">draft, edit before sending</span></h3><blockquote class="opener">{E(a.get('opener_draft') or '')}</blockquote>
-<button type="button" class="copy" data-copy="{E(a.get('opener_draft') or '')}">Copy opener</button></section>
+<section><h3>Opener</h3>{opener_card(a.get('opener_draft') or '')}</section>
 <section><dl class="p-dl"><dt>Ask for</dt><dd>{E(ROLE_SHORT.get(role, role))} · {linkedin(a['company'], role)}<div class="faint small">{E(a.get('who_role_reason') or '')}</div></dd>
 <dt>Links</dt><dd><a href="accounts/{E(cid)}.html">Account page</a>{' · ' + one_pager if one_pager else ''}{(' · ' + link(a.get('evidence_url'), 'Evidence')) if a.get('evidence_url') else ''}{(' · ' + link(a.get('why_now_url'), 'Trigger source')) if a.get('why_now_url') else ''}</dd></dl></section>
 <details class="p-more"><summary>More</summary><dl class="p-dl"><dt>Evidence</dt><dd>{E(a.get('evidence') or '')}</dd>
@@ -376,10 +397,12 @@ def build_queue(queue: dict, types: dict, public: list[dict] | None = None) -> s
     tabs = [("all", "All", len(acc)), ("treasury", "Treasury", n_tre), ("ap", "AP", n_ap), ("dinner", "Dinner", n_din)]
     tabh = "".join(f'<button type="button" class="tab" role="tab" data-tab="{k}" aria-selected="{"true" if k == "all" else "false"}">{lab} <span class="cnt">{n}</span></button>'
                    for k, lab, n in tabs)
-    body = f"""<div class="pagehead"><h1>Queue <span class="faint">week {E(queue['week'])}</span></h1>
-<div class="tabs" role="tablist" aria-label="Filter the queue">{tabh}</div>
-<div class="tools-r"><button type="button" id="export-status" title="Download a CSV in the config/status/ format">Export status</button>
-<button type="button" class="kbd-btn" data-help aria-label="Keyboard shortcuts" title="Keyboard shortcuts (?)">?</button></div></div>
+    wk = str(queue["week"]).split("-")[-1].lstrip("0")
+    body = f"""<div class="pagehead"><div class="ph-t"><h1>{len(acc)} accounts to chase this week.</h1>
+<div class="ph-sub">Week {E(wk)} \u00b7 {queue['eligible_accounts']} eligible</div></div>
+<div class="ph-bar"><div class="tabs" role="tablist" aria-label="Filter the queue">{tabh}</div>
+<div class="tools-r"><button type="button" id="export-status" class="primary" title="Download a CSV in the config/status/ format">Export status</button>
+<button type="button" class="kbd-btn" data-help aria-label="Keyboard shortcuts" title="Keyboard shortcuts (?)">?</button></div></div></div>
 <div class="list qlist" id="queue" role="grid" data-list>
 <div class="lhead qgrid" role="row"><span>Company</span><span>Days to pay <span class="faint">· median 32</span></span><span>Why now</span><span>Contact</span><span>Status</span></div>
 {''.join(rows)}
@@ -516,8 +539,7 @@ def build_account(w: dict, public_keys: set, in_queue: bool) -> str:
            + (f'<dt>Play</dt><dd>{E(PLAY_LABEL.get(nba["play"], nba["play"]))} · queue #{nba.get("queue_rank")} · priority {num(nba.get("queue_priority"), 1)} '
               f'<span class="faint">({E(nba.get("priority_explained") or "")})</span></dd>' if "play" in nba else "") + "</dl>")
     if nba.get("opener_draft"):
-        parts.append(section('Opener <span class="faint">draft, edit before sending</span>',
-                             f'<blockquote class="opener">{E(nba["opener_draft"])}</blockquote><button type="button" class="copy" data-copy="{E(nba["opener_draft"])}">Copy opener</button>{who}'))
+        parts.append(section("Opener", opener_card(nba["opener_draft"]) + who))
     else:
         parts.append(section("Who to ask for", who + '<p class="faint small">Not in this week\'s queue, so no opener draft.</p>'))
 
@@ -625,12 +647,13 @@ data-tier="{a['tier']}" data-hq="{E(a.get('hq_city') or '')}" data-local="{E(a['
         blocks.append(f"""<section class="dinner" data-city="{E(d['city'])}" data-date="{E(str(d.get('date') or ''))}">
 <div class="dhead"><h2>{E(d['city'].title())} <span class="faint">{E(str(when))}</span></h2>
 <div class="actions"><span class="count faint" aria-live="polite"></span><button data-act="all">All</button><button data-act="none">None</button>
-<button data-act="csv">Copy CSV</button><button data-act="text">Copy text</button><button data-act="inv-export" title="Download in the dinner_attendees.csv format">Export invites</button></div></div>
+<button data-act="csv">Copy CSV</button><button data-act="text">Copy text</button><button data-act="inv-export" class="primary" title="Download in the dinner_attendees.csv format">Export invites</button></div></div>
 <p class="dnote faint small">Companies without public payment data (e.g. insurers, or groups without UK filings) aren\u2019t listed.</p>
 {('<div class="list"><table class="dl" data-list>' + tables + '</table></div>') if tables else "<p class='muted'>No account with a strong enough hook.</p>"}
 {('<details class="bench"><summary>Bench: verify before use (' + str(len(d.get("bench_to_verify") or [])) + ')</summary><ul class="small">' + bench + '</ul></details>') if bench else ''}
 </section>""")
-    body = f"""<div class="pagehead"><h1>Dinner builder</h1></div>
+    body = f"""<div class="pagehead"><div class="ph-t"><h1>Who to invite.</h1>
+<div class="ph-sub">{sum(len(d['invite']) for d in dinners if d.get('found'))} accounts across {sum(1 for d in dinners if d.get('found'))} dinner cities</div></div></div>
 {''.join(blocks)}
 <aside id="panel" class="panel" aria-label="Details" hidden><button type="button" class="pclose" aria-label="Close details (Esc)">×</button><div class="pbody"></div></aside>
 <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>"""
@@ -733,10 +756,11 @@ def build_triggers(trigs: list[dict], types: dict) -> str:
     secs = "".join(f'<section class="tsec" data-group="{k}"><h3 class="tgroup">{names[k]} <span class="faint">{len(v)}</span></h3><div class="list">{"".join(v)}</div></section>'
                    for k, v in groups.items() if v)
     opts = "".join(f'<option value="{E(k)}" title="{E(v)}">{E(TYPE_LABEL.get(k, v))}</option>' for k, v in types.items() if any(t["trigger_type"] == k for t in trigs))
-    body = f"""<div class="pagehead"><h1>Trigger feed</h1>
-<div class="filters" data-target="#trig"><label>Type <select data-filter="type" data-hide-on-all="dinner_city"><option value="">All but dinner</option>{opts}</select></label>
+    body = f"""<div class="pagehead"><div class="ph-t"><h1>What changed.</h1>
+<div class="ph-sub">Live public triggers from statutory filings and annual reports</div></div>
+<div class="ph-bar"><div class="filters" data-target="#trig"><label>Type <select data-filter="type" data-hide-on-all="dinner_city"><option value="">All but dinner</option>{opts}</select></label>
 <label>When <select data-window><option value="30">Last 30 days</option><option value="90">Last 90 days</option><option value="up">Upcoming</option><option value="">Any date</option></select></label>
-<span class="count faint" aria-live="polite"></span></div></div>
+<span class="count faint" aria-live="polite"></span></div></div></div>
 <div id="trig">{secs}</div>"""
     return page("Trigger feed", body, 0, "triggers")
 
@@ -803,8 +827,15 @@ def main() -> None:
     cal = q.dinner_calendar()
     dinners = [api.dinner_builder(d["city"], demo=False) for d in cal]
     dinner_ids = [a["company_id"] for d in dinners if d.get("found") for a in d["invite"]]
+    today_s0 = date.today().isoformat()
+    newest = sorted((t for t in public if t.get("is_live") and str(t.get("trigger_date"))[:10] <= today_s0
+                     and t["trigger_type"] not in ("dinner_city", "einvoicing_mandate", "einvoicing_mandate_suppliers")),
+                    key=lambda t: (str(t.get("trigger_date")), t.get("strength") or 0), reverse=True)[:8]
+    TICKER[:] = [{"company_id": t["company_id"], "company": t["company"], "text": t["text"], "what": trigger_line(t)[0], "change": trigger_line(t)[1],
+                  "key": f'{str(t.get("trigger_date"))[:10]}|{t["company_id"]}'} for t in newest]
+    dinner_ids += [t["company_id"] for t in TICKER]
     ids = list(dict.fromkeys([a["company_id"] for a in queue["accounts"]] + [t["company_id"] for t in top["targets"]] + dinner_ids))
-    names = {**{a["company_id"]: a["company"] for d in dinners if d.get("found") for a in d["invite"]},
+    names = {**{t["company_id"]: t["company"] for t in TICKER}, **{a["company_id"]: a["company"] for d in dinners if d.get("found") for a in d["invite"]},
              **{t["company_id"]: t["name"] for t in top["targets"]}, **{a["company_id"]: a["company"] for a in queue["accounts"]}}
     cc = q.companies().set_index("company_id")
     SEARCH[:] = sorted(((names[c], c, f"{cc.loc[c, 'country']} \u00b7 T{int(cc.loc[c, 'priority_tier'])}" if c in cc.index else "") for c in ids), key=lambda x: x[0].lower())

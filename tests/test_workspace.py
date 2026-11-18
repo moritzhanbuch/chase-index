@@ -233,6 +233,31 @@ def test_identical_mandates_are_one_grouped_row():
     assert not re.search(r'<div class="trow"[^>]*data-type="einvoicing_mandate', t)
 
 
+def test_headlines_primary_actions_and_ticker():
+    import re
+    q = (DIST / "index.html").read_text()
+    d = (DIST / "dinners.html").read_text()
+    t = (DIST / "triggers.html").read_text()
+    assert re.search(r"<h1>\d+ accounts to chase this week\.</h1>", q) and re.search(r'class="ph-sub">Week \d+ \u00b7 \d+ eligible<', q)
+    assert "<h1>Who to invite.</h1>" in d and "<h1>What changed.</h1>" in t
+    # the accent is for primary actions only: Copy opener, Export invites, Export status
+    prim = set()
+    for h in (q, d):
+        for m in re.findall(r'<button[^>]*class="[^"]*\bprimary\b[^"]*"[^>]*>([^<]+)</button>', h):
+            prim.add(m)
+    assert prim == {"Copy opener", "Export invites", "Export status"}, prim
+    # ticker: 8 newest dated triggers, each linking to an existing account page, on every page
+    items = re.findall(r'<span class="tk-set">(.*?)</span>', q, re.S)[0]
+    links = re.findall(r'href="accounts/([^"]+)\.html"', items)
+    assert len(links) == 8 and all((DIST / "accounts" / f"{c}.html").exists() for c in links)
+    for f in DIST.rglob("*.html"):
+        if "one_pagers" not in f.parts:
+            assert 'class="ticker"' in f.read_text(), f.name
+    css = (ROOT / "workspace" / "static" / "style.css").read_text()
+    rm = css.split("@media (prefers-reduced-motion:reduce)")[1][:400]
+    assert "animation:none" in rm and "transition:none" in rm
+
+
 def test_theme_override_is_sanitised():
     wb = _wb()
     css = wb.theme_css({"light": {"bg": "#fff", "--accent": "color-mix(in srgb, #123 40%, #fff)", "unknown": "red",

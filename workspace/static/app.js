@@ -20,7 +20,12 @@
     document.body.removeChild(ta);
   }
   function copy(text, btn) {
-    var done = function () { if (!btn) return; var t = btn.textContent; btn.textContent = "Copied"; setTimeout(function () { btn.textContent = t; }, 1200); };
+    var done = function () {
+      if (!btn) return;
+      if (!btn.dataset.label) btn.dataset.label = btn.textContent;
+      btn.textContent = "Copied \u2713"; btn.classList.add("done");
+      clearTimeout(btn._t); btn._t = setTimeout(function () { btn.textContent = btn.dataset.label; btn.classList.remove("done"); }, 1500);
+    };
     if (navigator.clipboard && window.isSecureContext) {
       navigator.clipboard.writeText(text).then(done, function () { fallback(text); done(); });
     } else { fallback(text); done(); }
@@ -231,6 +236,15 @@
       }
     }, true);
   }
+
+  // ---------------------------------------------------------------- ticker: dismiss (remembered until a newer trigger arrives)
+  $$(".ticker").forEach(function (tk) {
+    var x = $(".tk-x", tk);
+    if (x) x.addEventListener("click", function () {
+      root.setAttribute("data-ticker", "off");
+      try { localStorage.setItem("chase-workspace-ticker", tk.dataset.key); } catch (e) { /* not remembered */ }
+    });
+  });
 
   // ---------------------------------------------------------------- dinner builder: select, copy, invite status (localStorage) and export
   var INV_KEY = "chase-workspace-invites-v1";

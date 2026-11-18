@@ -15,7 +15,7 @@ A static page set a sales person opens on Monday morning:
 | `triggers.html` | Live public triggers grouped Upcoming, This week, Last week, Earlier; one line each, identical e-invoicing mandate events collapsed into one expandable row ("German e-invoicing mandate · 21 accounts") (company · what changed · entity a → b), source as a link icon (a dash without one), full filing text on hover. Opens on the last 30 days without dinner triggers; Type and When filters show the rest. |
 | `method.html` | Reported vs Computed proxy vs Estimate, with `docs/methodology.md` behind "Show full methodology". |
 
-Every page has an account search in the top bar: `/` focuses it, a dropdown shows the top 8 matches, arrow keys and Enter jump to the account page and a light/dark switch remembered per browser.
+Every page has a thin ticker under the nav with the 8 newest dated triggers (pauses on hover, dismissible, static with reduced motion) and an account search in the top bar: `/` focuses it, a dropdown shows the top 8 matches, arrow keys and Enter jump to the account page and a light/dark switch remembered per browser.
 
 Build-time JSON snapshots are in `dist/data/`.
 
@@ -23,7 +23,7 @@ Build-time JSON snapshots are in `dist/data/`.
 
 Every colour and font is a CSS variable in `static/style.css`; that file is the neutral default. To restyle locally, copy
 `config/theme.example.json` to `config/theme.local.json` (gitignored) and edit it: the build writes it to `dist/assets/theme.css`.
-Only the listed variables are read and unsafe values are dropped. `"default_scheme": "light"` (or `"dark"`) fixes the starting
+Only the listed variables are read and unsafe values are dropped. `accent` colours primary actions (Copy opener, Export invites, Export status) and the selected-row edge, with `accent-fg` as its text colour (keep 4.5:1); `focus` is the focus ring. `"default_scheme": "light"` (or `"dark"`) fixes the starting
 scheme instead of following the system; the top-bar switch still changes it. `workspace/build.py --neutral` ignores the local file (use it for
 screenshots that get committed).
 

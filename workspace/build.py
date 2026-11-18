@@ -116,9 +116,8 @@ if(localStorage.getItem("chase-workspace-ticker")==="{TICKER[0]['key'] if TICKER
 role="combobox" aria-expanded="false" aria-controls="acct-dd" aria-autocomplete="list"><kbd>/</kbd><ul id="acct-dd" class="dd" role="listbox" hidden></ul></div>
 <datalist id="acct-list">{opts}</datalist><button type="button" class="theme-btn" data-theme-toggle aria-label="Switch light or dark">Dark</button></div></div>{ticker(up)}</header>
 <main class="wrap">{body}</main>
-<footer class="wrap foot"><p>{DISCLAIMER}</p>
-<p class="muted">Internal GTM workspace built {date.today().isoformat()} from public data only. Contains internal scoring: do not publish.
-Reported = statutory filings. Computed proxy = derived from financial statements. Estimate = model output with stated assumptions.</p></footer>
+<footer class="wrap foot"><p>Prototype built {date.today().isoformat()} from public data. {DISCLAIMER}</p>
+<p class="muted">Reported = statutory filings. Computed proxy = derived from financial statements. Estimate = model output with stated assumptions.</p></footer>
 <script src="{up}assets/app.js"></script></body></html>"""
 
 

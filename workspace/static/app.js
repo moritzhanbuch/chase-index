@@ -174,24 +174,55 @@
       label();
     });
   });
-  var search = $("#acct-search");
-  function go() {
-    var v = search.value.trim().toLowerCase(), opts = $$("#acct-list option");
-    if (!v) return;
-    var hit = opts.filter(function (o) { return o.value.toLowerCase() === v; })[0] ||
-              opts.filter(function (o) { return o.value.toLowerCase().indexOf(v) === 0; })[0] ||
-              opts.filter(function (o) { return o.value.toLowerCase().indexOf(v) >= 0; })[0];
-    if (!hit) return toast("No account matches “" + search.value + "”");
-    location.href = search.dataset.up + "accounts/" + hit.dataset.id + ".html";
+  var search = $("#acct-search"), dd = $("#acct-dd"), ddItems = [], ddActive = -1;
+  var ALL = $$("#acct-list option").map(function (o) { return { name: o.value, id: o.dataset.id, meta: o.dataset.meta || "", low: o.value.toLowerCase() }; });
+  function matches(v) {
+    v = v.trim().toLowerCase();
+    if (!v) return [];
+    var pre = ALL.filter(function (a) { return a.low.indexOf(v) === 0; });
+    var word = ALL.filter(function (a) { return a.low.indexOf(v) > 0 && a.low.indexOf(" " + v) >= 0 && pre.indexOf(a) < 0; });
+    var any = ALL.filter(function (a) { return a.low.indexOf(v) > 0 && pre.indexOf(a) < 0 && word.indexOf(a) < 0; });
+    return pre.concat(word, any).slice(0, 8);
   }
-  if (search) {
-    search.addEventListener("keydown", function (e) {
-      if (e.key === "Enter") { e.preventDefault(); go(); }
-      if (e.key === "Escape") { search.value = ""; search.blur(); }
+  function goTo(a) { if (a) location.href = search.dataset.up + "accounts/" + a.id + ".html"; }
+  function closeDd() { if (!dd) return; dd.hidden = true; ddActive = -1; search.setAttribute("aria-expanded", "false"); search.removeAttribute("aria-activedescendant"); }
+  function paintDd() {
+    $$("li", dd).forEach(function (li, i) { li.setAttribute("aria-selected", i === ddActive ? "true" : "false"); });
+    if (ddActive >= 0) search.setAttribute("aria-activedescendant", "dd-" + ddActive); else search.removeAttribute("aria-activedescendant");
+  }
+  function renderDd() {
+    ddItems = matches(search.value); ddActive = ddItems.length ? 0 : -1;
+    dd.innerHTML = "";
+    if (!search.value.trim()) return closeDd();
+    if (!ddItems.length) { var none = document.createElement("li"); none.className = "none"; none.textContent = "No matching account"; dd.appendChild(none); }
+    ddItems.forEach(function (a, i) {
+      var li = document.createElement("li");
+      li.id = "dd-" + i; li.setAttribute("role", "option");
+      var n = document.createElement("span"); n.className = "dd-n"; n.textContent = a.name;
+      var m = document.createElement("span"); m.className = "dd-m"; m.textContent = a.meta;
+      li.appendChild(n); li.appendChild(m);
+      li.addEventListener("mousedown", function (e) { e.preventDefault(); goTo(a); });
+      li.addEventListener("mousemove", function () { if (ddActive !== i) { ddActive = i; paintDd(); } });
+      dd.appendChild(li);
     });
-    search.addEventListener("input", function (e) {   // picking a datalist entry fills the exact name: jump straight away
-      var v = search.value.toLowerCase();
-      if ((e.inputType === "insertReplacementText" || e.inputType == null) && $$("#acct-list option").some(function (o) { return o.value.toLowerCase() === v; })) go();
+    dd.hidden = false; search.setAttribute("aria-expanded", "true"); paintDd();
+  }
+  if (search && dd) {
+    search.addEventListener("input", renderDd);
+    search.addEventListener("focus", function () { if (search.value.trim()) renderDd(); });
+    search.addEventListener("blur", function () { setTimeout(closeDd, 100); });
+    search.addEventListener("keydown", function (e) {
+      if (e.key === "ArrowDown" || e.key === "ArrowUp") {
+        e.preventDefault();
+        if (dd.hidden) renderDd();
+        if (!ddItems.length) return;
+        ddActive = (ddActive + (e.key === "ArrowDown" ? 1 : -1) + ddItems.length) % ddItems.length; paintDd();
+      } else if (e.key === "Enter") {
+        e.preventDefault();
+        if (ddItems.length) goTo(ddItems[Math.max(0, ddActive)]); else if (search.value.trim()) toast("No account matches \u201c" + search.value + "\u201d");
+      } else if (e.key === "Escape") {
+        if (!dd.hidden) closeDd(); else { search.value = ""; search.blur(); }
+      }
     });
     document.addEventListener("keydown", function (e) {
       var tag = e.target && e.target.tagName;

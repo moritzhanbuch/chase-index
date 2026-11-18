@@ -76,3 +76,19 @@ def test_trigger_filters_hide_rows_on_screen(site):
     pg.select_option("select[data-window]", "")
     pg.select_option("select[data-filter=type]", "dinner_city")
     assert _visible(pg, ".trow") == _visible(pg, '.trow[data-type="dinner_city"]') > 0
+
+
+def test_search_dropdown_arrow_keys_and_enter(site):
+    b, base = site
+    pg = b.new_page(viewport={"width": 1280, "height": 900})
+    pg.goto(base + "index.html")
+    pg.keyboard.press("/")
+    pg.keyboard.type("si")
+    items = pg.locator("#acct-dd li")
+    assert pg.locator("#acct-dd").is_visible() and 1 <= items.count() <= 8
+    assert pg.locator("#acct-dd .dd-n").first.inner_text().lower().startswith("si")   # prefix matches first
+    pg.keyboard.press("ArrowDown")
+    want = pg.locator('#acct-dd li[aria-selected="true"] .dd-n').inner_text()
+    pg.keyboard.press("Enter")
+    pg.wait_for_load_state("networkidle")
+    assert "/accounts/" in pg.url and want in pg.locator("h1").inner_text()

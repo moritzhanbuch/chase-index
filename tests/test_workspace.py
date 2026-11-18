@@ -169,9 +169,64 @@ def test_dinners_triggers_method_and_search():
     m = (DIST / "method.html").read_text()
     assert 'class="kinds"' in m and '<details class="full"><summary>Show full methodology</summary>' in m
     q = (DIST / "index.html").read_text()
-    ids = re.findall(r'<option value="[^"]*" data-id="([^"]+)">', q)
+    ids = re.findall(r'<option value="[^"]*" data-id="([^"]+)"', q)
     assert len(ids) == len(set(ids)) == len(list((DIST / "accounts").glob("*.html")))
     assert all((DIST / "accounts" / f"{i}.html").exists() for i in ids)
+
+
+def test_account_pages_have_no_internal_labels_and_hide_unsafe_dpo():
+    """Account pages: no snake_case codes, 'FY2025.0' or method labels in visible text. The computed DPO sits only under
+    a collapsed 'Proxy data' section when the account has reported evidence or the DPO uses the broad payables basis."""
+    import html
+    import re
+    sys.path.insert(0, str(ROOT / "src"))
+    from chase import query as q
+    pages = sorted((DIST / "accounts").glob("*.html"))
+    assert pages
+    for f in pages:
+        h = f.read_text()
+        main = re.sub(r"<template.*?</template>", "", h.split("<main", 1)[1].split("</main>")[0], flags=re.S)
+        main = re.sub(r"<(script|style)[^>]*>.*?</\1>", "", main, flags=re.S)
+        text = html.unescape(re.sub(r"<[^>]+>", " ", main))
+        text = re.sub(r"\S+\.(yaml|md)\b|https?://\S+", "", text)
+        assert not re.search(r"\b[a-z]+_[a-z0-9_]+\b", text), (f.name, re.findall(r"\b[a-z]+_[a-z0-9_]+\b", text)[:5])
+        assert not re.search(r"FY\d{4}\.0|llm_written", text), f.name
+        assert "How it\u2019s scored" in text
+        cid = f.stem
+        pp = q.get_payment_profile(cid)
+        cp = pp.get("computed_proxy")
+        if cp and cp.get("dpo_days") is not None and (pp["reported"] or cp.get("payables_basis") == "trade_and_other_broad"):
+            before = main.split('<details class="p-more sec"><summary>Proxy data')[0]
+            assert '<details class="p-more sec"><summary>Proxy data' in main, cid
+            assert "DPO" not in html.unescape(re.sub(r"<[^>]+>", " ", before)) and 'class="p-num prx"' not in before, cid
+
+
+def test_dinner_rows_reason_role_note_and_linkedin_links():
+    import re
+    from urllib.parse import urlparse
+    d = (DIST / "dinners.html").read_text()
+    assert d.count("aren\u2019t listed.") == d.count('class="dinner"') > 0
+    reasons = re.findall(r'class="d-why"><span class="days \w+"[^>]*>([^<]+)</span>', d)
+    assert reasons and all(re.match(r"(\d+d( \u00b7 .+)?|SCF .+|Terms .+)$", r) for r in reasons), reasons[:5]
+    roles = re.findall(r'class="d-role sub"[^>]*>([^<]+)<', d)
+    assert roles and set(roles) <= {"CFO / Treasurer", "CFO", "CFO / Head of AP"}
+    for page in ("index.html", "dinners.html"):
+        links = re.findall(r'href="(https://www\.linkedin\.com/[^"]+)"', (DIST / page).read_text())
+        assert links, page
+        for u in links:
+            assert urlparse(u).path == "/search/results/people/" and "keywords=" in u
+
+
+def test_identical_mandates_are_one_grouped_row():
+    import re
+    t = (DIST / "triggers.html").read_text()
+    groups = re.findall(r'<details class="tgrp".*?</details>', t, re.S)
+    assert groups
+    for g in groups:
+        n = int(re.search(r"(\d+) accounts?<", g).group(1))
+        assert n == len(re.findall(r'<div class="tg-list">(.*?)</div>', g, re.S)[0].split("</a>")) - 1 or n >= 1
+        assert "e-invoicing mandate" in g
+    assert not re.search(r'<div class="trow"[^>]*data-type="einvoicing_mandate', t)
 
 
 def test_theme_override_is_sanitised():

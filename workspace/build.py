@@ -45,7 +45,7 @@ E = html.escape
 THEME_LOCAL = ROOT / "config" / "theme.local.json"
 THEME_ON = False   # set in main(): link assets/theme.css only when a local override was written
 DEFAULT_SCHEME = ""  # "light" or "dark" from the theme file; empty = follow the system. The top-bar toggle overrides it per browser
-SEARCH: list[tuple[str, str]] = []   # (account name, company_id) for the top-bar search, filled in main()
+SEARCH: list[tuple[str, str, str]] = []   # (account name, company_id) for the top-bar search, filled in main()
 # variables a theme may set (everything else in the file is ignored); values may not break out of the declaration
 THEME_VARS = {"bg", "fg", "muted", "line", "card", "accent", "rep", "rep-bg", "prx", "prx-bg", "est", "est-bg", "flag", "flag-bg",
               "t1", "t2", "t3", "tier-fg", "chip", "chip-fg", "font", "font-mono", "radius", "panel", "faint", "link", "ink"}
@@ -99,7 +99,7 @@ def page(title: str, body: str, depth: int = 0, active: str = "") -> str:
     nav = [("index.html", "Queue", "queue"), ("dinners.html", "Dinner builder", "dinners"),
            ("triggers.html", "Trigger feed", "triggers"), ("method.html", "Method", "method")]
     navh = "".join(f'<a href="{up}{h}"{" aria-current=page" if k == active else ""}>{t}</a>' for h, t, k in nav)
-    opts = "".join(f'<option value="{E(n)}" data-id="{E(c)}"></option>' for n, c in SEARCH)
+    opts = "".join(f'<option value="{E(n)}" data-id="{E(c)}" data-meta="{E(m)}"></option>' for n, c, m in SEARCH)
     scheme = f' data-theme="{DEFAULT_SCHEME}"' if DEFAULT_SCHEME in ("light", "dark") else ""
     return f"""<!doctype html>
 <html lang="en"{scheme}><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
@@ -109,7 +109,8 @@ def page(title: str, body: str, depth: int = 0, active: str = "") -> str:
 <link rel="stylesheet" href="{up}assets/style.css">{f'<link rel="stylesheet" href="{up}assets/theme.css">' if THEME_ON else ''}</head>
 <body><header class="top"><div class="wrap"><a class="brand" href="{up}index.html">Chase Index <span>workspace</span></a>
 <nav>{navh}</nav>
-<div class="tools"><div class="search"><input type="search" id="acct-search" list="acct-list" placeholder="Jump to account" aria-label="Jump to an account page (press /)" data-up="{up}" autocomplete="off"><kbd>/</kbd></div>
+<div class="tools"><div class="search"><input type="search" id="acct-search" placeholder="Jump to account" aria-label="Jump to an account page (press /)" data-up="{up}" autocomplete="off"
+role="combobox" aria-expanded="false" aria-controls="acct-dd" aria-autocomplete="list"><kbd>/</kbd><ul id="acct-dd" class="dd" role="listbox" hidden></ul></div>
 <datalist id="acct-list">{opts}</datalist><button type="button" class="theme-btn" data-theme-toggle aria-label="Switch light or dark">Dark</button></div></div></header>
 <main class="wrap">{body}</main>
 <footer class="wrap foot"><p>{DISCLAIMER}</p>
@@ -178,7 +179,7 @@ def days_series(company_id: str, kind: str) -> tuple[list[tuple[str, float]], st
         fy = es.get("fiscal_year")
         pts = [(f"FY{int(fy) - 1}", es["prior_year_pmp_days"])] if fy and es.get("prior_year_pmp_days") is not None else []
         if es.get("pmp_days") is not None:
-            pts.append((f"FY{fy}", es["pmp_days"]))
+            pts.append((f"FY{int(fy)}" if fy else "latest", es["pmp_days"]))
         return pts, "Spanish PMP by fiscal year (statutory)", 60
     return [], "", None
 
@@ -281,6 +282,13 @@ def short_money(v, cur) -> str:
     return f"{CUR.get(cur, (cur or '') + ' ')}{s}"
 
 
+def live_by_type(cid: str, public: list[dict] | None) -> dict:
+    mine = {}
+    for t in sorted((t for t in (public or []) if t["company_id"] == cid and t.get("is_live")), key=lambda t: -(t.get("strength") or 0)):
+        mine.setdefault(t["trigger_type"], t)
+    return mine
+
+
 def why_pill(a: dict, trig_by_type: dict) -> str | None:
     """The single most specific why-now signal, with its number, at most about 14 characters. Priority:
     terms lengthened > SCF started > confirmed supplier finance with amount > year-on-year change (median UK entity)
@@ -325,10 +333,7 @@ def build_queue(queue: dict, types: dict, public: list[dict] | None = None) -> s
         n_tre += contact == "Treasury"
         n_ap += contact == "AP"
         n_din += a.get("play") == "dinner_invite"
-        mine = {}
-        for t in sorted((t for t in (public or []) if t["company_id"] == cid and t.get("is_live")), key=lambda t: -(t.get("strength") or 0)):
-            mine.setdefault(t["trigger_type"], t)
-        pv = why_pill(a, mine)
+        pv = why_pill(a, live_by_type(cid, public))
         pill = (f'<span class="pill" title="Strongest specific signal. All signals in the details panel.">{E(pv)}</span>' if pv
                 else f'<span class="pill">{E(ROW_TAG.get(tt[0], short_label(tt[0])))}</span>' if tt else '<span class="faint">standing evidence</span>')
         spark = sparkline(*days_series(cid, kind), w=120, h=28)
@@ -360,7 +365,7 @@ def build_queue(queue: dict, types: dict, public: list[dict] | None = None) -> s
 <section><h3>Why now {('<span class="pill">' + E(pv) + '</span>') if pv else ''} <span class="faint">{('top ' + str(n_shown) + ' of ') if n_live > n_shown else ''}{n_live} live event{'' if n_live == 1 else 's'}</span></h3><ul class="why">{why}</ul></section>
 <section><h3>Opener <span class="faint">draft, edit before sending</span></h3><blockquote class="opener">{E(a.get('opener_draft') or '')}</blockquote>
 <button type="button" class="copy" data-copy="{E(a.get('opener_draft') or '')}">Copy opener</button></section>
-<section><dl class="p-dl"><dt>Ask for</dt><dd>{E(ROLE_SHORT.get(role, role))}<div class="faint small">{E(a.get('who_role_reason') or '')}</div></dd>
+<section><dl class="p-dl"><dt>Ask for</dt><dd>{E(ROLE_SHORT.get(role, role))} · {linkedin(a['company'], role)}<div class="faint small">{E(a.get('who_role_reason') or '')}</div></dd>
 <dt>Links</dt><dd><a href="accounts/{E(cid)}.html">Account page</a>{' · ' + one_pager if one_pager else ''}{(' · ' + link(a.get('evidence_url'), 'Evidence')) if a.get('evidence_url') else ''}{(' · ' + link(a.get('why_now_url'), 'Trigger source')) if a.get('why_now_url') else ''}</dd></dl></section>
 <details class="p-more"><summary>More</summary><dl class="p-dl"><dt>Evidence</dt><dd>{E(a.get('evidence') or '')}</dd>
 <dt>Play</dt><dd>{E(PLAY_LABEL.get(a.get('play'), a.get('play') or ''))}</dd>
@@ -390,116 +395,154 @@ def build_queue(queue: dict, types: dict, public: list[dict] | None = None) -> s
 
 
 def section(title: str, inner: str) -> str:
-    return f'<section class="card"><h2>{E(title)}</h2>{inner}</section>'
+    return f'<section><h3>{title}</h3>{inner}</section>'
+
+
+PAYABLES = {"trade": "trade payables", "trade_and_other_broad": "trade and other payables (broad: includes non-trade items)"}
+COST = {"cost_of_sales": "cost of sales", "cost_of_materials": "cost of materials", "by_nature_fallback": "expenses by nature (fallback)",
+        "operating_expenses_fallback": "operating expenses (fallback)", "missing": "not available"}
+AGG = {"invoice_value_weighted_mean": "weighted by invoice value", "simple_mean": "simple mean of entities"}
+MATCH = {"ch_psc_chain": "Companies House ownership chain", "exact_name": "exact name match", "brand_prefix": "brand name match"}
+PAIN_BASIS = {"uk_reported": "UK statutory payment reports", "es_reported": "Spanish statutory payment period (PMP)",
+              "computed_dpo_proxy": "computed DPO (proxy)", "no_evidence": "no payment evidence"}
+PART = {"erp": "ERP signal", "geography": "Geography", "revenue": "Revenue band", "sector": "Sector", "supplier_breadth": "Supplier breadth",
+        "days": "Days to pay", "pct_late": "Share paid late", "pct_over_60": "Share paid after 60 days", "trend": "Year-on-year trend",
+        "dpo_confidence_factor": "DPO confidence factor", "dpo_vs_sector_median_ratio": "DPO vs sector median (ratio)",
+        "uk_materiality_factor": "UK materiality factor"}
+RATIONALE = {"llm_written_validated_against_row": "written by a model, every figure checked against the data row",
+             "deterministic_template": "template"}
+LINKEDIN_ROLE = {"Group treasurer or CFO office": "treasurer", "CFO office": "CFO", "Head of accounts payable or shared services": "head of accounts payable"}
+
+
+def human(code) -> str:
+    return str(code or "").replace("_", " ")
+
+
+def clean(text) -> str:
+    """Plain words for visible copy: snake_case codes become words, 'fy2025' becomes 'FY2025'."""
+    t = re.sub(r"\b[a-z]+(?:_[a-z0-9]+)+\b", lambda m: m.group(0).replace("_", " "), str(text or ""))
+    return re.sub(r"\b(?:fy|FY)(\d{4})(?:\.0)?(?!\d)", r"FY\1", t)
+
+
+def fy(v) -> str:
+    try:
+        return str(int(float(v)))
+    except (TypeError, ValueError):
+        return E(str(v or ""))
+
+
+def linkedin(company: str, role: str) -> str:
+    """A plain LinkedIn people-search link the user opens by hand. Nothing is fetched or scraped."""
+    from urllib.parse import quote
+    kw = f"{q.short_name(company)} {LINKEDIN_ROLE.get(role, role)}"
+    return (f'<a class="li" href="https://www.linkedin.com/search/results/people/?keywords={quote(kw)}" target="_blank" '
+            f'rel="noopener noreferrer" title="Opens a LinkedIn people search for: {E(kw)}">Find on LinkedIn</a>')
 
 
 def build_account(w: dict, public_keys: set, in_queue: bool) -> str:
+    from chase.gtm import nba as nba_mod
     b = w["brief"]
     cid = b["company_id"]
     s = b["scores"]
     pp = b.get("payment_profile") or {}
     rep = pp.get("reported") or {}
+    uk, es, cp = rep.get("uk"), rep.get("spain"), pp.get("computed_proxy")
+    rev = b.get("revenue") or {}
     parts = []
 
     # header
-    rev = b.get("revenue") or {}
-    head = f"""<p class="crumbs"><a href="../index.html">Queue</a> / {E(b['name'])}</p>
-<h1>{E(b['name'])} {tier_badge(b.get('priority_tier'))}</h1>
-<p class="muted">{E(b.get('country') or '')} · {E(b.get('hq_city') or 'HQ city unknown')} · {E(b.get('sector') or '')} · index rank {b.get('rank')}
-· revenue {money(rev.get('amount'), rev.get('currency'))} ({E(str(rev.get('period_end') or ''))}, {link(rev.get('source_url'))}){' · <span class="flag">thin evidence</span>' if b.get('thin_evidence') else ''}</p>
-<p class="lede">{E(b.get('rationale') or '')} <span class="small muted">({E(b.get('rationale_method') or '')})</span></p>"""
-    if b.get("one_pager"):
-        head += f'<p><a class="btn" href="../one_pagers/{E(cid)}.html">Open the one-pager</a></p>'
-    parts.append(head)
+    thin = ' · <span class="flag">thin evidence</span>' if b.get("thin_evidence") else ""
+    parts.append(f"""<p class="crumbs"><a href="../index.html">Queue</a> <span class="faint">/</span> {E(b['name'])}</p>
+<header class="p-head">{avatar(b['name'])}<div><h1>{E(b['name'])} {tier_badge(b.get('priority_tier'))}</h1>
+<div class="sub">{E(b.get('country') or '')} · {E(b.get('hq_city') or 'HQ city unknown')} · {E(human(b.get('sector')))} · index rank {b.get('rank')}
+· revenue {money(rev.get('amount'), rev.get('currency'))} ({E(str(rev.get('period_end') or '')[:4])}){icon_link(rev.get('source_url'), 'revenue source')}{thin}</div></div>
+{('<a class="btn" href="../one_pagers/' + E(cid) + '.html">One-pager</a>') if b.get('one_pager') else ''}</header>""")
 
-    # next best action
-    nba = w.get("next_best_action") or {}
-    if "play" in nba:
-        parts.append(section("Next best action", f"""<p><span class="play">{E(PLAY_LABEL.get(nba['play'], nba['play']))}</span>
-queue rank {nba.get('queue_rank')} · priority {num(nba.get('queue_priority'), 1)} ({E(nba.get('priority_explained') or '')})</p>
-<p><strong>Who:</strong> {E(nba.get('who_role') or 'n/a')}. <span class="muted">{E(nba.get('who_role_reason') or '')}</span></p>
-<p><strong>Draft opener</strong> <span class="muted small">(template with data slots, a human edits and sends)</span></p>
-<blockquote>{E(nba.get('opener_draft') or '')}</blockquote>"""))
-    else:
-        parts.append(section("Next best action", f"<p class='muted'>{E(nba.get('note') or 'not in the queue')}</p>"))
+    # key number + trend
+    kn, kvs, kcls, kind = key_number(cid)
+    spark = sparkline(*days_series(cid, kind), w=160, h=34)
+    src = (uk or {}).get("slowest_entity", {}).get("source_url") if kind == "uk_reported" else (es or {}).get("source_url") if kind == "es_reported" else (cp or {}).get("source_url")
+    parts.append(f"""<section class="p-key"><div><span class="p-num {kcls}">{E(kn)}</span> <span class="muted">{E(kvs)}</span>
+<div class="p-basis"><span class="lbl {'rep' if kcls == 'rep' else 'prx'}">{'Reported' if kcls == 'rep' else 'Computed proxy'}</span>
+<span class="faint small">{E(PAIN_BASIS.get(s.get('pain_basis'), human(s.get('pain_basis'))))}</span>{icon_link(src)}</div></div>{spark}</section>""")
 
-    # evidence
-    ev = []
-    uk = rep.get("uk")
+    # UK entity table
     if uk:
-        ents = "".join(f"""<tr><td>{E(e['name'] or '')} <span class="muted small">{E(e.get('company_number') or '')}</span></td>
-<td class="num">{num(e.get('avg_days_to_pay'))}</td><td class="num">{pct(e.get('pct_paid_late')) if e.get('pct_paid_late') is not None else '<span class="muted" title="' + E(e.get('pct_paid_late_note') or '') + '">n/s</span>'}</td>
-<td class="num">{pct(e.get('pct_paid_over_60'))}</td><td class="num">{num(e.get('trend_days_yoy'), 0) if e.get('trend_days_yoy') is not None else '<span class="muted">n/a</span>'}</td>
-<td class="small">{E(str(e.get('period_start')))} to {E(str(e.get('period_end')))}</td><td>{link(e.get('source_url'))}</td></tr>""" for e in uk.get("entities", []))
-        ev.append(f"""<h3><span class="lbl rep">Reported</span> UK statutory payment reports</h3>
-<p class="small muted">{E(uk['what'])}</p>
-<p>Average days to pay across {uk['entities_n']} UK entities: <strong>{num(uk.get('avg_days_to_pay_mean_of_entities'))} days</strong> ({E(str(uk.get('aggregation') or ''))}).
-Share paid late: {pct(uk.get('pct_invoices_paid_late_mean'))}. Over 60 days: {pct(uk.get('pct_invoices_paid_over_60_days_mean'))}.
-Trend vs a year earlier: {num(uk.get('trend_days_year_on_year_mean'), 1)} days. Period {E(str((uk.get('period') or {}).get('start')))} to {E(str((uk.get('period') or {}).get('end')))}.
-Slowest entity: {E(str((uk.get('slowest_entity') or {}).get('name')))}, {num((uk.get('slowest_entity') or {}).get('avg_days_to_pay'))} days ({link((uk.get('slowest_entity') or {}).get('source_url'))}).</p>
-<div class="tablewrap"><table class="data small"><thead><tr><th>UK entity</th><th>Days</th><th>Late</th><th>&gt;60d</th><th>YoY</th><th>Period</th><th>Source</th></tr></thead><tbody>{ents}</tbody></table></div>
-<p class="small muted">Entity match confidence (min): {num(uk.get('entity_match_confidence_min'), 2)}, methods: {E(str(uk.get('entity_match_methods') or ''))}.</p>""")
-    es = rep.get("spain")
+        ents = "".join(f"""<tr><td>{E(_ent(e['name'] or ''))} <span class="faint small">{E(e.get('company_number') or '')}</span></td>
+<td class="num">{num(e.get('avg_days_to_pay'))}</td><td class="num">{pct(e.get('pct_paid_late')) if e.get('pct_paid_late') is not None else '<span class="faint" title="' + E(e.get('pct_paid_late_note') or '') + '">n/s</span>'}</td>
+<td class="num">{pct(e.get('pct_paid_over_60'))}</td><td class="num">{('+' if (e.get('trend_days_yoy') or 0) > 0 else '') + num(e.get('trend_days_yoy')) if e.get('trend_days_yoy') is not None else '<span class="faint">n/a</span>'}</td>
+<td class="faint small nowrap">{E(str(e.get('period_end'))[:7])}</td><td>{icon_link(e.get('source_url'))}</td></tr>""" for e in uk.get("entities", []))
+        per = uk.get("period") or {}
+        uf = b.get("uk_filing_features") or {}
+        share = uf.get("einvoicing_offered_share")
+        feat = (f"""<details class="p-more"><summary>UK filing details</summary><dl class="p-dl">
+<dt>Late because of disputes</dt><dd>{pct(uf.get('late_because_of_dispute_pct'))} {icon_link(uf.get('late_because_of_dispute_url'))}</dd>
+<dt>Terms made longer</dt><dd>{uf.get('terms_changed_longer_n')} entities {icon_link(uf.get('terms_changed_longer_url')) if uf.get('terms_changed_longer_url') else ''}</dd>
+<dt>Offer supply chain finance</dt><dd>{uf.get('scf_offered_n')} entities{' · newly started' if uf.get('scf_started') else ''}</dd>
+<dt>Offer e-invoicing</dt><dd>{pct(share * 100) if share is not None else 'n/a'}{' · newly started' if uf.get('einvoicing_started') else ''}</dd>
+<dt>Payment codes</dt><dd>{E(clean(uf.get('payment_codes') or 'none stated'))}{' · pay to stay reported' if uf.get('pay_to_stay') else ''}</dd>
+<dt>Entity matching</dt><dd>lowest confidence {num(uk.get('entity_match_confidence_min'), 2)} · {E(', '.join(MATCH.get(m, human(m)) for m in str(uk.get('entity_match_methods') or '').split('|') if m))}</dd>
+</dl></details>""" if uk else "")
+        parts.append(section("UK entities", f"""<dl class="p-dl"><dt>Average</dt><dd>{num(uk.get('avg_days_to_pay_mean_of_entities'))} days across {uk['entities_n']} UK entities, {E(AGG.get(uk.get('aggregation'), human(uk.get('aggregation'))))}</dd>
+<dt>Paid late</dt><dd>{pct(uk.get('pct_invoices_paid_late_mean'))} · over 60 days {pct(uk.get('pct_invoices_paid_over_60_days_mean'))}</dd>
+<dt>Year on year</dt><dd>median entity {('+' if (uk.get('trend_days_year_on_year_median') or 0) > 0 else '') + num(uk.get('trend_days_year_on_year_median'))} days</dd>
+<dt>Period</dt><dd>{E(str(per.get('start')))} to {E(str(per.get('end')))}</dd></dl>
+<div class="tablewrap"><table class="data ents"><thead><tr><th>Entity</th><th class="num">Days</th><th class="num">Late</th><th class="num">&gt;60d</th><th class="num">YoY</th><th>Period</th><th></th></tr></thead><tbody>{ents}</tbody></table></div>
+<p class="faint small">UK legal entities only, not the whole group.</p>{feat}"""))
     if es:
-        ev.append(f"""<h3><span class="lbl rep">Reported</span> Spain average supplier payment period (PMP)</h3>
-<p class="small muted">{E(es['what'])}</p>
-<p>PMP FY{E(str(es.get('fiscal_year')))}: <strong>{num(es.get('pmp_days'), 1)} days</strong> (prior year {num(es.get('prior_year_pmp_days'), 1)}; legal maximum 60).
-Scope: {E(str(es.get('scope') or 'n/a'))}. Paid within legal maximum by value: {pct(es.get('pct_paid_within_legal_max_by_value'))}. {link(es.get('source_url'))}
-<span class="small muted">Extraction confidence {num(es.get('extraction_confidence'), 2)}.</span></p>""")
-    cp = pp.get("computed_proxy")
-    if cp:
-        ev.append(f"""<h3><span class="lbl prx">Computed proxy</span> DPO from XBRL statements</h3>
-<p class="small muted">{E(cp['what'])}</p>
-<p>DPO FY{E(str(cp.get('fiscal_year')))}: <strong>{num(cp.get('dpo_days'))} days</strong> (prior year {num(cp.get('prior_year_dpo_days'))}; sector median {num(cp.get('sector_median_dpo_days'))}).
-Payables basis: {E(str(cp.get('payables_basis') or ''))}, cost basis: {E(str(cp.get('cost_basis') or ''))}, flag: {E(str(cp.get('flag') or ''))}. {link(cp.get('source_url'))}</p>""")
-    parts.append(section("Payment evidence", "".join(ev) or "<p class='muted'>No payment evidence in the dataset.</p>"))
+        parts.append(section("Spain", f"""<dl class="p-dl"><dt>Payment period</dt><dd>{num(es.get('pmp_days'))} days in FY{fy(es.get('fiscal_year'))} (prior year {num(es.get('prior_year_pmp_days'))}) · legal maximum 60 {icon_link(es.get('source_url'))}</dd>
+<dt>Paid in time</dt><dd>{pct(es.get('pct_paid_within_legal_max_by_value'))} of invoice value within the legal maximum</dd>
+<dt>Scope</dt><dd>{E(human(es.get('scope')) or 'n/a')} · extraction confidence {num(es.get('extraction_confidence'), 2)}</dd></dl>"""))
 
-    # scores
-    def parts_tbl(d):
-        return "".join(f"<tr><td>{E(k)}</td><td class='num'>{num(v, 1)}</td></tr>" for k, v in (d or {}).items())
-    parts.append(section("Scores and how they were built", f"""<div class="scores">
-<div><span class="big">{num(s.get('fit'))}</span>Fit</div><div><span class="big">{num(s.get('pain'))}</span>Pain</div>
-<div><span class="big">{num(s.get('signal'))}</span>Signal</div><div><span class="big">{num(s.get('priority'))}</span>Priority</div></div>
-<p class="small muted">{E(s.get('method') or '')}. Pain basis: {E(str(s.get('pain_basis')))} (evidence tier {E(str(s.get('pain_evidence_tier')))}: 1 = reported, 2 = computed proxy).
-Full formula on the <a href="../method.html#scores">method page</a>.</p>
-<div class="two"><table class="data small"><thead><tr><th>Fit component</th><th>Points</th></tr></thead><tbody>{parts_tbl(s.get('fit_parts'))}</tbody></table>
-<table class="data small"><thead><tr><th>Pain component</th><th>Points</th></tr></thead><tbody>{parts_tbl(s.get('pain_parts'))}</tbody></table></div>"""))
+    # why now
+    live = sorted([t for t in w.get("triggers", []) if (cid, t["text"]) in public_keys], key=lambda t: str(t.get("trigger_date")), reverse=True)
+    lines = []
+    for t in live:
+        what, chg = trigger_line(t)
+        lines.append(f'<li title="{E(t["text"])}"><span class="w-date">{E(str(t.get("trigger_date"))[:10])}</span><span class="w-what">{E(what)}</span>'
+                     f'<span class="sep">·</span><span class="w-chg">{E(chg)}</span>{icon_link(t.get("evidence_url"))}</li>')
+    for x in b.get("why_now_signals") or []:
+        lines.append(f'<li><span class="w-date faint">standing</span><span class="w-chg">{E(clean(x.get("text") or ""))}</span>{icon_link(x.get("url"))}</li>')
+    parts.append(section("Why now", f'<ul class="why">{"".join(lines)}</ul>' if lines else '<p class="faint">No public dated trigger.</p>'))
 
-    # triggers
-    live = [t for t in w.get("triggers", []) if (cid, t["text"]) in public_keys]
-    live.sort(key=lambda t: str(t.get("trigger_date")), reverse=True)
-    trows = "".join(f"""<tr><td class="small">{E(str(t.get('trigger_date')))}</td><td><span class="chip" title="{E(t['trigger_type'])}">{E(short_label(t['trigger_type']))}</span>{' <span class="flag">live</span>' if t.get('is_live') else ''}</td>
-<td class="small">{E(t['text'])}</td><td>{link(t.get('evidence_url'))}</td></tr>""" for t in live)
-    sig = "".join(f"<li>{E(x.get('text') or '')} {link(x.get('url'))}</li>" for x in b.get("why_now_signals") or [])
-    parts.append(section("Triggers and why-now signals", (f"""<div class="tablewrap"><table class="data"><thead><tr><th>Date</th><th>Type</th><th>What</th><th>Source</th></tr></thead>
-<tbody>{trows}</tbody></table></div>""" if trows else "<p class='muted'>No public triggers.</p>") + (f"<h3>Standing signals</h3><ul>{sig}</ul>" if sig else "")))
+    # opener and who
+    nba = w.get("next_best_action") or {}
+    role = nba.get("who_role") or nba_mod.suggested_role(q._row(cid), None)[0]
+    reason = nba.get("who_role_reason") or nba_mod.suggested_role(q._row(cid), None)[1]
+    who = (f'<dl class="p-dl"><dt>Ask for</dt><dd>{E(ROLE_SHORT.get(role, role))} · {linkedin(b["name"], role)}<div class="faint small">{E(clean(reason))}</div></dd>'
+           + (f'<dt>Play</dt><dd>{E(PLAY_LABEL.get(nba["play"], nba["play"]))} · queue #{nba.get("queue_rank")} · priority {num(nba.get("queue_priority"), 1)} '
+              f'<span class="faint">({E(nba.get("priority_explained") or "")})</span></dd>' if "play" in nba else "") + "</dl>")
+    if nba.get("opener_draft"):
+        parts.append(section('Opener <span class="faint">draft, edit before sending</span>',
+                             f'<blockquote class="opener">{E(nba["opener_draft"])}</blockquote><button type="button" class="copy" data-copy="{E(nba["opener_draft"])}">Copy opener</button>{who}'))
+    else:
+        parts.append(section("Who to ask for", who + '<p class="faint small">Not in this week\'s queue, so no opener draft.</p>'))
 
-    # supplier finance + uk filing features
+    # supplier finance
     sf = b.get("supplier_finance")
     if sf:
         if sf.get("programme_disclosed"):
-            conf = "confirmed by two readers" if sf.get("confirmed") else "unconfirmed: one reader only, not scored"
-            sfh = f"""<p><span class="lbl rep">Reported</span> Supplier finance programme disclosed ({E(conf)}). Outstanding:
-{money(sf.get('obligations_outstanding'), sf.get('currency'))} (prior year {money(sf.get('prior_year'), sf.get('currency'))}), period end {E(str(sf.get('period_end')))}. {link(sf.get('source_url'))}</p>
-<p class="small">Terms with programme: {E(str(sf.get('terms_with_programme') or 'n/a'))}. Without: {E(str(sf.get('terms_without_programme') or 'n/a'))}.</p>
-{('<blockquote class="small">' + E(sf['quote']) + '</blockquote>') if sf.get('quote') else ''}
-<p class="small muted">Extraction: {E(str(sf.get('extraction_method') or ''))}, confidence {num(sf.get('confidence'), 2)}.</p>"""
+            conf = "confirmed by two readers" if sf.get("confirmed") else "one reader only, not used in scoring"
+            sfh = f"""<dl class="p-dl"><dt>Programme</dt><dd><span class="lbl rep">Reported</span> disclosed in the annual report · {E(conf)} {icon_link(sf.get('source_url'))}</dd>
+<dt>Outstanding</dt><dd>{money(sf.get('obligations_outstanding'), sf.get('currency'))} (prior year {money(sf.get('prior_year'), sf.get('currency'))}) at {E(str(sf.get('period_end'))[:10])}</dd>
+<dt>Terms with it</dt><dd>{E(clean(str(sf.get('terms_with_programme') or 'n/a')))}</dd><dt>Without</dt><dd>{E(clean(str(sf.get('terms_without_programme') or 'n/a')))}</dd></dl>
+{('<details class="p-more"><summary>Quote from the filing</summary><blockquote class="small">' + E(sf['quote']) + '</blockquote></details>') if sf.get('quote') else ''}"""
         else:
-            sfh = f"<p>No supplier finance programme found in the annual report ({E(str(sf.get('resolution') or ''))}). {link(sf.get('source_url'))}</p>"
-        parts.append(section("Supplier finance disclosure", sfh))
-    uf = b.get("uk_filing_features")
-    if uf:
-        share = uf.get("einvoicing_offered_share")
-        parts.append(section("UK filing features", f"""<p class="small muted">From the same statutory UK filings, rolled up over {uf['uk_entities_n']} entities, period end {E(str(uf.get('period_end')))}.</p>
-<table class="data small"><tbody>
-<tr><td>Late payments caused by disputes</td><td class="num">{pct(uf.get('late_because_of_dispute_pct'))}</td><td>{E(str(uf.get('late_because_of_dispute_method') or ''))} {link(uf.get('late_because_of_dispute_url'))}</td></tr>
-<tr><td>Entities that made terms longer</td><td class="num">{uf.get('terms_changed_longer_n')}</td><td>{link(uf.get('terms_changed_longer_url')) if uf.get('terms_changed_longer_url') else ''}</td></tr>
-<tr><td>Entities offering supply chain finance</td><td class="num">{uf.get('scf_offered_n')}</td><td>{'newly started' if uf.get('scf_started') else ''}</td></tr>
-<tr><td>Share of entities offering e-invoicing</td><td class="num">{pct(share * 100) if share is not None else 'n/a'}</td><td>{'newly started' if uf.get('einvoicing_started') else ''}</td></tr>
-<tr><td>Payment codes</td><td colspan="2">{E(str(uf.get('payment_codes') or 'none stated'))}{' · pay to stay reported' if uf.get('pay_to_stay') else ''}</td></tr>
-</tbody></table>"""))
+            sfh = f'<p class="muted">No supplier finance programme found in the annual report. {icon_link(sf.get("source_url"))}</p>'
+        parts.append(section("Supplier finance", sfh))
 
-    # estimates
+    # proxy data (collapsed): the computed DPO, never next to reported evidence in the main view
+    if cp:
+        broad = cp.get("payables_basis") == "trade_and_other_broad"
+        caveat = ("Computed by us from the balance sheet: payables / cost of sales x 365. A proxy, not reported days to pay."
+                  + (" The payables line here is broad (it includes non-trade items), so the figure overstates days and is not used as evidence." if broad else "")
+                  + (" The account has reported figures above; those take precedence." if rep else ""))
+        parts.append(f"""<details class="p-more sec"><summary>Proxy data <span class="faint">computed DPO</span></summary>
+<p class="faint small">{E(caveat)}</p><dl class="p-dl"><dt>DPO FY{fy(cp.get('fiscal_year'))}</dt><dd>{num(cp.get('dpo_days'))} days (prior year {num(cp.get('prior_year_dpo_days'))}; sector median {num(cp.get('sector_median_dpo_days'))}) {icon_link(cp.get('source_url'))}</dd>
+<dt>Payables</dt><dd>{E(PAYABLES.get(cp.get('payables_basis'), human(cp.get('payables_basis'))))}</dd><dt>Cost</dt><dd>{E(COST.get(cp.get('cost_basis'), human(cp.get('cost_basis'))))}</dd>
+<dt>Confidence</dt><dd>{num(cp.get('confidence'), 2)}{'' if cp.get('flag') in (None, 'ok') else ' · ' + E(human(cp.get('flag')))}</dd></dl></details>""")
+
+    # estimate (collapsed)
     est = b.get("estimates") or {}
     eh = []
     for key, lab in (("uk_scope", "UK scope"), ("group_proxy", "Group (proxy)")):
@@ -508,28 +551,38 @@ Full formula on the <a href="../method.html#scores">method page</a>.</p>
             continue
         o = x.get("early_payment_discount_opportunity") or {}
         cur = x.get("currency")
-        eh.append(f"""<h3>{lab}</h3><p class="small muted">{E(x['basis'])}</p>
-<p>Early-payment discount opportunity per year: <strong>{money(o.get('low'), cur)} to {money(o.get('high'), cur)}</strong> (base {money(o.get('base'), cur)}).
-Supplier cash held beyond 30 days: {money(x.get('supplier_cash_beyond_30_days'), cur)}. Days used: {num(x.get('days_used'), 1)}.</p>""")
-    if est.get("uk_scope_note"):
-        eh.append(f"<p class='small'>{E(est['uk_scope_note'])}</p>")
+        eh.append(f"""<dt>{lab}</dt><dd>{money(o.get('low'), cur)} to {money(o.get('high'), cur)} a year (base {money(o.get('base'), cur)}) ·
+supplier cash beyond 30 days {money(x.get('supplier_cash_beyond_30_days'), cur)}<div class="faint small">{E(clean(x['basis']))}</div></dd>""")
     a = est.get("assumptions") or {}
     sc = a.get("scenarios") or {}
     sct = " · ".join(f"{k}: {v.get('share_eligible', 0)*100:.0f}% eligible at {v.get('annualised_rate', 0)*100:.0f}% APR" for k, v in sc.items())
-    parts.append(f"""<section class="card est"><h2><span class="lbl est">Estimate</span> Opportunity range</h2>
-{''.join(eh) or "<p class='muted'>No estimate for this account.</p>"}
-<p class="small">Formula: {E(a.get('formula') or '')}. Scenarios: {E(sct)}. Early pay on day {E(str(a.get('early_pay_day')))}, at most {E(str(a.get('max_days_accelerated')))} days accelerated.
-Assumptions in {E(a.get('config_file') or '')}.</p><p class="small muted">{E(est.get('whose_money') or '')}</p></section>""")
+    if eh:
+        parts.append(f"""<details class="p-more sec"><summary>Opportunity estimate <span class="lbl est">Estimate</span></summary><dl class="p-dl">{''.join(eh)}</dl>
+<p class="faint small">{E(clean(a.get('formula') or ''))}. {E(sct)}. Early pay on day {E(str(a.get('early_pay_day')))}, at most {E(str(a.get('max_days_accelerated')))} days accelerated.
+Assumptions in {E(a.get('config_file') or '')}. {E(clean(est.get('uk_scope_note') or ''))} {E(clean(est.get('whose_money') or ''))}</p></details>""")
+
+    # how it's scored (collapsed)
+    def tbl(d):
+        return "".join(f"<tr><td>{E(PART.get(k, human(k)))}</td><td class='num'>{num(v, 1)}</td></tr>" for k, v in (d or {}).items())
+    parts.append(f"""<details class="p-more sec"><summary>How it’s scored <span class="faint">fit {num(s.get('fit'))} · pain {num(s.get('pain'))} · signal {num(s.get('signal'))} · priority {num(s.get('priority'))}</span></summary>
+<p class="small">{E(clean(b.get('rationale') or ''))} <span class="faint">({E(RATIONALE.get(b.get('rationale_method'), human(b.get('rationale_method'))))})</span></p>
+<p class="faint small">Deterministic formula, weights in <code>config/assumptions.yaml</code>. Pain is based on {E(PAIN_BASIS.get(s.get('pain_basis'), human(s.get('pain_basis'))))}; reported evidence always outranks a computed proxy. <a href="../method.html">Method</a></p>
+<div class="two"><table class="data small"><thead><tr><th>Fit</th><th class="num">Points</th></tr></thead><tbody>{tbl(s.get('fit_parts'))}</tbody></table>
+<table class="data small"><thead><tr><th>Pain</th><th class="num">Points</th></tr></thead><tbody>{tbl(s.get('pain_parts'))}</tbody></table></div></details>""")
 
     if not in_queue:
-        parts.append('<p class="small muted">This account is in the top 100 but not in this week\'s queue.</p>')
-    return page(b["name"], "".join(parts), 1)
+        parts.append('<p class="faint small">In the top 100, not in this week’s queue.</p>')
+    return page(b["name"], f'<div class="acct">{"".join(parts)}</div>', 1)
 
 
 INVITE_OPTS = (("", "To invite"), ("invited", "Invited"), ("accepted", "Confirmed"), ("declined", "Declined"))
 
 
-def build_dinners(dinners: list[dict]) -> str:
+INVITE_ROLE = {"Group treasurer or CFO office": "CFO / Treasurer", "CFO office": "CFO", "Head of accounts payable or shared services": "CFO / Head of AP"}
+
+
+def build_dinners(dinners: list[dict], public: list[dict] | None = None) -> str:
+    from chase.gtm import nba as nba_mod
     blocks = []
     for d in dinners:
         if not d.get("found"):
@@ -537,21 +590,28 @@ def build_dinners(dinners: list[dict]) -> str:
 
         def row(a):
             kn, kvs, kcls, _ = key_number(a["company_id"])
+            pv = why_pill({"company_id": a["company_id"]}, live_by_type(a["company_id"], public))
+            reason = f"{kn} \u00b7 {pv}" if pv and not pv.startswith(("SCF ", "Terms")) else (pv or kn)
+            sf = q.get_account_brief(a["company_id"]).get("supplier_finance") or {}
+            role = nba_mod.suggested_role(q._row(a["company_id"]), None, sf_angle=bool(sf.get("programme_disclosed") and sf.get("confirmed")))[0]
             return f"""<tr data-row data-frow tabindex="0" data-cid="{E(a['company_id'])}" data-company="{E(a['company'])}" data-hook="{E(a['hook'])}" data-source="{E(a.get('source_url') or '')}"
 data-tier="{a['tier']}" data-hq="{E(a.get('hq_city') or '')}" data-local="{E(a['local_link'])}" data-inv="" title="{E(a['hook'])}">
 <td class="d-chk"><input type="checkbox" checked aria-label="Include {E(a['company'])}"></td>
 <td class="d-co"><span class="co-n">{avatar(a['company'])}<b>{E(a['company'])}</b>{tier_dot(a['tier'])}</span></td>
 <td class="d-city sub">{E(a.get('hq_city') or 'HQ unknown')}</td>
+<td class="d-why"><span class="days {kcls}" title="{E(kn + ' ' + kvs)}">{E(reason)}</span></td>
+<td class="d-role sub" title="{E(role)}">{E(INVITE_ROLE.get(role, role))}</td>
 <td class="d-pill"><button type="button" class="ipill" data-inv="" title="Click to change invite status">To invite</button></td>
 <template class="detail"><header class="p-head">{avatar(a['company'])}<div><h2>{E(a['company'])} {tier_badge(a['tier'])}</h2>
 <div class="sub">{E(a.get('hq_city') or 'HQ city unknown')} · {'HQ in the city area' if a['local_link'] == 'hq_in_city_area' else 'HQ elsewhere in the country'} · {E(d['city'].title())} dinner</div></div></header>
 <section class="p-key"><div><span class="p-num {kcls}">{E(kn)}</span> <span class="muted">{E(kvs)}</span></div></section>
 <section><h3>Hook <span class="faint">template variable</span></h3><p><span class="lbl {'rep' if kcls == 'rep' else 'prx'}">{'Reported' if kcls == 'rep' else 'Computed proxy'}</span> {E(a['hook'])} {link(a.get('source_url'))}</p>
 <button type="button" class="copy" data-copy="{E(a['hook'])}">Copy hook</button></section>
-<section><dl class="p-dl"><dt>Links</dt><dd><a href="accounts/{E(a['company_id'])}.html">Account page</a></dd></dl></section></template></tr>"""
+<section><dl class="p-dl"><dt>Invite</dt><dd>{E(INVITE_ROLE.get(role, role))} · {linkedin(a['company'], role)}</dd>
+<dt>Links</dt><dd><a href="accounts/{E(a['company_id'])}.html">Account page</a></dd></dl></section></template></tr>"""
         groups = [("City area", [a for a in d["invite"] if a["local_link"] == "hq_in_city_area"]),
                   ("Rest of country", [a for a in d["invite"] if a["local_link"] != "hq_in_city_area"])]
-        tables = "".join(f'<tbody class="dg"><tr class="dgroup"><th colspan="4">{g} <span class="faint">{len(xs)}</span></th></tr>{"".join(row(a) for a in xs)}</tbody>'
+        tables = "".join(f'<tbody class="dg"><tr class="dgroup"><th colspan="6">{g} <span class="faint">{len(xs)}</span></th></tr>{"".join(row(a) for a in xs)}</tbody>'
                          for g, xs in groups if xs)
         bench = "".join(f"<li>{E(x['name'])}: {E(x['bench_reason'])}. {E(x.get('figure') or '')} {link(x.get('source_url'))}</li>"
                         for x in d.get("bench_to_verify") or [])
@@ -560,6 +620,7 @@ data-tier="{a['tier']}" data-hq="{E(a.get('hq_city') or '')}" data-local="{E(a['
 <div class="dhead"><h2>{E(d['city'].title())} <span class="faint">{E(str(when))}</span></h2>
 <div class="actions"><span class="count faint" aria-live="polite"></span><button data-act="all">All</button><button data-act="none">None</button>
 <button data-act="csv">Copy CSV</button><button data-act="text">Copy text</button><button data-act="inv-export" title="Download in the dinner_attendees.csv format">Export invites</button></div></div>
+<p class="dnote faint small">Companies without public payment data (e.g. insurers, or groups without UK filings) aren\u2019t listed.</p>
 {('<div class="list"><table class="dl" data-list>' + tables + '</table></div>') if tables else "<p class='muted'>No account with a strong enough hook.</p>"}
 {('<details class="bench"><summary>Bench: verify before use (' + str(len(d.get("bench_to_verify") or [])) + ')</summary><ul class="small">' + bench + '</ul></details>') if bench else ''}
 </section>""")
@@ -592,7 +653,7 @@ def short_label(code: str) -> str:
 
 def _ent(name: str) -> str:
     name = name.strip()
-    return name.title().replace("Uk ", "UK ").replace("(Gb)", "(GB)").replace(" Plc", " plc") if name.isupper() else name
+    return name.title().replace("Uk ", "UK ").replace("(Uk)", "(UK)").replace("(Gb)", "(GB)").replace(" Plc", " plc") if name.isupper() else name
 
 
 def trigger_line(t: dict) -> tuple[str, str]:
@@ -609,9 +670,9 @@ def trigger_line(t: dict) -> tuple[str, str]:
     m = re.match(r"^(.*?) reports (?:that its payment terms changed in the period to ([\d-]+)|offering ([\w -]+?) in its latest filing)", x)
     if m:
         return short_label(tt), (f"{_ent(m.group(1))}, period to {m.group(2)}" if m.group(2) else f"{_ent(m.group(1))}, not a year earlier")
-    m = re.match(r"^From ([\d]+ \w+ \d{4})", x)
+    m = re.match(r"^(From|By) ([\d]+ \w+ \d{4})", x)
     if m:
-        return short_label(tt), f"from {m.group(1)}"
+        return short_label(tt), f"{m.group(1).lower()} {m.group(2)}"
     m = re.search(r"supplier finance programme of ([A-Z]{3} [\d.,]+\w*) outstanding", x)
     if m:
         return "supplier finance disclosed", f"{m.group(1)} outstanding"
@@ -623,13 +684,35 @@ def trigger_line(t: dict) -> tuple[str, str]:
 def build_triggers(trigs: list[dict], types: dict) -> str:
     today = date.today()
     groups = {"upcoming": [], "d7": [], "d14": [], "d30": [], "older": []}
+    # identical mandate events (same type, date and text across accounts) collapse into one expandable row
+    mandates: dict[tuple, list] = {}
+    rest = []
     for t in trigs:
-        d = str(t.get("trigger_date"))[:10]
+        if t["trigger_type"] in ("einvoicing_mandate", "einvoicing_mandate_suppliers"):
+            mandates.setdefault((t["trigger_type"], str(t.get("trigger_date"))[:10], t["text"]), []).append(t)
+        else:
+            rest.append(t)
+
+    def age_group(d):
         try:
             age = (today - date.fromisoformat(d)).days
         except ValueError:
             age = 9999
-        g = "upcoming" if age < 0 else "d7" if age <= 7 else "d14" if age <= 14 else "d30" if age <= 30 else "older"
+        return "upcoming" if age < 0 else "d7" if age <= 7 else "d14" if age <= 14 else "d30" if age <= 30 else "older"
+
+    for (tt, d, text), ts in mandates.items():
+        nat = re.search(r"\b(German|Spanish|French|Belgian|Polish|Italian|Greek|Croatian|Portuguese|Romanian|Dutch|Irish|Danish|Swedish|Finnish|Austrian|Hungarian|Slovak|Latvian|Lithuanian|Estonian|Slovenian|Bulgarian|Czech|Luxembourg|EU)\b", text)
+        title = f"{nat.group(1) + ' ' if nat else ''}e-invoicing mandate{' (suppliers)' if tt == 'einvoicing_mandate_suppliers' else ''}"
+        when = trigger_line(ts[0])[1]
+        accts = " ".join((f'<a href="accounts/{E(t["company_id"])}.html">{E(t["company"])}</a>' if t["company_id"] in ACCOUNT_IDS else f'<span>{E(t["company"])}</span>')
+                         for t in sorted(ts, key=lambda t: t["company"]))
+        groups[age_group(d)].append(f"""<details class="tgrp" data-frow data-type="{E(tt)}" data-date="{E(d)}"><summary class="trow" title="{E(text)}">
+<span class="t-date">{E(d[5:] if d[:4] == str(today.year) else d)}</span>
+<span class="t-line"><b>{E(title)}</b><span class="sep">·</span><span class="t-what">{len(ts)} account{'' if len(ts) == 1 else 's'}</span><span class="sep">·</span><span class="t-chg">{E(when)}</span></span>
+{icon_link(ts[0].get('evidence_url'))}</summary><div class="tg-list">{accts}</div></details>""")
+    for t in rest:
+        d = str(t.get("trigger_date"))[:10]
+        g = age_group(d)
         what, change = trigger_line(t)
         tt = t["trigger_type"]
         approx = ' <span class="faint" title="Date is approximate">approx.</span>' if t.get("date_is_approximate") is True else ""
@@ -711,9 +794,14 @@ def main() -> None:
     types = all_t["types"]
     public_keys = {(t["company_id"], t["text"]) for t in public}
 
-    ids = list(dict.fromkeys([a["company_id"] for a in queue["accounts"]] + [t["company_id"] for t in top["targets"]]))
-    names = {**{t["company_id"]: t["name"] for t in top["targets"]}, **{a["company_id"]: a["company"] for a in queue["accounts"]}}
-    SEARCH[:] = sorted(((names[c], c) for c in ids), key=lambda x: x[0].lower())
+    cal = q.dinner_calendar()
+    dinners = [api.dinner_builder(d["city"], demo=False) for d in cal]
+    dinner_ids = [a["company_id"] for d in dinners if d.get("found") for a in d["invite"]]
+    ids = list(dict.fromkeys([a["company_id"] for a in queue["accounts"]] + [t["company_id"] for t in top["targets"]] + dinner_ids))
+    names = {**{a["company_id"]: a["company"] for d in dinners if d.get("found") for a in d["invite"]},
+             **{t["company_id"]: t["name"] for t in top["targets"]}, **{a["company_id"]: a["company"] for a in queue["accounts"]}}
+    cc = q.companies().set_index("company_id")
+    SEARCH[:] = sorted(((names[c], c, f"{cc.loc[c, 'country']} \u00b7 T{int(cc.loc[c, 'priority_tier'])}" if c in cc.index else "") for c in ids), key=lambda x: x[0].lower())
     queued = {a["company_id"] for a in queue["accounts"]}
     index = []
     for cid in ids:
@@ -736,8 +824,6 @@ def main() -> None:
         index.append({"company_id": cid, "name": b["name"], "country": b.get("country"), "tier": b.get("priority_tier"),
                       "rank": b.get("rank"), "in_queue": cid in queued, "one_pager": b["one_pager"]})
 
-    cal = q.dinner_calendar()
-    dinners = [api.dinner_builder(d["city"], demo=False) for d in cal]
     feed = [t for t in public if t.get("is_live")]
     today_s = date.today().isoformat()
     past = sorted([t for t in feed if str(t.get("trigger_date")) <= today_s], key=lambda t: (str(t.get("trigger_date")), t.get("strength") or 0), reverse=True)
@@ -745,7 +831,7 @@ def main() -> None:
     feed = past + future
 
     (DIST / "index.html").write_text(build_queue(queue, types, public))
-    (DIST / "dinners.html").write_text(build_dinners(dinners))
+    (DIST / "dinners.html").write_text(build_dinners(dinners, public))
     (DIST / "triggers.html").write_text(build_triggers(feed, types))
     (DIST / "method.html").write_text(build_method())
 

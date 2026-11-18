@@ -207,7 +207,11 @@ def test_dinner_rows_reason_role_note_and_linkedin_links():
     d = (DIST / "dinners.html").read_text()
     assert d.count("aren\u2019t listed.") == d.count('class="dinner"') > 0
     reasons = re.findall(r'class="d-why"><span class="days \w+"[^>]*>([^<]+)</span>', d)
-    assert reasons and all(re.match(r"(\d+d( \u00b7 .+)?|SCF .+|Terms .+)$", r) for r in reasons), reasons[:5]
+    assert reasons and all(re.match(r"(\d+d( proxy)?( \u00b7 .+)?|SCF .+|Terms .+)$", r) for r in reasons), reasons[:5]
+    for cls, r in re.findall(r'class="d-why"><span class="days (\w+)"[^>]*>([^<]+)</span>', d):
+        assert (cls == "prx") == (" proxy" in r), r          # a computed DPO says "proxy" in the row
+    a = (DIST / "accounts" / "reckitt-benckiser-group-plc-lei48v108.html").read_text()
+    assert a.count("Standing facts") == 1 and ">standing<" not in a
     roles = re.findall(r'class="d-role sub"[^>]*>([^<]+)<', d)
     assert roles and set(roles) <= {"CFO / Treasurer", "CFO", "CFO / Head of AP"}
     for page in ("index.html", "dinners.html"):

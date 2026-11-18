@@ -115,7 +115,7 @@ select{max-width:100%}.filters label{max-width:100%}
 .p-num{font-size:1.8rem;font-variant-numeric:tabular-nums;color:var(--fg)}.p-num.rep{color:var(--rep)}.p-num.prx{color:var(--prx)}
 .p-dl{display:grid;grid-template-columns:6rem 1fr;gap:8px 14px;margin:0;font-size:.88rem}.p-dl dt{color:var(--faint)}.p-dl dd{margin:0}
 .opener{margin:0 0 10px;font-size:.9rem;border-left:0;border-radius:8px;padding:12px 14px}
-.spark{overflow:visible;flex:none}
+.spark{overflow:hidden;flex:none;max-width:45%;height:auto}.p-key .spark{margin-right:2px}
 .spark polyline{fill:none;stroke:currentColor;stroke-width:1.6;stroke-linejoin:round;stroke-linecap:round}.spark circle{fill:currentColor}
 .spark .bench{stroke:var(--faint);stroke-width:1;stroke-dasharray:2 2}
 .p-key{color:var(--rep)}.p-key .muted{font-size:.86rem}
@@ -195,7 +195,7 @@ table.ents td{vertical-align:middle;font-size:.88rem}table.ents td.num{font-vari
 .acct details.sec[open]>summary{margin-bottom:12px}
 .li{white-space:nowrap}
 /* dinner columns */
-td.d-why .days{font-size:.86rem;white-space:nowrap}td.d-why .days.rep{color:var(--rep)}td.d-why .days.prx{color:var(--prx)}
+td.d-why .days{font-size:.86rem;white-space:nowrap}td.d-why .days.rep{color:var(--rep)}td.d-why .days.prx{color:var(--muted)}
 td.d-role{white-space:nowrap}.dnote{margin:-4px 0 10px}
 /* grouped mandate rows */
 details.tgrp{border-top:1px solid var(--line)}.list details.tgrp:first-child{border-top:0}
@@ -212,3 +212,4 @@ details.tgrp[open]>summary .t-line b::before{transform:rotate(90deg)}
 .dd .dd-m{color:var(--faint);font-size:.78rem;white-space:nowrap}.dd li.none{color:var(--faint);cursor:default}
 @media (max-width:760px){td.d-role,td.d-city{display:none}.tg-list{padding-left:16px}.acct .p-dl{grid-template-columns:6.5rem 1fr}
  .w-date{width:4.6rem}.acct .p-head{flex-wrap:wrap}.dd{right:auto;width:calc(100vw - 32px)}}
+.subh{margin:14px 0 4px;font-size:.74rem;font-weight:400;color:var(--faint);text-transform:uppercase;letter-spacing:.05em}

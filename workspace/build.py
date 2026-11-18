@@ -191,8 +191,9 @@ def sparkline(pts: list[tuple[str, float]], what: str, bench: int | None, w: int
     vals = [v for _, v in pts]
     lo, hi = min(vals + ([bench] if bench else [])), max(vals + ([bench] if bench else []))
     span = (hi - lo) or 1
-    x = lambda i: 2 + i * (w - 4) / (len(pts) - 1)
-    y = lambda v: h - 2 - (v - lo) * (h - 4) / span
+    pad = 4   # room for the end dot (r=2) and the stroke, so nothing is drawn on the edge
+    x = lambda i: pad + i * (w - 2 * pad) / (len(pts) - 1)
+    y = lambda v: h - pad - (v - lo) * (h - 2 * pad) / span
     line = " ".join(f"{x(i):.1f},{y(v):.1f}" for i, v in enumerate(vals))
     ref = (f'<line class="bench" x1="0" x2="{w}" y1="{y(bench):.1f}" y2="{y(bench):.1f}"/>' if bench else "")
     label = "; ".join(f"{p} {v:.0f}d" for p, v in pts)
@@ -501,9 +502,11 @@ def build_account(w: dict, public_keys: set, in_queue: bool) -> str:
         what, chg = trigger_line(t)
         lines.append(f'<li title="{E(t["text"])}"><span class="w-date">{E(str(t.get("trigger_date"))[:10])}</span><span class="w-what">{E(what)}</span>'
                      f'<span class="sep">·</span><span class="w-chg">{E(chg)}</span>{icon_link(t.get("evidence_url"))}</li>')
-    for x in b.get("why_now_signals") or []:
-        lines.append(f'<li><span class="w-date faint">standing</span><span class="w-chg">{E(clean(x.get("text") or ""))}</span>{icon_link(x.get("url"))}</li>')
-    parts.append(section("Why now", f'<ul class="why">{"".join(lines)}</ul>' if lines else '<p class="faint">No public dated trigger.</p>'))
+    facts = [f'<li><span class="w-chg">{E(clean(x.get("text") or ""))}</span>{icon_link(x.get("url"))}</li>' for x in b.get("why_now_signals") or []]
+    inner = (f'<ul class="why">{"".join(lines)}</ul>' if lines else '<p class="faint">No public dated trigger.</p>')
+    if facts:
+        inner += f'<h4 class="subh">Standing facts</h4><ul class="why">{"".join(facts)}</ul>'
+    parts.append(section("Why now", inner))
 
     # opener and who
     nba = w.get("next_best_action") or {}
@@ -591,7 +594,10 @@ def build_dinners(dinners: list[dict], public: list[dict] | None = None) -> str:
         def row(a):
             kn, kvs, kcls, _ = key_number(a["company_id"])
             pv = why_pill({"company_id": a["company_id"]}, live_by_type(a["company_id"], public))
-            reason = f"{kn} \u00b7 {pv}" if pv and not pv.startswith(("SCF ", "Terms")) else (pv or kn)
+            if kcls == "prx":                              # a computed DPO is a proxy, said so in the row
+                reason = f"{kn} proxy" + (f" \u00b7 {pv}" if pv else "")
+            else:
+                reason = f"{kn} \u00b7 {pv}" if pv and not pv.startswith(("SCF ", "Terms")) else (pv or kn)
             sf = q.get_account_brief(a["company_id"]).get("supplier_finance") or {}
             role = nba_mod.suggested_role(q._row(a["company_id"]), None, sf_angle=bool(sf.get("programme_disclosed") and sf.get("confirmed")))[0]
             return f"""<tr data-row data-frow tabindex="0" data-cid="{E(a['company_id'])}" data-company="{E(a['company'])}" data-hook="{E(a['hook'])}" data-source="{E(a.get('source_url') or '')}"
@@ -599,7 +605,7 @@ data-tier="{a['tier']}" data-hq="{E(a.get('hq_city') or '')}" data-local="{E(a['
 <td class="d-chk"><input type="checkbox" checked aria-label="Include {E(a['company'])}"></td>
 <td class="d-co"><span class="co-n">{avatar(a['company'])}<b>{E(a['company'])}</b>{tier_dot(a['tier'])}</span></td>
 <td class="d-city sub">{E(a.get('hq_city') or 'HQ unknown')}</td>
-<td class="d-why"><span class="days {kcls}" title="{E(kn + ' ' + kvs)}">{E(reason)}</span></td>
+<td class="d-why"><span class="days {kcls}" title="{E(kn + ' ' + kvs + (' (computed DPO, a balance-sheet proxy)' if kcls == 'prx' else ''))}">{E(reason)}</span></td>
 <td class="d-role sub" title="{E(role)}">{E(INVITE_ROLE.get(role, role))}</td>
 <td class="d-pill"><button type="button" class="ipill" data-inv="" title="Click to change invite status">To invite</button></td>
 <template class="detail"><header class="p-head">{avatar(a['company'])}<div><h2>{E(a['company'])} {tier_badge(a['tier'])}</h2>

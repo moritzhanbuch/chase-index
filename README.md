@@ -1,5 +1,7 @@
 # The Chase Index
 
+Live demo: https://chase-index-mh.vercel.app (the weekly GTM workspace; noindex)
+
 Independent project by Moritz Hanbuch.
 
 > ### Try it in 60 seconds
@@ -22,7 +24,7 @@ A source-traceable dataset and toolkit on how long large companies take to pay t
 
 **What it found.** Nestle UK reports paying suppliers in 76 days on average with only 6% of invoices late: long terms by design. Across the 193 largest groups in the data, 27 have UK entities that average more than 60 days. The official UK median is 32.
 
-**What it is for.** A ranked target list, account one-pagers, a weekly queue with draft openers and dinner lists for the GTM team of an agent-to-agent B2B payments company, plus a public index and supplier lookup that answer engines can cite.
+**What it is for.** A ranked target list, account one-pagers, a weekly queue with draft openers and dinner lists for a GTM team selling to enterprise finance, plus a public index and supplier lookup that answer engines can cite.
 
 **DACH slice.** Germany and Switzerland have no statutory payment reporting, and German groups are missing from the public ESEF repository. So for DAX and MDAX members headquartered in Bavaria and the largest Swiss and Austrian listed industrials, trade payables to suppliers and cost of sales were read from each group's latest annual report by two independent extractors, with QA deciding every disagreement. Result: a computed DPO (proxy, labelled as such) for 23 companies, and a Munich dinner list with three Munich-area accounts instead of one (`evals/reports/dach_extraction.md`).
 
@@ -58,7 +60,7 @@ The weekly loop: `make features score triggers weekly` rebuilds the scores and w
 | `site/` | Static public index + supplier lookup (`site/dist` after build) |
 | `skill/` | `/chase-brief <company>` Claude Code skill, also packaged as a plugin |
 | `mcp/` | Read-only MCP server over the same data |
-| `workspace/` | Internal GTM workspace: weekly queue, account pages, dinner builder, trigger feed (static, noindex, not deployed) |
+| `workspace/` | Internal GTM workspace: weekly queue, account pages, dinner builder, trigger feed (static, noindex, live demo linked above) |
 | `src/chase/answers.py` | The text answers behind the MCP tools and the skill: weekly queue with openers, account brief, dinner list, triggers |
 | `src/chase/gtm/nba.py` | Queue rules and the human-written opener templates (filled from the data on demand) |
 | `.claude-plugin/` | Plugin + marketplace manifests: one-line install of the skill and MCP server |

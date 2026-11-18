@@ -43,6 +43,5 @@ python -m http.server -d workspace/dist 8000
 ## Deploy later (not done; only after Mo reviews)
 
 - **Vercel:** build locally first. Then from `workspace/` run `vercel deploy` with Root Directory `workspace`. `vercel.json` serves the prebuilt `dist/` (no build command, no secrets) and adds an `X-Robots-Tag: noindex` header. `.vercelignore` makes sure the gitignored `dist/` is uploaded. Put it behind Vercel password protection.
-- **GitHub Pages:** `.github/workflows/workspace-pages.yml` runs `make workspace` and publishes `workspace/dist`. It only runs on manual `workflow_dispatch`. Pages sites are public unless the repo is on an Enterprise plan with private Pages, so prefer Vercel with protection.
 
 Independent project by Moritz Hanbuch.

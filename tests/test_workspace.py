@@ -82,41 +82,53 @@ def test_no_demo_data():
     assert "SYNTHETIC" not in json.dumps(q)
 
 
-def test_queue_page_is_compact_rows_with_details():
-    """One compact row per account (rank, company, tier, play, role, key number, at most 2 tags), no intro paragraph,
-    and the evidence, its source, why-now events and the opener available in the expanded view."""
+def _rows(h):
+    """Queue rows: <div class="qrow" ...> up to its closing </template></div>."""
+    import re
+    return re.findall(r'<div class="qrow".*?</template>\s*</div>', h, re.S)
+
+
+def test_queue_rows_are_one_signal_with_details_in_a_panel():
+    """CRM layout: one row per account with company (avatar, bold name, tier dot, country), days to pay with a bar,
+    one why-now pill, contact (Treasury or AP) and a status pill. Rank, play, trend and extra tags are not in the row.
+    Everything else (evidence and source, all why-now items, sparkline, opener with Copy, account and one-pager links)
+    sits in the row's <template>, which the side panel shows."""
     import re
     h = (DIST / "index.html").read_text()
     q = json.loads((DIST / "data" / "queue.json").read_text())
-    assert 'class="lede"' not in h
-    rows = re.findall(r'<details class="qrow".*?</details>', h, re.S)
+    assert 'class="lede"' not in h and 'class="strip"' not in h and 'id="panel"' in h
+    rows = _rows(h)
     assert len(rows) == len(q["accounts"]) > 0
     for row, a in zip(rows, q["accounts"]):
-        summary = row.split("</summary>")[0]
-        assert re.search(r'class="c-key \w+"[^>]*><b>\d+d</b> <span>vs ', summary), a["company"]
-        assert 'class="c-spark' in summary and 'select class="status"' in summary
-        assert summary.count('class="chip"') <= 2 and not re.search(r"<(p|li)[ >]", summary)
-        detail = row.split("</summary>")[1]
+        visible, detail = row.split('<template class="detail">')
+        assert 'class="av"' in visible and f"<b>{html_escape(a['company'])}</b>" in visible and 'class="dot t' in visible
+        assert re.search(r'class="days \w+"[^>]*><span class="num">\d+</span><span class="bar"', visible), a["company"]
+        assert visible.count('class="pill"') <= 1 and 'class="chip"' not in visible
+        assert re.search(r'class="c-contact"[^>]*>(Treasury|AP)<', visible)
+        assert 'class="spill"' in visible and 'data-status="todo"' in visible
+        assert "<svg" not in visible and "queue_rank" not in visible and not re.search(r"<(p|li|blockquote)[ >]", visible)
+        assert visible.count("<b>") == 1                      # bold only for the company name
         if a.get("evidence_url"):
             assert html_escape(a["evidence_url"]) in detail
-        assert html_escape(a["opener_draft"]) in detail and "Copy opener" in detail
+        assert html_escape(a["opener_draft"]) in detail and "Copy opener" in detail and 'class="spark' in detail
         assert f'accounts/{a["company_id"]}.html' in detail
+        for seg in a["why_now"].split(" | "):
+            assert html_escape(seg) in detail
+    contact = {"Head of accounts payable or shared services": "ap"}
+    for k, n in (("all", len(q["accounts"])), ("treasury", sum(contact.get(a["who_role"], "treasury") == "treasury" for a in q["accounts"])),
+                 ("ap", sum(contact.get(a["who_role"]) == "ap" for a in q["accounts"])),
+                 ("dinner", sum(a["play"] == "dinner_invite" for a in q["accounts"]))):
+        assert re.search(rf'data-tab="{k}"[^>]*>\w+ <span class="cnt">{n}</span>', h), k
 
 
 def test_queue_tool_controls_and_neutral_theme():
-    """Summary strip, export button, shortcuts panel; the default build (as in the test fixture with --neutral)
+    """Export button and shortcuts panel; the default build (as in the test fixture with --neutral)
     links no theme override, and every colour in the stylesheet sits in a variable block."""
     import re
     r = subprocess.run([sys.executable, str(ROOT / "workspace" / "build.py"), "--neutral"], cwd=ROOT, capture_output=True, text=True)
     assert r.returncode == 0 and "neutral default" in r.stdout
     h = (DIST / "index.html").read_text()
-    assert 'class="strip"' in h and 'id="export-status"' in h and 'id="kbd-help"' in h
-    strip = h.split('class="strip"')[1].split("</div>")[0]
-    for label in ("over 60 days", "paying slower", "treasurer plays", "AP plays", "dinner invite"):
-        assert label in strip, label
-    assert " T1" not in strip and "reported" not in strip and "live trigger" not in strip
-    assert 'class="lede"' not in (DIST / "triggers.html").read_text()
-    assert h.count("Drafts only") == 1 and "1 live events" not in h
+    assert 'id="export-status"' in h and 'id="kbd-help"' in h and h.count("Drafts only") == 1 and "1 live events" not in h
     assert "theme.css" not in h and not (DIST / "assets" / "theme.css").exists()
     css = (ROOT / "workspace" / "static" / "style.css").read_text()
     outside = re.sub(r":root[^{]*\{[^}]*\}", "", css)
@@ -124,20 +136,30 @@ def test_queue_tool_controls_and_neutral_theme():
 
 
 def test_dinners_triggers_method_and_search():
-    """Dinner builder: no intro, City area / Rest of country groups, key number per row, invite status and export.
-    Trigger feed: dinner triggers hidden under 'All', a dash for a missing source, last-30-days window first.
-    Method: full methodology collapsed. Every page: account search with one entry per account page."""
+    """Dinner builder: City area / Rest of country groups; rows are checkbox, company, city, one invite pill, with the
+    hook as tooltip and in the panel. Trigger feed: This week / Last week / Earlier groups, one line per trigger, source as
+    an icon link (a dash without one), dinner triggers hidden under 'All', last 30 days first. Method collapsed. Search on every page."""
     import re
     d = (DIST / "dinners.html").read_text()
-    assert 'class="lede"' not in d and "City area (" in d and 'select class="inv"' in d and 'data-act="inv-export"' in d
-    assert re.search(r'class="d-key \w+"[^>]*><b>\d+d</b>', d)
+    assert 'class="lede"' not in d and "City area <span" in d and 'data-act="inv-export"' in d
+    drows = re.findall(r"<tr data-row.*?</template></tr>", d, re.S)
+    assert drows
+    for r in drows:
+        visible, detail = r.split('<template class="detail">')
+        assert 'type="checkbox"' in visible and 'class="d-city' in visible and visible.count('class="ipill"') == 1
+        assert 'title="' in visible.split(">")[0] + ">" and "data-hook=" in visible     # hook as tooltip
+        assert "Copy hook" in detail and re.search(r'class="p-num \w+">\d+d<', detail)
     js = (ROOT / "workspace" / "static" / "app.js").read_text()
     assert '"city,date,account_name,status"' in js       # config/byod/dinner_attendees.csv columns
     t = (DIST / "triggers.html").read_text()
     assert 'data-hide-on-all="dinner_city"' in t and '<option value="30">Last 30 days</option>' in t.split("data-window>")[1][:60]
-    rows = re.findall(r"<tr data-type=.*?</tr>", t, re.S)
-    assert all(("href=" in r.split("</td>")[-2]) or ("\u2013" in r.split("</td>")[-2]) for r in rows)
-    assert "no source link" in t
+    assert 'class="lede"' not in t and re.search(r'<h3 class="tgroup">(This week|Last week|Earlier|Upcoming) ', t)
+    trows = re.findall(r'<div class="trow".*?</div>', t, re.S)
+    assert len(trows) > 100
+    for r in trows:
+        assert 'class="src"' in r or 'class="nolink"' in r
+        assert re.search(r'class="t-line">.*?<b>.+?</b>.*?class="t-what">.+?</span>.*?class="t-chg">.+?</span>', r, re.S), r[:200]
+    assert sum("\u2192" in r for r in trows) > 50          # "entity a -> b" for the filing triggers
     m = (DIST / "method.html").read_text()
     assert 'class="kinds"' in m and '<details class="full"><summary>Show full methodology</summary>' in m
     q = (DIST / "index.html").read_text()

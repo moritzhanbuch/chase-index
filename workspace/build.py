@@ -242,94 +242,101 @@ def key_number(company_id: str) -> tuple[str, str, str, str]:
 
 
 STATUS_OPTS = (("todo", "To do"), ("contacted", "Contacted"), ("meeting", "Meeting"), ("not_now", "Not now"))
+CONTACT = {"Head of accounts payable or shared services": "AP"}   # everything else is the treasurer or CFO office
+LINK_ICON = ('<svg class="ico" width="13" height="13" viewBox="0 0 16 16" aria-hidden="true"><path d="M9 2h5v5M14 2 7 9M12 9.5V13a1 1 0 0 1-1 1H3a1 '
+             '1 0 0 1-1-1V5a1 1 0 0 1 1-1h3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>')
 
 
-def summary_strip(queue: dict, keys: dict) -> str:
-    """One line of counts that differ week to week (tier and evidence counts are near-constant at the top of the queue)."""
-    acc = queue["accounts"]
-    days = lambda a: int(keys[a["company_id"]][0].rstrip("d")) if keys[a["company_id"]][0].rstrip("d").isdigit() else 0
-    types = lambda a: set((a.get("why_now_types") or "").split("|"))
-    bits = [(len(acc), "accounts", "all accounts in this week's queue"),
-            (sum(1 for a in acc if days(a) > 60), "over 60 days", "key number above 60 days"),
-            (sum(1 for a in acc if types(a) & {"filing_worsened", "es_pmp_rose"}), "paying slower", "a dated filing shows slower payment than a year earlier"),
-            (sum(1 for a in acc if ROLE_SHORT.get(a.get("who_role") or "", "").startswith("Treasurer") or a.get("who_role") == "CFO office"), "treasurer plays", "ask for the treasurer or CFO office (terms, working capital)"),
-            (sum(1 for a in acc if (a.get("who_role") or "").startswith("Head of accounts payable")), "AP plays", "ask for the head of AP or shared services (process)"),
-            (sum(1 for a in acc if a.get("play") == "dinner_invite"), "dinner invites", "play is a dinner invite")]
-    return ('<div class="strip" aria-label="Queue summary">' + "".join(f'<span title="{E(t)}"><b>{n}</b> {E(l[:-1] if n == 1 and l.endswith("invites") else l)}</span>' for n, l, t in bits)
-            + '<span class="st-counts" aria-live="polite"></span></div>')
+def icon_link(url, label="source") -> str:
+    if not isinstance(url, str) or not url.startswith("http"):
+        return '<span class="nolink" title="no source link">–</span>'
+    return f'<a class="src" href="{E(url)}" target="_blank" rel="noopener" title="{E(label)}" aria-label="{E(label)}">{LINK_ICON}</a>'
+
+
+def avatar(name: str) -> str:
+    """Initial in a circle; the hue is derived from the name so it stays the same between builds."""
+    hue = sum(ord(ch) for ch in name) * 37 % 360
+    return f'<span class="av" style="--h:{hue}" aria-hidden="true">{E(name.strip()[:1].upper())}</span>'
+
+
+def tier_dot(t) -> str:
+    return f'<i class="dot t{E(str(t))}" title="Tier {E(str(t))}" aria-label="Tier {E(str(t))}"></i>' if t is not None else ""
+
+
+def days_bar(days: int | None, bench: int | None, scale: int, kcls: str, tip: str) -> str:
+    if not days:
+        return '<span class="days none">n/a</span>'
+    w = min(100, days * 100 / scale)
+    tick = f'<em style="left:{min(100, bench * 100 / scale):.1f}%"></em>' if bench else ""
+    return (f'<span class="days {kcls}" title="{E(tip)}"><span class="num">{days}</span>'
+            f'<span class="bar" aria-hidden="true"><i style="width:{w:.1f}%"></i>{tick}</span></span>')
 
 
 def build_queue(queue: dict, types: dict) -> str:
-    rows, countries, plays = [], set(), set()
-    keys = {a["company_id"]: key_number(a["company_id"]) for a in queue["accounts"]}
-    for a in queue["accounts"]:
+    acc = queue["accounts"]
+    keys = {a["company_id"]: key_number(a["company_id"]) for a in acc}
+    nums = [int(k[0][:-1]) for k in keys.values() if k[0][:-1].isdigit()]
+    scale = max(nums + [90])
+    rows, n_tre, n_ap, n_din = [], 0, 0, 0
+    for a in acc:
         cid = a["company_id"]
-        countries.add(a.get("country") or "")
-        plays.add(a.get("play") or "")
-        tt = [x for x in (a.get("why_now_types") or "").split("|") if x]
-        tags = "".join(f'<span class="chip" title="{E(types.get(x, x))}">{E(ROW_TAG.get(x, short_label(x)))}</span>' for x in tt[:2])
-        more = f'<span class="chip more" title="{len(tt) - 2} more in the details">+{len(tt) - 2}</span>' if len(tt) > 2 else ""
         kn, kvs, kcls, kind = keys[cid]
-        spark = sparkline(*days_series(cid, kind))
-        status_sel = (f'<select class="status" data-cid="{E(cid)}" data-company="{E(a["company"])}" data-play="{E(a.get("play") or "")}" '
-                      f'aria-label="Status for {E(a["company"])}">' + "".join(f'<option value="{k}">{v}</option>' for k, v in STATUS_OPTS) + "</select>")
+        days = int(kn[:-1]) if kn[:-1].isdigit() else None
+        bench = 32 if kind == "uk_reported" else 60 if kind == "es_reported" else (int(kvs.split()[1]) if kvs.split()[1:2] and kvs.split()[1].isdigit() else None)
+        tt = [x for x in (a.get("why_now_types") or "").split("|") if x]
         role = a.get("who_role") or "n/a"
-        thin = '<span class="flag" title="UK invoice value under 1% of group revenue">thin</span>' if a.get("thin_evidence") else ""
+        contact = CONTACT.get(role, "Treasury")
+        n_tre += contact == "Treasury"
+        n_ap += contact == "AP"
+        n_din += a.get("play") == "dinner_invite"
+        pill = (f'<span class="pill" title="{E(types.get(tt[0], tt[0]))}">{E(ROW_TAG.get(tt[0], short_label(tt[0])))}</span>' if tt
+                else '<span class="faint">standing evidence</span>')
+        spark = sparkline(*days_series(cid, kind), w=120, h=28)
         why = "".join(f"<li>{E(x)}</li>" for x in a["why_now"].split(" | "))
-        all_tags = "".join(f'<span class="chip" title="{E(types.get(x, x))}">{E(short_label(x))}</span>' for x in tt) or '<span class="muted">none</span>'
-        one_pager = (f' · <a href="one_pagers/{E(cid)}.html">one-pager</a>' if a.get("one_pager") else "")
-        rows.append(f"""<details class="qrow" data-status="todo" data-country="{E(a.get('country') or '')}" data-play="{E(a.get('play') or '')}" data-tier="{E(str(a.get('tier')))}">
-<summary>
-<span class="c-rank">{a['queue_rank']}</span>
-<span class="c-co"><strong>{E(a['company'])}</strong> {tier_badge(a.get('tier'))}{thin}<span class="c-cc">{E(a.get('country') or '')}</span></span>
-<span class="c-play play-{E(a.get('play') or '')}">{E(PLAY_LABEL.get(a.get('play'), a.get('play') or ''))}</span>
-<span class="c-who" title="{E(role)}">{E(ROLE_SHORT.get(role, role))}</span>
-<span class="c-key {kcls}" title="{E(kn + ' ' + kvs)}"><b>{E(kn)}</b> <span>{E(kvs)}</span></span>
-<span class="c-spark {kcls}">{spark}</span>
-<span class="c-tags">{tags}{more}</span>
-<span class="c-status">{status_sel}</span>
-</summary>
-<div class="qdetail">
-<div class="qd-main">
-<h3>Evidence</h3>
-<p><span class="lbl {'rep' if kcls == 'rep' else 'prx'}">{'Reported' if kcls == 'rep' else 'Computed proxy'}</span> {E(a.get('evidence') or '')} {link(a.get('evidence_url'))}</p>
-<h3>Why now</h3>
-<ul class="why">{why}</ul>
-<p class="small">{link(a.get('why_now_url'), 'trigger source') if a.get('why_now_url') else '<span class="muted">no dated public trigger source</span>'} · {a.get('triggers_live_n') or 0} live event{'' if (a.get('triggers_live_n') or 0) == 1 else 's'}</p>
-<div class="chips">{all_tags}</div>
-<h3>Opener <span class="muted small">draft, edit before sending</span></h3>
-<blockquote class="opener">{E(a.get('opener_draft') or '')}</blockquote>
-<button type="button" class="copy" data-copy="{E(a.get('opener_draft') or '')}">Copy opener</button>
-</div>
-<dl class="qd-side">
-<dt>Ask for</dt><dd>{E(role)}<div class="small muted">{E(a.get('who_role_reason') or '')}</div></dd>
+        all_tags = "".join(f'<span class="chip" title="{E(types.get(x, x))}">{E(short_label(x))}</span>' for x in tt) or '<span class="faint">none</span>'
+        n_live = a.get("triggers_live_n") or 0
+        one_pager = f'<a href="one_pagers/{E(cid)}.html">One-pager</a>' if a.get("one_pager") else ""
+        thin = ' <span class="flag" title="UK invoice value under 1% of group revenue">thin evidence</span>' if a.get("thin_evidence") else ""
+        status_btn = (f'<button type="button" class="spill" data-cid="{E(cid)}" data-company="{E(a["company"])}" data-play="{E(a.get("play") or "")}" '
+                      f'data-status="todo" title="Click to change status">To do</button>')
+        rows.append(f"""<div class="qrow" role="row" tabindex="0" data-frow data-cid="{E(cid)}" data-contact="{contact.lower()}" data-play="{E(a.get('play') or '')}" data-status="todo" aria-label="{E(a['company'])}: open details">
+<span class="c-co">{avatar(a['company'])}<span class="co-t"><span class="co-n"><b>{E(a['company'])}</b>{tier_dot(a.get('tier'))}</span><span class="sub">{E(a.get('country') or '')}</span></span></span>
+{days_bar(days, bench, scale, kcls, kn + ' ' + kvs)}
+<span class="c-why">{pill}</span>
+<span class="c-contact" title="{E(role)}">{contact}</span>
+<span class="c-status">{status_btn}</span>
+<template class="detail"><header class="p-head">{avatar(a['company'])}<div><h2>{E(a['company'])} {tier_badge(a.get('tier'))}</h2>
+<div class="sub">{E(a.get('country') or '')} · {E((a.get('sector') or '').replace('_', ' '))} · index rank {E(str(a.get('index_rank') or ''))} · queue #{a['queue_rank']}{thin}</div></div></header>
+<section class="p-key"><div><span class="p-num {kcls}">{E(kn)}</span> <span class="muted">{E(kvs)}</span></div>{spark}</section>
+<section><h3>Evidence</h3><p><span class="lbl {'rep' if kcls == 'rep' else 'prx'}">{'Reported' if kcls == 'rep' else 'Computed proxy'}</span> {E(a.get('evidence') or '')} {link(a.get('evidence_url'))}</p></section>
+<section><h3>Why now</h3><ul class="why">{why}</ul>
+<p class="small muted">{link(a.get('why_now_url'), 'trigger source') if a.get('why_now_url') else 'no dated public trigger source'} · {n_live} live event{'' if n_live == 1 else 's'}</p><div>{all_tags}</div></section>
+<section><h3>Opener <span class="faint">draft, edit before sending</span></h3><blockquote class="opener">{E(a.get('opener_draft') or '')}</blockquote>
+<button type="button" class="copy" data-copy="{E(a.get('opener_draft') or '')}">Copy opener</button></section>
+<section><dl class="p-dl"><dt>Ask for</dt><dd>{E(role)}<div class="small muted">{E(a.get('who_role_reason') or '')}</div></dd>
 <dt>Play</dt><dd>{E(PLAY_LABEL.get(a.get('play'), a.get('play') or ''))}</dd>
 <dt>Priority</dt><dd>{num(a.get('queue_priority'), 1)} <span class="small muted">({E(a.get('priority_explained') or '')})</span></dd>
-<dt>Account</dt><dd>{E(a.get('country') or '')} · {E((a.get('sector') or '').replace('_', ' '))} · index rank {E(str(a.get('index_rank') or ''))}</dd>
-<dt>Links</dt><dd><a href="accounts/{E(cid)}.html">account page</a>{one_pager}</dd>
-</dl>
+<dt>Links</dt><dd><a href="accounts/{E(cid)}.html">Account page</a>{' · ' + one_pager if one_pager else ''}</dd></dl></section></template>
+</div>""")
+    tabs = [("all", "All", len(acc)), ("treasury", "Treasury", n_tre), ("ap", "AP", n_ap), ("dinner", "Dinner", n_din)]
+    tabh = "".join(f'<button type="button" class="tab" role="tab" data-tab="{k}" aria-selected="{"true" if k == "all" else "false"}">{lab} <span class="cnt">{n}</span></button>'
+                   for k, lab, n in tabs)
+    body = f"""<div class="pagehead"><h1>Queue <span class="faint">week {E(queue['week'])}</span></h1>
+<div class="tabs" role="tablist" aria-label="Filter the queue">{tabh}</div>
+<div class="tools-r"><button type="button" id="export-status" title="Download a CSV in the config/status/ format">Export status</button>
+<button type="button" class="kbd-btn" data-help aria-label="Keyboard shortcuts" title="Keyboard shortcuts (?)">?</button></div></div>
+<div class="list qlist" id="queue" role="grid" data-list>
+<div class="lhead qgrid" role="row"><span>Company</span><span>Days to pay <span class="faint">· median 32</span></span><span>Why now</span><span>Contact</span><span>Status</span></div>
+{''.join(rows)}
 </div>
-</details>""")
-    sel = lambda name, vals, lab: (f'<label>{lab} <select data-filter="{name}"><option value="">All</option>'
-                                   + "".join(f'<option value="{E(v)}">{E(PLAY_LABEL.get(v, v))}</option>' for v in sorted(vals) if v)
-                                   + "</select></label>")
-    body = f"""<div class="qbar"><h1>Queue <span class="muted">week {E(queue['week'])}</span></h1>
-<span class="muted small">{queue['count']} of {queue['eligible_accounts']} eligible</span>
-<div class="filters" data-target="#queue">{sel('country', countries, 'Country')}{sel('play', plays, 'Play')}{sel('tier', {'1', '2', '3'}, 'Tier')}
-<label>Status <select data-filter="status"><option value="">All</option>{''.join(f'<option value="{k}">{v}</option>' for k, v in STATUS_OPTS)}</select></label>
-<button type="button" data-toggle-all="#queue">Expand all</button><button type="button" id="export-status" title="Download a CSV in the config/status/ format">Export status CSV</button>
-<button type="button" class="kbd-btn" data-help aria-label="Keyboard shortcuts" title="Keyboard shortcuts (?)">?</button><span class="count muted" aria-live="polite"></span></div></div>
-{summary_strip(queue, keys)}
-<div class="qhead" aria-hidden="true"><span>#</span><span>Account</span><span>Play</span><span>Ask for</span><span>Key number</span><span>Trend</span><span>Why now</span><span>Status</span></div>
-<div id="queue" class="qlist">{''.join(rows)}</div>
+<aside id="panel" class="panel" aria-label="Details" hidden><button type="button" class="pclose" aria-label="Close details (Esc)">×</button><div class="pbody"></div></aside>
 <div id="kbd-help" class="kbd-help" role="dialog" aria-label="Keyboard shortcuts" hidden>
-<h2>Keyboard</h2><dl><dt><kbd>j</kbd> <kbd>k</kbd></dt><dd>next / previous account</dd><dt><kbd>Enter</kbd></dt><dd>expand or collapse</dd>
-<dt><kbd>c</kbd></dt><dd>copy the opener</dd><dt><kbd>?</kbd></dt><dd>show or hide this</dd><dt><kbd>Esc</kbd></dt><dd>close</dd></dl></div>
-<div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
-<p class="small muted">Status lives in this browser only (localStorage). Export it, then save the file as <code>config/status/accounts_status.csv</code>
-(or append its rows) so <code>make queue</code> and <code>make feedback</code> read it. "Not now" exports as <code>not_a_fit</code> with the reason "not now".
-Trend: reported days to pay over the available reports, dashed line = benchmark.</p>
-<p class="small muted">{E(queue['note'].replace(' who_named is present only when local private data exists.', ''))}</p>"""
+<h2>Keyboard</h2><dl><dt><kbd>j</kbd> <kbd>k</kbd></dt><dd>next / previous account</dd><dt><kbd>Enter</kbd></dt><dd>open details</dd>
+<dt><kbd>c</kbd></dt><dd>copy the opener</dd><dt><kbd>/</kbd></dt><dd>search accounts</dd><dt><kbd>Esc</kbd></dt><dd>close</dd><dt><kbd>?</kbd></dt><dd>this list</dd></dl>
+<p class="small muted">Status lives in this browser. Export it to <code>config/status/accounts_status.csv</code> for <code>make queue</code> and <code>make feedback</code>
+("Not now" exports as <code>not_a_fit</code>, reason "not now"). Days bar: reported days to pay, tick = benchmark (UK median 32, Spain legal maximum 60, or the sector median for a computed proxy).
+{E(queue['note'].replace(' who_named is present only when local private data exists.', ''))}</p></div>
+<div id="toast" class="toast" role="status" aria-live="polite" hidden></div>"""
     return page("Queue", body, 0, "queue")
 
 
@@ -481,34 +488,36 @@ def build_dinners(dinners: list[dict]) -> str:
 
         def row(a):
             kn, kvs, kcls, _ = key_number(a["company_id"])
-            inv = (f'<select class="inv" aria-label="Invite status for {E(a["company"])}">'
-                   + "".join(f'<option value="{k}">{v}</option>' for k, v in INVITE_OPTS) + "</select>")
-            return f"""<tr data-row data-cid="{E(a['company_id'])}" data-company="{E(a['company'])}" data-hook="{E(a['hook'])}" data-source="{E(a.get('source_url') or '')}"
-data-tier="{a['tier']}" data-hq="{E(a.get('hq_city') or '')}" data-local="{E(a['local_link'])}" data-inv="">
-<td><input type="checkbox" checked aria-label="Include {E(a['company'])}"></td>
-<td class="d-co"><a href="accounts/{E(a['company_id'])}.html"><strong>{E(a['company'])}</strong></a> {tier_badge(a['tier'])} <span class="c-cc">{E(a.get('hq_city') or 'HQ unknown')}</span></td>
-<td class="d-key {kcls}" title="{E(kn + ' ' + kvs)}"><b>{E(kn)}</b> <span>{E(kvs)}</span></td>
-<td class="d-hook" title="{E(a['hook'])}">{E(a['hook'])}</td>
-<td class="small">{link(a.get('source_url'))}</td><td>{inv}</td></tr>"""
+            return f"""<tr data-row data-frow tabindex="0" data-cid="{E(a['company_id'])}" data-company="{E(a['company'])}" data-hook="{E(a['hook'])}" data-source="{E(a.get('source_url') or '')}"
+data-tier="{a['tier']}" data-hq="{E(a.get('hq_city') or '')}" data-local="{E(a['local_link'])}" data-inv="" title="{E(a['hook'])}">
+<td class="d-chk"><input type="checkbox" checked aria-label="Include {E(a['company'])}"></td>
+<td class="d-co"><span class="co-n">{avatar(a['company'])}<b>{E(a['company'])}</b>{tier_dot(a['tier'])}</span></td>
+<td class="d-city sub">{E(a.get('hq_city') or 'HQ unknown')}</td>
+<td class="d-pill"><button type="button" class="ipill" data-inv="" title="Click to change invite status">To invite</button></td>
+<template class="detail"><header class="p-head">{avatar(a['company'])}<div><h2>{E(a['company'])} {tier_badge(a['tier'])}</h2>
+<div class="sub">{E(a.get('hq_city') or 'HQ city unknown')} · {'HQ in the city area' if a['local_link'] == 'hq_in_city_area' else 'HQ elsewhere in the country'} · {E(d['city'].title())} dinner</div></div></header>
+<section class="p-key"><div><span class="p-num {kcls}">{E(kn)}</span> <span class="muted">{E(kvs)}</span></div></section>
+<section><h3>Hook <span class="faint">template variable</span></h3><p><span class="lbl {'rep' if kcls == 'rep' else 'prx'}">{'Reported' if kcls == 'rep' else 'Computed proxy'}</span> {E(a['hook'])} {link(a.get('source_url'))}</p>
+<button type="button" class="copy" data-copy="{E(a['hook'])}">Copy hook</button></section>
+<section><dl class="p-dl"><dt>Links</dt><dd><a href="accounts/{E(a['company_id'])}.html">Account page</a></dd></dl></section></template></tr>"""
         groups = [("City area", [a for a in d["invite"] if a["local_link"] == "hq_in_city_area"]),
                   ("Rest of country", [a for a in d["invite"] if a["local_link"] != "hq_in_city_area"])]
-        tables = "".join(f'<h3 class="dgroup">{g} ({len(xs)})</h3><div class="tablewrap"><table class="data dl"><tbody>{"".join(row(a) for a in xs)}</tbody></table></div>'
+        tables = "".join(f'<tbody class="dg"><tr class="dgroup"><th colspan="4">{g} <span class="faint">{len(xs)}</span></th></tr>{"".join(row(a) for a in xs)}</tbody>'
                          for g, xs in groups if xs)
         bench = "".join(f"<li>{E(x['name'])}: {E(x['bench_reason'])}. {E(x.get('figure') or '')} {link(x.get('source_url'))}</li>"
                         for x in d.get("bench_to_verify") or [])
         when = d.get("date") or "next dinner"
-        blocks.append(f"""<section class="card dinner" data-city="{E(d['city'])}" data-date="{E(str(d.get('date') or ''))}">
-<h2>{E(d['city'].title())} <span class="muted">{E(str(when))}</span></h2>
-<div class="actions"><button data-act="all">Select all</button><button data-act="none">Clear</button>
-<button data-act="csv">Copy as CSV</button><button data-act="text">Copy as text</button><button data-act="inv-export" title="Download in the dinner_attendees.csv format">Export invite CSV</button>
-<span class="count muted" aria-live="polite"></span></div>
-{tables or "<p class='muted'>No account with a strong enough hook.</p>"}
-{('<details><summary>Bench: verify before use (' + str(len(d.get("bench_to_verify") or [])) + ')</summary><ul class="small">' + bench + '</ul></details>') if bench else ''}
+        blocks.append(f"""<section class="dinner" data-city="{E(d['city'])}" data-date="{E(str(d.get('date') or ''))}">
+<div class="dhead"><h2>{E(d['city'].title())} <span class="faint">{E(str(when))}</span></h2>
+<div class="actions"><span class="count faint" aria-live="polite"></span><button data-act="all">All</button><button data-act="none">None</button>
+<button data-act="csv">Copy CSV</button><button data-act="text">Copy text</button><button data-act="inv-export" title="Download in the dinner_attendees.csv format">Export invites</button></div></div>
+{('<div class="list"><table class="dl" data-list>' + tables + '</table></div>') if tables else "<p class='muted'>No account with a strong enough hook.</p>"}
+{('<details class="bench"><summary>Bench: verify before use (' + str(len(d.get("bench_to_verify") or [])) + ')</summary><ul class="small">' + bench + '</ul></details>') if bench else ''}
 </section>""")
-    body = f"""<h1>Dinner builder</h1>
+    body = f"""<div class="pagehead"><h1>Dinner builder</h1></div>
 {''.join(blocks)}
-<p class="small muted">Invite status lives in this browser only. Export invite CSV writes the <code>config/byod/dinner_attendees.csv</code> format
-(Confirmed = accepted). Hooks are data slots for a human-written invite; full text on hover and in the copies. UK figures describe UK subsidiaries.</p>"""
+<aside id="panel" class="panel" aria-label="Details" hidden><button type="button" class="pclose" aria-label="Close details (Esc)">×</button><div class="pbody"></div></aside>
+<div id="toast" class="toast" role="status" aria-live="polite" hidden></div>"""
     return page("Dinner builder", body, 0, "dinners")
 
 
@@ -525,28 +534,64 @@ def short_label(code: str) -> str:
     return SHORT_LABELS.get(code, code.replace("_", " "))
 
 
+def _ent(name: str) -> str:
+    name = name.strip()
+    return name.title().replace("Uk ", "UK ").replace("(Gb)", "(GB)").replace(" Plc", " plc") if name.isupper() else name
+
+
+def trigger_line(t: dict) -> tuple[str, str]:
+    """(what changed, entity a -> b) from the trigger text; the full text stays in the tooltip."""
+    tt, x = t["trigger_type"], t["text"]
+    m = re.match(r"^(.*?) \(single UK entity\) (?:now )?reports (\d+) days to pay on average, (?:up from (\d+)|(\d+) more than) a year earlier", x)
+    if m:
+        now = int(m.group(2))
+        prior = int(m.group(3)) if m.group(3) else now - int(m.group(4))
+        return short_label(tt), f"{_ent(m.group(1))} {prior} → {now} days"
+    m = re.search(r"rose from (\d+) to (\d+) days in (FY\d{4})", x)
+    if m:
+        return "Spain payment period up", f"{m.group(3)} {m.group(1)} → {m.group(2)} days"
+    m = re.match(r"^(.*?) reports (?:that its payment terms changed in the period to ([\d-]+)|offering ([\w -]+?) in its latest filing)", x)
+    if m:
+        return short_label(tt), (f"{_ent(m.group(1))}, period to {m.group(2)}" if m.group(2) else f"{_ent(m.group(1))}, not a year earlier")
+    m = re.match(r"^From ([\d]+ \w+ \d{4})", x)
+    if m:
+        return short_label(tt), f"from {m.group(1)}"
+    m = re.search(r"supplier finance programme of ([A-Z]{3} [\d.,]+\w*) outstanding", x)
+    if m:
+        return "supplier finance disclosed", f"{m.group(1)} outstanding"
+    if tt == "dinner_city":
+        return "dinner shortlist", x.split(":")[0]
+    return short_label(tt), (x[:90] + "…") if len(x) > 90 else x
+
+
 def build_triggers(trigs: list[dict], types: dict) -> str:
-    rows = []
+    from datetime import timedelta
+    today = date.today()
+    monday = today - timedelta(days=today.weekday())
+    groups = {"upcoming": [], "this": [], "last": [], "earlier": []}
     for t in trigs:
+        d = str(t.get("trigger_date"))[:10]
+        g = ("upcoming" if d > today.isoformat() else "this" if d >= monday.isoformat()
+             else "last" if d >= (monday - timedelta(days=7)).isoformat() else "earlier")
+        what, change = trigger_line(t)
         tt = t["trigger_type"]
-        binds = ("binds the buyer" if tt == "einvoicing_mandate" else "binds its small suppliers" if tt == "einvoicing_mandate_suppliers" else "")
-        approx = t.get("date_is_approximate")
-        approx_h = ('<span class="flag" title="Date is approximate">approx.</span>' if approx is True else
-                    "" if approx is False else '<span class="muted small" title="date_is_approximate not exposed by the API">?</span>')
-        acct = (f'<a href="accounts/{E(t["company_id"])}.html">{E(t["company"])}</a>' if t["company_id"] in ACCOUNT_IDS else E(t["company"]))
-        url = t.get("evidence_url")
-        src = link(url) if isinstance(url, str) and url.startswith("http") else '<span class="muted" title="no source link">\u2013</span>'
-        rows.append(f"""<tr data-type="{E(tt)}" data-date="{E(str(t.get('trigger_date'))[:10])}"><td class="small nowrap">{E(str(t.get('trigger_date')))} {approx_h}</td><td>{acct}</td>
-<td><span class="chip" title="{E(tt)}">{E(short_label(tt))}</span>{('<div class="small"><strong>' + binds + '</strong></div>') if binds else ''}</td>
-<td class="small">{E(t['text'])}</td><td>{src}</td></tr>""")
+        approx = ' <span class="faint" title="Date is approximate">approx.</span>' if t.get("date_is_approximate") is True else ""
+        acct = (f'<a class="co-l" href="accounts/{E(t["company_id"])}.html"><b>{E(t["company"])}</b></a>' if t["company_id"] in ACCOUNT_IDS
+                else f'<b>{E(t["company"])}</b>')
+        binds = (" (binds the buyer)" if tt == "einvoicing_mandate" else " (binds its small suppliers)" if tt == "einvoicing_mandate_suppliers" else "")
+        groups[g].append(f"""<div class="trow" data-frow data-type="{E(tt)}" data-date="{E(d)}" title="{E(t['text'])}">
+<span class="t-date">{E(d[5:] if d[:4] == str(today.year) else d)}{approx}</span>
+<span class="t-line">{acct}<span class="sep">·</span><span class="t-what">{E(what + binds)}</span><span class="sep">·</span><span class="t-chg">{E(change)}</span></span>
+{icon_link(t.get('evidence_url'))}</div>""")
+    names = {"upcoming": "Upcoming", "this": "This week", "last": "Last week", "earlier": "Earlier"}
+    secs = "".join(f'<section class="tsec" data-group="{k}"><h3 class="tgroup">{names[k]} <span class="faint">{len(v)}</span></h3><div class="list">{"".join(v)}</div></section>'
+                   for k, v in groups.items() if v)
     opts = "".join(f'<option value="{E(k)}">{E(v)}</option>' for k, v in types.items() if any(t["trigger_type"] == k for t in trigs))
-    body = f"""<h1>Trigger feed</h1>
+    body = f"""<div class="pagehead"><h1>Trigger feed</h1>
 <div class="filters" data-target="#trig"><label>Type <select data-filter="type" data-hide-on-all="dinner_city"><option value="">All but dinner</option>{opts}</select></label>
 <label>When <select data-window><option value="30">Last 30 days</option><option value="90">Last 90 days</option><option value="up">Upcoming</option><option value="">Any date</option></select></label>
-<span class="count muted" aria-live="polite"></span></div>
-<div class="tablewrap"><table id="trig" class="data"><thead><tr><th>Date</th><th>Account</th><th>Type</th><th>What</th><th>Source</th></tr></thead>
-<tbody>{''.join(rows)}</tbody></table></div>
-<p class="small muted">"approx." marks dates that are approximate (for example a results date inferred from last year). Triggers from private sources are left out.</p>"""
+<span class="count faint" aria-live="polite"></span></div></div>
+<div id="trig">{secs}</div>"""
     return page("Trigger feed", body, 0, "triggers")
 
 

@@ -111,6 +111,11 @@ def test_queue_tool_controls_and_neutral_theme():
     assert r.returncode == 0 and "neutral default" in r.stdout
     h = (DIST / "index.html").read_text()
     assert 'class="strip"' in h and 'id="export-status"' in h and 'id="kbd-help"' in h
+    strip = h.split('class="strip"')[1].split("</div>")[0]
+    for label in ("over 60 days", "paying slower", "treasurer plays", "AP plays", "dinner invite"):
+        assert label in strip, label
+    assert " T1" not in strip and "reported" not in strip and "live trigger" not in strip
+    assert 'class="lede"' not in (DIST / "triggers.html").read_text()
     assert "theme.css" not in h and not (DIST / "assets" / "theme.css").exists()
     css = (ROOT / "workspace" / "static" / "style.css").read_text()
     outside = re.sub(r":root[^{]*\{[^}]*\}", "", css)

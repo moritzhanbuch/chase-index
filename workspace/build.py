@@ -245,16 +245,17 @@ STATUS_OPTS = (("todo", "To do"), ("contacted", "Contacted"), ("meeting", "Meeti
 
 
 def summary_strip(queue: dict, keys: dict) -> str:
+    """One line of counts that differ week to week (tier and evidence counts are near-constant at the top of the queue)."""
     acc = queue["accounts"]
-    tiers = {t: sum(1 for a in acc if str(a.get("tier")) == t) for t in ("1", "2", "3")}
-    rep = sum(1 for a in acc if keys[a["company_id"]][2] == "rep")
-    live = sum(1 for a in acc if (a.get("triggers_live_n") or 0) > 0)
-    dinner = sum(1 for a in acc if a.get("play") == "dinner_invite")
-    pl = lambda n, one, many: f"<b>{n}</b> {one if n == 1 else many}"
-    bits = [pl(len(acc), "account", "accounts"), " · ".join(f"<b>{n}</b> T{t}" for t, n in tiers.items() if n),
-            " · ".join(x for x in (f"<b>{rep}</b> reported" if rep else "", f"<b>{len(acc) - rep}</b> proxy" if len(acc) - rep else "") if x),
-            pl(live, "with a live trigger", "with a live trigger"), pl(dinner, "dinner invite", "dinner invites")]
-    return ('<div class="strip" aria-label="Queue summary">' + "".join(f"<span>{b}</span>" for b in bits)
+    days = lambda a: int(keys[a["company_id"]][0].rstrip("d")) if keys[a["company_id"]][0].rstrip("d").isdigit() else 0
+    types = lambda a: set((a.get("why_now_types") or "").split("|"))
+    bits = [(len(acc), "accounts", "all accounts in this week's queue"),
+            (sum(1 for a in acc if days(a) > 60), "over 60 days", "key number above 60 days"),
+            (sum(1 for a in acc if types(a) & {"filing_worsened", "es_pmp_rose"}), "paying slower", "a dated filing shows slower payment than a year earlier"),
+            (sum(1 for a in acc if ROLE_SHORT.get(a.get("who_role") or "", "").startswith("Treasurer") or a.get("who_role") == "CFO office"), "treasurer plays", "ask for the treasurer or CFO office (terms, working capital)"),
+            (sum(1 for a in acc if (a.get("who_role") or "").startswith("Head of accounts payable")), "AP plays", "ask for the head of AP or shared services (process)"),
+            (sum(1 for a in acc if a.get("play") == "dinner_invite"), "dinner invites", "play is a dinner invite")]
+    return ('<div class="strip" aria-label="Queue summary">' + "".join(f'<span title="{E(t)}"><b>{n}</b> {E(l[:-1] if n == 1 and l.endswith("invites") else l)}</span>' for n, l, t in bits)
             + '<span class="st-counts" aria-live="polite"></span></div>')
 
 
@@ -540,8 +541,6 @@ def build_triggers(trigs: list[dict], types: dict) -> str:
 <td class="small">{E(t['text'])}</td><td>{src}</td></tr>""")
     opts = "".join(f'<option value="{E(k)}">{E(v)}</option>' for k, v in types.items() if any(t["trigger_type"] == k for t in trigs))
     body = f"""<h1>Trigger feed</h1>
-<p class="lede">{len(trigs)} live public triggers, newest first. Each links to its source. E-invoicing mandates are split: some bind the buyer itself,
-others bind the buyer's small suppliers (a supplier-onboarding angle).</p>
 <div class="filters" data-target="#trig"><label>Type <select data-filter="type" data-hide-on-all="dinner_city"><option value="">All but dinner</option>{opts}</select></label>
 <label>When <select data-window><option value="30">Last 30 days</option><option value="90">Last 90 days</option><option value="up">Upcoming</option><option value="">Any date</option></select></label>
 <span class="count muted" aria-live="polite"></span></div>

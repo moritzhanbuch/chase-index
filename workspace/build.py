@@ -109,6 +109,7 @@ def page(title: str, body: str, depth: int = 0, active: str = "") -> str:
 if(localStorage.getItem("chase-workspace-ticker")==="{TICKER[0]['key'] if TICKER else ''}")document.documentElement.setAttribute("data-ticker","off")}}catch(e){{}}</script>
 {NOINDEX}
 <title>{E(title)} | Chase Index workspace</title>
+<link rel="icon" href="{up}favicon.ico" sizes="any"><link rel="icon" href="{up}favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="{up}assets/style.css">{f'<link rel="stylesheet" href="{up}assets/theme.css">' if THEME_ON else ''}</head>
 <body><header class="top"><div class="wrap"><a class="brand" href="{up}index.html">Chase Index <span>workspace</span></a>
 <nav>{navh}</nav>
@@ -154,6 +155,36 @@ def theme_css(cfg: dict) -> str:
         css += (f"@media (prefers-color-scheme:dark){{:root:not([data-theme=light]){{{dark}}}}}\n"
                 f":root[data-theme=dark]{{{dark}}}\n")
     return css
+
+
+# ---------------------------------------------------------------- favicon
+FAVICON_INK = {"light": "#1c1d1f", "dark": "#f2f3f4"}     # neutral defaults, the same values as --ink in static/style.css
+
+
+def favicon_svg(light: str, dark: str) -> str:
+    """A small bar-chart mark: three rounded bars of rising height. No logo, ink colour only."""
+    bars = "".join(f'<rect x="{x}" y="{y}" width="6" height="{28 - y}" rx="1.5"/>' for x, y in ((5, 17), (13, 11), (21, 4)))
+    return (f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><style>g{{fill:{light}}}'
+            f'@media (prefers-color-scheme:dark){{g{{fill:{dark}}}}}</style><g>{bars}</g></svg>\n')
+
+
+def write_favicons(light: str, dark: str) -> None:
+    """favicon.svg (adapts to dark mode) and favicon.ico (16 and 32 px PNGs inside an ICO container, light ink)."""
+    import struct
+    import pymupdf
+    (DIST / "favicon.svg").write_text(favicon_svg(light, dark))
+    flat = favicon_svg(light, light).encode()
+    pngs = []
+    for size in (16, 32):
+        doc = pymupdf.open(stream=flat, filetype="svg")
+        pix = doc[0].get_pixmap(matrix=pymupdf.Matrix(size / 32, size / 32), alpha=True)
+        pngs.append((size, pix.tobytes("png")))
+    head = struct.pack("<HHH", 0, 1, len(pngs))
+    offset, entries, data = 6 + 16 * len(pngs), b"", b""
+    for size, png in pngs:
+        entries += struct.pack("<BBBBHHII", size, size, 0, 0, 1, 32, len(png), offset + len(data))
+        data += png
+    (DIST / "favicon.ico").write_bytes(head + entries + data)
 
 
 # ---------------------------------------------------------------- sparkline (reported days to pay over the available reports)
@@ -906,6 +937,9 @@ def copy_one_pager(cid: str) -> bool:
         s = re.sub(r"(<head[^>]*>)", r"\1" + NOINDEX, s, count=1, flags=re.I)
     if DISCLAIMER not in s:
         s = s.replace("</body>", f"<p>{DISCLAIMER}</p></body>")
+    if 'rel="icon"' not in s:
+        s = re.sub(r"(<head[^>]*>)", r'\1<link rel="icon" href="../favicon.ico" sizes="any"><link rel="icon" href="../favicon.svg" type="image/svg+xml">',
+                   s, count=1, flags=re.I)
     out = DIST / "one_pagers" / f"{cid}.html"
     out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text(s)
@@ -928,9 +962,13 @@ def main() -> None:
         if css:
             (DIST / "assets" / "theme.css").write_text(css)
             THEME_ON = True
+            _t = json.loads(THEME_LOCAL.read_text())
+            FAVICON_INK.update({k: v for k, v in (("light", (_t.get("light") or {}).get("ink")), ("dark", (_t.get("dark") or {}).get("ink")))
+                                if isinstance(v, str) and not _UNSAFE.search(v)})
             global DEFAULT_SCHEME
             DEFAULT_SCHEME = str(json.loads(THEME_LOCAL.read_text()).get("default_scheme") or "")
     print("theme: " + ("local override (config/theme.local.json)" if THEME_ON else "neutral default"))
+    write_favicons(FAVICON_INK["light"], FAVICON_INK["dark"])
 
     all_t, private, public, queue, top = load()
     types = all_t["types"]

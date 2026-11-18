@@ -285,6 +285,20 @@ def test_account_record_layout_angle_kpis_and_dedupe():
             assert "DPO" not in a, f.name
 
 
+def test_every_page_links_a_favicon():
+    """favicon.svg (bar-chart mark, ink colour, no logo) and a favicon.ico fallback, linked from every page incl. one-pagers."""
+    import re
+    svg = (DIST / "favicon.svg").read_text()
+    assert svg.startswith("<svg") and svg.count("<rect") == 3 and "<image" not in svg and "<text" not in svg
+    ico = (DIST / "favicon.ico").read_bytes()
+    assert ico[:4] == b"\x00\x00\x01\x00" and ico[4] == 2 and b"PNG" in ico
+    for f in DIST.rglob("*.html"):
+        h = f.read_text()
+        depth = len(f.relative_to(DIST).parts) - 1
+        up = "../" * depth
+        assert f'href="{up}favicon.ico"' in h and f'href="{up}favicon.svg"' in h, f.relative_to(DIST)
+
+
 def test_theme_override_is_sanitised():
     wb = _wb()
     css = wb.theme_css({"light": {"bg": "#fff", "--accent": "color-mix(in srgb, #123 40%, #fff)", "unknown": "red",

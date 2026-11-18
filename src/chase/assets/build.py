@@ -136,7 +136,10 @@ def conversation_angle(b: dict, r) -> str:
     early-cash line. Year-on-year changes read "up N days to X days"."""
     from chase.gtm import nba
     from chase.resolve.uk_rollup import EXTREME_YOY_JUMP
-    role, _ = nba.suggested_role(r, None)
+    sf0 = b.get("supplier_finance") or {}
+    # same rule as the queue: a confirmed programme makes it a treasury conversation
+    sf_angle = bool(sf0.get("programme_disclosed") and sf0.get("confirmed"))
+    role, _ = nba.suggested_role(r, None, sf_angle=sf_angle)
     basis = b["scores"]["pain_basis"]
     pp = b["payment_profile"]
     uk, es, dpo = pp["reported"].get("uk"), pp["reported"].get("spain"), pp.get("computed_proxy")
@@ -181,8 +184,9 @@ def conversation_angle(b: dict, r) -> str:
     late = uk.get("pct_invoices_paid_late_mean") if basis == "uk_reported" else None
     within = es.get("pct_paid_within_legal_max_by_value") if basis == "es_reported" else None
     if late is not None and 25 <= late <= 75:           # nba: cold_email_late
-        out.append(f"With {late:.0f}% of invoices paid after the agreed terms, start with process: what stops an invoice from being "
-                   "approved on time (a missing PO match, an unconfirmed delivery, a supplier waiting on an answer)?")
+        if not sf_angle:                                # with a confirmed programme the SF question leads, asked of treasury
+            out.append(f"With {late:.0f}% of invoices paid after the agreed terms, start with process: what stops an invoice from being "
+                       "approved on time (a missing PO match, an unconfirmed delivery, a supplier waiting on an answer)?")
     elif basis in ("uk_reported", "es_reported") and (days or 0) >= 55 and (within is None or within >= 60):   # nba: cold_email_terms
         low = f"only {late:.0f}% of invoices are paid late" if late is not None else "few invoices miss the legal limit"
         out.append(f"Since {low}, the long days are agreed terms: a working-capital topic. Ask whether they are a deliberate lever"

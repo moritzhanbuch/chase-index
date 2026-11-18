@@ -295,7 +295,7 @@ def build_queue(queue: dict, types: dict) -> str:
 <p><span class="lbl {'rep' if kcls == 'rep' else 'prx'}">{'Reported' if kcls == 'rep' else 'Computed proxy'}</span> {E(a.get('evidence') or '')} {link(a.get('evidence_url'))}</p>
 <h3>Why now</h3>
 <ul class="why">{why}</ul>
-<p class="small">{link(a.get('why_now_url'), 'trigger source') if a.get('why_now_url') else '<span class="muted">no dated public trigger source</span>'} · {a.get('triggers_live_n') or 0} live events</p>
+<p class="small">{link(a.get('why_now_url'), 'trigger source') if a.get('why_now_url') else '<span class="muted">no dated public trigger source</span>'} · {a.get('triggers_live_n') or 0} live event{'' if (a.get('triggers_live_n') or 0) == 1 else 's'}</p>
 <div class="chips">{all_tags}</div>
 <h3>Opener <span class="muted small">draft, edit before sending</span></h3>
 <blockquote class="opener">{E(a.get('opener_draft') or '')}</blockquote>
@@ -329,7 +329,7 @@ def build_queue(queue: dict, types: dict) -> str:
 <p class="small muted">Status lives in this browser only (localStorage). Export it, then save the file as <code>config/status/accounts_status.csv</code>
 (or append its rows) so <code>make queue</code> and <code>make feedback</code> read it. "Not now" exports as <code>not_a_fit</code> with the reason "not now".
 Trend: reported days to pay over the available reports, dashed line = benchmark.</p>
-<p class="small muted">Drafts only: a person edits and sends every message. {E(queue['note'].replace(' who_named is present only when local private data exists.', ''))}</p>"""
+<p class="small muted">{E(queue['note'].replace(' who_named is present only when local private data exists.', ''))}</p>"""
     return page("Queue", body, 0, "queue")
 
 

@@ -315,8 +315,17 @@ def build(min_rev: float | None = None) -> pd.DataFrame:
         u.loc[ok[ok].index, "country_method"] = "llm_hq_country"
     for nm, cc in (OVERRIDES.get("countries") or {}).items():
         u.loc[u.name == nm, ["country", "country_method"]] = [cc, "manual_override"]
+    # HQ city: Wikidata P159 first; where it is missing, the headquarters address on the company's LEI record (GLEIF,
+    # python -m chase.sources.gleif); overrides last, each with a reason in config/overrides.yaml
+    u["hq_city_source"] = u.hq_city.notna().map({True: "wikidata_p159", False: None})
+    gpath = INTERIM / "gleif_hq.csv"
+    if gpath.exists():
+        g = pd.read_csv(gpath).dropna(subset=["hq_city"]).drop_duplicates("company_id").set_index("company_id")
+        hit = u.hq_city.isna() & u.company_id.isin(g.index)
+        u.loc[hit, "hq_city"] = u.loc[hit, "company_id"].map(g.hq_city).values
+        u.loc[hit, "hq_city_source"] = u.loc[hit, "company_id"].map(g.source_url).values
     for nm, city in (OVERRIDES.get("hq_cities") or {}).items():
-        u.loc[u.name == nm, "hq_city"] = city
+        u.loc[u.name == nm, ["hq_city", "hq_city_source"]] = [city, "manual_override"]
     for nm, sec_ in (OVERRIDES.get("sectors") or {}).items():
         u.loc[u.name == nm, ["sector", "sector_method", "sector_confidence"]] = [sec_, "manual_override", 0.9]
     # Wikidata items that are a loose family of independent listed companies, not one group
@@ -359,6 +368,7 @@ def build(min_rev: float | None = None) -> pd.DataFrame:
     from chase.sources.dach_slice import universe_additions
     add = universe_additions(u)
     if len(add):
+        add = add.assign(hq_city_source=add.hq_city.notna().map({True: "config/dach_slice.yaml", False: None}))
         u = pd.concat([u, add], ignore_index=True)
     log["dach_slice_added"] = int(len(add))
 

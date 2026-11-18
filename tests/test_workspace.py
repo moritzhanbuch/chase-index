@@ -116,6 +116,7 @@ def test_queue_tool_controls_and_neutral_theme():
         assert label in strip, label
     assert " T1" not in strip and "reported" not in strip and "live trigger" not in strip
     assert 'class="lede"' not in (DIST / "triggers.html").read_text()
+    assert h.count("Drafts only") == 1 and "1 live events" not in h
     assert "theme.css" not in h and not (DIST / "assets" / "theme.css").exists()
     css = (ROOT / "workspace" / "static" / "style.css").read_text()
     outside = re.sub(r":root[^{]*\{[^}]*\}", "", css)

@@ -48,7 +48,10 @@ def test_process_framing_when_many_invoices_are_late():
         if b["scores"]["pain_basis"] != "uk_reported" or uk["pct_invoices_paid_late_mean"] is None:
             continue
         a = B.conversation_angle(b, q._row(cid))
-        if 25 <= uk["pct_invoices_paid_late_mean"] <= 75:
+        sf = b.get("supplier_finance") or {}
+        if sf.get("programme_disclosed") and sf.get("confirmed"):     # supplier finance angle: treasury, same as the queue
+            assert "group treasurer or CFO office" in a and "did terms get longer" in a and "start with process" not in a, cid
+        elif 25 <= uk["pct_invoices_paid_late_mean"] <= 75:
             assert "start with process" in a and "head of accounts payable" in a, cid
 
 

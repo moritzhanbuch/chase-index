@@ -100,8 +100,15 @@ CONTEXT_TRIGGERS = {"einvoicing_mandate", "einvoicing_mandate_suppliers", "dinne
                     "sf_disclosed", "scf_started"}   # supplier finance is context, never priority (DECISIONS 38)
 
 
-def suggested_role(r, feats: dict | None) -> tuple[str, str]:
-    """Role to approach when no named persona is available, from the shape of the evidence."""
+SF_ROLE = ("Group treasurer or CFO office",
+           "the opener asks about the supplier finance programme (who it reaches, whether terms got longer): treasury owns that")
+
+
+def suggested_role(r, feats: dict | None, sf_angle: bool = False) -> tuple[str, str]:
+    """Role to approach when no named persona is available, from the shape of the evidence.
+    sf_angle: the opener uses the supplier finance angle, which is a treasury question whatever the late share says."""
+    if sf_angle:
+        return SF_ROLE
     late = q._nn(r.uk_pct_paid_late_mean) if r.pain_basis == "uk_reported" else None
     within = q._nn(r.get("es_pct_within_legal_max_by_value")) if r.pain_basis == "es_reported" else None
     if within is not None and within < 60:
@@ -223,7 +230,7 @@ def build_queue(today: date | None = None, demo: bool = False, size: int | None 
             continue
 
         # ---- who
-        role, role_why = suggested_role(r, gfeat.get(cid))
+        role, role_why = suggested_role(r, gfeat.get(cid), sf_angle=str(opener_template or "").startswith("cold_email_sf"))
         ps = personas.get(cid, [])
         cfo = next((p for p in ps if p["role_type"] == "cfo"), None)
         named = "; ".join(f"{p['full_name']} ({p['title_as_published']})" for p in ps[:3])

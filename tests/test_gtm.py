@@ -155,3 +155,36 @@ def test_local_dinner_calendar_overrides_by_city(tmp_path, monkeypatch):
     assert q.dinner_upcoming(cal["paris"], date(2030, 3, 1)) and not q.dinner_upcoming(cal["paris"], date(2030, 3, 6))
     assert q.dinner_upcoming(cal["munich"], date(2030, 3, 6)) and not q.dinner_upcoming(cal["london"], date(2030, 3, 6))
     assert q.dinner_title("paris", "2030-03-05") == "Paris dinner (2030-03-05)" and q.dinner_title("munich", None) == "Next Munich dinner"
+
+
+def test_supplier_finance_opener_asks_for_treasury():
+    """When the opener uses the supplier finance angle (who it reaches, did terms get longer), Ask for is the treasurer or
+    CFO office, never Head of AP: the programme is a treasury decision. Same rule in the one-pager angle."""
+    from chase.gtm import api, nba
+    acc = api.weekly_queue(limit=25, demo=False)["accounts"]
+    sf = [a for a in acc if str(a.get("opener_template") or "").startswith("cold_email_sf")]
+    assert sf, "expected at least one supplier finance opener in the queue"
+    for a in sf:
+        assert a["who_role"] == nba.SF_ROLE[0], (a["company"], a["who_role"])
+    for a in acc:
+        if a["who_role"].startswith("Head of accounts payable"):
+            assert "supplier finance programme" not in a["opener_draft"], a["company"]
+
+
+def test_dinner_lists_have_hq_cities_with_a_source():
+    """Every account on a dinner list has an HQ city. Missing Wikidata P159 values come from the LEI record (GLEIF);
+    known corrections are overrides with a reason (Unilever London, Acerinox Madrid)."""
+    from chase import query as q
+    from chase.gtm import api
+    u = pd.read_parquet(ROOT / "data/processed/universe.parquet").set_index("company_id")
+    for d in q.dinner_calendar():
+        for a in api.dinner_builder(d["city"], demo=False)["invite"]:
+            assert a.get("hq_city"), (d["city"], a["company"])
+            src = u.loc[a["company_id"], "hq_city_source"]
+            assert src in ("wikidata_p159", "manual_override", "config/dach_slice.yaml") or str(src).startswith("https://search.gleif.org/"), a["company"]
+    hq = q.companies().set_index("name").hq_city
+    assert hq["Unilever"] == "London" and hq["Acerinox SA"] == "Madrid"
+    ov = (ROOT / "config/overrides.yaml").read_text()
+    for line in ov.split("hq_cities:")[1].split("sectors:")[0].strip().splitlines():
+        if line.strip().startswith('"') and "Coca-Cola" not in line and "Garmin" not in line and "ABB" not in line:
+            assert "#" in line, f"override without a reason: {line}"

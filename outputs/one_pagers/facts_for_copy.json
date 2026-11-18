@@ -1154,7 +1154,7 @@
   "company_id": "heineken-n-v-lei86uq23",
   "name": "Heineken N.V.",
   "country": "NL",
-  "hq_city": null,
+  "hq_city": "Amsterdam",
   "sector": "consumer_goods",
   "revenue": {
    "amount": 34257000000.0,
@@ -1323,7 +1323,7 @@
   "company_id": "reckitt-benckiser-group-plc-lei48v108",
   "name": "Reckitt Benckiser Group plc",
   "country": "GB",
-  "hq_city": null,
+  "hq_city": "Slough",
   "sector": "consumer_goods",
   "revenue": {
    "amount": 14205000000.0,
@@ -2088,7 +2088,7 @@
   "company_id": "johnson-matthey-plc-leisc6z10",
   "name": "Johnson Matthey plc",
   "country": "GB",
-  "hq_city": null,
+  "hq_city": "London",
   "sector": "manufacturing",
   "revenue": {
    "amount": 12573000000.0,
@@ -2265,7 +2265,7 @@
   "company_id": "haleon-plc-cik1900304",
   "name": "Haleon plc",
   "country": "GB",
-  "hq_city": null,
+  "hq_city": "Weybridge",
   "sector": "consumer_goods",
   "revenue": {
    "amount": 11030000000.0,
@@ -3044,7 +3044,7 @@
   "company_id": "unilever-q157062",
   "name": "Unilever",
   "country": "GB",
-  "hq_city": "Rotterdam",
+  "hq_city": "London",
   "sector": "consumer_goods",
   "revenue": {
    "amount": 50503000000.0,

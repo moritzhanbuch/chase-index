@@ -54,7 +54,7 @@ CITIES = {
     "paris": {"country": "FR", "hq": {"paris", "boulogne-billancourt", "courbevoie", "la défense", "puteaux", "nanterre",
                                       "issy-les-moulineaux", "levallois-perret", "neuilly-sur-seine", "saint-denis",
                                       "rueil-malmaison", "clichy", "massy", "vélizy-villacoublay", "montrouge", "saint-ouen-sur-seine"}},
-    "london": {"country": "GB", "hq": {"london", "city of london", "westminster", "city of westminster", "uxbridge", "slough", "brentford"}},
+    "london": {"country": "GB", "hq": {"london", "city of london", "westminster", "city of westminster", "uxbridge", "slough", "brentford", "weybridge"}},
     "madrid": {"country": "ES", "hq": {"madrid", "alcobendas", "pozuelo de alarcón", "las rozas de madrid", "boadilla del monte"}},
 }
 try:   # DACH slice: more Bavarian towns around Munich (config/dach_slice.yaml)

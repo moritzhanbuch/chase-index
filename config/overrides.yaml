@@ -17,6 +17,9 @@ hq_cities:                # display name -> HQ city, where Wikidata is wrong or 
   "Coca-Cola Europacific Partners": Uxbridge
   "Garmin": Schaffhausen
   "ABB Group": Zurich
+  "Unilever": London                                   # Unilever PLC is headquartered at 100 Victoria Embankment, London since the 2020 unification; Wikidata P159 still says Rotterdam
+  "Currys plc": London                                 # head office and registered office 1 Portal Way, London W3; the LEI record still shows Newark
+  "Distribuidora Internacional de Alimentacion SA": Las Rozas de Madrid   # LEI record writes "Rozas de Madrid, Las"
 
 sectors:                  # display name -> sector, where the SIC code misleads
   "3M": manufacturing                                  # SIC 3841 (medical instruments) describes one division

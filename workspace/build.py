@@ -272,7 +272,43 @@ def days_bar(days: int | None, bench: int | None, scale: int, kcls: str, tip: st
             f'<span class="bar" aria-hidden="true"><i style="width:{w:.1f}%"></i>{tick}</span></span>')
 
 
-def build_queue(queue: dict, types: dict) -> str:
+CUR = {"GBP": "\u00a3", "USD": "$", "EUR": "\u20ac", "CHF": "CHF "}
+
+
+def short_money(v, cur) -> str:
+    v = float(v)
+    s = f"{v / 1e9:.1f}bn" if v >= 1e9 else f"{v / 1e6:.0f}m"
+    return f"{CUR.get(cur, (cur or '') + ' ')}{s}"
+
+
+def why_pill(a: dict, trig_by_type: dict) -> str | None:
+    """The single most specific why-now signal, with its number, at most about 14 characters. Priority:
+    terms lengthened > SCF started > confirmed supplier finance with amount > year-on-year change (median UK entity)
+    > Spain payment period change > crossed 60 days."""
+    tt = set(trig_by_type)
+    if "terms_changed_longer" in tt:
+        m = re.search(r"from (?:standard )?(\d+)\s*(?:days?\s*)?to (\d+)\s*days", trig_by_type["terms_changed_longer"]["text"])
+        return f"Terms {m.group(1)}\u2192{m.group(2)}d" if m else "Terms longer"
+    if "scf_started" in tt:
+        return "SCF started"
+    b = q.get_account_brief(a["company_id"])
+    sf = b.get("supplier_finance") or {}
+    if sf.get("programme_disclosed") and sf.get("confirmed") and sf.get("obligations_outstanding"):
+        return f"SCF {short_money(sf['obligations_outstanding'], sf.get('currency'))}"
+    uk = (b.get("payment_profile") or {}).get("reported", {}).get("uk") or {}
+    med = uk.get("trend_days_year_on_year_median")
+    if med is not None and med >= 1:
+        return f"+{int(med + 0.5)}d YoY"
+    if "es_pmp_rose" in tt:
+        m = re.search(r"from (\d+) to (\d+) days", trig_by_type["es_pmp_rose"]["text"])
+        return f"ES {m.group(1)}\u2192{m.group(2)}d" if m else "ES slower"
+    if "filing_crossed_60" in tt:
+        return "Crossed 60d"
+    return None
+
+
+def build_queue(queue: dict, types: dict, public: list[dict] | None = None) -> str:
+    by_key = {(t["company_id"], t["text"]): t for t in (public or [])}
     acc = queue["accounts"]
     keys = {a["company_id"]: key_number(a["company_id"]) for a in acc}
     nums = [int(k[0][:-1]) for k in keys.values() if k[0][:-1].isdigit()]
@@ -289,10 +325,22 @@ def build_queue(queue: dict, types: dict) -> str:
         n_tre += contact == "Treasury"
         n_ap += contact == "AP"
         n_din += a.get("play") == "dinner_invite"
-        pill = (f'<span class="pill" title="{E(types.get(tt[0], tt[0]))}">{E(ROW_TAG.get(tt[0], short_label(tt[0])))}</span>' if tt
-                else '<span class="faint">standing evidence</span>')
+        mine = {}
+        for t in sorted((t for t in (public or []) if t["company_id"] == cid and t.get("is_live")), key=lambda t: -(t.get("strength") or 0)):
+            mine.setdefault(t["trigger_type"], t)
+        pv = why_pill(a, mine)
+        pill = (f'<span class="pill" title="Strongest specific signal. All signals in the details panel.">{E(pv)}</span>' if pv
+                else f'<span class="pill">{E(ROW_TAG.get(tt[0], short_label(tt[0])))}</span>' if tt else '<span class="faint">standing evidence</span>')
         spark = sparkline(*days_series(cid, kind), w=120, h=28)
-        why = "".join(f"<li>{E(x)}</li>" for x in a["why_now"].split(" | "))
+        def why_li(x):
+            t = by_key.get((cid, x))
+            if not t:
+                return f'<li title="{E(x)}"><span class="w-what">{E(x)}</span></li>'
+            what, chg = trigger_line(t)
+            return (f'<li title="{E(x)}"><span class="w-what">{E(what)}</span><span class="sep">\u00b7</span>'
+                    f'<span class="w-chg">{E(chg)}</span>{icon_link(t.get("evidence_url"))}</li>')
+        why = "".join(why_li(x) for x in a["why_now"].split(" | "))
+        n_shown = len(a["why_now"].split(" | "))
         all_tags = "".join(f'<span class="chip" title="{E(types.get(x, x))}">{E(short_label(x))}</span>' for x in tt) or '<span class="faint">none</span>'
         n_live = a.get("triggers_live_n") or 0
         one_pager = f'<a href="one_pagers/{E(cid)}.html">One-pager</a>' if a.get("one_pager") else ""
@@ -306,17 +354,18 @@ def build_queue(queue: dict, types: dict) -> str:
 <span class="c-contact" title="{E(role)}">{contact}</span>
 <span class="c-status">{status_btn}</span>
 <template class="detail"><header class="p-head">{avatar(a['company'])}<div><h2>{E(a['company'])} {tier_badge(a.get('tier'))}</h2>
-<div class="sub">{E(a.get('country') or '')} · {E((a.get('sector') or '').replace('_', ' '))} · index rank {E(str(a.get('index_rank') or ''))} · queue #{a['queue_rank']}{thin}</div></div></header>
-<section class="p-key"><div><span class="p-num {kcls}">{E(kn)}</span> <span class="muted">{E(kvs)}</span></div>{spark}</section>
-<section><h3>Evidence</h3><p><span class="lbl {'rep' if kcls == 'rep' else 'prx'}">{'Reported' if kcls == 'rep' else 'Computed proxy'}</span> {E(a.get('evidence') or '')} {link(a.get('evidence_url'))}</p></section>
-<section><h3>Why now</h3><ul class="why">{why}</ul>
-<p class="small muted">{link(a.get('why_now_url'), 'trigger source') if a.get('why_now_url') else 'no dated public trigger source'} · {n_live} live event{'' if n_live == 1 else 's'}</p><div>{all_tags}</div></section>
+<div class="sub">{E(a.get('country') or '')} · {E((a.get('sector') or '').replace('_', ' '))} · queue #{a['queue_rank']}{thin}</div></div></header>
+<section class="p-key"><div><span class="p-num {kcls}">{E(kn)}</span> <span class="muted">{E(kvs)}</span>
+<div class="p-basis"><span class="lbl {'rep' if kcls == 'rep' else 'prx'}">{'Reported' if kcls == 'rep' else 'Computed proxy'}</span>{icon_link(a.get('evidence_url'), 'evidence source')}</div></div>{spark}</section>
+<section><h3>Why now {('<span class="pill">' + E(pv) + '</span>') if pv else ''} <span class="faint">{('top ' + str(n_shown) + ' of ') if n_live > n_shown else ''}{n_live} live event{'' if n_live == 1 else 's'}</span></h3><ul class="why">{why}</ul></section>
 <section><h3>Opener <span class="faint">draft, edit before sending</span></h3><blockquote class="opener">{E(a.get('opener_draft') or '')}</blockquote>
 <button type="button" class="copy" data-copy="{E(a.get('opener_draft') or '')}">Copy opener</button></section>
-<section><dl class="p-dl"><dt>Ask for</dt><dd>{E(role)}<div class="small muted">{E(a.get('who_role_reason') or '')}</div></dd>
+<section><dl class="p-dl"><dt>Ask for</dt><dd>{E(ROLE_SHORT.get(role, role))}<div class="faint small">{E(a.get('who_role_reason') or '')}</div></dd>
+<dt>Links</dt><dd><a href="accounts/{E(cid)}.html">Account page</a>{' · ' + one_pager if one_pager else ''}{(' · ' + link(a.get('evidence_url'), 'Evidence')) if a.get('evidence_url') else ''}{(' · ' + link(a.get('why_now_url'), 'Trigger source')) if a.get('why_now_url') else ''}</dd></dl></section>
+<details class="p-more"><summary>More</summary><dl class="p-dl"><dt>Evidence</dt><dd>{E(a.get('evidence') or '')}</dd>
 <dt>Play</dt><dd>{E(PLAY_LABEL.get(a.get('play'), a.get('play') or ''))}</dd>
-<dt>Priority</dt><dd>{num(a.get('queue_priority'), 1)} <span class="small muted">({E(a.get('priority_explained') or '')})</span></dd>
-<dt>Links</dt><dd><a href="accounts/{E(cid)}.html">Account page</a>{' · ' + one_pager if one_pager else ''}</dd></dl></section></template>
+<dt>Priority</dt><dd>{num(a.get('queue_priority'), 1)} <span class="faint">({E(a.get('priority_explained') or '')})</span></dd>
+<dt>Signals</dt><dd>{all_tags}</dd><dt>Account</dt><dd>index rank {E(str(a.get('index_rank') or ''))}</dd></dl></details></template>
 </div>""")
     tabs = [("all", "All", len(acc)), ("treasury", "Treasury", n_tre), ("ap", "AP", n_ap), ("dinner", "Dinner", n_din)]
     tabh = "".join(f'<button type="button" class="tab" role="tab" data-tab="{k}" aria-selected="{"true" if k == "all" else "false"}">{lab} <span class="cnt">{n}</span></button>'
@@ -530,6 +579,13 @@ SHORT_LABELS = {
     "dinner_city": "dinner"}
 
 
+TYPE_LABEL = {"filing_crossed_60": "Crossed 60d", "filing_worsened": "Paying slower", "es_pmp_rose": "ES slower",
+              "terms_changed_longer": "Terms longer", "terms_changed_other": "Terms changed", "terms_changed_shorter": "Terms shorter",
+              "scf_started": "SCF started", "einvoicing_started": "E-invoicing started", "einvoicing_mandate": "E-inv. deadline (buyer)",
+              "einvoicing_mandate_suppliers": "E-inv. deadline (suppliers)", "sf_disclosed": "SCF in annual report", "dinner_city": "Dinner",
+              "results_date": "Results due", "cfo_change": "New CFO"}
+
+
 def short_label(code: str) -> str:
     return SHORT_LABELS.get(code, code.replace("_", " "))
 
@@ -565,14 +621,15 @@ def trigger_line(t: dict) -> tuple[str, str]:
 
 
 def build_triggers(trigs: list[dict], types: dict) -> str:
-    from datetime import timedelta
     today = date.today()
-    monday = today - timedelta(days=today.weekday())
-    groups = {"upcoming": [], "this": [], "last": [], "earlier": []}
+    groups = {"upcoming": [], "d7": [], "d14": [], "d30": [], "older": []}
     for t in trigs:
         d = str(t.get("trigger_date"))[:10]
-        g = ("upcoming" if d > today.isoformat() else "this" if d >= monday.isoformat()
-             else "last" if d >= (monday - timedelta(days=7)).isoformat() else "earlier")
+        try:
+            age = (today - date.fromisoformat(d)).days
+        except ValueError:
+            age = 9999
+        g = "upcoming" if age < 0 else "d7" if age <= 7 else "d14" if age <= 14 else "d30" if age <= 30 else "older"
         what, change = trigger_line(t)
         tt = t["trigger_type"]
         approx = ' <span class="faint" title="Date is approximate">approx.</span>' if t.get("date_is_approximate") is True else ""
@@ -583,10 +640,10 @@ def build_triggers(trigs: list[dict], types: dict) -> str:
 <span class="t-date">{E(d[5:] if d[:4] == str(today.year) else d)}{approx}</span>
 <span class="t-line">{acct}<span class="sep">·</span><span class="t-what">{E(what + binds)}</span><span class="sep">·</span><span class="t-chg">{E(change)}</span></span>
 {icon_link(t.get('evidence_url'))}</div>""")
-    names = {"upcoming": "Upcoming", "this": "This week", "last": "Last week", "earlier": "Earlier"}
+    names = {"upcoming": "Upcoming", "d7": "Last 7 days", "d14": "8\u201314 days", "d30": "15\u201330 days", "older": "Older"}
     secs = "".join(f'<section class="tsec" data-group="{k}"><h3 class="tgroup">{names[k]} <span class="faint">{len(v)}</span></h3><div class="list">{"".join(v)}</div></section>'
                    for k, v in groups.items() if v)
-    opts = "".join(f'<option value="{E(k)}">{E(v)}</option>' for k, v in types.items() if any(t["trigger_type"] == k for t in trigs))
+    opts = "".join(f'<option value="{E(k)}" title="{E(v)}">{E(TYPE_LABEL.get(k, v))}</option>' for k, v in types.items() if any(t["trigger_type"] == k for t in trigs))
     body = f"""<div class="pagehead"><h1>Trigger feed</h1>
 <div class="filters" data-target="#trig"><label>Type <select data-filter="type" data-hide-on-all="dinner_city"><option value="">All but dinner</option>{opts}</select></label>
 <label>When <select data-window><option value="30">Last 30 days</option><option value="90">Last 90 days</option><option value="up">Upcoming</option><option value="">Any date</option></select></label>
@@ -687,7 +744,7 @@ def main() -> None:
     future = sorted([t for t in feed if str(t.get("trigger_date")) > today_s], key=lambda t: str(t.get("trigger_date")))
     feed = past + future
 
-    (DIST / "index.html").write_text(build_queue(queue, types))
+    (DIST / "index.html").write_text(build_queue(queue, types, public))
     (DIST / "dinners.html").write_text(build_dinners(dinners))
     (DIST / "triggers.html").write_text(build_triggers(feed, types))
     (DIST / "method.html").write_text(build_method())

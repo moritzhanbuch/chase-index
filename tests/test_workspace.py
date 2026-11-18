@@ -139,6 +139,7 @@ def test_dinners_triggers_method_and_search():
     """Dinner builder: City area / Rest of country groups; rows are checkbox, company, city, one invite pill, with the
     hook as tooltip and in the panel. Trigger feed: This week / Last week / Earlier groups, one line per trigger, source as
     an icon link (a dash without one), dinner triggers hidden under 'All', last 30 days first. Method collapsed. Search on every page."""
+    import html
     import re
     d = (DIST / "dinners.html").read_text()
     assert 'class="lede"' not in d and "City area <span" in d and 'data-act="inv-export"' in d
@@ -153,13 +154,18 @@ def test_dinners_triggers_method_and_search():
     assert '"city,date,account_name,status"' in js       # config/byod/dinner_attendees.csv columns
     t = (DIST / "triggers.html").read_text()
     assert 'data-hide-on-all="dinner_city"' in t and '<option value="30">Last 30 days</option>' in t.split("data-window>")[1][:60]
-    assert 'class="lede"' not in t and re.search(r'<h3 class="tgroup">(This week|Last week|Earlier|Upcoming) ', t)
+    assert 'class="lede"' not in t and re.search(r'<h3 class="tgroup">(Last 7 days|8\u201314 days|15\u201330 days|Older|Upcoming) ', t)
     trows = re.findall(r'<div class="trow".*?</div>', t, re.S)
     assert len(trows) > 100
     for r in trows:
         assert 'class="src"' in r or 'class="nolink"' in r
         assert re.search(r'class="t-line">.*?<b>.+?</b>.*?class="t-what">.+?</span>.*?class="t-chg">.+?</span>', r, re.S), r[:200]
     assert sum("\u2192" in r for r in trows) > 50          # "entity a -> b" for the filing triggers
+    for code, lab in (("filing_crossed_60", "Crossed 60d"), ("sf_disclosed", "SCF in annual report"), ("dinner_city", "Dinner")):
+        assert f'<option value="{code}"' in t and f">{lab}</option>" in t
+    pills = re.findall(r'<span class="c-why"><span class="pill"[^>]*>([^<]+)</span>', (DIST / "index.html").read_text())
+    assert pills and all(len(html.unescape(x)) <= 14 for x in pills), pills
+    assert any(re.fullmatch(r"(SCF [\u00a3$\u20ac][\d.]+(m|bn)|\+\d+d YoY|ES \d+\u2192\d+d|Terms \d+\u2192\d+d|SCF started|Crossed 60d)", html.unescape(x)) for x in pills)
     m = (DIST / "method.html").read_text()
     assert 'class="kinds"' in m and '<details class="full"><summary>Show full methodology</summary>' in m
     q = (DIST / "index.html").read_text()

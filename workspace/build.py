@@ -8,12 +8,16 @@ Privacy guards (public data only):
 - triggers with private_source == True are dropped, including their text inside the queue's why_now summary
 - nothing under data/private/ is read here
 
-Run: .venv/bin/python workspace/build.py   (or: make workspace)
+Theme: colours and fonts are CSS variables in static/style.css (a neutral default). An optional, gitignored
+config/theme.local.json overrides them at build time (format: config/theme.example.json). --neutral ignores it.
+
+Run: .venv/bin/python workspace/build.py [--neutral]   (or: make workspace)
 """
 from __future__ import annotations
 
 import html
 import json
+import os
 import re
 import shutil
 import sys
@@ -38,6 +42,12 @@ DROP_KEYS = {"who_named", "who_source", "people_private", "byod_flags", "byod_mo
 PLAY_LABEL = {"cold_email": "Cold email", "dinner_invite": "Dinner invite", "warm_intro": "Warm intro",
               "supplier_activation": "Supplier activation", "linkedin_note": "LinkedIn note"}
 E = html.escape
+THEME_LOCAL = ROOT / "config" / "theme.local.json"
+THEME_ON = False   # set in main(): link assets/theme.css only when a local override was written
+# variables a theme may set (everything else in the file is ignored); values may not break out of the declaration
+THEME_VARS = {"bg", "fg", "muted", "line", "card", "accent", "rep", "rep-bg", "prx", "prx-bg", "est", "est-bg", "flag", "flag-bg",
+              "t1", "t2", "t3", "tier-fg", "chip", "font", "font-mono", "radius"}
+_UNSAFE = re.compile(r"[;{}<>\\]|url\(|@|/\*|\*/|expression", re.I)
 
 
 # ---------------------------------------------------------------- helpers
@@ -91,7 +101,7 @@ def page(title: str, body: str, depth: int = 0, active: str = "") -> str:
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 {NOINDEX}
 <title>{E(title)} | Chase Index workspace</title>
-<link rel="stylesheet" href="{up}assets/style.css"></head>
+<link rel="stylesheet" href="{up}assets/style.css">{f'<link rel="stylesheet" href="{up}assets/theme.css">' if THEME_ON else ''}</head>
 <body><header class="top"><div class="wrap"><a class="brand" href="{up}index.html">Chase Index <span>workspace</span></a>
 <nav>{navh}</nav></div></header>
 <main class="wrap">{body}</main>
@@ -103,6 +113,83 @@ Reported = statutory filings. Computed proxy = derived from financial statements
 
 def tier_badge(t) -> str:
     return f'<span class="tier t{E(str(t))}">T{E(str(t))}</span>' if t is not None else ""
+
+
+# ---------------------------------------------------------------- theme
+def theme_css(cfg: dict) -> str:
+    """CSS for a theme override: {"light": {var: value}, "dark": {var: value}}. Unknown variables and unsafe values are dropped."""
+    def block(d):
+        out = []
+        for k, v in (d or {}).items():
+            k = str(k).lstrip("-")
+            if k in THEME_VARS and isinstance(v, str) and v.strip() and not _UNSAFE.search(v):
+                out.append(f"--{k}:{v.strip()}")
+        return ";".join(out)
+    light, dark = block(cfg.get("light")), block(cfg.get("dark"))
+    css = f":root{{{light}}}\n" if light else ""
+    if dark:
+        css += f"@media (prefers-color-scheme:dark){{:root{{{dark}}}}}\n"
+    return css
+
+
+# ---------------------------------------------------------------- sparkline (reported days to pay over the available reports)
+_UK_HIST = None
+
+
+def _uk_history():
+    global _UK_HIST
+    if _UK_HIST is None:
+        import pandas as pd
+        r = pd.read_parquet(ROOT / "data" / "processed" / "uk_payment_practices.parquet",
+                            columns=["company_number", "period_end", "avg_days_to_pay", "value_paid_total_gbp", "is_usable", "superseded_by_report_id"])
+        r = r[r.is_usable.fillna(False) & r.superseded_by_report_id.isna() & r.avg_days_to_pay.between(0, 365)]
+        m = pd.read_parquet(ROOT / "data" / "processed" / "uk_entity_group_map.parquet", columns=["company_number", "company_id"])
+        r = r.merge(m, on="company_number")
+        pe = pd.to_datetime(r.period_end)
+        r["half"] = pe.dt.year.astype(str) + "-H" + (1 + (pe.dt.month > 6)).astype(str)
+        _UK_HIST = r
+    return _UK_HIST
+
+
+def days_series(company_id: str, kind: str) -> tuple[list[tuple[str, float]], str, int | None]:
+    """[(period label, days)], what the points are, benchmark line. Reported figures only; a computed proxy gets no series."""
+    if kind == "uk_reported":
+        h = _uk_history()
+        h = h[h.company_id == company_id]
+        pts = []
+        for half, g in sorted(h.groupby("half")):
+            w = g.value_paid_total_gbp
+            v = float((g.avg_days_to_pay * w).sum() / w.sum()) if w.notna().all() and w.sum() > 0 else float(g.avg_days_to_pay.mean())
+            pts.append((half, v))
+        n = h.company_number.nunique()
+        what = ("UK reports per half-year" + (f", invoice-value weighted across up to {n} UK entities" if n > 1 else ", single UK entity")
+                + ". The headline uses each entity's latest report, so the last point can differ.")
+        return pts[-8:], what, 32
+    if kind == "es_reported":
+        es = q.get_payment_profile(company_id).get("reported", {}).get("spain") or {}
+        fy = es.get("fiscal_year")
+        pts = [(f"FY{int(fy) - 1}", es["prior_year_pmp_days"])] if fy and es.get("prior_year_pmp_days") is not None else []
+        if es.get("pmp_days") is not None:
+            pts.append((f"FY{fy}", es["pmp_days"]))
+        return pts, "Spanish PMP by fiscal year (statutory)", 60
+    return [], "", None
+
+
+def sparkline(pts: list[tuple[str, float]], what: str, bench: int | None, w: int = 64, h: int = 18) -> str:
+    if len(pts) < 2:
+        one = f"{pts[0][1]:.0f}d only" if pts else "no reported series"
+        return f'<span class="spark none" title="{E(what or "Computed proxy: no reported series")}">{E(one if pts else "no series")}</span>'
+    vals = [v for _, v in pts]
+    lo, hi = min(vals + ([bench] if bench else [])), max(vals + ([bench] if bench else []))
+    span = (hi - lo) or 1
+    x = lambda i: 2 + i * (w - 4) / (len(pts) - 1)
+    y = lambda v: h - 2 - (v - lo) * (h - 4) / span
+    line = " ".join(f"{x(i):.1f},{y(v):.1f}" for i, v in enumerate(vals))
+    ref = (f'<line class="bench" x1="0" x2="{w}" y1="{y(bench):.1f}" y2="{y(bench):.1f}"/>' if bench else "")
+    label = "; ".join(f"{p} {v:.0f}d" for p, v in pts)
+    tip = f"{what} {label}." + (f" Dashed line: {bench} days." if bench else "")
+    return (f'<svg class="spark" width="{w}" height="{h}" viewBox="0 0 {w} {h}" role="img" aria-label="{E(tip)}"><title>{E(tip)}</title>{ref}'
+            f'<polyline points="{line}"/><circle cx="{x(len(vals) - 1):.1f}" cy="{y(vals[-1]):.1f}" r="2"/></svg>')
 
 
 # ---------------------------------------------------------------- data
@@ -121,30 +208,51 @@ def load():
 
 
 # ---------------------------------------------------------------- pages
-ROW_TAG = {"einvoicing_mandate": "e-inv. deadline", "einvoicing_mandate_suppliers": "e-inv. (suppliers)",
-           "einvoicing_started": "e-invoicing", "sf_disclosed": "supplier finance", "terms_changed_other": "terms changed"}
+ROW_TAG = {"einvoicing_mandate": "e-inv. deadline", "einvoicing_mandate_suppliers": "e-inv. suppliers",
+           "einvoicing_started": "e-invoicing", "sf_disclosed": "SCF note", "terms_changed_other": "terms changed",
+           "filing_crossed_60": "over 60d", "filing_worsened": "slower", "es_pmp_rose": "ES slower", "dinner_city": "dinner",
+           "results_date": "results", "scf_started": "SCF new", "cfo_change": "new CFO", "terms_changed_longer": "terms longer",
+           "terms_changed_shorter": "terms shorter"}
 
 
 ROLE_SHORT = {"Head of accounts payable or shared services": "Head of AP / shared services",
               "Group treasurer or CFO office": "Treasurer / CFO office", "CFO office": "CFO office"}
 
 
-def key_number(company_id: str) -> tuple[str, str, str]:
-    """Compact key number for the queue row: ('79d', 'vs 32 UK median', css class). The same figure the opener uses."""
+def key_number(company_id: str) -> tuple[str, str, str, str]:
+    """Compact key number for the queue row: ('79d', 'vs 32 UK median', css class, evidence kind). The same figure the opener uses."""
     hv = q.hook_variables(q._row(company_id))
     days, kind = hv.get("days"), hv.get("evidence_kind")
     if not days:
-        return "n/a", "", "prx"
+        return "n/a", "", "prx", ""
     if kind == "uk_reported":
-        return f"{days}d", "vs 32 UK median", "rep"
+        return f"{days}d", "vs 32 UK median", "rep", kind
     if kind == "es_reported":
-        return f"{days}d", "vs 60 legal max (ES)", "rep"
+        return f"{days}d", "vs 60 legal max (ES)", "rep", kind
     med = str(hv.get("benchmark") or "").split(" ")[0]
-    return f"{days}d", f"vs {med} sector median, DPO proxy", "prx"
+    return f"{days}d", f"vs {med} sector median, DPO proxy", "prx", kind or "proxy"
+
+
+STATUS_OPTS = (("todo", "To do"), ("contacted", "Contacted"), ("meeting", "Meeting"), ("not_now", "Not now"))
+
+
+def summary_strip(queue: dict, keys: dict) -> str:
+    acc = queue["accounts"]
+    tiers = {t: sum(1 for a in acc if str(a.get("tier")) == t) for t in ("1", "2", "3")}
+    rep = sum(1 for a in acc if keys[a["company_id"]][2] == "rep")
+    live = sum(1 for a in acc if (a.get("triggers_live_n") or 0) > 0)
+    dinner = sum(1 for a in acc if a.get("play") == "dinner_invite")
+    pl = lambda n, one, many: f"<b>{n}</b> {one if n == 1 else many}"
+    bits = [pl(len(acc), "account", "accounts"), " · ".join(f"<b>{n}</b> T{t}" for t, n in tiers.items() if n),
+            " · ".join(x for x in (f"<b>{rep}</b> reported" if rep else "", f"<b>{len(acc) - rep}</b> proxy" if len(acc) - rep else "") if x),
+            pl(live, "with a live trigger", "with a live trigger"), pl(dinner, "dinner invite", "dinner invites")]
+    return ('<div class="strip" aria-label="Queue summary">' + "".join(f"<span>{b}</span>" for b in bits)
+            + '<span class="st-counts" aria-live="polite"></span></div>')
 
 
 def build_queue(queue: dict, types: dict) -> str:
     rows, countries, plays = [], set(), set()
+    keys = {a["company_id"]: key_number(a["company_id"]) for a in queue["accounts"]}
     for a in queue["accounts"]:
         cid = a["company_id"]
         countries.add(a.get("country") or "")
@@ -152,20 +260,25 @@ def build_queue(queue: dict, types: dict) -> str:
         tt = [x for x in (a.get("why_now_types") or "").split("|") if x]
         tags = "".join(f'<span class="chip" title="{E(types.get(x, x))}">{E(ROW_TAG.get(x, short_label(x)))}</span>' for x in tt[:2])
         more = f'<span class="chip more" title="{len(tt) - 2} more in the details">+{len(tt) - 2}</span>' if len(tt) > 2 else ""
-        kn, kvs, kcls = key_number(cid)
+        kn, kvs, kcls, kind = keys[cid]
+        spark = sparkline(*days_series(cid, kind))
+        status_sel = (f'<select class="status" data-cid="{E(cid)}" data-company="{E(a["company"])}" data-play="{E(a.get("play") or "")}" '
+                      f'aria-label="Status for {E(a["company"])}">' + "".join(f'<option value="{k}">{v}</option>' for k, v in STATUS_OPTS) + "</select>")
         role = a.get("who_role") or "n/a"
         thin = '<span class="flag" title="UK invoice value under 1% of group revenue">thin</span>' if a.get("thin_evidence") else ""
         why = "".join(f"<li>{E(x)}</li>" for x in a["why_now"].split(" | "))
         all_tags = "".join(f'<span class="chip" title="{E(types.get(x, x))}">{E(short_label(x))}</span>' for x in tt) or '<span class="muted">none</span>'
         one_pager = (f' · <a href="one_pagers/{E(cid)}.html">one-pager</a>' if a.get("one_pager") else "")
-        rows.append(f"""<details class="qrow" data-country="{E(a.get('country') or '')}" data-play="{E(a.get('play') or '')}" data-tier="{E(str(a.get('tier')))}">
+        rows.append(f"""<details class="qrow" data-status="todo" data-country="{E(a.get('country') or '')}" data-play="{E(a.get('play') or '')}" data-tier="{E(str(a.get('tier')))}">
 <summary>
 <span class="c-rank">{a['queue_rank']}</span>
 <span class="c-co"><strong>{E(a['company'])}</strong> {tier_badge(a.get('tier'))}{thin}<span class="c-cc">{E(a.get('country') or '')}</span></span>
 <span class="c-play play-{E(a.get('play') or '')}">{E(PLAY_LABEL.get(a.get('play'), a.get('play') or ''))}</span>
 <span class="c-who" title="{E(role)}">{E(ROLE_SHORT.get(role, role))}</span>
-<span class="c-key {kcls}"><b>{E(kn)}</b> <span>{E(kvs)}</span></span>
+<span class="c-key {kcls}" title="{E(kn + ' ' + kvs)}"><b>{E(kn)}</b> <span>{E(kvs)}</span></span>
+<span class="c-spark {kcls}">{spark}</span>
 <span class="c-tags">{tags}{more}</span>
+<span class="c-status">{status_sel}</span>
 </summary>
 <div class="qdetail">
 <div class="qd-main">
@@ -194,9 +307,19 @@ def build_queue(queue: dict, types: dict) -> str:
     body = f"""<div class="qbar"><h1>Queue <span class="muted">week {E(queue['week'])}</span></h1>
 <span class="muted small">{queue['count']} of {queue['eligible_accounts']} eligible</span>
 <div class="filters" data-target="#queue">{sel('country', countries, 'Country')}{sel('play', plays, 'Play')}{sel('tier', {'1', '2', '3'}, 'Tier')}
-<button type="button" data-toggle-all="#queue">Expand all</button><span class="count muted" aria-live="polite"></span></div></div>
-<div class="qhead" aria-hidden="true"><span>#</span><span>Account</span><span>Play</span><span>Ask for</span><span>Key number</span><span>Why now</span></div>
+<label>Status <select data-filter="status"><option value="">All</option>{''.join(f'<option value="{k}">{v}</option>' for k, v in STATUS_OPTS)}</select></label>
+<button type="button" data-toggle-all="#queue">Expand all</button><button type="button" id="export-status" title="Download a CSV in the config/status/ format">Export status CSV</button>
+<button type="button" class="kbd-btn" data-help aria-label="Keyboard shortcuts" title="Keyboard shortcuts (?)">?</button><span class="count muted" aria-live="polite"></span></div></div>
+{summary_strip(queue, keys)}
+<div class="qhead" aria-hidden="true"><span>#</span><span>Account</span><span>Play</span><span>Ask for</span><span>Key number</span><span>Trend</span><span>Why now</span><span>Status</span></div>
 <div id="queue" class="qlist">{''.join(rows)}</div>
+<div id="kbd-help" class="kbd-help" role="dialog" aria-label="Keyboard shortcuts" hidden>
+<h2>Keyboard</h2><dl><dt><kbd>j</kbd> <kbd>k</kbd></dt><dd>next / previous account</dd><dt><kbd>Enter</kbd></dt><dd>expand or collapse</dd>
+<dt><kbd>c</kbd></dt><dd>copy the opener</dd><dt><kbd>?</kbd></dt><dd>show or hide this</dd><dt><kbd>Esc</kbd></dt><dd>close</dd></dl></div>
+<div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+<p class="small muted">Status lives in this browser only (localStorage). Export it, then save the file as <code>config/status/accounts_status.csv</code>
+(or append its rows) so <code>make queue</code> and <code>make feedback</code> read it. "Not now" exports as <code>not_a_fit</code> with the reason "not now".
+Trend: reported days to pay over the available reports, dashed line = benchmark.</p>
 <p class="small muted">Drafts only: a person edits and sends every message. {E(queue['note'].replace(' who_named is present only when local private data exists.', ''))}</p>"""
     return page("Queue", body, 0, "queue")
 
@@ -440,11 +563,19 @@ def copy_one_pager(cid: str) -> bool:
 
 
 def main() -> None:
+    global THEME_ON
     if DIST.exists():
         shutil.rmtree(DIST)
     (DIST / "assets").mkdir(parents=True)
     for f in ("style.css", "app.js"):
         shutil.copy2(ROOT / "workspace" / "static" / f, DIST / "assets" / f)
+    neutral = "--neutral" in sys.argv or os.environ.get("CHASE_THEME") == "neutral"
+    if THEME_LOCAL.exists() and not neutral:
+        css = theme_css(json.loads(THEME_LOCAL.read_text()))
+        if css:
+            (DIST / "assets" / "theme.css").write_text(css)
+            THEME_ON = True
+    print("theme: " + ("local override (config/theme.local.json)" if THEME_ON else "neutral default"))
 
     all_t, private, public, queue, top = load()
     types = all_t["types"]

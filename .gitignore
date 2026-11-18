@@ -23,3 +23,5 @@ outputs/outreach/
 outputs/exports/
 # real dinner dates stay local
 config/dinners.local.yaml
+# optional local workspace theme (colours, fonts): never tracked
+config/theme.local.json

@@ -93,13 +93,73 @@ def test_queue_page_is_compact_rows_with_details():
     assert len(rows) == len(q["accounts"]) > 0
     for row, a in zip(rows, q["accounts"]):
         summary = row.split("</summary>")[0]
-        assert re.search(r'class="c-key \w+"><b>\d+d</b> <span>vs ', summary), a["company"]
-        assert summary.count('class="chip"') <= 2 and "<p" not in summary and "<li" not in summary
+        assert re.search(r'class="c-key \w+"[^>]*><b>\d+d</b> <span>vs ', summary), a["company"]
+        assert 'class="c-spark' in summary and 'select class="status"' in summary
+        assert summary.count('class="chip"') <= 2 and not re.search(r"<(p|li)[ >]", summary)
         detail = row.split("</summary>")[1]
         if a.get("evidence_url"):
             assert html_escape(a["evidence_url"]) in detail
         assert html_escape(a["opener_draft"]) in detail and "Copy opener" in detail
         assert f'accounts/{a["company_id"]}.html' in detail
+
+
+def test_queue_tool_controls_and_neutral_theme():
+    """Summary strip, export button, shortcuts panel; the default build (as in the test fixture with --neutral)
+    links no theme override, and every colour in the stylesheet sits in a variable block."""
+    import re
+    r = subprocess.run([sys.executable, str(ROOT / "workspace" / "build.py"), "--neutral"], cwd=ROOT, capture_output=True, text=True)
+    assert r.returncode == 0 and "neutral default" in r.stdout
+    h = (DIST / "index.html").read_text()
+    assert 'class="strip"' in h and 'id="export-status"' in h and 'id="kbd-help"' in h
+    assert "theme.css" not in h and not (DIST / "assets" / "theme.css").exists()
+    css = (ROOT / "workspace" / "static" / "style.css").read_text()
+    outside = re.sub(r":root\{[^}]*\}", "", css)
+    assert not re.findall(r"#[0-9a-fA-F]{3,8}\b|rgba?\(", outside), "hard-coded colour outside the theme variables"
+
+
+def test_theme_override_is_sanitised():
+    wb = _wb()
+    css = wb.theme_css({"light": {"bg": "#fff", "--accent": "color-mix(in srgb, #123 40%, #fff)", "unknown": "red",
+                                  "fg": "red;}body{display:none", "font": "url(http://x)"}, "dark": {"bg": "#000"}})
+    assert "--bg:#fff" in css and "--accent:color-mix(in srgb, #123 40%, #fff)" in css
+    assert "unknown" not in css and "display:none" not in css and "url(" not in css
+    assert "@media (prefers-color-scheme:dark){:root{--bg:#000}}" in css
+
+
+def test_sparkline_is_plain_svg():
+    wb = _wb()
+    s = wb.sparkline([("2024-H1", 50.0), ("2024-H2", 61.0), ("2025-H1", 70.0)], "UK reports per half-year.", 32)
+    assert s.startswith("<svg") and "<polyline" in s and 'class="bench"' in s and "2025-H1 70d" in s and "<script" not in s
+    assert "no series" in wb.sparkline([], "", None)
+
+
+def test_status_export_format_is_read_by_the_feedback_loop(monkeypatch):
+    """The workspace exports company_id,company,status,reason,date,play with statuses contacted / meeting / not_a_fit.
+    The same reader make feedback uses must accept it."""
+    import re
+    js = (ROOT / "workspace" / "static" / "app.js").read_text()
+    assert '"company_id,company,status,reason,date,play"' in js
+    exported = set(re.findall(r'\["(\w+)", "[^"]*"\]', js.split("var EXPORT")[1].split(";")[0]))
+    sys.path.insert(0, str(ROOT / "src"))
+    from chase import query as q
+    from chase.gtm import byod
+    assert exported and exported <= byod.VALID_STATUSES
+    cid = q.companies().company_id.iloc[0]
+    tmp_path = ROOT / "tmp" / "test_status_export"   # inside the repo (gitignored): the reader reports paths relative to it
+    tmp_path.mkdir(parents=True, exist_ok=True)
+    (tmp_path / "accounts_status.csv").write_text(f"company_id,company,status,reason,date,play\n{cid},X,not_a_fit,not now,2026-11-18,cold_email\n")
+    monkeypatch.setattr(byod, "STATUS", tmp_path)
+    flags, _ = byod.apply(False)
+    assert flags[cid]["status"]["status"] == "not_a_fit" and flags[cid]["status"]["reason"] == "not now"
+
+
+def _wb():
+    """workspace/build.py loaded by path (another module named build can already sit in sys.modules)."""
+    import importlib.util
+    spec = importlib.util.spec_from_file_location("workspace_build", ROOT / "workspace" / "build.py")
+    m = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(m)
+    return m
 
 
 def html_escape(s):

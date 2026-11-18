@@ -9,13 +9,20 @@ A static page set a sales person opens on Monday morning:
 
 | Page | What it shows |
 |---|---|
-| `index.html` (Queue) | This week's queue, one compact row per account: rank, company, tier, play, who to ask for, key number vs benchmark, up to 2 why-now tags. Click a row (or Enter) to expand the evidence with its source, all why-now events with links, the draft opener with a copy button, priority breakdown and links to the account page and one-pager. Filter by country, play, tier; expand or collapse all. |
+| `index.html` (Queue) | This week's queue, one compact row per account: rank, company, tier, play, who to ask for, key number vs benchmark, up to 2 why-now tags. Click a row (or Enter) to expand the evidence with its source, all why-now events with links, the draft opener with a copy button, priority breakdown and links to the account page and one-pager. Each row also has a trend sparkline (reported days to pay over the available reports: UK half-years or Spanish fiscal years; dashed line = benchmark; none for a computed proxy) and a status (To do, Contacted, Meeting, Not now) kept in this browser's localStorage. A one-line strip above the list summarises the queue. Filter by country, play, tier, status; expand or collapse all; **Export status CSV** downloads the `config/status/` format (Not now exports as `not_a_fit`, reason "not now"). Keys: `j`/`k` move, `Enter` expands, `c` copies the opener, `?` lists the shortcuts. |
 | `accounts/<id>.html` | One page per queued and top-100 account: evidence with source links (Reported, Computed proxy), scores and their components, triggers, supplier finance and UK filing features, the opportunity range (labelled Estimate), draft opener, link to the one-pager. |
 | `dinners.html` | Per dinner city in `config/dinners.yaml` (real dates only in the gitignored `config/dinners.local.yaml`): shortlist with hooks. Tick or untick accounts, then copy as CSV or text (clipboard only). |
 | `triggers.html` | Live public triggers, newest first, filter by type. E-invoicing mandates say whether they bind the buyer or its small suppliers. |
 | `method.html` | Reported vs Computed proxy vs Estimate, plus `docs/methodology.md` rendered. |
 
 Build-time JSON snapshots are in `dist/data/`.
+
+## Theme
+
+Every colour and font is a CSS variable in `static/style.css`; that file is the neutral default. To restyle locally, copy
+`config/theme.example.json` to `config/theme.local.json` (gitignored) and edit it: the build writes it to `dist/assets/theme.css`.
+Only the listed variables are read and unsafe values are dropped. `workspace/build.py --neutral` ignores the local file (use it for
+screenshots that get committed).
 
 ## Data and privacy
 

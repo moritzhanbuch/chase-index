@@ -1,0 +1,16 @@
+{
+  "_about": "Copy to config/theme.local.json (gitignored) and edit. workspace/build.py turns it into assets/theme.css at build time. Only these variables are read; values with ; { } < > url( or @ are dropped. Run the build with --neutral to ignore the local file.",
+  "light": {
+    "font": "system-ui, -apple-system, \"Segoe UI\", Roboto, sans-serif",
+    "font-mono": "ui-monospace, SFMono-Regular, Menlo, Consolas, monospace",
+    "radius": "8px",
+    "bg": "#fbfaf7", "fg": "#1c1d1f", "muted": "#5d6168", "line": "#e2dfd8", "card": "#ffffff", "accent": "#1f5f8b",
+    "rep": "#1e6b3c", "rep-bg": "#e3f2e8", "prx": "#7a5200", "prx-bg": "#fbefd5", "est": "#7b2d73", "est-bg": "#f6e4f3",
+    "flag": "#8a3b12", "flag-bg": "#fbe7dc", "t1": "#1f5f8b", "t2": "#55708a", "t3": "#8a8f96", "tier-fg": "#ffffff", "chip": "#eef0f2"
+  },
+  "dark": {
+    "bg": "#141619", "fg": "#e8e9ea", "muted": "#a1a6ad", "line": "#2c3036", "card": "#1b1e22", "accent": "#7cb8e4",
+    "rep": "#8fd6a8", "rep-bg": "#1d3427", "prx": "#f0c56b", "prx-bg": "#3a2e14", "est": "#e3a4dc", "est-bg": "#3a2037",
+    "flag": "#f3a77f", "flag-bg": "#3c2418", "t1": "#7cb8e4", "t2": "#9bb0c4", "t3": "#8a8f96", "tier-fg": "#141619", "chip": "#262a30"
+  }
+}

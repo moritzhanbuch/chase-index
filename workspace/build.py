@@ -44,9 +44,11 @@ PLAY_LABEL = {"cold_email": "Cold email", "dinner_invite": "Dinner invite", "war
 E = html.escape
 THEME_LOCAL = ROOT / "config" / "theme.local.json"
 THEME_ON = False   # set in main(): link assets/theme.css only when a local override was written
+DEFAULT_SCHEME = ""  # "light" or "dark" from the theme file; empty = follow the system. The top-bar toggle overrides it per browser
+SEARCH: list[tuple[str, str]] = []   # (account name, company_id) for the top-bar search, filled in main()
 # variables a theme may set (everything else in the file is ignored); values may not break out of the declaration
 THEME_VARS = {"bg", "fg", "muted", "line", "card", "accent", "rep", "rep-bg", "prx", "prx-bg", "est", "est-bg", "flag", "flag-bg",
-              "t1", "t2", "t3", "tier-fg", "chip", "font", "font-mono", "radius"}
+              "t1", "t2", "t3", "tier-fg", "chip", "chip-fg", "font", "font-mono", "radius", "panel", "faint", "link", "ink"}
 _UNSAFE = re.compile(r"[;{}<>\\]|url\(|@|/\*|\*/|expression", re.I)
 
 
@@ -97,13 +99,18 @@ def page(title: str, body: str, depth: int = 0, active: str = "") -> str:
     nav = [("index.html", "Queue", "queue"), ("dinners.html", "Dinner builder", "dinners"),
            ("triggers.html", "Trigger feed", "triggers"), ("method.html", "Method", "method")]
     navh = "".join(f'<a href="{up}{h}"{" aria-current=page" if k == active else ""}>{t}</a>' for h, t, k in nav)
+    opts = "".join(f'<option value="{E(n)}" data-id="{E(c)}"></option>' for n, c in SEARCH)
+    scheme = f' data-theme="{DEFAULT_SCHEME}"' if DEFAULT_SCHEME in ("light", "dark") else ""
     return f"""<!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<html lang="en"{scheme}><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<script>try{{var t=localStorage.getItem("chase-workspace-theme");if(t)document.documentElement.setAttribute("data-theme",t)}}catch(e){{}}</script>
 {NOINDEX}
 <title>{E(title)} | Chase Index workspace</title>
 <link rel="stylesheet" href="{up}assets/style.css">{f'<link rel="stylesheet" href="{up}assets/theme.css">' if THEME_ON else ''}</head>
 <body><header class="top"><div class="wrap"><a class="brand" href="{up}index.html">Chase Index <span>workspace</span></a>
-<nav>{navh}</nav></div></header>
+<nav>{navh}</nav>
+<div class="tools"><div class="search"><input type="search" id="acct-search" list="acct-list" placeholder="Jump to account" aria-label="Jump to an account page (press /)" data-up="{up}" autocomplete="off"><kbd>/</kbd></div>
+<datalist id="acct-list">{opts}</datalist><button type="button" class="theme-btn" data-theme-toggle aria-label="Switch light or dark">Dark</button></div></div></header>
 <main class="wrap">{body}</main>
 <footer class="wrap foot"><p>{DISCLAIMER}</p>
 <p class="muted">Internal GTM workspace built {date.today().isoformat()} from public data only. Contains internal scoring: do not publish.
@@ -128,7 +135,8 @@ def theme_css(cfg: dict) -> str:
     light, dark = block(cfg.get("light")), block(cfg.get("dark"))
     css = f":root{{{light}}}\n" if light else ""
     if dark:
-        css += f"@media (prefers-color-scheme:dark){{:root{{{dark}}}}}\n"
+        css += (f"@media (prefers-color-scheme:dark){{:root:not([data-theme=light]){{{dark}}}}}\n"
+                f":root[data-theme=dark]{{{dark}}}\n")
     return css
 
 
@@ -461,31 +469,45 @@ Assumptions in {E(a.get('config_file') or '')}.</p><p class="small muted">{E(est
     return page(b["name"], "".join(parts), 1)
 
 
+INVITE_OPTS = (("", "To invite"), ("invited", "Invited"), ("accepted", "Confirmed"), ("declined", "Declined"))
+
+
 def build_dinners(dinners: list[dict]) -> str:
     blocks = []
     for d in dinners:
         if not d.get("found"):
             continue
-        rows = "".join(f"""<tr data-row data-company="{E(a['company'])}" data-hook="{E(a['hook'])}" data-source="{E(a.get('source_url') or '')}"
-data-tier="{a['tier']}" data-hq="{E(a.get('hq_city') or '')}" data-local="{E(a['local_link'])}">
+
+        def row(a):
+            kn, kvs, kcls, _ = key_number(a["company_id"])
+            inv = (f'<select class="inv" aria-label="Invite status for {E(a["company"])}">'
+                   + "".join(f'<option value="{k}">{v}</option>' for k, v in INVITE_OPTS) + "</select>")
+            return f"""<tr data-row data-cid="{E(a['company_id'])}" data-company="{E(a['company'])}" data-hook="{E(a['hook'])}" data-source="{E(a.get('source_url') or '')}"
+data-tier="{a['tier']}" data-hq="{E(a.get('hq_city') or '')}" data-local="{E(a['local_link'])}" data-inv="">
 <td><input type="checkbox" checked aria-label="Include {E(a['company'])}"></td>
-<td><a href="accounts/{E(a['company_id'])}.html"><strong>{E(a['company'])}</strong></a> {tier_badge(a['tier'])}
-<div class="small muted">{E(a.get('hq_city') or 'HQ city unknown')} · {'HQ in city area' if a['local_link'] == 'hq_in_city_area' else 'HQ elsewhere in country'}</div></td>
-<td class="small"><span class="lbl rep">Reported</span> {E(a['hook'])} {link(a.get('source_url'))}</td></tr>""" for a in d["invite"])
+<td class="d-co"><a href="accounts/{E(a['company_id'])}.html"><strong>{E(a['company'])}</strong></a> {tier_badge(a['tier'])} <span class="c-cc">{E(a.get('hq_city') or 'HQ unknown')}</span></td>
+<td class="d-key {kcls}" title="{E(kn + ' ' + kvs)}"><b>{E(kn)}</b> <span>{E(kvs)}</span></td>
+<td class="d-hook" title="{E(a['hook'])}">{E(a['hook'])}</td>
+<td class="small">{link(a.get('source_url'))}</td><td>{inv}</td></tr>"""
+        groups = [("City area", [a for a in d["invite"] if a["local_link"] == "hq_in_city_area"]),
+                  ("Rest of country", [a for a in d["invite"] if a["local_link"] != "hq_in_city_area"])]
+        tables = "".join(f'<h3 class="dgroup">{g} ({len(xs)})</h3><div class="tablewrap"><table class="data dl"><tbody>{"".join(row(a) for a in xs)}</tbody></table></div>'
+                         for g, xs in groups if xs)
         bench = "".join(f"<li>{E(x['name'])}: {E(x['bench_reason'])}. {E(x.get('figure') or '')} {link(x.get('source_url'))}</li>"
                         for x in d.get("bench_to_verify") or [])
         when = d.get("date") or "next dinner"
         blocks.append(f"""<section class="card dinner" data-city="{E(d['city'])}" data-date="{E(str(d.get('date') or ''))}">
 <h2>{E(d['city'].title())} <span class="muted">{E(str(when))}</span></h2>
 <div class="actions"><button data-act="all">Select all</button><button data-act="none">Clear</button>
-<button data-act="csv">Copy as CSV</button><button data-act="text">Copy as text</button><span class="count muted" aria-live="polite"></span></div>
-{('<div class="tablewrap"><table class="data"><thead><tr><th></th><th>Account</th><th>Hook (template variable)</th></tr></thead><tbody>' + rows + '</tbody></table></div>') if rows else "<p class='muted'>No account with a strong enough hook.</p>"}
+<button data-act="csv">Copy as CSV</button><button data-act="text">Copy as text</button><button data-act="inv-export" title="Download in the dinner_attendees.csv format">Export invite CSV</button>
+<span class="count muted" aria-live="polite"></span></div>
+{tables or "<p class='muted'>No account with a strong enough hook.</p>"}
 {('<details><summary>Bench: verify before use (' + str(len(d.get("bench_to_verify") or [])) + ')</summary><ul class="small">' + bench + '</ul></details>') if bench else ''}
 </section>""")
     body = f"""<h1>Dinner builder</h1>
-<p class="lede">Shortlists per dinner city from <code>config/dinners.yaml</code> (dates, if any, from the local <code>config/dinners.local.yaml</code>). Tick the accounts you want, then copy. Hooks are data slots for a
-human-written invite, not the invite itself. A country list: check where the finance leader actually sits. UK figures describe UK subsidiaries.</p>
-{''.join(blocks)}"""
+{''.join(blocks)}
+<p class="small muted">Invite status lives in this browser only. Export invite CSV writes the <code>config/byod/dinner_attendees.csv</code> format
+(Confirmed = accepted). Hooks are data slots for a human-written invite; full text on hover and in the copies. UK figures describe UK subsidiaries.</p>"""
     return page("Dinner builder", body, 0, "dinners")
 
 
@@ -511,14 +533,18 @@ def build_triggers(trigs: list[dict], types: dict) -> str:
         approx_h = ('<span class="flag" title="Date is approximate">approx.</span>' if approx is True else
                     "" if approx is False else '<span class="muted small" title="date_is_approximate not exposed by the API">?</span>')
         acct = (f'<a href="accounts/{E(t["company_id"])}.html">{E(t["company"])}</a>' if t["company_id"] in ACCOUNT_IDS else E(t["company"]))
-        rows.append(f"""<tr data-type="{E(tt)}"><td class="small nowrap">{E(str(t.get('trigger_date')))} {approx_h}</td><td>{acct}</td>
+        url = t.get("evidence_url")
+        src = link(url) if isinstance(url, str) and url.startswith("http") else '<span class="muted" title="no source link">\u2013</span>'
+        rows.append(f"""<tr data-type="{E(tt)}" data-date="{E(str(t.get('trigger_date'))[:10])}"><td class="small nowrap">{E(str(t.get('trigger_date')))} {approx_h}</td><td>{acct}</td>
 <td><span class="chip" title="{E(tt)}">{E(short_label(tt))}</span>{('<div class="small"><strong>' + binds + '</strong></div>') if binds else ''}</td>
-<td class="small">{E(t['text'])}</td><td>{link(t.get('evidence_url'))}</td></tr>""")
+<td class="small">{E(t['text'])}</td><td>{src}</td></tr>""")
     opts = "".join(f'<option value="{E(k)}">{E(v)}</option>' for k, v in types.items() if any(t["trigger_type"] == k for t in trigs))
     body = f"""<h1>Trigger feed</h1>
 <p class="lede">{len(trigs)} live public triggers, newest first. Each links to its source. E-invoicing mandates are split: some bind the buyer itself,
 others bind the buyer's small suppliers (a supplier-onboarding angle).</p>
-<div class="filters" data-target="#trig"><label>Type <select data-filter="type"><option value="">All</option>{opts}</select></label><span class="count muted" aria-live="polite"></span></div>
+<div class="filters" data-target="#trig"><label>Type <select data-filter="type" data-hide-on-all="dinner_city"><option value="">All but dinner</option>{opts}</select></label>
+<label>When <select data-window><option value="30">Last 30 days</option><option value="90">Last 90 days</option><option value="up">Upcoming</option><option value="">Any date</option></select></label>
+<span class="count muted" aria-live="polite"></span></div>
 <div class="tablewrap"><table id="trig" class="data"><thead><tr><th>Date</th><th>Account</th><th>Type</th><th>What</th><th>Source</th></tr></thead>
 <tbody>{''.join(rows)}</tbody></table></div>
 <p class="small muted">"approx." marks dates that are approximate (for example a results date inferred from last year). Triggers from private sources are left out.</p>"""
@@ -537,7 +563,8 @@ def build_method() -> str:
 <dt><span class="lbl est">Estimate</span></dt><dd>Model output: supplier cash held beyond 30 days and an early-payment discount range (low / base / high). Assumptions live in <code>config/assumptions.yaml</code>. Never a single precise number.</dd>
 </dl>
 <p class="small">Scores (fit, pain, signal) are deterministic formulas with weights in <code>config/assumptions.yaml</code>. Tier 1 reported evidence always outranks a computed proxy.</p></section>
-<section class="card md"><p class="small muted">Rendered from <code>docs/methodology.md</code> at build time.</p>{h}</section>"""
+<section class="card md"><details class="full"><summary>Show full methodology</summary>
+<p class="small muted">Rendered from <code>docs/methodology.md</code> at build time.</p>{h}</details></section>"""
     return page("Method", body, 0, "method")
 
 
@@ -575,6 +602,8 @@ def main() -> None:
         if css:
             (DIST / "assets" / "theme.css").write_text(css)
             THEME_ON = True
+            global DEFAULT_SCHEME
+            DEFAULT_SCHEME = str(json.loads(THEME_LOCAL.read_text()).get("default_scheme") or "")
     print("theme: " + ("local override (config/theme.local.json)" if THEME_ON else "neutral default"))
 
     all_t, private, public, queue, top = load()
@@ -582,6 +611,8 @@ def main() -> None:
     public_keys = {(t["company_id"], t["text"]) for t in public}
 
     ids = list(dict.fromkeys([a["company_id"] for a in queue["accounts"]] + [t["company_id"] for t in top["targets"]]))
+    names = {**{t["company_id"]: t["name"] for t in top["targets"]}, **{a["company_id"]: a["company"] for a in queue["accounts"]}}
+    SEARCH[:] = sorted(((names[c], c) for c in ids), key=lambda x: x[0].lower())
     queued = {a["company_id"] for a in queue["accounts"]}
     index = []
     for cid in ids:

@@ -9,19 +9,29 @@
     if (!table) return;
     var selects = box.querySelectorAll("select[data-filter]");
     var count = box.querySelector(".count");
+    var win = box.querySelector("select[data-window]");
+    function isoDay(offset) { var d = new Date(); d.setDate(d.getDate() + offset); return d.toISOString().slice(0, 10); }
     function apply() {
-      var n = 0, rows = table.querySelectorAll("tbody tr, .qrow");
+      var n = 0, rows = table.querySelectorAll("tbody tr, .qrow"), today = isoDay(0), from = win && /^\d+$/.test(win.value) ? isoDay(-Number(win.value)) : null;
       rows.forEach(function (tr) {
         var ok = true;
         selects.forEach(function (s) {
-          if (s.value && tr.getAttribute("data-" + s.getAttribute("data-filter")) !== s.value) ok = false;
+          var v = tr.getAttribute("data-" + s.getAttribute("data-filter"));
+          if (s.value && v !== s.value) ok = false;
+          // "All" can still leave one type out (e.g. dinner triggers), until that type is picked explicitly
+          if (!s.value && s.dataset.hideOnAll && v === s.dataset.hideOnAll) ok = false;
         });
+        if (win && win.value) {
+          var dt = tr.getAttribute("data-date") || "";
+          if (win.value === "up" ? dt <= today : (dt < from || dt > today)) ok = false;
+        }
         tr.hidden = !ok;
         if (ok) n++;
       });
       if (count) count.textContent = n + " of " + rows.length + " shown";
     }
     selects.forEach(function (s) { s.addEventListener("change", apply); });
+    if (win) win.addEventListener("change", apply);
     refilter.push(apply);
     apply();
   });
@@ -86,18 +96,14 @@
       var x = m[k], ex = EXPORT[x.status];
       return [k, x.company, ex[0], ex[1], x.date, x.play].map(csvCell).join(",");
     }));
-    var blob = new Blob([lines.join("\n") + "\n"], { type: "text/csv" });
-    var a = document.createElement("a");
-    a.href = URL.createObjectURL(blob); a.download = "accounts_status.csv";
-    document.body.appendChild(a); a.click(); document.body.removeChild(a);
-    setTimeout(function () { URL.revokeObjectURL(a.href); }, 1000);
+    download(lines.join("\n") + "\n", "accounts_status.csv");
     toast(ids.length + " status rows exported");
   });
 
   // queue: keyboard shortcuts (j / k move, Enter expand, c copy opener, ? help)
   var toastEl = document.getElementById("toast"), toastT;
   function toast(msg) {
-    if (!toastEl) return;
+    if (!toastEl) { toastEl = document.createElement("div"); toastEl.className = "toast"; toastEl.setAttribute("role", "status"); toastEl.hidden = true; document.body.appendChild(toastEl); }
     toastEl.textContent = msg; toastEl.hidden = false;
     clearTimeout(toastT); toastT = setTimeout(function () { toastEl.hidden = true; }, 1600);
   }
@@ -138,7 +144,88 @@
     }
   });
 
-  // dinner builder
+  // top bar: theme toggle (remembered per browser) and account search ("/" focuses it)
+  var root = document.documentElement, THEME_KEY = "chase-workspace-theme";
+  function scheme() { return root.getAttribute("data-theme") || (window.matchMedia && matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"); }
+  document.querySelectorAll("[data-theme-toggle]").forEach(function (b) {
+    var label = function () { b.textContent = scheme() === "dark" ? "Light" : "Dark"; };
+    label();
+    b.addEventListener("click", function () {
+      var next = scheme() === "dark" ? "light" : "dark";
+      root.setAttribute("data-theme", next);
+      try { localStorage.setItem(THEME_KEY, next); } catch (e) { /* not remembered */ }
+      label();
+    });
+  });
+  var search = document.getElementById("acct-search");
+  function go() {
+    if (!search) return false;
+    var v = search.value.trim().toLowerCase(), opts = Array.prototype.slice.call(document.querySelectorAll("#acct-list option"));
+    if (!v) return false;
+    var hit = opts.filter(function (o) { return o.value.toLowerCase() === v; })[0] ||
+              opts.filter(function (o) { return o.value.toLowerCase().indexOf(v) === 0; })[0] ||
+              opts.filter(function (o) { return o.value.toLowerCase().indexOf(v) >= 0; })[0];
+    if (!hit) { toast("No account matches \u201c" + search.value + "\u201d"); return false; }
+    location.href = search.dataset.up + "accounts/" + hit.dataset.id + ".html";
+    return true;
+  }
+  if (search) {
+    search.addEventListener("keydown", function (e) {
+      if (e.key === "Enter") { e.preventDefault(); go(); }
+      if (e.key === "Escape") { search.value = ""; search.blur(); }
+    });
+    // picking an entry from the datalist fills the exact name: jump straight away
+    search.addEventListener("input", function (e) {
+      var v = search.value.toLowerCase();
+      if (e.inputType === "insertReplacementText" || e.inputType == null) {
+        if (Array.prototype.some.call(document.querySelectorAll("#acct-list option"), function (o) { return o.value.toLowerCase() === v; })) go();
+      }
+    });
+    document.addEventListener("keydown", function (e) {
+      var tag = e.target && e.target.tagName;
+      if (e.key === "/" && !e.metaKey && !e.ctrlKey && !e.altKey && tag !== "INPUT" && tag !== "TEXTAREA" && tag !== "SELECT") {
+        e.preventDefault(); e.stopImmediatePropagation(); search.focus(); search.select();
+      }
+    }, true);
+  }
+
+  // dinner builder: invite status per city and account, kept in this browser, exported as dinner_attendees.csv
+  var INV_KEY = "chase-workspace-invites-v1";
+  function readInv() { try { return JSON.parse(localStorage.getItem(INV_KEY) || "{}") || {}; } catch (e) { return {}; } }
+  function writeInv(m) { try { localStorage.setItem(INV_KEY, JSON.stringify(m)); return true; } catch (e) { return false; } }
+  document.querySelectorAll(".dinner").forEach(function (card) {
+    var city = card.getAttribute("data-city"), inv = readInv();
+    card.querySelectorAll("tr[data-row]").forEach(function (r) {
+      var sel = r.querySelector("select.inv"), k = city + "|" + r.dataset.cid;
+      if (!sel) return;
+      if (inv[k]) { sel.value = inv[k].status; r.dataset.inv = inv[k].status; }
+      sel.addEventListener("change", function () {
+        var m = readInv();
+        if (!sel.value) delete m[k]; else m[k] = { status: sel.value, city: city, account_name: r.dataset.company };
+        r.dataset.inv = sel.value;
+        if (!writeInv(m)) toast("Could not save: browser storage is unavailable");
+      });
+    });
+    var b = card.querySelector('button[data-act="inv-export"]');
+    if (b) b.addEventListener("click", function (e) {
+      e.stopImmediatePropagation();
+      var m = readInv(), keys = Object.keys(m).filter(function (k) { return m[k].city === city; });
+      if (!keys.length) return toast("No invite status set for " + city + " yet");
+      var date = card.getAttribute("data-date") || "";
+      download(["city,date,account_name,status"].concat(keys.sort().map(function (k) {
+        return [city, date, m[k].account_name, m[k].status].map(csvCell).join(",");
+      })).join("\n") + "\n", "dinner_attendees_" + city + ".csv");
+      toast(keys.length + " invite rows exported");
+    });
+  });
+  function download(text, name) {
+    var a = document.createElement("a");
+    a.href = URL.createObjectURL(new Blob([text], { type: "text/csv" })); a.download = name;
+    document.body.appendChild(a); a.click(); document.body.removeChild(a);
+    setTimeout(function () { URL.revokeObjectURL(a.href); }, 1000);
+  }
+
+  // dinner builder: select and copy
   function csvCell(v) { v = String(v == null ? "" : v); return /[",\n]/.test(v) ? '"' + v.replace(/"/g, '""') + '"' : v; }
   function copy(text, btn) {
     var done = function () { var t = btn.textContent; btn.textContent = "Copied"; setTimeout(function () { btn.textContent = t; }, 1200); };
@@ -165,6 +252,7 @@
     card.querySelectorAll("button[data-act]").forEach(function (b) {
       b.addEventListener("click", function () {
         var act = b.getAttribute("data-act");
+        if (act === "inv-export") return;
         if (act === "all" || act === "none") {
           rows.forEach(function (r) { r.querySelector("input").checked = act === "all"; });
           return refresh();

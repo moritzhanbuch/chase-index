@@ -113,8 +113,31 @@ def test_queue_tool_controls_and_neutral_theme():
     assert 'class="strip"' in h and 'id="export-status"' in h and 'id="kbd-help"' in h
     assert "theme.css" not in h and not (DIST / "assets" / "theme.css").exists()
     css = (ROOT / "workspace" / "static" / "style.css").read_text()
-    outside = re.sub(r":root\{[^}]*\}", "", css)
+    outside = re.sub(r":root[^{]*\{[^}]*\}", "", css)
     assert not re.findall(r"#[0-9a-fA-F]{3,8}\b|rgba?\(", outside), "hard-coded colour outside the theme variables"
+
+
+def test_dinners_triggers_method_and_search():
+    """Dinner builder: no intro, City area / Rest of country groups, key number per row, invite status and export.
+    Trigger feed: dinner triggers hidden under 'All', a dash for a missing source, last-30-days window first.
+    Method: full methodology collapsed. Every page: account search with one entry per account page."""
+    import re
+    d = (DIST / "dinners.html").read_text()
+    assert 'class="lede"' not in d and "City area (" in d and 'select class="inv"' in d and 'data-act="inv-export"' in d
+    assert re.search(r'class="d-key \w+"[^>]*><b>\d+d</b>', d)
+    js = (ROOT / "workspace" / "static" / "app.js").read_text()
+    assert '"city,date,account_name,status"' in js       # config/byod/dinner_attendees.csv columns
+    t = (DIST / "triggers.html").read_text()
+    assert 'data-hide-on-all="dinner_city"' in t and '<option value="30">Last 30 days</option>' in t.split("data-window>")[1][:60]
+    rows = re.findall(r"<tr data-type=.*?</tr>", t, re.S)
+    assert all(("href=" in r.split("</td>")[-2]) or ("\u2013" in r.split("</td>")[-2]) for r in rows)
+    assert "no source link" in t
+    m = (DIST / "method.html").read_text()
+    assert 'class="kinds"' in m and '<details class="full"><summary>Show full methodology</summary>' in m
+    q = (DIST / "index.html").read_text()
+    ids = re.findall(r'<option value="[^"]*" data-id="([^"]+)">', q)
+    assert len(ids) == len(set(ids)) == len(list((DIST / "accounts").glob("*.html")))
+    assert all((DIST / "accounts" / f"{i}.html").exists() for i in ids)
 
 
 def test_theme_override_is_sanitised():
@@ -123,7 +146,7 @@ def test_theme_override_is_sanitised():
                                   "fg": "red;}body{display:none", "font": "url(http://x)"}, "dark": {"bg": "#000"}})
     assert "--bg:#fff" in css and "--accent:color-mix(in srgb, #123 40%, #fff)" in css
     assert "unknown" not in css and "display:none" not in css and "url(" not in css
-    assert "@media (prefers-color-scheme:dark){:root{--bg:#000}}" in css
+    assert "@media (prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#000}}" in css and ":root[data-theme=dark]{--bg:#000}" in css
 
 
 def test_sparkline_is_plain_svg():
